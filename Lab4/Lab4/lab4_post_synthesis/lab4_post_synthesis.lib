@@ -1,0 +1,23 @@
+timestamp=1393982743896
+
+[lab4_top]
+A/structure=A/STRUCTURE 21|./../synthesis/lab4_top.vhd|52|1*0
+I=0*740
+I/structure=I/STRUCTURE 0*12866
+M=11|0|vb4|1393982743730|./../synthesis/lab4_top.vhd|0*261*0x761bfed8bfc9a479b539afff11b1fcc9cea3de17|0*653*0x5eebbfaf24833dd780412b1f91e05209
+M/structure=M/STRUCTURE 21|0|vb4|1393982743872|./../synthesis/lab4_top.vhd|0*962*0xb9fb76697e063fe33a57a7707292da7a9dca5beb|0*12766*0x856b180bf611ec746a6bfcb1befebd18
+R=./../synthesis/lab4_top.vhd|41
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/structure=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[~A]
+ModifyID=2
+Version=73
+
+[~MFT]
+0=6|0lab4_post_synthesis.mgf|12866|0
+1=0|1lab4_post_synthesis.mgf|0|0
+
+[~U]
+lab4_top=11|0*0|
+

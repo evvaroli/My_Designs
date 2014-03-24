@@ -1,0 +1,7 @@
+vhdl lab4 "..\src\adc_decoder.vhd"
+vhdl lab4 "..\src\adc_driver.vhd"
+vhdl lab4 "..\src\ClockDivider.vhd"
+vhdl lab4 "..\src\lab4_top.vhd"
+vhdl lab4 "..\src\reg.vhd"
+vhdl lab4 "..\src\shift10.vhd"
+vhdl lab4 "..\src\spi_ctrl.vhd"

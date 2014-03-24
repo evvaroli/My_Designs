@@ -1,0 +1,8 @@
+Release 13.2 Drc O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Wed Feb 19 19:55:33 2014
+
+drc -z lab4_top.ncd lab4_top.pcf
+
+DRC detected 0 errors and 0 warnings.

@@ -1,0 +1,14 @@
+EN detector NULL C:/My_Designs/Lab5/detector/src/detector.vhd sub00/vhpl06 1394502865
+EN clockdivider NULL C:/My_Designs/Lab5/detector/src/ClockDivider.vhd sub00/vhpl04 1394502863
+AR debounce debounce C:/My_Designs/Lab5/detector/src/debounce.vhd sub00/vhpl03 1394502862
+AR x7segb x7segb C:/My_Designs/Lab5/detector/src/x7segb.vhd sub00/vhpl13 1394502858
+AR reg reg C:/My_Designs/Lab5/detector/src/reg.vhd sub00/vhpl11 1394502860
+AR clock_pulse clock_pulse C:/My_Designs/Lab5/detector/src/clock_pulse.vhd sub00/vhpl01 1394502870
+AR clockdivider clockdivider C:/My_Designs/Lab5/detector/src/ClockDivider.vhd sub00/vhpl05 1394502864
+EN debounce NULL C:/My_Designs/Lab5/detector/src/debounce.vhd sub00/vhpl02 1394502861
+AR detector detector C:/My_Designs/Lab5/detector/src/detector.vhd sub00/vhpl07 1394502866
+AR detector_top detector_top C:/My_Designs/Lab5/detector/src/detector_top.vhd sub00/vhpl09 1394502868
+EN clock_pulse NULL C:/My_Designs/Lab5/detector/src/clock_pulse.vhd sub00/vhpl00 1394502869
+EN x7segb NULL C:/My_Designs/Lab5/detector/src/x7segb.vhd sub00/vhpl12 1394502857
+EN reg NULL C:/My_Designs/Lab5/detector/src/reg.vhd sub00/vhpl10 1394502859
+EN detector_top NULL C:/My_Designs/Lab5/detector/src/detector_top.vhd sub00/vhpl08 1394502867

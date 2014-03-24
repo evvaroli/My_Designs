@@ -1,0 +1,36 @@
+timestamp=1374236767222
+
+[c2or]
+A/c2or=24|.\src\c2or.bde|10000|
+NSymbols/c2or=NSymbols/C2OR 40|0|2*0
+
+[crv]
+A/crv=24|.\src\crv.bde|10000|
+NSymbols/crv=NSymbols/CRV 40|0|2*2293
+
+[filter]
+A/filter=24|.\src\filter.bde|10000|
+
+[oscil]
+A/oscil=24|.\src\oscil.bde|10000|
+NSymbols/oscil=NSymbols/OSCIL 40|0|2*4157
+
+[pfdiv]
+A/pfdiv=24|.\src\pfdiv.bde|10000|
+NSymbols/pfdiv=NSymbols/PFDIV 40|0|2*6409
+
+[~A]
+ModifyID=560
+Version=73
+
+[~MFT]
+0=0|0filter_bde.mgf|726|0
+2=0|2filter_bde.mgf|6409|0
+
+[~U]
+c2or=C2OR 13|0*0||0x3
+crv=CRV 13|0*174||0x3
+filter=13|0*338|
+oscil=OSCIL 13|0*546||0x3
+pfdiv=PFDIV 13|0*726||0x3
+

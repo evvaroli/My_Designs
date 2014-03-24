@@ -1,0 +1,1 @@
+-w -s "C:\My_Designs\Lab4\library.cfg"  -j "C:\My_Designs\Lab4\lab4\projlib.cfg"  -d "C:\My_Designs\Lab4\lab4\compile"   -work lab4_timing  -O3 -e 100 -2002 "C:\My_Designs\Lab4\lab4\IMPLEMENT\TIME_SIM.VHD"

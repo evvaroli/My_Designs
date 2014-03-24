@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML>
+ <document type="stimulators" version="1">
+  <set name="ASDB Stimulators" active="1">
+   <stimulator>
+    <signal_path value="/adc_driver/clk"/>
+    <rawdescription value="CLK:FRM:Override:307692308.000000;0;1;0;50;1:Clock:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/adc_driver/clr"/>
+    <rawdescription value="FRM:FRM:Override:1 0 ns, 0 3 ns:Formula:1:"/>
+   </stimulator>
+   <stimulator>
+    <signal_path value="/adc_driver/miso"/>
+    <rawdescription value="FRM:FRM:Override:0 0 ns, 1 50 ns, 1 60 ns,1 70 ns,1 80 ns,1 90 ns,1 100 ns,1 110 ns,1 120 ns:Formula:0:"/>
+   </stimulator>
+  </set>
+ </document>
+</XML>

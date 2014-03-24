@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: c:\My_Designs\Lab6\Lab6\src\calc_top2.vhd" 
+MESSAGE "Compile Entity "calc_top2"" 
+MESSAGE "Compile Architecture "calc_top2" of Entity "calc_top2"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 

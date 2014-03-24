@@ -1,0 +1,14 @@
+AR shift10 shift10 C:/Users/snschnei/Documents/Lab4/lab4/src/shift10.vhd sub00/vhpl03 1392857700
+AR adc_decoder adc_decoder C:/Users/snschnei/Documents/Lab4/lab4/src/adc_decoder.vhd sub00/vhpl07 1392857704
+EN clockdivider NULL C:/Users/snschnei/Documents/Lab4/lab4/src/ClockDivider.vhd sub00/vhpl10 1392857707
+AR reg reg C:/Users/snschnei/Documents/Lab4/lab4/src/reg.vhd sub00/vhpl01 1392857698
+EN adc_driver NULL C:/Users/snschnei/Documents/Lab4/lab4/src/adc_driver.vhd sub00/vhpl08 1392857705
+AR adc_driver adc_driver C:/Users/snschnei/Documents/Lab4/lab4/src/adc_driver.vhd sub00/vhpl09 1392857706
+AR lab4_top lab4_top C:/Users/snschnei/Documents/Lab4/lab4/src/lab4_top.vhd sub00/vhpl13 1392857710
+AR clockdivider clockdivider C:/Users/snschnei/Documents/Lab4/lab4/src/ClockDivider.vhd sub00/vhpl11 1392857708
+EN adc_decoder NULL C:/Users/snschnei/Documents/Lab4/lab4/src/adc_decoder.vhd sub00/vhpl06 1392857703
+AR spi_ctrl spi_ctrl C:/Users/snschnei/Documents/Lab4/lab4/src/spi_ctrl.vhd sub00/vhpl05 1392857702
+EN lab4_top NULL C:/Users/snschnei/Documents/Lab4/lab4/src/lab4_top.vhd sub00/vhpl12 1392857709
+EN shift10 NULL C:/Users/snschnei/Documents/Lab4/lab4/src/shift10.vhd sub00/vhpl02 1392857699
+EN reg NULL C:/Users/snschnei/Documents/Lab4/lab4/src/reg.vhd sub00/vhpl00 1392857697
+EN spi_ctrl NULL C:/Users/snschnei/Documents/Lab4/lab4/src/spi_ctrl.vhd sub00/vhpl04 1392857701

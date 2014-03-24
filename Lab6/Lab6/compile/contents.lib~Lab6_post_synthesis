@@ -1,0 +1,5 @@
+4
+~E 1 "./../synthesis/calc_top.vhd" 41 calc_top
+~A 1 "./../synthesis/calc_top.vhd" 52 STRUCTURE
+~E 1 "./../synthesis/funit_top.vhd" 41 funit_top
+~A 1 "./../synthesis/funit_top.vhd" 52 STRUCTURE

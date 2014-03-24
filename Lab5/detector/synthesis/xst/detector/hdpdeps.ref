@@ -1,0 +1,43 @@
+V3 26
+FL C:/My_Designs/Lab5/detector/src/ClockDivider.vhd 2014/02/16.21:07:27 P.20131013
+EN detector/ClockDivider 1394502863 \
+      FL C:/My_Designs/Lab5/detector/src/ClockDivider.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR detector/ClockDivider/ClockDivider 1394502864 \
+      FL C:/My_Designs/Lab5/detector/src/ClockDivider.vhd \
+      EN detector/ClockDivider 1394502863
+FL C:/My_Designs/Lab5/detector/src/clock_pulse.vhd 2014/02/16.21:42:17 P.20131013
+EN detector/clock_pulse 1394502869 \
+      FL C:/My_Designs/Lab5/detector/src/clock_pulse.vhd PB ieee/std_logic_1164 1381692176
+AR detector/clock_pulse/clock_pulse 1394502870 \
+      FL C:/My_Designs/Lab5/detector/src/clock_pulse.vhd EN detector/clock_pulse 1394502869
+FL C:/My_Designs/Lab5/detector/src/debounce.vhd 2014/03/10.18:41:06 P.20131013
+EN detector/debounce 1394502861 FL C:/My_Designs/Lab5/detector/src/debounce.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR detector/debounce/debounce 1394502862 \
+      FL C:/My_Designs/Lab5/detector/src/debounce.vhd EN detector/debounce 1394502861
+FL C:/My_Designs/Lab5/detector/src/detector.vhd 2014/03/10.21:37:39 P.20131013
+EN detector/detector 1394502865 FL C:/My_Designs/Lab5/detector/src/detector.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR detector/detector/detector 1394502866 \
+      FL C:/My_Designs/Lab5/detector/src/detector.vhd EN detector/detector 1394502865
+FL C:/My_Designs/Lab5/detector/src/detector_top.vhd 2014/03/10.21:54:06 P.20131013
+EN detector/detector_top 1394502867 \
+      FL C:/My_Designs/Lab5/detector/src/detector_top.vhd PB ieee/std_logic_1164 1381692176
+AR detector/detector_top/detector_top 1394502868 \
+      FL C:/My_Designs/Lab5/detector/src/detector_top.vhd \
+      EN detector/detector_top 1394502867 AR detector/debounce/debounce 1394502862 \
+      AR detector/detector/detector 1394502866 \
+      AR detector/ClockDivider/ClockDivider 1394502864 AR detector/reg/reg 1394502860 \
+      AR detector/x7segb/x7segb 1394502858 CP x7segb CP reg CP debounce \
+      CP ClockDivider CP detector
+FL C:/My_Designs/Lab5/detector/src/reg.vhd 2014/03/10.21:34:41 P.20131013
+EN detector/reg 1394502859 FL C:/My_Designs/Lab5/detector/src/reg.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR detector/reg/reg 1394502860 \
+      FL C:/My_Designs/Lab5/detector/src/reg.vhd EN detector/reg 1394502859
+FL C:/My_Designs/Lab5/detector/src/x7segb.vhd 2014/03/10.20:40:27 P.20131013
+EN detector/x7segb 1394502857 FL C:/My_Designs/Lab5/detector/src/x7segb.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR detector/x7segb/x7segb 1394502858 \
+      FL C:/My_Designs/Lab5/detector/src/x7segb.vhd EN detector/x7segb 1394502857

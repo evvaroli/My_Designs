@@ -1,0 +1,51 @@
+timestamp=1380548301171
+
+[AND2]
+A/AND2=*22|./src/AND2.v|25|
+NSymbols/and2=NSymbols/AND2 40|0|2*0
+
+[AND3]
+A/AND3=*22|./src/AND3.v|25|
+NSymbols/and3=NSymbols/AND3 40|0|2*1608
+
+[AND4]
+A/AND4=*22|./src/AND4.v|25|
+NSymbols/and4=NSymbols/AND4 40|0|2*3564
+
+[c2or]
+A/c2or=*21|./src/c2or.vhd|40|
+NSymbols/c2or=40|0|2*5870
+
+[crv]
+A/crv=*24|.\src\crv.bde|10000|
+NSymbols/crv=NSymbols/CRV 40|0|2*8122
+
+[filter]
+A/filter=*24|.\src\filter.bde|10000|
+
+[oscil_c_vhpi]
+A/oscil_c_vhpi=*21|./src/oscil_c_vhpi.vhd|38|
+NSymbols/oscil_c_vhpi=40|0|2*10133
+
+[pfdiv]
+A/pfdiv=*21|./src/pfdiv.vhd|13|
+NSymbols/pfdiv=NSymbols/PFDIV 40|0|2*12087
+
+[~A]
+ModifyID=322
+Version=73
+
+[~MFT]
+0=0|0VHDL_Verilog_EDIF_C_VHPI.mgf|1347|0
+2=0|2VHDL_Verilog_EDIF_C_VHPI.mgf|12087|0
+
+[~U]
+AND2=12|0*0||0x13
+AND3=12|0*169||0x13
+AND4=12|0*365||0x13
+c2or=11|0*588||0x3
+crv=CRV 13|0*777||0x7
+filter=11|0*952|
+oscil_c_vhpi=11|0*1153||0x3
+pfdiv=PFDIV 11|0*1347||0x3
+

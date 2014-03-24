@@ -1,0 +1,1 @@
+-w -s "C:\My_Designs\Lab2\part1\part1\library.cfg"  -j "C:\My_Designs\Lab2\part1\part1\SubMax\projlib.cfg"  -d "C:\My_Designs\Lab2\part1\part1\SubMax\compile"   -work SubMax  -O3 -e 100 "C:\My_Designs\Lab2\part1\part1\SubMax\src\SubMax.vhd"

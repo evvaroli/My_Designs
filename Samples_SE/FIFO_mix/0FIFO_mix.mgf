@@ -1,0 +1,91 @@
+V 000038 11 254 1380289638354 control
+E control VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLK _in STD_LOGIC
+P CLR _in STD_LOGIC
+P CNTR_FULL _in STD_LOGIC
+P FIFO_EMPTY _in STD_LOGIC
+P ADDR_INCR _out STD_LOGIC
+P DONE _out STD_LOGIC
+P FIFO_READ _out STD_LOGIC
+P MEM_WR _out STD_LOGIC
+X control
+V 000038 12 347 1380800849344 counter
+E counter VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P CLR _in wire
+V CLR - - - -
+P CE _in wire
+V CE - - - -
+P CLK _in wire
+V CLK - - - -
+P TC _out wire
+V TC - - - -
+P Q _out wire[7:0]
+V Q - - - -
+IB
+ISB \5 \ -
+ISE \5 \
+ISB \6 \ -
+ISE \6 \
+ISB \7 \ -
+ISE \7 \
+ISB \8 \ -
+ISP \9 \ _in reg
+ISP \10 \ _in reg
+ISE \8 \
+ISB \11 \ -
+ISE \11 \
+IE
+X counter
+V 000035 11 303 1380289600911 fifo
+E fifo VHDL
+L STD;IEEE;
+U STD.STANDARD;ieee.std_logic_1164;
+PL 0
+G depth POSITIVE = 16
+P CLR _in STD_LOGIC
+P WCLK _in STD_LOGIC
+P WE _in STD_LOGIC
+P RCLK _in STD_LOGIC
+P RE _in STD_LOGIC
+P DATA _in STD_LOGIC_VECTOR[7:0]
+P EMPTY _out STD_LOGIC
+P FULL _out STD_LOGIC
+P Q _out STD_LOGIC_VECTOR[7:0]
+X fifo
+V 000034 12 211 1380800837364 ram
+E ram VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P WE _in wire
+V WE - - - -
+P CLK _in wire
+V CLK - - - -
+P ADDR _in wire[7:0]
+V ADDR - - - -
+P DATA _in wire[7:0]
+V DATA - - - -
+P Q _out wire[7:0]
+V Q - - - -
+X ram
+V 000037 11 277 1380289672645 sender
+E sender VHDL
+L IEEE;STD;
+U IEEE.STD_LOGIC_1164
+P CLK _in STD_LOGIC
+PT CLK _in bool
+P ENABLE _in STD_LOGIC
+PT ENABLE _in bool
+P CLR _in STD_LOGIC
+PT CLR _in bool
+P DATA _out STD_LOGIC_VECTOR[7:0]
+PT DATA _out char
+P VALID _out STD_LOGIC
+PT VALID _out bool
+X sender

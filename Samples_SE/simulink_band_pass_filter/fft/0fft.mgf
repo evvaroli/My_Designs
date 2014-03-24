@@ -1,0 +1,69 @@
+V 000035 11 498 1380550088078 cfft
+E cfft VHDL
+L STD;IEEE;
+U STD.STANDARD;ieee.std_logic_1164;
+PL 0
+G WIDTH NATURAL = 16
+G POINT NATURAL = 64
+G STAGE NATURAL = 3
+P clk1 _in STD_LOGIC
+P rst _in STD_LOGIC
+P ce _in STD_LOGIC
+P start _in STD_LOGIC
+P invert _in STD_LOGIC
+P Iin _in STD_LOGIC_VECTOR[WIDTH-1:0]
+P Qin _in STD_LOGIC_VECTOR[WIDTH-1:0]
+P inputbusy _out STD_LOGIC
+P outdataen _out STD_LOGIC
+P Iout _out STD_LOGIC_VECTOR[WIDTH+1:0]
+P Qout _out STD_LOGIC_VECTOR[WIDTH+1:0]
+P OutPosition _out STD_LOGIC_VECTOR[2*STAGE-1:0]
+X cfft
+V 000038 11 332 1096445288047 control
+E control VHDL
+L STD;IEEE;
+U STD.STANDARD;ieee.std_logic_1164;
+G POINT INTEGER = 64
+G STAGE INTEGER = 3
+P Addr _in std_logic_vector[2*STAGE-1:0]
+P ce _in std_logic
+P clk _in std_logic
+P inputbusy _in std_logic
+P outdataen _in std_logic
+P rst _in std_logic
+P addr_out _out std_logic_vector[2*STAGE-1:0]
+P oe _out std_logic
+X control
+V 000034 11 336 1380550129978 ram
+E ram VHDL
+L STD;IEEE;
+U STD.STANDARD;ieee.std_logic_1164;
+PL 0
+G WIDTH NATURAL = 16
+G POINT NATURAL = 64
+G STAGE NATURAL = 3
+P addr _in STD_LOGIC_VECTOR[2*STAGE-1:0]
+P ce _in STD_LOGIC
+P clk _in STD_LOGIC
+P data_in _in STD_LOGIC_VECTOR[WIDTH+1:0]
+P we _in STD_LOGIC
+P oe _in STD_LOGIC
+P data_out _out STD_LOGIC_VECTOR[WIDTH+1:0]
+X ram
+V 000038 11 374 1096445326031 top_fft
+E top_fft VHDL
+L STD;IEEE;
+U STD.STANDARD;ieee.std_logic_1164;
+G WIDTH NATURAL = 16
+G POINT NATURAL = 1024
+G STAGE NATURAL = 5
+P ce _in std_logic
+P clk _in std_logic
+P inv _in std_logic
+P rst _in std_logic
+P start _in std_logic
+P Iin _in std_logic_vector[15:0]
+P Qin _in std_logic_vector[15:0]
+P Iout _out std_logic_vector[17:0]
+P Qout _out std_logic_vector[17:0]
+X top_fft

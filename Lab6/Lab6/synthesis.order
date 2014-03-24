@@ -1,0 +1,13 @@
+i<>.\src\funit.vhd
+i<>.\src\funit_top.vhd
+i<>.\src\rom8.vhd
+i<>.\src\calc_top.vhd
+i<>.\src\clock_pulse.vhd
+i<>.\src\ClockDivider.vhd
+i<>.\src\pc.vhd
+i<>.\src\reg.vhd
+i<>.\src\mux.vhd
+i<>.\src\x7segb.vhd
+i<>.\src\calc_top2.vhd
+i<>.\src\rom8_2.vhd
+i<>.\src\pc_2.vhd

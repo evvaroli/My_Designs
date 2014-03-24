@@ -1,0 +1,7 @@
+vhdl detector "..\src\clock_pulse.vhd"
+vhdl detector "..\src\debounce.vhd"
+vhdl detector "..\src\reg.vhd"
+vhdl detector "..\src\detector.vhd"
+vhdl detector "..\src\detector_top.vhd"
+vhdl detector "..\src\ClockDivider.vhd"
+vhdl detector "..\src\x7segb.vhd"

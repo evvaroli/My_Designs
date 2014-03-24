@@ -1,0 +1,6 @@
+comp "$dsn/src/testbench/tester.dlm"
+acom -2002 -dbg -e 100 -protect 0 -reorder "$dsn/src/clk_gen.vhd"
+acom -2002 -dbg -e 100 -protect 0 -reorder "$dsn/src/clk_div.vhd"
+acom -2002 -dbg -e 100 -protect 0 -reorder "$dsn/src/clocks.bde"
+acom -2002 -dbg -e 100 -protect 0 -reorder "$dsn/src/fifo.vhd"
+acom -2002 -dbg -e 100 -protect 0 -reorder "$dsn/src/test_environment.bde"

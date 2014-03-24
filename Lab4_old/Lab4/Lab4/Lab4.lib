@@ -1,0 +1,97 @@
+timestamp=1392674077095
+
+[adc_decoder]
+A/adc_decoder=21|./../src/adc_decoder.vhd|38|1*21226
+BinI32/adc_decoder=3*3451
+I=0*10635
+I/adc_decoder=0*11424
+M=11|0|vb4|1392671246829|./../src/adc_decoder.vhd|0*10265*0x86c56848816852d7fe5aa8786bcfdfdccf0812bf|0*10548*0x5eebbfaf24833dd780412b1f91e05209
+M/adc_decoder=21|0|vb4|1392671520865|./../src/adc_decoder.vhd|0*10809*0xf2039778c71f330b2d813089552883ae1b4a1703|0*11322*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/adc_decoder.vhd|29
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/adc_decoder=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[adc_driver]
+A/adc_driver=21|./../src/adc_driver.vhd|40|1*33596
+BinI32/adc_driver=3*5494
+I=0*3444
+I/adc_driver=0*14463
+M=11|0|vb4|1392667753792|./../src/adc_driver.vhd|0*3062*0x996d02d474c8f5fd9ff15989965fec3731ffaab7|0*3359*0x5eebbfaf24833dd780412b1f91e05209
+M/adc_driver=21|0|vb4|1392674071729|./../src/adc_driver.vhd|0*7037*0x40ff64aafa6aa9f67afcea443bac3293674281ad|0*8097*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/adc_driver.vhd|28
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/adc_driver=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[clockdivider]
+A/clockdivider=A/ClockDivider 21|./../src/ClockDivider.vhd|13|1*22641
+BinI32/clockdivider=3*3899
+I=0*12155
+I/clockdivider=I/ClockDivider 0*12783
+M=11|0|vb4|1392671931106|./../src/ClockDivider.vhd|0*11787*0xefc58d099ddb68d759b609b7e5642e01b86c110b|0*12066*0x5eebbfaf24833dd780412b1f91e05209
+M/clockdivider=M/ClockDivider 21|0|vb4|1392671931108|./../src/ClockDivider.vhd|0*12330*0xd977d400b1cd9d7c2aaaa12c9ad6d29edc378ce2|0*12678*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/ClockDivider.vhd|5
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/clockdivider=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[lab4_top]
+A/lab4_top=21|./../src/lab4_top.vhd|41|1*28069
+BinI32/lab4_top=3*4357
+I=0*9120
+I/lab4_top=0*14066
+M=11|0|vb4|1392671101456|./../src/lab4_top.vhd|0*8720*0x08630ab1ca49f7ca1b49af29b7f7550f97a25d25|0*9039*0x5eebbfaf24833dd780412b1f91e05209
+M/lab4_top=21|0|vb4|1392674066656|./../src/lab4_top.vhd|0*12971*0x335f2335edf210fcd44b540e5d4ceb171f94b9d5|0*13973*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/lab4_top.vhd|28
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/lab4_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[reg]
+A/reg=21|./../src/reg.vhd|16|1*37791
+BinI32/reg=3*5717
+I=0*2336
+I/reg=0*14738
+M=11|0|vb4|1392666848757|./../src/reg.vhd|0*1960*0x41d5db03e2025ccc0b7feeb93a7de2e13d097d28|0*2265*0x5eebbfaf24833dd780412b1f91e05209
+M/reg=21|0|vb4|1392674074574|./../src/reg.vhd|0*2433*0x2750ba0a10bed1a396d72e79c8c536077fd11cdf|0*2656*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/reg.vhd|4
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/reg=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[shift10]
+A/shift10=21|./../src/shift10.vhd|39|1*39313
+BinI32/shift10=3*6442
+I=0*1094
+I/shift10=0*14839
+M=11|0|vb4|1392665889722|./../src/shift10.vhd|0*754*0xe9481c57d80cfc8c795bd72920c27ef1bf01754b|0*1015*0x5eebbfaf24833dd780412b1f91e05209
+M/shift10=21|0|vb4|1392674077034|./../src/shift10.vhd|0*1195*0x715d860faab7cdb77d1eba74cfc97ea326e50348|0*1515*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/shift10.vhd|28
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/shift10=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[spi_ctrl]
+A/spi_ctrl=21|./../src/spi_ctrl.vhd|15|1*32033
+BinI32/spi_ctrl=3*4549
+I=0*5406
+I/spi_ctrl=0*14352
+M=11|0|vb4|1392667915360|./../src/spi_ctrl.vhd|0*5071*0x46b6fa0149a8bbaa71d272a59e4cae7614482905|0*5325*0x5eebbfaf24833dd780412b1f91e05209
+M/spi_ctrl=21|0|vb4|1392674069604|./../src/spi_ctrl.vhd|0*5508*0x05d5f581432a8242fdf1e8ce8e7a77bd8b468ceb|0*6833*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/spi_ctrl.vhd|6
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/spi_ctrl=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[~A]
+ModifyID=110
+Version=73
+
+[~MFT]
+0=96|0Lab4.mgf|14839|3354
+1=30|1Lab4.mgf|39313|25190
+3=28|3Lab4.mgf|6442|3451
+
+[~U]
+adc_decoder=11|0*10086|
+adc_driver=11|0*2835|
+clockdivider=ClockDivider 11|0*11610|
+lab4_top=11|0*8471|
+reg=11|0*1714|
+shift10=11|0*560|
+spi_ctrl=11|0*4882|
+

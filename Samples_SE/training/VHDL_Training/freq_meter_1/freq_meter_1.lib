@@ -1,0 +1,27 @@
+timestamp=1380552027120
+
+[and2]
+A/and2=*21|./src/Functional/AND2.vhd|23|
+NSymbols/and2=NSymbols/AND2 40|0|2*0
+
+[cnt_4b]
+A/cnt_4b=*21|./src/Functional/CNT_4b.vhd|26|
+NSymbols/cnt_4b=NSymbols/CNT_4b 40|0|2*1887
+
+[cnt_bcd]
+A/cnt_bcd=*24|.\src\Functional\CNT_BCD.bde|10000|
+S/cnt_bcd=S/CNT_BCD 40|0|2*4606
+
+[~A]
+ModifyID=83
+Version=73
+
+[~MFT]
+0=0|0freq_meter_1.mgf|361|0
+2=0|2freq_meter_1.mgf|4606|0
+
+[~U]
+and2=AND2 11|0*0||0x3
+cnt_4b=CNT_4b 11|0*147||0x3
+cnt_bcd=CNT_BCD 11|0*361||0x3
+

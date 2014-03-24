@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\snschnei\Documents\Lab4\lab4\implement\ver1\rev1\lab4_top.ncd
+OUTFILE=C:\Users\snschnei\Documents\Lab4\lab4\implement\ver1\rev1\lab4_top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=C:\Users\snschnei\Documents\Lab4\lab4\implement\ver1\rev1
+LICENSE=WebPack
+USER_INFO=210855519_0_0_579

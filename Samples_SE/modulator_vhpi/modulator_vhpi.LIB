@@ -1,0 +1,26 @@
+timestamp=1380548710550
+
+[generator]
+A/generator=*21|./src/VHPI/generator_vhpi.vhd|24|
+NSymbols/generator=40|0|2*0
+
+[modulator]
+A/modulator=*24|.\src\modulator.bde|10000|
+
+[multiplier]
+A/multiplier=*21|./src/multiplier.vhd|23|
+NSymbols/multiplier=NSymbols/Multiplier 40|0|2*2052
+
+[~A]
+ModifyID=141
+Version=73
+
+[~MFT]
+0=0|0modulator_vhpi.mgf|419|0
+2=0|2modulator_vhpi.mgf|2052|0
+
+[~U]
+generator=11|0*0||0x3
+modulator=Modulator 11|0*168|
+multiplier=Multiplier 11|0*419||0x7
+

@@ -1,0 +1,16 @@
+417
+~E 1 "./../src/clock_pulse.vhd" 4 clock_pulse
+~A 1 "./../src/clock_pulse.vhd" 13 clock_pulse
+~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
+~A 1 "./../src/ClockDivider.vhd" 13 ClockDivider
+~E 1 "./../src/debounce.vhd" 4 debounce
+~A 1 "./../src/debounce.vhd" 13 debounce
+~E 1 "./../src/detector.vhd" 12 detector
+~A 1 "./../src/detector.vhd" 24 detector
+~E 1 "./../src/detector_top.vhd" 28 detector_top
+~A 1 "./../src/detector_top.vhd" 42 detector_top
+~E 1 "./../src/EuclidsGCD_top2.vhd" 28 EuclidsGCD_top2
+~E 1 "./../src/reg.vhd" 4 reg
+~A 1 "./../src/reg.vhd" 16 reg
+~E 1 "./../src/x7segb.vhd" 6 x7segb
+~A 1 "./../src/x7segb.vhd" 17 x7segb

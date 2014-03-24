@@ -1,0 +1,38 @@
+V 000035 12 134 1380801225676 AND2
+E AND2 VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P A0 _in wire
+V A0 - - - -
+P A1 _in wire
+V A1 - - - -
+P Y _out wire
+V Y - - - -
+X AND2
+V 000037 12 218 1380801236705 CNT_4b
+E CNT_4b VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P CLK _in wire
+V CLK - - - -
+P ENABLE _in wire
+V ENABLE - - - -
+P RESET _in wire
+V RESET - - - -
+P FULL _out wire
+V FULL - - - -
+P Q _out wire[3:0]
+V Q - - - -
+X CNT_4b
+V 000038 12 128 1380801300690 HEX2LED
+E HEX2LED VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P HEX _in wire[3:0]
+V HEX - - - -
+P LED _out reg[6:0]
+V LED - - - -
+X HEX2LED

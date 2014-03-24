@@ -1,0 +1,21 @@
+350
+~E 1 "./../src/clock_pulse.vhd" 4 clock_pulse
+~A 1 "./../src/clock_pulse.vhd" 13 clock_pulse
+~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
+~A 1 "./../src/ClockDivider.vhd" 13 ClockDivider
+~E 1 "./../src/EuclidsGCD.vhd" 28 EuclidsGCD
+~A 1 "./../src/EuclidsGCD.vhd" 40 EuclidsGCD
+~E 1 "./../src/EuclidsGCD_top.vhd" 28 EuclidsGCD_top
+~A 1 "./../src/EuclidsGCD_top.vhd" 39 EuclidsGCD_top
+~E 1 "./../src/EuclidsGCD_top2.vhd" 28 EuclidsGCD_top2
+~A 1 "./../src/EuclidsGCD_top2.vhd" 41 EuclidsGCD_top2
+~E 1 "./../src/mux24b.vhd" 28 mux24b
+~A 1 "./../src/mux24b.vhd" 39 mux24b
+~E 1 "./../src/reg.vhd" 4 reg
+~A 1 "./../src/reg.vhd" 16 reg
+~E 1 "./../src/RegAndMuxCtrl.vhd" 28 RegAndMuxCtrl
+~A 1 "./../src/RegAndMuxCtrl.vhd" 41 RegAndMuxCtrl
+~E 1 "./../src/submax2.vhd" 29 submax2
+~A 1 "./../src/submax2.vhd" 39 submax2
+~E 1 "./../src/x7segb.vhd" 6 x7segb
+~A 1 "./../src/x7segb.vhd" 17 x7segb

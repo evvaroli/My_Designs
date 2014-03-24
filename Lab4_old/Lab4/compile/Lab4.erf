@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: c:\My_Designs\Lab4\Lab4\src\shift10.vhd" 
+MESSAGE "Compile Entity "shift10"" 
+MESSAGE "Compile Architecture "shift10" of Entity "shift10"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 

@@ -1,0 +1,39 @@
+timestamp=1380801838933
+
+[BIN2BCD]
+A/BIN2BCD=*22|.\src\BIN2BCD.v|10000|
+NSymbols/bin2bcd=NSymbols/BIN2BCD 40|0|2*0
+
+[CNT_10B]
+A/CNT_10B=*24|.\src\CNT_10B.bde|10000|
+NSymbols/cnt_10b=NSymbols/CNT_10B 40|0|2*4188
+P/~emb=228,454,793,951
+
+[CONTROL]
+A/CONTROL=*23|.\src\CONTROL.asf|10000|
+NSymbols/control=NSymbols/CONTROL 40|0|2*6949
+P/~emb=266,568,1146,1400
+
+[HEX2LED]
+A/HEX2LED=*22|.\src\HEX2LED.v|10000|
+NSymbols/hex2led=NSymbols/HEX2LED 40|0|2*10178
+
+[freq_m]
+A/freq_m=*24|.\src\freq_m.bde|10000|
+P/~emb=523,896,1321,1799
+
+[~A]
+ModifyID=107
+Version=73
+
+[~MFT]
+0=0|0V_FMeter.mgf|4126|0
+2=0|2V_FMeter.mgf|10178|0
+
+[~U]
+BIN2BCD=12|0*0||0x13
+CNT_10B=12|0*521||0x93
+CONTROL=12|0*1832||0x93
+HEX2LED=12|0*3959||0x13
+freq_m=12|0*4126||0x90
+

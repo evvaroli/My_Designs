@@ -1,0 +1,600 @@
+V 000047 40 2159 1380548486401 cosinegenerator
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #FUB="1"
+  #LANGUAGE="VHDL"
+  #MODIFIED="1374230597"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,200,180)
+  FREEID 21
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (0,0,200,180)
+  }
+  TEXT  4, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,148,110,172)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 3
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,108,91,132)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  14, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,68,54,92)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 13
+  }
+  TEXT  19, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (132,88,187,112)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 18
+  }
+  PIN  3, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="CosEnable"
+    #NUMBER="1"
+    #SIDE="left"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="CosFreq"
+    #NUMBER="2"
+    #SIDE="left"
+    #VHDL_TYPE="INTEGER"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  13, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="CLK"
+    #NUMBER="3"
+    #SIDE="left"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  18, 0, 0
+  {
+   COORD (200,100)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #INITIAL_VALUE="0.0"
+    #LABEL="Out"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="COS1"
+    #NUMBER="4"
+    #SIDE="right"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (-10,10), (-10,-10), (0,0) )
+   }
+  }
+ }
+}
+V 000042 40 2609 1380548486432 multiplier
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #FUB="1"
+  #LANGUAGE="VHDL"
+  #MODIFIED="1374230597"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,280,240)
+  FREEID 26
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (0,0,280,240)
+  }
+  TEXT  4, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (214,108,267,132)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 3
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,188,46,212)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  14, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,128,46,152)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 13
+  }
+  TEXT  19, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,48,46,72)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 18
+  }
+  TEXT  24, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (128,202,152,227)
+   ALIGN 9
+   MARGINS (1,1)
+   PARENT 23
+   ORIENTATION 5
+  }
+  PIN  3, 0, 0
+  {
+   COORD (280,120)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #INITIAL_VALUE="0.0"
+    #LABEL="Out"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="OUT1"
+    #NUMBER="1"
+    #SIDE="right"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (-10,10), (-10,-10), (0,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,200)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="IN3"
+    #NUMBER="2"
+    #SIDE="left"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  13, 0, 0
+  {
+   COORD (0,140)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="IN2"
+    #NUMBER="3"
+    #SIDE="left"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  18, 0, 0
+  {
+   COORD (0,60)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="IN1"
+    #NUMBER="4"
+    #SIDE="left"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  23, 0, 0
+  {
+   COORD (140,240)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="clk"
+    #NUMBER="5"
+    #SIDE="bottom"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-10,0), (10,0), (0,-10), (-10,0) )
+   }
+  }
+ }
+}
+V 000044 40 2159 1380548486479 sawgenerator
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #FUB="1"
+  #LANGUAGE="VHDL"
+  #MODIFIED="1374230597"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,200,180)
+  FREEID 21
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (0,0,200,180)
+  }
+  TEXT  4, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,148,111,172)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 3
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,108,92,132)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  14, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,68,54,92)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 13
+  }
+  TEXT  19, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (129,88,187,112)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 18
+  }
+  PIN  3, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="SawEnable"
+    #NUMBER="1"
+    #SIDE="left"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="SawFreq"
+    #NUMBER="2"
+    #SIDE="left"
+    #VHDL_TYPE="INTEGER"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  13, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="CLK"
+    #NUMBER="3"
+    #SIDE="left"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  18, 0, 0
+  {
+   COORD (200,100)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #INITIAL_VALUE="0.0"
+    #LABEL="Out"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="SAW1"
+    #NUMBER="4"
+    #SIDE="right"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (-10,10), (-10,-10), (0,0) )
+   }
+  }
+ }
+}
+V 000045 40 2157 1380548486510 sinegenerator
+SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #FUB="1"
+  #LANGUAGE="VHDL"
+  #MODIFIED="1374230597"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,200,180)
+  FREEID 20
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (0,0,200,180)
+  }
+  TEXT  4, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,148,102,172)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 3
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,108,83,132)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  14, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (14,68,54,92)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 13
+  }
+  TEXT  19, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (142,68,187,92)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 18
+  }
+  PIN  3, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="SinEnable"
+    #NUMBER="1"
+    #SIDE="left"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="SinFreq"
+    #NUMBER="2"
+    #SIDE="left"
+    #VHDL_TYPE="INTEGER"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  13, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LABEL="In"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="CLK"
+    #NUMBER="3"
+    #SIDE="left"
+    #VHDL_TYPE="BIT"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,-10), (0,10), (10,0), (0,-10) )
+   }
+  }
+  PIN  18, 0, 0
+  {
+   COORD (200,80)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #INITIAL_VALUE="0.0"
+    #LABEL="Out"
+    #MDA_RECORD_TOKEN="OTHER"
+    #MODIFIED="1374230597"
+    #NAME="SIN1"
+    #NUMBER="4"
+    #SIDE="right"
+    #VHDL_TYPE="REAL"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (-10,10), (-10,-10), (0,0) )
+   }
+  }
+ }
+}

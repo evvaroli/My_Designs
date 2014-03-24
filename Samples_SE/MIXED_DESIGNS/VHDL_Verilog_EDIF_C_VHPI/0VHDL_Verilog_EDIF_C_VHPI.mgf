@@ -1,0 +1,92 @@
+V 000035 12 134 1380548187791 AND2
+E AND2 VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P I0 _in wire
+V I0 - - - -
+P O _out wire
+V O - - - -
+P I1 _in wire
+V I1 - - - -
+X AND2
+V 000035 12 161 1380548200101 AND3
+E AND3 VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P I0 _in wire
+V I0 - - - -
+P O _out wire
+V O - - - -
+P I1 _in wire
+V I1 - - - -
+P I2 _in wire
+V I2 - - - -
+X AND3
+V 000035 12 188 1380548208992 AND4
+E AND4 VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P I0 _in wire
+V I0 - - - -
+P O _out wire
+V O - - - -
+P I1 _in wire
+V I1 - - - -
+P I2 _in wire
+V I2 - - - -
+P I3 _in wire
+V I3 - - - -
+X AND4
+V 000035 11 154 1380548175123 c2or
+E c2or VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CM _in STD_LOGIC
+P CP _in STD_LOGIC
+P RESET _in STD_LOGIC
+P NQ _out STD_LOGIC
+P Q _out STD_LOGIC
+X c2or
+V 000022 13 153 0 crv
+E CRV EDIF
+L IEEE;STD;
+U IEEE.STD_LOGIC_1164;
+P Q _out std_logic_vector[3:0]
+P CDN _in std_logic
+P CUP _in std_logic
+P RESET _in std_logic
+X CRV
+V 000037 11 164 1374157608994 filter
+E filter VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLK _in STD_LOGIC
+P RESET _in STD_LOGIC
+P NI _in STD_LOGIC_VECTOR[3:0]
+P NO _out STD_LOGIC_VECTOR[3:0]
+X filter
+V 000043 11 151 1374157602832 oscil_c_vhpi
+E oscil_c_vhpi VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLK _in STD_LOGIC
+P CLR _in STD_LOGIC
+P F0 _out STD_LOGIC
+P F1 _out STD_LOGIC
+X oscil_c_vhpi
+V 000036 11 155 1374157602723 pfdiv
+E PFDIV VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLKIN _in STD_LOGIC
+P RESET _in STD_LOGIC
+P N _in STD_LOGIC_VECTOR[3:0]
+P CLKOUT _out STD_LOGIC
+X PFDIV

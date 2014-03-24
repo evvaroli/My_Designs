@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\Lab4\library.cfg"  -j "c:\My_Designs\Lab4\Lab4\projlib.cfg"  -d "c:\My_Designs\Lab4\Lab4\compile"   -work Lab4  -O3 -e 100 -2002 "c:\My_Designs\Lab4\Lab4\src\shift10.vhd"

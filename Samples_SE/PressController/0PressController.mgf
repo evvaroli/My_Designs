@@ -1,0 +1,69 @@
+V 000042 11 323 1138873693039 automachine
+E automachine VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P CLK _in std_logic
+P clr _in std_logic
+P DET _in std_logic
+P LIM _in std_logic
+P RST _in std_logic
+P STP _in std_logic
+P STR _in std_logic
+P TIM _in std_logic
+P CEL _out std_logic
+P OUTPUT _out std_logic
+P Y _out std_logic_vector[2:0]
+P CET _inout std_logic
+X automachine
+V 000039 11 292 1138873678778 counters
+E Counters VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P CLK _in std_logic
+P CLK_T _in std_logic
+P DET _in std_logic
+P clr _in std_logic
+P CET _in std_logic
+P CEL _in std_logic
+P TIMER _out std_logic_vector[9:0]
+P TIM _out std_logic
+P LIMIT _out std_logic_vector[5:0]
+P LIM _out std_logic
+X Counters
+V 000036 11 319 1138873698046 press
+E Press VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P CLK _in std_logic
+P CLK_T _in std_logic
+P DET _in std_logic
+P RST _in std_logic
+P STP _in std_logic
+P STR _in std_logic
+P clr _in std_logic
+P OUTPUT _out std_logic
+P LIMIT _out std_logic_vector[5:0]
+P TIMER _out std_logic_vector[9:0]
+P Y _out std_logic_vector[2:0]
+X Press
+V 000040 11 344 1385715233229 press_top
+E Press_top VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLK _in STD_LOGIC
+P CLK_T _in STD_LOGIC
+P DET _in STD_LOGIC
+P RST _in STD_LOGIC
+P STP _in STD_LOGIC
+P STR _in STD_LOGIC
+P clr _in STD_LOGIC
+P OUTPUT _buffer STD_LOGIC
+P LIMIT _buffer STD_LOGIC_VECTOR[5:0]
+P TIMER _buffer STD_LOGIC_VECTOR[9:0]
+P Y _buffer STD_LOGIC_VECTOR[2:0]
+X Press_top
+V 000045 11 46 1385715234671 press_top_tb_al
+E press_top_tb_al VHDL
+PL 0
+X press_top_tb_al

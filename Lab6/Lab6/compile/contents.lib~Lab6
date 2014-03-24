@@ -1,0 +1,27 @@
+339
+~E 1 "./../src/calc_top.vhd" 10 calc_top
+~A 1 "./../src/calc_top.vhd" 23 calc_top
+~E 1 "./../src/calc_top2.vhd" 10 calc_top2
+~A 1 "./../src/calc_top2.vhd" 23 calc_top2
+~E 1 "./../src/clock_pulse.vhd" 4 clock_pulse
+~A 1 "./../src/clock_pulse.vhd" 13 clock_pulse
+~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
+~A 1 "./../src/ClockDivider.vhd" 13 ClockDivider
+~E 1 "./../src/funit.vhd" 12 funit
+~A 1 "./../src/funit.vhd" 23 funit
+~E 1 "./../src/funit_top.vhd" 11 funit_top
+~A 1 "./../src/funit_top.vhd" 22 funit_top
+~E 1 "./../src/mux.vhd" 3 mux
+~A 1 "./../src/mux.vhd" 13 mux
+~E 1 "./../src/pc_2.vhd" 4 pc
+~A 1 "./../src/pc_2.vhd" 13 pc
+~E 1 "./../src/pc_2.vhd" 4 pc_2
+~A 1 "./../src/pc_2.vhd" 13 pc_2
+~E 1 "./../src/reg.vhd" 4 reg
+~A 1 "./../src/reg.vhd" 16 reg
+~E 1 "./../src/rom8.vhd" 6 rom8
+~A 1 "./../src/rom8.vhd" 13 rom8
+~E 1 "./../src/rom8_2.vhd" 6 rom8_2
+~A 1 "./../src/rom8_2.vhd" 13 rom8_2
+~E 1 "./../src/x7segb.vhd" 6 x7segb
+~A 1 "./../src/x7segb.vhd" 17 x7segb

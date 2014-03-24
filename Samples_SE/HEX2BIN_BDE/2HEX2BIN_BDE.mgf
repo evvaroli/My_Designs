@@ -1,0 +1,2121 @@
+V 000038 40 3181 1374229709252 adrcnt
+<?xml version="1.0"?>
+<symbol name="ADRCNT">
+<shape guid="6997b20a-4c34-403e-908c-322df2cb8584" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229709"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="6997b20a-4c34-403e-908c-322df2cb8584"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,220,260)
+  FREEID 16
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,190,103,214)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (128,30,195,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,54,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,65,134)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,66,94)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 10
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,80,174)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 12
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  15, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,200,240)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,200)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="ALE(3:0)"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (220,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="Q(15:0)"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CE"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLK"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLR"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="D(3:0)"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000040 40 2426 1374229709548 asciidec
+<?xml version="1.0"?>
+<symbol name="ASCIIDEC">
+<shape guid="c64e07c9-f1e0-4d40-9249-fd555a6a11a0" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229709"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="c64e07c9-f1e0-4d40-9249-fd555a6a11a0"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,260,180)
+  FREEID 12
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,120,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (141,110,235,134)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (175,30,235,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (206,70,235,94)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  11, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,240,160)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CHAR(7:0)"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (260,120)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="DIGIT(3:0)"
+    #NUMBER="0"
+    #SIDE="right"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (260,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="ISHEX"
+    #NUMBER="0"
+    #SIDE="right"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (260,80)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="SC"
+    #NUMBER="0"
+    #SIDE="right"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000038 40 2990 1374229688129 cd4029
+<?xml version="1.0"?>
+<symbol name="CD4029">
+<shape guid="ae7ef959-39b3-485d-b883-25837390f8f1" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229688"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="ae7ef959-39b3-485d-b883-25837390f8f1"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,160,240)
+  FREEID 16
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (20,0,140,240)
+  }
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,54,54)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 2
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (104,30,135,54)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 4
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,65,94)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 6
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (79,70,135,94)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,66,134)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 10
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,80,174)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 12
+  }
+  TEXT  15, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,190,52,214)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 14
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CE"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (160,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CO"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLK"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (160,80)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="Q(3:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLR"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="D(3:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  14, 0, 0
+  {
+   COORD (0,200)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="LD"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000036 40 1644 1374229699174 comp
+<?xml version="1.0"?>
+<symbol name="COMP">
+<shape guid="1878dbc2-af67-418c-951f-3fd2bdfc7a4a" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229699"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="1878dbc2-af67-418c-951f-3fd2bdfc7a4a"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,160,120)
+  FREEID 9
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (20,0,140,120)
+  }
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,79,54)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 2
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (91,30,135,54)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 4
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,79,94)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 6
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="A(7:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (160,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CMP"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="B(7:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000038 40 2798 1380543866814 datreg
+<?xml version="1.0"?>
+<symbol name="DATREG">
+<shape guid="758d671e-b63f-4934-8baa-46a429c7b61c" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229709"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="758d671e-b63f-4934-8baa-46a429c7b61c"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,220,220)
+  FREEID 14
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,65,94)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (139,30,195,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,66,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,80,174)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,104,134)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 10
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  13, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,200,200)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLK"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (220,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="Q(7:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLR"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="D(3:0)"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="DLE(1:0)"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000039 40 3161 1374229709423 dat_cnt
+<?xml version="1.0"?>
+<symbol name="DAT_CNT">
+<shape guid="dacbccfd-0e59-4d7a-af63-d325a0501b11" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229709"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="dacbccfd-0e59-4d7a-af63-d325a0501b11"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,220,260)
+  FREEID 16
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,54,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (167,30,195,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,190,104,214)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,65,134)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,66,94)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 10
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,80,174)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 12
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  15, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,200,240)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CE"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (220,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="ZD"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,200)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLE(1:0)"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLK"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLR"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="D(3:0)"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000040 40 6182 1374229709486 intelhex
+<?xml version="1.0"?>
+<symbol name="INTELHEX">
+<shape guid="c606d731-3924-4594-ad4e-fc0f1d407d51" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229709"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="c606d731-3924-4594-ad4e-fc0f1d407d51"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,260,340)
+  FREEID 34
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,65,94)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (157,190,235,214)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,66,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (156,270,235,294)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,53,134)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 10
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (191,30,235,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 12
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  15, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,85,174)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 14
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  17, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (192,110,235,134)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 16
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  19, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,190,54,214)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 18
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  21, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (156,230,235,254)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 20
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  23, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,230,67,254)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 22
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  25, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (131,150,235,174)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 24
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  27, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (200,70,235,94)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 26
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  33, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,240,320)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLK"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (260,200)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="ALE(3:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLR"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (260,280)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLE(1:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="EN"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (260,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CMP"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  14, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="ISHEX"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  16, 0, 0
+  {
+   COORD (260,120)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="DCE"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  18, 0, 0
+  {
+   COORD (0,200)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="SC"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  20, 0, 0
+  {
+   COORD (260,240)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="DLE(1:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  22, 0, 0
+  {
+   COORD (0,240)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="TDC"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  24, 0, 0
+  {
+   COORD (260,160)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="LRCLE(3:0)"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  26, 0, 0
+  {
+   COORD (260,80)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="WR"
+    #NUMBER="0"
+    #SIDE="right"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000035 40 3184 1374229709299 lrc
+<?xml version="1.0"?>
+<symbol name="LRC">
+<shape guid="17cc30f9-b067-4884-9d62-719d675b0b58" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229709"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="17cc30f9-b067-4884-9d62-719d675b0b58"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,-20,200,260)
+  FREEID 16
+ }
+ 
+ BODY
+ {
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,65,174)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 2
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (132,30,175,54)
+   ALIGN 6
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 4
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,66,134)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 6
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,69,94)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 8
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,117,54)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 10
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,190,80,214)
+   ALIGN 4
+   MARGINS (1,1)
+   COLOR (0,0,198)
+   PARENT 12
+   FONT (8,0,0,400,0,0,0,"Arial")
+  }
+  RECT  15, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   OUTLINE 0,2, (132,0,0)
+   AREA (20,0,180,240)
+   FILL (0,(255,255,180),0)
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLK"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (200,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="ERR"
+    #NUMBER="0"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLR"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CMP"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,1, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CTRL(3:0)"
+    #NUMBER="0"
+    #SIDE="left"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (0,200)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="D(3:0)"
+    #NUMBER="0"
+   }
+   LINE  2, 0, 0
+   {
+    OUTLINE 0,3, (64,92,92)
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000036 40 2342 1374229699112 reg4
+<?xml version="1.0"?>
+<symbol name="REG4">
+<shape guid="d2881db6-6186-42e0-ba75-c3ba398571eb" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229699"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="d2881db6-6186-42e0-ba75-c3ba398571eb"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,160,200)
+  FREEID 13
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (20,0,140,200)
+  }
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,65,54)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 2
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (79,30,135,54)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 4
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,66,94)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 6
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,80,134)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,53,174)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 10
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLK"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (160,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="Q(3:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLR"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="D(3:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="EN"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+
+V 000035 40 2692 1374229699034 sub
+<?xml version="1.0"?>
+<symbol name="SUB">
+<shape guid="bb49158e-c775-4d18-bad8-15dc7db48654" default="1">
+<![CDATA[SYMB0100
+HEADER
+{
+ VARIABLES
+ {
+  #CUSTOM_NAME=""
+  #DESCRIPTION=""
+  #HDL_ENTRIES=
+"library VL;\n"+
+"use VL.VERILOG_LOGIC;"
+  #LANGUAGE="VERILOG"
+#MODIFIED="1374229698"
+  #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER="bb49158e-c775-4d18-bad8-15dc7db48654"
+ }
+}
+PAGE "" 
+{
+ PAGEHEADER
+ {
+  RECT (0,0,160,240)
+  FREEID 15
+ }
+ 
+ BODY
+ {
+  RECT  1, -1, 0
+  {
+   VARIABLES
+   {
+    #OUTLINE_FILLING="1"
+   }
+   AREA (20,0,140,240)
+  }
+  TEXT  3, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,30,54,54)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 2
+  }
+  TEXT  5, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (79,30,135,54)
+   ALIGN 6
+   MARGINS (1,1)
+   PARENT 4
+  }
+  TEXT  7, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,70,65,94)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 6
+  }
+  TEXT  9, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,110,66,134)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 8
+  }
+  TEXT  11, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,150,80,174)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 10
+  }
+  TEXT  13, 0, 0
+  {
+   TEXT "$#NAME"
+   RECT (25,190,66,214)
+   ALIGN 4
+   MARGINS (1,1)
+   PARENT 12
+  }
+  PIN  2, 0, 0
+  {
+   COORD (0,40)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CE"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  4, 0, 0
+  {
+   COORD (160,40)
+   VARIABLES
+   {
+    #DIRECTION="OUT"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="Q(7:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="reg"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (-20,0), (0,0) )
+   }
+  }
+  PIN  6, 0, 0
+  {
+   COORD (0,80)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLK"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  8, 0, 0
+  {
+   COORD (0,120)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="CLR"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  10, 0, 0
+  {
+   COORD (0,160)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #DOWNTO="1"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="D(7:0)"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+  PIN  12, 0, 0
+  {
+   COORD (0,200)
+   VARIABLES
+   {
+    #DIRECTION="IN"
+    #LENGTH="20"
+    #MDA_RECORD_TOKEN="OTHER"
+    #NAME="SPE"
+    #NUMBER="0"
+    #VERILOG_TYPE="wire"
+   }
+   LINE  2, 0, 0
+   {
+    POINTS ( (0,0), (20,0) )
+   }
+  }
+ }
+}
+
+]]>
+</shape>
+</symbol>
+
+

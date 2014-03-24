@@ -1,0 +1,54 @@
+timestamp=1374235978292
+
+[c4u]
+A/c4u=24|.\src\c4u.bde|10000|
+NSymbols/c4u=NSymbols/C4U 40|0|2*0
+
+[c4ud]
+A/c4ud=24|.\src\c4ud.bde|10000|
+NSymbols/c4ud=NSymbols/C4UD 40|0|2*2929
+
+[fd16d]
+A/fd16d=24|.\src\fd16d.bde|10000|
+NSymbols/fd16d=NSymbols/FD16D 40|0|2*6271
+
+[fifo]
+A/fifo=24|.\src\fifo.bde|10000|
+P/~emb=55,582,811,1026
+S/fifo=40|0|2*8517
+
+[fifod]
+A/fifod=24|.\src\fifod.bde|10000|
+NSymbols/fifod=NSymbols/FIFOD 40|0|2*11896
+
+[rm16x16]
+A/rm16x16=24|.\src\rm16x16.bde|10000|
+NSymbols/rm16x16=NSymbols/RM16X16 40|0|2*17245
+
+[rm16x32]
+A/rm16x32=24|.\src\rm16x32.bde|10000|
+NSymbols/rm16x32=NSymbols/RM16X32 40|0|2*20313
+
+[~A]
+./src/TB_verilog/fifo_TB.v=0*6177*7279
+./src/TB_vhd/fifo_TB.vhd~TB_ARCHITECTUREfifo_tb=0*287*5764
+./src/TB_vhd/fifo_TB.vhd~TESTBENCH_FOR_fifofifo_tb=0*5851*6087
+./src/TB_vhd/fifo_TB.vhd~fifo_tb=0*4294967295*4294967295
+C:/My_Designs/Samples_73/fifo_bde/src/TB_verilog/fifo_TB.v=0*6107*7209
+ModifyID=587
+Version=73
+c:/My_Designs/Samples_73/fifo_bde/src/TB_verilog/fifo_TB.v=0*12109*13211
+
+[~MFT]
+0=0|0fifo_bde.mgf|1406|0
+2=0|2fifo_bde.mgf|20313|0
+
+[~U]
+c4u=C4U 13|0*0||0x3
+c4ud=C4UD 13|0*163||0x3
+fd16d=FD16D 13|0*351||0x3
+fifo=13|0*531||0x3
+fifod=FIFOD 13|0*833||0x3
+rm16x16=RM16X16 13|0*1130||0x3
+rm16x32=RM16X32 13|0*1406||0x3
+

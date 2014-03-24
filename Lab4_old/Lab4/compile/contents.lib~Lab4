@@ -1,0 +1,15 @@
+110
+~E 1 "./../src/adc_decoder.vhd" 29 adc_decoder
+~A 1 "./../src/adc_decoder.vhd" 38 adc_decoder
+~E 1 "./../src/adc_driver.vhd" 28 adc_driver
+~A 1 "./../src/adc_driver.vhd" 40 adc_driver
+~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
+~A 1 "./../src/ClockDivider.vhd" 13 ClockDivider
+~E 1 "./../src/lab4_top.vhd" 28 lab4_top
+~A 1 "./../src/lab4_top.vhd" 41 lab4_top
+~E 1 "./../src/reg.vhd" 4 reg
+~A 1 "./../src/reg.vhd" 16 reg
+~E 1 "./../src/shift10.vhd" 28 shift10
+~A 1 "./../src/shift10.vhd" 39 shift10
+~E 1 "./../src/spi_ctrl.vhd" 6 spi_ctrl
+~A 1 "./../src/spi_ctrl.vhd" 15 spi_ctrl

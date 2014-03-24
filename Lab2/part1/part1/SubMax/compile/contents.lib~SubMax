@@ -1,0 +1,9 @@
+26
+~E 1 "./../src/comp.vhd" 28 comp
+~A 1 "./../src/comp.vhd" 39 comp
+~E 1 "./../src/mux24b.vhd" 28 mux24b
+~A 1 "./../src/mux24b.vhd" 39 mux24b
+~E 1 "./../src/SubMax.vhd" 28 SubMax
+~A 1 "./../src/SubMax.vhd" 38 SubMax
+~E 1 "./../src/subtract.vhd" 29 subtract
+~A 1 "./../src/subtract.vhd" 40 subtract

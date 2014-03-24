@@ -1,0 +1,13 @@
+.\src\RegAndMuxCtrl.vhd
+.\src\reg.vhd
+.\src\EuclidsGCD.vhd
+.\src\mux24b.vhd
+.\src\submax2.vhd
+.\src\ClockDivider.vhd
+.\src\clock_pulse.vhd
+.\src\EuclidsGCD_top.vhd
+.\src\EuclidsGCD_top2.vhd
+.\src\x7segb.vhd
+.\synthesis\EuclidsGCD_top.vhd
+.\synthesis\EuclidsGCD_top2.vhd
+.\IMPLEMENT\TIME_SIM.VHD

@@ -1,0 +1,695 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -p
+3S500EFG320-5 -aul -sd c:\My_Designs\Lab6\Lab6\synthesis -sd
+c:\My_Designs\Lab6\Lab6\compile -sd c:\My_Designs\Lab6\Lab6\src -sd
+C:\Aldec\Active-HDL Student Edition\vlib\SPARTAN3E\compile -uc calc_top.ucf
+calc_top.ngc calc_top.ngd
+
+Reading NGO file "c:/My_Designs/Lab6/Lab6/implement/ver1/rev1/calc_top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "calc_top.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:59 - Constraint <NET "ld<0>"  LOC = "J14"  ;>
+   [calc_top.ucf(11)]: NET "ld<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ld<0>"  LOC = "J14"  ;> [calc_top.ucf(11)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "ld<1>"  LOC = "J15"  ;>
+   [calc_top.ucf(12)]: NET "ld<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ld<1>"  LOC = "J15"  ;> [calc_top.ucf(12)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "ld<2>"  LOC = "K15"  ;>
+   [calc_top.ucf(13)]: NET "ld<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ld<2>"  LOC = "K15"  ;> [calc_top.ucf(13)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "ld<3>"  LOC = "K14"  ;>
+   [calc_top.ucf(14)]: NET "ld<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ld<3>"  LOC = "K14"  ;> [calc_top.ucf(14)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "ld<4>"  LOC = "E17"  ;>
+   [calc_top.ucf(15)]: NET "ld<4>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ld<4>"  LOC = "E17"  ;> [calc_top.ucf(15)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "ld<5>"  LOC = "P15"  ;>
+   [calc_top.ucf(16)]: NET "ld<5>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ld<5>"  LOC = "P15"  ;> [calc_top.ucf(16)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "ld<6>"  LOC = "F4"  ;>
+   [calc_top.ucf(17)]: NET "ld<6>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ld<6>"  LOC = "F4"  ;> [calc_top.ucf(17)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "ld<7>"  LOC = "R4"  ;>
+   [calc_top.ucf(18)]: NET "ld<7>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ld<7>"  LOC = "R4"  ;> [calc_top.ucf(18)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "RxD"  LOC = "U6"  ;>
+   [calc_top.ucf(48)]: NET "RxD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RxD"  LOC = "U6"  ;> [calc_top.ucf(48)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "TxD"  LOC = "P9"  ;>
+   [calc_top.ucf(49)]: NET "TxD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "TxD"  LOC = "P9"  ;> [calc_top.ucf(49)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "red<0>"  LOC = "R9"  ;>
+   [calc_top.ucf(52)]: NET "red<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "red<0>"  LOC = "R9"  ;> [calc_top.ucf(52)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "red<1>"  LOC = "T8"  ;>
+   [calc_top.ucf(53)]: NET "red<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "red<1>"  LOC = "T8"  ;> [calc_top.ucf(53)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "red<2>"  LOC = "R8"  ;>
+   [calc_top.ucf(54)]: NET "red<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "red<2>"  LOC = "R8"  ;> [calc_top.ucf(54)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "green<0>"  LOC = "N8"  ;>
+   [calc_top.ucf(55)]: NET "green<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "green<0>"  LOC = "N8"  ;> [calc_top.ucf(55)]' could not be found and
+   so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "green<1>"  LOC = "P8"  ;>
+   [calc_top.ucf(56)]: NET "green<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "green<1>"  LOC = "P8"  ;> [calc_top.ucf(56)]' could not be found and
+   so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "green<2>"  LOC = "P6"  ;>
+   [calc_top.ucf(57)]: NET "green<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "green<2>"  LOC = "P6"  ;> [calc_top.ucf(57)]' could not be found and
+   so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "blue<0>"  LOC = "U5"  ;>
+   [calc_top.ucf(58)]: NET "blue<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "blue<0>"  LOC = "U5"  ;> [calc_top.ucf(58)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "blue<1>"  LOC = "U4"  ;>
+   [calc_top.ucf(59)]: NET "blue<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "blue<1>"  LOC = "U4"  ;> [calc_top.ucf(59)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "hsync"  LOC = "T4"  ;>
+   [calc_top.ucf(60)]: NET "hsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "hsync"  LOC = "T4"  ;> [calc_top.ucf(60)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "vsync"  LOC = "U3"  ;>
+   [calc_top.ucf(61)]: NET "vsync" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "vsync"  LOC = "U3"  ;> [calc_top.ucf(61)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "OE_L" LOC= "T2";>
+   [calc_top.ucf(64)]: NET "OE_L" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "OE_L" LOC= "T2";> [calc_top.ucf(64)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "WE_L" LOC= "N7";>
+   [calc_top.ucf(65)]: NET "WE_L" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "WE_L" LOC= "N7";> [calc_top.ucf(65)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "RamADV_L" LOC= "J4";>
+   [calc_top.ucf(66)]: NET "RamADV_L" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RamADV_L" LOC= "J4";> [calc_top.ucf(66)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "CE_L" LOC= "R6";>
+   [calc_top.ucf(67)]: NET "CE_L" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "CE_L" LOC= "R6";> [calc_top.ucf(67)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "RamCLK" LOC= "H5";>
+   [calc_top.ucf(68)]: NET "RamCLK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RamCLK" LOC= "H5";> [calc_top.ucf(68)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "RamCRE" LOC= "P7";>
+   [calc_top.ucf(69)]: NET "RamCRE" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RamCRE" LOC= "P7";> [calc_top.ucf(69)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "LB_L" LOC= "K5";>
+   [calc_top.ucf(70)]: NET "LB_L" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LB_L" LOC= "K5";> [calc_top.ucf(70)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "UB_L" LOC= "K4";>
+   [calc_top.ucf(71)]: NET "UB_L" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "UB_L" LOC= "K4";> [calc_top.ucf(71)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "RamWAIT" LOC= "F5";>
+   [calc_top.ucf(72)]: NET "RamWAIT" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RamWAIT" LOC= "F5";> [calc_top.ucf(72)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "FlashRP_L" LOC= "T5";>
+   [calc_top.ucf(73)]: NET "FlashRP_L" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FlashRP_L" LOC= "T5";> [calc_top.ucf(73)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "FlashCE_L" LOC= "R5";>
+   [calc_top.ucf(74)]: NET "FlashCE_L" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FlashCE_L" LOC= "R5";> [calc_top.ucf(74)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "FlashSTS" LOC= "D3";>
+   [calc_top.ucf(75)]: NET "FlashSTS" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FlashSTS" LOC= "D3";> [calc_top.ucf(75)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<0>" LOC= "J1";>
+   [calc_top.ucf(76)]: NET "A<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<0>" LOC= "J1";> [calc_top.ucf(76)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<1>" LOC= "J2";>
+   [calc_top.ucf(77)]: NET "A<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<1>" LOC= "J2";> [calc_top.ucf(77)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<2>" LOC= "H4";>
+   [calc_top.ucf(78)]: NET "A<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<2>" LOC= "H4";> [calc_top.ucf(78)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<3>" LOC= "H1";>
+   [calc_top.ucf(79)]: NET "A<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<3>" LOC= "H1";> [calc_top.ucf(79)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<4>" LOC= "H2";>
+   [calc_top.ucf(80)]: NET "A<4>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<4>" LOC= "H2";> [calc_top.ucf(80)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<5>" LOC= "J5";>
+   [calc_top.ucf(81)]: NET "A<5>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<5>" LOC= "J5";> [calc_top.ucf(81)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<6>" LOC= "H3";>
+   [calc_top.ucf(82)]: NET "A<6>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<6>" LOC= "H3";> [calc_top.ucf(82)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<7>" LOC= "H6";>
+   [calc_top.ucf(83)]: NET "A<7>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<7>" LOC= "H6";> [calc_top.ucf(83)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<8>" LOC= "F1";>
+   [calc_top.ucf(84)]: NET "A<8>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<8>" LOC= "F1";> [calc_top.ucf(84)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<9>" LOC= "G3";>
+   [calc_top.ucf(85)]: NET "A<9>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<9>" LOC= "G3";> [calc_top.ucf(85)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<10>" LOC= "G6";>
+   [calc_top.ucf(86)]: NET "A<10>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<10>" LOC= "G6";> [calc_top.ucf(86)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<11>" LOC= "G5";>
+   [calc_top.ucf(87)]: NET "A<11>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<11>" LOC= "G5";> [calc_top.ucf(87)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<12>" LOC= "G4";>
+   [calc_top.ucf(88)]: NET "A<12>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<12>" LOC= "G4";> [calc_top.ucf(88)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<13>" LOC= "F2";>
+   [calc_top.ucf(89)]: NET "A<13>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<13>" LOC= "F2";> [calc_top.ucf(89)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<14>" LOC= "E1";>
+   [calc_top.ucf(90)]: NET "A<14>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<14>" LOC= "E1";> [calc_top.ucf(90)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<15>" LOC= "M5";>
+   [calc_top.ucf(91)]: NET "A<15>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<15>" LOC= "M5";> [calc_top.ucf(91)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<16>" LOC= "E2";>
+   [calc_top.ucf(92)]: NET "A<16>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<16>" LOC= "E2";> [calc_top.ucf(92)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<17>" LOC= "C2";>
+   [calc_top.ucf(93)]: NET "A<17>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<17>" LOC= "C2";> [calc_top.ucf(93)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<18>" LOC= "C1";>
+   [calc_top.ucf(94)]: NET "A<18>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<18>" LOC= "C1";> [calc_top.ucf(94)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<19>" LOC= "D2";>
+   [calc_top.ucf(95)]: NET "A<19>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<19>" LOC= "D2";> [calc_top.ucf(95)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<20>" LOC= "K3";>
+   [calc_top.ucf(96)]: NET "A<20>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<20>" LOC= "K3";> [calc_top.ucf(96)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<21>" LOC= "D1";>
+   [calc_top.ucf(97)]: NET "A<21>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<21>" LOC= "D1";> [calc_top.ucf(97)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "A<22>" LOC= "K6";>
+   [calc_top.ucf(98)]: NET "A<22>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A<22>" LOC= "K6";> [calc_top.ucf(98)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<0>" LOC= "L1";>
+   [calc_top.ucf(99)]: NET "DQ<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<0>" LOC= "L1";> [calc_top.ucf(99)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<1>" LOC= "L4";>
+   [calc_top.ucf(100)]: NET "DQ<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<1>" LOC= "L4";> [calc_top.ucf(100)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<2>" LOC= "L6";>
+   [calc_top.ucf(101)]: NET "DQ<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<2>" LOC= "L6";> [calc_top.ucf(101)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<3>" LOC= "M4";>
+   [calc_top.ucf(102)]: NET "DQ<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<3>" LOC= "M4";> [calc_top.ucf(102)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<4>" LOC= "N5";>
+   [calc_top.ucf(103)]: NET "DQ<4>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<4>" LOC= "N5";> [calc_top.ucf(103)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<5>" LOC= "P1";>
+   [calc_top.ucf(104)]: NET "DQ<5>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<5>" LOC= "P1";> [calc_top.ucf(104)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<6>" LOC= "P2";>
+   [calc_top.ucf(105)]: NET "DQ<6>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<6>" LOC= "P2";> [calc_top.ucf(105)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<7>" LOC= "R2";>
+   [calc_top.ucf(106)]: NET "DQ<7>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<7>" LOC= "R2";> [calc_top.ucf(106)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<8>" LOC= "L3";>
+   [calc_top.ucf(107)]: NET "DQ<8>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<8>" LOC= "L3";> [calc_top.ucf(107)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<9>" LOC= "L5";>
+   [calc_top.ucf(108)]: NET "DQ<9>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<9>" LOC= "L5";> [calc_top.ucf(108)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<10>" LOC= "M3";>
+   [calc_top.ucf(109)]: NET "DQ<10>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<10>" LOC= "M3";> [calc_top.ucf(109)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<11>" LOC= "M6";>
+   [calc_top.ucf(110)]: NET "DQ<11>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<11>" LOC= "M6";> [calc_top.ucf(110)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<12>" LOC= "L2";>
+   [calc_top.ucf(111)]: NET "DQ<12>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<12>" LOC= "L2";> [calc_top.ucf(111)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<13>" LOC= "N4";>
+   [calc_top.ucf(112)]: NET "DQ<13>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<13>" LOC= "N4";> [calc_top.ucf(112)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<14>" LOC= "R3";>
+   [calc_top.ucf(113)]: NET "DQ<14>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<14>" LOC= "R3";> [calc_top.ucf(113)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "DQ<15>" LOC= "T1";>
+   [calc_top.ucf(114)]: NET "DQ<15>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DQ<15>" LOC= "T1";> [calc_top.ucf(114)]' could not be found and so the
+   Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "PS2C"  LOC = "R12"  ;>
+   [calc_top.ucf(117)]: NET "PS2C" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "PS2C"  LOC = "R12"  ;> [calc_top.ucf(117)]' could not be found and so
+   the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "PS2D"  LOC = "P11"  ;>
+   [calc_top.ucf(118)]: NET "PS2D" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "PS2D"  LOC = "P11"  ;> [calc_top.ucf(118)]' could not be found and so
+   the Locate constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  73
+
+Total memory usage is 131280 kilobytes
+
+Writing NGD file "calc_top.ngd" ...
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+Writing NGDBUILD log file "calc_top.bld"...

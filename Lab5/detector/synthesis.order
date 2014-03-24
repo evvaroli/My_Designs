@@ -1,0 +1,7 @@
+i<>.\src\clock_pulse.vhd
+i<>.\src\debounce.vhd
+i<>.\src\reg.vhd
+i<>.\src\detector.vhd
+i<>.\src\detector_top.vhd
+i<>.\src\ClockDivider.vhd
+i<>.\src\x7segb.vhd

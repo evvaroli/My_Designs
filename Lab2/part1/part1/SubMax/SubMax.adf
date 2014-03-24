@@ -1,0 +1,94 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=SubMax
+
+[Library]
+SubMax=.\SubMax\SubMax.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=MV_XST146
+RUN_MODE_SYNTH=0
+IMPL_TOOL=MV_ISE146
+CSYNTH_TOOL=<none>
+PHYSSYNTH_TOOL=<none>
+FLOWTOOLS=IMPL_WITH_SYNTH
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+DVM_DISPLAY=NO
+FAMILY=Xilinx14x SPARTAN3E
+fileopenfolder=C:\My_Designs\Lab2\part1\part1\SubMax\src
+FUNC_LIB=SubMax
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+SubMax=.
+Active_lib=SPARTAN3E
+xilinxun=SPARTAN3E
+UnlinkedDesignLibrary=SPARTAN3E
+DESIGNS=SPARTAN3E
+
+[IMPLEMENTATION_XILINX14]
+impl_opt(dont_run_translate)=0
+impl_opt(dont_run_map)=0
+impl_opt(dont_run_place)=0
+impl_opt(dont_run_trace)=0
+impl_opt(dont_run_simulation)=0
+impl_opt(dont_run_fit)=0
+impl_opt(dont_run_bitgen)=1
+
+[IMPLEMENTATION]
+FLOW_STEPS_RESET=0
+UCF=
+
+[Files]
+/comp.vhd=-1
+/mux24b.vhd=-1
+/subtract.vhd=-1
+/SubMax.vhd=-1
+
+[Files.Data]
+.\src\comp.vhd=VHDL Source Code
+.\src\mux24b.vhd=VHDL Source Code
+.\src\subtract.vhd=VHDL Source Code
+
+.\src\SubMax.vhd=VHDL Source Code
+[SIM.FUNC]
+FJD=FunctionalSimTask
+FST=-all
+OPTION=0
+SERVERFARM_INCLUDE_INPUT_FILES=*.*
+SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*:synthesis\*.*:implement\*.*
+SERVERFARM_SFM_RESOURCE=
+TOPLEVEL=SubMax
+WAVEFORMS=
+DEFWAVE=1
+ADD_HIERARCHY_SIGNALS=0
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=comp|comp|0 submax|SubMax|0 
+ShowHide=ShowTopLevel
+Selected=

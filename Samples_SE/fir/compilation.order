@@ -1,0 +1,9 @@
+.\src\ff.v
+.\src\rom_c1c5.v
+.\src\rom_c2c4.v
+.\src\rom_c3.v
+.\src\adder_2x8_wrapper.v
+.\src\adder_7x8.v
+.\src\fir.v
+.\src\fir.vhd
+.\src\tb.v

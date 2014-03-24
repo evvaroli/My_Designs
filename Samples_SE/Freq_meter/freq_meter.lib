@@ -1,0 +1,33 @@
+timestamp=1380293200185
+
+[cnt_4b]
+A/cnt_4b=*21|.\src\CNT_4B.vhd|10000|
+NSymbols/cnt_4b=NSymbols/CNT_4B 40|0|2*0
+
+[cnt_bcd]
+A/cnt_bcd=*24|.\src\CNT_BCD.bde|10000|
+A/cnt_bcd2=*24|.\src\CNT_BCD2.bde|10000|
+NSymbols/cnt_bcd=NSymbols/CNT_BCD 40|0|2*2719
+
+[control]
+A/control_arch=*23|.\src\CONTROL.asf|10000|
+NSymbols/control=NSymbols/CONTROL 40|0|2*6485
+
+[hex2led]
+A/hex2led=*21|./src/hex2led.vhd|37|
+NSymbols/hex2led=40|0|2*9251
+
+[~A]
+ModifyID=56
+Version=73
+
+[~MFT]
+0=0|0freq_meter.mgf|520|0
+2=0|2freq_meter.mgf|9251|0
+
+[~U]
+cnt_4b=CNT_4B 11|||0x3
+cnt_bcd=CNT_BCD 11|0*0||0x7
+control=CONTROL 11|0*302||0x7
+hex2led=11|0*520||0x3
+

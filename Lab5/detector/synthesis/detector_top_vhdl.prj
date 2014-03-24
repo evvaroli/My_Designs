@@ -1,0 +1,7 @@
+vhdl detector "C:\My_Designs\Lab5\detector\src\clock_pulse.vhd"
+vhdl detector "C:\My_Designs\Lab5\detector\src\debounce.vhd"
+vhdl detector "C:\My_Designs\Lab5\detector\src\reg.vhd"
+vhdl detector "C:\My_Designs\Lab5\detector\src\detector.vhd"
+vhdl detector "C:\My_Designs\Lab5\detector\src\detector_top.vhd"
+vhdl detector "C:\My_Designs\Lab5\detector\src\ClockDivider.vhd"
+vhdl detector "C:\My_Designs\Lab5\detector\src\x7segb.vhd"

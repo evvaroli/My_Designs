@@ -1,0 +1,13 @@
+.\src\reg.vhd
+.\src\REGS.bde
+.\src\MUX.vhd
+.\src\COMPARATOR.vhd
+.\src\COMP.bde
+.\src\ADDSUB.vhd
+.\src\ALU.bde
+.\src\DATAPATH.bde
+.\src\CONTROL_FSM.asf
+.\src\COUNTER.vhd
+.\src\CONTROL.bde
+.\src\top.bde
+.\src\testbench.vhd

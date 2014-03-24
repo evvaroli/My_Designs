@@ -1,0 +1,16 @@
+.\src\gates\e_and5.vhd
+.\src\gates\e_and4.vhd
+.\src\gates\e_not1.vhd
+.\src\gates\e_and2.vhd
+.\src\gates\e_nor2.vhd
+.\src\gates\e_and3.vhd
+.\src\gates\e_or5.vhd
+.\src\Fub1.bde
+.\src\Fub2.bde
+.\src\Fub3.bde
+.\src\Fub4.bde
+.\src\Fub5.bde
+.\src\Fub0.bde
+.\src\SN7485_TOP.bde
+.\src\SN7485_TOP_TB.vhd
+.\src\external\Foreign1.dlm

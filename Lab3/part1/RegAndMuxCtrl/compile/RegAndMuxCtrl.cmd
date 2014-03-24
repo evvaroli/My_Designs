@@ -1,0 +1,1 @@
+-w -s "C:\My_Designs\Lab3\part1\library.cfg"  -j "C:\My_Designs\Lab3\part1\RegAndMuxCtrl\projlib.cfg"  -d "C:\My_Designs\Lab3\part1\RegAndMuxCtrl\compile"   -work RegAndMuxCtrl  -O3 -e 100 -2002 "C:\My_Designs\Lab3\part1\RegAndMuxCtrl\src\EuclidsGCD_top2.vhd"

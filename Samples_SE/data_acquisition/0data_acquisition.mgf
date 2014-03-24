@@ -1,0 +1,29 @@
+V 000037 11 175 1380285483060 clocks
+E clocks VHDL
+L STD;IEEE;
+U STD.STANDARD;ieee.std_logic_1164;
+PL 0
+G clk_period TIME = 10 ns
+G clk_ratio POSITIVE = 4
+P rd_clk _out STD_LOGIC
+P wr_clk _out STD_LOGIC
+X clocks
+V 000037 11 408 1380285393099 tester
+E tester VHDL
+L IEEE;STD;
+U IEEE.STD_LOGIC_1164
+P WR_CLK _in STD_LOGIC
+PT WR_CLK _in sc_logic
+P RD_CLK _in STD_LOGIC
+PT RD_CLK _in sc_logic
+P FULL _in STD_LOGIC
+PT FULL _in sc_logic
+P RST _out STD_LOGIC
+PT RST _out sc_logic
+P VALID _out STD_LOGIC
+PT VALID _out bool
+P ID _out STD_LOGIC_VECTOR[2:0]
+PT ID _out sc_uint<3> 
+P VALUE _out STD_LOGIC_VECTOR[11:0]
+PT VALUE _out sc_int<12> 
+X tester

@@ -1,0 +1,17 @@
+.\src\funit.vhd
+.\src\funit_top.vhd
+.\src\rom8.vhd
+.\src\calc_top.vhd
+.\src\clock_pulse.vhd
+.\src\ClockDivider.vhd
+.\src\pc.vhd
+.\src\reg.vhd
+.\src\mux.vhd
+.\src\x7segb.vhd
+.\src\calc_top2.vhd
+.\src\rom8_2.vhd
+.\src\pc_2.vhd
+.\synthesis\funit_top.vhd
+.\synthesis\calc_top.vhd
+.\synthesis\calc_top2.vhd
+.\IMPLEMENT\TIME_SIM.VHD

@@ -1,0 +1,9 @@
+.\src\clock_pulse.vhd
+.\src\debounce.vhd
+.\src\reg.vhd
+.\src\detector.vhd
+.\src\detector_top.vhd
+.\src\ClockDivider.vhd
+.\src\x7segb.vhd
+.\synthesis\detector_top.vhd
+.\IMPLEMENT\TIME_SIM.VHD

@@ -1,0 +1,104 @@
+timestamp=1394554463188
+
+[clock_pulse]
+A/clock_pulse=21|./../src/clock_pulse.vhd|13|1*197535
+BinI32/clock_pulse=3*25985
+I=0*11832
+I/clock_pulse=0*71900
+M=11|0|vb4|1394490093226|./../src/clock_pulse.vhd|0*11482*0xdb0f0e8d1498f09ce852eac51dbb3b1095e46bfb|0*11745*0x5eebbfaf24833dd780412b1f91e05209
+M/clock_pulse=21|0|vb4|1394554461415|./../src/clock_pulse.vhd|0*11937*0x8d26715cc7baf2635ca16f1046143468629a5e77|0*12347*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/clock_pulse.vhd|4
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/clock_pulse=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[clockdivider]
+A/clockdivider=A/ClockDivider 21|./../src/ClockDivider.vhd|13|1*213455
+BinI32/clockdivider=3*30106
+I=0*22218
+I/clockdivider=I/ClockDivider 0*72732
+M=11|0|vb4|1394493856331|./../src/ClockDivider.vhd|0*21848*0xc28bbffeddb661f0302e0375cfa1a491073bdf18|0*22129*0x5eebbfaf24833dd780412b1f91e05209
+M/clockdivider=M/ClockDivider 21|0|vb4|1394554462912|./../src/ClockDivider.vhd|0*33301*0x880cf4c82101ca1aa9dcd8d3e958159ebb089295|0*33651*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/ClockDivider.vhd|5
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/clockdivider=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[debounce]
+A/debounce=21|./../src/debounce.vhd|13|1*198994
+BinI32/debounce=3*26640
+I=0*17349
+I/debounce=0*72017
+M=11|0|vb4|1394491253715|./../src/debounce.vhd|0*16989*0xb374f013b85f178b59ee347878b356173f0b0d3e|0*17268*0x5eebbfaf24833dd780412b1f91e05209
+M/debounce=21|0|vb4|1394554462285|./../src/debounce.vhd|0*17451*0x935065060c97b051506bc5d4b9089263796483f0|0*17869*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/debounce.vhd|4
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/debounce=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[detector]
+A/detector=21|./../src/detector.vhd|24|1*202361
+BinI32/detector=3*28284
+I=0*50536
+I/detector=0*72229
+M=11|0|vb4|1394500444532|./../src/detector.vhd|0*50134*0x0bb05842a452771f5b964eaba545e1c83235acad|0*50455*0x5eebbfaf24833dd780412b1f91e05209
+M/detector=21|0|vb4|1394554462707|./../src/detector.vhd|0*61273*0xc5c8f6750b5e7ce8be451032f06010c13773628c|0*63705*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/detector.vhd|12
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/detector=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[detector_top]
+A/detector_top=21|./../src/detector_top.vhd|42|1*204908
+BinI32/detector_top=3*29609
+I=0*47279
+I/detector_top=0*72340
+M=11|0|vb4|1394499631431|./../src/detector_top.vhd|0*46792*0x337e491b5c1e05e912b02dc6af27a87d132615db|0*47190*0x5eebbfaf24833dd780412b1f91e05209
+M/detector_top=21|0|vb4|1394554462834|./../src/detector_top.vhd|0*69370*0x27e48db1fc059d4df6e2975d51a2e348fe158d1c|0*71403*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/detector_top.vhd|28
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/detector_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[euclidsgcd_top2]
+I=0*36361
+M=11|0|vb4|1394496952654|./../src/EuclidsGCD_top2.vhd|0*35890*0x3b747b381778c0baa7a9c92a6f81d9d8e5323e3f|0*36266*0x5eebbfaf24833dd780412b1f91e05209
+R=./../src/EuclidsGCD_top2.vhd|28
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[reg]
+A/reg=21|./../src/reg.vhd|16|1*200839
+BinI32/reg=3*27559
+I=0*1900
+I/reg=0*72128
+M=11|0|vb4|1394482893995|./../src/reg.vhd|0*1524*0x41d5db03e2025ccc0b7feeb93a7de2e13d097d28|0*1829*0x5eebbfaf24833dd780412b1f91e05209
+M/reg=21|0|vb4|1394554462488|./../src/reg.vhd|0*1997*0x2750ba0a10bed1a396d72e79c8c536077fd11cdf|0*2220*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/reg.vhd|4
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/reg=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[x7segb]
+A/x7segb=21|./../src/x7segb.vhd|17|1*214925
+BinI32/x7segb=3*30565
+I=0*43854
+I/x7segb=0*72920
+M=11|0|vb4|1394498476772|./../src/x7segb.vhd|0*43420*0x998693db190b71fe7c9b75ce21b4a250c903f97c|0*43777*0x5eebbfaf24833dd780412b1f91e05209
+M/x7segb=21|0|vb4|1394554463018|./../src/x7segb.vhd|0*44023*0x878f8e2d4ceb979cbabc9d0a22159954d607657c|0*45586*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/x7segb.vhd|6
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/x7segb=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[~A]
+ModifyID=417
+Version=73
+
+[~MFT]
+0=382|0detector.mgf|72920|57648
+1=120|1detector.mgf|214925|197535
+3=116|3detector.mgf|30565|25985
+
+[~U]
+clock_pulse=11|0*11288|
+clockdivider=ClockDivider 11|0*21669|
+debounce=11|0*16780|
+detector=11|0*49885|
+detector_top=11|0*46474|
+euclidsgcd_top2=EuclidsGCD_top2 11|0*35595|
+reg=11|0*1278|
+x7segb=11|0*43165|
+

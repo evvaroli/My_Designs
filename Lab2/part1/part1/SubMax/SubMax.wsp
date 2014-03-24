@@ -1,0 +1,18 @@
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+SubMax=1
+Built-in symbols=0
+SPARTAN3E=0
+[COMPILESTATUS|.\src\comp.vhd]
+FileTimeLow=30351888
+Status=Compiled
+[COMPILESTATUS|.\src\mux24b.vhd]
+FileTimeLow=30351888
+Status=Compiled
+[COMPILESTATUS|.\src\subtract.vhd]
+FileTimeLow=30351888
+Status=Compiled
+[COMPILESTATUS|.\src\SubMax.vhd]
+FileTimeLow=30351894
+Status=Compiled
+[Gui config]
+RunFor=50 ns

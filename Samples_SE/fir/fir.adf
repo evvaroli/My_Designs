@@ -1,0 +1,139 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=fir
+
+[Library]
+fir=.\fir\fir.lib
+
+[Settings]
+AccessRead=1
+AccessReadWrite=1
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+fileopenfolder=C:\My_Designs\test_designs\fir\src
+VerilogDirsChanged=1
+WireDelay=2
+SimulationAccessReadModules=
+SimulationAccessReadWriteModules=
+SimulationAccessReadPaths=
+SimulationAccessReadWritePaths=
+SimulationAccessNetsPaths=
+SimulationAccessNetsModules=
+NoTchkMsg=0
+NoTimingChecks=0
+HESPrepare=0
+EnableXtrace=0
+SplitNetVectors=0
+StackMemorySize=32
+RetvalMemorySize=32
+VsimAdditionalOptions=
+NoWarningsSDF=0
+SDFErrorLimit=0
+EnableSDFErrorLimit=0
+ChangeSDFErrorToWarning=0
+DisableVitalMsg=0
+VitalAccel=1
+VitalGlitches=0
+DisableIEEEWarnings=0
+ReportAssertionsActivations=0
+TrackAssertionFailures=1
+ReportAssertionsFailures=1
+AssertionFailureLimit=0
+AssertionFailureAction=Continue
+TrackAssertionPasses=1
+ReportAssertionPasses=0
+AssertionPassLimit=0
+ReportUnfinishedAssertions=1
+TrackCoverMatches=1
+ReportCoverMatches=1
+CoverAction=Continue
+ReportDroppedCoverEvaluations=0
+ReportActivatedCoverEvaluations=0
+
+[LocalVerilogSets]
+EnableSLP=0
+EnableDebug=0
+VerilogLanguage=0
+Strict=0
+VerilogNoSpecify=0
+WarningPrnLevel=1
+ErrorOutputLimit=0
+OptimizationLevel=2
+ProtectLevel=0
+AdditionalOptions=
+MonitoringOfEventsUDP=0
+DisablePulseError=0
+HasInitialRegsValue=0
+InitialRegsValue=X
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+fir=.
+
+[DefineMacro]
+Global=
+
+[AlintSettings]
+EnableCustomLibraryCfg=0
+CustomLibraryCfg=
+StartDefaultRules=1
+MacroBehavior=Generate
+CustomScript=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Groups]
+
+[LocalVerilogDirs]
+Count=0
+
+[Files]
+/ff.v=-1
+/rom_c1c5.v=-1
+/rom_c2c4.v=-1
+/rom_c3.v=-1
+/adder_2x8_wrapper.v=-1
+/adder_7x8.v=-1
+/fir.v=-1
+/fir.vhd=-1
+/tb.v=-1
+/runme_ver.do=-1
+/runme_vhd.do=-1
+/wavebench.tcl=-1
+/readme.txt=-1
+
+[Files.Data]
+.\src\ff.v=Verilog Source Code
+.\src\rom_c1c5.v=Verilog Source Code
+.\src\rom_c2c4.v=Verilog Source Code
+.\src\rom_c3.v=Verilog Source Code
+.\src\adder_2x8_wrapper.v=Verilog Source Code
+.\src\adder_7x8.v=Verilog Source Code
+.\src\fir.v=Verilog Source Code
+.\src\fir.vhd=VHDL Source Code
+.\src\tb.v=Verilog Source Code
+.\src\runme_ver.do=Macro
+.\src\runme_vhd.do=Macro
+.\src\wavebench.tcl=Tcl Script
+.\src\readme.txt=Text File
+
+[SpecTracer]
+WindowVisible=0

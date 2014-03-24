@@ -1,0 +1,26 @@
+V 000038 12 231 1380549729503 counter
+E counter VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P COUNTER _out reg[1:0]
+V COUNTER - - - -
+P FULL _out wire
+V FULL - - - -
+P CLK _in wire
+V CLK - - - -
+P RESET _in wire
+V RESET - - - -
+P ENABLE _in wire
+V ENABLE - - - -
+X counter
+V 000040 11 153 1374159057859 pulse_gen
+E pulse_gen VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P clk _in STD_LOGIC
+P enable _in STD_LOGIC
+P reset _in STD_LOGIC
+P pulse _out STD_LOGIC
+X pulse_gen

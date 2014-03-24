@@ -1,0 +1,36 @@
+timestamp=1385715281995
+
+[automachine]
+A/automachine_arch=*23|.\src\automachine.asf|10000|
+NSymbols/automachine=40|0|2*0
+
+[counters]
+A/behaviour=*21|./SRC/counters.vhd|18|
+NSymbols/counters=NSymbols/Counters 40|0|2*6052
+
+[press]
+A/schematic=*24|.\src\press.bde|10000|
+NSymbols/press=NSymbols/Press 40|0|2*10897
+
+[press_top]
+A/schematic=*24|.\src\press_top.bde|10000|
+A/structure=*21|./src/ALTERA POST-P&R/Press_top.vho|84|
+
+[press_top_tb_al]
+A/tb_architecture_al=*21|./src/ALTERA POST-P&R/presscontroller_TB_AL.vhd|31|
+
+[~A]
+ModifyID=252
+Version=73
+
+[~MFT]
+0=0|0PressController.mgf|1435|0
+2=0|2PressController.mgf|10897|0
+
+[~U]
+automachine=11|0*0||0x7
+counters=Counters 11|0*365||0x7
+press=Press 11|0*696||0x7
+press_top=Press_top 11|0*1051|
+press_top_tb_al=11|0*1435|
+

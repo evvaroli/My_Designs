@@ -1,0 +1,3 @@
+set XILINX=C:\Xilinx\13.2\ISE_DS\ISE
+call "C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\xst.exe" -ifn lab4_top.xst >> synthesis.dfml
+call "C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\netgen.exe" -ofmt vhdl -intstyle silent -w lab4_top.ngc  lab4_top.vhd >> synthesis.dfml

@@ -1,0 +1,7 @@
+i<>.\src\adc_decoder.vhd
+i<>.\src\adc_driver.vhd
+i<>.\src\ClockDivider.vhd
+i<>.\src\lab4_top.vhd
+i<>.\src\reg.vhd
+i<>.\src\shift10.vhd
+i<>.\src\spi_ctrl.vhd

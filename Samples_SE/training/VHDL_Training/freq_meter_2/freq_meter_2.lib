@@ -1,0 +1,41 @@
+timestamp=1380552180112
+
+[and2]
+A/and2=*21|./src/Functional/AND2.vhd|23|
+NSymbols/and2=NSymbols/AND2 40|0|2*0
+
+[cnt_4b]
+A/cnt_4b=*21|./src/Functional/CNT_4b.vhd|26|
+NSymbols/cnt_4b=NSymbols/CNT_4b 40|0|2*1887
+
+[cnt_bcd]
+A/cnt_bcd=*24|.\src\Functional\CNT_BCD.bde|10000|
+NSymbols/cnt_bcd=NSymbols/CNT_BCD 40|0|2*4606
+
+[control]
+A/control_arch=*23|.\src\Functional\CONTROL.asf|10000|
+NSymbols/control=NSymbols/CONTROL 40|0|2*8372
+
+[hex2led]
+A/hex2led=*21|./src/Functional/hex2led.vhd|23|
+NSymbols/hex2led=40|0|2*11138
+
+[top_frqm]
+A/top_frqm=*24|.\src\Functional\top_frqm.bde|10000|
+
+[~A]
+ModifyID=187
+Version=73
+
+[~MFT]
+0=0|0freq_meter_2.mgf|1035|0
+2=0|2freq_meter_2.mgf|11138|0
+
+[~U]
+and2=AND2 11|0*0||0x3
+cnt_4b=CNT_4b 11|0*147||0x3
+cnt_bcd=CNT_BCD 11|0*361||0x7
+control=CONTROL 11|0*658||0x7
+hex2led=11|0*871||0x3
+top_frqm=11|0*1035|
+

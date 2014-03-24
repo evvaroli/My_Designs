@@ -1,0 +1,71 @@
+timestamp=1380287837218
+
+[addsub]
+A/addsub=*21|./src/ADDSUB.vhd|45|
+NSymbols/addsub=NSymbols/ADDSUB 40|0|2*0
+
+[alu]
+A/alu=*24|.\src\ALU.bde|10000|
+NSymbols/alu=NSymbols/ALU 40|0|2*2266
+
+[comp]
+A/comp=*24|.\src\COMP.bde|10000|
+NSymbols/comp=NSymbols/COMP 40|0|2*5164
+
+[comparator]
+A/comparator=*21|./src/COMPARATOR.vhd|41|
+NSymbols/comparator=NSymbols/COMPARATOR 40|0|2*9052
+
+[control]
+A/control=*24|.\src\CONTROL.bde|10000|
+NSymbols/control=NSymbols/CONTROL 40|0|2*10848
+
+[control_fsm]
+A/control_fsm_arch=*23|.\src\CONTROL_FSM.asf|10000|
+NSymbols/control_fsm=NSymbols/CONTROL_FSM 40|0|2*15526
+
+[counter]
+A/counter=*21|./src/COUNTER.vhd|43|
+NSymbols/counter=NSymbols/COUNTER 40|0|2*21657
+
+[datapath]
+A/datapath=*24|.\src\DATAPATH.bde|10000|
+NSymbols/datapath=NSymbols/DATAPATH 40|0|2*24483
+
+[mux]
+A/mux=*21|./src/MUX.vhd|42|
+NSymbols/mux=NSymbols/MUX 40|0|2*29694
+
+[reg]
+A/reg=*21|./src/REG.vhd|43|
+NSymbols/reg=40|0|2*31966
+
+[regs]
+A/regs=*24|.\src\REGS.bde|10000|
+NSymbols/regs=NSymbols/REGS 40|0|2*35061
+
+[top]
+A/top=*24|.\src\top.bde|10000|
+
+[~A]
+ModifyID=267
+Version=73
+
+[~MFT]
+0=0|0datapath.mgf|3247|0
+2=0|2datapath.mgf|35061|0
+
+[~U]
+addsub=ADDSUB 11|0*0||0x7
+alu=ALU 11|0*258||0x7
+comp=COMP 11|0*520||0x7
+comparator=COMPARATOR 11|0*831||0x7
+control=CONTROL 11|0*1063||0x7
+control_fsm=CONTROL_FSM 11|0*1391||0x7
+counter=COUNTER 11|0*1816||0x7
+datapath=DATAPATH 11|0*2040||0x7
+mux=MUX 11|0*2436||0x7
+reg=11|0*2680||0x3
+regs=REGS 11|0*2930||0x7
+top=11|0*3247|
+

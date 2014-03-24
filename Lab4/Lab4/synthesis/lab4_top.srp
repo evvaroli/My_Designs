@@ -1,0 +1,573 @@
+Release 13.2 - xst O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to .
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to C:\Users\snschnei\Documents\Lab4\lab4\synthesis\xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lab4_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : no
+
+---- Target Parameters
+Output File Name                   : "lab4_top"
+Output Format                      : NGC
+Target Device                      : xc3s500efg320-5
+
+---- Source Options
+Top Module Name                    : lab4_top
+Generics, Parameters               : {  }
+Verilog Macros                     : {  }
+Automatic FSM Extraction           : yes
+FSM Encoding Algorithm             : Auto
+Resource Sharing                   : yes
+FSM Style                          : lut
+RAM Extraction                     : yes
+RAM Style                          : auto
+ROM Extraction                     : yes
+ROM Style                          : auto
+Mux Extraction                     : yes
+Mux Style                          : auto
+Decoder Extraction                 : yes
+Priority Encoder Extraction        : yes
+Shift Register Extraction          : yes
+Logical Shifter Extraction         : yes
+XOR Collapsing                     : yes
+Multiplier Style                   : auto
+Asynchronous To Synchronous        : no
+Automatic Register Balancing       : no
+Safe Implementation                : no
+
+---- Target Options
+Add IO Buffers                     : yes
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : yes
+Equivalent register Removal        : yes
+Move First FlipFlop Stage          : yes
+Move Last FlipFlop Stage           : yes
+Pack IO Registers into IOBs        : auto
+Slice Packing                      : yes
+Optimize Instantiated Primitives   : no
+Use Clock Enable                   : yes
+Use Synchronous Set                : yes
+Use Synchronous Reset              : yes
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Global Optimization                : allclocknets
+RTL Output                         : yes
+Write Timing Constraints           : no
+Verilog 2001                       : yes
+Keep Hierarchy                     : no
+Netlist Hierarchy                  : as_optimized
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Cross Clock Analysis               : no
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Read Cores                         : yes
+Auto BRAM Packing                  : no
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/snschnei/Documents/Lab4/lab4/src/reg.vhd" in Library lab4.
+Architecture reg of Entity reg is up to date.
+Compiling vhdl file "C:/Users/snschnei/Documents/Lab4/lab4/src/shift10.vhd" in Library lab4.
+Entity <shift10> compiled.
+Entity <shift10> (Architecture <shift10>) compiled.
+Compiling vhdl file "C:/Users/snschnei/Documents/Lab4/lab4/src/spi_ctrl.vhd" in Library lab4.
+Architecture spi_ctrl of Entity spi_ctrl is up to date.
+Compiling vhdl file "C:/Users/snschnei/Documents/Lab4/lab4/src/adc_decoder.vhd" in Library lab4.
+Architecture adc_decoder of Entity adc_decoder is up to date.
+Compiling vhdl file "C:/Users/snschnei/Documents/Lab4/lab4/src/adc_driver.vhd" in Library lab4.
+Architecture adc_driver of Entity adc_driver is up to date.
+Compiling vhdl file "C:/Users/snschnei/Documents/Lab4/lab4/src/ClockDivider.vhd" in Library lab4.
+Architecture clockdivider of Entity clockdivider is up to date.
+Compiling vhdl file "C:/Users/snschnei/Documents/Lab4/lab4/src/lab4_top.vhd" in Library lab4.
+Architecture lab4_top of Entity lab4_top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <lab4_top> in library <lab4> (architecture <lab4_top>).
+
+Analyzing hierarchy for entity <adc_decoder> in library <lab4> (architecture <adc_decoder>).
+
+Analyzing hierarchy for entity <adc_driver> in library <lab4> (architecture <adc_driver>).
+
+Analyzing hierarchy for entity <ClockDivider> in library <lab4> (architecture <clockdivider>).
+
+Analyzing hierarchy for entity <reg> in library <lab4> (architecture <reg>) with generics.
+	N = 10
+
+Analyzing hierarchy for entity <shift10> in library <lab4> (architecture <shift10>).
+
+Analyzing hierarchy for entity <spi_ctrl> in library <lab4> (architecture <spi_ctrl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <lab4_top> in library <lab4> (Architecture <lab4_top>).
+Entity <lab4_top> analyzed. Unit <lab4_top> generated.
+
+Analyzing Entity <adc_decoder> in library <lab4> (Architecture <adc_decoder>).
+Entity <adc_decoder> analyzed. Unit <adc_decoder> generated.
+
+Analyzing Entity <adc_driver> in library <lab4> (Architecture <adc_driver>).
+Entity <adc_driver> analyzed. Unit <adc_driver> generated.
+
+Analyzing generic Entity <reg> in library <lab4> (Architecture <reg>).
+	N = 10
+Entity <reg> analyzed. Unit <reg> generated.
+
+Analyzing Entity <shift10> in library <lab4> (Architecture <shift10>).
+Entity <shift10> analyzed. Unit <shift10> generated.
+
+Analyzing Entity <spi_ctrl> in library <lab4> (Architecture <spi_ctrl>).
+Entity <spi_ctrl> analyzed. Unit <spi_ctrl> generated.
+
+Analyzing Entity <ClockDivider> in library <lab4> (Architecture <clockdivider>).
+Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <adc_decoder>.
+    Related source file is "C:/Users/snschnei/Documents/Lab4/lab4/src/adc_decoder.vhd".
+    Found 11-bit comparator greater for signal <y$cmp_gt0000> created at line 42.
+    Found 11-bit comparator greater for signal <y$cmp_gt0001> created at line 43.
+    Found 11-bit comparator greater for signal <y$cmp_gt0002> created at line 45.
+    Found 11-bit comparator greater for signal <y$cmp_gt0003> created at line 47.
+    Found 11-bit comparator greater for signal <y$cmp_gt0004> created at line 49.
+    Found 11-bit comparator greater for signal <y$cmp_gt0005> created at line 51.
+    Found 11-bit comparator greater for signal <y$cmp_gt0006> created at line 53.
+    Found 11-bit comparator greater for signal <y$cmp_gt0007> created at line 55.
+    Summary:
+	inferred   8 Comparator(s).
+Unit <adc_decoder> synthesized.
+
+
+Synthesizing Unit <ClockDivider>.
+    Related source file is "C:/Users/snschnei/Documents/Lab4/lab4/src/ClockDivider.vhd".
+    Found 24-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ClockDivider> synthesized.
+
+
+Synthesizing Unit <reg>.
+    Related source file is "C:/Users/snschnei/Documents/Lab4/lab4/src/reg.vhd".
+    Found 10-bit register for signal <q>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <reg> synthesized.
+
+
+Synthesizing Unit <shift10>.
+    Related source file is "C:/Users/snschnei/Documents/Lab4/lab4/src/shift10.vhd".
+    Found 10-bit register for signal <qs>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <shift10> synthesized.
+
+
+Synthesizing Unit <spi_ctrl>.
+    Related source file is "C:/Users/snschnei/Documents/Lab4/lab4/src/spi_ctrl.vhd".
+    Found finite state machine <FSM_0> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 16                                             |
+    | Inputs             | 0                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | clr                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s_tcsh1                                        |
+    | Power Up State     | s_tcsh1                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <spi_ctrl> synthesized.
+
+
+Synthesizing Unit <adc_driver>.
+    Related source file is "C:/Users/snschnei/Documents/Lab4/lab4/src/adc_driver.vhd".
+Unit <adc_driver> synthesized.
+
+
+Synthesizing Unit <lab4_top>.
+    Related source file is "C:/Users/snschnei/Documents/Lab4/lab4/src/lab4_top.vhd".
+Unit <lab4_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 11
+ 1-bit register                                        : 10
+ 10-bit register                                       : 1
+# Comparators                                          : 8
+ 11-bit comparator greater                             : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <driver/spi/present_state/FSM> on signal <present_state[1:4]> with user encoding.
+---------------------
+ State   | Encoding
+---------------------
+ s_tcsh1 | 0000
+ s_tcsh2 | 0001
+ s_clk1  | 0010
+ s_clk2  | 0011
+ s_clk3  | 0100
+ s_clk4  | 0101
+ s_clk5  | 0110
+ s_clk6  | 0111
+ s_clk7  | 1000
+ s_clk8  | 1001
+ s_clk9  | 1010
+ s_clk10 | 1011
+ s_clk11 | 1100
+ s_clk12 | 1101
+ s_clk13 | 1110
+ s_clk14 | 1111
+---------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+# Comparators                                          : 8
+ 11-bit comparator greater                             : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <cdivider/q_4> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_5> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_6> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_7> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_8> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_9> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_10> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_11> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_12> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_13> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_14> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_15> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_16> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_17> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_18> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_19> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_20> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_21> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_22> of sequential type is unconnected in block <lab4_top>.
+WARNING:Xst:2677 - Node <cdivider/q_23> of sequential type is unconnected in block <lab4_top>.
+
+Optimizing unit <lab4_top> ...
+
+Optimizing unit <adc_decoder> ...
+
+Optimizing unit <reg> ...
+
+Optimizing unit <shift10> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lab4_top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 28
+ Flip-Flops                                            : 28
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : lab4_top.ngr
+Top Level Output File Name         : lab4_top
+Output Format                      : NGC
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 29
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 3
+#      LUT2                        : 1
+#      LUT3                        : 2
+#      LUT4                        : 12
+#      MUXCY                       : 3
+#      VCC                         : 1
+#      XORCY                       : 4
+# FlipFlops/Latches                : 28
+#      FDC                         : 18
+#      FDCE                        : 10
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 2
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       16  out of   4656     0%  
+ Number of Slice Flip Flops:             28  out of   9312     0%  
+ Number of 4 input LUTs:                 20  out of   9312     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+mclk                               | BUFGP                  | 4     |
+cdivider/q_31                      | BUFG                   | 24    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+btn<0>                             | IBUF                   | 28    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.058ns (Maximum Frequency: 327.065MHz)
+   Minimum input arrival time before clock: 1.731ns
+   Maximum output required time after clock: 7.418ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mclk'
+  Clock period: 3.058ns (frequency: 327.065MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               3.058ns (Levels of Logic = 4)
+  Source:            cdivider/q_1 (FF)
+  Destination:       cdivider/q_3 (FF)
+  Source Clock:      mclk rising
+  Destination Clock: mclk rising
+
+  Data Path: cdivider/q_1 to cdivider/q_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.514   0.509  cdivider/q_1 (cdivider/q_1)
+     LUT1:I0->O            1   0.612   0.000  cdivider/Mcount_q_cy<1>_rt (cdivider/Mcount_q_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  cdivider/Mcount_q_cy<1> (cdivider/Mcount_q_cy<1>)
+     MUXCY:CI->O           0   0.051   0.000  cdivider/Mcount_q_cy<2> (cdivider/Mcount_q_cy<2>)
+     XORCY:CI->O           1   0.699   0.000  cdivider/Mcount_q_xor<3> (Result<3>)
+     FDC:D                     0.268          cdivider/q_3
+    ----------------------------------------
+    Total                      3.058ns (2.549ns logic, 0.509ns route)
+                                       (83.4% logic, 16.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cdivider/q_31'
+  Clock period: 2.962ns (frequency: 337.604MHz)
+  Total number of paths / destination ports: 69 / 33
+-------------------------------------------------------------------------
+Delay:               2.962ns (Levels of Logic = 1)
+  Source:            driver/spi/present_state_FSM_FFd1 (FF)
+  Destination:       driver/a_reg/q_9 (FF)
+  Source Clock:      cdivider/q_31 rising
+  Destination Clock: cdivider/q_31 rising
+
+  Data Path: driver/spi/present_state_FSM_FFd1 to driver/a_reg/q_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.603  driver/spi/present_state_FSM_FFd1 (driver/spi/present_state_FSM_FFd1)
+     LUT4:I0->O           10   0.612   0.750  driver/spi/present_state_FSM_Out01 (driver/sload)
+     FDCE:CE                   0.483          driver/a_reg/q_0
+    ----------------------------------------
+    Total                      2.962ns (1.609ns logic, 1.353ns route)
+                                       (54.3% logic, 45.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cdivider/q_31'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            JA3 (PAD)
+  Destination:       driver/s_reg/qs_0 (FF)
+  Destination Clock: cdivider/q_31 rising
+
+  Data Path: JA3 to driver/s_reg/qs_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  JA3_IBUF (JA3_IBUF)
+     FDC:D                     0.268          driver/s_reg/qs_0
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cdivider/q_31'
+  Total number of paths / destination ports: 83 / 9
+-------------------------------------------------------------------------
+Offset:              7.418ns (Levels of Logic = 4)
+  Source:            driver/a_reg/q_2 (FF)
+  Destination:       LD<7> (PAD)
+  Source Clock:      cdivider/q_31 rising
+
+  Data Path: driver/a_reg/q_2 to LD<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.514   0.509  driver/a_reg/q_2 (driver/a_reg/q_2)
+     LUT4:I0->O            1   0.612   0.360  decoder/y<7>11_SW0 (N2)
+     LUT4:I3->O            8   0.612   0.673  decoder/y<7>11 (decoder/N01)
+     LUT4:I2->O            1   0.612   0.357  decoder/y<7>21 (LD_7_OBUF)
+     OBUF:I->O                 3.169          LD_7_OBUF (LD<7>)
+    ----------------------------------------
+    Total                      7.418ns (5.519ns logic, 1.899ns route)
+                                       (74.4% logic, 25.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.134ns (Levels of Logic = 1)
+  Source:            cdivider/q_3 (FF)
+  Destination:       JA2 (PAD)
+  Source Clock:      mclk rising
+
+  Data Path: cdivider/q_3 to JA2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.451  cdivider/q_3 (cdivider/q_31)
+     OBUF:I->O                 3.169          JA2_OBUF (JA2)
+    ----------------------------------------
+    Total                      4.134ns (3.683ns logic, 0.451ns route)
+                                       (89.1% logic, 10.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.51 secs
+ 
+--> 
+
+Total memory usage is 193408 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

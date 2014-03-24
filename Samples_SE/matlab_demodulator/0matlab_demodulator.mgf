@@ -1,0 +1,83 @@
+V 000034 12 418 1374156892100 DSP
+E DSP VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P CLK _in wire
+V CLK - - - -
+P RDY _in wire
+V RDY - - - -
+P RESET _in wire
+V RESET - - - -
+P DATA _in wire[15:0]
+V DATA - - - -
+P ACK_Bessel _out wire
+V ACK_Bessel - - - -
+P ACK_simple _out wire
+V ACK_simple - - - -
+P OUT_Bessel _out wire[15:0]
+V OUT_Bessel - - - -
+P OUT_simple _out wire[15:0]
+V OUT_simple - - - -
+I abs U1 
+I Filter_simple U2 
+I Filter_bessel U3 
+X DSP
+V 000038 12 73 1374156894408 DSP_test
+E DSP_test VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+I DSP UUT 
+X DSP_test
+V 000044 12 381 1380546049171 Filter_bessel
+E Filter_bessel VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+G Idle local nansi integer  = 1'b0
+G Ready local nansi integer  = 1'b1
+G order local nansi integer  = 2
+P DataIn _in wire[15:0]
+V DataIn - - - -
+P clk _in wire
+V clk - - - -
+P reset _in wire
+V reset - - - -
+P Rdy _in wire
+V Rdy - - - -
+P DataOut _out wire[15:0]
+V DataOut - - - -
+P Ack _out reg
+V Ack - - - -
+X Filter_bessel
+V 000044 12 348 1380546039451 Filter_simple
+E Filter_simple VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+G Idle local nansi integer  = 1'b0
+G Ready local nansi integer  = 1'b1
+P DataIn _in wire[15:0]
+V DataIn - - - -
+P clk _in wire
+V clk - - - -
+P reset _in wire
+V reset - - - -
+P Rdy _in wire
+V Rdy - - - -
+P DataOut _out wire[15:0]
+V DataOut - - - -
+P Ack _out reg
+V Ack - - - -
+X Filter_simple
+V 000034 12 114 1380546022350 abs
+E abs VERILOG 
+L VL;
+U VL.VERILOG_LOGIC;
+PL 0
+P I _in wire[15:0]
+V I - - - -
+P O _out reg[15:0]
+V O - - - -
+X abs

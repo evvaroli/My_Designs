@@ -1,0 +1,83 @@
+V3 38
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/ClockDivider.vhd 2014/02/16.20:07:27 P.20131013
+EN RegAndMuxCtrl/ClockDivider 1392606271 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/ClockDivider.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR RegAndMuxCtrl/ClockDivider/clockdivider 1392606272 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/ClockDivider.vhd \
+      EN RegAndMuxCtrl/ClockDivider 1392606271
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/clock_pulse.vhd 2014/02/16.20:42:17 P.20131013
+EN RegAndMuxCtrl/clock_pulse 1392606269 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/clock_pulse.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR RegAndMuxCtrl/clock_pulse/clock_pulse 1392606270 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/clock_pulse.vhd \
+      EN RegAndMuxCtrl/clock_pulse 1392606269
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD.vhd 2014/02/16.21:54:22 P.20131013
+EN RegAndMuxCtrl/EuclidsGCD 1392606267 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR RegAndMuxCtrl/EuclidsGCD/euclidsgcd 1392606268 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD.vhd \
+      EN RegAndMuxCtrl/EuclidsGCD 1392606267 \
+      AR RegAndMuxCtrl/RegAndMuxCtrl/regandmuxctrl 1392606260 \
+      AR RegAndMuxCtrl/submax2/submax2 1392606266 AR RegAndMuxCtrl/reg/reg 1392606264 \
+      AR RegAndMuxCtrl/mux24b/mux24b 1392606262 CP RegAndMuxCtrl CP mux24b CP reg \
+      CP submax2
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD_top.vhd 2014/02/16.20:52:15 P.20131013
+EN RegAndMuxCtrl/EuclidsGCD_top 1392606277 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD_top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR RegAndMuxCtrl/EuclidsGCD_top/EuclidsGCD_top 1392606278 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD_top.vhd \
+      EN RegAndMuxCtrl/EuclidsGCD_top 1392606277 \
+      AR RegAndMuxCtrl/EuclidsGCD/euclidsgcd 1392606268 \
+      AR RegAndMuxCtrl/clock_pulse/clock_pulse 1392606270 \
+      AR RegAndMuxCtrl/ClockDivider/clockdivider 1392606272 CP EuclidsGCD \
+      CP clock_pulse CP ClockDivider
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD_top2.vhd 2014/02/16.21:42:08 P.20131013
+EN RegAndMuxCtrl/EuclidsGCD_top2 1392606275 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD_top2.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR RegAndMuxCtrl/EuclidsGCD_top2/EuclidsGCD_top2 1392606276 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/EuclidsGCD_top2.vhd \
+      EN RegAndMuxCtrl/EuclidsGCD_top2 1392606275 \
+      AR RegAndMuxCtrl/EuclidsGCD/euclidsgcd 1392606268 \
+      AR RegAndMuxCtrl/clock_pulse/clock_pulse 1392606270 \
+      AR RegAndMuxCtrl/ClockDivider/clockdivider 1392606272 \
+      AR RegAndMuxCtrl/x7segb/x7segb 1392606274 CP EuclidsGCD CP clock_pulse \
+      CP ClockDivider CP x7segb
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/mux24b.vhd 2014/02/16.17:58:12 P.20131013
+EN RegAndMuxCtrl/mux24b 1392606261 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/mux24b.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR RegAndMuxCtrl/mux24b/mux24b 1392606262 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/mux24b.vhd \
+      EN RegAndMuxCtrl/mux24b 1392606261
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/reg.vhd 2014/02/16.18:14:07 P.20131013
+EN RegAndMuxCtrl/reg 1392606263 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/reg.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR RegAndMuxCtrl/reg/reg 1392606264 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/reg.vhd EN RegAndMuxCtrl/reg 1392606263
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/RegAndMuxCtrl.vhd 2014/02/16.21:52:42 P.20131013
+EN RegAndMuxCtrl/RegAndMuxCtrl 1392606259 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/RegAndMuxCtrl.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR RegAndMuxCtrl/RegAndMuxCtrl/regandmuxctrl 1392606260 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/RegAndMuxCtrl.vhd \
+      EN RegAndMuxCtrl/RegAndMuxCtrl 1392606259
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/submax2.vhd 2014/02/16.19:50:30 P.20131013
+EN RegAndMuxCtrl/submax2 1392606265 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/submax2.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR RegAndMuxCtrl/submax2/submax2 1392606266 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/submax2.vhd \
+      EN RegAndMuxCtrl/submax2 1392606265
+FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/x7segb.vhd 2014/02/16.21:31:57 P.20131013
+EN RegAndMuxCtrl/x7segb 1392606273 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/x7segb.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR RegAndMuxCtrl/x7segb/x7segb 1392606274 \
+      FL C:/My_Designs/Lab3/part1/RegAndMuxCtrl/src/x7segb.vhd \
+      EN RegAndMuxCtrl/x7segb 1392606273

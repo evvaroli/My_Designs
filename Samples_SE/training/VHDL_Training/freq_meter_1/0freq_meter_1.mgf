@@ -1,0 +1,32 @@
+V 000035 11 112 1380551991896 and2
+E AND2 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P A0 _in STD_LOGIC
+P A1 _in STD_LOGIC
+P Y _out STD_LOGIC
+X AND2
+V 000037 11 177 1380552009680 cnt_4b
+E CNT_4b VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P CLK _in STD_LOGIC
+P ENABLE _in STD_LOGIC
+P RESET _in STD_LOGIC
+P FULL _out STD_LOGIC
+P Q _out STD_LOGIC_VECTOR[3:0]
+X CNT_4b
+V 000038 11 259 1096891890331 cnt_bcd
+E CNT_BCD VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P CLK _in std_logic
+P GATE _in std_logic
+P RESET _in std_logic
+P BCD_A _out std_logic_vector[3:0]
+P BCD_B _out std_logic_vector[3:0]
+P BCD_C _out std_logic_vector[3:0]
+P BCD_D _out std_logic_vector[3:0]
+X CNT_BCD

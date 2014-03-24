@@ -1,0 +1,32 @@
+V 000040 11 128 1106045905437 generator
+E generator VHDL
+L STD;
+U STD.STANDARD;
+P CLK _in BIT
+P Freq _in INTEGER
+P Sel _in BIT_VECTOR[1:0]
+P Wave _out REAL
+X generator
+V 000040 11 211 1106045907812 modulator
+E Modulator VHDL
+L STD;
+U STD.STANDARD;
+P CosEnable _in BIT
+P CosFreq _in INTEGER
+P SawEnable _in BIT
+P SawFreq _in INTEGER
+P SinEnable _in BIT
+P SinFreq _in INTEGER
+P clk _in BIT
+P OUTPUT _out REAL
+X Modulator
+V 000041 11 136 1106045906952 multiplier
+E Multiplier VHDL
+L STD;
+U STD.STANDARD;
+P clk _in BIT
+P IN1 _in REAL
+P IN2 _in REAL
+P IN3 _in REAL
+P OUT1 _out REAL = 0.0
+X Multiplier

@@ -1,0 +1,10 @@
+i<>.\src\RegAndMuxCtrl.vhd
+i<>.\src\reg.vhd
+i<>.\src\EuclidsGCD.vhd
+i<>.\src\mux24b.vhd
+i<>.\src\submax2.vhd
+i<>.\src\ClockDivider.vhd
+i<>.\src\clock_pulse.vhd
+i<>.\src\EuclidsGCD_top.vhd
+i<>.\src\EuclidsGCD_top2.vhd
+i<>.\src\x7segb.vhd

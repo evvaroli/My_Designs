@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: C:\My_Designs\Lab3\part1\RegAndMuxCtrl\src\EuclidsGCD_top2.vhd" 
+MESSAGE "Compile Entity "EuclidsGCD_top2"" 
+MESSAGE "Compile Architecture "EuclidsGCD_top2" of Entity "EuclidsGCD_top2"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]" 

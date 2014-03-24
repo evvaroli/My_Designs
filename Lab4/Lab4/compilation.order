@@ -1,0 +1,9 @@
+.\src\shift10.vhd
+.\src\spi_ctrl.vhd
+.\src\reg.vhd
+.\src\ClockDivider.vhd
+.\src\adc_decoder.vhd
+.\src\adc_driver.vhd
+.\src\lab4_top.vhd
+.\synthesis\lab4_top.vhd
+.\IMPLEMENT\TIME_SIM.VHD

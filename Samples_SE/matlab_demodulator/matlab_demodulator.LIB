@@ -1,0 +1,36 @@
+timestamp=1380546072198
+
+[DSP]
+A/DSP=*24|.\src\DSP.bde|10000|
+NSymbols/dsp=NSymbols/DSP 40|0|2*0
+
+[DSP_test]
+A/DSP_test=*24|.\src\DSP_test.bde|10000|
+
+[Filter_bessel]
+A/Filter_bessel=*22|./src/Filter_bessel.v|12|
+NSymbols/filter_bessel=NSymbols/Filter_bessel 40|0|2*3375
+
+[Filter_simple]
+A/Filter_simple=*22|./src/Filter_simple.v|9|
+NSymbols/filter_simple=NSymbols/Filter_simple 40|0|2*6060
+
+[abs]
+A/abs=*22|./src/abs.v|3|
+NSymbols/abs=40|0|2*8714
+
+[~A]
+ModifyID=144
+Version=73
+
+[~MFT]
+0=0|0matlab_demodulator.mgf|1380|0
+2=0|2matlab_demodulator.mgf|8714|0
+
+[~U]
+DSP=12|0*0||0x13
+DSP_test=12|0*452||0x10
+Filter_bessel=12|0*563||0x13
+Filter_simple=12|0*988||0x13
+abs=12|0*1380||0x13
+

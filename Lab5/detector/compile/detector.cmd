@@ -1,0 +1,1 @@
+-w -s "C:\My_Designs\Lab5\library.cfg"  -j "C:\My_Designs\Lab5\detector\projlib.cfg"  -d "C:\My_Designs\Lab5\detector\compile"   -work detector_timing  -O3 -e 100 -2002 "C:\My_Designs\Lab5\detector\IMPLEMENT\TIME_SIM.VHD"

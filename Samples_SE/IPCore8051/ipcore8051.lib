@@ -1,0 +1,51 @@
+timestamp=1380544277613
+
+[a8051_exp]
+A/a8051_exp=*24|.\src\A8051_exp.bde|10000|
+
+[al8051]
+A/al8051_arch=*21|./src/8051/AL8051.vhd|42|
+NSymbols/al8051=40|0|2*0
+
+[display]
+A/display=*21|./src/Devices/display.vhd|29|
+NSymbols/display=40|0|2*4979
+
+[fpga]
+A/fpga=*24|.\src\Fpga.bde|10000|
+NSymbols/fpga=NSymbols/FPGA 40|0|2*8987
+
+[keyboard]
+A/keyboard=*21|./src/Devices/keyboard.vhd|34|
+NSymbols/keyboard=40|0|2*17179
+
+[latch]
+A/latch=*21|./src/Devices/Latch.vhd|23|
+NSymbols/latch=NSymbols/Latch 40|0|2*24387
+
+[pr_sr_register]
+A/pr_sr_register=*21|./src/Devices/pr_sr_register.vhd|28|
+NSymbols/pr_sr_register=40|0|2*26346
+
+[ram]
+A/ram=*21|./src/Devices/ram.vhd|26|
+NSymbols/ram=40|0|2*29901
+
+[~A]
+ModifyID=2264
+Version=73
+
+[~MFT]
+0=0|0IPCore8051.mgf|2586|0
+2=0|2IPCore8051.mgf|29901|0
+
+[~U]
+a8051_exp=A8051_exp 11|0*0|
+al8051=11|0*482||0x3
+display=11|0*828||0x3
+fpga=Fpga 11|0*1117||0x7
+keyboard=11|0*1705||0x3
+latch=Latch 11|0*2126||0x3
+pr_sr_register=11|0*2305||0x3
+ram=11|0*2586||0x3
+

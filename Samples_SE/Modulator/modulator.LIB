@@ -1,0 +1,36 @@
+timestamp=1380548538053
+
+[cosinegenerator]
+A/cosinegenerator=*21|./src/CosineGenerator.vhd|22|
+NSymbols/cosinegenerator=NSymbols/CosineGenerator 40|0|2*0
+
+[modulator]
+A/modulator=*24|.\src\modulator.bde|10000|
+
+[multiplier]
+A/multiplier=*21|./src/Multiplier.vhd|23|
+NSymbols/multiplier=NSymbols/Multiplier 40|0|2*2206
+
+[sawgenerator]
+A/sawgenerator=*21|./src/SawGenerator.vhd|22|
+NSymbols/sawgenerator=NSymbols/SawGenerator 40|0|2*4857
+
+[sinegenerator]
+A/sinegenerator=*21|./src/SineGenerator.vhd|22|
+NSymbols/sinegenerator=NSymbols/SineGenerator 40|0|2*7060
+
+[~A]
+ModifyID=189
+Version=73
+
+[~MFT]
+0=0|0modulator.mgf|817|0
+2=0|2modulator.mgf|7060|0
+
+[~U]
+cosinegenerator=CosineGenerator 11|0*0||0x7
+modulator=Modulator 11|0*194|
+multiplier=Multiplier 11|0*450||0x7
+sawgenerator=SawGenerator 11|0*632||0x7
+sinegenerator=SineGenerator 11|0*817||0x7
+

@@ -1,0 +1,101 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=Lab4
+
+[Library]
+Lab4=.\Lab4\Lab4.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=MV_XST146
+RUN_MODE_SYNTH=0
+IMPL_TOOL=MV_ISE146
+CSYNTH_TOOL=<none>
+PHYSSYNTH_TOOL=<none>
+FLOWTOOLS=IMPL_WITH_SYNTH
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+DVM_DISPLAY=NO
+FAMILY=Xilinx14x SPARTAN3E
+FUNC_LIB=Lab4
+fileopenfolder=C:\My_Designs\Lab3\part1\RegAndMuxCtrl\src
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+Lab4=.
+Active_lib=SPARTAN3E
+xilinxun=SPARTAN3E
+UnlinkedDesignLibrary=SPARTAN3E
+DESIGNS=SPARTAN3E
+
+[IMPLEMENTATION_XILINX14]
+impl_opt(dont_run_translate)=0
+impl_opt(dont_run_map)=0
+impl_opt(dont_run_place)=0
+impl_opt(dont_run_trace)=0
+impl_opt(dont_run_simulation)=0
+impl_opt(dont_run_fit)=0
+impl_opt(dont_run_bitgen)=1
+
+[IMPLEMENTATION]
+FLOW_STEPS_RESET=0
+UCF=
+
+[SIM.FUNC]
+FJD=FunctionalSimTask
+FST=-all
+OPTION=0
+SERVERFARM_INCLUDE_INPUT_FILES=*.*
+SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*:synthesis\*.*:implement\*.*
+SERVERFARM_SFM_RESOURCE=
+TOPLEVEL=lab4_top
+WAVEFORMS=
+DEFWAVE=1
+ADD_HIERARCHY_SIGNALS=0
+
+[Files]
+/shift10.vhd=-1
+/reg.vhd=-1
+/adc_driver.vhd=-1
+/spi_ctrl.vhd=-1
+/lab4_top.vhd=-1
+/adc_decoder.vhd=-1
+/ClockDivider.vhd=-1
+
+[Files.Data]
+.\src\shift10.vhd=VHDL Source Code
+.\src\reg.vhd=VHDL Source Code
+.\src\adc_driver.vhd=VHDL Source Code
+.\src\spi_ctrl.vhd=VHDL Source Code
+.\src\lab4_top.vhd=VHDL Source Code
+.\src\adc_decoder.vhd=VHDL Source Code
+.\src\ClockDivider.vhd=VHDL Source Code
+
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=adc_decoder|adc_decoder|0 adc_driver|adc_driver|0 lab4_top|lab4_top|0 shift10|shift10|0 
+ShowHide=ShowTopLevel
+Selected=

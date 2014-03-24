@@ -1,0 +1,23 @@
+timestamp=1394554464498
+
+[detector_top]
+A/structure=A/STRUCTURE 21|./../synthesis/detector_top.vhd|53|1*31865
+I=0*12660
+I/structure=I/STRUCTURE 0*57058
+M=11|0|vb4|1394554464296|./../synthesis/detector_top.vhd|0*12097*0xced48d6bf8c55db1952305acac1ff37aa9eba1e3|0*12565*0x5eebbfaf24833dd780412b1f91e05209
+M/structure=M/STRUCTURE 21|0|vb4|1394554464452|./../synthesis/detector_top.vhd|0*12886*0x8f19bb30c06df3a5194986d1341f7de98f3ded57|0*56950*0x856b180bf611ec746a6bfcb1befebd18
+R=./../synthesis/detector_top.vhd|41
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/structure=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[~A]
+ModifyID=8
+Version=73
+
+[~MFT]
+0=20|0detector_post_synthesis.mgf|57058|11773
+1=2|1detector_post_synthesis.mgf|31865|31865
+
+[~U]
+detector_top=11|0*11773|
+
