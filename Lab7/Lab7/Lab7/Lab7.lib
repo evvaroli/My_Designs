@@ -1,4 +1,15 @@
-timestamp=1395686355158
+timestamp=1395686878794
+
+[clockdivider]
+A/clockdivider=A/ClockDivider 21|./../src/ClockDivider.vhd|13|1*4130
+BinI32/clockdivider=3*1384
+I=0*2814
+I/clockdivider=I/ClockDivider 0*3443
+M=11|0|vb4|1395686878715|./../src/ClockDivider.vhd|0*2445*0x226551347dd1325dead5074249a036d77b54ae4e|0*2725*0x5eebbfaf24833dd780412b1f91e05209
+M/clockdivider=M/ClockDivider 21|0|vb4|1395686878717|./../src/ClockDivider.vhd|0*2989*0xb9d39df5704b07cbe9db0c3b768a5f1dba52af3e|0*3338*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/ClockDivider.vhd|5
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/clockdivider=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [vga_640x480]
 A/vga_640x480=21|./../src/vga_640x480.vhd|15|1*0
@@ -12,14 +23,15 @@ Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_640x480=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [~A]
-ModifyID=5
+ModifyID=10
 Version=73
 
 [~MFT]
-0=6|0Lab7.mgf|2081|0
-1=0|1Lab7.mgf|0|0
-3=0|3Lab7.mgf|0|0
+0=13|0Lab7.mgf|3443|0
+1=1|1Lab7.mgf|4130|0
+3=1|3Lab7.mgf|1384|0
 
 [~U]
+clockdivider=ClockDivider 11|0*2267|
 vga_640x480=11|0*0|
 

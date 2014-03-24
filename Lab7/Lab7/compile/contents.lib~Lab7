@@ -1,3 +1,5 @@
-5
+10
+~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
+~A 1 "./../src/ClockDivider.vhd" 13 ClockDivider
 ~E 1 "./../src/vga_640x480.vhd" 5 vga_640x480
 ~A 1 "./../src/vga_640x480.vhd" 15 vga_640x480

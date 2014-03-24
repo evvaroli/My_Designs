@@ -3,10 +3,13 @@ Current Flow=Multivendor
 VCS=0
 version=3
 Current Config=compile
+
 [Configurations]
 compile=Lab7
+
 [Library]
 Lab7=.\Lab7\Lab7.lib
+
 [Settings]
 AccessRead=0
 AccessReadWrite=0
@@ -30,17 +33,22 @@ ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
 DVM_DISPLAY=NO
 FAMILY=Xilinx14x SPARTAN3E
+fileopenfolder=C:\My_Designs\Lab6\Lab6\src
+
 [LocalVerilogSets]
 EnableSLP=1
 EnableDebug=0
+
 [LocalVhdlSets]
 CompileWithDebug=0
+
 [$LibMap$]
 Lab7=.
 Active_lib=SPARTAN3E
 xilinxun=SPARTAN3E
 UnlinkedDesignLibrary=SPARTAN3E
 DESIGNS=SPARTAN3E
+
 [IMPLEMENTATION_XILINX14]
 impl_opt(dont_run_translate)=0
 impl_opt(dont_run_map)=0
@@ -49,10 +57,18 @@ impl_opt(dont_run_trace)=0
 impl_opt(dont_run_simulation)=0
 impl_opt(dont_run_fit)=0
 impl_opt(dont_run_bitgen)=1
+
 [IMPLEMENTATION]
 FLOW_STEPS_RESET=0
 UCF=
+
 [Files]
 /vga_640x480.vhd=-1
+/ClockDivider.vhd=-1
+/vga_bsprite2a.vhd=-1
+
 [Files.Data]
 .\src\vga_640x480.vhd=VHDL Source Code
+.\src\ClockDivider.vhd=VHDL Source Code
+
+.\src\vga_bsprite2a.vhd=VHDL Source Code

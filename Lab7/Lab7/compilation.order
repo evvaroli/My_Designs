@@ -1,1 +1,3 @@
 .\src\vga_640x480.vhd
+.\src\ClockDivider.vhd
+.\src\vga_bsprite2a.vhd

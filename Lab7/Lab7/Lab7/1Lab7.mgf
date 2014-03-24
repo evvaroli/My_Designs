@@ -55,3 +55,35 @@ V 000052 55 4078          1395686354685 vga_640x480
 	(_model . vga_640x480 7 -1
 	)
 )
+V 000053 55 1413          1395686878718 ClockDivider
+(_unit VHDL (clockdivider 0 5 (clockdivider 0 13 ))
+	(_version vb4)
+	(_time 1395686878719 2014.03.24 14:47:58)
+	(_source (\./../src/ClockDivider.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164))(ieee(STD_LOGIC_UNSIGNED)))
+	(_code b6e4b0e2e3e1b4a0b4e3f4ece3b0bfb1b0b0bfb0b2)
+	(_entity
+		(_time 1395686878716)
+		(_use (std(standard))(ieee(std_logic_1164))(ieee(STD_LOGIC_UNSIGNED)))
+	)
+	(_object
+		(_port (_internal mclk ~extieee.std_logic_1164.STD_LOGIC 0 7 (_entity (_in )(_event))))
+		(_port (_internal clr ~extieee.std_logic_1164.STD_LOGIC 0 8 (_entity (_in ))))
+		(_port (_internal clk25 ~extieee.std_logic_1164.STD_LOGIC 0 9 (_entity (_out ))))
+		(_type (_internal ~STD_LOGIC_VECTOR{23~downto~0}~13 0 15 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 23)(i 0))))))
+		(_signal (_internal q ~STD_LOGIC_VECTOR{23~downto~0}~13 0 15 (_architecture (_uni ))))
+		(_process
+			(line__18(_architecture 0 0 18 (_process (_simple)(_target(3))(_sensitivity(0)(1))(_read(3)))))
+			(line__27(_architecture 1 0 27 (_assignment (_simple)(_alias((clk25)(q(0))))(_simpleassign BUF)(_target(2))(_sensitivity(3(0))))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_static
+		(33686018 33686018 33686018 33686018 33686018 33686018 )
+	)
+	(_model . ClockDivider 2 -1
+	)
+)
