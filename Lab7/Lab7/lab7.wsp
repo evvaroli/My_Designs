@@ -1,0 +1,20 @@
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+Lab7=1
+Built-in symbols=0
+SPARTAN3E=0
+[COMPILESTATUS|.\src\vga_640x480.vhd]
+FileTimeLow=30361488
+Status=Compiled
+[COMPILESTATUS|.\src\ClockDivider.vhd]
+FileTimeLow=30361489
+Status=Compiled
+[COMPILESTATUS|.\src\vga_bsprite2a.vhd]
+FileTimeLow=30361536
+Status=Compiled
+[COMPILESTATUS|.\src\group_photos_top.vhd]
+FileTimeLow=30361536
+Status=Error
+[CACHEDOC|Aldec.Project.Generic.7|.\Lab7\Lab7.adf|]
+Path=
+[Gui config]
+RunFor=100 ns

@@ -1,0 +1,14 @@
+AR vga_bsprite2a vga_bsprite2a C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd sub00/vhpl05 1395710016
+EN clockdivider NULL C:/My_Designs/Lab7/Lab7/src/ClockDivider.vhd sub00/vhpl00 1395710011
+EN reymoyet NULL C:/My_Designs/Lab7/Lab7/src/reymoyet.vhd sub00/vhpl06 1395710017
+EN group_photos_top NULL C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd sub00/vhpl08 1395710023
+AR vga_640x480 vga_640x480 C:/My_Designs/Lab7/Lab7/src/vga_640x480.vhd sub00/vhpl03 1395710014
+AR vga_stripes_top vga_stripes_top C:/My_Designs/Lab7/Lab7/src/vga_stripes_top.vhd sub00/vhpl13 1395710022
+EN vga_bsprite2a NULL C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd sub00/vhpl04 1395710015
+AR clockdivider clockdivider C:/My_Designs/Lab7/Lab7/src/ClockDivider.vhd sub00/vhpl01 1395710012
+EN vga_640x480 NULL C:/My_Designs/Lab7/Lab7/src/vga_640x480.vhd sub00/vhpl02 1395710013
+AR reymoyet reymoyet_a C:/My_Designs/Lab7/Lab7/src/reymoyet.vhd sub00/vhpl07 1395710018
+EN vga_stripes NULL C:/My_Designs/Lab7/Lab7/src/vga_stripes.vhd sub00/vhpl10 1395710019
+AR group_photos_top group_photos_top C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd sub00/vhpl09 1395710024
+AR vga_stripes vga_stripes C:/My_Designs/Lab7/Lab7/src/vga_stripes.vhd sub00/vhpl11 1395710020
+EN vga_stripes_top NULL C:/My_Designs/Lab7/Lab7/src/vga_stripes_top.vhd sub00/vhpl12 1395710021

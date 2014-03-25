@@ -1,4 +1,4 @@
-timestamp=1395686878794
+timestamp=1395709975278
 
 [clockdivider]
 A/clockdivider=A/ClockDivider 21|./../src/ClockDivider.vhd|13|1*4130
@@ -11,6 +11,27 @@ R=./../src/ClockDivider.vhd|5
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/clockdivider=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
+[group_photos_top]
+A/group_photos_top=21|./../src/group_photos_top.vhd|16|1*17158
+BinI32/group_photos_top=3*3595
+I=0*11118
+I/group_photos_top=0*13145
+M=11|0|vb4|1395708317513|./../src/group_photos_top.vhd|0*10579*0x2233a0f55e7c5611445358028acf157730eb3e6f|0*11021*0x5eebbfaf24833dd780412b1f91e05209
+M/group_photos_top=21|0|vb4|1395708350267|./../src/group_photos_top.vhd|0*11228*0x46eb164fe75462a610ce7fea787c9258b6f98a67|0*13028*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/group_photos_top.vhd|3
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/group_photos_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[reymoyet]
+A/reymoyet_a=21|./../src/reymoyet.vhd|51|1*11432
+I=0*6889
+I/reymoyet_a=0*9033
+M=11|0|vb4|1395707920290|./../src/reymoyet.vhd|0*6528*0xb89722b6cc112931969c02736ad9249815342a78|0*6808*0x5eebbfaf24833dd780412b1f91e05209
+M/reymoyet_a=21|0|vb4|1395707920330|./../src/reymoyet.vhd|0*6991*0xafc5d03f25c85087bae7360b4a24086a1c1d8ef9|0*8938*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/reymoyet.vhd|43
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/reymoyet_a=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
 [vga_640x480]
 A/vga_640x480=21|./../src/vga_640x480.vhd|15|1*0
 BinI32/vga_640x480=3*0
@@ -22,16 +43,61 @@ R=./../src/vga_640x480.vhd|5
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_640x480=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
+[vga_bsprite2a]
+A/vga_bsprite2a=21|./../src/vga_bsprite2a.vhd|19|1*32670
+BinI32/vga_bsprite2a=3*4476
+I=0*4651
+I/vga_bsprite2a=0*19060
+M=11|0|vb4|1395706873114|./../src/vga_bsprite2a.vhd|0*4036*0x81656a087fb7b78a0863ff859fb58e0806732e74|0*4560*0x5eebbfaf24833dd780412b1f91e05209
+M/vga_bsprite2a=21|0|vb4|1395709975145|./../src/vga_bsprite2a.vhd|0*17742*0x25427a865028f3f28a66b01efccca834970ae48a|0*18952*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/vga_bsprite2a.vhd|6
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/vga_bsprite2a=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[vga_bsprite_top]
+I=0*10112
+M=11|0|vb4|1395708275763|./../src/group_photos_top.vhd|0*9577*0x4f7fa191022f54ccbc4c7aa47872195441c68335|0*10016*0x5eebbfaf24833dd780412b1f91e05209
+R=./../src/group_photos_top.vhd|3
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[vga_stripes]
+A/vga_stripes=21|./../src/vga_stripes.vhd|14|1*25004
+BinI32/vga_stripes=3*3796
+I=0*14294
+I/vga_stripes=0*14902
+M=11|0|vb4|1395709460075|./../src/vga_stripes.vhd|0*13802*0x6499ba35c351d04839341c57e27513e26f12e83b|0*14207*0x5eebbfaf24833dd780412b1f91e05209
+M/vga_stripes=21|0|vb4|1395709460077|./../src/vga_stripes.vhd|0*14468*0x9f208aaf6892599e98237ab4105a5e1c9ce4b0eb|0*14800*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/vga_stripes.vhd|5
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/vga_stripes=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[vga_stripes_top]
+A/vga_stripes_top=21|./../src/vga_stripes_top.vhd|16|1*26943
+BinI32/vga_stripes_top=3*4276
+I=0*15911
+I/vga_stripes_top=0*17441
+M=11|0|vb4|1395709509417|./../src/vga_stripes_top.vhd|0*15412*0x5b599b157a0475daba41573d17871dc12e6d3985|0*15816*0x5eebbfaf24833dd780412b1f91e05209
+M/vga_stripes_top=21|0|vb4|1395709509421|./../src/vga_stripes_top.vhd|0*16020*0x2305a3be935695eb5f34523411ff2c18d6558917|0*17327*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/vga_stripes_top.vhd|4
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/vga_stripes_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
 [~A]
-ModifyID=10
+ModifyID=39
 Version=73
 
 [~MFT]
-0=13|0Lab7.mgf|3443|0
-1=1|1Lab7.mgf|4130|0
-3=1|3Lab7.mgf|1384|0
+0=58|0Lab7.mgf|19060|1508
+1=8|1Lab7.mgf|32670|5836
+3=7|3Lab7.mgf|4476|1752
 
 [~U]
 clockdivider=ClockDivider 11|0*2267|
+group_photos_top=11|0*10221|
+reymoyet=11|0*6335|
 vga_640x480=11|0*0|
+vga_bsprite2a=11|0*3631|
+vga_bsprite_top=11|0*9222|
+vga_stripes=11|0*13505|
+vga_stripes_top=11|0*15088|
 

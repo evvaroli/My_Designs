@@ -1,5 +1,16 @@
-10
+39
 ~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
 ~A 1 "./../src/ClockDivider.vhd" 13 ClockDivider
+~E 1 "./../src/group_photos_top.vhd" 3 group_photos_top
+~A 1 "./../src/group_photos_top.vhd" 16 group_photos_top
+~E 1 "./../src/reymoyet.vhd" 43 reymoyet
+~A 1 "./../src/reymoyet.vhd" 51 reymoyet_a
 ~E 1 "./../src/vga_640x480.vhd" 5 vga_640x480
 ~A 1 "./../src/vga_640x480.vhd" 15 vga_640x480
+~E 1 "./../src/vga_bsprite2a.vhd" 6 vga_bsprite2a
+~A 1 "./../src/vga_bsprite2a.vhd" 19 vga_bsprite2a
+~E 1 "./../src/group_photos_top.vhd" 3 vga_bsprite_top
+~E 1 "./../src/vga_stripes.vhd" 5 vga_stripes
+~A 1 "./../src/vga_stripes.vhd" 14 vga_stripes
+~E 1 "./../src/vga_stripes_top.vhd" 4 vga_stripes_top
+~A 1 "./../src/vga_stripes_top.vhd" 16 vga_stripes_top

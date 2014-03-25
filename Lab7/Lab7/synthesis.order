@@ -1,3 +1,7 @@
 i<>.\src\vga_640x480.vhd
 i<>.\src\ClockDivider.vhd
 i<>.\src\vga_bsprite2a.vhd
+i<>.\src\group_photos_top.vhd
+i<>.\src\reymoyet.vhd
+i<>.\src\vga_stripes.vhd
+i<>.\src\vga_stripes_top.vhd

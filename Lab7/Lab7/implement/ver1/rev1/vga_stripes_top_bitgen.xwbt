@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\My_Designs\Lab7\Lab7\implement\ver1\rev1\vga_stripes_top.ncd
+OUTFILE=C:\My_Designs\Lab7\Lab7\implement\ver1\rev1\vga_stripes_top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=C:\My_Designs\Lab7\Lab7\implement\ver1\rev1
+LICENSE=WebPack
+USER_INFO=210852235_0_0_112

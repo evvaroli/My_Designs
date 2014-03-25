@@ -1,3 +1,10 @@
 .\src\vga_640x480.vhd
 .\src\ClockDivider.vhd
 .\src\vga_bsprite2a.vhd
+.\src\group_photos_top.vhd
+.\src\reymoyet.vhd
+.\src\vga_stripes.vhd
+.\src\vga_stripes_top.vhd
+.\synthesis\group_photos_top.vhd
+.\synthesis\vga_stripes_top.vhd
+.\IMPLEMENT\TIME_SIM.VHD

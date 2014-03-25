@@ -1,0 +1,7 @@
+vhdl Lab7 "..\src\vga_640x480.vhd"
+vhdl Lab7 "..\src\ClockDivider.vhd"
+vhdl Lab7 "..\src\vga_bsprite2a.vhd"
+vhdl Lab7 "..\src\group_photos_top.vhd"
+vhdl Lab7 "..\src\reymoyet.vhd"
+vhdl Lab7 "..\src\vga_stripes.vhd"
+vhdl Lab7 "..\src\vga_stripes_top.vhd"

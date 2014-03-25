@@ -1,0 +1,703 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>Synthesis&nbsp;Log</TITLE>
+<STYLE>
+.Err	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.Warn	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.Info	{color:'#000000';cursor:hand;text-decoration:underline;}
+.ErrH	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.WarnH	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.InfoH	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Err1	{color:'#FF0000';}
+.Warn1	{color:'#0000FF';}
+.Info1	{color:'#000000';}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" BACKGROUND="C:\Aldec\Active-HDL Student Edition\Flows\Res\default.bmp">
+<FONT FACE="Courier New" SIZE=2>
+
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>Synthesis&nbsp;Log</H2>
+Created on 21:13:39 03/24/2014
+<HR NOSHADE COLOR="#008080">
+<SPAN class=Info1>Running&nbsp;XST&nbsp;Synthesis...<BR></SPAN>
+<SPAN class=Info1>Please&nbsp;wait...<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;14.7&nbsp;-&nbsp;xst&nbsp;P.20131013&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2013&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1>--&gt;&nbsp;<BR></SPAN>
+<SPAN class=Info1>rameter&nbsp;TMPDIR&nbsp;set&nbsp;to&nbsp;.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;0.00&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;0.13&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>&nbsp;<BR></SPAN>
+<SPAN class=Info1>--&gt;&nbsp;Parameter&nbsp;xsthdpdir&nbsp;set&nbsp;to&nbsp;C:\My_Designs\Lab7\Lab7\synthesis\xst<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;0.00&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;0.14&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>&nbsp;<BR></SPAN>
+<SPAN class=Info1>--&gt;&nbsp;<BR></SPAN>
+<SPAN class=Info1>TABLE&nbsp;OF&nbsp;CONTENTS<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;1)&nbsp;Synthesis&nbsp;Options&nbsp;Summary<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;2)&nbsp;HDL&nbsp;Compilation<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;3)&nbsp;Design&nbsp;Hierarchy&nbsp;Analysis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;4)&nbsp;HDL&nbsp;Analysis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;5)&nbsp;HDL&nbsp;Synthesis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1)&nbsp;HDL&nbsp;Synthesis&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;6)&nbsp;Advanced&nbsp;HDL&nbsp;Synthesis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1)&nbsp;Advanced&nbsp;HDL&nbsp;Synthesis&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;7)&nbsp;Low&nbsp;Level&nbsp;Synthesis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;8)&nbsp;Partition&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;9)&nbsp;Final&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>	9.1)&nbsp;Device&nbsp;utilization&nbsp;summary<BR></SPAN>
+<SPAN class=Info1>	9.2)&nbsp;Partition&nbsp;Resource&nbsp;Summary<BR></SPAN>
+<SPAN class=Info1>	9.3)&nbsp;TIMING&nbsp;REPORT<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Synthesis&nbsp;Options&nbsp;Summary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>----&nbsp;Source&nbsp;Parameters<BR></SPAN>
+<SPAN class=Info1>Input&nbsp;File&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&quot;group_photos_top.prj&quot;<BR></SPAN>
+<SPAN class=Info1>Input&nbsp;Format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;mixed<BR></SPAN>
+<SPAN class=Info1>Ignore&nbsp;Synthesis&nbsp;Constraint&nbsp;File&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>----&nbsp;Target&nbsp;Parameters<BR></SPAN>
+<SPAN class=Info1>Output&nbsp;File&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&quot;group_photos_top&quot;<BR></SPAN>
+<SPAN class=Info1>Output&nbsp;Format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;NGC<BR></SPAN>
+<SPAN class=Info1>Target&nbsp;Device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;xc3s500efg320-5<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>----&nbsp;Source&nbsp;Options<BR></SPAN>
+<SPAN class=Info1>Top&nbsp;Module&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;group_photos_top<BR></SPAN>
+<SPAN class=Info1>Generics,&nbsp;Parameters&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;{&nbsp;&nbsp;}<BR></SPAN>
+<SPAN class=Info1>Verilog&nbsp;Macros&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;{&nbsp;&nbsp;}<BR></SPAN>
+<SPAN class=Info1>Automatic&nbsp;FSM&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>FSM&nbsp;Encoding&nbsp;Algorithm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Auto<BR></SPAN>
+<SPAN class=Info1>Resource&nbsp;Sharing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>FSM&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;lut<BR></SPAN>
+<SPAN class=Info1>RAM&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>RAM&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>ROM&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>ROM&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Mux&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Mux&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Decoder&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Priority&nbsp;Encoder&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Shift&nbsp;Register&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Logical&nbsp;Shifter&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>XOR&nbsp;Collapsing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Multiplier&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Asynchronous&nbsp;To&nbsp;Synchronous&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Automatic&nbsp;Register&nbsp;Balancing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Safe&nbsp;Implementation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>----&nbsp;Target&nbsp;Options<BR></SPAN>
+<SPAN class=Info1>Add&nbsp;IO&nbsp;Buffers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Global&nbsp;Maximum&nbsp;Fanout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;500<BR></SPAN>
+<SPAN class=Info1>Add&nbsp;Generic&nbsp;Clock&nbsp;Buffer(BUFG)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;24<BR></SPAN>
+<SPAN class=Info1>Register&nbsp;Duplication&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Equivalent&nbsp;register&nbsp;Removal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Pack&nbsp;IO&nbsp;Registers&nbsp;into&nbsp;IOBs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Slice&nbsp;Packing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Optimize&nbsp;Instantiated&nbsp;Primitives&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Use&nbsp;Clock&nbsp;Enable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Use&nbsp;Synchronous&nbsp;Set&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Use&nbsp;Synchronous&nbsp;Reset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>----&nbsp;General&nbsp;Options<BR></SPAN>
+<SPAN class=Info1>Optimization&nbsp;Goal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;speed<BR></SPAN>
+<SPAN class=Info1>Optimization&nbsp;Effort&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>Global&nbsp;Optimization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;allclocknets<BR></SPAN>
+<SPAN class=Info1>RTL&nbsp;Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Write&nbsp;Timing&nbsp;Constraints&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Verilog&nbsp;2001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Keep&nbsp;Hierarchy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Netlist&nbsp;Hierarchy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;as_optimized<BR></SPAN>
+<SPAN class=Info1>Hierarchy&nbsp;Separator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;/<BR></SPAN>
+<SPAN class=Info1>Bus&nbsp;Delimiter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;&gt;<BR></SPAN>
+<SPAN class=Info1>Case&nbsp;Specifier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;maintain<BR></SPAN>
+<SPAN class=Info1>Cross&nbsp;Clock&nbsp;Analysis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Slice&nbsp;Utilization&nbsp;Ratio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;100<BR></SPAN>
+<SPAN class=Info1>BRAM&nbsp;Utilization&nbsp;Ratio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;100<BR></SPAN>
+<SPAN class=Info1>Read&nbsp;Cores&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Auto&nbsp;BRAM&nbsp;Packing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Slice&nbsp;Utilization&nbsp;Ratio&nbsp;Delta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;5<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDL&nbsp;Compilation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Compiling&nbsp;vhdl&nbsp;file&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/ClockDivider.vhd&quot;&nbsp;in&nbsp;Library&nbsp;Lab7.<BR></SPAN>
+<SPAN class=Info1>Architecture&nbsp;clockdivider&nbsp;of&nbsp;Entity&nbsp;clockdivider&nbsp;is&nbsp;up&nbsp;to&nbsp;date.<BR></SPAN>
+<SPAN class=Info1>Compiling&nbsp;vhdl&nbsp;file&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/vga_640x480.vhd&quot;&nbsp;in&nbsp;Library&nbsp;Lab7.<BR></SPAN>
+<SPAN class=Info1>Architecture&nbsp;vga_640x480&nbsp;of&nbsp;Entity&nbsp;vga_640x480&nbsp;is&nbsp;up&nbsp;to&nbsp;date.<BR></SPAN>
+<SPAN class=Info1>Compiling&nbsp;vhdl&nbsp;file&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd&quot;&nbsp;in&nbsp;Library&nbsp;Lab7.<BR></SPAN>
+<SPAN class=Info1>Entity&nbsp;&lt;vga_bsprite2a&gt;&nbsp;compiled.<BR></SPAN>
+<SPAN class=Info1>Entity&nbsp;&lt;vga_bsprite2a&gt;&nbsp;(Architecture&nbsp;&lt;vga_bsprite2a&gt;)&nbsp;compiled.<BR></SPAN>
+<SPAN class=Info1>Compiling&nbsp;vhdl&nbsp;file&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/reymoyet.vhd&quot;&nbsp;in&nbsp;Library&nbsp;Lab7.<BR></SPAN>
+<SPAN class=Info1>Architecture&nbsp;reymoyet_a&nbsp;of&nbsp;Entity&nbsp;reymoyet&nbsp;is&nbsp;up&nbsp;to&nbsp;date.<BR></SPAN>
+<SPAN class=Info1>Compiling&nbsp;vhdl&nbsp;file&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/vga_stripes.vhd&quot;&nbsp;in&nbsp;Library&nbsp;Lab7.<BR></SPAN>
+<SPAN class=Info1>Architecture&nbsp;vga_stripes&nbsp;of&nbsp;Entity&nbsp;vga_stripes&nbsp;is&nbsp;up&nbsp;to&nbsp;date.<BR></SPAN>
+<SPAN class=Info1>Compiling&nbsp;vhdl&nbsp;file&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/vga_stripes_top.vhd&quot;&nbsp;in&nbsp;Library&nbsp;Lab7.<BR></SPAN>
+<SPAN class=Info1>Architecture&nbsp;vga_stripes_top&nbsp;of&nbsp;Entity&nbsp;vga_stripes_top&nbsp;is&nbsp;up&nbsp;to&nbsp;date.<BR></SPAN>
+<SPAN class=Info1>Compiling&nbsp;vhdl&nbsp;file&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd&quot;&nbsp;in&nbsp;Library&nbsp;Lab7.<BR></SPAN>
+<SPAN class=Info1>Architecture&nbsp;group_photos_top&nbsp;of&nbsp;Entity&nbsp;group_photos_top&nbsp;is&nbsp;up&nbsp;to&nbsp;date.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design&nbsp;Hierarchy&nbsp;Analysis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Analyzing&nbsp;hierarchy&nbsp;for&nbsp;entity&nbsp;&lt;group_photos_top&gt;&nbsp;in&nbsp;library&nbsp;&lt;Lab7&gt;&nbsp;(architecture&nbsp;&lt;group_photos_top&gt;).<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Analyzing&nbsp;hierarchy&nbsp;for&nbsp;entity&nbsp;&lt;ClockDivider&gt;&nbsp;in&nbsp;library&nbsp;&lt;Lab7&gt;&nbsp;(architecture&nbsp;&lt;clockdivider&gt;).<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Analyzing&nbsp;hierarchy&nbsp;for&nbsp;entity&nbsp;&lt;vga_640x480&gt;&nbsp;in&nbsp;library&nbsp;&lt;Lab7&gt;&nbsp;(architecture&nbsp;&lt;vga_640x480&gt;).<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Analyzing&nbsp;hierarchy&nbsp;for&nbsp;entity&nbsp;&lt;vga_bsprite2a&gt;&nbsp;in&nbsp;library&nbsp;&lt;Lab7&gt;&nbsp;(architecture&nbsp;&lt;vga_bsprite2a&gt;).<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDL&nbsp;Analysis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Analyzing&nbsp;Entity&nbsp;&lt;group_photos_top&gt;&nbsp;in&nbsp;library&nbsp;&lt;Lab7&gt;&nbsp;(Architecture&nbsp;&lt;group_photos_top&gt;).<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2211&nbsp;-&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd&quot;&nbsp;line&nbsp;102:&nbsp;Instantiating&nbsp;black&nbsp;box&nbsp;module&nbsp;&lt;reymoyet&gt;.<BR></SPAN>
+<SPAN class=Info1>Entity&nbsp;&lt;group_photos_top&gt;&nbsp;analyzed.&nbsp;Unit&nbsp;&lt;group_photos_top&gt;&nbsp;generated.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Analyzing&nbsp;Entity&nbsp;&lt;ClockDivider&gt;&nbsp;in&nbsp;library&nbsp;&lt;Lab7&gt;&nbsp;(Architecture&nbsp;&lt;clockdivider&gt;).<BR></SPAN>
+<SPAN class=Info1>Entity&nbsp;&lt;ClockDivider&gt;&nbsp;analyzed.&nbsp;Unit&nbsp;&lt;ClockDivider&gt;&nbsp;generated.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Analyzing&nbsp;Entity&nbsp;&lt;vga_640x480&gt;&nbsp;in&nbsp;library&nbsp;&lt;Lab7&gt;&nbsp;(Architecture&nbsp;&lt;vga_640x480&gt;).<BR></SPAN>
+<SPAN class=Info1>Entity&nbsp;&lt;vga_640x480&gt;&nbsp;analyzed.&nbsp;Unit&nbsp;&lt;vga_640x480&gt;&nbsp;generated.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Analyzing&nbsp;Entity&nbsp;&lt;vga_bsprite2a&gt;&nbsp;in&nbsp;library&nbsp;&lt;Lab7&gt;&nbsp;(Architecture&nbsp;&lt;vga_bsprite2a&gt;).<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:1610&nbsp;-&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd&quot;&nbsp;line&nbsp;49:&nbsp;Width&nbsp;mismatch.&nbsp;&lt;rom_addr2&gt;&nbsp;has&nbsp;a&nbsp;width&nbsp;of&nbsp;17&nbsp;bits&nbsp;but&nbsp;assigned&nbsp;expression&nbsp;is&nbsp;18-bit&nbsp;wide.<BR></SPAN>
+<SPAN class=Info1>Entity&nbsp;&lt;vga_bsprite2a&gt;&nbsp;analyzed.&nbsp;Unit&nbsp;&lt;vga_bsprite2a&gt;&nbsp;generated.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDL&nbsp;Synthesis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Performing&nbsp;bidirectional&nbsp;port&nbsp;resolution...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Synthesizing&nbsp;Unit&nbsp;&lt;ClockDivider&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Related&nbsp;source&nbsp;file&nbsp;is&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/ClockDivider.vhd&quot;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;24-bit&nbsp;up&nbsp;counter&nbsp;for&nbsp;signal&nbsp;&lt;q&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>	inferred&nbsp;&nbsp;&nbsp;1&nbsp;Counter(s).<BR></SPAN>
+<SPAN class=Info1>Unit&nbsp;&lt;ClockDivider&gt;&nbsp;synthesized.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Synthesizing&nbsp;Unit&nbsp;&lt;vga_640x480&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Related&nbsp;source&nbsp;file&nbsp;is&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/vga_640x480.vhd&quot;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;up&nbsp;counter&nbsp;for&nbsp;signal&nbsp;&lt;HCS&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;11-bit&nbsp;comparator&nbsp;less&nbsp;for&nbsp;signal&nbsp;&lt;hsync$cmp_lt0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;53.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;up&nbsp;counter&nbsp;for&nbsp;signal&nbsp;&lt;vcs&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;comparator&nbsp;greatequal&nbsp;for&nbsp;signal&nbsp;&lt;vidon$cmp_ge0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;75.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;comparator&nbsp;greatequal&nbsp;for&nbsp;signal&nbsp;&lt;vidon$cmp_ge0001&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;75.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;comparator&nbsp;less&nbsp;for&nbsp;signal&nbsp;&lt;vidon$cmp_lt0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;75.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;comparator&nbsp;less&nbsp;for&nbsp;signal&nbsp;&lt;vidon$cmp_lt0001&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;75.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;1-bit&nbsp;register&nbsp;for&nbsp;signal&nbsp;&lt;VSENABLE&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;11-bit&nbsp;comparator&nbsp;less&nbsp;for&nbsp;signal&nbsp;&lt;vsync$cmp_lt0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;72.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>	inferred&nbsp;&nbsp;&nbsp;2&nbsp;Counter(s).<BR></SPAN>
+<SPAN class=Info1>	inferred&nbsp;&nbsp;&nbsp;1&nbsp;D-type&nbsp;flip-flop(s).<BR></SPAN>
+<SPAN class=Info1>	inferred&nbsp;&nbsp;&nbsp;6&nbsp;Comparator(s).<BR></SPAN>
+<SPAN class=Info1>Unit&nbsp;&lt;vga_640x480&gt;&nbsp;synthesized.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Synthesizing&nbsp;Unit&nbsp;&lt;vga_bsprite2a&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Related&nbsp;source&nbsp;file&nbsp;is&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd&quot;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:647&nbsp;-&nbsp;Input&nbsp;&lt;sw&lt;3:0&gt;&gt;&nbsp;is&nbsp;never&nbsp;used.&nbsp;This&nbsp;port&nbsp;will&nbsp;be&nbsp;preserved&nbsp;and&nbsp;left&nbsp;unconnected&nbsp;if&nbsp;it&nbsp;belongs&nbsp;to&nbsp;a&nbsp;top-level&nbsp;block&nbsp;or&nbsp;it&nbsp;belongs&nbsp;to&nbsp;a&nbsp;sub-block&nbsp;and&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;this&nbsp;sub-block&nbsp;is&nbsp;preserved.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:1780&nbsp;-&nbsp;Signal&nbsp;&lt;rom_addr&gt;&nbsp;is&nbsp;never&nbsp;used&nbsp;or&nbsp;assigned.&nbsp;This&nbsp;unconnected&nbsp;signal&nbsp;will&nbsp;be&nbsp;trimmed&nbsp;during&nbsp;the&nbsp;optimization&nbsp;process.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:1780&nbsp;-&nbsp;Signal&nbsp;&lt;R&gt;&nbsp;is&nbsp;never&nbsp;used&nbsp;or&nbsp;assigned.&nbsp;This&nbsp;unconnected&nbsp;signal&nbsp;will&nbsp;be&nbsp;trimmed&nbsp;during&nbsp;the&nbsp;optimization&nbsp;process.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:1780&nbsp;-&nbsp;Signal&nbsp;&lt;G&gt;&nbsp;is&nbsp;never&nbsp;used&nbsp;or&nbsp;assigned.&nbsp;This&nbsp;unconnected&nbsp;signal&nbsp;will&nbsp;be&nbsp;trimmed&nbsp;during&nbsp;the&nbsp;optimization&nbsp;process.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:646&nbsp;-&nbsp;Signal&nbsp;&lt;CSkye&gt;&nbsp;is&nbsp;assigned&nbsp;but&nbsp;never&nbsp;used.&nbsp;This&nbsp;unconnected&nbsp;signal&nbsp;will&nbsp;be&nbsp;trimmed&nbsp;during&nbsp;the&nbsp;optimization&nbsp;process.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:646&nbsp;-&nbsp;Signal&nbsp;&lt;CMona&gt;&nbsp;is&nbsp;assigned&nbsp;but&nbsp;never&nbsp;used.&nbsp;This&nbsp;unconnected&nbsp;signal&nbsp;will&nbsp;be&nbsp;trimmed&nbsp;during&nbsp;the&nbsp;optimization&nbsp;process.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:1780&nbsp;-&nbsp;Signal&nbsp;&lt;B&gt;&nbsp;is&nbsp;never&nbsp;used&nbsp;or&nbsp;assigned.&nbsp;This&nbsp;unconnected&nbsp;signal&nbsp;will&nbsp;be&nbsp;trimmed&nbsp;during&nbsp;the&nbsp;optimization&nbsp;process.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;18-bit&nbsp;adder&nbsp;for&nbsp;signal&nbsp;&lt;rom_addr2$add0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;49.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;17-bit&nbsp;adder&nbsp;for&nbsp;signal&nbsp;&lt;rom_addr2$addsub0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;46.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;17-bit&nbsp;adder&nbsp;for&nbsp;signal&nbsp;&lt;rom_addr2$addsub0001&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;46.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;adder&nbsp;for&nbsp;signal&nbsp;&lt;spriteon$addsub0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;40.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;adder&nbsp;for&nbsp;signal&nbsp;&lt;spriteon$addsub0001&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;40.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;comparator&nbsp;greatequal&nbsp;for&nbsp;signal&nbsp;&lt;spriteon$cmp_ge0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;40.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;comparator&nbsp;greater&nbsp;for&nbsp;signal&nbsp;&lt;spriteon$cmp_gt0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;40.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;comparator&nbsp;lessequal&nbsp;for&nbsp;signal&nbsp;&lt;spriteon$cmp_le0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;40.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;comparator&nbsp;less&nbsp;for&nbsp;signal&nbsp;&lt;spriteon$cmp_lt0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;40.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;subtractor&nbsp;for&nbsp;signal&nbsp;&lt;xpix&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;subtractor&nbsp;for&nbsp;signal&nbsp;&lt;xpix$addsub0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;37.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;subtractor&nbsp;for&nbsp;signal&nbsp;&lt;ypix&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Found&nbsp;10-bit&nbsp;subtractor&nbsp;for&nbsp;signal&nbsp;&lt;ypix$addsub0000&gt;&nbsp;created&nbsp;at&nbsp;line&nbsp;36.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>	inferred&nbsp;&nbsp;&nbsp;9&nbsp;Adder/Subtractor(s).<BR></SPAN>
+<SPAN class=Info1>	inferred&nbsp;&nbsp;&nbsp;4&nbsp;Comparator(s).<BR></SPAN>
+<SPAN class=Info1>Unit&nbsp;&lt;vga_bsprite2a&gt;&nbsp;synthesized.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Synthesizing&nbsp;Unit&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Related&nbsp;source&nbsp;file&nbsp;is&nbsp;&quot;C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd&quot;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:647&nbsp;-&nbsp;Input&nbsp;&lt;btn&lt;2:0&gt;&gt;&nbsp;is&nbsp;never&nbsp;used.&nbsp;This&nbsp;port&nbsp;will&nbsp;be&nbsp;preserved&nbsp;and&nbsp;left&nbsp;unconnected&nbsp;if&nbsp;it&nbsp;belongs&nbsp;to&nbsp;a&nbsp;top-level&nbsp;block&nbsp;or&nbsp;it&nbsp;belongs&nbsp;to&nbsp;a&nbsp;sub-block&nbsp;and&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;this&nbsp;sub-block&nbsp;is&nbsp;preserved.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:646&nbsp;-&nbsp;Signal&nbsp;&lt;rom_addr16&lt;15:14&gt;&gt;&nbsp;is&nbsp;assigned&nbsp;but&nbsp;never&nbsp;used.&nbsp;This&nbsp;unconnected&nbsp;signal&nbsp;will&nbsp;be&nbsp;trimmed&nbsp;during&nbsp;the&nbsp;optimization&nbsp;process.<BR></SPAN>
+<SPAN class=Info1>Unit&nbsp;&lt;group_photos_top&gt;&nbsp;synthesized.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>HDL&nbsp;Synthesis&nbsp;Report<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Macro&nbsp;Statistics<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Adders/Subtractors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;9<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;adder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;subtractor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;4<BR></SPAN>
+<SPAN class=Info1>&nbsp;17-bit&nbsp;adder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>&nbsp;18-bit&nbsp;adder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Counters&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;up&nbsp;counter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>&nbsp;24-bit&nbsp;up&nbsp;counter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Registers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>&nbsp;1-bit&nbsp;register&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Comparators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;10<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;comparator&nbsp;greatequal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;comparator&nbsp;greater&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;comparator&nbsp;less&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;comparator&nbsp;lessequal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>&nbsp;11-bit&nbsp;comparator&nbsp;less&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advanced&nbsp;HDL&nbsp;Synthesis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Advanced&nbsp;HDL&nbsp;Synthesis&nbsp;Report<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Macro&nbsp;Statistics<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Adders/Subtractors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;9<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;adder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;subtractor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;4<BR></SPAN>
+<SPAN class=Info1>&nbsp;16-bit&nbsp;adder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Counters&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;up&nbsp;counter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>&nbsp;24-bit&nbsp;up&nbsp;counter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Registers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>&nbsp;Flip-Flops&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Comparators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;10<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;comparator&nbsp;greatequal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;comparator&nbsp;greater&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;comparator&nbsp;less&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>&nbsp;10-bit&nbsp;comparator&nbsp;lessequal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>&nbsp;11-bit&nbsp;comparator&nbsp;less&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Low&nbsp;Level&nbsp;Synthesis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_1&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_2&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_3&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_4&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_5&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_6&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_7&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_8&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_9&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_10&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_11&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_12&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_13&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_14&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_15&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_16&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_17&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_18&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_19&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_20&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_21&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_22&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Warn1>WARNING:Xst:2677&nbsp;-&nbsp;Node&nbsp;&lt;U1/q_23&gt;&nbsp;of&nbsp;sequential&nbsp;type&nbsp;is&nbsp;unconnected&nbsp;in&nbsp;block&nbsp;&lt;group_photos_top&gt;.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Optimizing&nbsp;unit&nbsp;&lt;group_photos_top&gt;&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Optimizing&nbsp;unit&nbsp;&lt;vga_640x480&gt;&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Optimizing&nbsp;unit&nbsp;&lt;vga_bsprite2a&gt;&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Mapping&nbsp;all&nbsp;equations...<BR></SPAN>
+<SPAN class=Info1>Building&nbsp;and&nbsp;optimizing&nbsp;final&nbsp;netlist&nbsp;...<BR></SPAN>
+<SPAN class=Info1>Found&nbsp;area&nbsp;constraint&nbsp;ratio&nbsp;of&nbsp;100&nbsp;(+&nbsp;5)&nbsp;on&nbsp;block&nbsp;group_photos_top,&nbsp;actual&nbsp;ratio&nbsp;is&nbsp;1.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Final&nbsp;Macro&nbsp;Processing&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Final&nbsp;Register&nbsp;Report<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Macro&nbsp;Statistics<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Registers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;22<BR></SPAN>
+<SPAN class=Info1>&nbsp;Flip-Flops&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;22<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partition&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Partition&nbsp;Implementation&nbsp;Status<BR></SPAN>
+<SPAN class=Info1>-------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;No&nbsp;Partitions&nbsp;were&nbsp;found&nbsp;in&nbsp;this&nbsp;design.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>-------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Final&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Final&nbsp;Results<BR></SPAN>
+<SPAN class=Info1>RTL&nbsp;Top&nbsp;Level&nbsp;Output&nbsp;File&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;group_photos_top.ngr<BR></SPAN>
+<SPAN class=Info1>Top&nbsp;Level&nbsp;Output&nbsp;File&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;group_photos_top<BR></SPAN>
+<SPAN class=Info1>Output&nbsp;Format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;NGC<BR></SPAN>
+<SPAN class=Info1>Optimization&nbsp;Goal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;speed<BR></SPAN>
+<SPAN class=Info1>Keep&nbsp;Hierarchy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Design&nbsp;Statistics<BR></SPAN>
+<SPAN class=Info1>#&nbsp;IOs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;23<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Cell&nbsp;Usage&nbsp;:<BR></SPAN>
+<SPAN class=Info1>#&nbsp;BELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;305<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;17<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;31<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;52<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;19<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT3_D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;21<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT4_D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;78<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXF5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VCC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XORCY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;80<BR></SPAN>
+<SPAN class=Info1>#&nbsp;FlipFlops/Latches&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;22<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;11<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDCE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;10<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Clock&nbsp;Buffers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BUFG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BUFGP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;IO&nbsp;Buffers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;15<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBUF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;5<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBUF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;10<BR></SPAN>
+<SPAN class=Info1>#&nbsp;Others&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reymoyet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Device&nbsp;utilization&nbsp;summary:<BR></SPAN>
+<SPAN class=Info1>---------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Selected&nbsp;Device&nbsp;:&nbsp;3s500efg320-5&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;Slices:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;4656&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;Slice&nbsp;Flip&nbsp;Flops:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;9312&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;4&nbsp;input&nbsp;LUTs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;143&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;9312&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;IOs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;bonded&nbsp;IOBs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;232&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;GCLKs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>---------------------------<BR></SPAN>
+<SPAN class=Info1>Partition&nbsp;Resource&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>---------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;No&nbsp;Partitions&nbsp;were&nbsp;found&nbsp;in&nbsp;this&nbsp;design.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>---------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>TIMING&nbsp;REPORT<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>NOTE:&nbsp;THESE&nbsp;TIMING&nbsp;NUMBERS&nbsp;ARE&nbsp;ONLY&nbsp;A&nbsp;SYNTHESIS&nbsp;ESTIMATE.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOR&nbsp;ACCURATE&nbsp;TIMING&nbsp;INFORMATION&nbsp;PLEASE&nbsp;REFER&nbsp;TO&nbsp;THE&nbsp;TRACE&nbsp;REPORT<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GENERATED&nbsp;AFTER&nbsp;PLACE-and-ROUTE.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Clock&nbsp;Information:<BR></SPAN>
+<SPAN class=Info1>------------------<BR></SPAN>
+<SPAN class=Info1>-----------------------------------+------------------------+-------+<BR></SPAN>
+<SPAN class=Info1>Clock&nbsp;Signal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Clock&nbsp;buffer(FF&nbsp;name)&nbsp;&nbsp;|&nbsp;Load&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>-----------------------------------+------------------------+-------+<BR></SPAN>
+<SPAN class=Info1>mclk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;BUFGP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>U1/q_01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;BUFG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;21&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>-----------------------------------+------------------------+-------+<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Asynchronous&nbsp;Control&nbsp;Signals&nbsp;Information:<BR></SPAN>
+<SPAN class=Info1>----------------------------------------<BR></SPAN>
+<SPAN class=Info1>-----------------------------------+------------------------+-------+<BR></SPAN>
+<SPAN class=Info1>Control&nbsp;Signal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Buffer(FF&nbsp;name)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Load&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>-----------------------------------+------------------------+-------+<BR></SPAN>
+<SPAN class=Info1>btn&lt;3&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;IBUF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;21&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>-----------------------------------+------------------------+-------+<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>---------------<BR></SPAN>
+<SPAN class=Info1>Speed&nbsp;Grade:&nbsp;-5<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Minimum&nbsp;period:&nbsp;4.648ns&nbsp;(Maximum&nbsp;Frequency:&nbsp;215.162MHz)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Minimum&nbsp;input&nbsp;arrival&nbsp;time&nbsp;before&nbsp;clock:&nbsp;3.547ns<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Maximum&nbsp;output&nbsp;required&nbsp;time&nbsp;after&nbsp;clock:&nbsp;11.860ns<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Maximum&nbsp;combinational&nbsp;path&nbsp;delay:&nbsp;11.290ns<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;Detail:<BR></SPAN>
+<SPAN class=Info1>--------------<BR></SPAN>
+<SPAN class=Info1>All&nbsp;values&nbsp;displayed&nbsp;in&nbsp;nanoseconds&nbsp;(ns)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;constraint:&nbsp;Default&nbsp;period&nbsp;analysis&nbsp;for&nbsp;Clock&nbsp;'mclk'<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Clock&nbsp;period:&nbsp;2.232ns&nbsp;(frequency:&nbsp;448.039MHz)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Total&nbsp;number&nbsp;of&nbsp;paths&nbsp;/&nbsp;destination&nbsp;ports:&nbsp;1&nbsp;/&nbsp;1<BR></SPAN>
+<SPAN class=Info1>-------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Delay:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.232ns&nbsp;(Levels&nbsp;of&nbsp;Logic&nbsp;=&nbsp;2)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/q_0&nbsp;(FF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/q_0&nbsp;(FF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source&nbsp;Clock:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mclk&nbsp;rising<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination&nbsp;Clock:&nbsp;mclk&nbsp;rising<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Data&nbsp;Path:&nbsp;U1/q_0&nbsp;to&nbsp;U1/q_0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Cell:in-&gt;out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fanout&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;Logical&nbsp;Name&nbsp;(Net&nbsp;Name)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------&nbsp;&nbsp;------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDC:C-&gt;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;0.514&nbsp;&nbsp;&nbsp;0.380&nbsp;&nbsp;U1/q_0&nbsp;(U1/q_01)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INV:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U1/Mcount_q_lut&lt;0&gt;_INV_0&nbsp;(U1/Mcount_q_lut&lt;0&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XORCY:LI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.458&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U1/Mcount_q_xor&lt;0&gt;&nbsp;(Result&lt;0&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDC:D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.268&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/q_0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.232ns&nbsp;(1.852ns&nbsp;logic,&nbsp;0.380ns&nbsp;route)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(83.0%&nbsp;logic,&nbsp;17.0%&nbsp;route)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;constraint:&nbsp;Default&nbsp;period&nbsp;analysis&nbsp;for&nbsp;Clock&nbsp;'U1/q_01'<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Clock&nbsp;period:&nbsp;4.648ns&nbsp;(frequency:&nbsp;215.162MHz)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Total&nbsp;number&nbsp;of&nbsp;paths&nbsp;/&nbsp;destination&nbsp;ports:&nbsp;330&nbsp;/&nbsp;31<BR></SPAN>
+<SPAN class=Info1>-------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Delay:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.648ns&nbsp;(Levels&nbsp;of&nbsp;Logic&nbsp;=&nbsp;10)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U2/vcs_1&nbsp;(FF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U2/vcs_8&nbsp;(FF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source&nbsp;Clock:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/q_01&nbsp;rising<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination&nbsp;Clock:&nbsp;U1/q_01&nbsp;rising<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Data&nbsp;Path:&nbsp;U2/vcs_1&nbsp;to&nbsp;U2/vcs_8<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Cell:in-&gt;out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fanout&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;Logical&nbsp;Name&nbsp;(Net&nbsp;Name)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------&nbsp;&nbsp;------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDCE:C-&gt;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;0.514&nbsp;&nbsp;&nbsp;0.721&nbsp;&nbsp;U2/vcs_1&nbsp;(U2/vcs_1)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT1:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_cy&lt;1&gt;_rt&nbsp;(U2/Mcount_vcs_cy&lt;1&gt;_rt)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:S-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.404&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_cy&lt;1&gt;&nbsp;(U2/Mcount_vcs_cy&lt;1&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.052&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_cy&lt;2&gt;&nbsp;(U2/Mcount_vcs_cy&lt;2&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.052&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_cy&lt;3&gt;&nbsp;(U2/Mcount_vcs_cy&lt;3&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.052&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_cy&lt;4&gt;&nbsp;(U2/Mcount_vcs_cy&lt;4&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.052&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_cy&lt;5&gt;&nbsp;(U2/Mcount_vcs_cy&lt;5&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.052&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_cy&lt;6&gt;&nbsp;(U2/Mcount_vcs_cy&lt;6&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.052&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_cy&lt;7&gt;&nbsp;(U2/Mcount_vcs_cy&lt;7&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XORCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.699&nbsp;&nbsp;&nbsp;0.509&nbsp;&nbsp;U2/Mcount_vcs_xor&lt;8&gt;&nbsp;(U2/Result&lt;8&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT2:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U2/Mcount_vcs_eqn_81&nbsp;(U2/Mcount_vcs_eqn_8)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDCE:D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.268&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U2/vcs_8<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.648ns&nbsp;(3.418ns&nbsp;logic,&nbsp;1.230ns&nbsp;route)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(73.5%&nbsp;logic,&nbsp;26.5%&nbsp;route)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;constraint:&nbsp;Default&nbsp;OFFSET&nbsp;IN&nbsp;BEFORE&nbsp;for&nbsp;Clock&nbsp;'U1/q_01'<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Total&nbsp;number&nbsp;of&nbsp;paths&nbsp;/&nbsp;destination&nbsp;ports:&nbsp;1&nbsp;/&nbsp;1<BR></SPAN>
+<SPAN class=Info1>-------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Offset:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.547ns&nbsp;(Levels&nbsp;of&nbsp;Logic&nbsp;=&nbsp;2)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btn&lt;3&gt;&nbsp;(PAD)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U2/VSENABLE&nbsp;(FF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination&nbsp;Clock:&nbsp;U1/q_01&nbsp;rising<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Data&nbsp;Path:&nbsp;btn&lt;3&gt;&nbsp;to&nbsp;U2/VSENABLE<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Cell:in-&gt;out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fanout&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;Logical&nbsp;Name&nbsp;(Net&nbsp;Name)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------&nbsp;&nbsp;------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBUF:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22&nbsp;&nbsp;&nbsp;1.106&nbsp;&nbsp;&nbsp;0.989&nbsp;&nbsp;btn_3_IBUF&nbsp;(btn_3_IBUF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INV:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.357&nbsp;&nbsp;U2/clr_inv1_INV_0&nbsp;(U2/clr_inv)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDE:CE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.483&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U2/VSENABLE<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.547ns&nbsp;(2.201ns&nbsp;logic,&nbsp;1.346ns&nbsp;route)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(62.0%&nbsp;logic,&nbsp;38.0%&nbsp;route)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;constraint:&nbsp;Default&nbsp;OFFSET&nbsp;OUT&nbsp;AFTER&nbsp;for&nbsp;Clock&nbsp;'U1/q_01'<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Total&nbsp;number&nbsp;of&nbsp;paths&nbsp;/&nbsp;destination&nbsp;ports:&nbsp;16670&nbsp;/&nbsp;24<BR></SPAN>
+<SPAN class=Info1>-------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Offset:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.860ns&nbsp;(Levels&nbsp;of&nbsp;Logic&nbsp;=&nbsp;17)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U2/vcs_0&nbsp;(FF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rey:addra&lt;13&gt;&nbsp;(PAD)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source&nbsp;Clock:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/q_01&nbsp;rising<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Data&nbsp;Path:&nbsp;U2/vcs_0&nbsp;to&nbsp;rey:addra&lt;13&gt;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Cell:in-&gt;out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fanout&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;Logical&nbsp;Name&nbsp;(Net&nbsp;Name)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------&nbsp;&nbsp;------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDCE:C-&gt;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;0.514&nbsp;&nbsp;&nbsp;0.690&nbsp;&nbsp;U2/vcs_0&nbsp;(U2/vcs_0)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT1:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Msub_ypix_addsub0000_cy&lt;0&gt;_rt&nbsp;(U3/Msub_ypix_addsub0000_cy&lt;0&gt;_rt)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:S-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.404&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Msub_ypix_addsub0000_cy&lt;0&gt;&nbsp;(U3/Msub_ypix_addsub0000_cy&lt;0&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.052&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Msub_ypix_addsub0000_cy&lt;1&gt;&nbsp;(U3/Msub_ypix_addsub0000_cy&lt;1&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.052&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Msub_ypix_addsub0000_cy&lt;2&gt;&nbsp;(U3/Msub_ypix_addsub0000_cy&lt;2&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XORCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.699&nbsp;&nbsp;&nbsp;0.357&nbsp;&nbsp;U3/Msub_ypix_addsub0000_xor&lt;3&gt;&nbsp;(U3/ypix_addsub0000&lt;3&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INV:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Msub_ypix_lut&lt;3&gt;_INV_0&nbsp;(U3/Msub_ypix_lut&lt;3&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:S-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.404&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Msub_ypix_cy&lt;3&gt;&nbsp;(U3/Msub_ypix_cy&lt;3&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XORCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;0.699&nbsp;&nbsp;&nbsp;0.603&nbsp;&nbsp;U3/Msub_ypix_xor&lt;4&gt;&nbsp;(U3/ypix&lt;4&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT2:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Madd_rom_addr2_addsub0000_Madd_lut&lt;7&gt;&nbsp;(U3/Madd_rom_addr2_addsub0000_Madd_lut&lt;7&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:S-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.404&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Madd_rom_addr2_addsub0000_Madd_cy&lt;7&gt;&nbsp;(U3/Madd_rom_addr2_addsub0000_Madd_cy&lt;7&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XORCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.699&nbsp;&nbsp;&nbsp;0.509&nbsp;&nbsp;U3/Madd_rom_addr2_addsub0000_Madd_xor&lt;8&gt;&nbsp;(U3/rom_addr2_addsub0000&lt;11&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT2:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Madd_rom_addr2_addsub0001_Madd_lut&lt;11&gt;&nbsp;(U3/Madd_rom_addr2_addsub0001_Madd_lut&lt;11&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:S-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.404&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Madd_rom_addr2_addsub0001_Madd_cy&lt;11&gt;&nbsp;(U3/Madd_rom_addr2_addsub0001_Madd_cy&lt;11&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XORCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.699&nbsp;&nbsp;&nbsp;0.509&nbsp;&nbsp;U3/Madd_rom_addr2_addsub0001_Madd_xor&lt;12&gt;&nbsp;(U3/rom_addr2_addsub0001&lt;12&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT1:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Madd_rom_addr2_add0000_Madd_cy&lt;12&gt;_rt&nbsp;(U3/Madd_rom_addr2_add0000_Madd_cy&lt;12&gt;_rt)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MUXCY:S-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0.404&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Madd_rom_addr2_add0000_Madd_cy&lt;12&gt;&nbsp;(U3/Madd_rom_addr2_add0000_Madd_cy&lt;12&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XORCY:CI-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;0.699&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;U3/Madd_rom_addr2_add0000_Madd_xor&lt;13&gt;&nbsp;(rom_addr16&lt;13&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;reymoyet:addra&lt;13&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rey<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.860ns&nbsp;(9.192ns&nbsp;logic,&nbsp;2.668ns&nbsp;route)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(77.5%&nbsp;logic,&nbsp;22.5%&nbsp;route)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;constraint:&nbsp;Default&nbsp;OFFSET&nbsp;OUT&nbsp;AFTER&nbsp;for&nbsp;Clock&nbsp;'mclk'<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Total&nbsp;number&nbsp;of&nbsp;paths&nbsp;/&nbsp;destination&nbsp;ports:&nbsp;1&nbsp;/&nbsp;1<BR></SPAN>
+<SPAN class=Info1>-------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Offset:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.310ns&nbsp;(Levels&nbsp;of&nbsp;Logic&nbsp;=&nbsp;1)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/q_0&nbsp;(FF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rey:clka&nbsp;(PAD)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source&nbsp;Clock:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mclk&nbsp;rising<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Data&nbsp;Path:&nbsp;U1/q_0&nbsp;to&nbsp;rey:clka<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Cell:in-&gt;out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fanout&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;Logical&nbsp;Name&nbsp;(Net&nbsp;Name)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------&nbsp;&nbsp;------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FDC:C-&gt;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;0.514&nbsp;&nbsp;&nbsp;0.380&nbsp;&nbsp;U1/q_0&nbsp;(U1/q_01)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BUFG:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21&nbsp;&nbsp;&nbsp;1.457&nbsp;&nbsp;&nbsp;0.959&nbsp;&nbsp;U1/q_0_BUFG&nbsp;(U1/q_0)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;reymoyet:clka&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rey<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.310ns&nbsp;(1.971ns&nbsp;logic,&nbsp;1.339ns&nbsp;route)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(59.6%&nbsp;logic,&nbsp;40.4%&nbsp;route)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;constraint:&nbsp;Default&nbsp;path&nbsp;analysis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Total&nbsp;number&nbsp;of&nbsp;paths&nbsp;/&nbsp;destination&nbsp;ports:&nbsp;421&nbsp;/&nbsp;15<BR></SPAN>
+<SPAN class=Info1>-------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Delay:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.290ns&nbsp;(Levels&nbsp;of&nbsp;Logic&nbsp;=&nbsp;8)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sw&lt;4&gt;&nbsp;(PAD)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blue&lt;1&gt;&nbsp;(PAD)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Data&nbsp;Path:&nbsp;sw&lt;4&gt;&nbsp;to&nbsp;blue&lt;1&gt;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Cell:in-&gt;out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fanout&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;Logical&nbsp;Name&nbsp;(Net&nbsp;Name)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------&nbsp;&nbsp;------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBUF:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;1.106&nbsp;&nbsp;&nbsp;0.481&nbsp;&nbsp;sw_4_IBUF&nbsp;(sw_4_IBUF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT4:I2-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.509&nbsp;&nbsp;U3/blue_and0000169&nbsp;(U3/blue_and0000169)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT3:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.387&nbsp;&nbsp;U3/blue_and0000197_SW0&nbsp;(N9)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT4:I2-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.426&nbsp;&nbsp;U3/blue_and0000197&nbsp;(U3/blue_and0000197)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT4:I1-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.387&nbsp;&nbsp;U3/blue_and0000325&nbsp;(U3/blue_and0000325)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT4:I2-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.795&nbsp;&nbsp;U3/blue_and0000349&nbsp;(U3/blue_and0000)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUT2:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.612&nbsp;&nbsp;&nbsp;0.357&nbsp;&nbsp;U3/red&lt;2&gt;1&nbsp;(red_2_OBUF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBUF:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.169&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;red_2_OBUF&nbsp;(red&lt;2&gt;)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.290ns&nbsp;(7.947ns&nbsp;logic,&nbsp;3.343ns&nbsp;route)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(70.4%&nbsp;logic,&nbsp;29.6%&nbsp;route)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;7.00&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;7.42&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>&nbsp;<BR></SPAN>
+<SPAN class=Info1>--&gt;&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;memory&nbsp;usage&nbsp;is&nbsp;221540&nbsp;kilobytes<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;errors&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(&nbsp;&nbsp;&nbsp;0&nbsp;filtered)<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;warnings&nbsp;:&nbsp;&nbsp;&nbsp;34&nbsp;(&nbsp;&nbsp;&nbsp;0&nbsp;filtered)<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;infos&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(&nbsp;&nbsp;&nbsp;0&nbsp;filtered)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>INFO:NetListWriters:635&nbsp;-&nbsp;The&nbsp;generated&nbsp;VHDL&nbsp;netlist&nbsp;contains&nbsp;Xilinx&nbsp;UNISIM<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;simulation&nbsp;primitives&nbsp;and&nbsp;has&nbsp;to&nbsp;be&nbsp;used&nbsp;with&nbsp;UNISIM&nbsp;library&nbsp;for&nbsp;correct<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;compilation&nbsp;and&nbsp;simulation.&nbsp;<BR></SPAN>
+<SPAN class=Warn1>Synthesis&nbsp;finished&nbsp;with&nbsp;34&nbsp;warning(s).<BR></SPAN>
+<SPAN class=Warn1><BR></SPAN>
+
+</FONT>
+</BODY>
+
+</HTML>
+		
