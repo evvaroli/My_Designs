@@ -9,12 +9,33 @@ Status=Compiled
 FileTimeLow=30361489
 Status=Compiled
 [COMPILESTATUS|.\src\vga_bsprite2a.vhd]
-FileTimeLow=30361536
+FileTimeLow=30361543
 Status=Compiled
 [COMPILESTATUS|.\src\group_photos_top.vhd]
-FileTimeLow=30361536
-Status=Error
+FileTimeLow=30361539
+Status=Compiled
 [CACHEDOC|Aldec.Project.Generic.7|.\Lab7\Lab7.adf|]
 Path=
+[COMPILESTATUS|.\src\reymoyet.vhd]
+FileTimeLow=30361537
+Status=Compiled
+[COMPILESTATUS|.\synthesis\group_photos_top.vhd]
+FileTimeLow=30361543
+Status=Modified
+[COMPILESTATUS|.\IMPLEMENT\TIME_SIM.VHD]
+FileTimeLow=30361543
+Status=
+[COMPILESTATUS|.\IMPLEMENT\TIME_SIM.SDF]
+FileTimeLow=30361543
+Status=Modified
+[COMPILESTATUS|.\src\vga_stripes.vhd]
+FileTimeLow=30361542
+Status=Compiled
+[COMPILESTATUS|.\src\vga_stripes_top.vhd]
+FileTimeLow=30361542
+Status=Compiled
+[COMPILESTATUS|.\synthesis\vga_stripes_top.vhd]
+FileTimeLow=30361542
+Status=Modified
 [Gui config]
 RunFor=100 ns

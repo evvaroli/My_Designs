@@ -1,6 +1,7 @@
 # Output products list for <reymoyet>
 reymoyet.asy
 reymoyet.gise
+reymoyet.mif
 reymoyet.ngc
 reymoyet.vhd
 reymoyet.vho

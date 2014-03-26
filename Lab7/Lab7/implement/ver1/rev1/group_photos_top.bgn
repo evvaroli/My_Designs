@@ -6,7 +6,7 @@ C:\Xilinx\14.7\ISE_DS\ISE\.
 speed -5
 Opened constraints file group_photos_top.pcf.
 
-Mon Mar 24 21:14:37 2014
+Tue Mar 25 20:33:00 2014
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\bitgen.exe -intstyle ise -g Binary:No -g IEEE1532:No -g DebugBitstream:No -g CRC:Enable -g Security:None -g StartupClk:JtagClk -g DonePipe:No -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g DriveDone:No -g ConfigRate:1 -g ProgPin:Pullup -g DonePin:Pullup -g TckPin:Pullup -g TdiPin:Pullup -g TdoPin:Pullup -g TmsPin:Pullup -g UnusedPin:Pulldown -g UserID:0xFFFFFFFF -g DCMShutDown:Disable -w group_photos_top.ncd group_photos_top group_photos_top.pcf 
 
@@ -91,21 +91,17 @@ There were 0 CONFIG constraint(s) processed from group_photos_top.pcf.
 
 
 Running DRC.
+WARNING:PhysDesignRules:367 - The signal <sw<0>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw<1>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <btn<0>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <btn<1>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <btn<2>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<0>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<1>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<2>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<3>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-DRC detected 0 errors and 7 warnings.  Please see the previously displayed
+DRC detected 0 errors and 5 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "group_photos_top.bit".

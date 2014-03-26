@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.13 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> 
 TABLE OF CONTENTS
@@ -112,6 +112,10 @@ Architecture vga_640x480 of Entity vga_640x480 is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" in Library Lab7.
 Entity <vga_bsprite2a> compiled.
 Entity <vga_bsprite2a> (Architecture <vga_bsprite2a>) compiled.
+Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/skye.vhd" in Library Lab7.
+Architecture skye_a of Entity skye is up to date.
+Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/mona.vhd" in Library Lab7.
+Architecture mona_a of Entity mona is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/reymoyet.vhd" in Library Lab7.
 Architecture reymoyet_a of Entity reymoyet is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/vga_stripes.vhd" in Library Lab7.
@@ -137,7 +141,9 @@ Analyzing hierarchy for entity <vga_bsprite2a> in library <Lab7> (architecture <
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <group_photos_top> in library <Lab7> (Architecture <group_photos_top>).
-WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 102: Instantiating black box module <reymoyet>.
+WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 132: Instantiating black box module <skye>.
+WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 139: Instantiating black box module <mona>.
+WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 146: Instantiating black box module <reymoyet>.
 Entity <group_photos_top> analyzed. Unit <group_photos_top> generated.
 
 Analyzing Entity <ClockDivider> in library <Lab7> (Architecture <clockdivider>).
@@ -147,7 +153,11 @@ Analyzing Entity <vga_640x480> in library <Lab7> (Architecture <vga_640x480>).
 Entity <vga_640x480> analyzed. Unit <vga_640x480> generated.
 
 Analyzing Entity <vga_bsprite2a> in library <Lab7> (Architecture <vga_bsprite2a>).
-WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 49: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 71: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 95: Width mismatch. <rom_addr20> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 119: Width mismatch. <rom_addr21> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:819 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 137: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <mona>, <redMona>, <greenMona>, <blueMona>, <skye>, <redSkye>, <greenSkye>, <blueSkye>, <rey>, <redRey>, <greenRey>, <blueRey>
 Entity <vga_bsprite2a> analyzed. Unit <vga_bsprite2a> generated.
 
 
@@ -185,36 +195,55 @@ Unit <vga_640x480> synthesized.
 
 Synthesizing Unit <vga_bsprite2a>.
     Related source file is "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd".
-WARNING:Xst:647 - Input <sw<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <sw<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <rom_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <R> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <G> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <CSkye> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <CMona> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <B> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-    Found 18-bit adder for signal <rom_addr2$add0000> created at line 49.
-    Found 17-bit adder for signal <rom_addr2$addsub0000> created at line 46.
-    Found 17-bit adder for signal <rom_addr2$addsub0001> created at line 46.
-    Found 10-bit adder for signal <spriteon$addsub0000> created at line 40.
-    Found 10-bit adder for signal <spriteon$addsub0001> created at line 40.
-    Found 10-bit comparator greatequal for signal <spriteon$cmp_ge0000> created at line 40.
-    Found 10-bit comparator greater for signal <spriteon$cmp_gt0000> created at line 40.
-    Found 10-bit comparator lessequal for signal <spriteon$cmp_le0000> created at line 40.
-    Found 10-bit comparator less for signal <spriteon$cmp_lt0000> created at line 40.
-    Found 10-bit subtractor for signal <xpix>.
-    Found 10-bit subtractor for signal <xpix$addsub0000> created at line 37.
-    Found 10-bit subtractor for signal <ypix>.
-    Found 10-bit subtractor for signal <ypix$addsub0000> created at line 36.
+    Found 10-bit adder for signal <monaspriteon$addsub0000> created at line 62.
+    Found 10-bit adder for signal <monaspriteon$addsub0001> created at line 62.
+    Found 10-bit comparator greatequal for signal <monaspriteon$cmp_ge0000> created at line 62.
+    Found 10-bit comparator greater for signal <monaspriteon$cmp_gt0000> created at line 62.
+    Found 11-bit comparator lessequal for signal <monaspriteon$cmp_le0000> created at line 62.
+    Found 10-bit comparator less for signal <monaspriteon$cmp_lt0000> created at line 62.
+    Found 10-bit adder for signal <reyspriteon$addsub0000> created at line 56.
+    Found 10-bit adder for signal <reyspriteon$addsub0001> created at line 56.
+    Found 10-bit comparator greatequal for signal <reyspriteon$cmp_ge0000> created at line 56.
+    Found 10-bit comparator greater for signal <reyspriteon$cmp_gt0000> created at line 56.
+    Found 10-bit comparator lessequal for signal <reyspriteon$cmp_le0000> created at line 56.
+    Found 10-bit comparator less for signal <reyspriteon$cmp_lt0000> created at line 56.
+    Found 18-bit adder for signal <rom_addr2$add0000> created at line 71.
+    Found 17-bit adder for signal <rom_addr2$addsub0000> created at line 68.
+    Found 17-bit adder for signal <rom_addr2$addsub0001> created at line 68.
+    Found 18-bit adder for signal <rom_addr20$add0000> created at line 95.
+    Found 17-bit adder for signal <rom_addr20$addsub0000> created at line 92.
+    Found 17-bit adder for signal <rom_addr20$addsub0001> created at line 92.
+    Found 18-bit adder for signal <rom_addr21$add0000> created at line 119.
+    Found 17-bit adder for signal <rom_addr21$addsub0000> created at line 116.
+    Found 17-bit adder for signal <rom_addr21$addsub0001> created at line 116.
+    Found 10-bit adder for signal <skyespriteon$addsub0000> created at line 59.
+    Found 10-bit adder for signal <skyespriteon$addsub0001> created at line 59.
+    Found 10-bit comparator greatequal for signal <skyespriteon$cmp_ge0000> created at line 59.
+    Found 10-bit comparator greater for signal <skyespriteon$cmp_gt0000> created at line 59.
+    Found 10-bit comparator lessequal for signal <skyespriteon$cmp_le0000> created at line 59.
+    Found 10-bit comparator less for signal <skyespriteon$cmp_lt0000> created at line 59.
+    Found 10-bit subtractor for signal <xpixMona>.
+    Found 10-bit subtractor for signal <xpixRey>.
+    Found 10-bit subtractor for signal <xpixRey$sub0000> created at line 46.
+    Found 10-bit subtractor for signal <xpixSkye>.
+    Found 10-bit subtractor for signal <ypixMona>.
+    Found 10-bit subtractor for signal <ypixRey>.
+    Found 10-bit subtractor for signal <ypixRey$sub0000> created at line 45.
+    Found 10-bit subtractor for signal <ypixSkye>.
     Summary:
-	inferred   9 Adder/Subtractor(s).
-	inferred   4 Comparator(s).
+	inferred  23 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
 Unit <vga_bsprite2a> synthesized.
 
 
 Synthesizing Unit <group_photos_top>.
     Related source file is "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd".
 WARNING:Xst:647 - Input <btn<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:646 - Signal <rom_addr16<15:14>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <group_photos_top> synthesized.
 
 
@@ -222,22 +251,23 @@ Unit <group_photos_top> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 9
- 10-bit adder                                          : 2
- 10-bit subtractor                                     : 4
- 17-bit adder                                          : 2
- 18-bit adder                                          : 1
+# Adders/Subtractors                                   : 23
+ 10-bit adder                                          : 6
+ 10-bit subtractor                                     : 8
+ 17-bit adder                                          : 6
+ 18-bit adder                                          : 3
 # Counters                                             : 3
  10-bit up counter                                     : 2
  24-bit up counter                                     : 1
 # Registers                                            : 1
  1-bit register                                        : 1
-# Comparators                                          : 10
- 10-bit comparator greatequal                          : 3
- 10-bit comparator greater                             : 1
- 10-bit comparator less                                : 3
- 10-bit comparator lessequal                           : 1
+# Comparators                                          : 18
+ 10-bit comparator greatequal                          : 5
+ 10-bit comparator greater                             : 3
+ 10-bit comparator less                                : 5
+ 10-bit comparator lessequal                           : 2
  11-bit comparator less                                : 2
+ 11-bit comparator lessequal                           : 1
 
 =========================================================================
 
@@ -250,21 +280,22 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 9
- 10-bit adder                                          : 2
- 10-bit subtractor                                     : 4
- 16-bit adder                                          : 3
+# Adders/Subtractors                                   : 23
+ 10-bit adder                                          : 6
+ 10-bit subtractor                                     : 8
+ 14-bit adder                                          : 9
 # Counters                                             : 3
  10-bit up counter                                     : 2
  24-bit up counter                                     : 1
 # Registers                                            : 1
  Flip-Flops                                            : 1
-# Comparators                                          : 10
- 10-bit comparator greatequal                          : 3
- 10-bit comparator greater                             : 1
- 10-bit comparator less                                : 3
- 10-bit comparator lessequal                           : 1
+# Comparators                                          : 18
+ 10-bit comparator greatequal                          : 5
+ 10-bit comparator greater                             : 3
+ 10-bit comparator less                                : 5
+ 10-bit comparator lessequal                           : 2
  11-bit comparator less                                : 2
+ 11-bit comparator lessequal                           : 1
 
 =========================================================================
 
@@ -303,7 +334,7 @@ Optimizing unit <vga_bsprite2a> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block group_photos_top, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block group_photos_top, actual ratio is 3.
 
 Final Macro Processing ...
 
@@ -341,19 +372,19 @@ Design Statistics
 # IOs                              : 23
 
 Cell Usage :
-# BELS                             : 305
+# BELS                             : 639
 #      GND                         : 1
-#      INV                         : 17
-#      LUT1                        : 31
-#      LUT2                        : 52
-#      LUT3                        : 19
+#      INV                         : 36
+#      LUT1                        : 50
+#      LUT2                        : 92
+#      LUT3                        : 44
 #      LUT3_D                      : 1
-#      LUT4                        : 21
+#      LUT4                        : 47
 #      LUT4_D                      : 2
-#      MUXCY                       : 78
-#      MUXF5                       : 2
+#      MUXCY                       : 174
+#      MUXF5                       : 13
 #      VCC                         : 1
-#      XORCY                       : 80
+#      XORCY                       : 178
 # FlipFlops/Latches                : 22
 #      FDC                         : 11
 #      FDCE                        : 10
@@ -361,11 +392,13 @@ Cell Usage :
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 15
-#      IBUF                        : 5
+# IO Buffers                       : 17
+#      IBUF                        : 7
 #      OBUF                        : 10
-# Others                           : 1
+# Others                           : 3
+#      mona                        : 1
 #      reymoyet                    : 1
+#      skye                        : 1
 =========================================================================
 
 Device utilization summary:
@@ -373,11 +406,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       78  out of   4656     1%  
+ Number of Slices:                      148  out of   4656     3%  
  Number of Slice Flip Flops:             22  out of   9312     0%  
- Number of 4 input LUTs:                143  out of   9312     1%  
+ Number of 4 input LUTs:                272  out of   9312     2%  
  Number of IOs:                          23
- Number of bonded IOBs:                  16  out of    232     6%  
+ Number of bonded IOBs:                  18  out of    232     7%  
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -417,10 +450,10 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 4.648ns (Maximum Frequency: 215.162MHz)
+   Minimum period: 4.882ns (Maximum Frequency: 204.817MHz)
    Minimum input arrival time before clock: 3.547ns
-   Maximum output required time after clock: 11.860ns
-   Maximum combinational path delay: 11.290ns
+   Maximum output required time after clock: 12.011ns
+   Maximum combinational path delay: 10.825ns
 
 Timing Detail:
 --------------
@@ -451,34 +484,32 @@ Delay:               2.232ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U1/q_01'
-  Clock period: 4.648ns (frequency: 215.162MHz)
+  Clock period: 4.882ns (frequency: 204.817MHz)
   Total number of paths / destination ports: 330 / 31
 -------------------------------------------------------------------------
-Delay:               4.648ns (Levels of Logic = 10)
-  Source:            U2/vcs_1 (FF)
-  Destination:       U2/vcs_8 (FF)
+Delay:               4.882ns (Levels of Logic = 8)
+  Source:            U2/HCS_4 (FF)
+  Destination:       U2/HCS_9 (FF)
   Source Clock:      U1/q_01 rising
   Destination Clock: U1/q_01 rising
 
-  Data Path: U2/vcs_1 to U2/vcs_8
+  Data Path: U2/HCS_4 to U2/HCS_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             6   0.514   0.721  U2/vcs_1 (U2/vcs_1)
-     LUT1:I0->O            1   0.612   0.000  U2/Mcount_vcs_cy<1>_rt (U2/Mcount_vcs_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  U2/Mcount_vcs_cy<1> (U2/Mcount_vcs_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_vcs_cy<2> (U2/Mcount_vcs_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_vcs_cy<3> (U2/Mcount_vcs_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_vcs_cy<4> (U2/Mcount_vcs_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_vcs_cy<5> (U2/Mcount_vcs_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_vcs_cy<6> (U2/Mcount_vcs_cy<6>)
-     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_vcs_cy<7> (U2/Mcount_vcs_cy<7>)
-     XORCY:CI->O           1   0.699   0.509  U2/Mcount_vcs_xor<8> (U2/Result<8>)
-     LUT2:I0->O            1   0.612   0.000  U2/Mcount_vcs_eqn_81 (U2/Mcount_vcs_eqn_8)
-     FDCE:D                    0.268          U2/vcs_8
+     FDC:C->Q             22   0.514   1.141  U2/HCS_4 (U2/HCS_4)
+     LUT1:I0->O            1   0.612   0.000  U2/Mcount_HCS_cy<4>_rt (U2/Mcount_HCS_cy<4>_rt)
+     MUXCY:S->O            1   0.404   0.000  U2/Mcount_HCS_cy<4> (U2/Mcount_HCS_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_HCS_cy<5> (U2/Mcount_HCS_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_HCS_cy<6> (U2/Mcount_HCS_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  U2/Mcount_HCS_cy<7> (U2/Mcount_HCS_cy<7>)
+     MUXCY:CI->O           0   0.052   0.000  U2/Mcount_HCS_cy<8> (U2/Mcount_HCS_cy<8>)
+     XORCY:CI->O           1   0.699   0.426  U2/Mcount_HCS_xor<9> (U2/Result<9>1)
+     LUT3:I1->O            1   0.612   0.000  U2/Mcount_HCS_eqn_91 (U2/Mcount_HCS_eqn_9)
+     FDC:D                     0.268          U2/HCS_9
     ----------------------------------------
-    Total                      4.648ns (3.418ns logic, 1.230ns route)
-                                       (73.5% logic, 26.5% route)
+    Total                      4.882ns (3.315ns logic, 1.567ns route)
+                                       (67.9% logic, 32.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/q_01'
@@ -502,95 +533,93 @@ Offset:              3.547ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/q_01'
-  Total number of paths / destination ports: 16670 / 24
+  Total number of paths / destination ports: 48235 / 52
 -------------------------------------------------------------------------
-Offset:              11.860ns (Levels of Logic = 17)
-  Source:            U2/vcs_0 (FF)
-  Destination:       rey:addra<13> (PAD)
+Offset:              12.011ns (Levels of Logic = 15)
+  Source:            U2/vcs_2 (FF)
+  Destination:       skyePic:addra<13> (PAD)
   Source Clock:      U1/q_01 rising
 
-  Data Path: U2/vcs_0 to rey:addra<13>
+  Data Path: U2/vcs_2 to skyePic:addra<13>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             5   0.514   0.690  U2/vcs_0 (U2/vcs_0)
-     LUT1:I0->O            1   0.612   0.000  U3/Msub_ypix_addsub0000_cy<0>_rt (U3/Msub_ypix_addsub0000_cy<0>_rt)
-     MUXCY:S->O            1   0.404   0.000  U3/Msub_ypix_addsub0000_cy<0> (U3/Msub_ypix_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  U3/Msub_ypix_addsub0000_cy<1> (U3/Msub_ypix_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  U3/Msub_ypix_addsub0000_cy<2> (U3/Msub_ypix_addsub0000_cy<2>)
-     XORCY:CI->O           1   0.699   0.357  U3/Msub_ypix_addsub0000_xor<3> (U3/ypix_addsub0000<3>)
-     INV:I->O              1   0.612   0.000  U3/Msub_ypix_lut<3>_INV_0 (U3/Msub_ypix_lut<3>)
-     MUXCY:S->O            1   0.404   0.000  U3/Msub_ypix_cy<3> (U3/Msub_ypix_cy<3>)
-     XORCY:CI->O           3   0.699   0.603  U3/Msub_ypix_xor<4> (U3/ypix<4>)
-     LUT2:I0->O            1   0.612   0.000  U3/Madd_rom_addr2_addsub0000_Madd_lut<7> (U3/Madd_rom_addr2_addsub0000_Madd_lut<7>)
-     MUXCY:S->O            1   0.404   0.000  U3/Madd_rom_addr2_addsub0000_Madd_cy<7> (U3/Madd_rom_addr2_addsub0000_Madd_cy<7>)
-     XORCY:CI->O           1   0.699   0.509  U3/Madd_rom_addr2_addsub0000_Madd_xor<8> (U3/rom_addr2_addsub0000<11>)
-     LUT2:I0->O            1   0.612   0.000  U3/Madd_rom_addr2_addsub0001_Madd_lut<11> (U3/Madd_rom_addr2_addsub0001_Madd_lut<11>)
-     MUXCY:S->O            1   0.404   0.000  U3/Madd_rom_addr2_addsub0001_Madd_cy<11> (U3/Madd_rom_addr2_addsub0001_Madd_cy<11>)
-     XORCY:CI->O           1   0.699   0.509  U3/Madd_rom_addr2_addsub0001_Madd_xor<12> (U3/rom_addr2_addsub0001<12>)
-     LUT1:I0->O            1   0.612   0.000  U3/Madd_rom_addr2_add0000_Madd_cy<12>_rt (U3/Madd_rom_addr2_add0000_Madd_cy<12>_rt)
-     MUXCY:S->O            0   0.404   0.000  U3/Madd_rom_addr2_add0000_Madd_cy<12> (U3/Madd_rom_addr2_add0000_Madd_cy<12>)
-     XORCY:CI->O           0   0.699   0.000  U3/Madd_rom_addr2_add0000_Madd_xor<13> (rom_addr16<13>)
-    reymoyet:addra<13>         0.000          rey
+     FDCE:C->Q             9   0.514   0.849  U2/vcs_2 (U2/vcs_2)
+     LUT1:I0->O            1   0.612   0.000  vga_sprite/Msub_ypixRey_sub0000_cy<2>_rt (vga_sprite/Msub_ypixRey_sub0000_cy<2>_rt)
+     MUXCY:S->O            1   0.404   0.000  vga_sprite/Msub_ypixRey_sub0000_cy<2> (vga_sprite/Msub_ypixRey_sub0000_cy<2>)
+     XORCY:CI->O           3   0.699   0.451  vga_sprite/Msub_ypixRey_sub0000_xor<3> (vga_sprite/ypixRey_sub0000<3>)
+     INV:I->O              1   0.612   0.000  vga_sprite/Msub_ypixMona_lut<3>_INV_0 (vga_sprite/Msub_ypixMona_lut<3>)
+     MUXCY:S->O            1   0.404   0.000  vga_sprite/Msub_ypixMona_cy<3> (vga_sprite/Msub_ypixMona_cy<3>)
+     XORCY:CI->O           3   0.699   0.603  vga_sprite/Msub_ypixMona_xor<4> (vga_sprite/ypixMona<4>)
+     LUT2:I0->O            1   0.612   0.000  vga_sprite/Madd_rom_addr21_addsub0000_Madd_lut<7> (vga_sprite/Madd_rom_addr21_addsub0000_Madd_lut<7>)
+     MUXCY:S->O            1   0.404   0.000  vga_sprite/Madd_rom_addr21_addsub0000_Madd_cy<7> (vga_sprite/Madd_rom_addr21_addsub0000_Madd_cy<7>)
+     XORCY:CI->O           1   0.699   0.509  vga_sprite/Madd_rom_addr21_addsub0000_Madd_xor<8> (vga_sprite/rom_addr21_addsub0000<11>)
+     LUT2:I0->O            1   0.612   0.000  vga_sprite/Madd_rom_addr21_addsub0001_Madd_lut<11> (vga_sprite/Madd_rom_addr21_addsub0001_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  vga_sprite/Madd_rom_addr21_addsub0001_Madd_cy<11> (vga_sprite/Madd_rom_addr21_addsub0001_Madd_cy<11>)
+     XORCY:CI->O           1   0.699   0.509  vga_sprite/Madd_rom_addr21_addsub0001_Madd_xor<12> (vga_sprite/rom_addr21_addsub0001<12>)
+     LUT1:I0->O            1   0.612   0.000  vga_sprite/Madd_rom_addr21_add0000_Madd_cy<12>_rt (vga_sprite/Madd_rom_addr21_add0000_Madd_cy<12>_rt)
+     MUXCY:S->O            0   0.404   0.000  vga_sprite/Madd_rom_addr21_add0000_Madd_cy<12> (vga_sprite/Madd_rom_addr21_add0000_Madd_cy<12>)
+     XORCY:CI->O           0   0.699   0.000  vga_sprite/Madd_rom_addr21_add0000_Madd_xor<13> (romMona_addr14<13>)
+    mona:addra<13>             0.000          monaPic
     ----------------------------------------
-    Total                     11.860ns (9.192ns logic, 2.668ns route)
-                                       (77.5% logic, 22.5% route)
+    Total                     12.011ns (9.089ns logic, 2.922ns route)
+                                       (75.7% logic, 24.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
 Offset:              3.310ns (Levels of Logic = 1)
   Source:            U1/q_0 (FF)
-  Destination:       rey:clka (PAD)
+  Destination:       skyePic:clka (PAD)
   Source Clock:      mclk rising
 
-  Data Path: U1/q_0 to rey:clka
+  Data Path: U1/q_0 to skyePic:clka
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              2   0.514   0.380  U1/q_0 (U1/q_01)
      BUFG:I->O            21   1.457   0.959  U1/q_0_BUFG (U1/q_0)
-    reymoyet:clka              0.000          rey
+    skye:clka                  0.000          skyePic
     ----------------------------------------
     Total                      3.310ns (1.971ns logic, 1.339ns route)
                                        (59.6% logic, 40.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 421 / 15
+  Total number of paths / destination ports: 430 / 23
 -------------------------------------------------------------------------
-Delay:               11.290ns (Levels of Logic = 8)
-  Source:            sw<4> (PAD)
+Delay:               10.825ns (Levels of Logic = 8)
+  Source:            sw<2> (PAD)
   Destination:       blue<1> (PAD)
 
-  Data Path: sw<4> to blue<1>
+  Data Path: sw<2> to blue<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.106   0.481  sw_4_IBUF (sw_4_IBUF)
-     LUT4:I2->O            1   0.612   0.509  U3/blue_and0000169 (U3/blue_and0000169)
-     LUT3:I0->O            1   0.612   0.387  U3/blue_and0000197_SW0 (N9)
-     LUT4:I2->O            1   0.612   0.426  U3/blue_and0000197 (U3/blue_and0000197)
-     LUT4:I1->O            1   0.612   0.387  U3/blue_and0000325 (U3/blue_and0000325)
-     LUT4:I2->O            8   0.612   0.795  U3/blue_and0000349 (U3/blue_and0000)
-     LUT2:I0->O            1   0.612   0.357  U3/red<2>1 (red_2_OBUF)
+     IBUF:I->O             5   1.106   0.568  sw_2_IBUF (sw_2_IBUF)
+     LUT4:I2->O            1   0.612   0.509  vga_sprite/redMona_and000056_SW0 (N33)
+     LUT3:I0->O            1   0.612   0.387  vga_sprite/redMona_and0000127_SW0 (N57)
+     LUT3:I2->O            1   0.612   0.360  vga_sprite/redMona_and0000127 (vga_sprite/redMona_and0000127)
+     LUT4:I3->O           16   0.612   1.031  vga_sprite/redMona_and0000157 (vga_sprite/mona)
+     LUT3:I0->O            1   0.612   0.000  vga_sprite/red<2>1 (vga_sprite/red<2>)
+     MUXF5:I1->O           1   0.278   0.357  vga_sprite/red<2>_f5 (red_2_OBUF)
      OBUF:I->O                 3.169          red_2_OBUF (red<2>)
     ----------------------------------------
-    Total                     11.290ns (7.947ns logic, 3.343ns route)
-                                       (70.4% logic, 29.6% route)
+    Total                     10.825ns (7.613ns logic, 3.212ns route)
+                                       (70.3% logic, 29.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.42 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.69 secs
  
 --> 
 
-Total memory usage is 221540 kilobytes
+Total memory usage is 223972 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   34 (   0 filtered)
+Number of warnings :   36 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

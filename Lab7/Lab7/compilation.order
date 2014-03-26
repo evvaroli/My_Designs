@@ -5,6 +5,8 @@
 .\src\reymoyet.vhd
 .\src\vga_stripes.vhd
 .\src\vga_stripes_top.vhd
+.\src\mona.vhd
+.\src\skye.vhd
 .\synthesis\group_photos_top.vhd
 .\synthesis\vga_stripes_top.vhd
 .\IMPLEMENT\TIME_SIM.VHD

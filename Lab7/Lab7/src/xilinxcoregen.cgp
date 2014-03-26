@@ -1,9 +1,9 @@
 # Date: Tue Mar 25 00:35:01 2014
 
-SET addpads = false
-SET asysymbol = true
+SET addpads = False
+SET asysymbol = True
 SET busformat = BusFormatAngleBracketNotRipped
-SET createndf = false
+SET createndf = False
 SET designentry = Advanced
 SET device = xc3s500e
 SET devicefamily = spartan3e
@@ -15,8 +15,11 @@ SET package = fg320
 SET removerpms = false
 SET simulationfiles = Behavioral
 SET speedgrade = -5
-SET verilogsim = false
-SET vhdlsim = true
+SET verilogsim = False
+SET vhdlsim = True
 SET workingdirectory = c:\My_Designs\Lab7\xilinxcoregen\tmp\
 
 # CRC:  9d3e901
+
+
+

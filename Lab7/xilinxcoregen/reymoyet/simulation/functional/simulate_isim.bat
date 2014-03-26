@@ -45,6 +45,7 @@
 :: PART OF THIS FILE AT ALL TIMES.
 ::--------------------------------------------------------------------------------
 
+cp ..\..\..\reymoyet.mif .
 
 
 echo "Compiling Core VHDL UNISIM/Behavioral model"

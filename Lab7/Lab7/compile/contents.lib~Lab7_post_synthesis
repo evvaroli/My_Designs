@@ -1,1 +1,5 @@
-0
+10
+~E 1 "./../synthesis/group_photos_top.vhd" 41 group_photos_top
+~A 1 "./../synthesis/group_photos_top.vhd" 54 STRUCTURE
+~E 1 "./../synthesis/vga_stripes_top.vhd" 41 vga_stripes_top
+~A 1 "./../synthesis/vga_stripes_top.vhd" 53 STRUCTURE
