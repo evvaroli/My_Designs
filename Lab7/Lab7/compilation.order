@@ -7,6 +7,11 @@
 .\src\vga_stripes_top.vhd
 .\src\mona.vhd
 .\src\skye.vhd
+.\src\vga_bsprite4a2.vhd
+.\src\group_photos_top2.vhd
+.\src\bounce.vhd
+.\src\clock_pulse.vhd
 .\synthesis\group_photos_top.vhd
 .\synthesis\vga_stripes_top.vhd
+.\synthesis\group_photos_top2.vhd
 .\IMPLEMENT\TIME_SIM.VHD

@@ -1,19 +1,19 @@
 Release 14.7 - netgen P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: netgen -w -sim -ofmt vhdl -pcf group_photos_top.pcf -tpw 0 -rpw
-100 -s 5 -ar Structure -insert_pp_buffers true group_photos_top.ncd time_sim.vhd
- 
+Command Line: netgen -w -sim -ofmt vhdl -pcf group_photos_top2.pcf -tpw 0 -rpw
+100 -s 5 -ar Structure -insert_pp_buffers true group_photos_top2.ncd
+time_sim.vhd  
 
-Read and Annotate design 'group_photos_top.ncd' ...
+Read and Annotate design 'group_photos_top2.ncd' ...
 Loading device for application Rf_Device from file '3s500e.nph' in environment
 C:\Xilinx\14.7\ISE_DS\ISE\.
-   "group_photos_top" is an NCD, version 3.2, device xc3s500e, package fg320,
+   "group_photos_top2" is an NCD, version 3.2, device xc3s500e, package fg320,
 speed -5
-Loading constraints from 'group_photos_top.pcf'...
+Loading constraints from 'group_photos_top2.pcf'...
 The speed grade (-5) differs from the speed grade specified in the .ncd file
 (-5).
-The number of routable networks is 438
+The number of routable networks is 898
 Flattening design ...
 Processing design ... 
   Preping design's networks ...
@@ -31,4 +31,4 @@ INFO:NetListWriters:665 - For more information on how to pass the SDF switches
    to the simulator, see your Simulator tool documentation.
 Number of warnings: 0
 Number of info messages: 3
-Total memory usage is 167324 kilobytes
+Total memory usage is 175260 kilobytes

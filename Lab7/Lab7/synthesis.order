@@ -7,3 +7,7 @@ i<>.\src\vga_stripes.vhd
 i<>.\src\vga_stripes_top.vhd
 i<>.\src\mona.vhd
 i<>.\src\skye.vhd
+i<>.\src\vga_bsprite4a2.vhd
+i<>.\src\group_photos_top2.vhd
+i<>.\src\bounce.vhd
+i<>.\src\clock_pulse.vhd

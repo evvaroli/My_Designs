@@ -35,7 +35,7 @@ ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
 DVM_DISPLAY=NO
 FAMILY=Xilinx14x SPARTAN3E
-fileopenfolder=C:\My_Designs\Lab7\Lab7\src
+fileopenfolder=C:\My_Designs\Lab6\Lab6\src
 SYNTH_STATUS=warnings
 VerilogDirsChanged=0
 PHYSSYNTH_STATUS=none
@@ -237,7 +237,7 @@ UCF=..\..\nexys2_500k.ucf
 FAMILY=Xilinx14x SPARTAN3E
 DEVICE=3s500efg320
 SPEED=-5
-NETLIST=synthesis\group_photos_top.ngc
+NETLIST=synthesis\group_photos_top2.ngc
 IS_BAT_MODE=0
 BAT_FILE=
 DEF_UCF=2
@@ -251,13 +251,13 @@ SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*
 JOB_SFM_RESOURCE=
 SYNTH_TOOL_RESET=0
-LAST_RUN=1395793937
+LAST_RUN=1395799436
 OUTPUT_NETLIST=IMPLEMENT\TIME_SIM.VHD
 OUTPUT_SDF=IMPLEMENT\TIME_SIM.SDF
 
 [SYNTHESIS]
 OBSOLETE_ALIASES=1
-TOPLEVEL=group_photos_top
+TOPLEVEL=group_photos_top2
 FAMILY=Xilinx14x SPARTAN3E
 DEVICE=3s500efg320
 SPEED=-5
@@ -344,15 +344,15 @@ JOB_DESCRIPTION=SynthesisTask
 SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log*.*:implement*.*
 JOB_SFM_RESOURCE=
-LAST_RUN=1395793903
-OUTPUT_NETLIST=synthesis\group_photos_top.ngc
-OUTPUT_SIMUL_NETLIST=synthesis\group_photos_top.vhd
+LAST_RUN=1395799402
+OUTPUT_NETLIST=synthesis\group_photos_top2.ngc
+OUTPUT_SIMUL_NETLIST=synthesis\group_photos_top2.vhd
 
 [PHYS_SYNTHESIS]
 FAMILY=Xilinx14x SPARTAN3E
 DEVICE=3s500efg320
 SPEED=-5
-IN_DESIGN=synthesis\group_photos_top.ngc
+IN_DESIGN=synthesis\group_photos_top2.ngc
 OUT_DESIGN=
 IN_CONSTRAINT=
 OUT_CONSTRAINT=
@@ -362,7 +362,7 @@ REPORT=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=vga_640x480|vga_640x480|0
+HierarchyInformation=vga_640x480|vga_640x480|0 
 ShowHide=ShowTopLevel
 Selected=
 
@@ -387,8 +387,13 @@ TOPLEVEL=group_photos_top
 /vga_stripes_top.vhd=-1
 /mona.vhd=-1
 /skye.vhd=-1
+/vga_bsprite4a2.vhd=-1
+/group_photos_top2.vhd=-1
+/bounce.vhd=-1
+/clock_pulse.vhd=-1
 post-synthesis/..\..\synthesis\group_photos_top.vhd=-1
 post-synthesis/..\..\synthesis\vga_stripes_top.vhd=-1
+post-synthesis/..\..\synthesis\group_photos_top2.vhd=-1
 timing/..\..\IMPLEMENT\TIME_SIM.VHD=-1
 timing/..\..\IMPLEMENT\TIME_SIM.SDF=-1
 
@@ -402,8 +407,13 @@ timing/..\..\IMPLEMENT\TIME_SIM.SDF=-1
 .\src\vga_stripes_top.vhd=VHDL Source Code
 .\src\mona.vhd=VHDL Source Code
 .\src\skye.vhd=VHDL Source Code
+.\src\vga_bsprite4a2.vhd=VHDL Source Code
+.\src\group_photos_top2.vhd=VHDL Source Code
+.\src\bounce.vhd=VHDL Source Code
+.\src\clock_pulse.vhd=VHDL Source Code
 .\synthesis\group_photos_top.vhd=VHDL Source Code
 .\synthesis\vga_stripes_top.vhd=VHDL Source Code
+.\synthesis\group_photos_top2.vhd=VHDL Source Code
 .\IMPLEMENT\TIME_SIM.VHD=VHDL SOURCE CODE
 .\IMPLEMENT\TIME_SIM.SDF=SDF FILE
 

@@ -1,26 +1,59 @@
-timestamp=1395793584344
+timestamp=1395799395194
+
+[bounce]
+A/bounce=21|./../src/bounce.vhd|18|1*407615
+BinI32/bounce=3*45632
+I=0*102557
+I/bounce=0*124611
+M=11|0|vb4|1395797427649|./../src/bounce.vhd|0*102007*0xceec3aecacdb792a1458461726592ca9fab6784a|0*102480*0x5eebbfaf24833dd780412b1f91e05209
+M/bounce=21|0|vb4|1395798574789|./../src/bounce.vhd|0*123051*0x86268b3115c90c79d13f513a0d2c53759309e2fe|0*124524*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/bounce.vhd|5
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/bounce=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[clock_pulse]
+A/clock_pulse=21|./../src/clock_pulse.vhd|13|1*356487
+BinI32/clock_pulse=3*38906
+I=0*100909
+I/clock_pulse=0*101526
+M=11|0|vb4|1395797260822|./../src/clock_pulse.vhd|0*100559*0xdb0f0e8d1498f09ce852eac51dbb3b1095e46bfb|0*100822*0x5eebbfaf24833dd780412b1f91e05209
+M/clock_pulse=21|0|vb4|1395797260824|./../src/clock_pulse.vhd|0*101014*0x8d26715cc7baf2635ca16f1046143468629a5e77|0*101424*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/clock_pulse.vhd|4
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/clock_pulse=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [clockdivider]
-A/clockdivider=A/ClockDivider 21|./../src/ClockDivider.vhd|13|1*208121
-BinI32/clockdivider=3*20043
-I=0*2814
-I/clockdivider=I/ClockDivider 0*60759
-M=11|0|vb4|1395686878715|./../src/ClockDivider.vhd|0*2445*0x226551347dd1325dead5074249a036d77b54ae4e|0*2725*0x5eebbfaf24833dd780412b1f91e05209
-M/clockdivider=M/ClockDivider 21|0|vb4|1395793583990|./../src/ClockDivider.vhd|0*2989*0xb9d39df5704b07cbe9db0c3b768a5f1dba52af3e|0*3338*0x856b180bf611ec746a6bfcb1befebd18
+A/clockdivider=A/ClockDivider 21|./../src/ClockDivider.vhd|15|1*385674
+BinI32/clockdivider=3*44906
+I=0*115788
+I/clockdivider=I/ClockDivider 0*116453
+M=11|0|vb4|1395798051988|./../src/ClockDivider.vhd|0*115373*0x6e5d4db6a72e7f9cd2314bad871e25a0094650ad|0*115699*0x5eebbfaf24833dd780412b1f91e05209
+M/clockdivider=M/ClockDivider 21|0|vb4|1395798051990|./../src/ClockDivider.vhd|0*115963*0xcf9e631a0f60b41e3f42acdba168885d780c7649|0*116348*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/ClockDivider.vhd|5
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/clockdivider=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [group_photos_top]
-A/group_photos_top=21|./../src/group_photos_top.vhd|16|1*220679
-BinI32/group_photos_top=3*24200
+A/group_photos_top=21|./../src/group_photos_top.vhd|16|1*314562
+BinI32/group_photos_top=3*33024
 I=0*11118
-I/group_photos_top=0*61137
+I/group_photos_top=0*87507
 M=11|0|vb4|1395708317513|./../src/group_photos_top.vhd|0*10579*0x2233a0f55e7c5611445358028acf157730eb3e6f|0*11021*0x5eebbfaf24833dd780412b1f91e05209
-M/group_photos_top=21|0|vb4|1395793584144|./../src/group_photos_top.vhd|0*30709*0x9fa9d8d7736b950a5559755c1ec31538da8f5a6e|0*33348*0x856b180bf611ec746a6bfcb1befebd18
+M/group_photos_top=21|0|vb4|1395795690820|./../src/group_photos_top.vhd|0*84751*0x9fa9d8d7736b950a5559755c1ec31538da8f5a6e|0*87390*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/group_photos_top.vhd|3
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/group_photos_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[group_photos_top2]
+A/group_photos_top2=21|./../src/group_photos_top2.vhd|16|1*422724
+BinI32/group_photos_top2=3*50892
+I=0*88875
+I/group_photos_top2=0*135090
+M=11|0|vb4|1395795731780|./../src/group_photos_top2.vhd|0*88330*0x1f5eade22e3e3b139020aaaf58b487dffd82c6ff|0*88776*0x5eebbfaf24833dd780412b1f91e05209
+M/group_photos_top2=21|0|vb4|1395799015212|./../src/group_photos_top2.vhd|0*131038*0xb0b919a65875dbb15b36014cddfd218a0a4db742|0*134970*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/group_photos_top2.vhd|3
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/group_photos_top2=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [mona]
 A/mona_a=21|./../src/mona.vhd|51|1*244834
@@ -64,15 +97,26 @@ Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_640x480=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [vga_bsprite2a]
-A/vga_bsprite2a=21|./../src/vga_bsprite2a.vhd|23|1*209587
-BinI32/vga_bsprite2a=3*20502
+A/vga_bsprite2a=21|./../src/vga_bsprite2a.vhd|23|1*256218
+BinI32/vga_bsprite2a=3*25081
 I=0*21584
-I/vga_bsprite2a=0*60947
+I/vga_bsprite2a=0*66245
 M=11|0|vb4|1395788514016|./../src/vga_bsprite2a.vhd|0*20797*0x6b1ab3c8cfb3bad42646e7d209b3da332a50ef39|0*21493*0x5eebbfaf24833dd780412b1f91e05209
-M/vga_bsprite2a=21|0|vb4|1395793584054|./../src/vga_bsprite2a.vhd|0*52653*0x8b368db5855c4157ea22a947cafcafa79f482e08|0*56175*0x856b180bf611ec746a6bfcb1befebd18
+M/vga_bsprite2a=21|0|vb4|1395794558343|./../src/vga_bsprite2a.vhd|0*62637*0x62692de252246b54a0690bdf7d98400b51857d85|0*66137*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/vga_bsprite2a.vhd|6
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_bsprite2a=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[vga_bsprite4a2]
+A/vga_bsprite4a2=21|./../src/vga_bsprite4a2.vhd|30|1*438473
+BinI32/vga_bsprite4a2=3*51094
+I=0*126593
+I/vga_bsprite4a2=0*139672
+M=11|0|vb4|1395798989203|./../src/vga_bsprite4a2.vhd|0*125571*0xe3bba2f160eef07dc4c5b726b909e81c77a1fab1|0*126500*0x5eebbfaf24833dd780412b1f91e05209
+M/vga_bsprite4a2=21|0|vb4|1395799395103|./../src/vga_bsprite4a2.vhd|0*135666*0xe74d9bcb67988ca2d5a30e1b1e928851e4359017|0*139561*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/vga_bsprite4a2.vhd|6
+Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/vga_bsprite4a2=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [vga_bsprite_top]
 I=0*10112
@@ -103,22 +147,26 @@ Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_stripes_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [~A]
-ModifyID=197
+ModifyID=354
 Version=73
 
 [~MFT]
-0=180|0Lab7.mgf|62456|35750
-1=66|1Lab7.mgf|250526|203991
-3=49|3Lab7.mgf|24881|18659
+0=372|0Lab7.mgf|139672|96948
+1=106|1Lab7.mgf|438473|364456
+3=89|3Lab7.mgf|51094|42581
 
 [~U]
-clockdivider=ClockDivider 11|0*2267|
+bounce=11|0*101643|
+clock_pulse=11|0*100365|
+clockdivider=ClockDivider 11|0*115149|
 group_photos_top=11|0*10221|
+group_photos_top2=11|0*87969|
 mona=11|0*25147|
 reymoyet=11|0*6335|
 skye=11|0*27928|
 vga_640x480=11|0*0|
 vga_bsprite2a=11|0*20228|
+vga_bsprite4a2=11|0*124787|
 vga_bsprite_top=11|0*9222|
 vga_stripes=11|0*13505|
 vga_stripes_top=11|0*15088|
