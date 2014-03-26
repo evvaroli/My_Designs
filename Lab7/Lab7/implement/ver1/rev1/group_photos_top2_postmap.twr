@@ -47,11 +47,11 @@ Clock to Setup on destination clock mclk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-mclk           |    4.627|         |         |         |
+mclk           |    4.018|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Mar 25 22:04:12 2014 
+Analysis completed Wed Mar 26 13:05:49 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

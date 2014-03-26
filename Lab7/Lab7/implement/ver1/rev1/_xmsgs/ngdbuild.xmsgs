@@ -165,6 +165,70 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;dp&quot;  LOC = &quot;C17&quot;  ;&gt; [group_photos_top2.ucf(35)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sw&lt;0&gt;&quot;  LOC = &quot;G18&quot;  ;&gt; [group_photos_top2.ucf(38)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sw&lt;0&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sw&lt;0&gt;&quot;  LOC = &quot;G18&quot;  ;&gt; [group_photos_top2.ucf(38)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sw&lt;1&gt;&quot;  LOC = &quot;H18&quot;  ;&gt; [group_photos_top2.ucf(39)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sw&lt;1&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sw&lt;1&gt;&quot;  LOC = &quot;H18&quot;  ;&gt; [group_photos_top2.ucf(39)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sw&lt;2&gt;&quot;  LOC = &quot;K18&quot;  ;&gt; [group_photos_top2.ucf(40)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sw&lt;2&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sw&lt;2&gt;&quot;  LOC = &quot;K18&quot;  ;&gt; [group_photos_top2.ucf(40)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sw&lt;3&gt;&quot;  LOC = &quot;K17&quot;  ;&gt; [group_photos_top2.ucf(41)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sw&lt;3&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sw&lt;3&gt;&quot;  LOC = &quot;K17&quot;  ;&gt; [group_photos_top2.ucf(41)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sw&lt;4&gt;&quot;  LOC = &quot;L14&quot;  ;&gt; [group_photos_top2.ucf(42)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sw&lt;4&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sw&lt;4&gt;&quot;  LOC = &quot;L14&quot;  ;&gt; [group_photos_top2.ucf(42)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sw&lt;5&gt;&quot;  LOC = &quot;L13&quot;  ;&gt; [group_photos_top2.ucf(43)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sw&lt;5&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sw&lt;5&gt;&quot;  LOC = &quot;L13&quot;  ;&gt; [group_photos_top2.ucf(43)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sw&lt;6&gt;&quot;  LOC = &quot;N17&quot;  ;&gt; [group_photos_top2.ucf(44)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sw&lt;6&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sw&lt;6&gt;&quot;  LOC = &quot;N17&quot;  ;&gt; [group_photos_top2.ucf(44)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;sw&lt;7&gt;&quot;  LOC = &quot;R17&quot;  ;&gt; [group_photos_top2.ucf(45)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">sw&lt;7&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;sw&lt;7&gt;&quot;  LOC = &quot;R17&quot;  ;&gt; [group_photos_top2.ucf(45)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
 <msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;RxD&quot;  LOC = &quot;U6&quot;  ;&gt; [group_photos_top2.ucf(48)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">RxD</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.

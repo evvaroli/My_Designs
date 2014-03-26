@@ -30,9 +30,7 @@ constant h: integer := 100;
 signal xpixRey, xpixSkye, xpixMona, ypixRey, ypixSkye, ypixMona: std_logic_vector(9 downto 0);			
 signal rom_addr : std_logic_vector(16 downto 0);
 signal CRey, CSkye, CMona, R1rey, R2skye, R3mona: std_logic_vector(9 downto 0);				
-signal reyspriteon, skyespriteon, monaspriteon, rey, skye, mona, R, G, B: std_logic;
-signal redRey, redSkye, redMona, greenMona, greenSkye, greenRey : std_logic_vector(2 downto 0);
-signal blueRey, blueMona, blueSkye : std_logic_vector(1 downto 0);	 
+signal reyspriteon, skyespriteon, monaspriteon, rey, skye, mona, R, G, B: std_logic; 
 begin
 	--set C1 and R1 using switches
 	CRey <= "0000000001";
@@ -70,22 +68,8 @@ process(xpixRey, ypixRey)
            -- y*(64+32+4) = y*100
 		rom_addr2 := rom_addr1 + ("00000000" & xpixRey); -- y*100+x
 		romRey_addr14 <= rom_addr2(13 downto 0);
-	end process;
-	process(reyspriteon, vidon, MRey)
-  		variable j: integer;
- 	begin
-		redRey <= "000";
-		greenRey <= "000";
-		blueRey <= "00";   
-		rey <= '0';
-		if reyspriteon = '1' and vidon = '1' then
-				rey <= '1';
-    			redRey <= MRey(7 downto 5);
-    			greenRey <= MRey(4 downto 2);
-    			blueRey <= MRey(1 downto 0);
-		end if;
-  	end process;  
-	  
+	end process;		
+	
 	process(xpixSkye, ypixSkye)
 	variable  rom_addr1, rom_addr2: STD_LOGIC_VECTOR (16 downto 0);
 	begin 
@@ -94,23 +78,9 @@ process(xpixRey, ypixRey)
            -- y*(64+32+4) = y*100
 		rom_addr2 := rom_addr1 + ("00000000" & xpixSkye); -- y*100+x
 		romSkye_addr14 <= rom_addr2(13 downto 0);
-	end process;
-	process(skyespriteon, vidon, MSkye)
-  		variable j: integer;
- 	begin		
-		redSkye <= "000";
-		greenSkye <= "000";
-		blueSkye <= "00";
-		skye <= '0';
-		if skyespriteon = '1' and vidon = '1' then
-				skye <= '1';
-    			redSkye <= MSkye(7 downto 5);
-    			greenSkye <= MSkye(4 downto 2);
-    			blueSkye <= MSkye(1 downto 0);
-		end if;
-  	end process; 
-	  
-	  process(xpixMona, ypixMona)
+	end process; 
+	
+	process(xpixMona, ypixMona)
 	variable  rom_addr1, rom_addr2: STD_LOGIC_VECTOR (16 downto 0);
 	begin 
 		rom_addr1 := ('0' & ypixMona & "000000")  
@@ -119,40 +89,27 @@ process(xpixRey, ypixRey)
 		rom_addr2 := rom_addr1 + ("00000000" & xpixMona); -- y*100+x
 		romMona_addr14 <= rom_addr2(13 downto 0);
 	end process;
-	process(monaspriteon, vidon, MMona)
+	
+	
+	
+	process(reyspriteon, skyespriteon, monaspriteon, vidon, MRey, MSkye, MMona)
   		variable j: integer;
  	begin
-		redMona <= "000";
-		greenMona <= "000";
-		blueMona <= "00";
-		mona <= '0';
-		if monaspriteon = '1' and vidon = '1' then
-				mona <= '1';
-    			redMona <= MMona(7 downto 5);
-    			greenMona <= MMona(4 downto 2);
-    			blueMona <= MMona(1 downto 0);
+		red <= "000";
+		green <= "000";
+		blue <= "00";   
+		if reyspriteon = '1' and vidon = '1' then
+    			red <= MRey(7 downto 5);
+    			green <= MRey(4 downto 2);
+    			blue <= MRey(1 downto 0);  	
+		elsif skyespriteon = '1' and vidon = '1' then
+    			red <= MSkye(7 downto 5);
+    			green <= MSkye(4 downto 2);
+    			blue <= MSkye(1 downto 0);
+	 	elsif monaspriteon = '1' and vidon = '1' then
+    			red <= MMona(7 downto 5);
+    			green <= MMona(4 downto 2);
+    			blue <= MMona(1 downto 0);
 		end if;
-  	end process; 	
-	  
-	process(monaspriteon, vidon, MMona, skyespriteon, MSkye, reyspriteon, MRey)
-	begin	
-		if mona = '1' then
-			red <= redMona;
-			green <= greenMona;
-			blue <= blueMona;
-		elsif skye = '1' then
-			red <= redSkye;
-			green <= greenSkye;
-			blue <= blueSkye;
-		elsif rey = '1' then
-			red <= redRey;
-			green <= greenRey;
-			blue <= blueRey;
-		else 
-			red <= "000";
-			blue <= "00";
-			green <= "000";
-		end if;
-	end process;
-					
+  	end process; 						
 end vga_bsprite2a;

@@ -16,7 +16,7 @@ entity vga_bsprite4a2 is
            MRey: in std_logic_vector(7 downto 0); 
 		   MSkye: in std_logic_vector(7 downto 0);
 		   MMona: in std_logic_vector(7 downto 0);		
-		   clk3 : in std_logic;		 
+		   clk190 : in std_logic;		 
 		   clr : in std_logic;
            romRey_addr14: out std_logic_vector(13 downto 0);
 		   romSkye_addr14: out std_logic_vector(13 downto 0);
@@ -31,16 +31,17 @@ architecture vga_bsprite4a2 of vga_bsprite4a2 is
 constant hbp: std_logic_vector(9 downto 0) := "0010010000";	 
 	--Horizontal back porch = 144 (128+16)
 constant vbp: std_logic_vector(9 downto 0) := "0000011111";	 
-	--Vertical back porch = 31 (2+29)
+--Vertical back porch = 31 (2+29) 1010000000 
+constant screenWidth: std_logic_vector(9 downto 0) := "1010000000";	 
+	--screen width 640
 constant w: integer := 100;
 constant h: integer := 100;
 signal xpixRey, xpixSkye, xpixMona, ypixRey, ypixSkye, ypixMona: std_logic_vector(9 downto 0);			
 signal rom_addr : std_logic_vector(16 downto 0);				
 signal reyspriteon, skyespriteon, monaspriteon: std_logic;
-signal redRey, redSkye, redMona, greenMona, greenSkye, greenRey : std_logic_vector(2 downto 0);
-signal blueRey, blueMona, blueSkye : std_logic_vector(1 downto 0);
 type state_type is (red_state, green_state, blue_state);
-signal present_state, next_state : state_type;
+signal present_state, next_state : state_type;	  
+signal wall : std_logic_vector(9 downto 0);
 begin
 	--set C1 and R1 using switches
 	
@@ -73,20 +74,8 @@ process(xpixRey, ypixRey)
            -- y*(64+32+4) = y*100
 		rom_addr2 := rom_addr1 + ("00000000" & xpixRey); -- y*100+x
 		romRey_addr14 <= rom_addr2(13 downto 0);
-	end process;
-	process(reyspriteon, vidon, MRey)
-  		variable j: integer;
- 	begin
-		redRey <= "000";
-		greenRey <= "000";
-		blueRey <= "00";   
-		if reyspriteon = '1' and vidon = '1' then
-    			redRey <= MRey(7 downto 5);
-    			greenRey <= MRey(4 downto 2);
-    			blueRey <= MRey(1 downto 0);
-		end if;
-  	end process;  
-	  
+	end process;	 
+	
 	process(xpixSkye, ypixSkye)
 	variable  rom_addr1, rom_addr2: STD_LOGIC_VECTOR (16 downto 0);
 	begin 
@@ -96,20 +85,8 @@ process(xpixRey, ypixRey)
 		rom_addr2 := rom_addr1 + ("00000000" & xpixSkye); -- y*100+x
 		romSkye_addr14 <= rom_addr2(13 downto 0);
 	end process;
-	process(skyespriteon, vidon, MSkye)
-  		variable j: integer;
- 	begin		
-		redSkye <= "000";
-		greenSkye <= "000";
-		blueSkye <= "00";
-		if skyespriteon = '1' and vidon = '1' then
-    			redSkye <= MSkye(7 downto 5);
-    			greenSkye <= MSkye(4 downto 2);
-    			blueSkye <= MSkye(1 downto 0);
-		end if;
-  	end process; 
-	  
-	  process(xpixMona, ypixMona)
+	
+	process(xpixMona, ypixMona)
 	variable  rom_addr1, rom_addr2: STD_LOGIC_VECTOR (16 downto 0);
 	begin 
 		rom_addr1 := ('0' & ypixMona & "000000")  
@@ -117,28 +94,21 @@ process(xpixRey, ypixRey)
            -- y*(64+32+4) = y*100
 		rom_addr2 := rom_addr1 + ("00000000" & xpixMona); -- y*100+x
 		romMona_addr14 <= rom_addr2(13 downto 0);
-	end process;
-	process(monaspriteon, vidon, MMona)
-  		variable j: integer;
- 	begin
-		redMona <= "000";
-		greenMona <= "000";
-		blueMona <= "00";
-		if monaspriteon = '1' and vidon = '1' then
-    			redMona <= MMona(7 downto 5);
-    			greenMona <= MMona(4 downto 2);
-    			blueMona <= MMona(1 downto 0);
-		end if;
-  	end process;
-	  
-	process(clk3, clr)
+	end process; 
+	
+	process(clk190, clr)
 	begin
 		if clr = '1' then 
-			present_state <= red_state;	
-		elsif clk3'event and clk3 = '1' then
-			present_state <= next_state;	
+			present_state <= red_state;
+			wall <= hbp;
+		elsif clk190'event and clk190 = '1' then  
+			wall <= wall + 1;
+			if wall > hbp + screenWidth then	
+				present_state <= next_state; 			
+				wall <= hbp; 
+			end if;
 		end if;
-	end process;					
+	end process;
 	
 	-- flicker the background 3 times a second
 	C1State : process(present_state)
@@ -154,47 +124,69 @@ process(xpixRey, ypixRey)
 			next_state <= red_state;
 		end case;
 	end process;
-	  
-	process(hc)
-	begin	
-		if monaspriteon = '1' then
-			red <= redMona;
-			green <= greenMona;
-			blue <= blueMona;
-		elsif skyespriteon = '1' then
-			red <= redSkye;
-			green <= greenSkye;
-			blue <= blueSkye;
-		elsif reyspriteon = '1' then
-			red <= redRey;
-			green <= greenRey;
-			blue <= blueRey;
-		else  
-			if vidon = '1' then
+	
+	
+	
+	
+	process(reyspriteon, skyespriteon, monaspriteon, vidon, MRey, MSkye, MMona)
+  		variable j: integer;
+ 	begin  
+		if vidon = '1' then
+			if reyspriteon = '1' then
+	    			red <= MRey(7 downto 5);
+	    			green <= MRey(4 downto 2);
+	    			blue <= MRey(1 downto 0);
+			elsif skyespriteon = '1' then
+	    			red <= MSkye(7 downto 5);
+	    			green <= MSkye(4 downto 2);
+	    			blue <= MSkye(1 downto 0);
+			elsif monaspriteon = '1' then
+	    			red <= MMona(7 downto 5);
+	    			green <= MMona(4 downto 2);
+	    			blue <= MMona(1 downto 0);
+	  		else 
 				case present_state is 
-					when red_state =>
-					red <= "111";
-					green <= "000";
-					blue <= "00"; 
+					when red_state => 
+					if hc <= wall then
+						red <= "111";
+						green <= "000";
+						blue <= "00";
+					else 	 
+						red <= "000";
+						green <= "000";
+						blue <= "11";
+					end if;
 					when green_state =>
-					red <= "000";
-					green <= "111";
-					blue <= "00";
+					if hc <= wall then
+						red <= "000";
+						green <= "111";
+						blue <= "00";
+					else
+						red <= "111";
+						green <= "000";
+						blue <= "00";
+					end if;
 					when blue_state =>
-					red <= "000";
-					green <= "000";
-					blue <= "11";	 
+					if hc <= wall then
+						red <= "000";
+						green <= "000";
+						blue <= "11";
+					else 
+						red <= "000";
+						green <= "111";
+						blue <= "00"; 
+					end if;
 					when others =>
 					red <= "000";
 					green <= "000";
 					blue <= "00";
-				end case;
-			else
-				red <= "000";
-				blue <= "00";
-				green <= "000";	 
+				end case;  
 			end if;
+		else
+			red <= "000";
+			blue <= "00";
+			green <= "000";	 
 		end if;
-	end process;
-					
+	end process;			 
+				
 end vga_bsprite4a2;

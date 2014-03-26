@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
---> Parameter xsthdpdir set to C:\My_Designs\Lab7\Lab7\synthesis\xst
+--> Parameter xsthdpdir set to c:\My_Designs\Lab7\Lab7\synthesis\xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> 
 TABLE OF CONTENTS
@@ -120,6 +120,14 @@ Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/reymoyet.vhd" in Library Lab7.
 Architecture reymoyet_a of Entity reymoyet is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/vga_stripes.vhd" in Library Lab7.
 Architecture vga_stripes of Entity vga_stripes is up to date.
+Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" in Library Lab7.
+Architecture vga_bsprite4a2 of Entity vga_bsprite4a2 is up to date.
+Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/clock_pulse.vhd" in Library Lab7.
+Architecture clock_pulse of Entity clock_pulse is up to date.
+Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/bounce.vhd" in Library Lab7.
+Architecture bounce of Entity bounce is up to date.
+Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/group_photos_top2.vhd" in Library Lab7.
+Architecture group_photos_top2 of Entity group_photos_top2 is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/vga_stripes_top.vhd" in Library Lab7.
 Architecture vga_stripes_top of Entity vga_stripes_top is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" in Library Lab7.
@@ -141,6 +149,8 @@ Analyzing hierarchy for entity <vga_bsprite2a> in library <Lab7> (architecture <
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <group_photos_top> in library <Lab7> (Architecture <group_photos_top>).
+WARNING:Xst:753 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 101: Unconnected output port 'clk3' of component 'ClockDivider'.
+WARNING:Xst:753 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 101: Unconnected output port 'clk190' of component 'ClockDivider'.
 WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 132: Instantiating black box module <skye>.
 WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 139: Instantiating black box module <mona>.
 WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top.vhd" line 146: Instantiating black box module <reymoyet>.
@@ -153,11 +163,9 @@ Analyzing Entity <vga_640x480> in library <Lab7> (Architecture <vga_640x480>).
 Entity <vga_640x480> analyzed. Unit <vga_640x480> generated.
 
 Analyzing Entity <vga_bsprite2a> in library <Lab7> (Architecture <vga_bsprite2a>).
-WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 71: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 18-bit wide.
-WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 95: Width mismatch. <rom_addr20> has a width of 17 bits but assigned expression is 18-bit wide.
-WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 119: Width mismatch. <rom_addr21> has a width of 17 bits but assigned expression is 18-bit wide.
-WARNING:Xst:819 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 137: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <mona>, <redMona>, <greenMona>, <blueMona>, <skye>, <redSkye>, <greenSkye>, <blueSkye>, <rey>, <redRey>, <greenRey>, <blueRey>
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 69: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 79: Width mismatch. <rom_addr20> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd" line 89: Width mismatch. <rom_addr21> has a width of 17 bits but assigned expression is 18-bit wide.
 Entity <vga_bsprite2a> analyzed. Unit <vga_bsprite2a> generated.
 
 
@@ -196,44 +204,47 @@ Unit <vga_640x480> synthesized.
 Synthesizing Unit <vga_bsprite2a>.
     Related source file is "C:/My_Designs/Lab7/Lab7/src/vga_bsprite2a.vhd".
 WARNING:Xst:647 - Input <sw<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <skye> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <rom_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <rey> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <mona> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <R> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <G> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <B> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-    Found 10-bit adder for signal <monaspriteon$addsub0000> created at line 62.
-    Found 10-bit adder for signal <monaspriteon$addsub0001> created at line 62.
-    Found 10-bit comparator greatequal for signal <monaspriteon$cmp_ge0000> created at line 62.
-    Found 10-bit comparator greater for signal <monaspriteon$cmp_gt0000> created at line 62.
-    Found 11-bit comparator lessequal for signal <monaspriteon$cmp_le0000> created at line 62.
-    Found 10-bit comparator less for signal <monaspriteon$cmp_lt0000> created at line 62.
-    Found 10-bit adder for signal <reyspriteon$addsub0000> created at line 56.
-    Found 10-bit adder for signal <reyspriteon$addsub0001> created at line 56.
-    Found 10-bit comparator greatequal for signal <reyspriteon$cmp_ge0000> created at line 56.
-    Found 10-bit comparator greater for signal <reyspriteon$cmp_gt0000> created at line 56.
-    Found 10-bit comparator lessequal for signal <reyspriteon$cmp_le0000> created at line 56.
-    Found 10-bit comparator less for signal <reyspriteon$cmp_lt0000> created at line 56.
-    Found 18-bit adder for signal <rom_addr2$add0000> created at line 71.
-    Found 17-bit adder for signal <rom_addr2$addsub0000> created at line 68.
-    Found 17-bit adder for signal <rom_addr2$addsub0001> created at line 68.
-    Found 18-bit adder for signal <rom_addr20$add0000> created at line 95.
-    Found 17-bit adder for signal <rom_addr20$addsub0000> created at line 92.
-    Found 17-bit adder for signal <rom_addr20$addsub0001> created at line 92.
-    Found 18-bit adder for signal <rom_addr21$add0000> created at line 119.
-    Found 17-bit adder for signal <rom_addr21$addsub0000> created at line 116.
-    Found 17-bit adder for signal <rom_addr21$addsub0001> created at line 116.
-    Found 10-bit adder for signal <skyespriteon$addsub0000> created at line 59.
-    Found 10-bit adder for signal <skyespriteon$addsub0001> created at line 59.
-    Found 10-bit comparator greatequal for signal <skyespriteon$cmp_ge0000> created at line 59.
-    Found 10-bit comparator greater for signal <skyespriteon$cmp_gt0000> created at line 59.
-    Found 10-bit comparator lessequal for signal <skyespriteon$cmp_le0000> created at line 59.
-    Found 10-bit comparator less for signal <skyespriteon$cmp_lt0000> created at line 59.
+    Found 10-bit adder for signal <monaspriteon$addsub0000> created at line 60.
+    Found 10-bit adder for signal <monaspriteon$addsub0001> created at line 60.
+    Found 10-bit comparator greatequal for signal <monaspriteon$cmp_ge0000> created at line 60.
+    Found 10-bit comparator greater for signal <monaspriteon$cmp_gt0000> created at line 60.
+    Found 11-bit comparator lessequal for signal <monaspriteon$cmp_le0000> created at line 60.
+    Found 10-bit comparator less for signal <monaspriteon$cmp_lt0000> created at line 60.
+    Found 10-bit adder for signal <reyspriteon$addsub0000> created at line 54.
+    Found 10-bit adder for signal <reyspriteon$addsub0001> created at line 54.
+    Found 10-bit comparator greatequal for signal <reyspriteon$cmp_ge0000> created at line 54.
+    Found 10-bit comparator greater for signal <reyspriteon$cmp_gt0000> created at line 54.
+    Found 10-bit comparator lessequal for signal <reyspriteon$cmp_le0000> created at line 54.
+    Found 10-bit comparator less for signal <reyspriteon$cmp_lt0000> created at line 54.
+    Found 18-bit adder for signal <rom_addr2$add0000> created at line 69.
+    Found 17-bit adder for signal <rom_addr2$addsub0000> created at line 66.
+    Found 17-bit adder for signal <rom_addr2$addsub0001> created at line 66.
+    Found 18-bit adder for signal <rom_addr20$add0000> created at line 79.
+    Found 17-bit adder for signal <rom_addr20$addsub0000> created at line 76.
+    Found 17-bit adder for signal <rom_addr20$addsub0001> created at line 76.
+    Found 18-bit adder for signal <rom_addr21$add0000> created at line 89.
+    Found 17-bit adder for signal <rom_addr21$addsub0000> created at line 86.
+    Found 17-bit adder for signal <rom_addr21$addsub0001> created at line 86.
+    Found 10-bit adder for signal <skyespriteon$addsub0000> created at line 57.
+    Found 10-bit adder for signal <skyespriteon$addsub0001> created at line 57.
+    Found 10-bit comparator greatequal for signal <skyespriteon$cmp_ge0000> created at line 57.
+    Found 10-bit comparator greater for signal <skyespriteon$cmp_gt0000> created at line 57.
+    Found 10-bit comparator lessequal for signal <skyespriteon$cmp_le0000> created at line 57.
+    Found 10-bit comparator less for signal <skyespriteon$cmp_lt0000> created at line 57.
     Found 10-bit subtractor for signal <xpixMona>.
     Found 10-bit subtractor for signal <xpixRey>.
-    Found 10-bit subtractor for signal <xpixRey$sub0000> created at line 46.
+    Found 10-bit subtractor for signal <xpixRey$sub0000> created at line 44.
     Found 10-bit subtractor for signal <xpixSkye>.
     Found 10-bit subtractor for signal <ypixMona>.
     Found 10-bit subtractor for signal <ypixRey>.
-    Found 10-bit subtractor for signal <ypixRey$sub0000> created at line 45.
+    Found 10-bit subtractor for signal <ypixRey$sub0000> created at line 43.
     Found 10-bit subtractor for signal <ypixSkye>.
     Summary:
 	inferred  23 Adder/Subtractor(s).
@@ -533,7 +544,7 @@ Offset:              3.547ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/q_01'
-  Total number of paths / destination ports: 48235 / 52
+  Total number of paths / destination ports: 48211 / 52
 -------------------------------------------------------------------------
 Offset:              12.011ns (Levels of Logic = 15)
   Source:            U2/vcs_2 (FF)
@@ -590,18 +601,18 @@ Timing constraint: Default path analysis
   Total number of paths / destination ports: 430 / 23
 -------------------------------------------------------------------------
 Delay:               10.825ns (Levels of Logic = 8)
-  Source:            sw<2> (PAD)
+  Source:            sw<6> (PAD)
   Destination:       blue<1> (PAD)
 
-  Data Path: sw<2> to blue<1>
+  Data Path: sw<6> to blue<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   1.106   0.568  sw_2_IBUF (sw_2_IBUF)
-     LUT4:I2->O            1   0.612   0.509  vga_sprite/redMona_and000056_SW0 (N33)
-     LUT3:I0->O            1   0.612   0.387  vga_sprite/redMona_and0000127_SW0 (N57)
-     LUT3:I2->O            1   0.612   0.360  vga_sprite/redMona_and0000127 (vga_sprite/redMona_and0000127)
-     LUT4:I3->O           16   0.612   1.031  vga_sprite/redMona_and0000157 (vga_sprite/mona)
+     IBUF:I->O             5   1.106   0.568  sw_6_IBUF (sw_6_IBUF)
+     LUT4:I2->O            1   0.612   0.509  vga_sprite/blue_and000054_SW0 (N33)
+     LUT3:I0->O            1   0.612   0.387  vga_sprite/blue_and0000117_SW0 (N57)
+     LUT3:I2->O            1   0.612   0.360  vga_sprite/blue_and0000117 (vga_sprite/blue_and0000117)
+     LUT4:I3->O           16   0.612   1.031  vga_sprite/blue_and0000145 (vga_sprite/blue_and0000)
      LUT3:I0->O            1   0.612   0.000  vga_sprite/red<2>1 (vga_sprite/red<2>)
      MUXF5:I1->O           1   0.278   0.357  vga_sprite/red<2>_f5 (red_2_OBUF)
      OBUF:I->O                 3.169          red_2_OBUF (red<2>)
@@ -612,14 +623,14 @@ Delay:               10.825ns (Levels of Logic = 8)
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.69 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.93 secs
  
 --> 
 
-Total memory usage is 223972 kilobytes
+Total memory usage is 224932 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   36 (   0 filtered)
+Number of warnings :   40 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

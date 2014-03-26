@@ -1,4 +1,4 @@
-354
+464
 ~E 1 "./../src/bounce.vhd" 5 bounce
 ~A 1 "./../src/bounce.vhd" 18 bounce
 ~E 1 "./../src/clock_pulse.vhd" 4 clock_pulse
@@ -8,7 +8,7 @@
 ~E 1 "./../src/group_photos_top.vhd" 3 group_photos_top
 ~A 1 "./../src/group_photos_top.vhd" 16 group_photos_top
 ~E 1 "./../src/group_photos_top2.vhd" 3 group_photos_top2
-~A 1 "./../src/group_photos_top2.vhd" 16 group_photos_top2
+~A 1 "./../src/group_photos_top2.vhd" 15 group_photos_top2
 ~E 1 "./../src/mona.vhd" 43 mona
 ~A 1 "./../src/mona.vhd" 51 mona_a
 ~E 1 "./../src/reymoyet.vhd" 43 reymoyet

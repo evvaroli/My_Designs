@@ -1,5 +1,5 @@
 set -tmpdir .
-set -xsthdpdir "C:\My_Designs\Lab7\Lab7\synthesis\xst"
+set -xsthdpdir "c:\My_Designs\Lab7\Lab7\synthesis\xst"
 run
 -ifn group_photos_top.prj
 -ifmt mixed

@@ -7,7 +7,7 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: group_photos_top.vhd
--- /___/   /\     Timestamp: Tue Mar 25 20:31:55 2014
+-- /___/   /\     Timestamp: Wed Mar 26 12:20:14 2014
 -- \   \  /  \ 
 --  \___\/\___\
 --             
@@ -230,35 +230,35 @@ architecture STRUCTURE of group_photos_top is
   signal vga_sprite_Msub_ypixRey_sub0000_cy_4_rt_531 : STD_LOGIC; 
   signal vga_sprite_Msub_ypixSkye_cy_0_rt_542 : STD_LOGIC; 
   signal vga_sprite_blue_0_1_560 : STD_LOGIC; 
-  signal vga_sprite_blue_0_1104_561 : STD_LOGIC; 
-  signal vga_sprite_blue_0_1117_562 : STD_LOGIC; 
-  signal vga_sprite_blue_0_1145_563 : STD_LOGIC; 
-  signal vga_sprite_blue_0_121_564 : STD_LOGIC; 
-  signal vga_sprite_blue_0_17_565 : STD_LOGIC; 
-  signal vga_sprite_blue_0_188_566 : STD_LOGIC; 
-  signal vga_sprite_blue_1_1_568 : STD_LOGIC; 
-  signal vga_sprite_green_0_1_570 : STD_LOGIC; 
-  signal vga_sprite_green_1_1_572 : STD_LOGIC; 
-  signal vga_sprite_green_2_1_574 : STD_LOGIC; 
-  signal vga_sprite_mona : STD_LOGIC; 
-  signal vga_sprite_red_0_1_577 : STD_LOGIC; 
-  signal vga_sprite_red_1_1_579 : STD_LOGIC; 
-  signal vga_sprite_red_2_1_581 : STD_LOGIC; 
-  signal vga_sprite_redMona_and0000116_582 : STD_LOGIC; 
-  signal vga_sprite_redMona_and0000127_583 : STD_LOGIC; 
-  signal vga_sprite_redMona_and000023 : STD_LOGIC; 
-  signal vga_sprite_redMona_and0000231_585 : STD_LOGIC; 
-  signal vga_sprite_redMona_and0000232_586 : STD_LOGIC; 
-  signal vga_sprite_redMona_and00006 : STD_LOGIC; 
-  signal vga_sprite_redMona_and000061_588 : STD_LOGIC; 
-  signal vga_sprite_redMona_and000081_589 : STD_LOGIC; 
-  signal vga_sprite_redMona_and000098_590 : STD_LOGIC; 
-  signal vga_sprite_skye : STD_LOGIC; 
-  signal vga_sprite_skye_and000023_643 : STD_LOGIC; 
-  signal vga_sprite_skye_and000037 : STD_LOGIC; 
-  signal vga_sprite_skye_and0000371_645 : STD_LOGIC; 
-  signal vga_sprite_skye_and000067_646 : STD_LOGIC; 
-  signal vga_sprite_skye_and000084_647 : STD_LOGIC; 
+  signal vga_sprite_blue_0_1116_561 : STD_LOGIC; 
+  signal vga_sprite_blue_0_1127_562 : STD_LOGIC; 
+  signal vga_sprite_blue_0_1157_563 : STD_LOGIC; 
+  signal vga_sprite_blue_0_123 : STD_LOGIC; 
+  signal vga_sprite_blue_0_1231_565 : STD_LOGIC; 
+  signal vga_sprite_blue_0_1232_566 : STD_LOGIC; 
+  signal vga_sprite_blue_0_16 : STD_LOGIC; 
+  signal vga_sprite_blue_0_161_568 : STD_LOGIC; 
+  signal vga_sprite_blue_0_181_569 : STD_LOGIC; 
+  signal vga_sprite_blue_0_198_570 : STD_LOGIC; 
+  signal vga_sprite_blue_1_1_572 : STD_LOGIC; 
+  signal vga_sprite_blue_and0000 : STD_LOGIC; 
+  signal vga_sprite_blue_and0000104_574 : STD_LOGIC; 
+  signal vga_sprite_blue_and0000117_575 : STD_LOGIC; 
+  signal vga_sprite_blue_and000021_576 : STD_LOGIC; 
+  signal vga_sprite_blue_and00007_577 : STD_LOGIC; 
+  signal vga_sprite_blue_and000088_578 : STD_LOGIC; 
+  signal vga_sprite_blue_and0001 : STD_LOGIC; 
+  signal vga_sprite_blue_and000123_580 : STD_LOGIC; 
+  signal vga_sprite_blue_and000137 : STD_LOGIC; 
+  signal vga_sprite_blue_and0001371_582 : STD_LOGIC; 
+  signal vga_sprite_blue_and000167_583 : STD_LOGIC; 
+  signal vga_sprite_blue_and000184_584 : STD_LOGIC; 
+  signal vga_sprite_green_0_1_586 : STD_LOGIC; 
+  signal vga_sprite_green_1_1_588 : STD_LOGIC; 
+  signal vga_sprite_green_2_1_590 : STD_LOGIC; 
+  signal vga_sprite_red_0_1_592 : STD_LOGIC; 
+  signal vga_sprite_red_1_1_594 : STD_LOGIC; 
+  signal vga_sprite_red_2_1_596 : STD_LOGIC; 
   signal vidon : STD_LOGIC; 
   signal vsync_OBUF_714 : STD_LOGIC; 
   signal MMona : STD_LOGIC_VECTOR ( 7 downto 0 ); 
@@ -3725,16 +3725,16 @@ begin
       I1 => U2_vcs_cmp_eq0000_150,
       O => U2_Mcount_vcs_eqn_9
     );
-  vga_sprite_skye_and000084 : LUT4
+  vga_sprite_blue_and000184 : LUT4
     generic map(
       INIT => X"4000"
     )
     port map (
       I0 => U2_HCS(9),
       I1 => U2_HCS(8),
-      I2 => vga_sprite_skye_and000037,
-      I3 => vga_sprite_skye_and000067_646,
-      O => vga_sprite_skye_and000084_647
+      I2 => vga_sprite_blue_and000137,
+      I3 => vga_sprite_blue_and000167_583,
+      O => vga_sprite_blue_and000184_584
     );
   U2_vidon_and000011 : LUT3
     generic map(
@@ -3789,39 +3789,7 @@ begin
       I3 => U2_vidon_and0000111,
       O => vidon
     );
-  vga_sprite_redMona_and000081 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U2_HCS(1),
-      I1 => U2_HCS(2),
-      I2 => U2_HCS(3),
-      I3 => U2_HCS(4),
-      O => vga_sprite_redMona_and000081_589
-    );
-  vga_sprite_redMona_and000098 : LUT3
-    generic map(
-      INIT => X"01"
-    )
-    port map (
-      I0 => U2_HCS(8),
-      I1 => U2_HCS(7),
-      I2 => U2_HCS(6),
-      O => vga_sprite_redMona_and000098_590
-    );
-  vga_sprite_redMona_and0000116 : LUT4
-    generic map(
-      INIT => X"CF4F"
-    )
-    port map (
-      I0 => U2_HCS(5),
-      I1 => vga_sprite_redMona_and000098_590,
-      I2 => U2_HCS(9),
-      I3 => vga_sprite_redMona_and000081_589,
-      O => vga_sprite_redMona_and0000116_582
-    );
-  vga_sprite_blue_0_17 : LUT4
+  vga_sprite_blue_and00007 : LUT4
     generic map(
       INIT => X"AAA8"
     )
@@ -3830,9 +3798,9 @@ begin
       I1 => U2_HCS(1),
       I2 => U2_HCS(2),
       I3 => U2_HCS(3),
-      O => vga_sprite_blue_0_17_565
+      O => vga_sprite_blue_and00007_577
     );
-  vga_sprite_blue_0_188 : LUT3
+  vga_sprite_blue_and000088 : LUT3
     generic map(
       INIT => X"13"
     )
@@ -3840,7 +3808,39 @@ begin
       I0 => U2_HCS(2),
       I1 => U2_HCS(3),
       I2 => U2_HCS(1),
-      O => vga_sprite_blue_0_188_566
+      O => vga_sprite_blue_and000088_578
+    );
+  vga_sprite_blue_0_181 : LUT4
+    generic map(
+      INIT => X"0001"
+    )
+    port map (
+      I0 => U2_HCS(1),
+      I1 => U2_HCS(2),
+      I2 => U2_HCS(3),
+      I3 => U2_HCS(4),
+      O => vga_sprite_blue_0_181_569
+    );
+  vga_sprite_blue_0_198 : LUT3
+    generic map(
+      INIT => X"01"
+    )
+    port map (
+      I0 => U2_HCS(8),
+      I1 => U2_HCS(7),
+      I2 => U2_HCS(6),
+      O => vga_sprite_blue_0_198_570
+    );
+  vga_sprite_blue_0_1116 : LUT4
+    generic map(
+      INIT => X"CF4F"
+    )
+    port map (
+      I0 => U2_HCS(5),
+      I1 => vga_sprite_blue_0_198_570,
+      I2 => U2_HCS(9),
+      I3 => vga_sprite_blue_0_181_569,
+      O => vga_sprite_blue_0_1116_561
     );
   btn_3_IBUF : IBUF
     port map (
@@ -4441,7 +4441,7 @@ begin
       I2 => U2_HCS_cmp_eq00005_57,
       O => U2_Mcount_HCS_eqn_9
     );
-  vga_sprite_skye_and000023 : LUT4
+  vga_sprite_blue_and000123 : LUT4
     generic map(
       INIT => X"EAFE"
     )
@@ -4450,7 +4450,7 @@ begin
       I1 => N25,
       I2 => U2_vcs(8),
       I3 => sw_5_IBUF_234,
-      O => vga_sprite_skye_and000023_643
+      O => vga_sprite_blue_and000123_580
     );
   vga_sprite_Mcompar_reyspriteon_cmp_lt0000_lut_4_Q : LUT3
     generic map(
@@ -4539,16 +4539,16 @@ begin
       I1 => sw_2_IBUF_231,
       O => vga_sprite_Mcompar_monaspriteon_cmp_lt0000_lut(2)
     );
-  vga_sprite_skye_and0000122 : LUT4
+  vga_sprite_blue_and0001122 : LUT4
     generic map(
       INIT => X"4000"
     )
     port map (
       I0 => vga_sprite_Mcompar_skyespriteon_cmp_lt0000_cy(4),
       I1 => vidon,
-      I2 => vga_sprite_skye_and000023_643,
-      I3 => vga_sprite_skye_and000084_647,
-      O => vga_sprite_skye
+      I2 => vga_sprite_blue_and000123_580,
+      I3 => vga_sprite_blue_and000184_584,
+      O => vga_sprite_blue_and0001
     );
   U2_vidon_and000018 : LUT4
     generic map(
@@ -4582,29 +4582,18 @@ begin
       I3 => U2_vcs(5),
       O => U2_vidon_and000059_158
     );
-  vga_sprite_redMona_and0000157 : LUT4
-    generic map(
-      INIT => X"4000"
-    )
-    port map (
-      I0 => vga_sprite_Mcompar_monaspriteon_cmp_lt0000_cy(4),
-      I1 => vga_sprite_redMona_and000023,
-      I2 => vidon,
-      I3 => vga_sprite_redMona_and0000127_583,
-      O => vga_sprite_mona
-    );
-  vga_sprite_blue_0_1104_SW0 : LUT4
+  vga_sprite_blue_and0000104_SW0 : LUT4
     generic map(
       INIT => X"BFFF"
     )
     port map (
-      I0 => vga_sprite_blue_0_188_566,
+      I0 => vga_sprite_blue_and000088_578,
       I1 => U2_HCS(5),
       I2 => U2_HCS(6),
       I3 => U2_HCS(7),
       O => N31
     );
-  vga_sprite_blue_0_1104 : LUT4
+  vga_sprite_blue_and0000104 : LUT4
     generic map(
       INIT => X"1011"
     )
@@ -4613,31 +4602,31 @@ begin
       I1 => U2_HCS(9),
       I2 => N31,
       I3 => U2_HCS(4),
-      O => vga_sprite_blue_0_1104_561
+      O => vga_sprite_blue_and0000104_574
     );
-  vga_sprite_blue_0_1145 : LUT4
+  vga_sprite_blue_and0000145 : LUT4
     generic map(
       INIT => X"4000"
     )
     port map (
       I0 => vga_sprite_Mcompar_reyspriteon_cmp_lt0000_cy(4),
-      I1 => vga_sprite_blue_0_121_564,
+      I1 => vga_sprite_blue_and000021_576,
       I2 => vidon,
-      I3 => vga_sprite_blue_0_1117_562,
-      O => vga_sprite_blue_0_1145_563
+      I3 => vga_sprite_blue_and0000117_575,
+      O => vga_sprite_blue_and0000
     );
-  vga_sprite_redMona_and000056_SW0 : LUT4
+  vga_sprite_blue_0_1157 : LUT4
     generic map(
-      INIT => X"10F1"
+      INIT => X"4000"
     )
     port map (
-      I0 => U2_vcs(6),
-      I1 => U2_vcs(5),
-      I2 => sw_2_IBUF_231,
-      I3 => U2_vcs(7),
-      O => N33
+      I0 => vga_sprite_Mcompar_monaspriteon_cmp_lt0000_cy(4),
+      I1 => vga_sprite_blue_0_123,
+      I2 => vidon,
+      I3 => vga_sprite_blue_0_1127_562,
+      O => vga_sprite_blue_0_1157_563
     );
-  vga_sprite_blue_0_154_SW0 : LUT4
+  vga_sprite_blue_and000054_SW0 : LUT4
     generic map(
       INIT => X"10F1"
     )
@@ -4645,6 +4634,17 @@ begin
       I0 => U2_vcs(6),
       I1 => U2_vcs(5),
       I2 => sw_6_IBUF_235,
+      I3 => U2_vcs(7),
+      O => N33
+    );
+  vga_sprite_blue_0_156_SW0 : LUT4
+    generic map(
+      INIT => X"10F1"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U2_vcs(5),
+      I2 => sw_2_IBUF_231,
       I3 => U2_vcs(7),
       O => N35
     );
@@ -4727,7 +4727,7 @@ begin
       I1 => U2_HCS(4),
       O => vga_sprite_Msub_xpixRey_lut_5_Q_459
     );
-  vga_sprite_skye_and000067_SW0 : LUT4
+  vga_sprite_blue_and000167_SW0 : LUT4
     generic map(
       INIT => X"FFEA"
     )
@@ -4738,7 +4738,7 @@ begin
       I3 => U2_HCS(6),
       O => N53
     );
-  vga_sprite_skye_and000067 : LUT4
+  vga_sprite_blue_and000167 : LUT4
     generic map(
       INIT => X"57FF"
     )
@@ -4747,19 +4747,19 @@ begin
       I1 => N53,
       I2 => U2_HCS(4),
       I3 => U2_HCS(8),
-      O => vga_sprite_skye_and000067_646
+      O => vga_sprite_blue_and000167_583
     );
-  vga_sprite_blue_0_121_SW0 : LUT3
+  vga_sprite_blue_and000021_SW0 : LUT3
     generic map(
       INIT => X"FE"
     )
     port map (
       I0 => U2_HCS(5),
       I1 => U2_HCS(6),
-      I2 => vga_sprite_blue_0_17_565,
+      I2 => vga_sprite_blue_and00007_577,
       O => N55
     );
-  vga_sprite_blue_0_121 : LUT4
+  vga_sprite_blue_and000021 : LUT4
     generic map(
       INIT => X"FFEA"
     )
@@ -4768,7 +4768,7 @@ begin
       I1 => U2_HCS(7),
       I2 => N55,
       I3 => U2_HCS(8),
-      O => vga_sprite_blue_0_121_564
+      O => vga_sprite_blue_and000021_576
     );
   vga_sprite_Msub_xpixRey_sub0000_xor_7_111 : LUT4
     generic map(
@@ -4803,7 +4803,7 @@ begin
       I3 => U2_HCS(7),
       O => vga_sprite_Msub_xpixMona_lut_9_2_444
     );
-  vga_sprite_skye_and000023_SW0 : LUT4
+  vga_sprite_blue_and000123_SW0 : LUT4
     generic map(
       INIT => X"AF8E"
     )
@@ -4814,45 +4814,45 @@ begin
       I3 => U2_vcs(5),
       O => N25
     );
-  vga_sprite_redMona_and0000127_SW0 : LUT3
+  vga_sprite_blue_and0000117_SW0 : LUT3
     generic map(
       INIT => X"71"
     )
     port map (
       I0 => N33,
-      I1 => sw_3_IBUF_232,
+      I1 => sw_7_IBUF_236,
       I2 => U2_vcs(8),
       O => N57
     );
-  vga_sprite_redMona_and0000127 : LUT3
+  vga_sprite_blue_and0000117 : LUT3
     generic map(
       INIT => X"C8"
     )
     port map (
       I0 => U2_vcs(9),
-      I1 => vga_sprite_redMona_and0000116_582,
+      I1 => vga_sprite_blue_and0000104_574,
       I2 => N57,
-      O => vga_sprite_redMona_and0000127_583
+      O => vga_sprite_blue_and0000117_575
     );
-  vga_sprite_blue_0_1117_SW0 : LUT3
+  vga_sprite_blue_0_1127_SW0 : LUT3
     generic map(
       INIT => X"71"
     )
     port map (
       I0 => N35,
-      I1 => sw_7_IBUF_236,
+      I1 => sw_3_IBUF_232,
       I2 => U2_vcs(8),
       O => N59
     );
-  vga_sprite_blue_0_1117 : LUT3
+  vga_sprite_blue_0_1127 : LUT3
     generic map(
       INIT => X"C8"
     )
     port map (
       I0 => U2_vcs(9),
-      I1 => vga_sprite_blue_0_1104_561,
+      I1 => vga_sprite_blue_0_1116_561,
       I2 => N59,
-      O => vga_sprite_blue_0_1117_562
+      O => vga_sprite_blue_0_1127_562
     );
   vga_sprite_Msub_xpixMona_lut_7_Q : LUT4
     generic map(
@@ -5082,7 +5082,7 @@ begin
       I => vga_sprite_ypixRey_sub0000(9),
       O => vga_sprite_Msub_ypixMona_lut_9_2
     );
-  vga_sprite_skye_and0000371 : LUT4
+  vga_sprite_blue_and0001371 : LUT4
     generic map(
       INIT => X"FFC8"
     )
@@ -5091,14 +5091,14 @@ begin
       I1 => U2_HCS(5),
       I2 => U2_HCS(4),
       I3 => U2_HCS(6),
-      O => vga_sprite_skye_and0000371_645
+      O => vga_sprite_blue_and0001371_582
     );
-  vga_sprite_skye_and000037_f5 : MUXF5
+  vga_sprite_blue_and000137_f5 : MUXF5
     port map (
-      I0 => vga_sprite_skye_and0000371_645,
+      I0 => vga_sprite_blue_and0001371_582,
       I1 => N1,
       S => U2_HCS(7),
-      O => vga_sprite_skye_and000037
+      O => vga_sprite_blue_and000137
     );
   U2_vidon_and00001111 : LUT4
     generic map(
@@ -5128,7 +5128,7 @@ begin
       S => U2_vidon_and000098_160,
       O => U2_vidon_and0000111
     );
-  vga_sprite_redMona_and000061 : LUT4
+  vga_sprite_blue_0_161 : LUT4
     generic map(
       INIT => X"8000"
     )
@@ -5137,16 +5137,16 @@ begin
       I1 => U2_HCS(4),
       I2 => U2_HCS(1),
       I3 => U2_HCS(3),
-      O => vga_sprite_redMona_and000061_588
+      O => vga_sprite_blue_0_161_568
     );
-  vga_sprite_redMona_and00006_f5 : MUXF5
+  vga_sprite_blue_0_16_f5 : MUXF5
     port map (
       I0 => N0,
-      I1 => vga_sprite_redMona_and000061_588,
+      I1 => vga_sprite_blue_0_161_568,
       S => U2_HCS(5),
-      O => vga_sprite_redMona_and00006
+      O => vga_sprite_blue_0_16
     );
-  vga_sprite_redMona_and0000231 : LUT3
+  vga_sprite_blue_0_1231 : LUT3
     generic map(
       INIT => X"F8"
     )
@@ -5154,9 +5154,9 @@ begin
       I0 => U2_HCS(8),
       I1 => U2_HCS(7),
       I2 => U2_HCS(9),
-      O => vga_sprite_redMona_and0000231_585
+      O => vga_sprite_blue_0_1231_565
     );
-  vga_sprite_redMona_and0000232 : LUT4
+  vga_sprite_blue_0_1232 : LUT4
     generic map(
       INIT => X"FF80"
     )
@@ -5165,14 +5165,14 @@ begin
       I1 => U2_HCS(8),
       I2 => U2_HCS(7),
       I3 => U2_HCS(9),
-      O => vga_sprite_redMona_and0000232_586
+      O => vga_sprite_blue_0_1232_566
     );
-  vga_sprite_redMona_and000023_f5 : MUXF5
+  vga_sprite_blue_0_123_f5 : MUXF5
     port map (
-      I0 => vga_sprite_redMona_and0000232_586,
-      I1 => vga_sprite_redMona_and0000231_585,
-      S => vga_sprite_redMona_and00006,
-      O => vga_sprite_redMona_and000023
+      I0 => vga_sprite_blue_0_1232_566,
+      I1 => vga_sprite_blue_0_1231_565,
+      S => vga_sprite_blue_0_16,
+      O => vga_sprite_blue_0_123
     );
   U2_vidon_and000018_SW01 : LUT4
     generic map(
@@ -5197,9 +5197,9 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => vga_sprite_mona,
+      I0 => vga_sprite_blue_and0000,
       I1 => MSkye(7),
-      I2 => MMona(7),
+      I2 => MRey(7),
       O => vga_sprite_red(2)
     );
   vga_sprite_red_2_2 : LUT4
@@ -5207,17 +5207,17 @@ begin
       INIT => X"EA40"
     )
     port map (
-      I0 => vga_sprite_mona,
-      I1 => MRey(7),
-      I2 => vga_sprite_blue_0_1145_563,
-      I3 => MMona(7),
-      O => vga_sprite_red_2_1_581
+      I0 => vga_sprite_blue_and0000,
+      I1 => MMona(7),
+      I2 => vga_sprite_blue_0_1157_563,
+      I3 => MRey(7),
+      O => vga_sprite_red_2_1_596
     );
   vga_sprite_red_2_f5 : MUXF5
     port map (
-      I0 => vga_sprite_red_2_1_581,
+      I0 => vga_sprite_red_2_1_596,
       I1 => vga_sprite_red(2),
-      S => vga_sprite_skye,
+      S => vga_sprite_blue_and0001,
       O => red_2_OBUF_182
     );
   vga_sprite_red_1_1 : LUT3
@@ -5225,9 +5225,9 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => vga_sprite_mona,
+      I0 => vga_sprite_blue_and0000,
       I1 => MSkye(6),
-      I2 => MMona(6),
+      I2 => MRey(6),
       O => vga_sprite_red(1)
     );
   vga_sprite_red_1_2 : LUT4
@@ -5235,17 +5235,17 @@ begin
       INIT => X"EA40"
     )
     port map (
-      I0 => vga_sprite_mona,
-      I1 => MRey(6),
-      I2 => vga_sprite_blue_0_1145_563,
-      I3 => MMona(6),
-      O => vga_sprite_red_1_1_579
+      I0 => vga_sprite_blue_and0000,
+      I1 => MMona(6),
+      I2 => vga_sprite_blue_0_1157_563,
+      I3 => MRey(6),
+      O => vga_sprite_red_1_1_594
     );
   vga_sprite_red_1_f5 : MUXF5
     port map (
-      I0 => vga_sprite_red_1_1_579,
+      I0 => vga_sprite_red_1_1_594,
       I1 => vga_sprite_red(1),
-      S => vga_sprite_skye,
+      S => vga_sprite_blue_and0001,
       O => red_1_OBUF_181
     );
   vga_sprite_red_0_1 : LUT3
@@ -5253,9 +5253,9 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => vga_sprite_mona,
+      I0 => vga_sprite_blue_and0000,
       I1 => MSkye(5),
-      I2 => MMona(5),
+      I2 => MRey(5),
       O => vga_sprite_red(0)
     );
   vga_sprite_red_0_2 : LUT4
@@ -5263,17 +5263,17 @@ begin
       INIT => X"EA40"
     )
     port map (
-      I0 => vga_sprite_mona,
-      I1 => MRey(5),
-      I2 => vga_sprite_blue_0_1145_563,
-      I3 => MMona(5),
-      O => vga_sprite_red_0_1_577
+      I0 => vga_sprite_blue_and0000,
+      I1 => MMona(5),
+      I2 => vga_sprite_blue_0_1157_563,
+      I3 => MRey(5),
+      O => vga_sprite_red_0_1_592
     );
   vga_sprite_red_0_f5 : MUXF5
     port map (
-      I0 => vga_sprite_red_0_1_577,
+      I0 => vga_sprite_red_0_1_592,
       I1 => vga_sprite_red(0),
-      S => vga_sprite_skye,
+      S => vga_sprite_blue_and0001,
       O => red_0_OBUF_180
     );
   vga_sprite_green_2_1 : LUT3
@@ -5281,9 +5281,9 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => vga_sprite_mona,
+      I0 => vga_sprite_blue_and0000,
       I1 => MSkye(4),
-      I2 => MMona(4),
+      I2 => MRey(4),
       O => vga_sprite_green(2)
     );
   vga_sprite_green_2_2 : LUT4
@@ -5291,17 +5291,17 @@ begin
       INIT => X"EA40"
     )
     port map (
-      I0 => vga_sprite_mona,
-      I1 => MRey(4),
-      I2 => vga_sprite_blue_0_1145_563,
-      I3 => MMona(4),
-      O => vga_sprite_green_2_1_574
+      I0 => vga_sprite_blue_and0000,
+      I1 => MMona(4),
+      I2 => vga_sprite_blue_0_1157_563,
+      I3 => MRey(4),
+      O => vga_sprite_green_2_1_590
     );
   vga_sprite_green_2_f5 : MUXF5
     port map (
-      I0 => vga_sprite_green_2_1_574,
+      I0 => vga_sprite_green_2_1_590,
       I1 => vga_sprite_green(2),
-      S => vga_sprite_skye,
+      S => vga_sprite_blue_and0001,
       O => green_2_OBUF_172
     );
   vga_sprite_green_1_1 : LUT3
@@ -5309,9 +5309,9 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => vga_sprite_mona,
+      I0 => vga_sprite_blue_and0000,
       I1 => MSkye(3),
-      I2 => MMona(3),
+      I2 => MRey(3),
       O => vga_sprite_green(1)
     );
   vga_sprite_green_1_2 : LUT4
@@ -5319,17 +5319,17 @@ begin
       INIT => X"EA40"
     )
     port map (
-      I0 => vga_sprite_mona,
-      I1 => MRey(3),
-      I2 => vga_sprite_blue_0_1145_563,
-      I3 => MMona(3),
-      O => vga_sprite_green_1_1_572
+      I0 => vga_sprite_blue_and0000,
+      I1 => MMona(3),
+      I2 => vga_sprite_blue_0_1157_563,
+      I3 => MRey(3),
+      O => vga_sprite_green_1_1_588
     );
   vga_sprite_green_1_f5 : MUXF5
     port map (
-      I0 => vga_sprite_green_1_1_572,
+      I0 => vga_sprite_green_1_1_588,
       I1 => vga_sprite_green(1),
-      S => vga_sprite_skye,
+      S => vga_sprite_blue_and0001,
       O => green_1_OBUF_171
     );
   vga_sprite_green_0_1 : LUT3
@@ -5337,9 +5337,9 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => vga_sprite_mona,
+      I0 => vga_sprite_blue_and0000,
       I1 => MSkye(2),
-      I2 => MMona(2),
+      I2 => MRey(2),
       O => vga_sprite_green(0)
     );
   vga_sprite_green_0_2 : LUT4
@@ -5347,17 +5347,17 @@ begin
       INIT => X"EA40"
     )
     port map (
-      I0 => vga_sprite_mona,
-      I1 => MRey(2),
-      I2 => vga_sprite_blue_0_1145_563,
-      I3 => MMona(2),
-      O => vga_sprite_green_0_1_570
+      I0 => vga_sprite_blue_and0000,
+      I1 => MMona(2),
+      I2 => vga_sprite_blue_0_1157_563,
+      I3 => MRey(2),
+      O => vga_sprite_green_0_1_586
     );
   vga_sprite_green_0_f5 : MUXF5
     port map (
-      I0 => vga_sprite_green_0_1_570,
+      I0 => vga_sprite_green_0_1_586,
       I1 => vga_sprite_green(0),
-      S => vga_sprite_skye,
+      S => vga_sprite_blue_and0001,
       O => green_0_OBUF_170
     );
   vga_sprite_blue_1_1 : LUT3
@@ -5365,9 +5365,9 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => vga_sprite_mona,
+      I0 => vga_sprite_blue_and0000,
       I1 => MSkye(1),
-      I2 => MMona(1),
+      I2 => MRey(1),
       O => vga_sprite_blue(1)
     );
   vga_sprite_blue_1_2 : LUT4
@@ -5375,17 +5375,17 @@ begin
       INIT => X"EA40"
     )
     port map (
-      I0 => vga_sprite_mona,
-      I1 => MRey(1),
-      I2 => vga_sprite_blue_0_1145_563,
-      I3 => MMona(1),
-      O => vga_sprite_blue_1_1_568
+      I0 => vga_sprite_blue_and0000,
+      I1 => MMona(1),
+      I2 => vga_sprite_blue_0_1157_563,
+      I3 => MRey(1),
+      O => vga_sprite_blue_1_1_572
     );
   vga_sprite_blue_1_f5 : MUXF5
     port map (
-      I0 => vga_sprite_blue_1_1_568,
+      I0 => vga_sprite_blue_1_1_572,
       I1 => vga_sprite_blue(1),
-      S => vga_sprite_skye,
+      S => vga_sprite_blue_and0001,
       O => blue_1_OBUF_164
     );
   vga_sprite_blue_0_1 : LUT3
@@ -5393,9 +5393,9 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => vga_sprite_mona,
+      I0 => vga_sprite_blue_and0000,
       I1 => MSkye(0),
-      I2 => MMona(0),
+      I2 => MRey(0),
       O => vga_sprite_blue(0)
     );
   vga_sprite_blue_0_2 : LUT4
@@ -5403,17 +5403,17 @@ begin
       INIT => X"EA40"
     )
     port map (
-      I0 => vga_sprite_mona,
-      I1 => MRey(0),
-      I2 => vga_sprite_blue_0_1145_563,
-      I3 => MMona(0),
+      I0 => vga_sprite_blue_and0000,
+      I1 => MMona(0),
+      I2 => vga_sprite_blue_0_1157_563,
+      I3 => MRey(0),
       O => vga_sprite_blue_0_1_560
     );
   vga_sprite_blue_0_f5 : MUXF5
     port map (
       I0 => vga_sprite_blue_0_1_560,
       I1 => vga_sprite_blue(0),
-      S => vga_sprite_skye,
+      S => vga_sprite_blue_and0001,
       O => blue_0_OBUF_163
     );
   U2_HCS_cmp_eq000010 : LUT4_D

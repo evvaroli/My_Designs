@@ -4,7 +4,6 @@ entity group_photos_top2 is
 	 port(
 		mclk : in STD_LOGIC;
 		btn : in STD_LOGIC_VECTOR(3 downto 0);
-		sw : in STD_LOGIC_VECTOR(7 downto 0);
 		hsync : out STD_LOGIC;
 		vsync : out STD_LOGIC;
          red : out std_logic_vector(2 downto 0);
@@ -79,7 +78,7 @@ architecture group_photos_top2 of group_photos_top2 is
 		MRey : in STD_LOGIC_VECTOR(7 downto 0);
 		MSkye : in STD_LOGIC_VECTOR(7 downto 0);
 		MMona : in STD_LOGIC_VECTOR(7 downto 0);
-		clk3 : in STD_LOGIC;
+		clk190 : in STD_LOGIC;
 		clr : in STD_LOGIC;
 		romRey_addr14 : out STD_LOGIC_VECTOR(13 downto 0);
 		romSkye_addr14 : out STD_LOGIC_VECTOR(13 downto 0);
@@ -173,7 +172,7 @@ begin
 		MRey => MRey,
 		MSkye => MSkye,
 		MMona => MMona,
-		clk3 => clk3,
+		clk190 => clk190,
 		clr => clr,
 		romRey_addr14 => romRey_addr14,
 		romSkye_addr14 => romSkye_addr14,

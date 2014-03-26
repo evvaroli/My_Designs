@@ -2,16 +2,16 @@ Release 14.7 ngdbuild P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -p
-3S500EFG320-5 -aul -sd C:\My_Designs\Lab7\Lab7\synthesis -sd
-C:\My_Designs\Lab7\Lab7\compile -sd C:\My_Designs\Lab7\Lab7\src -sd
+3S500EFG320-5 -aul -sd c:\My_Designs\Lab7\Lab7\synthesis -sd
+c:\My_Designs\Lab7\Lab7\compile -sd c:\My_Designs\Lab7\Lab7\src -sd
 C:\Aldec\Active-HDL Student Edition\vlib\SPARTAN3E\compile -uc
 group_photos_top2.ucf group_photos_top2.ngc group_photos_top2.ngd
 
 Reading NGO file
-"C:/My_Designs/Lab7/Lab7/implement/ver1/rev1/group_photos_top2.ngc" ...
-Loading design module "C:\My_Designs\Lab7\Lab7\src/skye.ngc"...
-Loading design module "C:\My_Designs\Lab7\Lab7\src/mona.ngc"...
-Loading design module "C:\My_Designs\Lab7\Lab7\src/reymoyet.ngc"...
+"c:/My_Designs/Lab7/Lab7/implement/ver1/rev1/group_photos_top2.ngc" ...
+Loading design module "c:\My_Designs\Lab7\Lab7\src/skye.ngc"...
+Loading design module "c:\My_Designs\Lab7\Lab7\src/mona.ngc"...
+Loading design module "c:\My_Designs\Lab7\Lab7\src/reymoyet.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -197,6 +197,78 @@ INFO:ConstraintSystem:59 - Constraint <NET "dp"  LOC = "C17"  ;>
 WARNING:ConstraintSystem - A target design object for the Locate constraint
    '<NET "dp"  LOC = "C17"  ;> [group_photos_top2.ucf(35)]' could not be found
    and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "sw<0>"  LOC = "G18"  ;>
+   [group_photos_top2.ucf(38)]: NET "sw<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw<0>"  LOC = "G18"  ;> [group_photos_top2.ucf(38)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "sw<1>"  LOC = "H18"  ;>
+   [group_photos_top2.ucf(39)]: NET "sw<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw<1>"  LOC = "H18"  ;> [group_photos_top2.ucf(39)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "sw<2>"  LOC = "K18"  ;>
+   [group_photos_top2.ucf(40)]: NET "sw<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw<2>"  LOC = "K18"  ;> [group_photos_top2.ucf(40)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "sw<3>"  LOC = "K17"  ;>
+   [group_photos_top2.ucf(41)]: NET "sw<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw<3>"  LOC = "K17"  ;> [group_photos_top2.ucf(41)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "sw<4>"  LOC = "L14"  ;>
+   [group_photos_top2.ucf(42)]: NET "sw<4>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw<4>"  LOC = "L14"  ;> [group_photos_top2.ucf(42)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "sw<5>"  LOC = "L13"  ;>
+   [group_photos_top2.ucf(43)]: NET "sw<5>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw<5>"  LOC = "L13"  ;> [group_photos_top2.ucf(43)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "sw<6>"  LOC = "N17"  ;>
+   [group_photos_top2.ucf(44)]: NET "sw<6>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw<6>"  LOC = "N17"  ;> [group_photos_top2.ucf(44)]' could not be
+   found and so the Locate constraint will be removed.
+
+INFO:ConstraintSystem:59 - Constraint <NET "sw<7>"  LOC = "R17"  ;>
+   [group_photos_top2.ucf(45)]: NET "sw<7>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw<7>"  LOC = "R17"  ;> [group_photos_top2.ucf(45)]' could not be
+   found and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "RxD"  LOC = "U6"  ;>
    [group_photos_top2.ucf(48)]: NET "RxD" not found.  Please verify that:
@@ -706,9 +778,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:  75
+  Number of warnings:  83
 
-Total memory usage is 135264 kilobytes
+Total memory usage is 135712 kilobytes
 
 Writing NGD file "group_photos_top2.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec

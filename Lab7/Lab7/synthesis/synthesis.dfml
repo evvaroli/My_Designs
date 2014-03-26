@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to .
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
---> Parameter xsthdpdir set to C:\My_Designs\Lab7\Lab7\synthesis\xst
+--> Parameter xsthdpdir set to c:\My_Designs\Lab7\Lab7\synthesis\xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> 
 TABLE OF CONTENTS
@@ -153,9 +153,9 @@ Analyzing hierarchy for entity <bounce> in library <Lab7> (architecture <bounce>
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <group_photos_top2> in library <Lab7> (Architecture <group_photos_top2>).
-WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top2.vhd" line 186: Instantiating black box module <skye>.
-WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top2.vhd" line 193: Instantiating black box module <mona>.
-WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top2.vhd" line 208: Instantiating black box module <reymoyet>.
+WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top2.vhd" line 185: Instantiating black box module <skye>.
+WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top2.vhd" line 192: Instantiating black box module <mona>.
+WARNING:Xst:2211 - "C:/My_Designs/Lab7/Lab7/src/group_photos_top2.vhd" line 207: Instantiating black box module <reymoyet>.
 Entity <group_photos_top2> analyzed. Unit <group_photos_top2> generated.
 
 Analyzing Entity <ClockDivider> in library <Lab7> (Architecture <clockdivider>).
@@ -165,11 +165,11 @@ Analyzing Entity <vga_640x480> in library <Lab7> (Architecture <vga_640x480>).
 Entity <vga_640x480> analyzed. Unit <vga_640x480> generated.
 
 Analyzing Entity <vga_bsprite4a2> in library <Lab7> (Architecture <vga_bsprite4a2>).
-WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 74: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 18-bit wide.
-WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 96: Width mismatch. <rom_addr20> has a width of 17 bits but assigned expression is 18-bit wide.
-WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 118: Width mismatch. <rom_addr21> has a width of 17 bits but assigned expression is 18-bit wide.
-WARNING:Xst:819 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 158: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <monaspriteon>, <redMona>, <greenMona>, <blueMona>, <skyespriteon>, <redSkye>, <greenSkye>, <blueSkye>, <reyspriteon>, <redRey>, <greenRey>, <blueRey>, <vidon>, <present_state>
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 75: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 85: Width mismatch. <rom_addr20> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 95: Width mismatch. <rom_addr21> has a width of 17 bits but assigned expression is 18-bit wide.
+WARNING:Xst:819 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 131: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <present_state>, <hc>, <wall>
 Entity <vga_bsprite4a2> analyzed. Unit <vga_bsprite4a2> generated.
 
 Analyzing Entity <clock_pulse> in library <Lab7> (Architecture <clock_pulse>).
@@ -220,7 +220,8 @@ WARNING:Xst:1780 - Signal <rom_addr> is never used or assigned. This unconnected
     | Transitions        | 3                                              |
     | Inputs             | 0                                              |
     | Outputs            | 3                                              |
-    | Clock              | clk3                      (rising_edge)        |
+    | Clock              | clk190                    (rising_edge)        |
+    | Clock enable       | present_state$cmp_gt0000  (positive)           |
     | Reset              | clr                       (positive)           |
     | Reset type         | asynchronous                                   |
     | Reset State        | red_state                                      |
@@ -228,51 +229,55 @@ WARNING:Xst:1780 - Signal <rom_addr> is never used or assigned. This unconnected
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <monaspriteon$addsub0000> created at line 65.
-    Found 10-bit adder for signal <monaspriteon$addsub0001> created at line 65.
-    Found 10-bit adder for signal <monaspriteon$addsub0002> created at line 65.
-    Found 10-bit adder for signal <monaspriteon$addsub0003> created at line 65.
-    Found 10-bit comparator greatequal for signal <monaspriteon$cmp_ge0000> created at line 65.
-    Found 10-bit comparator greater for signal <monaspriteon$cmp_gt0000> created at line 65.
-    Found 10-bit comparator lessequal for signal <monaspriteon$cmp_le0000> created at line 65.
-    Found 10-bit comparator less for signal <monaspriteon$cmp_lt0000> created at line 65.
-    Found 10-bit adder for signal <reyspriteon$addsub0000> created at line 59.
-    Found 10-bit adder for signal <reyspriteon$addsub0001> created at line 59.
-    Found 10-bit adder for signal <reyspriteon$addsub0002> created at line 59.
-    Found 10-bit adder for signal <reyspriteon$addsub0003> created at line 59.
-    Found 10-bit comparator greatequal for signal <reyspriteon$cmp_ge0000> created at line 59.
-    Found 10-bit comparator greater for signal <reyspriteon$cmp_gt0000> created at line 59.
-    Found 10-bit comparator lessequal for signal <reyspriteon$cmp_le0000> created at line 59.
-    Found 10-bit comparator less for signal <reyspriteon$cmp_lt0000> created at line 59.
-    Found 18-bit adder for signal <rom_addr2$add0000> created at line 74.
-    Found 17-bit adder for signal <rom_addr2$addsub0000> created at line 71.
-    Found 17-bit adder for signal <rom_addr2$addsub0001> created at line 71.
-    Found 18-bit adder for signal <rom_addr20$add0000> created at line 96.
-    Found 17-bit adder for signal <rom_addr20$addsub0000> created at line 93.
-    Found 17-bit adder for signal <rom_addr20$addsub0001> created at line 93.
-    Found 18-bit adder for signal <rom_addr21$add0000> created at line 118.
-    Found 17-bit adder for signal <rom_addr21$addsub0000> created at line 115.
-    Found 17-bit adder for signal <rom_addr21$addsub0001> created at line 115.
-    Found 10-bit adder for signal <skyespriteon$addsub0000> created at line 62.
-    Found 10-bit adder for signal <skyespriteon$addsub0001> created at line 62.
-    Found 10-bit adder for signal <skyespriteon$addsub0002> created at line 62.
-    Found 10-bit adder for signal <skyespriteon$addsub0003> created at line 62.
-    Found 10-bit comparator greatequal for signal <skyespriteon$cmp_ge0000> created at line 62.
-    Found 10-bit comparator greater for signal <skyespriteon$cmp_gt0000> created at line 62.
-    Found 10-bit comparator lessequal for signal <skyespriteon$cmp_le0000> created at line 62.
-    Found 10-bit comparator less for signal <skyespriteon$cmp_lt0000> created at line 62.
+    Found 10-bit adder for signal <monaspriteon$addsub0000> created at line 66.
+    Found 10-bit adder for signal <monaspriteon$addsub0001> created at line 66.
+    Found 10-bit adder for signal <monaspriteon$addsub0002> created at line 66.
+    Found 10-bit adder for signal <monaspriteon$addsub0003> created at line 66.
+    Found 10-bit comparator greatequal for signal <monaspriteon$cmp_ge0000> created at line 66.
+    Found 10-bit comparator greater for signal <monaspriteon$cmp_gt0000> created at line 66.
+    Found 10-bit comparator lessequal for signal <monaspriteon$cmp_le0000> created at line 66.
+    Found 10-bit comparator less for signal <monaspriteon$cmp_lt0000> created at line 66.
+    Found 10-bit comparator greater for signal <present_state$cmp_gt0000> created at line 106.
+    Found 10-bit comparator lessequal for signal <red$cmp_le0000> created at line 150.
+    Found 10-bit adder for signal <reyspriteon$addsub0000> created at line 60.
+    Found 10-bit adder for signal <reyspriteon$addsub0001> created at line 60.
+    Found 10-bit adder for signal <reyspriteon$addsub0002> created at line 60.
+    Found 10-bit adder for signal <reyspriteon$addsub0003> created at line 60.
+    Found 10-bit comparator greatequal for signal <reyspriteon$cmp_ge0000> created at line 60.
+    Found 10-bit comparator greater for signal <reyspriteon$cmp_gt0000> created at line 60.
+    Found 10-bit comparator lessequal for signal <reyspriteon$cmp_le0000> created at line 60.
+    Found 10-bit comparator less for signal <reyspriteon$cmp_lt0000> created at line 60.
+    Found 18-bit adder for signal <rom_addr2$add0000> created at line 75.
+    Found 17-bit adder for signal <rom_addr2$addsub0000> created at line 72.
+    Found 17-bit adder for signal <rom_addr2$addsub0001> created at line 72.
+    Found 18-bit adder for signal <rom_addr20$add0000> created at line 85.
+    Found 17-bit adder for signal <rom_addr20$addsub0000> created at line 82.
+    Found 17-bit adder for signal <rom_addr20$addsub0001> created at line 82.
+    Found 18-bit adder for signal <rom_addr21$add0000> created at line 95.
+    Found 17-bit adder for signal <rom_addr21$addsub0000> created at line 92.
+    Found 17-bit adder for signal <rom_addr21$addsub0001> created at line 92.
+    Found 10-bit adder for signal <skyespriteon$addsub0000> created at line 63.
+    Found 10-bit adder for signal <skyespriteon$addsub0001> created at line 63.
+    Found 10-bit adder for signal <skyespriteon$addsub0002> created at line 63.
+    Found 10-bit adder for signal <skyespriteon$addsub0003> created at line 63.
+    Found 10-bit comparator greatequal for signal <skyespriteon$cmp_ge0000> created at line 63.
+    Found 10-bit comparator greater for signal <skyespriteon$cmp_gt0000> created at line 63.
+    Found 10-bit comparator lessequal for signal <skyespriteon$cmp_le0000> created at line 63.
+    Found 10-bit comparator less for signal <skyespriteon$cmp_lt0000> created at line 63.
+    Found 10-bit up counter for signal <wall>.
     Found 10-bit subtractor for signal <xpixMona>.
-    Found 10-bit subtractor for signal <xpixMona$sub0000> created at line 55.
+    Found 10-bit subtractor for signal <xpixMona$sub0000> created at line 56.
     Found 10-bit subtractor for signal <xpixRey>.
     Found 10-bit subtractor for signal <xpixSkye>.
     Found 10-bit subtractor for signal <ypixMona>.
-    Found 10-bit subtractor for signal <ypixMona$sub0000> created at line 54.
+    Found 10-bit subtractor for signal <ypixMona$sub0000> created at line 55.
     Found 10-bit subtractor for signal <ypixRey>.
     Found 10-bit subtractor for signal <ypixSkye>.
     Summary:
 	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
 	inferred  29 Adder/Subtractor(s).
-	inferred  12 Comparator(s).
+	inferred  14 Comparator(s).
 Unit <vga_bsprite4a2> synthesized.
 
 
@@ -330,7 +335,7 @@ Unit <bounce> synthesized.
 Synthesizing Unit <group_photos_top2>.
     Related source file is "C:/My_Designs/Lab7/Lab7/src/group_photos_top2.vhd".
 WARNING:Xst:647 - Input <btn<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <clk3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <group_photos_top2> synthesized.
 
 
@@ -343,19 +348,19 @@ Macro Statistics
  10-bit subtractor                                     : 8
  17-bit adder                                          : 6
  18-bit adder                                          : 3
-# Counters                                             : 3
- 10-bit up counter                                     : 2
+# Counters                                             : 4
+ 10-bit up counter                                     : 3
  24-bit up counter                                     : 1
 # Accumulators                                         : 6
  10-bit up accumulator                                 : 6
 # Registers                                            : 11
  1-bit register                                        : 5
  10-bit register                                       : 6
-# Comparators                                          : 24
+# Comparators                                          : 26
  10-bit comparator greatequal                          : 5
- 10-bit comparator greater                             : 3
+ 10-bit comparator greater                             : 4
  10-bit comparator less                                : 5
- 10-bit comparator lessequal                           : 3
+ 10-bit comparator lessequal                           : 4
  11-bit comparator less                                : 8
 
 =========================================================================
@@ -383,18 +388,18 @@ Macro Statistics
  10-bit adder                                          : 24
  10-bit subtractor                                     : 8
  14-bit adder                                          : 9
-# Counters                                             : 3
- 10-bit up counter                                     : 2
+# Counters                                             : 4
+ 10-bit up counter                                     : 3
  24-bit up counter                                     : 1
 # Accumulators                                         : 6
  10-bit up accumulator                                 : 6
 # Registers                                            : 65
  Flip-Flops                                            : 65
-# Comparators                                          : 24
+# Comparators                                          : 26
  10-bit comparator greatequal                          : 5
- 10-bit comparator greater                             : 3
+ 10-bit comparator greater                             : 4
  10-bit comparator less                                : 5
- 10-bit comparator lessequal                           : 3
+ 10-bit comparator lessequal                           : 4
  11-bit comparator less                                : 8
 
 =========================================================================
@@ -402,6 +407,12 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <U1/q_18> of sequential type is unconnected in block <group_photos_top2>.
+WARNING:Xst:2677 - Node <U1/q_19> of sequential type is unconnected in block <group_photos_top2>.
+WARNING:Xst:2677 - Node <U1/q_20> of sequential type is unconnected in block <group_photos_top2>.
+WARNING:Xst:2677 - Node <U1/q_21> of sequential type is unconnected in block <group_photos_top2>.
+WARNING:Xst:2677 - Node <U1/q_22> of sequential type is unconnected in block <group_photos_top2>.
+WARNING:Xst:2677 - Node <U1/q_23> of sequential type is unconnected in block <group_photos_top2>.
 
 Optimizing unit <group_photos_top2> ...
 
@@ -421,8 +432,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 172
- Flip-Flops                                            : 172
+# Registers                                            : 176
+ Flip-Flops                                            : 176
 
 =========================================================================
 
@@ -448,31 +459,32 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 23
+# IOs                              : 15
 
 Cell Usage :
-# BELS                             : 1582
+# BELS                             : 1620
 #      GND                         : 1
 #      INV                         : 85
-#      LUT1                        : 79
-#      LUT2                        : 338
+#      LUT1                        : 73
+#      LUT2                        : 351
+#      LUT2_D                      : 1
 #      LUT2_L                      : 3
-#      LUT3                        : 71
+#      LUT3                        : 79
 #      LUT3_D                      : 1
 #      LUT3_L                      : 3
-#      LUT4                        : 101
-#      LUT4_D                      : 2
+#      LUT4                        : 105
+#      LUT4_D                      : 3
 #      LUT4_L                      : 3
-#      MUXCY                       : 491
+#      MUXCY                       : 504
 #      MUXF5                       : 4
 #      VCC                         : 1
-#      XORCY                       : 399
-# FlipFlops/Latches                : 172
+#      XORCY                       : 403
+# FlipFlops/Latches                : 176
 #      FDC                         : 39
-#      FDCE                        : 92
+#      FDCE                        : 94
 #      FDE                         : 1
-#      FDP                         : 1
-#      FDPE                        : 39
+#      FDP                         : 2
+#      FDPE                        : 40
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
@@ -490,10 +502,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      353  out of   4656     7%  
- Number of Slice Flip Flops:            172  out of   9312     1%  
- Number of 4 input LUTs:                686  out of   9312     7%  
- Number of IOs:                          23
+ Number of Slices:                      364  out of   4656     7%  
+ Number of Slice Flip Flops:            176  out of   9312     1%  
+ Number of 4 input LUTs:                707  out of   9312     7%  
+ Number of IOs:                          15
  Number of bonded IOBs:                  13  out of    232     5%  
  Number of GCLKs:                         3  out of     24    12%  
 
@@ -515,22 +527,20 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+----------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                  | Load  |
------------------------------------+----------------------------------------+-------+
-U1/q_171                           | BUFG                                   | 124   |
-mclk                               | BUFGP                                  | 24    |
-U1/q_01                            | BUFG                                   | 21    |
-U1/q_23                            | NONE(vga_sprite/present_state_FSM_FFd1)| 3     |
------------------------------------+----------------------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+U1/q_171                           | BUFG                   | 137   |
+mclk                               | BUFGP                  | 18    |
+U1/q_01                            | BUFG                   | 21    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-btn<3>                             | IBUF                   | 171   |
+btn<3>                             | IBUF                   | 175   |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
@@ -538,9 +548,9 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 6.925ns (Maximum Frequency: 144.414MHz)
-   Minimum input arrival time before clock: 3.668ns
-   Maximum output required time after clock: 18.837ns
-   Maximum combinational path delay: 5.619ns
+   Minimum input arrival time before clock: 3.670ns
+   Maximum output required time after clock: 18.506ns
+   Maximum combinational path delay: 5.768ns
 
 Timing Detail:
 --------------
@@ -549,7 +559,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U1/q_171'
   Clock period: 6.925ns (frequency: 144.414MHz)
-  Total number of paths / destination ports: 11615 / 243
+  Total number of paths / destination ports: 12323 / 259
 -------------------------------------------------------------------------
 Delay:               6.925ns (Levels of Logic = 7)
   Source:            b/drvrey_0 (FF)
@@ -576,23 +586,23 @@ Delay:               6.925ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mclk'
-  Clock period: 4.088ns (frequency: 244.648MHz)
-  Total number of paths / destination ports: 300 / 24
+  Clock period: 3.779ns (frequency: 264.655MHz)
+  Total number of paths / destination ports: 171 / 18
 -------------------------------------------------------------------------
-Delay:               4.088ns (Levels of Logic = 24)
+Delay:               3.779ns (Levels of Logic = 18)
   Source:            U1/q_1 (FF)
-  Destination:       U1/q_23 (FF)
+  Destination:       U1/q_17 (FF)
   Source Clock:      mclk rising
   Destination Clock: mclk rising
 
-  Data Path: U1/q_1 to U1/q_23
+  Data Path: U1/q_1 to U1/q_17
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              1   0.514   0.509  U1/q_1 (U1/q_1)
      LUT1:I0->O            1   0.612   0.000  U1/Mcount_q_cy<1>_rt (U1/Mcount_q_cy<1>_rt)
      MUXCY:S->O            1   0.404   0.000  U1/Mcount_q_cy<1> (U1/Mcount_q_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  U1/Mcount_q_cy<2> (U1/Mcount_q_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<2> (U1/Mcount_q_cy<2>)
      MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<3> (U1/Mcount_q_cy<3>)
      MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<4> (U1/Mcount_q_cy<4>)
      MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<5> (U1/Mcount_q_cy<5>)
@@ -606,18 +616,12 @@ Delay:               4.088ns (Levels of Logic = 24)
      MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<13> (U1/Mcount_q_cy<13>)
      MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<14> (U1/Mcount_q_cy<14>)
      MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<15> (U1/Mcount_q_cy<15>)
-     MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<16> (U1/Mcount_q_cy<16>)
-     MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<17> (U1/Mcount_q_cy<17>)
-     MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<18> (U1/Mcount_q_cy<18>)
-     MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<19> (U1/Mcount_q_cy<19>)
-     MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<20> (U1/Mcount_q_cy<20>)
-     MUXCY:CI->O           1   0.051   0.000  U1/Mcount_q_cy<21> (U1/Mcount_q_cy<21>)
-     MUXCY:CI->O           0   0.051   0.000  U1/Mcount_q_cy<22> (U1/Mcount_q_cy<22>)
-     XORCY:CI->O           1   0.699   0.000  U1/Mcount_q_xor<23> (Result<23>)
-     FDC:D                     0.268          U1/q_23
+     MUXCY:CI->O           0   0.051   0.000  U1/Mcount_q_cy<16> (U1/Mcount_q_cy<16>)
+     XORCY:CI->O           1   0.699   0.000  U1/Mcount_q_xor<17> (Result<17>)
+     FDC:D                     0.268          U1/q_17
     ----------------------------------------
-    Total                      4.088ns (3.579ns logic, 0.509ns route)
-                                       (87.5% logic, 12.5% route)
+    Total                      3.779ns (3.270ns logic, 0.509ns route)
+                                       (86.5% logic, 13.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U1/q_01'
@@ -645,27 +649,6 @@ Delay:               5.404ns (Levels of Logic = 4)
                                        (59.8% logic, 40.2% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'U1/q_23'
-  Clock period: 1.233ns (frequency: 810.800MHz)
-  Total number of paths / destination ports: 3 / 3
--------------------------------------------------------------------------
-Delay:               1.233ns (Levels of Logic = 0)
-  Source:            vga_sprite/present_state_FSM_FFd1 (FF)
-  Destination:       vga_sprite/present_state_FSM_FFd3 (FF)
-  Source Clock:      U1/q_23 rising
-  Destination Clock: U1/q_23 rising
-
-  Data Path: vga_sprite/present_state_FSM_FFd1 to vga_sprite/present_state_FSM_FFd3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              3   0.514   0.451  vga_sprite/present_state_FSM_FFd1 (vga_sprite/present_state_FSM_FFd1)
-     FDP:D                     0.268          vga_sprite/present_state_FSM_FFd3
-    ----------------------------------------
-    Total                      1.233ns (0.782ns logic, 0.451ns route)
-                                       (63.4% logic, 36.6% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/q_171'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
@@ -688,7 +671,7 @@ Offset:              1.731ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/q_01'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              3.668ns (Levels of Logic = 2)
+Offset:              3.670ns (Levels of Logic = 2)
   Source:            btn<3> (PAD)
   Destination:       U2/VSENABLE (FF)
   Destination Clock: U1/q_01 rising
@@ -697,18 +680,18 @@ Offset:              3.668ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           172   1.106   1.110  btn_3_IBUF (btn_3_IBUF)
+     IBUF:I->O           176   1.106   1.112  btn_3_IBUF (btn_3_IBUF)
      INV:I->O              1   0.612   0.357  U2/clr_inv1_INV_0 (U2/clr_inv)
      FDE:CE                    0.483          U2/VSENABLE
     ----------------------------------------
-    Total                      3.668ns (2.201ns logic, 1.467ns route)
+    Total                      3.670ns (2.201ns logic, 1.469ns route)
                                        (60.0% logic, 40.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/q_01'
-  Total number of paths / destination ports: 80125 / 52
+  Total number of paths / destination ports: 80813 / 52
 -------------------------------------------------------------------------
-Offset:              15.148ns (Levels of Logic = 15)
+Offset:              14.784ns (Levels of Logic = 15)
   Source:            U2/HCS_4 (FF)
   Destination:       green<2> (PAD)
   Source Clock:      U1/q_01 rising
@@ -717,31 +700,31 @@ Offset:              15.148ns (Levels of Logic = 15)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             24   0.514   1.133  U2/HCS_4 (U2/HCS_4)
-     LUT2:I1->O            1   0.612   0.000  vga_sprite/Mcompar_skyespriteon_cmp_gt0000_lut<4> (vga_sprite/Mcompar_skyespriteon_cmp_gt0000_lut<4>)
-     MUXCY:S->O            1   0.404   0.000  vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<4> (vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<5> (vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<6> (vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<6>)
-     MUXCY:CI->O           1   0.052   0.000  vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<7> (vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<7>)
-     MUXCY:CI->O           1   0.052   0.000  vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<8> (vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<8>)
-     MUXCY:CI->O           1   0.399   0.509  vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<9> (vga_sprite/Mcompar_skyespriteon_cmp_gt0000_cy<9>)
-     LUT4:I0->O            9   0.612   0.697  vga_sprite/skyespriteon_and00001 (vga_sprite/skyespriteon)
+     FDC:C->Q             25   0.514   1.101  U2/HCS_4 (U2/HCS_4)
+     LUT4:I2->O            1   0.612   0.000  vga_sprite/Mcompar_skyespriteon_cmp_le0000_lut<4> (vga_sprite/Mcompar_skyespriteon_cmp_le0000_lut<4>)
+     MUXCY:S->O            1   0.404   0.000  vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<4> (vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<5> (vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<6> (vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<7> (vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<8> (vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<8>)
+     MUXCY:CI->O           1   0.399   0.509  vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<9> (vga_sprite/skyespriteon_cmp_le0000)
+     LUT4:I0->O            6   0.612   0.569  vga_sprite/skyespriteon_and00001 (vga_sprite/skyespriteon)
      MUXF5:S->O            5   0.641   0.607  vga_sprite/reyspriteon_and0000_f5 (vga_sprite/reyspriteon)
      LUT3:I1->O            1   0.612   0.360  vga_sprite/monaspriteon_and0000_SW1 (N31)
-     LUT4:I3->O            6   0.612   0.721  vga_sprite/monaspriteon_and0000 (vga_sprite/monaspriteon)
-     LUT3:I0->O            6   0.612   0.721  vga_sprite/blue<0>41 (vga_sprite/N5)
-     LUT4:I0->O            1   0.612   0.426  vga_sprite/red<2>_SW0 (N8)
-     LUT4:I1->O            1   0.612   0.357  vga_sprite/red<2> (red_2_OBUF)
+     LUT4:I3->O            4   0.612   0.651  vga_sprite/monaspriteon_and0000 (vga_sprite/monaspriteon)
+     LUT4:I0->O            2   0.612   0.410  vga_sprite/blue<0>42 (vga_sprite/N7)
+     LUT4:I2->O            3   0.612   0.603  vga_sprite/red<0>21 (vga_sprite/N4)
+     LUT4:I0->O            1   0.612   0.357  vga_sprite/red<2> (red_2_OBUF)
      OBUF:I->O                 3.169          red_2_OBUF (red<2>)
     ----------------------------------------
-    Total                     15.148ns (9.617ns logic, 5.531ns route)
-                                       (63.5% logic, 36.5% route)
+    Total                     14.784ns (9.618ns logic, 5.167ns route)
+                                       (65.1% logic, 34.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/q_171'
-  Total number of paths / destination ports: 67695 / 50
+  Total number of paths / destination ports: 71279 / 50
 -------------------------------------------------------------------------
-Offset:              18.837ns (Levels of Logic = 20)
+Offset:              18.506ns (Levels of Logic = 20)
   Source:            b/rskyev_0 (FF)
   Destination:       green<2> (PAD)
   Source Clock:      U1/q_171 rising
@@ -763,38 +746,17 @@ Offset:              18.837ns (Levels of Logic = 20)
      LUT3:I2->O            1   0.612   0.000  vga_sprite/Mcompar_skyespriteon_cmp_lt0000_lut<8> (vga_sprite/Mcompar_skyespriteon_cmp_lt0000_lut<8>)
      MUXCY:S->O            1   0.404   0.000  vga_sprite/Mcompar_skyespriteon_cmp_lt0000_cy<8> (vga_sprite/Mcompar_skyespriteon_cmp_lt0000_cy<8>)
      MUXCY:CI->O           1   0.399   0.360  vga_sprite/Mcompar_skyespriteon_cmp_lt0000_cy<9> (vga_sprite/Mcompar_skyespriteon_cmp_lt0000_cy<9>)
-     LUT4:I3->O            9   0.612   0.697  vga_sprite/skyespriteon_and00001 (vga_sprite/skyespriteon)
+     LUT4:I3->O            6   0.612   0.569  vga_sprite/skyespriteon_and00001 (vga_sprite/skyespriteon)
      MUXF5:S->O            5   0.641   0.607  vga_sprite/reyspriteon_and0000_f5 (vga_sprite/reyspriteon)
      LUT3:I1->O            1   0.612   0.360  vga_sprite/monaspriteon_and0000_SW1 (N31)
-     LUT4:I3->O            6   0.612   0.721  vga_sprite/monaspriteon_and0000 (vga_sprite/monaspriteon)
-     LUT3:I0->O            6   0.612   0.721  vga_sprite/blue<0>41 (vga_sprite/N5)
-     LUT4:I0->O            1   0.612   0.426  vga_sprite/red<2>_SW0 (N8)
-     LUT4:I1->O            1   0.612   0.357  vga_sprite/red<2> (red_2_OBUF)
+     LUT4:I3->O            4   0.612   0.651  vga_sprite/monaspriteon_and0000 (vga_sprite/monaspriteon)
+     LUT4:I0->O            2   0.612   0.410  vga_sprite/blue<0>42 (vga_sprite/N7)
+     LUT4:I2->O            3   0.612   0.603  vga_sprite/red<0>21 (vga_sprite/N4)
+     LUT4:I0->O            1   0.612   0.357  vga_sprite/red<2> (red_2_OBUF)
      OBUF:I->O                 3.169          red_2_OBUF (red<2>)
     ----------------------------------------
-    Total                     18.837ns (12.556ns logic, 6.281ns route)
-                                       (66.7% logic, 33.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/q_23'
-  Total number of paths / destination ports: 8 / 8
--------------------------------------------------------------------------
-Offset:              6.399ns (Levels of Logic = 3)
-  Source:            vga_sprite/present_state_FSM_FFd2 (FF)
-  Destination:       green<2> (PAD)
-  Source Clock:      U1/q_23 rising
-
-  Data Path: vga_sprite/present_state_FSM_FFd2 to green<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              2   0.514   0.532  vga_sprite/present_state_FSM_FFd2 (vga_sprite/present_state_FSM_FFd2)
-     LUT2:I0->O            3   0.612   0.603  vga_sprite/green<0>11 (vga_sprite/N11)
-     LUT4:I0->O            1   0.612   0.357  vga_sprite/green<2> (green_2_OBUF)
-     OBUF:I->O                 3.169          green_2_OBUF (green<2>)
-    ----------------------------------------
-    Total                      6.399ns (4.907ns logic, 1.492ns route)
-                                       (76.7% logic, 23.3% route)
+    Total                     18.506ns (12.557ns logic, 5.950ns route)
+                                       (67.9% logic, 32.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
@@ -820,35 +782,35 @@ Offset:              3.310ns (Levels of Logic = 1)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 24 / 8
 -------------------------------------------------------------------------
-Delay:               5.619ns (Levels of Logic = 3)
-  Source:            skyePic:douta<1> (PAD)
+Delay:               5.768ns (Levels of Logic = 3)
+  Source:            rey:douta<1> (PAD)
   Destination:       blue<1> (PAD)
 
-  Data Path: skyePic:douta<1> to blue<1>
+  Data Path: rey:douta<1> to blue<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-    skye:douta<1>          1   0.000   0.509  skyePic (MSkye<1>)
-     LUT4:I0->O            1   0.612   0.360  vga_sprite/blue<1>3 (vga_sprite/blue<1>3)
-     LUT4:I3->O            1   0.612   0.357  vga_sprite/blue<1>44 (blue_1_OBUF)
+    reymoyet:douta<1>      1   0.000   0.509  rey (MRey<1>)
+     LUT4:I0->O            1   0.612   0.509  vga_sprite/blue<1>4 (vga_sprite/blue<1>4)
+     LUT2:I0->O            1   0.612   0.357  vga_sprite/blue<1>30 (blue_1_OBUF)
      OBUF:I->O                 3.169          blue_1_OBUF (blue<1>)
     ----------------------------------------
-    Total                      5.619ns (4.393ns logic, 1.226ns route)
-                                       (78.2% logic, 21.8% route)
+    Total                      5.768ns (4.393ns logic, 1.375ns route)
+                                       (76.2% logic, 23.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.86 secs
+Total CPU time to Xst completion: 12.24 secs
  
 --> 
 
-Total memory usage is 230372 kilobytes
+Total memory usage is 230820 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   10 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 
 INFO:NetListWriters:635 - The generated VHDL netlist contains Xilinx UNISIM
    simulation primitives and has to be used with UNISIM library for correct
