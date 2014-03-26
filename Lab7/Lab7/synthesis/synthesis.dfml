@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to c:\My_Designs\Lab7\Lab7\synthesis\xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> 
 TABLE OF CONTENTS
@@ -168,8 +168,8 @@ Analyzing Entity <vga_bsprite4a2> in library <Lab7> (Architecture <vga_bsprite4a
 WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 75: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 18-bit wide.
 WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 85: Width mismatch. <rom_addr20> has a width of 17 bits but assigned expression is 18-bit wide.
 WARNING:Xst:1610 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 95: Width mismatch. <rom_addr21> has a width of 17 bits but assigned expression is 18-bit wide.
-WARNING:Xst:819 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 131: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <present_state>, <hc>, <wall>
+WARNING:Xst:819 - "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" line 140: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <present_state>, <hc>, <wall>, <wallMovingForward>
 Entity <vga_bsprite4a2> analyzed. Unit <vga_bsprite4a2> generated.
 
 Analyzing Entity <clock_pulse> in library <Lab7> (Architecture <clock_pulse>).
@@ -221,10 +221,7 @@ WARNING:Xst:1780 - Signal <rom_addr> is never used or assigned. This unconnected
     | Inputs             | 0                                              |
     | Outputs            | 3                                              |
     | Clock              | clk190                    (rising_edge)        |
-    | Clock enable       | present_state$cmp_gt0000  (positive)           |
-    | Reset              | clr                       (positive)           |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | red_state                                      |
+    | Clock enable       | present_state$and0000     (positive)           |
     | Power Up State     | red_state                                      |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
@@ -237,8 +234,9 @@ WARNING:Xst:1780 - Signal <rom_addr> is never used or assigned. This unconnected
     Found 10-bit comparator greater for signal <monaspriteon$cmp_gt0000> created at line 66.
     Found 10-bit comparator lessequal for signal <monaspriteon$cmp_le0000> created at line 66.
     Found 10-bit comparator less for signal <monaspriteon$cmp_lt0000> created at line 66.
-    Found 10-bit comparator greater for signal <present_state$cmp_gt0000> created at line 106.
-    Found 10-bit comparator lessequal for signal <red$cmp_le0000> created at line 150.
+    Found 10-bit comparator greater for signal <present_state$cmp_gt0000> created at line 110.
+    Found 10-bit comparator less for signal <present_state$cmp_lt0000> created at line 113.
+    Found 10-bit comparator lessequal for signal <red$cmp_le0000> created at line 159.
     Found 10-bit adder for signal <reyspriteon$addsub0000> created at line 60.
     Found 10-bit adder for signal <reyspriteon$addsub0001> created at line 60.
     Found 10-bit adder for signal <reyspriteon$addsub0002> created at line 60.
@@ -264,7 +262,9 @@ WARNING:Xst:1780 - Signal <rom_addr> is never used or assigned. This unconnected
     Found 10-bit comparator greater for signal <skyespriteon$cmp_gt0000> created at line 63.
     Found 10-bit comparator lessequal for signal <skyespriteon$cmp_le0000> created at line 63.
     Found 10-bit comparator less for signal <skyespriteon$cmp_lt0000> created at line 63.
-    Found 10-bit up counter for signal <wall>.
+    Found 10-bit register for signal <wall>.
+    Found 10-bit addsub for signal <wall$mux0003>.
+    Found 1-bit register for signal <wallMovingForward>.
     Found 10-bit subtractor for signal <xpixMona>.
     Found 10-bit subtractor for signal <xpixMona$sub0000> created at line 56.
     Found 10-bit subtractor for signal <xpixRey>.
@@ -275,9 +275,9 @@ WARNING:Xst:1780 - Signal <rom_addr> is never used or assigned. This unconnected
     Found 10-bit subtractor for signal <ypixSkye>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred   1 Counter(s).
-	inferred  29 Adder/Subtractor(s).
-	inferred  14 Comparator(s).
+	inferred   1 D-type flip-flop(s).
+	inferred  30 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
 Unit <vga_bsprite4a2> synthesized.
 
 
@@ -338,28 +338,30 @@ WARNING:Xst:647 - Input <btn<2:1>> is never used. This port will be preserved an
 WARNING:Xst:646 - Signal <clk3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <group_photos_top2> synthesized.
 
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 41
+# Adders/Subtractors                                   : 42
  10-bit adder                                          : 24
+ 10-bit addsub                                         : 1
  10-bit subtractor                                     : 8
  17-bit adder                                          : 6
  18-bit adder                                          : 3
-# Counters                                             : 4
- 10-bit up counter                                     : 3
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
  24-bit up counter                                     : 1
 # Accumulators                                         : 6
  10-bit up accumulator                                 : 6
-# Registers                                            : 11
- 1-bit register                                        : 5
- 10-bit register                                       : 6
-# Comparators                                          : 26
+# Registers                                            : 13
+ 1-bit register                                        : 6
+ 10-bit register                                       : 7
+# Comparators                                          : 27
  10-bit comparator greatequal                          : 5
  10-bit comparator greater                             : 4
- 10-bit comparator less                                : 5
+ 10-bit comparator less                                : 6
  10-bit comparator lessequal                           : 4
  11-bit comparator less                                : 8
 
@@ -384,21 +386,22 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 1
-# Adders/Subtractors                                   : 41
+# Adders/Subtractors                                   : 42
  10-bit adder                                          : 24
+ 10-bit addsub                                         : 1
  10-bit subtractor                                     : 8
  14-bit adder                                          : 9
-# Counters                                             : 4
- 10-bit up counter                                     : 3
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
  24-bit up counter                                     : 1
 # Accumulators                                         : 6
  10-bit up accumulator                                 : 6
-# Registers                                            : 65
- Flip-Flops                                            : 65
-# Comparators                                          : 26
+# Registers                                            : 76
+ Flip-Flops                                            : 76
+# Comparators                                          : 27
  10-bit comparator greatequal                          : 5
  10-bit comparator greater                             : 4
- 10-bit comparator less                                : 5
+ 10-bit comparator less                                : 6
  10-bit comparator lessequal                           : 4
  11-bit comparator less                                : 8
 
@@ -432,8 +435,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 176
- Flip-Flops                                            : 176
+# Registers                                            : 177
+ Flip-Flops                                            : 177
 
 =========================================================================
 
@@ -462,27 +465,26 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 1620
+# BELS                             : 1626
 #      GND                         : 1
 #      INV                         : 85
 #      LUT1                        : 73
-#      LUT2                        : 351
-#      LUT2_D                      : 1
-#      LUT2_L                      : 3
-#      LUT3                        : 79
+#      LUT2                        : 353
+#      LUT2_L                      : 4
+#      LUT3                        : 72
 #      LUT3_D                      : 1
 #      LUT3_L                      : 3
-#      LUT4                        : 105
-#      LUT4_D                      : 3
+#      LUT4                        : 115
+#      LUT4_D                      : 4
 #      LUT4_L                      : 3
 #      MUXCY                       : 504
 #      MUXF5                       : 4
 #      VCC                         : 1
 #      XORCY                       : 403
-# FlipFlops/Latches                : 176
+# FlipFlops/Latches                : 177
 #      FDC                         : 39
-#      FDCE                        : 94
-#      FDE                         : 1
+#      FDCE                        : 92
+#      FDE                         : 4
 #      FDP                         : 2
 #      FDPE                        : 40
 # Clock Buffers                    : 3
@@ -502,9 +504,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      364  out of   4656     7%  
- Number of Slice Flip Flops:            176  out of   9312     1%  
- Number of 4 input LUTs:                707  out of   9312     7%  
+ Number of Slices:                      367  out of   4656     7%  
+ Number of Slice Flip Flops:            177  out of   9312     1%  
+ Number of 4 input LUTs:                713  out of   9312     7%  
  Number of IOs:                          15
  Number of bonded IOBs:                  13  out of    232     5%  
  Number of GCLKs:                         3  out of     24    12%  
@@ -530,7 +532,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-U1/q_171                           | BUFG                   | 137   |
+U1/q_171                           | BUFG                   | 138   |
 mclk                               | BUFGP                  | 18    |
 U1/q_01                            | BUFG                   | 21    |
 -----------------------------------+------------------------+-------+
@@ -540,7 +542,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-btn<3>                             | IBUF                   | 175   |
+btn<3>                             | IBUF                   | 173   |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
@@ -548,7 +550,7 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 6.925ns (Maximum Frequency: 144.414MHz)
-   Minimum input arrival time before clock: 3.670ns
+   Minimum input arrival time before clock: 3.833ns
    Maximum output required time after clock: 18.506ns
    Maximum combinational path delay: 5.768ns
 
@@ -559,7 +561,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U1/q_171'
   Clock period: 6.925ns (frequency: 144.414MHz)
-  Total number of paths / destination ports: 12323 / 259
+  Total number of paths / destination ports: 12897 / 261
 -------------------------------------------------------------------------
 Delay:               6.925ns (Levels of Logic = 7)
   Source:            b/drvrey_0 (FF)
@@ -639,7 +641,7 @@ Delay:               5.404ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q            11   0.514   0.945  U2/vcs_7 (U2/vcs_7)
-     LUT4_D:I0->LO         1   0.612   0.103  U2/vcs_cmp_eq000011 (N33)
+     LUT4_D:I0->LO         1   0.612   0.103  U2/vcs_cmp_eq000011 (N35)
      LUT4:I3->O            1   0.612   0.360  U2/vcs_cmp_eq0000_SW0 (N2)
      LUT4_D:I3->O          9   0.612   0.766  U2/vcs_cmp_eq0000 (U2/vcs_cmp_eq0000)
      LUT2:I1->O            1   0.612   0.000  U2/Mcount_vcs_eqn_11 (U2/Mcount_vcs_eqn_1)
@@ -650,28 +652,29 @@ Delay:               5.404ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/q_171'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Offset:              1.731ns (Levels of Logic = 1)
-  Source:            btn<0> (PAD)
-  Destination:       cp/delay1 (FF)
+Offset:              3.833ns (Levels of Logic = 2)
+  Source:            btn<3> (PAD)
+  Destination:       vga_sprite/present_state_FSM_FFd1 (FF)
   Destination Clock: U1/q_171 rising
 
-  Data Path: btn<0> to cp/delay1
+  Data Path: btn<3> to vga_sprite/present_state_FSM_FFd1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.357  btn_0_IBUF (btn_0_IBUF)
-     FDC:D                     0.268          cp/delay1
+     IBUF:I->O           175   1.106   1.180  btn_3_IBUF (btn_3_IBUF)
+     LUT3:I1->O            3   0.612   0.451  vga_sprite/present_state_and00001 (vga_sprite/present_state_and0000)
+     FDE:CE                    0.483          vga_sprite/present_state_FSM_FFd3
     ----------------------------------------
-    Total                      1.731ns (1.374ns logic, 0.357ns route)
-                                       (79.4% logic, 20.6% route)
+    Total                      3.833ns (2.201ns logic, 1.632ns route)
+                                       (57.4% logic, 42.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/q_01'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              3.670ns (Levels of Logic = 2)
+Offset:              3.669ns (Levels of Logic = 2)
   Source:            btn<3> (PAD)
   Destination:       U2/VSENABLE (FF)
   Destination Clock: U1/q_01 rising
@@ -680,11 +683,11 @@ Offset:              3.670ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           176   1.106   1.112  btn_3_IBUF (btn_3_IBUF)
+     IBUF:I->O           175   1.106   1.111  btn_3_IBUF (btn_3_IBUF)
      INV:I->O              1   0.612   0.357  U2/clr_inv1_INV_0 (U2/clr_inv)
      FDE:CE                    0.483          U2/VSENABLE
     ----------------------------------------
-    Total                      3.670ns (2.201ns logic, 1.469ns route)
+    Total                      3.669ns (2.201ns logic, 1.468ns route)
                                        (60.0% logic, 40.0% route)
 
 =========================================================================
@@ -710,10 +713,10 @@ Offset:              14.784ns (Levels of Logic = 15)
      MUXCY:CI->O           1   0.399   0.509  vga_sprite/Mcompar_skyespriteon_cmp_le0000_cy<9> (vga_sprite/skyespriteon_cmp_le0000)
      LUT4:I0->O            6   0.612   0.569  vga_sprite/skyespriteon_and00001 (vga_sprite/skyespriteon)
      MUXF5:S->O            5   0.641   0.607  vga_sprite/reyspriteon_and0000_f5 (vga_sprite/reyspriteon)
-     LUT3:I1->O            1   0.612   0.360  vga_sprite/monaspriteon_and0000_SW1 (N31)
+     LUT3:I1->O            1   0.612   0.360  vga_sprite/monaspriteon_and0000_SW1 (N33)
      LUT4:I3->O            4   0.612   0.651  vga_sprite/monaspriteon_and0000 (vga_sprite/monaspriteon)
-     LUT4:I0->O            2   0.612   0.410  vga_sprite/blue<0>42 (vga_sprite/N7)
-     LUT4:I2->O            3   0.612   0.603  vga_sprite/red<0>21 (vga_sprite/N4)
+     LUT4:I0->O            2   0.612   0.410  vga_sprite/blue<0>52 (vga_sprite/N6)
+     LUT4:I2->O            3   0.612   0.603  vga_sprite/red<0>11 (vga_sprite/N2)
      LUT4:I0->O            1   0.612   0.357  vga_sprite/red<2> (red_2_OBUF)
      OBUF:I->O                 3.169          red_2_OBUF (red<2>)
     ----------------------------------------
@@ -722,7 +725,7 @@ Offset:              14.784ns (Levels of Logic = 15)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/q_171'
-  Total number of paths / destination ports: 71279 / 50
+  Total number of paths / destination ports: 71287 / 50
 -------------------------------------------------------------------------
 Offset:              18.506ns (Levels of Logic = 20)
   Source:            b/rskyev_0 (FF)
@@ -748,10 +751,10 @@ Offset:              18.506ns (Levels of Logic = 20)
      MUXCY:CI->O           1   0.399   0.360  vga_sprite/Mcompar_skyespriteon_cmp_lt0000_cy<9> (vga_sprite/Mcompar_skyespriteon_cmp_lt0000_cy<9>)
      LUT4:I3->O            6   0.612   0.569  vga_sprite/skyespriteon_and00001 (vga_sprite/skyespriteon)
      MUXF5:S->O            5   0.641   0.607  vga_sprite/reyspriteon_and0000_f5 (vga_sprite/reyspriteon)
-     LUT3:I1->O            1   0.612   0.360  vga_sprite/monaspriteon_and0000_SW1 (N31)
+     LUT3:I1->O            1   0.612   0.360  vga_sprite/monaspriteon_and0000_SW1 (N33)
      LUT4:I3->O            4   0.612   0.651  vga_sprite/monaspriteon_and0000 (vga_sprite/monaspriteon)
-     LUT4:I0->O            2   0.612   0.410  vga_sprite/blue<0>42 (vga_sprite/N7)
-     LUT4:I2->O            3   0.612   0.603  vga_sprite/red<0>21 (vga_sprite/N4)
+     LUT4:I0->O            2   0.612   0.410  vga_sprite/blue<0>52 (vga_sprite/N6)
+     LUT4:I2->O            3   0.612   0.603  vga_sprite/red<0>11 (vga_sprite/N2)
      LUT4:I0->O            1   0.612   0.357  vga_sprite/red<2> (red_2_OBUF)
      OBUF:I->O                 3.169          red_2_OBUF (red<2>)
     ----------------------------------------
@@ -802,15 +805,15 @@ Delay:               5.768ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.24 secs
+Total CPU time to Xst completion: 12.20 secs
  
 --> 
 
-Total memory usage is 230820 kilobytes
+Total memory usage is 230692 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   16 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 
 INFO:NetListWriters:635 - The generated VHDL netlist contains Xilinx UNISIM
    simulation primitives and has to be used with UNISIM library for correct

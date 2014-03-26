@@ -1,4 +1,4 @@
-464
+516
 ~E 1 "./../src/bounce.vhd" 5 bounce
 ~A 1 "./../src/bounce.vhd" 18 bounce
 ~E 1 "./../src/clock_pulse.vhd" 4 clock_pulse

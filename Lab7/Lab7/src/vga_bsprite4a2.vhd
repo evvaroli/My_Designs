@@ -38,10 +38,10 @@ constant w: integer := 100;
 constant h: integer := 100;
 signal xpixRey, xpixSkye, xpixMona, ypixRey, ypixSkye, ypixMona: std_logic_vector(9 downto 0);			
 signal rom_addr : std_logic_vector(16 downto 0);				
-signal reyspriteon, skyespriteon, monaspriteon: std_logic;
+signal reyspriteon, skyespriteon, monaspriteon, wallMovingForward: std_logic;
 type state_type is (red_state, green_state, blue_state);
 signal present_state, next_state : state_type;	  
-signal wall : std_logic_vector(9 downto 0);
+signal wall : std_logic_vector(9 downto 0);	
 begin
 	--set C1 and R1 using switches
 	
@@ -99,16 +99,25 @@ process(xpixRey, ypixRey)
 	process(clk190, clr)
 	begin
 		if clr = '1' then 
-			present_state <= red_state;
-			wall <= hbp;
-		elsif clk190'event and clk190 = '1' then  
-			wall <= wall + 1;
-			if wall > hbp + screenWidth then	
-				present_state <= next_state; 			
-				wall <= hbp; 
+			wall <= hbp;   
+			wallMovingForward <= '1';
+		elsif clk190'event and clk190 = '1' then 
+			if wallMovingForward = '1' then
+				wall <= wall + 1;	
+			else 
+				wall <= wall - 1; 
+			end if;
+			if wall > hbp + screenWidth then				
+				wallMovingForward <= '0';
+				wall <= wall - 1;
+				present_state <= next_state;
+			elsif wall < hbp then	 
+				wall <= wall + 1;
+				wallMovingForward <= '1'; 
+				present_state <= next_state;
 			end if;
 		end if;
-	end process;
+	end process;	
 	
 	-- flicker the background 3 times a second
 	C1State : process(present_state)
@@ -147,34 +156,64 @@ process(xpixRey, ypixRey)
 	  		else 
 				case present_state is 
 					when red_state => 
-					if hc <= wall then
-						red <= "111";
+					if hc <= wall then 
+						if wallMovingForward = '1' then
+							red <= "111";
+							blue <= "00";
+						else 
+							red <= "000";
+							blue <= "11";
+						end if;
 						green <= "000";
-						blue <= "00";
-					else 	 
-						red <= "000";
+					else 	  
+						if wallMovingForward = '1' then
+							red <= "000";
+							blue <= "11";
+						else 
+							red <= "111";
+							blue <= "00";
+						end if;
 						green <= "000";
-						blue <= "11";
 					end if;
 					when green_state =>
 					if hc <= wall then
-						red <= "000";
-						green <= "111";
+						if wallMovingForward = '1' then 
+							red <= "000"; 
+							green <= "111";
+						else 
+							red <= "111";
+							green <= "000";	 
+						end if;
 						blue <= "00";
-					else
-						red <= "111";
-						green <= "000";
+					else   
+						if wallMovingForward = '1' then
+							red <= "111";
+							green <= "000";
+						else 
+							red <= "000";
+							green <= "111";
+						end if;
 						blue <= "00";
 					end if;
 					when blue_state =>
-					if hc <= wall then
+					if hc <= wall then 
+						if wallMovingForward = '1' then
+							green <= "000";
+							blue <= "11";
+						else
+							green <= "111";
+							blue <= "00";
+						end if;
 						red <= "000";
-						green <= "000";
-						blue <= "11";
-					else 
+					else 	  
+						if wallMovingForward = '1' then
+							green <= "111";
+							blue <= "00";
+						else
+							green <= "000";
+							blue <= "11";
+						end if;
 						red <= "000";
-						green <= "111";
-						blue <= "00"; 
 					end if;
 					when others =>
 					red <= "000";
