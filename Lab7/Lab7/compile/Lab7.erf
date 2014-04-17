@@ -2,4 +2,4 @@ WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line break
 MESSAGE "File: c:\My_Designs\Lab7\Lab7\src\vga_bsprite4a2.vhd" 
 MESSAGE "Compile Entity "vga_bsprite4a2"" 
 MESSAGE "Compile Architecture "vga_bsprite4a2" of Entity "vga_bsprite4a2"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]" 

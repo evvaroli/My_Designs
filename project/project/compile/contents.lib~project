@@ -1,0 +1,7 @@
+24
+~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
+~A 1 "./../src/ClockDivider.vhd" 13 ClockDivider
+~E 1 "./../src/nes_driver.vhd" 5 nes_driver
+~A 1 "./../src/nes_driver.vhd" 23 nes_driver
+~E 1 "./../src/nes_driver_top.vhd" 4 nes_driver_top
+~A 1 "./../src/nes_driver_top.vhd" 20 nes_driver_top

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to .
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.63 secs
  
 --> Parameter xsthdpdir set to c:\My_Designs\Lab7\Lab7\synthesis\xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.63 secs
  
 --> 
 TABLE OF CONTENTS
@@ -120,8 +120,7 @@ Architecture reymoyet_a of Entity reymoyet is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/vga_stripes.vhd" in Library Lab7.
 Architecture vga_stripes of Entity vga_stripes is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/vga_bsprite4a2.vhd" in Library Lab7.
-Entity <vga_bsprite4a2> compiled.
-Entity <vga_bsprite4a2> (Architecture <vga_bsprite4a2>) compiled.
+Architecture vga_bsprite4a2 of Entity vga_bsprite4a2 is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/clock_pulse.vhd" in Library Lab7.
 Architecture clock_pulse of Entity clock_pulse is up to date.
 Compiling vhdl file "C:/My_Designs/Lab7/Lab7/src/bounce.vhd" in Library Lab7.
@@ -804,12 +803,12 @@ Delay:               5.768ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.20 secs
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.26 secs
  
 --> 
 
-Total memory usage is 230692 kilobytes
+Total memory usage is 231204 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   16 (   0 filtered)

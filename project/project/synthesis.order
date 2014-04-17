@@ -1,0 +1,3 @@
+i<>.\src\nes_driver.vhd
+i<>.\src\nes_driver_top.vhd
+i<>.\src\ClockDivider.vhd

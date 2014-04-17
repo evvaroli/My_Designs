@@ -7,7 +7,7 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: time_sim.vhd
--- /___/   /\     Timestamp: Wed Mar 26 18:18:47 2014
+-- /___/   /\     Timestamp: Wed Mar 26 19:30:27 2014
 -- \   \  /  \ 
 --  \___\/\___\
 --             

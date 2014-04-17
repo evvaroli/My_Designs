@@ -1,0 +1,3 @@
+vhdl project "C:\My_Designs\project\project\src\nes_driver.vhd"
+vhdl project "C:\My_Designs\project\project\src\nes_driver_top.vhd"
+vhdl project "C:\My_Designs\project\project\src\ClockDivider.vhd"

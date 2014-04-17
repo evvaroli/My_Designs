@@ -1,0 +1,22 @@
+[CACHESIMPLE|Aldec.SymbolsCommands.7]
+project=1
+Built-in symbols=0
+SPARTAN3E=0
+[COMPILESTATUS|.\src\nes_driver.vhd]
+FileTimeLow=30366157
+Status=Compiled
+[COMPILESTATUS|.\src\nes_driver_top.vhd]
+FileTimeLow=30366161
+Status=Compiled
+[COMPILESTATUS|.\src\ClockDivider.vhd]
+FileTimeLow=30366157
+Status=Compiled
+[COMPILESTATUS|.\synthesis\nes_driver_top.vhd]
+FileTimeLow=30366161
+Status=Modified
+[COMPILESTATUS|.\IMPLEMENT\TIME_SIM.VHD]
+FileTimeLow=30366162
+Status=
+[COMPILESTATUS|.\IMPLEMENT\TIME_SIM.SDF]
+FileTimeLow=30366162
+Status=Modified

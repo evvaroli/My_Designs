@@ -1,0 +1,493 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to .
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.48 secs
+ 
+--> Parameter xsthdpdir set to c:\My_Designs\project\project\synthesis\xst
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.49 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "nes_driver_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : no
+
+---- Target Parameters
+Output File Name                   : "nes_driver_top"
+Output Format                      : NGC
+Target Device                      : xc3s500efg320-5
+
+---- Source Options
+Top Module Name                    : nes_driver_top
+Generics, Parameters               : {  }
+Verilog Macros                     : {  }
+Automatic FSM Extraction           : yes
+FSM Encoding Algorithm             : Auto
+Resource Sharing                   : yes
+FSM Style                          : lut
+RAM Extraction                     : yes
+RAM Style                          : auto
+ROM Extraction                     : yes
+ROM Style                          : auto
+Mux Extraction                     : yes
+Mux Style                          : auto
+Decoder Extraction                 : yes
+Priority Encoder Extraction        : yes
+Shift Register Extraction          : yes
+Logical Shifter Extraction         : yes
+XOR Collapsing                     : yes
+Multiplier Style                   : auto
+Asynchronous To Synchronous        : no
+Automatic Register Balancing       : no
+Safe Implementation                : no
+
+---- Target Options
+Add IO Buffers                     : yes
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : yes
+Equivalent register Removal        : yes
+Pack IO Registers into IOBs        : auto
+Slice Packing                      : yes
+Optimize Instantiated Primitives   : no
+Use Clock Enable                   : yes
+Use Synchronous Set                : yes
+Use Synchronous Reset              : yes
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Global Optimization                : allclocknets
+RTL Output                         : yes
+Write Timing Constraints           : no
+Verilog 2001                       : yes
+Keep Hierarchy                     : no
+Netlist Hierarchy                  : as_optimized
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Cross Clock Analysis               : no
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Read Cores                         : yes
+Auto BRAM Packing                  : no
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/My_Designs/project/project/src/ClockDivider.vhd" in Library project.
+Entity <ClockDivider> compiled.
+Entity <ClockDivider> (Architecture <ClockDivider>) compiled.
+Compiling vhdl file "C:/My_Designs/project/project/src/nes_driver.vhd" in Library project.
+Entity <nes_driver> compiled.
+Entity <nes_driver> (Architecture <nes_driver>) compiled.
+Compiling vhdl file "C:/My_Designs/project/project/src/nes_driver_top.vhd" in Library project.
+Entity <nes_driver_top> compiled.
+Entity <nes_driver_top> (Architecture <nes_driver_top>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <nes_driver_top> in library <project> (architecture <nes_driver_top>).
+
+Analyzing hierarchy for entity <ClockDivider> in library <project> (architecture <clockdivider>).
+
+Analyzing hierarchy for entity <nes_driver> in library <project> (architecture <nes_driver>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <nes_driver_top> in library <project> (Architecture <nes_driver_top>).
+Entity <nes_driver_top> analyzed. Unit <nes_driver_top> generated.
+
+Analyzing Entity <ClockDivider> in library <project> (Architecture <clockdivider>).
+Entity <ClockDivider> analyzed. Unit <ClockDivider> generated.
+
+Analyzing Entity <nes_driver> in library <project> (Architecture <nes_driver>).
+Entity <nes_driver> analyzed. Unit <nes_driver> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ClockDivider>.
+    Related source file is "C:/My_Designs/project/project/src/ClockDivider.vhd".
+    Found 24-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ClockDivider> synthesized.
+
+
+Synthesizing Unit <nes_driver>.
+    Related source file is "C:/My_Designs/project/project/src/nes_driver.vhd".
+    Using one-hot encoding for signal <state_reg>.
+    Found 1-bit register for signal <a_reg>.
+    Found 1-bit register for signal <b_reg>.
+    Found 10-bit up counter for signal <counter_reg>.
+    Found 1-bit register for signal <down_reg>.
+    Found 1-bit register for signal <left_reg>.
+    Found 10-bit comparator greater for signal <nes_clk$cmp_gt0000> created at line 109.
+    Found 10-bit comparator less for signal <nes_clk$cmp_lt0000> created at line 109.
+    Found 1-bit register for signal <right_reg>.
+    Found 10-bit adder for signal <scalar_next$addsub0000> created at line 39.
+    Found 10-bit register for signal <scalar_reg>.
+    Found 1-bit register for signal <sel_reg>.
+    Found 1-bit register for signal <start_reg>.
+    Found 9-bit register for signal <state_reg>.
+    Found 1-bit register for signal <up_reg>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <nes_driver> synthesized.
+
+
+Synthesizing Unit <nes_driver_top>.
+    Related source file is "C:/My_Designs/project/project/src/nes_driver_top.vhd".
+WARNING:Xst:647 - Input <btn<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <nes_driver_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 10
+ 1-bit register                                        : 8
+ 10-bit register                                       : 1
+ 9-bit register                                        : 1
+# Comparators                                          : 2
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+# Comparators                                          : 2
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <cd/q_1> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_2> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_3> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_4> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_5> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_6> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_7> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_8> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_9> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_10> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_11> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_12> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_13> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_14> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_15> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_16> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_17> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_18> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_19> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_20> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_21> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_22> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <cd/q_23> of sequential type is unconnected in block <nes_driver_top>.
+WARNING:Xst:2677 - Node <state_reg_8> of sequential type is unconnected in block <nes_driver>.
+WARNING:Xst:2677 - Node <state_reg_7> of sequential type is unconnected in block <nes_driver>.
+WARNING:Xst:2677 - Node <state_reg_6> of sequential type is unconnected in block <nes_driver>.
+WARNING:Xst:2677 - Node <state_reg_5> of sequential type is unconnected in block <nes_driver>.
+WARNING:Xst:2677 - Node <state_reg_4> of sequential type is unconnected in block <nes_driver>.
+WARNING:Xst:2677 - Node <state_reg_3> of sequential type is unconnected in block <nes_driver>.
+WARNING:Xst:2677 - Node <state_reg_1> of sequential type is unconnected in block <nes_driver>.
+WARNING:Xst:2677 - Node <state_reg_0> of sequential type is unconnected in block <nes_driver>.
+WARNING:Xst:2677 - Node <state_reg_2> of sequential type is unconnected in block <nes_driver>.
+
+Optimizing unit <nes_driver_top> ...
+
+Optimizing unit <nes_driver> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block nes_driver_top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 29
+ Flip-Flops                                            : 29
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : nes_driver_top.ngr
+Top Level Output File Name         : nes_driver_top
+Output Format                      : NGC
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 108
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 18
+#      LUT2                        : 21
+#      LUT2_D                      : 1
+#      LUT3                        : 1
+#      LUT3_D                      : 4
+#      LUT3_L                      : 1
+#      LUT4                        : 15
+#      LUT4_D                      : 2
+#      MUXCY                       : 18
+#      VCC                         : 1
+#      XORCY                       : 21
+# FlipFlops/Latches                : 29
+#      FDC                         : 11
+#      FDCE                        : 10
+#      FDE                         : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 2
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       36  out of   4656     0%  
+ Number of Slice Flip Flops:             29  out of   9312     0%  
+ Number of 4 input LUTs:                 67  out of   9312     0%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  13  out of    232     5%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+mclk                               | BUFGP                  | 1     |
+cd/q_01                            | BUFG                   | 28    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+btn<3>                             | IBUF                   | 21    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.041ns (Maximum Frequency: 198.385MHz)
+   Minimum input arrival time before clock: 2.986ns
+   Maximum output required time after clock: 7.334ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mclk'
+  Clock period: 2.232ns (frequency: 448.039MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.232ns (Levels of Logic = 2)
+  Source:            cd/q_0 (FF)
+  Destination:       cd/q_0 (FF)
+  Source Clock:      mclk rising
+  Destination Clock: mclk rising
+
+  Data Path: cd/q_0 to cd/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.380  cd/q_0 (cd/q_01)
+     INV:I->O              0   0.612   0.000  cd/Mcount_q_lut<0>_INV_0 (cd/Mcount_q_lut<0>)
+     XORCY:LI->O           1   0.458   0.000  cd/Mcount_q_xor<0> (Result<0>)
+     FDC:D                     0.268          cd/q_0
+    ----------------------------------------
+    Total                      2.232ns (1.852ns logic, 0.380ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cd/q_01'
+  Clock period: 5.041ns (frequency: 198.385MHz)
+  Total number of paths / destination ports: 590 / 38
+-------------------------------------------------------------------------
+Delay:               5.041ns (Levels of Logic = 3)
+  Source:            nes/counter_reg_7 (FF)
+  Destination:       nes/counter_reg_9 (FF)
+  Source Clock:      cd/q_01 rising
+  Destination Clock: cd/q_01 rising
+
+  Data Path: nes/counter_reg_7 to nes/counter_reg_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.532  nes/counter_reg_7 (nes/counter_reg_7)
+     LUT2_D:I0->LO         1   0.612   0.103  nes/counter_reg_cmp_eq00001_SW0 (N26)
+     LUT4:I3->O           11   0.612   0.823  nes/counter_reg_cmp_eq00001 (nes/N3)
+     LUT4:I2->O           10   0.612   0.750  nes/counter_reg_not00011 (nes/counter_reg_not0001)
+     FDCE:CE                   0.483          nes/counter_reg_0
+    ----------------------------------------
+    Total                      5.041ns (2.833ns logic, 2.208ns route)
+                                       (56.2% logic, 43.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cd/q_01'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.986ns (Levels of Logic = 2)
+  Source:            ja1 (PAD)
+  Destination:       nes/right_reg (FF)
+  Destination Clock: cd/q_01 rising
+
+  Data Path: ja1 to nes/right_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  ja1_IBUF (ja1_IBUF)
+     INV:I->O              8   0.612   0.643  nes/left_reg_not00011_INV_0 (nes/left_reg_not0001)
+     FDE:D                     0.268          nes/left_reg
+    ----------------------------------------
+    Total                      2.986ns (1.986ns logic, 1.000ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cd/q_01'
+  Total number of paths / destination ports: 28 / 10
+-------------------------------------------------------------------------
+Offset:              7.334ns (Levels of Logic = 4)
+  Source:            nes/counter_reg_7 (FF)
+  Destination:       ja2 (PAD)
+  Source Clock:      cd/q_01 rising
+
+  Data Path: nes/counter_reg_7 to ja2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.514   0.532  nes/counter_reg_7 (nes/counter_reg_7)
+     LUT2_D:I0->LO         1   0.612   0.103  nes/counter_reg_cmp_eq00001_SW0 (N26)
+     LUT4:I3->O           11   0.612   0.823  nes/counter_reg_cmp_eq00001 (nes/N3)
+     LUT4:I2->O            1   0.612   0.357  nes/state_next_cmp_eq00001 (ja2_OBUF)
+     OBUF:I->O                 3.169          ja2_OBUF (ja2)
+    ----------------------------------------
+    Total                      7.334ns (5.519ns logic, 1.815ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.90 secs
+ 
+--> 
+
+Total memory usage is 216560 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   33 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

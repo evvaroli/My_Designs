@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">btn&lt;2:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">cd/q_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver_top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">state_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
+</msg>
+
+</messages>
+
