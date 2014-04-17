@@ -41,9 +41,9 @@ VerilogDirsChanged=0
 PHYSSYNTH_STATUS=none
 IMPL_STATUS=warnings
 FUNC_LIB=project
-POST_LIB=project_post_synthesis
 RUN_MODE_IMPL=0
 LAST_IMPL_STATUS=warnings
+POST_LIB=project_post_synthesis
 TIM_LIB=project_timing
 
 [LocalVerilogSets]
@@ -72,7 +72,7 @@ impl_opt(use_partitions_in_flow)=0
 impl_opt(partitions_file)=synthesis\xpartition.pxml
 Macro_Search_Path=
 impl_opt(use_partitions_file)=0
-impl_opt(smart_guide_file)=
+impl_opt(smart_guide_file)=implement\ver1\rev1\nes_driver_top_guide.ncd
 impl_opt(use_smart_guide)=0
 impl_opt(edif_str)=synthesis\nes_driver_top.ngc
 impl_opt(_family_sel)=Xilinx14x SPARTAN3E
@@ -164,7 +164,7 @@ impl_opt(create_readback_data_files)=0
 impl_opt(allow_selectmap_pins_to_persist)=0
 impl_opt(create_logic_allocation_file)=0
 impl_opt(create_mask_file)=0
-impl_opt(fpga_start_up_clock)=JTAG Clock
+impl_opt(fpga_start_up_clock)=CCLK
 impl_opt(enable_internal_done_pipe)=0
 impl_opt(done_output_events)=4
 impl_opt(enable_outputs)=5
@@ -236,7 +236,7 @@ UCF=..\..\nexys2_500k.ucf
 FAMILY=Xilinx14x SPARTAN3E
 DEVICE=3s500efg320
 SPEED=-5
-NETLIST=synthesis\nes_driver_top.ngc
+NETLIST=synthesis\vga_bsprite2a_top.ngc
 IS_BAT_MODE=0
 BAT_FILE=
 DEF_UCF=2
@@ -250,29 +250,13 @@ SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*
 JOB_SFM_RESOURCE=
 SYNTH_TOOL_RESET=0
-LAST_RUN=1397693931
+LAST_RUN=1397764154
 OUTPUT_NETLIST=IMPLEMENT\TIME_SIM.VHD
 OUTPUT_SDF=IMPLEMENT\TIME_SIM.SDF
 
-[Files]
-/nes_driver.vhd=-1
-/nes_driver_top.vhd=-1
-/ClockDivider.vhd=-1
-post-synthesis/..\..\synthesis\nes_driver_top.vhd=-1
-timing/..\..\IMPLEMENT\TIME_SIM.VHD=-1
-timing/..\..\IMPLEMENT\TIME_SIM.SDF=-1
-
-[Files.Data]
-.\src\nes_driver.vhd=VHDL Source Code
-.\src\nes_driver_top.vhd=VHDL Source Code
-.\src\ClockDivider.vhd=VHDL Source Code
-.\synthesis\nes_driver_top.vhd=VHDL Source Code
-.\IMPLEMENT\TIME_SIM.VHD=VHDL SOURCE CODE
-.\IMPLEMENT\TIME_SIM.SDF=SDF FILE
-
 [SYNTHESIS]
 OBSOLETE_ALIASES=1
-TOPLEVEL=nes_driver_top
+TOPLEVEL=vga_bsprite2a_top
 FAMILY=Xilinx14x SPARTAN3E
 DEVICE=3s500efg320
 SPEED=-5
@@ -359,29 +343,71 @@ JOB_DESCRIPTION=SynthesisTask
 SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log*.*:implement*.*
 JOB_SFM_RESOURCE=
-LAST_RUN=1397693592
-OUTPUT_NETLIST=synthesis\nes_driver_top.ngc
-OUTPUT_SIMUL_NETLIST=synthesis\nes_driver_top.vhd
+LAST_RUN=1397763919
+OUTPUT_NETLIST=synthesis\vga_bsprite2a_top.ngc
+OUTPUT_SIMUL_NETLIST=synthesis\vga_bsprite2a_top.vhd
+
 [PHYS_SYNTHESIS]
 FAMILY=Xilinx14x SPARTAN3E
 DEVICE=3s500efg320
 SPEED=-5
-IN_DESIGN=synthesis\nes_driver_top.ngc
+IN_DESIGN=synthesis\vga_bsprite2a_top.ngc
 OUT_DESIGN=
 IN_CONSTRAINT=
 OUT_CONSTRAINT=
 REPORT=
+
 [SIM.POST]
 TOPLEVEL=nes_driver_top
+
 [Groups]
 post-synthesis=1
 timing=1
+
 [SIM.TIME]
 SDF_PATH=IMPLEMENT\TIME_SIM.SDF
 TOPLEVEL=nes_driver_top
+
 [SpecTracer]
 WindowVisible=0
+
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
 Selected=
+
+[sdf.ea.vga_bsprite2a_top-vga_bsprite2a_top]
+0=IMPLEMENT\TIME_SIM.SDF| /vga_bsprite2a_top, Average, No
+
+[Files]
+/tank_sprite2.vhd=-1
+/vga_bsprite2a.vhd=-1
+/whosTurn.vhd=-1
+/x7segb.vhd=-1
+/vga_640x480.vhd=-1
+/nes_driver.vhd=-1
+/tank_sprite.vhd=-1
+/ClockDivider.vhd=-1
+/clkdiv.vhd=-1
+/vga_bsprite2a_top.vhd=-1
+/nes_driver_top.vhd=-1
+post-synthesis/..\..\synthesis\vga_bsprite2a_top.vhd=-1
+timing/..\..\IMPLEMENT\TIME_SIM.VHD=-1
+timing/..\..\IMPLEMENT\TIME_SIM.SDF=-1
+
+[Files.Data]
+.\src\tank_sprite2.vhd=VHDL Source Code
+.\src\vga_bsprite2a.vhd=VHDL Source Code
+.\src\whosTurn.vhd=VHDL Source Code
+.\src\x7segb.vhd=VHDL Source Code
+.\src\vga_640x480.vhd=VHDL Source Code
+.\src\nes_driver.vhd=VHDL Source Code
+.\src\tank_sprite.vhd=VHDL Source Code
+.\src\ClockDivider.vhd=VHDL Source Code
+.\src\clkdiv.vhd=VHDL Source Code
+.\src\vga_bsprite2a_top.vhd=VHDL Source Code
+.\src\nes_driver_top.vhd=VHDL Source Code
+
+.\synthesis\vga_bsprite2a_top.vhd=VHDL Source Code
+.\IMPLEMENT\TIME_SIM.VHD=VHDL SOURCE CODE
+.\IMPLEMENT\TIME_SIM.SDF=SDF FILE

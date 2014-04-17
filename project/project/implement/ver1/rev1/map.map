@@ -1,23 +1,34 @@
 Release 14.7 Map P.20131013 (nt)
-Xilinx Map Application Log File for Design 'nes_driver_top'
+Xilinx Map Application Log File for Design 'vga_bsprite2a_top'
 
 Design Information
 ------------------
 Command Line   : map -p 3S500EFG320-5 -o map.ncd -pr off -cm area -ir off -c 100
-nes_driver_top.ngd nes_driver_top.pcf 
+vga_bsprite2a_top.ngd vga_bsprite2a_top.pcf 
 Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Apr 16 20:19:08 2014
+Mapped Date    : Thu Apr 17 15:49:23 2014
 
 Mapping design into LUTs...
 Writing file map.ngm...
 Running directed packing...
+WARNING:Pack:266 - The function generator M2<10>11 failed to merge with F5
+   multiplexer U3/Mmux_M2_mux0000_82_SW0_f5.  There is a conflict for the FXMUX.
+    The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
 Writing design file "map.ncd"...
+WARNING:PhysDesignRules:367 - The signal <sw<4>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw<5>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw<6>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <sw<7>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <btn<0>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <btn<1>_IBUF> is incomplete. The signal
@@ -30,30 +41,30 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    3
+Number of warnings:    8
 Logic Utilization:
-  Number of Slice Flip Flops:            29 out of   9,312    1%
-  Number of 4 input LUTs:                48 out of   9,312    1%
+  Number of Slice Flip Flops:           105 out of   9,312    1%
+  Number of 4 input LUTs:               734 out of   9,312    7%
 Logic Distribution:
-  Number of occupied Slices:             44 out of   4,656    1%
-    Number of Slices containing only related logic:      44 out of      44 100%
-    Number of Slices containing unrelated logic:          0 out of      44   0%
+  Number of occupied Slices:            424 out of   4,656    9%
+    Number of Slices containing only related logic:     424 out of     424 100%
+    Number of Slices containing unrelated logic:          0 out of     424   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          67 out of   9,312    1%
-    Number used as logic:                48
-    Number used as a route-thru:         19
+  Total Number of 4 input LUTs:         809 out of   9,312    8%
+    Number used as logic:               734
+    Number used as a route-thru:         75
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 16 out of     232    6%
-  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of bonded IOBs:                 38 out of     232   16%
+  Number of BUFGMUXs:                     3 out of      24   12%
 
-Average Fanout of Non-Clock Nets:                2.48
+Average Fanout of Non-Clock Nets:                4.13
 
-Peak Memory Usage:  214 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   2 secs 
+Peak Memory Usage:  217 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
 
 NOTES:
 

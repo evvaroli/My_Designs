@@ -1,3 +1,11 @@
 i<>.\src\nes_driver.vhd
 i<>.\src\nes_driver_top.vhd
 i<>.\src\ClockDivider.vhd
+i<>.\src\vga_bsprite2a.vhd
+i<>.\src\whosTurn.vhd
+i<>.\src\vga_bsprite2a_top.vhd
+i<>.\src\clkdiv.vhd
+i<>.\src\tank_sprite.vhd
+i<>.\src\tank_sprite2.vhd
+i<>.\src\vga_640x480.vhd
+i<>.\src\x7segb.vhd

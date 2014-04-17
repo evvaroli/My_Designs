@@ -1,7 +1,23 @@
-24
+373
+~E 1 "./../src/clkdiv.vhd" 6 clkdiv
+~A 1 "./../src/clkdiv.vhd" 17 clkdiv
 ~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
 ~A 1 "./../src/ClockDivider.vhd" 13 ClockDivider
 ~E 1 "./../src/nes_driver.vhd" 5 nes_driver
 ~A 1 "./../src/nes_driver.vhd" 23 nes_driver
 ~E 1 "./../src/nes_driver_top.vhd" 4 nes_driver_top
 ~A 1 "./../src/nes_driver_top.vhd" 20 nes_driver_top
+~E 1 "./../src/tank_sprite.vhd" 6 tank_sprite
+~A 1 "./../src/tank_sprite.vhd" 14 tank_sprite
+~E 1 "./../src/tank_sprite2.vhd" 6 tank_sprite2
+~A 1 "./../src/tank_sprite2.vhd" 14 tank_sprite2
+~E 1 "./../src/vga_640x480.vhd" 4 vga_640x480
+~A 1 "./../src/vga_640x480.vhd" 13 vga_640x480
+~E 1 "./../src/vga_bsprite2a.vhd" 4 vga_bsprite2a
+~A 1 "./../src/vga_bsprite2a.vhd" 32 vga_bsprite2a
+~E 1 "./../src/vga_bsprite2a_top.vhd" 5 vga_bsprite2a_top
+~A 1 "./../src/vga_bsprite2a_top.vhd" 29 vga_bsprite2a_top
+~E 1 "./../src/whosTurn.vhd" 4 whosTurn
+~A 1 "./../src/whosTurn.vhd" 18 whosTurn
+~E 1 "./../src/x7segb.vhd" 6 x7segb
+~A 1 "./../src/x7segb.vhd" 17 x7segb

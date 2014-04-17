@@ -1,5 +1,13 @@
+.\src\tank_sprite2.vhd
+.\src\vga_bsprite2a.vhd
+.\src\whosTurn.vhd
+.\src\x7segb.vhd
+.\src\vga_640x480.vhd
 .\src\nes_driver.vhd
-.\src\nes_driver_top.vhd
+.\src\tank_sprite.vhd
 .\src\ClockDivider.vhd
-.\synthesis\nes_driver_top.vhd
+.\src\clkdiv.vhd
+.\src\vga_bsprite2a_top.vhd
+.\src\nes_driver_top.vhd
+.\synthesis\vga_bsprite2a_top.vhd
 .\IMPLEMENT\TIME_SIM.VHD

@@ -1,0 +1,12 @@
+V 000045 11 234 1397758150604 nes_driver_top
+E nes_driver_top VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P ja1 _in STD_LOGIC = 'X'
+P ja2 _out STD_LOGIC
+P ja3 _out STD_LOGIC
+P mclk _in STD_LOGIC = 'X'
+P ld _out STD_LOGIC_VECTOR[7:0]
+P btn _in STD_LOGIC_VECTOR[3:0]
+X nes_driver_top

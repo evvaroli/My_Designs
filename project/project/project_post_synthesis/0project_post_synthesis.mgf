@@ -1,0 +1,34 @@
+V 000045 11 234 1397758148810 nes_driver_top
+E nes_driver_top VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P ja1 _in STD_LOGIC = 'X'
+P ja2 _out STD_LOGIC
+P ja3 _out STD_LOGIC
+P mclk _in STD_LOGIC = 'X'
+P ld _out STD_LOGIC_VECTOR[7:0]
+P btn _in STD_LOGIC_VECTOR[3:0]
+X nes_driver_top
+V 000048 11 533 1397758149194 vga_bsprite2a_top
+E vga_bsprite2a_top VHDL
+L IEEE;
+U ieee.std_logic_1164;
+PL 0
+P vsync _out STD_LOGIC
+P upBTN _in STD_LOGIC = 'X'
+P aBTN _in STD_LOGIC = 'X'
+P rightBTN _in STD_LOGIC = 'X'
+P leftBTN _in STD_LOGIC = 'X'
+P ja1 _in STD_LOGIC = 'X'
+P ja2 _out STD_LOGIC
+P ja3 _out STD_LOGIC
+P downBTN _in STD_LOGIC = 'X'
+P hsync _out STD_LOGIC
+P mclk _in STD_LOGIC = 'X'
+P blue _out STD_LOGIC_VECTOR[1:0]
+P green _out STD_LOGIC_VECTOR[2:0]
+P red _out STD_LOGIC_VECTOR[2:0]
+P btn _in STD_LOGIC_VECTOR[3:0]
+P sw _in STD_LOGIC_VECTOR[7:0]
+X vga_bsprite2a_top
