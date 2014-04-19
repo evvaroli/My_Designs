@@ -1,4 +1,4 @@
-373
+464
 ~E 1 "./../src/clkdiv.vhd" 6 clkdiv
 ~A 1 "./../src/clkdiv.vhd" 17 clkdiv
 ~E 1 "./../src/ClockDivider.vhd" 5 ClockDivider
@@ -14,10 +14,10 @@
 ~E 1 "./../src/vga_640x480.vhd" 4 vga_640x480
 ~A 1 "./../src/vga_640x480.vhd" 13 vga_640x480
 ~E 1 "./../src/vga_bsprite2a.vhd" 4 vga_bsprite2a
-~A 1 "./../src/vga_bsprite2a.vhd" 32 vga_bsprite2a
+~A 1 "./../src/vga_bsprite2a.vhd" 36 vga_bsprite2a
 ~E 1 "./../src/vga_bsprite2a_top.vhd" 5 vga_bsprite2a_top
 ~A 1 "./../src/vga_bsprite2a_top.vhd" 29 vga_bsprite2a_top
 ~E 1 "./../src/whosTurn.vhd" 4 whosTurn
-~A 1 "./../src/whosTurn.vhd" 18 whosTurn
+~A 1 "./../src/whosTurn.vhd" 17 whosTurn
 ~E 1 "./../src/x7segb.vhd" 6 x7segb
 ~A 1 "./../src/x7segb.vhd" 17 x7segb

@@ -55,6 +55,9 @@ a_to_g<4>   |    7.991(R)|mclk_BUFGP        |   0.000|
 a_to_g<5>   |    7.991(R)|mclk_BUFGP        |   0.000|
 a_to_g<6>   |    7.991(R)|mclk_BUFGP        |   0.000|
 an<0>       |    7.001(R)|mclk_BUFGP        |   0.000|
+an<1>       |    7.713(R)|mclk_BUFGP        |   0.000|
+an<2>       |    7.001(R)|mclk_BUFGP        |   0.000|
+an<3>       |    7.001(R)|mclk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock mclk
@@ -65,46 +68,8 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 mclk           |    4.221|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-sw<0>          |blue<0>        |   12.696|
-sw<0>          |blue<1>        |   12.696|
-sw<0>          |green<0>       |   12.696|
-sw<0>          |green<1>       |   11.984|
-sw<0>          |green<2>       |   12.696|
-sw<0>          |red<0>         |   11.984|
-sw<0>          |red<1>         |   12.262|
-sw<0>          |red<2>         |   12.262|
-sw<1>          |blue<0>        |   12.696|
-sw<1>          |blue<1>        |   12.696|
-sw<1>          |green<0>       |   12.696|
-sw<1>          |green<1>       |   11.984|
-sw<1>          |green<2>       |   12.696|
-sw<1>          |red<0>         |   11.984|
-sw<1>          |red<1>         |   12.262|
-sw<1>          |red<2>         |   12.262|
-sw<2>          |blue<0>        |   11.757|
-sw<2>          |blue<1>        |   11.757|
-sw<2>          |green<0>       |   11.757|
-sw<2>          |green<1>       |   11.045|
-sw<2>          |green<2>       |   11.757|
-sw<2>          |red<0>         |   11.045|
-sw<2>          |red<1>         |   11.323|
-sw<2>          |red<2>         |   11.323|
-sw<3>          |blue<0>        |   11.757|
-sw<3>          |blue<1>        |   11.757|
-sw<3>          |green<0>       |   11.757|
-sw<3>          |green<1>       |   11.045|
-sw<3>          |green<2>       |   11.757|
-sw<3>          |red<0>         |   11.045|
-sw<3>          |red<1>         |   11.323|
-sw<3>          |red<2>         |   11.323|
----------------+---------------+---------+
 
-
-Analysis completed Thu Apr 17 15:49:29 2014 
+Analysis completed Sat Apr 19 18:22:22 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

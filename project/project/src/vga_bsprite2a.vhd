@@ -5,6 +5,10 @@ entity vga_bsprite2a is
     port ( vidon: in std_logic;		
 		   tank1Turn : in std_logic;
 		   tank2Turn : in std_logic; 
+		   tank1Angle : out std_logic_vector(1 downto 0);
+		   tank2Angle : out std_logic_vector(1 downto 0);
+		   tank1_angle : out std_logic_vector(7 downto 0);
+		   tank2_angle : out std_logic_vector(7 downto 0);
 		   aBTN : in std_logic; 
 		   upBTN : in std_logic;
 		   downBTN : in std_logic;
@@ -37,7 +41,12 @@ constant vbp: std_logic_vector(9 downto 0) := "0000011111";
 constant w: integer := 100;
 constant h: integer := 100;	 
 constant tw: integer := 32;
-constant th: integer := 29;
+constant th: integer := 29;		
+constant zero :std_logic_vector(7 downto 0)	:= "00000000";
+constant thirty :std_logic_vector(7 downto 0)	:= "00011110";
+constant sixty :std_logic_vector(7 downto 0)	:= "00111100";
+constant ninety :std_logic_vector(7 downto 0)	:= "01011010";
+
 signal xpix1, xpix2, xpix3, xpix4, ypix1, ypix2, ypix3, ypix4: std_logic_vector(9 downto 0);			
 signal rom_addr1, rom_addr2 : std_logic_vector(16 downto 0);
 signal C1: std_logic_vector(9 downto 0)  := "0001010100";
@@ -49,7 +58,9 @@ signal spriteon1, spriteon1f, spriteon2, spriteon2f, spriteonGrnd, R, G, B: std_
 signal spriteonB1, spriteonB2, spriteonB3, spriteonB4, spriteonB5: std_logic;
 signal clk3 : std_logic;
 signal hill1, hill2, hill3, hill4, hill5 : std_logic_vector(7 downto 0); 
-signal rom_pix1, rom_pix2: std_logic_vector(10 downto 0);
+signal rom_pix1, rom_pix2: std_logic_vector(10 downto 0);  	
+signal tank1_angle_calc, tank2_angle_calc: std_logic_vector(7 downto 0);
+
 begin 
 	--fall1 <= '1';
 	--jump1 <= "1111";
@@ -67,16 +78,52 @@ begin
 	process(clk, clr)
 	begin			
 		if clr = '1' then
-			q <= X"000000";
+			q <= X"000000";	
 		elsif clk'event and clk = '1' then
 			q <= q + 1;	
 		end if;
 	end process;
 	clk3 <= q(17);
 	
-	process(clk3, C1, C2, leftBTN, rightBTN)
+	process(clk3, C1, C2, leftBTN, rightBTN, upBTN, downBTN)
 	begin
-		if clk3'event and clk3 = '1' then
+		if clk3'event and clk3 = '1' then 
+			-- angle calculation 
+			if tank1Turn = '1' then	  -- tank 1 turn
+				if upBTN = '1' then
+					if tank1_angle_calc = ninety then	
+						tank1_angle_calc <= ninety;
+					else
+						tank1_angle_calc <= tank1_angle_calc + 1;
+					end if;
+				elsif downBTN = '1' then
+					if tank1_angle_calc = zero then
+						tank1_angle_calc <= zero;
+					else
+						tank1_angle_calc <= tank1_angle_calc - 1;
+					end if;
+				else
+					tank1_angle_calc <= tank1_angle_calc; 
+				end if;
+			else			 -- tank 2 turn
+				if upBTN = '1' then
+					if tank2_angle_calc = ninety then	
+						tank2_angle_calc <= ninety;
+					else
+						tank2_angle_calc <= tank2_angle_calc + 1;
+					end if;
+				elsif downBTN = '1' then
+					if tank2_angle_calc = zero then
+						tank2_angle_calc <= zero;
+					else
+						tank2_angle_calc <= tank2_angle_calc - 1;
+					end if;
+				else
+					tank2_angle_calc <= tank2_angle_calc; 
+				end if;
+			end if;
+			
+			-- tank movement
 			if leftBTN = '1' then 
 				if tank1Turn = '1' then	
 					if C1 > 0 then
@@ -231,7 +278,34 @@ begin
 		
 		-- sand = "11111010"
 		-- sky = "00001111"
-  	end process;
+  	end process;   
+
+	process(tank1_angle_calc, tank2_angle_calc)
+	begin
+		if tank1_angle_calc >= thirty then
+			if tank1_angle_calc >= sixty then
+				tank1Angle <= "11";
+			else
+				tank1Angle <= "10";
+			end if;
+		else 
+			tank1Angle <= "00";
+		end if;
+		
+		if tank2_angle_calc >= thirty then
+			if tank2_angle_calc >= sixty then
+				tank2Angle <= "11";
+			else
+				tank2Angle <= "10";
+			end if;
+		else 
+			tank2Angle <= "00";
+		end if;	
+	end process;	 
+	
+	
+	tank1_angle <= tank1_angle_calc;
+	tank2_angle <= tank2_angle_calc;
    end vga_bsprite2a;
 
 

@@ -44,14 +44,17 @@ Clock mclk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-a_to_g<0>   |   10.746(R)|mclk_BUFGP        |   0.000|
-a_to_g<1>   |   11.152(R)|mclk_BUFGP        |   0.000|
-a_to_g<2>   |   10.660(R)|mclk_BUFGP        |   0.000|
-a_to_g<3>   |   10.935(R)|mclk_BUFGP        |   0.000|
-a_to_g<4>   |   11.031(R)|mclk_BUFGP        |   0.000|
-a_to_g<5>   |   10.430(R)|mclk_BUFGP        |   0.000|
-a_to_g<6>   |   11.220(R)|mclk_BUFGP        |   0.000|
-an<0>       |    8.835(R)|mclk_BUFGP        |   0.000|
+a_to_g<0>   |   10.830(R)|mclk_BUFGP        |   0.000|
+a_to_g<1>   |   11.369(R)|mclk_BUFGP        |   0.000|
+a_to_g<2>   |   11.292(R)|mclk_BUFGP        |   0.000|
+a_to_g<3>   |   11.578(R)|mclk_BUFGP        |   0.000|
+a_to_g<4>   |   11.719(R)|mclk_BUFGP        |   0.000|
+a_to_g<5>   |   11.421(R)|mclk_BUFGP        |   0.000|
+a_to_g<6>   |   11.909(R)|mclk_BUFGP        |   0.000|
+an<0>       |    8.576(R)|mclk_BUFGP        |   0.000|
+an<1>       |   10.919(R)|mclk_BUFGP        |   0.000|
+an<2>       |    9.729(R)|mclk_BUFGP        |   0.000|
+an<3>       |    9.228(R)|mclk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock mclk
@@ -59,49 +62,11 @@ Clock to Setup on destination clock mclk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-mclk           |    3.551|         |         |         |
+mclk           |    3.541|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-sw<0>          |blue<0>        |   20.199|
-sw<0>          |blue<1>        |   20.169|
-sw<0>          |green<0>       |   19.735|
-sw<0>          |green<1>       |   18.675|
-sw<0>          |green<2>       |   19.681|
-sw<0>          |red<0>         |   18.803|
-sw<0>          |red<1>         |   19.322|
-sw<0>          |red<2>         |   19.808|
-sw<1>          |blue<0>        |   20.371|
-sw<1>          |blue<1>        |   20.341|
-sw<1>          |green<0>       |   19.907|
-sw<1>          |green<1>       |   18.847|
-sw<1>          |green<2>       |   19.853|
-sw<1>          |red<0>         |   18.975|
-sw<1>          |red<1>         |   19.494|
-sw<1>          |red<2>         |   19.980|
-sw<2>          |blue<0>        |   17.829|
-sw<2>          |blue<1>        |   17.799|
-sw<2>          |green<0>       |   17.365|
-sw<2>          |green<1>       |   16.305|
-sw<2>          |green<2>       |   17.311|
-sw<2>          |red<0>         |   16.433|
-sw<2>          |red<1>         |   16.952|
-sw<2>          |red<2>         |   17.438|
-sw<3>          |blue<0>        |   17.711|
-sw<3>          |blue<1>        |   17.681|
-sw<3>          |green<0>       |   17.247|
-sw<3>          |green<1>       |   16.187|
-sw<3>          |green<2>       |   17.193|
-sw<3>          |red<0>         |   16.315|
-sw<3>          |red<1>         |   16.834|
-sw<3>          |red<2>         |   17.320|
----------------+---------------+---------+
 
-
-Analysis completed Thu Apr 17 15:49:50 2014 
+Analysis completed Sat Apr 19 18:22:43 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

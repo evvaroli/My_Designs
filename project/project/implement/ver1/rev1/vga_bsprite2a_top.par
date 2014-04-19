@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-JIMBOB-PC::  Thu Apr 17 15:49:31 2014
+JIMBOB-PC::  Sat Apr 19 18:22:23 2014
 
 par -w -ol std -t 1 map.ncd vga_bsprite2a_top.ncd vga_bsprite2a_top.pcf 
 
@@ -44,7 +44,7 @@ Design Summary Report:
 
 
    Number of BUFGMUXs                        3 out of 24     12%
-   Number of Slices                        424 out of 4656    9%
+   Number of Slices                        442 out of 4656    9%
       Number of SLICEMs                     16 out of 2328    1%
 
 
@@ -57,6 +57,10 @@ Router effort level (-rl):    Standard
 Starting initial Timing Analysis.  REAL time: 2 secs 
 Finished initial Timing Analysis.  REAL time: 2 secs 
 
+WARNING:Par:288 - The signal sw<0>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sw<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sw<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal sw<3>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal sw<4>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal sw<5>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal sw<6>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -70,37 +74,37 @@ Total REAL time at the beginning of Placer: 2 secs
 Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:b08b5c7e) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:4ee78a95) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:b08b5c7e) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:4ee78a95) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:b08b5c7e) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:4ee78a95) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:91331c80) REAL time: 2 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:41d004f9) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:91331c80) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:41d004f9) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:91331c80) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:41d004f9) REAL time: 2 secs 
 
 Phase 7.8  Global Placement
-.......
-...
-Phase 7.8  Global Placement (Checksum:e82c5d6) REAL time: 6 secs 
+.................
+.....
+Phase 7.8  Global Placement (Checksum:c11a35b1) REAL time: 6 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:e82c5d6) REAL time: 6 secs 
+Phase 8.5  Local Placement Optimization (Checksum:c11a35b1) REAL time: 6 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:3c3f522) REAL time: 6 secs 
+Phase 9.18  Placement Optimization (Checksum:271b9024) REAL time: 6 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:3c3f522) REAL time: 6 secs 
+Phase 10.5  Local Placement Optimization (Checksum:271b9024) REAL time: 6 secs 
 
 Total REAL time to Placer completion: 6 secs 
 Total CPU  time to Placer completion: 6 secs 
@@ -111,30 +115,30 @@ Writing design to file vga_bsprite2a_top.ncd
 Starting Router
 
 
-Phase  1  : 2971 unrouted;      REAL time: 12 secs 
+Phase  1  : 3143 unrouted;      REAL time: 13 secs 
 
-Phase  2  : 2891 unrouted;      REAL time: 13 secs 
+Phase  2  : 3056 unrouted;      REAL time: 13 secs 
 
-Phase  3  : 674 unrouted;      REAL time: 13 secs 
+Phase  3  : 760 unrouted;      REAL time: 13 secs 
 
-Phase  4  : 680 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  4  : 767 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
 
 Updating file: vga_bsprite2a_top.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
 
-Total REAL time to Router completion: 14 secs 
-Total CPU time to Router completion: 14 secs 
+Total REAL time to Router completion: 15 secs 
+Total CPU time to Router completion: 15 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -152,11 +156,11 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|            U3/q<17> | BUFGMUX_X1Y10| No   |   10 |  0.005     |  0.146      |
+|            U3/q<17> | BUFGMUX_X1Y10| No   |   18 |  0.058     |  0.162      |
 +---------------------+--------------+------+------+------------+-------------+
-|          mclk_BUFGP | BUFGMUX_X2Y11| No   |   20 |  0.017     |  0.148      |
+|          mclk_BUFGP | BUFGMUX_X2Y11| No   |   20 |  0.021     |  0.152      |
 +---------------------+--------------+------+------+------------+-------------+
-|             U1/q<0> |  BUFGMUX_X1Y0| No   |   26 |  0.049     |  0.166      |
+|             U1/q<0> |  BUFGMUX_X1Y0| No   |   29 |  0.064     |  0.167      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -176,14 +180,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     5.324ns|     N/A|           0
-  q<17>                                     | HOLD        |     1.490ns|            |       0|           0
+  Autotimespec constraint for clock net U3/ | SETUP       |         N/A|     5.503ns|     N/A|           0
+  q<17>                                     | HOLD        |     1.465ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net mcl | SETUP       |         N/A|     3.551ns|     N/A|           0
+  Autotimespec constraint for clock net mcl | SETUP       |         N/A|     3.541ns|     N/A|           0
   k_BUFGP                                   | HOLD        |     1.360ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net U1/ | SETUP       |         N/A|     5.449ns|     N/A|           0
-  q<0>                                      | HOLD        |     0.953ns|            |       0|           0
+  Autotimespec constraint for clock net U1/ | SETUP       |         N/A|     4.965ns|     N/A|           0
+  q<0>                                      | HOLD        |     0.973ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -199,18 +203,18 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 7 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 11 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 Total REAL time to PAR completion: 15 secs 
 Total CPU time to PAR completion: 15 secs 
 
-Peak Memory Usage:  228 MB
+Peak Memory Usage:  229 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 9
+Number of warning messages: 13
 Number of info messages: 2
 
 Writing design to file vga_bsprite2a_top.ncd

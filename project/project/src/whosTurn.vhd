@@ -6,7 +6,6 @@ entity whosTurn is
 		clr : in std_logic;	 
 		clk : in std_logic;
 		a : in STD_LOGIC;  
-		x : out std_logic_vector(15 downto 0);
 		start : in STD_LOGIC;
 		tank1 : out STD_LOGIC;
 		tank2 : out STD_LOGIC
@@ -34,8 +33,8 @@ begin
 	C1State : process(a, present_state)
 	begin
 		case present_state is
-			
-			when tank1Turn =>	
+								
+			when tank1Turn =>	  
 				if a = '1' then
 					next_state <= tank1_to_tank2;
 				else next_state <= tank1Turn;
@@ -66,23 +65,18 @@ begin
 			when tank1Turn =>		-- a released
 				tank1 <= '1';
 				tank2 <= '0';
-				x <= "0000000000000001";
 			when tank1_to_tank2 =>	 -- a pressed
 				tank1 <= '1';
 			tank2 <= '0';	  
-				x <= "0000000000000010";
 			when tank2Turn => 		 -- a released
 				tank1 <= '0';
 				tank2 <= '1'; 
-				x <= "0000000000000011";
 			when tank2_to_tank1 =>	  -- a pressed
 				tank1 <= '0';
 				tank2 <= '1';
-				x <= "0000000000000100";
 			when others => 
 				tank1 <= '1';
-			tank2 <= '0';  
-			x <= "0000000000000101";
+				tank2 <= '0'; 
 		end case;
 	end process;  
 	

@@ -250,7 +250,7 @@ SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*
 JOB_SFM_RESOURCE=
 SYNTH_TOOL_RESET=0
-LAST_RUN=1397764154
+LAST_RUN=1397946127
 OUTPUT_NETLIST=IMPLEMENT\TIME_SIM.VHD
 OUTPUT_SDF=IMPLEMENT\TIME_SIM.SDF
 
@@ -343,7 +343,7 @@ JOB_DESCRIPTION=SynthesisTask
 SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log*.*:implement*.*
 JOB_SFM_RESOURCE=
-LAST_RUN=1397763919
+LAST_RUN=1397946079
 OUTPUT_NETLIST=synthesis\vga_bsprite2a_top.ngc
 OUTPUT_SIMUL_NETLIST=synthesis\vga_bsprite2a_top.vhd
 
@@ -372,7 +372,7 @@ TOPLEVEL=nes_driver_top
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=
+HierarchyInformation=vga_bsprite2a_top|vga_bsprite2a_top|0 
 ShowHide=ShowTopLevel
 Selected=
 

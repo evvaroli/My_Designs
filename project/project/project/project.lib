@@ -1,4 +1,4 @@
-timestamp=1397763887439
+timestamp=1397946074563
 
 [clkdiv]
 A/clkdiv=21|./../src/clkdiv.vhd|17|1*72912
@@ -77,34 +77,34 @@ Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_640x480=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [vga_bsprite2a]
-A/vga_bsprite2a=21|./../src/vga_bsprite2a.vhd|32|1*22088
-BinI32/vga_bsprite2a=3*414
-I=0*10353
-I/vga_bsprite2a=0*14931
-M=11|0|vb4|1397763027247|./../src/vga_bsprite2a.vhd|0*9341*0xd9c58614b12fc167a90d527c653b27df0b87fb97|0*10262*0x5eebbfaf24833dd780412b1f91e05209
-M/vga_bsprite2a=21|0|vb4|1397763027252|./../src/vga_bsprite2a.vhd|0*10529*0x90dd4364fa583de40f36d12514f441546d61cb39|0*14823*0x856b180bf611ec746a6bfcb1befebd18
+A/vga_bsprite2a=21|./../src/vga_bsprite2a.vhd|36|1*215919
+BinI32/vga_bsprite2a=3*26215
+I=0*73257
+I/vga_bsprite2a=0*94412
+M=11|0|vb4|1397944543558|./../src/vga_bsprite2a.vhd|0*72074*0x7e6db22bd740d4297fe11238c1f5310cded6f9c2|0*73166*0x5eebbfaf24833dd780412b1f91e05209
+M/vga_bsprite2a=21|0|vb4|1397944857056|./../src/vga_bsprite2a.vhd|0*88694*0x559eac512b49427ddf7b6d5a4b03326454a8304f|0*94304*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/vga_bsprite2a.vhd|4
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_bsprite2a=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [vga_bsprite2a_top]
-A/vga_bsprite2a_top=21|./../src/vga_bsprite2a_top.vhd|29|1*81907
-BinI32/vga_bsprite2a_top=3*13358
+A/vga_bsprite2a_top=21|./../src/vga_bsprite2a_top.vhd|29|1*242531
+BinI32/vga_bsprite2a_top=3*31889
 I=0*32564
-I/vga_bsprite2a_top=0*42134
+I/vga_bsprite2a_top=0*100786
 M=11|0|vb4|1397763027695|./../src/vga_bsprite2a_top.vhd|0*31743*0xbed63a9ac8da86175ca0ea06cf891977af353fc3|0*32465*0x5eebbfaf24833dd780412b1f91e05209
-M/vga_bsprite2a_top=21|0|vb4|1397763028008|./../src/vga_bsprite2a_top.vhd|0*37589*0x3b81f8d38c37c3e445da4c1623a160a8cda395e5|0*42014*0x856b180bf611ec746a6bfcb1befebd18
+M/vga_bsprite2a_top=21|0|vb4|1397946074496|./../src/vga_bsprite2a_top.vhd|0*97985*0x2df63b338f323c86274a146c7b94c76fd43465cb|0*100666*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/vga_bsprite2a_top.vhd|5
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_bsprite2a_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [whosturn]
-A/whosturn=A/whosTurn 21|./../src/whosTurn.vhd|18|1*100466
+A/whosturn=A/whosTurn 21|./../src/whosTurn.vhd|17|1*102569
 BinI32/whosturn=3*13605
-I=0*15790
-I/whosturn=I/whosTurn 0*44078
-M=11|0|vb4|1397763027336|./../src/whosTurn.vhd|0*15381*0x87d0767ef15b7dad8b1abb4b3a8d8b9df2888304|0*15709*0x5eebbfaf24833dd780412b1f91e05209
-M/whosturn=M/whosTurn 21|0|vb4|1397763887354|./../src/whosTurn.vhd|0*42717*0x915b1e1e5badb1c11a8363b5ad81a8e099e91595|0*43985*0x856b180bf611ec746a6bfcb1befebd18
+I=0*44682
+I/whosturn=I/whosTurn 0*46010
+M=11|0|vb4|1397768060811|./../src/whosTurn.vhd|0*44306*0xe4e57da2c2c42e2a32ef504f72003765a9722969|0*44601*0x5eebbfaf24833dd780412b1f91e05209
+M/whosturn=M/whosTurn 21|0|vb4|1397768060813|./../src/whosTurn.vhd|0*44784*0x5c9bd5cefb50c16cdc21a763902a679020a67857|0*45917*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/whosTurn.vhd|4
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/whosturn=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
@@ -121,13 +121,13 @@ Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/x7segb=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [~A]
-ModifyID=373
+ModifyID=464
 Version=73
 
 [~MFT]
-0=94|0project.mgf|44078|4978
-1=12|1project.mgf|100466|2103
-3=11|3project.mgf|13605|871
+0=202|0project.mgf|100786|62453
+1=36|1project.mgf|242531|158552
+3=35|3project.mgf|31889|18109
 
 [~U]
 clkdiv=11|0*29878|
@@ -137,8 +137,8 @@ nes_driver_top=11|0*32675|
 tank_sprite=11|0*3628|
 tank_sprite2=11|0*17242|
 vga_640x480=11|0*22194|
-vga_bsprite2a=11|0*8559|
+vga_bsprite2a=11|0*71130|
 vga_bsprite2a_top=11|0*31116|
-whosturn=whosTurn 11|0*15121|
+whosturn=whosTurn 11|0*44078|
 x7segb=11|0*34905|
 

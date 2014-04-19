@@ -5,46 +5,40 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">191</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">tank_sprite</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M</arg>&gt; does not match.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">196</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr1</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="1541" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">205</arg>: Different binding for component: &lt;<arg fmt="%s" index="3">tank_sprite</arg>&gt;. Port &lt;<arg fmt="%s" index="4">M</arg>&gt; does not match.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">197</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr2</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">149</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr1</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">202</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_pix1</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr2</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">203</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_pix2</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_pix1</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">215</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">156</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_pix2</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">216</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">168</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">219</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">169</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">222</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">172</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">225</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">175</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">235</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">178</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">238</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">188</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">191</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">194</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">241</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/tank_sprite.vhd</arg>&quot; line <arg fmt="%d" index="2">118</arg>: Index value(s) does not match array range, simulation mismatch.
@@ -76,9 +70,6 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">upBTN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">aBTN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
@@ -86,9 +77,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">downBTN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ypix4</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -161,6 +149,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">downBTN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">sig_x</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">sig_sel</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -301,19 +292,13 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">state_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">nes_driver</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">nes/b_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_bsprite2a_top</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">nes/b_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_bsprite2a_top</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">nes/sel_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_bsprite2a_top</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">nes/sel_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_bsprite2a_top</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">nes/start_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_bsprite2a_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">nes/up_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_bsprite2a_top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">nes/down_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_bsprite2a_top</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">nes/start_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">vga_bsprite2a_top</arg>&gt;.
 </msg>
 
 </messages>
