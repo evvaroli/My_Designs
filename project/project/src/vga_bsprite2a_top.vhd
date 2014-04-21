@@ -14,7 +14,12 @@ entity vga_bsprite2a_top is
 		 ja2 : out STD_LOGIC;	-- latch
 		 ja3 : out STD_LOGIC;  -- nes_clock
 		 btn : in STD_LOGIC_VECTOR(3 downto 0);
-		 sw : in STD_LOGIC_VECTOR(7 downto 0);
+		 sw : in STD_LOGIC_VECTOR(7 downto 0); 
+		 hill1 : in STD_LOGIC_VECTOR(7 downto 0);
+		 hill2 : in STD_LOGIC_VECTOR(7 downto 0);
+		 hill3 : in STD_LOGIC_VECTOR(7 downto 0);
+		 hill4 : in STD_LOGIC_VECTOR(7 downto 0);
+		 hill5 : in STD_LOGIC_VECTOR(7 downto 0);
 		 hsync : out STD_LOGIC;
 		 vsync : out STD_LOGIC;
 		 red : out STD_LOGIC_VECTOR(2 downto 0);
@@ -22,7 +27,8 @@ entity vga_bsprite2a_top is
 		 blue : out STD_LOGIC_VECTOR(1 downto 0);
 		 a_to_g : out STD_LOGIC_VECTOR(6 downto 0);
 		 an : out STD_LOGIC_VECTOR(3 downto 0);
-		 dp : out STD_LOGIC
+		 dp : out STD_LOGIC; 
+		 ld : out std_logic_vector(7 downto 0)
 	     );
 end vga_bsprite2a_top;
 
@@ -30,9 +36,14 @@ architecture vga_bsprite2a_top of vga_bsprite2a_top is
 
 	
 
-signal clr, clk25, vidon, sig_a, sig_b, sig_start, sig_sel, sig_right, sig_left, sig_up, sig_down, sig_tank1, sig_tank2: std_logic;
+signal clr, clk25, clk190, vidon, sig_a, sig_b, sig_start, sig_sel, sig_right, sig_left, sig_up, sig_down, sig_tank1, sig_tank2: std_logic;
+signal sig_gameA, sig_gameB, sig_gameStart, sig_gameSel, sig_gameUp, sig_gameDown, sig_gameLeft, sig_gameRight : std_logic;	
+signal sig_screenSel : std_logic;
+signal sig_gameRed, sig_gameGreen, sig_titleRed, sig_titleGreen : std_logic_vector(2 downto 0);
+signal sig_gameBlue, sig_titleBlue : std_logic_vector(1 downto 0);	 
+signal sig_hill1, sig_hill2, sig_hill3, sig_hill4, sig_hill5 : std_logic_vector(7 downto 0);
 signal hc, vc: std_logic_vector(9 downto 0);
-signal M1, M1a: std_logic_vector(0 to 31);
+signal M1, M1a, sig_init_M : std_logic_vector(0 to 31);
 signal angle1, angle2: std_logic_vector(1 downto 0);
 signal M2, M2a: std_logic_vector(31 downto 0);
 signal btns: std_logic_vector(3 downto 0);	 
@@ -41,6 +52,8 @@ signal sig_tank1Angle, sig_tank2Angle : std_logic_vector(1 downto 0);
 signal sig_tank1_angle_calc, sig_tank2_angle_calc : std_logic_vector(7 downto 0);
 signal rom1_addr16, rom2_addr16, rom3_addr16, rom4_addr16: std_logic_vector(4 downto 0); 
 signal rom1_addr, rom2_addr : std_logic_vector(5 downto 0);
+signal sig_init_addr : std_logic_vector(3 downto 0);
+signal sig_current_state, sig_nesBtns : std_logic_vector(7 downto 0);
 begin
 
 	clr <= btn(3);
@@ -49,7 +62,8 @@ begin
 	port map(
 	mclk => mclk,
 	clr => clr,
-	clk25 => clk25
+	clk25 => clk25, 
+	clk190 => clk190
 	);
 	
 	U2: entity work.vga_640x480
@@ -68,11 +82,16 @@ begin
 	vidon => vidon,	 
 	tank1Turn => sig_tank1,
 	tank2Turn => sig_tank2,
-	aBTN => sig_a,
-	upBTN => sig_up,
-	downBTN => sig_down,
-	rightBTN => sig_right,
-	leftBTN => sig_left,
+	hill1 => sig_hill1,
+	hill2 => sig_hill2,
+	hill3 => sig_hill3,
+	hill4 => sig_hill4,
+	hill5 => sig_hill5,
+	aBTN => sig_gameA,
+	upBTN => sig_gameUp,
+	downBTN => sig_gameDown,
+	rightBTN => sig_gameRight,
+	leftBTN => sig_gameLeft,
 	tank1Angle => sig_tank1Angle,
 	tank2Angle => sig_tank2Angle,
 	tank1_angle => sig_tank1_angle_calc,
@@ -89,9 +108,9 @@ begin
 	btn => btns,
 	rom1_addr => rom1_addr,
 	rom2_addr => rom2_addr,
-	red => red,
-	green => green,
-	blue => blue
+	red => sig_gameRed,
+	green => sig_gameGreen,
+	blue => sig_gameBlue
 	);
 	
 	U4: entity work.tank_sprite
@@ -127,8 +146,8 @@ begin
 	port map(
 		clr => clr,	 
 		clk => clk25,
-		a => sig_a,	
-		start => sig_start,
+		a => sig_gameA,	
+		start => sig_gameStart,
 		tank1 => sig_tank1,
 		tank2 => sig_tank2
 	);			
@@ -140,14 +159,8 @@ begin
 		nes_data => ja1,
 		nes_clk => ja3,
 		latch => ja2,
-		a => sig_a,
-		b => sig_b,
-		start => sig_start,
-		sel => sig_sel,
-		up => sig_up,
-		down => sig_down,
-		right => sig_right,
-		left => sig_left
+		nesBtns => sig_nesBtns
+		
 	);		
 	
 	x7 : entity work.x7segb
@@ -161,6 +174,105 @@ begin
 		dp => dp
 	);
 	
-	btns <= btn;
+	buttons : entity work.buttonMux
+	port map(
+		screenSel => sig_screenSel,
+		a => sig_a,
+		b => sig_b,
+		start => sig_start,
+		sel => sig_sel,
+		up => sig_up,
+		down => sig_down,
+		right => sig_right,
+		left => sig_left,
+		gameA => sig_gameA,
+		gameB => sig_gameB,
+		gameStart => sig_gameStart,
+		gameSel => sig_gameSel,
+		gameUp => sig_gameUp,
+		gameDown => sig_gameDown,
+		gameRight => sig_gameRight,
+		gameLeft => sig_gameLeft
+	);	 
+	
+	selector : entity work.screenSelector
+	port map(
+		screenSel => sig_screenSel,
+		titleRed => sig_titleRed,
+		titleGreen => sig_titleGreen,
+		titleBlue => sig_titleBlue,
+		gameRed => sig_gameRed,
+		gameBlue => sig_gameBlue,
+		gameGreen => sig_gameGreen,
+		red => red,
+		green => green,
+		blue => blue
+	);
+	
+	screenstate : entity work.screenState
+	port map(
+		start => sig_start,
+		sel => sig_sel,
+		a => sig_a,
+		b => sig_b,
+		up => sig_up,
+		down => sig_down,
+		left => sig_left,
+		right => sig_right,
+		clr => clr,
+		clk => mclk,
+		screenSel => sig_screenSel,
+		current_state => sig_current_state,
+		hill1 => sig_hill1,
+		hill2 => sig_hill2,
+		hill3 => sig_hill3,
+		hill4 => sig_hill4,
+		hill5 => sig_hill5
+	);			 
+	
+	title : entity work.titleScreen
+	port map(
+		vidon => vidon,
+		hc => hc,
+		vc => vc,  
+		M => sig_init_M,
+		rom_addr4 => sig_init_addr,
+		red => sig_titleRed,
+		green => sig_titleGreen,
+		blue => sig_titleBlue
+	);			 
+	
+	title_prom : entity work.title_prom
+	port map(
+		addr => sig_init_addr,
+		M => sig_init_M
+	);		   
+	
+	bounce : entity work.debounce
+	port map(
+		inp => sig_nesBtns,
+		cclk => clk190,
+		clr => clr,
+		outp(0) => sig_a,
+		outp(1)	=> sig_b,
+		outp(2)	=> sig_start,
+		outp(3)	=> sig_sel,
+		outp(4)	=> sig_right,
+		outp(5)	=> sig_up,
+		outp(6)	=> sig_down,
+		outp(7)	=> sig_left
+		
+	);
+	
+	
+	btns <= btn;  
+	ld(0) <= sig_a;  
+	ld(1) <= sig_b;
+	ld(2) <= sig_start;
+	ld(3) <= sig_sel;
+	ld(4) <= sig_right;
+	ld(5) <= sig_up;
+	ld(6) <= sig_down;
+	ld(7) <= sig_left;
 		
 end vga_bsprite2a_top;

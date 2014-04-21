@@ -1,34 +1,4 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: c:\My_Designs\project\project\synthesis\nes_driver_top.vhd" 
-BEGINPROGRESS c:\My_Designs\project\project\synthesis\nes_driver_top.vhd
-MESSAGE "Compile Entity "nes_driver_top"" 
-UPDATEPROGRESS 1
-MESSAGE "Compile Architecture "STRUCTURE" of Entity "nes_driver_top"" 
-UPDATEPROGRESS 7
-UPDATEPROGRESS 10
-UPDATEPROGRESS 13
-UPDATEPROGRESS 16
-UPDATEPROGRESS 19
-UPDATEPROGRESS 22
-UPDATEPROGRESS 25
-UPDATEPROGRESS 28
-UPDATEPROGRESS 31
-UPDATEPROGRESS 34
-UPDATEPROGRESS 37
-UPDATEPROGRESS 40
-UPDATEPROGRESS 43
-UPDATEPROGRESS 46
-UPDATEPROGRESS 49
-UPDATEPROGRESS 52
-UPDATEPROGRESS 55
-UPDATEPROGRESS 58
-UPDATEPROGRESS 61
-UPDATEPROGRESS 64
-UPDATEPROGRESS 67
-UPDATEPROGRESS 70
-UPDATEPROGRESS 73
-UPDATEPROGRESS 100
-ENDPROGRESS c:\My_Designs\project\project\synthesis\nes_driver_top.vhd
 MESSAGE "File: c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 
 BEGINPROGRESS c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd
 MESSAGE "Compile Entity "vga_bsprite2a_top"" 
@@ -115,7 +85,4 @@ UPDATEPROGRESS 79
 UPDATEPROGRESS 80
 UPDATEPROGRESS 81
 ENDPROGRESS c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd
-MESSAGE "Top-level unit(s) detected:" 
-MESSAGE "Entity => nes_driver_top" 
-MESSAGE "Entity => vga_bsprite2a_top" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  1.0 [s]" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]" 

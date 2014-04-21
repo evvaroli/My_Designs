@@ -1,8 +1,9 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
 MESSAGE "File: c:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD" 
 BEGINPROGRESS c:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD
-MESSAGE "Compile Entity "nes_driver_top"" 
-MESSAGE "Compile Architecture "Structure" of Entity "nes_driver_top"" 
+MESSAGE "Compile Entity "vga_bsprite2a_top"" 
+MESSAGE "Compile Architecture "Structure" of Entity "vga_bsprite2a_top"" 
+MESSAGE "Start Netlist compilation mode." 
 UPDATEPROGRESS 2
 UPDATEPROGRESS 3
 UPDATEPROGRESS 4
@@ -74,8 +75,16 @@ UPDATEPROGRESS 69
 UPDATEPROGRESS 70
 UPDATEPROGRESS 71
 UPDATEPROGRESS 72
-UPDATEPROGRESS 100
+UPDATEPROGRESS 73
+UPDATEPROGRESS 74
+UPDATEPROGRESS 75
+UPDATEPROGRESS 76
+UPDATEPROGRESS 77
+UPDATEPROGRESS 78
+UPDATEPROGRESS 79
+UPDATEPROGRESS 80
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 83
 ENDPROGRESS c:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD
-MESSAGE "Top-level unit(s) detected:" 
-MESSAGE "Entity => nes_driver_top" 
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  1.0 [s]" 

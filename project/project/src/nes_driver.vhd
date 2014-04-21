@@ -9,6 +9,7 @@ entity nes_driver is
 		 nes_data : in STD_LOGIC;
 		 nes_clk : out STD_LOGIC;
 		 latch : out STD_LOGIC;
+		 nesBtns : out std_logic_vector(7 downto 0);
 		 a : out STD_LOGIC;
 		 b : out STD_LOGIC;
 		 start : out STD_LOGIC;
@@ -132,13 +133,13 @@ begin
         end if;
     end process;
 
-    a <= a_reg;
-    b <= b_reg;
-    sel <= sel_reg;
-    start <= start_reg;
-    up <= up_reg;
-    down <= down_reg;
-    left <= left_reg;
-    right <= right_reg;
+    nesBtns(0) <= a_reg;
+    nesBtns(1) <= b_reg;
+    nesBtns(3) <= sel_reg;
+    nesBtns(2) <= start_reg;
+    nesBtns(5) <= up_reg;
+    nesBtns(6) <= down_reg;
+    nesBtns(7) <= left_reg;
+    nesBtns(4) <= right_reg;
 
 end nes_driver;

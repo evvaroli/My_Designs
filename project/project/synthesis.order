@@ -9,3 +9,9 @@ i<>.\src\tank_sprite.vhd
 i<>.\src\tank_sprite2.vhd
 i<>.\src\vga_640x480.vhd
 i<>.\src\x7segb.vhd
+i<>.\src\screenState.vhd
+i<>.\src\buttonMux.vhd
+i<>.\src\titleScreen.vhd
+i<>.\src\screenSelector.vhd
+i<>.\src\title_prom.vhd
+i<>.\src\debounce.vhd

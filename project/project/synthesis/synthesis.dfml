@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to c:\My_Designs\project\project\synthesis\xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> 
 TABLE OF CONTENTS
@@ -123,6 +123,18 @@ Compiling vhdl file "C:/My_Designs/project/project/src/whosTurn.vhd" in Library 
 Architecture whosturn of Entity whosturn is up to date.
 Compiling vhdl file "C:/My_Designs/project/project/src/x7segb.vhd" in Library project.
 Architecture x7segb of Entity x7segb is up to date.
+Compiling vhdl file "C:/My_Designs/project/project/src/buttonMux.vhd" in Library project.
+Architecture buttonmux of Entity buttonmux is up to date.
+Compiling vhdl file "C:/My_Designs/project/project/src/screenSelector.vhd" in Library project.
+Architecture screenselector of Entity screenselector is up to date.
+Compiling vhdl file "C:/My_Designs/project/project/src/screenState.vhd" in Library project.
+Architecture screenstate of Entity screenstate is up to date.
+Compiling vhdl file "C:/My_Designs/project/project/src/titleScreen.vhd" in Library project.
+Architecture titlescreen of Entity titlescreen is up to date.
+Compiling vhdl file "C:/My_Designs/project/project/src/title_prom.vhd" in Library project.
+Architecture title_prom of Entity title_prom is up to date.
+Compiling vhdl file "C:/My_Designs/project/project/src/debounce.vhd" in Library project.
+Architecture debounce of Entity debounce is up to date.
 Compiling vhdl file "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" in Library project.
 Entity <vga_bsprite2a_top> compiled.
 Entity <vga_bsprite2a_top> (Architecture <vga_bsprite2a_top>) compiled.
@@ -150,11 +162,31 @@ Analyzing hierarchy for entity <nes_driver> in library <project> (architecture <
 
 Analyzing hierarchy for entity <x7segb> in library <project> (architecture <x7segb>).
 
+Analyzing hierarchy for entity <buttonMux> in library <project> (architecture <buttonMux>).
+
+Analyzing hierarchy for entity <screenSelector> in library <project> (architecture <screenSelector>).
+
+Analyzing hierarchy for entity <screenState> in library <project> (architecture <screenState>).
+
+Analyzing hierarchy for entity <titleScreen> in library <project> (architecture <titleScreen>).
+
+Analyzing hierarchy for entity <title_prom> in library <project> (architecture <title_prom>).
+
+Analyzing hierarchy for entity <debounce> in library <project> (architecture <debounce>).
+
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <vga_bsprite2a_top> in library <project> (Architecture <vga_bsprite2a_top>).
+WARNING:Xst:753 - "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" line 155: Unconnected output port 'a' of component 'nes_driver'.
+WARNING:Xst:753 - "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" line 155: Unconnected output port 'b' of component 'nes_driver'.
+WARNING:Xst:753 - "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" line 155: Unconnected output port 'start' of component 'nes_driver'.
+WARNING:Xst:753 - "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" line 155: Unconnected output port 'sel' of component 'nes_driver'.
+WARNING:Xst:753 - "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" line 155: Unconnected output port 'up' of component 'nes_driver'.
+WARNING:Xst:753 - "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" line 155: Unconnected output port 'down' of component 'nes_driver'.
+WARNING:Xst:753 - "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" line 155: Unconnected output port 'right' of component 'nes_driver'.
+WARNING:Xst:753 - "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd" line 155: Unconnected output port 'left' of component 'nes_driver'.
 Entity <vga_bsprite2a_top> analyzed. Unit <vga_bsprite2a_top> generated.
 
 Analyzing Entity <clkdiv> in library <project> (Architecture <clkdiv>).
@@ -164,18 +196,18 @@ Analyzing Entity <vga_640x480> in library <project> (Architecture <vga_640x480>)
 Entity <vga_640x480> analyzed. Unit <vga_640x480> generated.
 
 Analyzing Entity <vga_bsprite2a> in library <project> (Architecture <vga_bsprite2a>).
-WARNING:Xst:1610 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 196: Width mismatch. <rom_addr1> has a width of 17 bits but assigned expression is 10-bit wide.
-WARNING:Xst:1610 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 197: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 10-bit wide.
-WARNING:Xst:1610 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 202: Width mismatch. <rom_pix1> has a width of 11 bits but assigned expression is 10-bit wide.
-WARNING:Xst:1610 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 203: Width mismatch. <rom_pix2> has a width of 11 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 195: Width mismatch. <rom_addr1> has a width of 17 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 196: Width mismatch. <rom_addr2> has a width of 17 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 201: Width mismatch. <rom_pix1> has a width of 11 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 202: Width mismatch. <rom_pix2> has a width of 11 bits but assigned expression is 10-bit wide.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 214: Index value(s) does not match array range, simulation mismatch.
 WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 215: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 216: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 219: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 222: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 225: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 235: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 238: Index value(s) does not match array range, simulation mismatch.
-WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 241: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 218: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 221: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 224: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 234: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 237: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/vga_bsprite2a.vhd" line 240: Index value(s) does not match array range, simulation mismatch.
 Entity <vga_bsprite2a> analyzed. Unit <vga_bsprite2a> generated.
 
 Analyzing Entity <tank_sprite> in library <project> (Architecture <tank_sprite>).
@@ -202,6 +234,33 @@ Entity <nes_driver> analyzed. Unit <nes_driver> generated.
 
 Analyzing Entity <x7segb> in library <project> (Architecture <x7segb>).
 Entity <x7segb> analyzed. Unit <x7segb> generated.
+
+Analyzing Entity <buttonMux> in library <project> (Architecture <buttonMux>).
+WARNING:Xst:819 - "C:/My_Designs/project/project/src/buttonMux.vhd" line 32: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <a>, <b>, <start>, <sel>, <up>, <down>, <right>, <left>
+Entity <buttonMux> analyzed. Unit <buttonMux> generated.
+
+Analyzing Entity <screenSelector> in library <project> (Architecture <screenSelector>).
+WARNING:Xst:819 - "C:/My_Designs/project/project/src/screenSelector.vhd" line 23: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <gameRed>, <gameGreen>, <gameBlue>, <titleRed>, <titleGreen>, <titleBlue>
+Entity <screenSelector> analyzed. Unit <screenSelector> generated.
+
+Analyzing Entity <screenState> in library <project> (Architecture <screenState>).
+Entity <screenState> analyzed. Unit <screenState> generated.
+
+Analyzing Entity <titleScreen> in library <project> (Architecture <titleScreen>).
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/titleScreen.vhd" line 45: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/titleScreen.vhd" line 46: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/My_Designs/project/project/src/titleScreen.vhd" line 47: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:819 - "C:/My_Designs/project/project/src/titleScreen.vhd" line 37: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <spriteon>
+Entity <titleScreen> analyzed. Unit <titleScreen> generated.
+
+Analyzing Entity <title_prom> in library <project> (Architecture <title_prom>).
+Entity <title_prom> analyzed. Unit <title_prom> generated.
+
+Analyzing Entity <debounce> in library <project> (Architecture <debounce>).
+Entity <debounce> analyzed. Unit <debounce> generated.
 
 
 =========================================================================
@@ -259,65 +318,70 @@ WARNING:Xst:1780 - Signal <C2a> is never used or assigned. This unconnected sign
 WARNING:Xst:1780 - Signal <C1a> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <B> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 10-bit updown counter for signal <C1>.
-    Found 11-bit comparator greatequal for signal <C1$cmp_ge0000> created at line 139.
-    Found 11-bit comparator lessequal for signal <C1$cmp_le0000> created at line 129.
+    Found 11-bit comparator greatequal for signal <C1$cmp_ge0000> created at line 143.
+    Found 11-bit comparator lessequal for signal <C1$cmp_le0000> created at line 133.
     Found 10-bit updown counter for signal <C2>.
-    Found 11-bit comparator greatequal for signal <C2$cmp_ge0000> created at line 143.
-    Found 11-bit comparator lessequal for signal <C2$cmp_le0000> created at line 133.
-    Found 1-bit 32-to-1 multiplexer for signal <M1$mux0000> created at line 215.
-    Found 1-bit 32-to-1 multiplexer for signal <M1a$mux0000> created at line 219.
-    Found 1-bit 32-to-1 multiplexer for signal <M2$mux0000> created at line 225.
-    Found 1-bit 32-to-1 multiplexer for signal <M2a$mux0000> created at line 238.
+    Found 11-bit comparator greatequal for signal <C2$cmp_ge0000> created at line 147.
+    Found 11-bit comparator lessequal for signal <C2$cmp_le0000> created at line 137.
+    Found 1-bit 32-to-1 multiplexer for signal <M1$mux0000> created at line 214.
+    Found 1-bit 32-to-1 multiplexer for signal <M1a$mux0000> created at line 218.
+    Found 1-bit 32-to-1 multiplexer for signal <M2$mux0000> created at line 224.
+    Found 1-bit 32-to-1 multiplexer for signal <M2a$mux0000> created at line 237.
     Found 24-bit up counter for signal <q>.
-    Found 10-bit adder for signal <spriteon1$addsub0000> created at line 171.
-    Found 10-bit adder for signal <spriteon1$addsub0001> created at line 171.
-    Found 10-bit comparator greatequal for signal <spriteon1$cmp_ge0000> created at line 171.
-    Found 10-bit comparator less for signal <spriteon1$cmp_lt0000> created at line 171.
-    Found 10-bit adder for signal <spriteon2$addsub0000> created at line 174.
-    Found 10-bit comparator greatequal for signal <spriteon2$cmp_ge0000> created at line 174.
-    Found 10-bit comparator less for signal <spriteon2$cmp_lt0000> created at line 174.
-    Found 10-bit adder for signal <spriteon2f$add0001> created at line 175.
-    Found 10-bit adder for signal <spriteon2f$add0002> created at line 175.
-    Found 10-bit comparator greatequal for signal <spriteon2f$cmp_ge0000> created at line 175.
-    Found 10-bit comparator greater for signal <spriteon2f$cmp_gt0000> created at line 175.
-    Found 10-bit comparator lessequal for signal <spriteon2f$cmp_le0000> created at line 175.
-    Found 10-bit comparator less for signal <spriteon2f$cmp_lt0000> created at line 175.
-    Found 32-bit comparator greatequal for signal <spriteonB1$cmp_ge0000> created at line 178.
-    Found 32-bit comparator greater for signal <spriteonB1$cmp_gt0000> created at line 178.
-    Found 32-bit comparator lessequal for signal <spriteonB1$cmp_le0000> created at line 178.
-    Found 11-bit comparator less for signal <spriteonB1$cmp_lt0000> created at line 178.
-    Found 32-bit comparator greatequal for signal <spriteonB2$cmp_ge0000> created at line 179.
-    Found 32-bit comparator greater for signal <spriteonB2$cmp_gt0000> created at line 179.
-    Found 32-bit comparator lessequal for signal <spriteonB2$cmp_le0000> created at line 179.
-    Found 32-bit comparator greatequal for signal <spriteonB3$cmp_ge0000> created at line 180.
-    Found 32-bit comparator greater for signal <spriteonB3$cmp_gt0000> created at line 180.
-    Found 32-bit comparator lessequal for signal <spriteonB3$cmp_le0000> created at line 180.
-    Found 32-bit comparator greatequal for signal <spriteonB4$cmp_ge0000> created at line 181.
-    Found 32-bit comparator greater for signal <spriteonB4$cmp_gt0000> created at line 181.
-    Found 32-bit comparator lessequal for signal <spriteonB4$cmp_le0000> created at line 181.
-    Found 32-bit comparator greatequal for signal <spriteonB5$cmp_ge0000> created at line 182.
-    Found 32-bit comparator greater for signal <spriteonB5$cmp_gt0000> created at line 182.
-    Found 32-bit comparator lessequal for signal <spriteonB5$cmp_le0000> created at line 182.
-    Found 32-bit comparator greatequal for signal <spriteonGrnd$cmp_ge0000> created at line 177.
-    Found 10-bit comparator greater for signal <spriteonGrnd$cmp_gt0000> created at line 177.
-    Found 32-bit comparator lessequal for signal <spriteonGrnd$cmp_le0000> created at line 177.
-    Found 10-bit comparator less for signal <spriteonGrnd$cmp_lt0000> created at line 177.
+    Found 10-bit adder for signal <spriteon1$addsub0000> created at line 170.
+    Found 10-bit adder for signal <spriteon1$addsub0001> created at line 170.
+    Found 10-bit comparator greatequal for signal <spriteon1$cmp_ge0000> created at line 170.
+    Found 10-bit comparator less for signal <spriteon1$cmp_lt0000> created at line 170.
+    Found 10-bit adder for signal <spriteon2$addsub0000> created at line 173.
+    Found 10-bit comparator greatequal for signal <spriteon2$cmp_ge0000> created at line 173.
+    Found 10-bit comparator less for signal <spriteon2$cmp_lt0000> created at line 173.
+    Found 10-bit adder for signal <spriteon2f$add0001> created at line 174.
+    Found 10-bit adder for signal <spriteon2f$add0002> created at line 174.
+    Found 10-bit comparator greatequal for signal <spriteon2f$cmp_ge0000> created at line 174.
+    Found 10-bit comparator greater for signal <spriteon2f$cmp_gt0000> created at line 174.
+    Found 10-bit comparator lessequal for signal <spriteon2f$cmp_le0000> created at line 174.
+    Found 10-bit comparator less for signal <spriteon2f$cmp_lt0000> created at line 174.
+    Found 8-bit adder for signal <spriteonB1$add0000> created at line 177.
+    Found 10-bit comparator greatequal for signal <spriteonB1$cmp_ge0000> created at line 177.
+    Found 32-bit comparator greater for signal <spriteonB1$cmp_gt0000> created at line 177.
+    Found 32-bit comparator lessequal for signal <spriteonB1$cmp_le0000> created at line 177.
+    Found 11-bit comparator less for signal <spriteonB1$cmp_lt0000> created at line 177.
+    Found 8-bit adder for signal <spriteonB2$add0000> created at line 178.
+    Found 10-bit comparator greatequal for signal <spriteonB2$cmp_ge0000> created at line 178.
+    Found 32-bit comparator greater for signal <spriteonB2$cmp_gt0000> created at line 178.
+    Found 32-bit comparator lessequal for signal <spriteonB2$cmp_le0000> created at line 178.
+    Found 8-bit adder for signal <spriteonB3$add0000> created at line 179.
+    Found 10-bit comparator greatequal for signal <spriteonB3$cmp_ge0000> created at line 179.
+    Found 32-bit comparator greater for signal <spriteonB3$cmp_gt0000> created at line 179.
+    Found 32-bit comparator lessequal for signal <spriteonB3$cmp_le0000> created at line 179.
+    Found 8-bit adder for signal <spriteonB4$add0000> created at line 180.
+    Found 10-bit comparator greatequal for signal <spriteonB4$cmp_ge0000> created at line 180.
+    Found 32-bit comparator greater for signal <spriteonB4$cmp_gt0000> created at line 180.
+    Found 32-bit comparator lessequal for signal <spriteonB4$cmp_le0000> created at line 180.
+    Found 8-bit adder for signal <spriteonB5$add0000> created at line 181.
+    Found 10-bit comparator greatequal for signal <spriteonB5$cmp_ge0000> created at line 181.
+    Found 32-bit comparator greater for signal <spriteonB5$cmp_gt0000> created at line 181.
+    Found 32-bit comparator lessequal for signal <spriteonB5$cmp_le0000> created at line 181.
+    Found 32-bit comparator greatequal for signal <spriteonGrnd$cmp_ge0000> created at line 176.
+    Found 10-bit comparator greater for signal <spriteonGrnd$cmp_gt0000> created at line 176.
+    Found 32-bit comparator lessequal for signal <spriteonGrnd$cmp_le0000> created at line 176.
+    Found 10-bit comparator less for signal <spriteonGrnd$cmp_lt0000> created at line 176.
     Found 8-bit down counter for signal <tank1_angle_calc>.
-    Found 8-bit adder for signal <tank1_angle_calc$addsub0000> created at line 97.
-    Found 8-bit comparator greatequal for signal <tank1Angle$cmp_ge0000> created at line 285.
-    Found 8-bit comparator greatequal for signal <tank1Angle$cmp_ge0001> created at line 286.
+    Found 8-bit adder for signal <tank1_angle_calc$addsub0000> created at line 101.
+    Found 8-bit comparator greatequal for signal <tank1Angle$cmp_ge0000> created at line 284.
+    Found 8-bit comparator greatequal for signal <tank1Angle$cmp_ge0001> created at line 285.
     Found 8-bit down counter for signal <tank2_angle_calc>.
-    Found 8-bit adder for signal <tank2_angle_calc$addsub0000> created at line 113.
-    Found 8-bit comparator greatequal for signal <tank2Angle$cmp_ge0000> created at line 295.
-    Found 8-bit comparator greatequal for signal <tank2Angle$cmp_ge0001> created at line 296.
+    Found 8-bit adder for signal <tank2_angle_calc$addsub0000> created at line 117.
+    Found 8-bit comparator greatequal for signal <tank2Angle$cmp_ge0000> created at line 294.
+    Found 8-bit comparator greatequal for signal <tank2Angle$cmp_ge0001> created at line 295.
     Found 10-bit subtractor for signal <xpix1>.
-    Found 10-bit subtractor for signal <xpix1$sub0000> created at line 160.
+    Found 10-bit subtractor for signal <xpix1$sub0000> created at line 164.
     Found 10-bit subtractor for signal <xpix2>.
     Found 10-bit subtractor for signal <ypix1>.
-    Found 10-bit subtractor for signal <ypix1$addsub0000> created at line 156.
+    Found 10-bit subtractor for signal <ypix1$addsub0000> created at line 160.
     Summary:
 	inferred   5 Counter(s).
-	inferred  12 Adder/Subtractor(s).
+	inferred  17 Adder/Subtractor(s).
 	inferred  36 Comparator(s).
 	inferred   4 Multiplexer(s).
 Unit <vga_bsprite2a> synthesized.
@@ -373,16 +437,24 @@ Unit <whosTurn> synthesized.
 
 Synthesizing Unit <nes_driver>.
     Related source file is "C:/My_Designs/project/project/src/nes_driver.vhd".
+WARNING:Xst:1305 - Output <start> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <right> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <a> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <b> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <left> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <up> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <sel> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <down> is never assigned. Tied to value 0.
     Using one-hot encoding for signal <state_reg>.
     Found 1-bit register for signal <a_reg>.
     Found 1-bit register for signal <b_reg>.
     Found 10-bit up counter for signal <counter_reg>.
     Found 1-bit register for signal <down_reg>.
     Found 1-bit register for signal <left_reg>.
-    Found 10-bit comparator greater for signal <nes_clk$cmp_gt0000> created at line 109.
-    Found 10-bit comparator less for signal <nes_clk$cmp_lt0000> created at line 109.
+    Found 10-bit comparator greater for signal <nes_clk$cmp_gt0000> created at line 110.
+    Found 10-bit comparator less for signal <nes_clk$cmp_lt0000> created at line 110.
     Found 1-bit register for signal <right_reg>.
-    Found 10-bit adder for signal <scalar_next$addsub0000> created at line 39.
+    Found 10-bit adder for signal <scalar_next$addsub0000> created at line 40.
     Found 10-bit register for signal <scalar_reg>.
     Found 1-bit register for signal <sel_reg>.
     Found 1-bit register for signal <start_reg>.
@@ -409,16 +481,133 @@ Synthesizing Unit <x7segb>.
 Unit <x7segb> synthesized.
 
 
+Synthesizing Unit <buttonMux>.
+    Related source file is "C:/My_Designs/project/project/src/buttonMux.vhd".
+Unit <buttonMux> synthesized.
+
+
+Synthesizing Unit <screenSelector>.
+    Related source file is "C:/My_Designs/project/project/src/screenSelector.vhd".
+Unit <screenSelector> synthesized.
+
+
+Synthesizing Unit <screenState>.
+    Related source file is "C:/My_Designs/project/project/src/screenState.vhd".
+WARNING:Xst:647 - Input <right> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <a> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <b> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <left> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <up> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <down> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <next_current_state> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+INFO:Xst:1799 - State secondup is never reached in FSM <present_state>.
+INFO:Xst:1799 - State firstdown is never reached in FSM <present_state>.
+INFO:Xst:1799 - State seconddown is never reached in FSM <present_state>.
+INFO:Xst:1799 - State firstleft is never reached in FSM <present_state>.
+INFO:Xst:1799 - State secondleft is never reached in FSM <present_state>.
+INFO:Xst:1799 - State firstright is never reached in FSM <present_state>.
+INFO:Xst:1799 - State secondright is never reached in FSM <present_state>.
+INFO:Xst:1799 - State bdown is never reached in FSM <present_state>.
+INFO:Xst:1799 - State adown is never reached in FSM <present_state>.
+INFO:Xst:1799 - State firstupreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State secondupreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State firstdownreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State seconddownreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State firstleftreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State secondleftreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State firstrightreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State secondrightreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State bdownreleased is never reached in FSM <present_state>.
+INFO:Xst:1799 - State adownreleased is never reached in FSM <present_state>.
+    Found finite state machine <FSM_1> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | clr                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | title_screen                                   |
+    | Power Up State     | firstup                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <current_state>.
+    Found 8-bit register for signal <sig_hill1>.
+    Found 8-bit adder for signal <sig_hill1$addsub0000> created at line 51.
+    Found 8-bit register for signal <sig_hill2>.
+    Found 8-bit adder for signal <sig_hill2$addsub0000> created at line 56.
+    Found 8-bit up counter for signal <sig_hill3>.
+    Found 8-bit register for signal <sig_hill4>.
+    Found 8-bit adder for signal <sig_hill4$addsub0000> created at line 66.
+    Found 8-bit register for signal <sig_hill5>.
+    Found 8-bit adder for signal <sig_hill5$addsub0000> created at line 71.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+Unit <screenState> synthesized.
+
+
+Synthesizing Unit <titleScreen>.
+    Related source file is "C:/My_Designs/project/project/src/titleScreen.vhd".
+WARNING:Xst:646 - Signal <rom_addr<10:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Register <G> equivalent to <B> has been removed
+    Register <R> equivalent to <B> has been removed
+WARNING:Xst:737 - Found 1-bit latch for signal <B>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit 32-to-1 multiplexer for signal <M$mux0000> created at line 45.
+    Found 11-bit subtractor for signal <rom_addr>.
+    Found 10-bit subtractor for signal <rom_addr$sub0000> created at line 29.
+    Found 11-bit subtractor for signal <rom_pix>.
+    Found 10-bit subtractor for signal <rom_pix$sub0000> created at line 30.
+    Found 11-bit comparator greatequal for signal <spriteon$cmp_ge0000> created at line 34.
+    Found 11-bit comparator greatequal for signal <spriteon$cmp_ge0001> created at line 34.
+    Found 11-bit comparator less for signal <spriteon$cmp_lt0000> created at line 34.
+    Found 11-bit comparator less for signal <spriteon$cmp_lt0001> created at line 34.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <titleScreen> synthesized.
+
+
+Synthesizing Unit <title_prom>.
+    Related source file is "C:/My_Designs/project/project/src/title_prom.vhd".
+    Found 16x32-bit ROM for signal <M$rom0000> created at line 38.
+    Summary:
+	inferred   1 ROM(s).
+Unit <title_prom> synthesized.
+
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:/My_Designs/project/project/src/debounce.vhd".
+    Found 8-bit register for signal <delay1>.
+    Found 8-bit register for signal <delay2>.
+    Found 8-bit register for signal <delay3>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <debounce> synthesized.
+
+
 Synthesizing Unit <vga_bsprite2a_top>.
     Related source file is "C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd".
 WARNING:Xst:647 - Input <upBTN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <aBTN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rightBTN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <leftBTN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hill1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hill2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hill3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hill4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hill5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <downBTN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <sig_x> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <sig_sel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <sig_b> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sig_gameSel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sig_gameB> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sig_current_state> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <rom4_addr16> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <rom3_addr16> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <rom2_addr16> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -432,37 +621,43 @@ Unit <vga_bsprite2a_top> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 13
+# ROMs                                                 : 14
+ 16x32-bit ROM                                         : 1
  16x7-bit ROM                                          : 1
  29x32-bit ROM                                         : 12
-# Adders/Subtractors                                   : 13
+# Adders/Subtractors                                   : 26
  10-bit adder                                          : 6
- 10-bit subtractor                                     : 5
- 8-bit adder                                           : 2
-# Counters                                             : 10
+ 10-bit subtractor                                     : 7
+ 11-bit subtractor                                     : 2
+ 8-bit adder                                           : 11
+# Counters                                             : 11
  10-bit up counter                                     : 3
  10-bit updown counter                                 : 2
  20-bit up counter                                     : 1
  24-bit up counter                                     : 2
  8-bit down counter                                    : 2
-# Registers                                            : 11
+ 8-bit up counter                                      : 1
+# Registers                                            : 19
  1-bit register                                        : 9
  10-bit register                                       : 1
+ 8-bit register                                        : 8
  9-bit register                                        : 1
-# Comparators                                          : 44
- 10-bit comparator greatequal                          : 5
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 48
+ 10-bit comparator greatequal                          : 10
  10-bit comparator greater                             : 3
  10-bit comparator less                                : 7
  10-bit comparator lessequal                           : 1
- 11-bit comparator greatequal                          : 2
- 11-bit comparator less                                : 3
+ 11-bit comparator greatequal                          : 4
+ 11-bit comparator less                                : 5
  11-bit comparator lessequal                           : 2
- 32-bit comparator greatequal                          : 6
+ 32-bit comparator greatequal                          : 1
  32-bit comparator greater                             : 5
  32-bit comparator lessequal                           : 6
  8-bit comparator greatequal                           : 4
-# Multiplexers                                         : 10
- 1-bit 32-to-1 multiplexer                             : 4
+# Multiplexers                                         : 11
+ 1-bit 32-to-1 multiplexer                             : 5
  1-bit 4-to-1 multiplexer                              : 1
  32-bit 4-to-1 multiplexer                             : 4
  4-bit 4-to-1 multiplexer                              : 1
@@ -473,6 +668,34 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <screenstate/present_state/FSM> on signal <present_state[1:2]> with gray encoding.
+---------------------------------
+ State               | Encoding
+---------------------------------
+ firstup             | 00
+ secondup            | unreached
+ firstdown           | unreached
+ seconddown          | unreached
+ firstleft           | unreached
+ secondleft          | unreached
+ firstright          | unreached
+ secondright         | unreached
+ bdown               | unreached
+ adown               | unreached
+ firstupreleased     | unreached
+ secondupreleased    | unreached
+ firstdownreleased   | unreached
+ seconddownreleased  | unreached
+ firstleftreleased   | unreached
+ secondleftreleased  | unreached
+ firstrightreleased  | unreached
+ secondrightreleased | unreached
+ bdownreleased       | unreached
+ adownreleased       | unreached
+ title_screen        | 01
+ game_screen         | 11
+---------------------------------
 Analyzing FSM <FSM_0> for best encoding.
 Optimizing FSM <who/present_state/FSM> on signal <present_state[1:2]> with user encoding.
 ----------------------------
@@ -483,42 +706,51 @@ Optimizing FSM <who/present_state/FSM> on signal <present_state[1:2]> with user 
  tank1_to_tank2 | 10
  tank2_to_tank1 | 11
 ----------------------------
+WARNING:Xst:1426 - The value init of the FF/Latch FFd2 hinder the constant cleaning in the block FSM.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:2404 -  FFs/Latches <current_state<7:0>> (without init value) have a constant value of 0 in block <screenState>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 1
-# ROMs                                                 : 13
+# FSMs                                                 : 2
+# ROMs                                                 : 14
+ 16x32-bit ROM                                         : 1
  16x7-bit ROM                                          : 1
  29x32-bit ROM                                         : 12
-# Adders/Subtractors                                   : 13
+# Adders/Subtractors                                   : 24
  10-bit adder                                          : 6
+ 4-bit subtractor borrow in                            : 1
  5-bit subtractor                                      : 3
+ 5-bit subtractor borrow in                            : 1
  6-bit subtractor                                      : 2
- 8-bit adder                                           : 2
-# Counters                                             : 10
+ 8-bit adder                                           : 11
+# Counters                                             : 11
  10-bit up counter                                     : 3
  10-bit updown counter                                 : 2
  20-bit up counter                                     : 1
  24-bit up counter                                     : 2
  8-bit down counter                                    : 2
-# Registers                                            : 28
- Flip-Flops                                            : 28
-# Comparators                                          : 44
- 10-bit comparator greatequal                          : 5
+ 8-bit up counter                                      : 1
+# Registers                                            : 84
+ Flip-Flops                                            : 84
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 48
+ 10-bit comparator greatequal                          : 10
  10-bit comparator greater                             : 3
  10-bit comparator less                                : 7
  10-bit comparator lessequal                           : 1
- 11-bit comparator greatequal                          : 2
- 11-bit comparator less                                : 3
+ 11-bit comparator greatequal                          : 4
+ 11-bit comparator less                                : 5
  11-bit comparator lessequal                           : 2
- 32-bit comparator greatequal                          : 6
+ 32-bit comparator greatequal                          : 1
  32-bit comparator greater                             : 5
  32-bit comparator lessequal                           : 6
  8-bit comparator greatequal                           : 4
-# Multiplexers                                         : 10
- 1-bit 32-to-1 multiplexer                             : 4
+# Multiplexers                                         : 11
+ 1-bit 32-to-1 multiplexer                             : 5
  1-bit 4-to-1 multiplexer                              : 1
  32-bit 4-to-1 multiplexer                             : 4
  4-bit 4-to-1 multiplexer                              : 1
@@ -528,29 +760,18 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch FSM_FFd2 hinder the constant cleaning in the block FSM_1-parent.
+   You should achieve better results by setting this init to 1.
 WARNING:Xst:2677 - Node <q_18> of sequential type is unconnected in block <vga_bsprite2a>.
 WARNING:Xst:2677 - Node <q_19> of sequential type is unconnected in block <vga_bsprite2a>.
 WARNING:Xst:2677 - Node <q_20> of sequential type is unconnected in block <vga_bsprite2a>.
 WARNING:Xst:2677 - Node <q_21> of sequential type is unconnected in block <vga_bsprite2a>.
 WARNING:Xst:2677 - Node <q_22> of sequential type is unconnected in block <vga_bsprite2a>.
 WARNING:Xst:2677 - Node <q_23> of sequential type is unconnected in block <vga_bsprite2a>.
-WARNING:Xst:2677 - Node <U1/q_1> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_2> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_3> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_4> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_5> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_6> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_7> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_8> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_9> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_10> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_11> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_12> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_13> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_14> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_15> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_16> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <U1/q_17> of sequential type is unconnected in block <vga_bsprite2a_top>.
+WARNING:Xst:1710 - FF/Latch <sig_hill2_0> (without init value) has a constant value of 0 in block <screenState>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sig_hill2_1> (without init value) has a constant value of 0 in block <screenState>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sig_hill1_0> (without init value) has a constant value of 0 in block <screenState>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sig_hill5_0> (without init value) has a constant value of 0 in block <screenState>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <U1/q_18> of sequential type is unconnected in block <vga_bsprite2a_top>.
 WARNING:Xst:2677 - Node <U1/q_19> of sequential type is unconnected in block <vga_bsprite2a_top>.
 WARNING:Xst:2677 - Node <U1/q_20> of sequential type is unconnected in block <vga_bsprite2a_top>.
@@ -575,14 +796,17 @@ Optimizing unit <vga_bsprite2a> ...
 
 Optimizing unit <x7segb> ...
 
+Optimizing unit <screenState> ...
+
+Optimizing unit <titleScreen> ...
+
+Optimizing unit <debounce> ...
+
 Optimizing unit <nes_driver> ...
-WARNING:Xst:2677 - Node <nes/b_reg> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <nes/sel_reg> of sequential type is unconnected in block <vga_bsprite2a_top>.
-WARNING:Xst:2677 - Node <nes/start_reg> of sequential type is unconnected in block <vga_bsprite2a_top>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block vga_bsprite2a_top, actual ratio is 11.
+Found area constraint ratio of 100 (+ 5) on block vga_bsprite2a_top, actual ratio is 14.
 
 Final Macro Processing ...
 
@@ -590,8 +814,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 123
- Flip-Flops                                            : 123
+# Registers                                            : 205
+ Flip-Flops                                            : 205
 
 =========================================================================
 
@@ -617,38 +841,41 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 43
+# IOs                              : 91
 
 Cell Usage :
-# BELS                             : 1307
+# BELS                             : 1654
 #      GND                         : 1
-#      INV                         : 13
-#      LUT1                        : 72
-#      LUT2                        : 122
-#      LUT2_L                      : 1
-#      LUT3                        : 191
-#      LUT4                        : 434
-#      LUT4_D                      : 6
-#      LUT4_L                      : 6
-#      MUXCY                       : 172
-#      MUXF5                       : 135
-#      MUXF6                       : 16
-#      MUXF7                       : 8
-#      MUXF8                       : 4
+#      INV                         : 19
+#      LUT1                        : 102
+#      LUT2                        : 139
+#      LUT2_D                      : 1
+#      LUT2_L                      : 4
+#      LUT3                        : 240
+#      LUT3_D                      : 1
+#      LUT4                        : 526
+#      LUT4_D                      : 13
+#      LUT4_L                      : 5
+#      MUXCY                       : 241
+#      MUXF5                       : 176
+#      MUXF6                       : 20
+#      MUXF7                       : 10
+#      MUXF8                       : 5
 #      VCC                         : 1
-#      XORCY                       : 125
-# FlipFlops/Latches                : 123
-#      FDC                         : 60
+#      XORCY                       : 150
+# FlipFlops/Latches                : 206
+#      FDC                         : 102
 #      FDCE                        : 20
-#      FDE                         : 26
-#      FDP                         : 1
+#      FDE                         : 65
+#      FDP                         : 2
 #      FDRE                        : 16
-# Clock Buffers                    : 3
-#      BUFG                        : 2
+#      LDE                         : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 3
 #      BUFGP                       : 1
-# IO Buffers                       : 26
+# IO Buffers                       : 34
 #      IBUF                        : 2
-#      OBUF                        : 24
+#      OBUF                        : 32
 =========================================================================
 
 Device utilization summary:
@@ -656,12 +883,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                      453  out of   4656     9%  
- Number of Slice Flip Flops:            123  out of   9312     1%  
- Number of 4 input LUTs:                845  out of   9312     9%  
- Number of IOs:                          43
- Number of bonded IOBs:                  27  out of    232    11%  
- Number of GCLKs:                         3  out of     24    12%  
+ Number of Slices:                      564  out of   4656    12%  
+ Number of Slice Flip Flops:            206  out of   9312     2%  
+ Number of 4 input LUTs:               1050  out of   9312    11%  
+ Number of IOs:                          91
+ Number of bonded IOBs:                  35  out of    232    15%  
+ Number of GCLKs:                         4  out of     24    16%  
 
 ---------------------------
 Partition Resource Summary:
@@ -684,26 +911,32 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-U1/q_01                            | BUFG                   | 48    |
-mclk                               | BUFGP                  | 39    |
+U1/q_01                            | BUFG                   | 51    |
+mclk                               | BUFGP                  | 94    |
 U3/q_171                           | BUFG                   | 36    |
+vidon(U2/vidon_and0000131:O)       | NONE(*)(title/B)       | 1     |
+U1/q_171                           | BUFG                   | 24    |
 -----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-btn<3>                             | IBUF                   | 81    |
+btn<3>                             | IBUF                   | 124   |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.514ns (Maximum Frequency: 181.340MHz)
-   Minimum input arrival time before clock: 3.644ns
-   Maximum output required time after clock: 19.274ns
+   Minimum period: 5.752ns (Maximum Frequency: 173.854MHz)
+   Minimum input arrival time before clock: 4.403ns
+   Maximum output required time after clock: 19.283ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -712,99 +945,104 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U1/q_01'
-  Clock period: 5.501ns (frequency: 181.780MHz)
-  Total number of paths / destination ports: 894 / 68
+  Clock period: 5.562ns (frequency: 179.803MHz)
+  Total number of paths / destination ports: 922 / 70
 -------------------------------------------------------------------------
-Delay:               5.501ns (Levels of Logic = 3)
-  Source:            nes/counter_reg_1 (FF)
+Delay:               5.562ns (Levels of Logic = 3)
+  Source:            nes/counter_reg_9 (FF)
   Destination:       nes/counter_reg_9 (FF)
   Source Clock:      U1/q_01 rising
   Destination Clock: U1/q_01 rising
 
-  Data Path: nes/counter_reg_1 to nes/counter_reg_9
+  Data Path: nes/counter_reg_9 to nes/counter_reg_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             8   0.514   0.673  nes/counter_reg_1 (nes/counter_reg_1)
-     LUT4:I2->O            2   0.612   0.449  nes/counter_reg_cmp_eq0000112 (nes/counter_reg_cmp_eq0000112)
-     LUT2:I1->O           11   0.612   0.796  nes/counter_reg_cmp_eq0000126 (nes/N11)
+     FDCE:C->Q             4   0.514   0.651  nes/counter_reg_9 (nes/counter_reg_9)
+     LUT4:I0->O            2   0.612   0.532  nes/counter_reg_cmp_eq0000125 (nes/counter_reg_cmp_eq0000125)
+     LUT2:I0->O           11   0.612   0.796  nes/counter_reg_cmp_eq0000126 (nes/N11)
      LUT4:I3->O           10   0.612   0.750  nes/counter_reg_not00011 (nes/counter_reg_not0001)
      FDCE:CE                   0.483          nes/counter_reg_0
     ----------------------------------------
-    Total                      5.501ns (2.833ns logic, 2.668ns route)
-                                       (51.5% logic, 48.5% route)
+    Total                      5.562ns (2.833ns logic, 2.729ns route)
+                                       (50.9% logic, 49.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mclk'
-  Clock period: 3.882ns (frequency: 257.632MHz)
-  Total number of paths / destination ports: 382 / 39
+  Clock period: 5.034ns (frequency: 198.669MHz)
+  Total number of paths / destination ports: 876 / 129
 -------------------------------------------------------------------------
-Delay:               3.882ns (Levels of Logic = 20)
-  Source:            x7/clkdiv_1 (FF)
-  Destination:       x7/clkdiv_19 (FF)
+Delay:               5.034ns (Levels of Logic = 4)
+  Source:            screenstate/sig_hill4_0 (FF)
+  Destination:       screenstate/sig_hill4_6 (FF)
   Source Clock:      mclk rising
   Destination Clock: mclk rising
 
-  Data Path: x7/clkdiv_1 to x7/clkdiv_19
+  Data Path: screenstate/sig_hill4_0 to screenstate/sig_hill4_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              1   0.514   0.509  x7/clkdiv_1 (x7/clkdiv_1)
-     LUT1:I0->O            1   0.612   0.000  x7/Mcount_clkdiv_cy<1>_rt (x7/Mcount_clkdiv_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  x7/Mcount_clkdiv_cy<1> (x7/Mcount_clkdiv_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<2> (x7/Mcount_clkdiv_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<3> (x7/Mcount_clkdiv_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<4> (x7/Mcount_clkdiv_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<5> (x7/Mcount_clkdiv_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<6> (x7/Mcount_clkdiv_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<7> (x7/Mcount_clkdiv_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<8> (x7/Mcount_clkdiv_cy<8>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<9> (x7/Mcount_clkdiv_cy<9>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<10> (x7/Mcount_clkdiv_cy<10>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<11> (x7/Mcount_clkdiv_cy<11>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<12> (x7/Mcount_clkdiv_cy<12>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<13> (x7/Mcount_clkdiv_cy<13>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<14> (x7/Mcount_clkdiv_cy<14>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<15> (x7/Mcount_clkdiv_cy<15>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<16> (x7/Mcount_clkdiv_cy<16>)
-     MUXCY:CI->O           1   0.051   0.000  x7/Mcount_clkdiv_cy<17> (x7/Mcount_clkdiv_cy<17>)
-     MUXCY:CI->O           0   0.051   0.000  x7/Mcount_clkdiv_cy<18> (x7/Mcount_clkdiv_cy<18>)
-     XORCY:CI->O           1   0.699   0.000  x7/Mcount_clkdiv_xor<19> (x7/Result<19>)
-     FDC:D                     0.268          x7/clkdiv_19
+     FDE:C->Q             13   0.514   0.839  screenstate/sig_hill4_0 (screenstate/sig_hill4_0)
+     LUT4_D:I3->O          4   0.612   0.502  screenstate/sig_hill4_mux0001<0>41 (screenstate/sig_hill4_mux0001<0>_bdd2)
+     LUT4:I3->O            1   0.612   0.360  screenstate/sig_hill4_mux0001<1>181_SW0 (N154)
+     LUT4_L:I3->LO         1   0.612   0.103  screenstate/sig_hill4_mux0001<1>181 (screenstate/sig_hill4_mux0001<1>181)
+     LUT4:I3->O            1   0.612   0.000  screenstate/sig_hill4_mux0001<1>1128 (screenstate/sig_hill4_mux0001<1>)
+     FDE:D                     0.268          screenstate/sig_hill4_6
     ----------------------------------------
-    Total                      3.882ns (3.373ns logic, 0.509ns route)
-                                       (86.9% logic, 13.1% route)
+    Total                      5.034ns (3.230ns logic, 1.803ns route)
+                                       (64.2% logic, 35.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U3/q_171'
-  Clock period: 5.514ns (frequency: 181.340MHz)
-  Total number of paths / destination ports: 1065 / 72
+  Clock period: 5.752ns (frequency: 173.854MHz)
+  Total number of paths / destination ports: 1294 / 72
 -------------------------------------------------------------------------
-Delay:               5.514ns (Levels of Logic = 4)
-  Source:            U3/C2_2 (FF)
+Delay:               5.752ns (Levels of Logic = 4)
+  Source:            U3/C2_5 (FF)
   Destination:       U3/C2_9 (FF)
   Source Clock:      U3/q_171 rising
   Destination Clock: U3/q_171 rising
 
-  Data Path: U3/C2_2 to U3/C2_9
+  Data Path: U3/C2_5 to U3/C2_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              7   0.514   0.754  U3/C2_2 (U3/C2_2)
-     LUT2_L:I0->LO         1   0.612   0.103  U3/C2_not00011 (U3/C2_not00011)
+     FDE:C->Q             19   0.514   0.991  U3/C2_5 (U3/C2_5)
+     LUT2_L:I1->LO         1   0.612   0.103  U3/C2_not00011 (U3/C2_not00011)
      LUT4:I3->O            1   0.612   0.360  U3/C2_not00016 (U3/C2_not00016)
      LUT4_L:I3->LO         1   0.612   0.103  U3/C2_not000123 (U3/C2_not000123)
      LUT4:I3->O           10   0.612   0.750  U3/C2_not000186 (U3/C2_not0001)
      FDE:CE                    0.483          U3/C2_0
     ----------------------------------------
-    Total                      5.514ns (3.445ns logic, 2.069ns route)
-                                       (62.5% logic, 37.5% route)
+    Total                      5.752ns (3.445ns logic, 2.307ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U1/q_171'
+  Clock period: 1.233ns (frequency: 810.800MHz)
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Delay:               1.233ns (Levels of Logic = 0)
+  Source:            bounce/delay2_7 (FF)
+  Destination:       bounce/delay3_7 (FF)
+  Source Clock:      U1/q_171 rising
+  Destination Clock: U1/q_171 rising
+
+  Data Path: bounce/delay2_7 to bounce/delay3_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.451  bounce/delay2_7 (bounce/delay2_7)
+     FDC:D                     0.268          bounce/delay3_7
+    ----------------------------------------
+    Total                      1.233ns (0.782ns logic, 0.451ns route)
+                                       (63.4% logic, 36.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U1/q_01'
-  Total number of paths / destination ports: 6 / 6
+  Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Offset:              3.644ns (Levels of Logic = 2)
+Offset:              3.656ns (Levels of Logic = 2)
   Source:            btn<3> (PAD)
   Destination:       U2/vsenable (FF)
   Destination Clock: U1/q_01 rising
@@ -813,118 +1051,187 @@ Offset:              3.644ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            82   1.106   1.086  btn_3_IBUF (btn_3_IBUF)
+     IBUF:I->O           126   1.106   1.098  btn_3_IBUF (btn_3_IBUF)
      INV:I->O              1   0.612   0.357  U2/clr_inv1_INV_0 (U2/clr_inv)
      FDE:CE                    0.483          U2/vsenable
     ----------------------------------------
-    Total                      3.644ns (2.201ns logic, 1.443ns route)
-                                       (60.4% logic, 39.6% route)
+    Total                      3.656ns (2.201ns logic, 1.455ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mclk'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              4.403ns (Levels of Logic = 2)
+  Source:            btn<3> (PAD)
+  Destination:       screenstate/sig_hill3_7 (FF)
+  Destination Clock: mclk rising
+
+  Data Path: btn<3> to screenstate/sig_hill3_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           126   1.106   1.128  btn_3_IBUF (btn_3_IBUF)
+     LUT3:I2->O           36   0.612   1.074  screenstate/sig_hill1_and00011 (screenstate/sig_hill1_and0001)
+     FDE:CE                    0.483          screenstate/sig_hill2_2
+    ----------------------------------------
+    Total                      4.403ns (2.201ns logic, 2.202ns route)
+                                       (50.0% logic, 50.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/q_01'
-  Total number of paths / destination ports: 28958 / 12
+  Total number of paths / destination ports: 25589 / 12
 -------------------------------------------------------------------------
-Offset:              17.476ns (Levels of Logic = 16)
-  Source:            U2/vcs_2 (FF)
-  Destination:       green<2> (PAD)
+Offset:              17.369ns (Levels of Logic = 16)
+  Source:            U2/vcs_1 (FF)
+  Destination:       green<1> (PAD)
   Source Clock:      U1/q_01 rising
 
-  Data Path: U2/vcs_2 to green<2>
+  Data Path: U2/vcs_1 to green<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q           215   0.514   1.274  U2/vcs_2 (U2/vcs_2)
-     LUT2:I0->O           19   0.612   0.952  U3/Msub_ypix1_Madd_xor<2>11 (rom1_addr<2>)
-     LUT4:I2->O            1   0.612   0.000  M2<4>105_G (N423)
-     MUXF5:I1->O           1   0.278   0.426  M2<4>105 (M2<4>105)
-     LUT4:I1->O            1   0.612   0.509  M2<4>116 (M2<4>116)
-     LUT4:I0->O            1   0.612   0.000  M2<4>222_F (N418)
-     MUXF5:I0->O           1   0.278   0.426  M2<4>222 (M2<4>)
-     LUT3:I1->O            1   0.612   0.000  U3/Mmux_M2_mux0000_92 (U3/Mmux_M2_mux0000_92)
-     MUXF5:I0->O           1   0.278   0.000  U3/Mmux_M2_mux0000_7_f5_1 (U3/Mmux_M2_mux0000_7_f52)
+     FDCE:C->Q           308   0.514   1.299  U2/vcs_1 (U2/vcs_1)
+     LUT2:I0->O           21   0.612   1.111  U3/ypix1<2>1 (rom1_addr<2>)
+     LUT4:I0->O            1   0.612   0.360  M2<7>14 (M2<7>14)
+     LUT4:I3->O            1   0.612   0.509  M2<7>35 (M2<7>35)
+     LUT3:I0->O            1   0.612   0.000  M2<7>76_F (N389)
+     MUXF5:I0->O           1   0.278   0.387  M2<7>76 (M2<7>)
+     LUT3:I2->O            1   0.612   0.000  U3/Mmux_M2_mux0000_85 (U3/Mmux_M2_mux0000_85)
+     MUXF5:I1->O           1   0.278   0.000  U3/Mmux_M2_mux0000_7_f5_1 (U3/Mmux_M2_mux0000_7_f52)
      MUXF6:I1->O           1   0.451   0.000  U3/Mmux_M2_mux0000_6_f6 (U3/Mmux_M2_mux0000_6_f6)
      MUXF7:I0->O           1   0.451   0.000  U3/Mmux_M2_mux0000_4_f7 (U3/Mmux_M2_mux0000_4_f7)
-     MUXF8:I0->O           1   0.451   0.509  U3/Mmux_M2_mux0000_2_f8 (U3/M2_mux0000)
-     LUT4:I0->O            1   0.612   0.387  U3/red<0>3_SW0 (N141)
-     LUT4:I2->O            5   0.612   0.607  U3/red<0>3 (U3/N41)
-     LUT2:I1->O            4   0.612   0.651  U3/green<1>21 (U3/N102)
-     LUT4:I0->O            1   0.612   0.357  U3/green<2>1 (green_2_OBUF)
-     OBUF:I->O                 3.169          green_2_OBUF (green<2>)
+     MUXF8:I0->O           1   0.451   0.426  U3/Mmux_M2_mux0000_2_f8 (U3/M2_mux0000)
+     LUT4:I1->O            1   0.612   0.387  U3/red<0>3_SW0 (N130)
+     LUT4:I2->O            8   0.612   0.795  U3/red<0>3 (U3/N7)
+     LUT4:I0->O            1   0.612   0.000  selector/green<1>25_SW02 (selector/green<1>25_SW01)
+     MUXF5:I0->O           1   0.278   0.360  selector/green<1>25_SW0_f5 (N293)
+     LUT4:I3->O            1   0.612   0.357  selector/green<1>25 (green_1_OBUF)
+     OBUF:I->O                 3.169          green_1_OBUF (green<1>)
     ----------------------------------------
-    Total                     17.476ns (11.378ns logic, 6.098ns route)
-                                       (65.1% logic, 34.9% route)
+    Total                     17.369ns (11.378ns logic, 5.991ns route)
+                                       (65.5% logic, 34.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
-  Total number of paths / destination ports: 92 / 11
+  Total number of paths / destination ports: 890 / 19
 -------------------------------------------------------------------------
-Offset:              7.283ns (Levels of Logic = 4)
-  Source:            x7/clkdiv_18 (FF)
-  Destination:       a_to_g<6> (PAD)
+Offset:              13.327ns (Levels of Logic = 12)
+  Source:            screenstate/sig_hill1_1 (FF)
+  Destination:       red<2> (PAD)
   Source Clock:      mclk rising
 
-  Data Path: x7/clkdiv_18 to a_to_g<6>
+  Data Path: screenstate/sig_hill1_1 to red<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             13   0.514   0.988  x7/clkdiv_18 (x7/clkdiv_18)
-     LUT3:I0->O            1   0.612   0.000  x7/Mmux_digit_3 (x7/Mmux_digit_3)
-     MUXF5:I1->O           7   0.278   0.754  x7/Mmux_digit_2_f5 (x7/digit<0>)
-     LUT4:I0->O            1   0.612   0.357  x7/Mrom_a_to_g111 (a_to_g_1_OBUF)
-     OBUF:I->O                 3.169          a_to_g_1_OBUF (a_to_g<1>)
+     FDE:C->Q              9   0.514   0.849  screenstate/sig_hill1_1 (screenstate/sig_hill1_1)
+     LUT3:I0->O            3   0.612   0.603  U3/Madd_spriteonB1_add0000_cy<3>11 (U3/Madd_spriteonB1_add0000_cy<3>)
+     LUT3:I0->O            2   0.612   0.410  U3/Madd_spriteonB1_add0000_cy<5>11 (U3/Madd_spriteonB1_add0000_cy<5>)
+     LUT3:I2->O            1   0.612   0.000  U3/Mcompar_spriteonB1_cmp_ge0000_lut<6> (U3/Mcompar_spriteonB1_cmp_ge0000_lut<6>)
+     MUXCY:S->O            1   0.404   0.000  U3/Mcompar_spriteonB1_cmp_ge0000_cy<6> (U3/Mcompar_spriteonB1_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  U3/Mcompar_spriteonB1_cmp_ge0000_cy<7> (U3/Mcompar_spriteonB1_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.399   0.509  U3/Mcompar_spriteonB1_cmp_ge0000_cy<8> (U3/spriteonB1_cmp_ge0000)
+     LUT4:I0->O            4   0.612   0.568  U3/spriteonB1_and000082 (U3/spriteonB1)
+     LUT4:I1->O            3   0.612   0.520  U3/red<2>11 (U3/N3)
+     LUT2:I1->O            1   0.612   0.387  U3/red<2>_SW0 (N111)
+     LUT4:I2->O            1   0.612   0.000  selector/red<2>1_G (N416)
+     MUXF5:I1->O           2   0.278   0.380  selector/red<2>1 (red_1_OBUF)
+     OBUF:I->O                 3.169          red_1_OBUF (red<1>)
     ----------------------------------------
-    Total                      7.283ns (5.185ns logic, 2.098ns route)
-                                       (71.2% logic, 28.8% route)
+    Total                     13.327ns (9.100ns logic, 4.227ns route)
+                                       (68.3% logic, 31.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U3/q_171'
-  Total number of paths / destination ports: 19896 / 18
+  Total number of paths / destination ports: 17906 / 18
 -------------------------------------------------------------------------
-Offset:              19.274ns (Levels of Logic = 18)
+Offset:              19.283ns (Levels of Logic = 18)
   Source:            U3/tank2_angle_calc_4 (FF)
-  Destination:       green<2> (PAD)
+  Destination:       green<1> (PAD)
   Source Clock:      U3/q_171 rising
 
-  Data Path: U3/tank2_angle_calc_4 to green<2>
+  Data Path: U3/tank2_angle_calc_4 to green<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q            10   0.514   0.902  U3/tank2_angle_calc_4 (U3/tank2_angle_calc_4)
-     LUT3:I0->O            1   0.612   0.360  U3/tank2Angle<0>_SW0 (N137)
-     LUT4:I3->O           28   0.612   1.224  U3/tank2Angle<0> (M2<0>_bdd13)
-     LUT4:I0->O            5   0.612   0.541  M2<0>91 (M2<0>_bdd16)
-     LUT4:I3->O            1   0.612   0.387  M2<9>9 (M2<9>9)
-     LUT3:I2->O            1   0.612   0.000  M2<9>35_G (N477)
-     MUXF5:I1->O           1   0.278   0.360  M2<9>35 (M2<9>35)
-     LUT4:I3->O            1   0.612   0.000  M2<9>65_F (N436)
-     MUXF5:I0->O           1   0.278   0.387  M2<9>65 (M2<9>)
-     LUT3:I2->O            1   0.612   0.000  U3/Mmux_M2_mux0000_91 (U3/Mmux_M2_mux0000_91)
+     LUT4:I0->O            1   0.612   0.360  U3/tank2Angle<1>_SW0 (N126)
+     LUT4:I3->O           27   0.612   1.224  U3/tank2Angle<1> (M2<0>_bdd7)
+     LUT2:I0->O            3   0.612   0.481  M2<0>101 (M2<0>_bdd18)
+     LUT4:I2->O            3   0.612   0.603  M2<0>81 (M2<0>_bdd3)
+     LUT3:I0->O            1   0.612   0.360  M2<8>25 (M2<8>25)
+     LUT4:I3->O            1   0.612   0.000  M2<8>71_F (N381)
+     MUXF5:I0->O           1   0.278   0.426  M2<8>71 (M2<8>)
+     LUT3:I1->O            1   0.612   0.000  U3/Mmux_M2_mux0000_91 (U3/Mmux_M2_mux0000_91)
      MUXF5:I0->O           1   0.278   0.000  U3/Mmux_M2_mux0000_7_f5_0 (U3/Mmux_M2_mux0000_7_f51)
      MUXF6:I0->O           1   0.451   0.000  U3/Mmux_M2_mux0000_5_f6_0 (U3/Mmux_M2_mux0000_5_f61)
      MUXF7:I1->O           1   0.451   0.000  U3/Mmux_M2_mux0000_4_f7 (U3/Mmux_M2_mux0000_4_f7)
-     MUXF8:I0->O           1   0.451   0.509  U3/Mmux_M2_mux0000_2_f8 (U3/M2_mux0000)
-     LUT4:I0->O            1   0.612   0.387  U3/red<0>3_SW0 (N141)
-     LUT4:I2->O            5   0.612   0.607  U3/red<0>3 (U3/N41)
-     LUT2:I1->O            4   0.612   0.651  U3/green<1>21 (U3/N102)
-     LUT4:I0->O            1   0.612   0.357  U3/green<2>1 (green_2_OBUF)
+     MUXF8:I0->O           1   0.451   0.426  U3/Mmux_M2_mux0000_2_f8 (U3/M2_mux0000)
+     LUT4:I1->O            1   0.612   0.387  U3/red<0>3_SW0 (N130)
+     LUT4:I2->O            8   0.612   0.795  U3/red<0>3 (U3/N7)
+     LUT4:I0->O            1   0.612   0.000  selector/green<1>25_SW02 (selector/green<1>25_SW01)
+     MUXF5:I0->O           1   0.278   0.360  selector/green<1>25_SW0_f5 (N293)
+     LUT4:I3->O            1   0.612   0.357  selector/green<1>25 (green_1_OBUF)
+     OBUF:I->O                 3.169          green_1_OBUF (green<1>)
+    ----------------------------------------
+    Total                     19.283ns (12.602ns logic, 6.681ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vidon'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              6.408ns (Levels of Logic = 3)
+  Source:            title/B (LATCH)
+  Destination:       blue<1> (PAD)
+  Source Clock:      vidon falling
+
+  Data Path: title/B to blue<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              4   0.588   0.502  title/B (title/B)
+     LUT4:I3->O            4   0.612   0.568  title/blue<1>1 (sig_titleBlue<0>)
+     LUT4:I1->O            1   0.612   0.357  selector/green<2> (green_2_OBUF)
      OBUF:I->O                 3.169          green_2_OBUF (green<2>)
     ----------------------------------------
-    Total                     19.274ns (12.602ns logic, 6.672ns route)
-                                       (65.4% logic, 34.6% route)
+    Total                      6.408ns (4.981ns logic, 1.427ns route)
+                                       (77.7% logic, 22.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/q_171'
+  Total number of paths / destination ports: 24 / 8
+-------------------------------------------------------------------------
+Offset:              5.786ns (Levels of Logic = 2)
+  Source:            bounce/delay3_7 (FF)
+  Destination:       ld<7> (PAD)
+  Source Clock:      U1/q_171 rising
+
+  Data Path: bounce/delay3_7 to ld<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.532  bounce/delay3_7 (bounce/delay3_7)
+     LUT3:I0->O           21   0.612   0.959  bounce/outp<7>1 (ld_7_OBUF)
+     OBUF:I->O                 3.169          ld_7_OBUF (ld<7>)
+    ----------------------------------------
+    Total                      5.786ns (4.295ns logic, 1.491ns route)
+                                       (74.2% logic, 25.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 24.00 secs
-Total CPU time to Xst completion: 24.15 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 29.07 secs
  
 --> 
 
-Total memory usage is 234992 kilobytes
+Total memory usage is 239664 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   98 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :  123 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
 
 INFO:NetListWriters:635 - The generated VHDL netlist contains Xilinx UNISIM
    simulation primitives and has to be used with UNISIM library for correct

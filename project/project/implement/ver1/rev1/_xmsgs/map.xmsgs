@@ -8,12 +8,12 @@
 <msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">upBTN</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">15</arg> more times for the following (max. 5 shown):
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">55</arg> more times for the following (max. 5 shown):
 <arg fmt="%s" index="3">aBTN,
 rightBTN,
 leftBTN,
 downBTN,
-btn&lt;2&gt;_IBUF</arg>
+hill1&lt;7&gt;</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
@@ -23,16 +23,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">M1a&lt;11&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M2a&lt;20&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
-</msg>
-
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">M1a&lt;3&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M2a&lt;28&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
-</msg>
-
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">M1&lt;22&gt;210</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M1&lt;25&gt;35_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
-</msg>
-
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">M2&lt;28&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">M1&lt;3&gt;_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">vidon</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">sw&lt;0&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
@@ -41,10 +32,10 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">sw&lt;1&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">sw&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="367" delta="new" >The signal &lt;<arg fmt="%s" index="1">sw&lt;3&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">sw&lt;3&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">sw&lt;4&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.

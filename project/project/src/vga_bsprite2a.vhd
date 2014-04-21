@@ -4,7 +4,12 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity vga_bsprite2a is
     port ( vidon: in std_logic;		
 		   tank1Turn : in std_logic;
-		   tank2Turn : in std_logic; 
+		   tank2Turn : in std_logic;   
+		   hill1 : in std_logic_vector(7 downto 0);   
+		   hill2 : in std_logic_vector(7 downto 0);
+		   hill3 : in std_logic_vector(7 downto 0);
+		   hill4 : in std_logic_vector(7 downto 0);
+		   hill5 : in std_logic_vector(7 downto 0);
 		   tank1Angle : out std_logic_vector(1 downto 0);
 		   tank2Angle : out std_logic_vector(1 downto 0);
 		   tank1_angle : out std_logic_vector(7 downto 0);
@@ -56,8 +61,7 @@ signal C1a, C2a: std_logic_vector(9 downto 0);
 signal q: std_logic_vector(23 downto 0);
 signal spriteon1, spriteon1f, spriteon2, spriteon2f, spriteonGrnd, R, G, B: std_logic;
 signal spriteonB1, spriteonB2, spriteonB3, spriteonB4, spriteonB5: std_logic;
-signal clk3 : std_logic;
-signal hill1, hill2, hill3, hill4, hill5 : std_logic_vector(7 downto 0); 
+signal clk3 : std_logic; 
 signal rom_pix1, rom_pix2: std_logic_vector(10 downto 0);  	
 signal tank1_angle_calc, tank2_angle_calc: std_logic_vector(7 downto 0);
 
@@ -162,11 +166,6 @@ begin
 	xpix3 <= hc - hbp - C3;
 	xpix4 <= hc - hbp - C4;
 	
-	hill1 <= "01100101";
-	hill2 <= "11111111";
-	hill3 <= "00000000";
-	hill4 <= "11010100";
-	hill5 <= "01011010";
 	--Enable sprite video out when within the sprite region
  	spriteon1 <= '1' when (((hc >= C1 + hbp) and (hc < C1 + hbp + tw)) and ((vc >= R1 + vbp) and (vc < R1 + vbp + th))) else '0';
 	spriteon1f <= '1' when (((hc > C1 + hbp) and (hc <= C1 + hbp + tw)) and ((vc >= R1 + vbp) and (vc < R1 + vbp + th))) else '0';

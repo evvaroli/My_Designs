@@ -15,78 +15,6 @@ Done.
 Annotating constraints to design from ucf file "vga_bsprite2a_top.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
-INFO:ConstraintSystem:59 - Constraint <NET "ld<0>"  LOC = "J14"  ;>
-   [vga_bsprite2a_top.ucf(17)]: NET "ld<0>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "ld<0>"  LOC = "J14"  ;> [vga_bsprite2a_top.ucf(17)]' could not be
-   found and so the Locate constraint will be removed.
-
-INFO:ConstraintSystem:59 - Constraint <NET "ld<1>"  LOC = "J15"  ;>
-   [vga_bsprite2a_top.ucf(18)]: NET "ld<1>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "ld<1>"  LOC = "J15"  ;> [vga_bsprite2a_top.ucf(18)]' could not be
-   found and so the Locate constraint will be removed.
-
-INFO:ConstraintSystem:59 - Constraint <NET "ld<2>"  LOC = "K15"  ;>
-   [vga_bsprite2a_top.ucf(19)]: NET "ld<2>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "ld<2>"  LOC = "K15"  ;> [vga_bsprite2a_top.ucf(19)]' could not be
-   found and so the Locate constraint will be removed.
-
-INFO:ConstraintSystem:59 - Constraint <NET "ld<3>"  LOC = "K14"  ;>
-   [vga_bsprite2a_top.ucf(20)]: NET "ld<3>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "ld<3>"  LOC = "K14"  ;> [vga_bsprite2a_top.ucf(20)]' could not be
-   found and so the Locate constraint will be removed.
-
-INFO:ConstraintSystem:59 - Constraint <NET "ld<4>"  LOC = "E17"  ;>
-   [vga_bsprite2a_top.ucf(21)]: NET "ld<4>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "ld<4>"  LOC = "E17"  ;> [vga_bsprite2a_top.ucf(21)]' could not be
-   found and so the Locate constraint will be removed.
-
-INFO:ConstraintSystem:59 - Constraint <NET "ld<5>"  LOC = "P15"  ;>
-   [vga_bsprite2a_top.ucf(22)]: NET "ld<5>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "ld<5>"  LOC = "P15"  ;> [vga_bsprite2a_top.ucf(22)]' could not be
-   found and so the Locate constraint will be removed.
-
-INFO:ConstraintSystem:59 - Constraint <NET "ld<6>"  LOC = "F4"  ;>
-   [vga_bsprite2a_top.ucf(23)]: NET "ld<6>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "ld<6>"  LOC = "F4"  ;> [vga_bsprite2a_top.ucf(23)]' could not be found
-   and so the Locate constraint will be removed.
-
-INFO:ConstraintSystem:59 - Constraint <NET "ld<7>"  LOC = "R4"  ;>
-   [vga_bsprite2a_top.ucf(24)]: NET "ld<7>" not found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "ld<7>"  LOC = "R4"  ;> [vga_bsprite2a_top.ucf(24)]' could not be found
-   and so the Locate constraint will be removed.
-
 INFO:ConstraintSystem:59 - Constraint <NET "RxD"  LOC = "U6"  ;>
    [vga_bsprite2a_top.ucf(54)]: NET "RxD" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
@@ -595,9 +523,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:  63
+  Number of warnings:  55
 
-Total memory usage is 131820 kilobytes
+Total memory usage is 131756 kilobytes
 
 Writing NGD file "vga_bsprite2a_top.ngd" ...
 Total REAL time to NGDBUILD completion:  4 sec

@@ -7,8 +7,8 @@ entity clkdiv is
 	 port(
 		 mclk : in STD_LOGIC;
 		 clr : in STD_LOGIC;
-		 clk25 : out STD_LOGIC
-		 --clk190 : out STD_LOGIC;
+		 clk25 : out STD_LOGIC;
+		 clk190 : out STD_LOGIC
 		 --clk3 : out STD_LOGIC
 	     );
 end clkdiv;
@@ -28,7 +28,7 @@ begin
 		end process;
 		
 		clk25 <= q(0);
-		--clk190 <= q(17);
+		clk190 <= q(17);
 		--clk3 <= q(23);
 
 end clkdiv;

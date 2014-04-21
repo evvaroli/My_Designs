@@ -42,6 +42,14 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Setup/Hold to clock mclk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+btn<3>      |    0.155(R)|    1.122(R)|mclk_BUFGP        |   0.000|
+------------+------------+------------+------------------+--------+
+
 Clock mclk to Pad
 ------------+------------+------------------+--------+
             | clk (edge) |                  | Clock  |
@@ -58,6 +66,14 @@ an<0>       |    7.001(R)|mclk_BUFGP        |   0.000|
 an<1>       |    7.713(R)|mclk_BUFGP        |   0.000|
 an<2>       |    7.001(R)|mclk_BUFGP        |   0.000|
 an<3>       |    7.001(R)|mclk_BUFGP        |   0.000|
+blue<0>     |   11.690(R)|mclk_BUFGP        |   0.000|
+blue<1>     |    7.001(R)|mclk_BUFGP        |   0.000|
+green<0>    |   11.412(R)|mclk_BUFGP        |   0.000|
+green<1>    |   12.402(R)|mclk_BUFGP        |   0.000|
+green<2>    |   12.124(R)|mclk_BUFGP        |   0.000|
+red<0>      |   12.402(R)|mclk_BUFGP        |   0.000|
+red<1>      |   12.402(R)|mclk_BUFGP        |   0.000|
+red<2>      |   12.402(R)|mclk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock mclk
@@ -69,14 +85,14 @@ mclk           |    4.221|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat Apr 19 18:22:22 2014 
+Analysis completed Mon Apr 21 12:02:46 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 136 MB
+Peak Memory Usage: 138 MB
 
 
 
