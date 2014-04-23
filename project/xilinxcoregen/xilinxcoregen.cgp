@@ -1,0 +1,16 @@
+SET flowvendor = Other
+SET workingdirectory = "c:\My_Designs\project\xilinxcoregen\tmp"
+SET devicefamily = spartan3e
+SET package = fg320
+SET device = xc3s500e
+SET speedgrade = -5
+SET designentry = Advanced
+SET vhdlsim = True
+SET verilogsim = False
+SET implementationfiletype = Ngc
+SET simulationfiles = Behavioral
+SET asysymbol = True
+SET addpads = False
+SET createndf = False
+SET busformat = BusFormatAngleBracketNotRipped
+

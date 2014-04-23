@@ -67,13 +67,13 @@ an<1>       |    7.713(R)|mclk_BUFGP        |   0.000|
 an<2>       |    7.001(R)|mclk_BUFGP        |   0.000|
 an<3>       |    7.001(R)|mclk_BUFGP        |   0.000|
 blue<0>     |   11.690(R)|mclk_BUFGP        |   0.000|
-blue<1>     |    7.001(R)|mclk_BUFGP        |   0.000|
-green<0>    |   11.412(R)|mclk_BUFGP        |   0.000|
+blue<1>     |   11.690(R)|mclk_BUFGP        |   0.000|
+green<0>    |   12.836(R)|mclk_BUFGP        |   0.000|
 green<1>    |   12.402(R)|mclk_BUFGP        |   0.000|
 green<2>    |   12.124(R)|mclk_BUFGP        |   0.000|
-red<0>      |   12.402(R)|mclk_BUFGP        |   0.000|
-red<1>      |   12.402(R)|mclk_BUFGP        |   0.000|
-red<2>      |   12.402(R)|mclk_BUFGP        |   0.000|
+red<0>      |   12.836(R)|mclk_BUFGP        |   0.000|
+red<1>      |   13.548(R)|mclk_BUFGP        |   0.000|
+red<2>      |   13.548(R)|mclk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock mclk
@@ -85,14 +85,14 @@ mclk           |    4.221|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Apr 21 12:02:46 2014 
+Analysis completed Wed Apr 23 19:07:33 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 138 MB
+Peak Memory Usage: 144 MB
 
 
 

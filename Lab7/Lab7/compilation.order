@@ -11,6 +11,7 @@
 .\src\group_photos_top2.vhd
 .\src\bounce.vhd
 .\src\clock_pulse.vhd
+.\src\test.vhd
 .\synthesis\group_photos_top.vhd
 .\synthesis\vga_stripes_top.vhd
 .\synthesis\group_photos_top2.vhd

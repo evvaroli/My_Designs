@@ -5,64 +5,95 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">a</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">164</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">a</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">b</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">164</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">b</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">start</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">164</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">start</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">sel</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">164</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">sel</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">up</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">164</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">up</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">down</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">164</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">down</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">right</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">164</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">right</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">155</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">left</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">164</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">left</arg>&apos; of component &apos;<arg fmt="%s" index="4">nes_driver</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">195</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr1</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">254</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">titleImage</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">196</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr2</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">277</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fonts</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">201</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_pix1</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a_top.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">fonts</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">202</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_pix2</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">219</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr1</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">214</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">220</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr2</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">215</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">225</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_pix1</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">218</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">221</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">224</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">234</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">237</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">226</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_pix2</arg>&gt; has a width of <arg fmt="%d" index="4">11</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
 </msg>
 
 <msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">240</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">241</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">244</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">247</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">250</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">260</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">263</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">266</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">297</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">298</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">299</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">306</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">307</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/vga_bsprite2a.vhd</arg>&quot; line <arg fmt="%d" index="2">228</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;tank1Angle10s&gt;, &lt;tank1Angle1s&gt;</arg>
 </msg>
 
 <msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/tank_sprite.vhd</arg>&quot; line <arg fmt="%d" index="2">118</arg>: Index value(s) does not match array range, simulation mismatch.
@@ -99,17 +130,14 @@
 <arg fmt="%s" index="3">&lt;gameRed&gt;, &lt;gameGreen&gt;, &lt;gameBlue&gt;, &lt;titleRed&gt;, &lt;titleGreen&gt;, &lt;titleBlue&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/titleScreen.vhd</arg>&quot; line <arg fmt="%d" index="2">45</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/titleScreen.vhd</arg>&quot; line <arg fmt="%d" index="2">42</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr1</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">18</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/titleScreen.vhd</arg>&quot; line <arg fmt="%d" index="2">46</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="1610" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/titleScreen.vhd</arg>&quot; line <arg fmt="%d" index="2">44</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">rom_addr2</arg>&gt; has a width of <arg fmt="%d" index="4">17</arg> bits but assigned expression is <arg fmt="%d" index="5">18</arg>-bit wide.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/titleScreen.vhd</arg>&quot; line <arg fmt="%d" index="2">47</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/titleScreen.vhd</arg>&quot; line <arg fmt="%d" index="2">37</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-<arg fmt="%s" index="3">&lt;spriteon&gt;</arg>
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">C:/My_Designs/project/project/src/titleScreen.vhd</arg>&quot; line <arg fmt="%d" index="2">48</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;vc&gt;</arg>
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -119,9 +147,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">tank2Turn</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ypix4</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -154,12 +179,6 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">R3</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">R</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">G</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">C3</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000</arg>.
 </msg>
 
@@ -169,7 +188,7 @@
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">C1a</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">B</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">B</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addr&lt;5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -286,10 +305,16 @@
 <msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">adownreleased</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">present_state</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">rom_addr&lt;10:4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rom_addr</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">B</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">R</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">G</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">B</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">upBTN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -325,13 +350,19 @@
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">sig_x</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">sig_init_addr</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">sig_init_M</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">sig_gameSel</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">sig_gameB</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">sig_current_state</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">sig_current_state</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">rom4_addr16</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.

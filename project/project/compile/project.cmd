@@ -1,1 +1,1 @@
--w -s "c:\My_Designs\project\library.cfg"  -j "c:\My_Designs\project\project\projlib.cfg"  -d "c:\My_Designs\project\project\compile"   -work project  -O3 -e 100 -2002 "c:\My_Designs\project\project\src\vga_bsprite2a_top.vhd"
+-w -s "c:\My_Designs\project\library.cfg"  -j "c:\My_Designs\project\project\projlib.cfg"  -d "c:\My_Designs\project\project\compile"   -work project  -O3 -e 100 -2002 "c:\My_Designs\project\project\src\vga_bsprite2a.vhd"

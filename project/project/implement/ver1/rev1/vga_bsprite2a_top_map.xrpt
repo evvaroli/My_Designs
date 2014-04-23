@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Mon Apr 21 12:02:42 2014">
+  <application stringID="Map" timeStamp="Wed Apr 23 19:07:29 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -55,20 +55,20 @@
       <section stringID="MAP_DESIGN_SUMMARY">
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
-        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="12"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="223424"/>
+        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="9"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="228532"/>
         <item stringID="MAP_TOTAL_REAL_TIME" value="3 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="3 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="9312" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="206">
-          <item dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="205"/>
+        <item AVAILABLE="9312" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="207">
+          <item dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="206"/>
           <item dataType="int" stringID="MAP_NUM_SLICE_LATCH" value="1"/>
         </item>
-        <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="1051">
-          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="103"/>
+        <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="1122">
+          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="134"/>
         </item>
-        <item AVAILABLE="4656" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="576">
+        <item AVAILABLE="4656" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="603">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>
@@ -78,6 +78,7 @@
         </section>
       </section>
       <section stringID="MAP_HARD_IP_REPORTING">
+        <item AVAILABLE="20" dataType="int" stringID="MAP_NUM_RAMB16" value="20"/>
         <item AVAILABLE="24" dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="4"/>
       </section>
       <section stringID="MAP_MACRO_RPM_REPORTING">
@@ -486,7 +487,7 @@
       </section>
       <section stringID="MAP_RPM_MACROS">
         <section stringID="MAP_SHAPE_SECTION">
-          <item dataType="int" stringID="MAP_NUM_SHAPE" value="30"/>
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="39"/>
         </section>
       </section>
       <section stringID="MAP_GUIDE_REPORT"/>
@@ -495,6 +496,74 @@
       <section stringID="MAP_CONFIGURATION_STRING_DETAILS"/>
       <section stringID="MAP_GENERAL_CONFIG_DATA">
         <item stringID="MAP_DISABLE_ATTR" value="LOW"/>
+        <item stringID="MAP_INIT_00" value="000008ceffff600000000ef73ffbfe0000000e19d1151e000000000000000000"/>
+        <item stringID="MAP_INIT_01" value="00000008cc80000000000c88effec80000000c88777cc8000000008cefec8000"/>
+        <item stringID="MAP_INIT_02" value="00000c666c9d7f0000ffff39dd93ffff000000c6226c000000fffff7337fffff"/>
+        <item stringID="MAP_INIT_03" value="0000088bc7cb880000000677333f3f0000000000000f3f000000088e8c666c00"/>
+        <item stringID="MAP_INIT_04" value="0000033033333300000008ce888ec80000000137fff7310000000000cfc00000"/>
+        <item stringID="MAP_INIT_05" value="0000e8ce888ec80000000fff00000000000e36c6336c03e000000bbbbbbbbf00"/>
+        <item stringID="MAP_INIT_06" value="000000080f0800000000000c6f6c0000000008ce8888880000000888888ec800"/>
+        <item stringID="MAP_INIT_07" value="0000008cceeff000000000ffeecc8000000000046f6400000000000f00000000"/>
+        <item stringID="MAP_INIT_08" value="0000066f666f660000000000000233300000088088ccc8000000000000000000"/>
+        <item stringID="MAP_INIT_09" value="000000000000000000000b66ebc66c0000000338c6310000000cce333e013ecc"/>
+        <item stringID="MAP_INIT_0A" value="000000888f88800000000006cfc60000000008c66666c80000000c8000008c00"/>
+        <item stringID="MAP_INIT_0B" value="0000000008c631000000088000000000000000000f0000000000088800000000"/>
+        <item stringID="MAP_INIT_0C" value="00000e333e333e0000000f308c633e0000000fcccccccc0000000e333bf73e00"/>
+        <item stringID="MAP_INIT_0D" value="000008888c633f0000000e333e000c0000000e333e000f0000000f66f66ee600"/>
+        <item stringID="MAP_INIT_0E" value="0000008800088000000000880008800000000c633f333e0000000e333e333e00"/>
+        <item stringID="MAP_INIT_0F" value="00000cc0cc633e0000000008c6c800000000000e00e00000000006c80008c600"/>
+        <item stringID="MAP_INIT_10" value="00000e3100013e0000000e333e333e0000000333f336c80000000e0efff33e00"/>
+        <item stringID="MAP_INIT_11" value="00000d33f0013e00000008004c413f0000000f314c413f0000000c6333336c00"/>
+        <item stringID="MAP_INIT_12" value="000003366c66330000000c6666666f0000000c8888888c00000003333f333300"/>
+        <item stringID="MAP_INIT_13" value="00000c6333336c00000003337ffb33000000033333bf730000000f3100000800"/>
+        <item stringID="MAP_INIT_14" value="00000e336c033e00000003336e333e00000076efb3333e00000008000e333e00"/>
+        <item stringID="MAP_INIT_15" value="0000066fbb333300000008c63333330000000e333333330000000c888889bf00"/>
+        <item stringID="MAP_INIT_16" value="00000c0000000c0000000f3108c63f0000000c888c63330000000336c8c63300"/>
+        <item stringID="MAP_INIT_17" value="000f00000000000000000000000036c800000ccccccccc0000000137ec800000"/>
+        <item stringID="MAP_INIT_18" value="00000e3003e0000000000e3336c0000000000b66e6c000000000000000000c88"/>
+        <item stringID="MAP_INIT_19" value="000c66e666b00000000008000c026c0000000e30f3e0000000000b6666e66e00"/>
+        <item stringID="MAP_INIT_1A" value="00000336c6300000000c666666e0660000000eccccc0cc00000003333b600000"/>
+        <item stringID="MAP_INIT_1B" value="00000e3333e000000000033333e0000000000bbbbf60000000000ecccccccc00"/>
+        <item stringID="MAP_INIT_1C" value="00000e3e83e00000000008003be00000000f66e666b00000000800e333e00000"/>
+        <item stringID="MAP_INIT_1D" value="000006fbb3300000000008c63330000000000b666660000000000eb888e88800"/>
+        <item stringID="MAP_INIT_1E" value="00000e8880888e0000000f38c6f00000000c63f3333000000000036cc6300000"/>
+        <item stringID="MAP_INIT_1F" value="000000f336c80000000000000000eb00000000888e8880000000088880888800"/>
+        <item stringID="MAP_INIT_20" value="00000b66e6c06c8000000e30f3e08c6000000b6666606600000e36e310013e00"/>
+        <item stringID="MAP_INIT_21" value="0000c6cc606c000000000b66e6c0c6c000000b66e6c0c80000000b66e6c06600"/>
+        <item stringID="MAP_INIT_22" value="00000c888880660000000e30f3e0c80000000e30f3e0660000000e30f3e06c80"/>
+        <item stringID="MAP_INIT_23" value="0000033f336c0c6c0000033f336c833000000c888880800000000c8888806c80"/>
+        <item stringID="MAP_INIT_24" value="00000e3333e06c80000007666f666f00000007c8ebbe000000000f30e03f008c"/>
+        <item stringID="MAP_INIT_25" value="00000b666660c80000000b6666606c8000000e3333e0c80000000e3333e03300"/>
+        <item stringID="MAP_INIT_26" value="0000088e3003e88000000e333333033000000c633336c330000c63f333303300"/>
+        <item stringID="MAP_INIT_27" value="000088888e888be000000366f62c66c00000088f8f8c630000000e30008026c0"/>
+        <item stringID="MAP_INIT_28" value="00000b66666008c000000e3333e008c000000c88888008c000000b66e6c008c0"/>
+        <item stringID="MAP_INIT_29" value="000000000c08cc80000000000e0eccc000000337ffb330eb0000033333e0eb00"/>
+        <item stringID="MAP_INIT_2A" value="000fc63e08c63000000000333f000000000000000f00000000000e3308808800"/>
+        <item stringID="MAP_INIT_2B" value="0000000c6b6c00000000000b6c6b0000000008ccc880880000033ff738c63000"/>
+        <item stringID="MAP_INIT_2C" value="0088888888888888007d7d7d7d7d7d7d00a5a5a5a5a5a5a50041414141414141"/>
+        <item stringID="MAP_INIT_2D" value="00666666e0000000006666666666666600888888888888880088888888888888"/>
+        <item stringID="MAP_INIT_2E" value="0066666666e00000006666666666666600666666666666660088888888800000"/>
+        <item stringID="MAP_INIT_2F" value="0088888880000000000000008888888800000000e666666600000000e6666666"/>
+        <item stringID="MAP_INIT_30" value="00888888f888888800888888f000000000000000f888888800000000f8888888"/>
+        <item stringID="MAP_INIT_31" value="006666667666666600888888f8f8888800888888f888888800000000f0000000"/>
+        <item stringID="MAP_INIT_32" value="0066666670f0000000000000f07666660066666670f0000000000000f0766666"/>
+        <item stringID="MAP_INIT_33" value="00000000f0f88888006666667076666600000000f0f000000066666670766666"/>
+        <item stringID="MAP_INIT_34" value="00000000f666666600666666f000000000888888f0f0000000000000f6666666"/>
+        <item stringID="MAP_INIT_35" value="00666666f666666600666666f000000000888888f8f0000000000000f8f88888"/>
+        <item stringID="MAP_INIT_36" value="00ffffffffffffff00888888f0000000000000008888888800888888f8f88888"/>
+        <item stringID="MAP_INIT_37" value="000000000fffffff00ffffffffffffff000000000000000000fffffff0000000"/>
+        <item stringID="MAP_INIT_38" value="00000666666f00000000000000033f00000000e33e3e000000000becceb00000"/>
+        <item stringID="MAP_INIT_39" value="00000ccccceb00000000000e33330000000008ccccf0000000000f308c803f00"/>
+        <item stringID="MAP_INIT_3A" value="00000c666ec80e000000076663336c0000000c633f336c0000000e8c666c8e00"/>
+        <item stringID="MAP_INIT_3B" value="000003333333e00000000c000c000c000000000e3bbe63000000000ebbe00000"/>
+        <item stringID="MAP_INIT_3C" value="00000e0c80008c0000000e008c6c800000000f0888f88800000000f00f00f000"/>
+        <item stringID="MAP_INIT_3D" value="0000000eb0eb0000000008800f008800000000888888888800888888888bbe00"/>
+        <item stringID="MAP_INIT_3E" value="00000cccccccccf000000000800000000000000088000000000000000008cc80"/>
+        <item stringID="MAP_INIT_3F" value="0000000000000000000000eeeeee00000000000008800800000000000ccccc80"/>
+        <item stringID="MAP_INIT_A" value="0"/>
+        <item stringID="MAP_SRVAL_A" value="0"/>
+        <item stringID="MAP_INIT_B" value="0"/>
+        <item stringID="MAP_SRVAL_B" value="0"/>
       </section>
       <section stringID="MAP_CONTROL_SET_INFORMATION"/>
     </task>

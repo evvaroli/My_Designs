@@ -44,6 +44,8 @@ signal sig_gameBlue, sig_titleBlue : std_logic_vector(1 downto 0);
 signal sig_hill1, sig_hill2, sig_hill3, sig_hill4, sig_hill5 : std_logic_vector(7 downto 0);
 signal hc, vc: std_logic_vector(9 downto 0);
 signal M1, M1a, sig_init_M : std_logic_vector(0 to 31);
+signal sig_tank110sM, sig_tank11sM : std_logic_vector(0 to 7);
+signal sig_tank1rom10s, sig_tank1rom1s : std_logic_vector(11 downto 0);
 signal angle1, angle2: std_logic_vector(1 downto 0);
 signal M2, M2a: std_logic_vector(31 downto 0);
 signal btns: std_logic_vector(3 downto 0);	 
@@ -53,7 +55,10 @@ signal sig_tank1_angle_calc, sig_tank2_angle_calc : std_logic_vector(7 downto 0)
 signal rom1_addr16, rom2_addr16, rom3_addr16, rom4_addr16: std_logic_vector(4 downto 0); 
 signal rom1_addr, rom2_addr : std_logic_vector(5 downto 0);
 signal sig_init_addr : std_logic_vector(3 downto 0);
-signal sig_current_state, sig_nesBtns : std_logic_vector(7 downto 0);
+signal sig_current_state, sig_nesBtns : std_logic_vector(7 downto 0);  
+signal sig_romTitle_addr14 : std_logic_vector(14 downto 0);	
+signal sig_MTitle : std_logic_vector(7 downto 0);
+
 begin
 
 	clr <= btn(3);
@@ -105,7 +110,11 @@ begin
 	sw => sw,
 	clk => mclk,
 	clr => clr,
-	btn => btns,
+	btn => btns,	  
+	tank110sM => sig_tank110sM,
+	tank11sM => sig_tank11sM,
+	tank1rom10s => sig_tank1rom10s,
+	tank1rom1s => sig_tank1rom1s,
 	rom1_addr => rom1_addr,
 	rom2_addr => rom2_addr,
 	red => sig_gameRed,
@@ -234,19 +243,20 @@ begin
 	port map(
 		vidon => vidon,
 		hc => hc,
-		vc => vc,  
-		M => sig_init_M,
-		rom_addr4 => sig_init_addr,
+		vc => vc,
+		MTitle => sig_MTitle,
+		romTitle_addr14 => sig_romTitle_addr14,
 		red => sig_titleRed,
 		green => sig_titleGreen,
 		blue => sig_titleBlue
-	);			 
+	);	 			
 	
-	title_prom : entity work.title_prom
+	t : entity work.titleImage
 	port map(
-		addr => sig_init_addr,
-		M => sig_init_M
-	);		   
+		clka => clk25,
+		addra => sig_romTitle_addr14,
+		douta => sig_MTitle
+	);
 	
 	bounce : entity work.debounce
 	port map(
@@ -262,6 +272,20 @@ begin
 		outp(6)	=> sig_down,
 		outp(7)	=> sig_left
 		
+	);
+	
+	tank1font10s : entity work.fonts
+	port map(
+		addr => sig_tank1rom10s,
+		clk => clk25,
+		dout => sig_tank110sM
+	);
+	
+	tank1font1s : entity work.fonts
+	port map(
+		addr => sig_tank1rom1s,
+		clk => clk25,
+		dout => sig_tank11sM
 	);
 	
 	

@@ -35,7 +35,7 @@ ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
 DVM_DISPLAY=NO
 FAMILY=Xilinx14x SPARTAN3E
-fileopenfolder=C:\My_Designs\Lab6\Lab6\src
+fileopenfolder=C:\My_Designs\project\project\src
 SYNTH_STATUS=warnings
 VerilogDirsChanged=0
 PHYSSYNTH_STATUS=none
@@ -362,7 +362,7 @@ REPORT=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=    
+HierarchyInformation=
 ShowHide=ShowTopLevel
 Selected=
 
@@ -391,6 +391,7 @@ TOPLEVEL=group_photos_top
 /group_photos_top2.vhd=-1
 /bounce.vhd=-1
 /clock_pulse.vhd=-1
+/test.vhd=-1
 post-synthesis/..\..\synthesis\group_photos_top.vhd=-1
 post-synthesis/..\..\synthesis\vga_stripes_top.vhd=-1
 post-synthesis/..\..\synthesis\group_photos_top2.vhd=-1
@@ -411,6 +412,7 @@ timing/..\..\IMPLEMENT\TIME_SIM.SDF=-1
 .\src\group_photos_top2.vhd=VHDL Source Code
 .\src\bounce.vhd=VHDL Source Code
 .\src\clock_pulse.vhd=VHDL Source Code
+.\src\test.vhd=VHDL Source Code
 .\synthesis\group_photos_top.vhd=VHDL Source Code
 .\synthesis\vga_stripes_top.vhd=VHDL Source Code
 .\synthesis\group_photos_top2.vhd=VHDL Source Code

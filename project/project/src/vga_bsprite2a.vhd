@@ -31,10 +31,15 @@ entity vga_bsprite2a is
 		   --clk3: out std_logic;
 		   btn: in std_logic_vector(3 downto 0);
            rom1_addr: out std_logic_vector(5 downto 0);
-		   rom2_addr: out std_logic_vector(5 downto 0);
+		   rom2_addr: out std_logic_vector(5 downto 0);	
+		   tank1rom10s : out std_logic_vector(11 downto 0);   --asciiaddr = asciicode*16 
+		   tank1rom1s : out std_logic_vector(11 downto 0);   --asciiaddr = asciicode*16
+		   tank110sM: in std_logic_vector(0 to 7);
+		   tank11sM: in std_logic_vector(0 to 7);
            red : out std_logic_vector(2 downto 0);
            green : out std_logic_vector(2 downto 0);
-           blue : out std_logic_vector(1 downto 0)
+           blue : out std_logic_vector(1 downto 0) 
+		   
 	);
 end vga_bsprite2a;		 
 
@@ -43,8 +48,8 @@ constant hbp: std_logic_vector(9 downto 0) := "0010010000";
 	--Horizontal back porch = 144 (128+16)
 constant vbp: std_logic_vector(9 downto 0) := "0000011111";	 
 	--Vertical back porch = 31 (2+29)
-constant w: integer := 100;
-constant h: integer := 100;	 
+constant w: integer := 4;
+constant h: integer := 10;	 
 constant tw: integer := 32;
 constant th: integer := 29;		
 constant zero :std_logic_vector(7 downto 0)	:= "00000000";
@@ -59,13 +64,32 @@ signal C2: std_logic_vector(9 downto 0)  := "0111110100";
 signal C3, C4, R1, R2, R3, R4: std_logic_vector(9 downto 0);
 signal C1a, C2a: std_logic_vector(9 downto 0);
 signal q: std_logic_vector(23 downto 0);
-signal spriteon1, spriteon1f, spriteon2, spriteon2f, spriteonGrnd, R, G, B: std_logic;
+signal tank1Angle10s, tank1Angle1s, spriteon1, spriteon1f, spriteon2, spriteon2f, spriteonGrnd, R, G, B: std_logic;
 signal spriteonB1, spriteonB2, spriteonB3, spriteonB4, spriteonB5: std_logic;
 signal clk3 : std_logic; 
 signal rom_pix1, rom_pix2: std_logic_vector(10 downto 0);  	
 signal tank1_angle_calc, tank2_angle_calc: std_logic_vector(7 downto 0);
+signal tank110sRomPix, tank11sRomPix, CFont, CFont2, RFont, tank1ascii10s, tank1ascii1s: std_logic_vector(11 downto 0);
 
-begin 
+begin 	  
+	
+	--fix C1 and R1 near middle of screen
+	CFont <= "000" & "0000" & "10000";
+	RFont <= "000" & "0000" & "10000";	
+	CFont2 <= CFont + w;
+	-- set ascii code in switches
+	tank1ascii10s <= "0000" & sw(7 downto 4) & "0000";   --asciiaddr = asciicode*16
+	tank1ascii1s <=  "0000" & sw(3 downto 0) & "0000";   --asciiaddr = asciicode*16
+	tank1rom10s <= vc - vbp - R1 + tank1ascii10s;
+	tank1rom1s <= vc - vbp - R1 + tank1ascii1s;
+	tank110sRomPix <= hc - hbp - CFont;
+	tank11sRomPix <= hc - hbp - CFont2 + w;
+
+	--Enable sprite video out when within the sprite region
+ 	tank1Angle10s <= '1' when (((hc >= CFont + hbp - w) and (hc < CFont + hbp + w))
+			and ((vc > RFont + vbp) and (vc <= RFont + vbp + h))) else '0';  
+	tank1Angle1s <= '1' when (((hc >= CFont2 + hbp) and (hc < CFont2 + hbp + w))
+          	and ((vc > RFont + vbp) and (vc <= RFont + vbp + h))) else '0';
 	--fall1 <= '1';
 	--jump1 <= "1111";
 	--set C1 and R1 using switches
@@ -203,13 +227,15 @@ begin
 
 	process(spriteon1, spriteon1f, spriteon2, spriteon2f, spriteonGrnd, spriteonB1, spriteonB2, spriteonB3, spriteonB4,
 			spriteonB5, vidon, M1, M1a, M2, M2a, rom_pix1, rom_pix2)
-  		variable i, j: integer;
+  		variable i, j, f, n: integer;
  	begin
 		red <= "000";
 		green <= "000";
 		blue <= "00";
 		i := conv_integer(rom_pix1);
 		j := conv_integer(rom_pix2);
+		f := conv_integer(tank110sRomPix);
+		n := conv_integer(tank11sRomPix);
 		if vidon = '1' then
 			if spriteon1 = '1' and M1(i) = '1' then
 				if M1(i) = '1' then
@@ -266,6 +292,22 @@ begin
 				red <= "001";
 				green <= "001";
 				blue <= "10";
+			elsif 							
+				tank1Angle10s = '1' then
+    			R <= tank110sM(f);
+    			G <= tank110sM(f);
+    			B <= tank110sM(f);
+   				red <= R & R & R;
+    			green <= G & G & G;
+    			blue <= B & B;
+			elsif 							
+				tank1Angle1s = '1' then
+    			R <= tank11sM(n);
+    			G <= tank11sM(n);
+    			B <= tank11sM(n);
+   				red <= R & R & R;
+    			green <= G & G & G;
+    			blue <= B & B;
 			else	--sky
 				--red <= vc(0) & vc(0) & vc(0);
 				--green <= vc(0) & vc(0) & vc(0);

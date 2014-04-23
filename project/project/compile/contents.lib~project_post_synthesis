@@ -1,5 +1,5 @@
-15
+24
 ~E 0 "" 0 nes_driver_top
 ~A 0 "" 0 structure
 ~E 1 "./../synthesis/vga_bsprite2a_top.vhd" 41 vga_bsprite2a_top
-~A 1 "./../synthesis/vga_bsprite2a_top.vhd" 70 STRUCTURE
+~A 1 "./../synthesis/vga_bsprite2a_top.vhd" 71 STRUCTURE

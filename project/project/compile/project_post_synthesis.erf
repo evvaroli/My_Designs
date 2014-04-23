@@ -84,5 +84,7 @@ UPDATEPROGRESS 78
 UPDATEPROGRESS 79
 UPDATEPROGRESS 80
 UPDATEPROGRESS 81
+WARNING ELAB1_0026: "There is no default binding for component "titleImage". (No entity named "titleImage" was found)." "c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 1732 0
+WARNING ELAB1_0026: "There is no default binding for component "fonts". (No entity named "fonts" was found)." "c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 1759 0
 ENDPROGRESS c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]" 
+SUCCESS "Compile success 0 Errors 2 Warnings  Analysis time :  0.4 [s]" 
