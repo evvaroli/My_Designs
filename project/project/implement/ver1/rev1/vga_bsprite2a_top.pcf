@@ -1,12 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Apr 24 15:56:14 2014
+// Written by: Map P.20131013 on Thu Apr 24 17:39:45 2014
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "dp" LOCATE = SITE "C17" LEVEL 1;
-COMP "ja1" LOCATE = SITE "K12" LEVEL 1;
-COMP "ja2" LOCATE = SITE "L17" LEVEL 1;
-COMP "ja3" LOCATE = SITE "M15" LEVEL 1;
+COMP "ja1" LOCATE = SITE "L15" LEVEL 1;
+COMP "ja2" LOCATE = SITE "K12" LEVEL 1;
+COMP "ja3" LOCATE = SITE "L17" LEVEL 1;
 COMP "a_to_g<0>" LOCATE = SITE "H14" LEVEL 1;
 COMP "a_to_g<1>" LOCATE = SITE "J17" LEVEL 1;
 COMP "a_to_g<2>" LOCATE = SITE "G14" LEVEL 1;

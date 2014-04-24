@@ -58,12 +58,12 @@ an<0>       |    7.001(R)|mclk_BUFGP        |   0.000|
 an<1>       |    7.001(R)|mclk_BUFGP        |   0.000|
 an<2>       |    7.001(R)|mclk_BUFGP        |   0.000|
 an<3>       |    7.001(R)|mclk_BUFGP        |   0.000|
-blue<0>     |    7.030(R)|mclk_BUFGP        |   0.000|
+blue<0>     |    7.713(R)|mclk_BUFGP        |   0.000|
 blue<1>     |    7.030(R)|mclk_BUFGP        |   0.000|
 green<0>    |    8.425(R)|mclk_BUFGP        |   0.000|
-green<1>    |    8.425(R)|mclk_BUFGP        |   0.000|
+green<1>    |    7.991(R)|mclk_BUFGP        |   0.000|
 green<2>    |    8.425(R)|mclk_BUFGP        |   0.000|
-red<0>      |    7.713(R)|mclk_BUFGP        |   0.000|
+red<0>      |    7.030(R)|mclk_BUFGP        |   0.000|
 red<1>      |    8.425(R)|mclk_BUFGP        |   0.000|
 red<2>      |    8.425(R)|mclk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
@@ -77,14 +77,14 @@ mclk           |    4.221|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Apr 24 15:56:19 2014 
+Analysis completed Thu Apr 24 17:39:50 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 145 MB
+Peak Memory Usage: 146 MB
 
 
 

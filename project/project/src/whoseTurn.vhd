@@ -17,7 +17,7 @@ architecture whoseTurn of whoseTurn is
 	
 type tankState is (tank1Turn, tank2Turn, tank1_to_tank2, tank2_to_tank1, hammer_time1, hammer_time2);
 signal present_state, next_state : tankState;
-signal aPulse, delay1, delay2, delay3 : std_logic;
+signal aPulse, startPulse, delay1, delay2, delay3, sdelay1, sdelay2, sdelay3 : std_logic;
 begin			
 
 	process(clk, clr)
@@ -43,7 +43,21 @@ begin
 	end process;
 	aPulse <= not delay1 and not delay2 and delay3; --pulse when A is released
 	
-	C1State : process(aPulse, present_state)
+		process(start, clk, clr)	  --clock pulse for A button
+	begin
+		if clr = '1' then
+			sdelay1 <= '0';
+			sdelay2 <= '0';
+			sdelay3 <= '0';
+		elsif clk'event and clk = '1' then
+			sdelay1 <= a;
+			sdelay2 <= sdelay1;
+			sdelay3 <= sdelay2;
+		end if;
+	end process;
+	startPulse <= not sdelay1 and not sdelay2 and sdelay3;
+	
+	C1State : process(aPulse, startPulse, present_state)
 	begin
 		case present_state is
 

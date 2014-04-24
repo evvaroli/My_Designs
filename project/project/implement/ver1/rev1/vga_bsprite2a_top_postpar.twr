@@ -44,25 +44,25 @@ Clock mclk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-a_to_g<0>   |   11.442(R)|mclk_BUFGP        |   0.000|
-a_to_g<1>   |   11.578(R)|mclk_BUFGP        |   0.000|
-a_to_g<2>   |   11.663(R)|mclk_BUFGP        |   0.000|
-a_to_g<3>   |   12.137(R)|mclk_BUFGP        |   0.000|
-a_to_g<4>   |   12.031(R)|mclk_BUFGP        |   0.000|
-a_to_g<5>   |   11.436(R)|mclk_BUFGP        |   0.000|
-a_to_g<6>   |   12.258(R)|mclk_BUFGP        |   0.000|
-an<0>       |    9.455(R)|mclk_BUFGP        |   0.000|
-an<1>       |    9.242(R)|mclk_BUFGP        |   0.000|
-an<2>       |    9.468(R)|mclk_BUFGP        |   0.000|
-an<3>       |    8.886(R)|mclk_BUFGP        |   0.000|
-blue<0>     |   10.886(R)|mclk_BUFGP        |   0.000|
-blue<1>     |   10.944(R)|mclk_BUFGP        |   0.000|
-green<0>    |   11.840(R)|mclk_BUFGP        |   0.000|
-green<1>    |   12.872(R)|mclk_BUFGP        |   0.000|
-green<2>    |   13.195(R)|mclk_BUFGP        |   0.000|
-red<0>      |   12.289(R)|mclk_BUFGP        |   0.000|
-red<1>      |   11.990(R)|mclk_BUFGP        |   0.000|
-red<2>      |   12.413(R)|mclk_BUFGP        |   0.000|
+a_to_g<0>   |   11.414(R)|mclk_BUFGP        |   0.000|
+a_to_g<1>   |   11.703(R)|mclk_BUFGP        |   0.000|
+a_to_g<2>   |   11.362(R)|mclk_BUFGP        |   0.000|
+a_to_g<3>   |   11.812(R)|mclk_BUFGP        |   0.000|
+a_to_g<4>   |   11.698(R)|mclk_BUFGP        |   0.000|
+a_to_g<5>   |   11.606(R)|mclk_BUFGP        |   0.000|
+a_to_g<6>   |   12.007(R)|mclk_BUFGP        |   0.000|
+an<0>       |    9.218(R)|mclk_BUFGP        |   0.000|
+an<1>       |    9.841(R)|mclk_BUFGP        |   0.000|
+an<2>       |    9.271(R)|mclk_BUFGP        |   0.000|
+an<3>       |    9.945(R)|mclk_BUFGP        |   0.000|
+blue<0>     |   12.948(R)|mclk_BUFGP        |   0.000|
+blue<1>     |   12.238(R)|mclk_BUFGP        |   0.000|
+green<0>    |   14.219(R)|mclk_BUFGP        |   0.000|
+green<1>    |   12.305(R)|mclk_BUFGP        |   0.000|
+green<2>    |   13.472(R)|mclk_BUFGP        |   0.000|
+red<0>      |   11.122(R)|mclk_BUFGP        |   0.000|
+red<1>      |   12.483(R)|mclk_BUFGP        |   0.000|
+red<2>      |   12.787(R)|mclk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock mclk
@@ -70,11 +70,11 @@ Clock to Setup on destination clock mclk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-mclk           |    3.571|         |         |         |
+mclk           |    3.622|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Apr 24 15:56:46 2014 
+Analysis completed Thu Apr 24 17:40:20 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

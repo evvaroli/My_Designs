@@ -267,7 +267,7 @@ begin
 		hc => hc,
 		vc => vc,  
 		MTitle => sig_MTitle,
-		romTitle_addr14 => sig_title_addr,
+		romTitle_addr14 => sig_romTitle_addr14,
 		red => sig_titleRed,
 		green => sig_titleGreen,
 		blue => sig_titleBlue
@@ -310,21 +310,6 @@ begin
 		clk => clk25,
 		dout => sig_tank11sM
 	);
-	
-	tank2font10s : entity work.fonts
-	port map(
-		addr => sig_tank2rom10s,
-		clk => clk25,
-		dout => sig_tank210sM
-	);
-	
-	tank2font1s : entity work.fonts
-	port map(
-		addr => sig_tank2rom1s,
-		clk => clk25,
-		dout => sig_tank21sM
-	);
-	
 	
 	btns <= btn;  
 	ld(0) <= sig_a;  

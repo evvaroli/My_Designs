@@ -9,9 +9,14 @@ NET "btn<0>"  LOC = "B18"  ;
 
 #NES controller
 
-NET "ja1"  LOC = "L15"  ;
-NET "ja2"  LOC = "K12"  ;
-NET "ja3"  LOC = "L17"  ;
+#NET "ja1"  LOC = "L15"  ;
+#NET "ja2"  LOC = "K12"  ;
+#NET "ja3"  LOC = "L17"  ;
+
+NET "ja1"  LOC = "K12"  ;
+NET "ja2"  LOC = "L17"  ;
+NET "ja3"  LOC = "M15"  ;
+
 
 # LEDs
 NET "ld<0>"  LOC = "J14"  ;

@@ -80,7 +80,7 @@ architecture vga_bsprite2a of vga_bsprite2a is
 	begin 					
 	
 	-- fonts
-	CFont <= "000000010000";
+	CFont <= "000100101100";
 	RFont <= "000000010000";
 	CFont2 <= CFont + 8;
 	-- set ascii code in switches
@@ -90,18 +90,6 @@ architecture vga_bsprite2a of vga_bsprite2a is
 	tank1rom1s <= vc - vbp - RFont + tank1ascii1s;
 	tank110sRomPix <= hc - hbp - CFont;
 	tank11sRomPix <= hc - hbp - CFont2;	
-	
-	-- fonts
-	CFont3 <= "001000110000";
-	RFont <= "000000010000";
-	CFont4 <= CFont3 + 8;
-	-- set ascii code in switches
-	tank2ascii10s <= font3 + 48 & "0000";   --asciiaddr = asciicode*16
-	tank2ascii1s <=  font4 + 48 & "0000";   --asciiaddr = asciicode*16
-	tank2rom10s <= vc - vbp - RFont + tank2ascii10s;
-	tank2rom1s <= vc - vbp - RFont + tank2ascii1s;
-	tank210sRomPix <= hc - hbp - CFont3;
-	tank21sRomPix <= hc - hbp - CFont4;
 
 	--Enable sprite video out when within the sprite region
  	tank1Angle10s <= '1' when (((hc >= CFont + hbp) and (hc < CFont + hbp + w))
@@ -109,11 +97,6 @@ architecture vga_bsprite2a of vga_bsprite2a is
 	tank1Angle1s <= '1' when (((hc >= CFont2 + hbp) and (hc < CFont2 + hbp + w))
           	and ((vc > RFont + vbp) and (vc <= RFont + vbp + h))) else '0';
 				  
-	--Enable sprite video out when within the sprite region
- 	tank2Angle10s <= '1' when (((hc >= CFont3 + hbp) and (hc < CFont3 + hbp + w))
-			and ((vc > RFont + vbp) and (vc <= RFont + vbp + h))) else '0';  
-	tank2Angle1s <= '1' when (((hc >= CFont4 + hbp) and (hc < CFont4 + hbp + w))
-          	and ((vc > RFont + vbp) and (vc <= RFont + vbp + h))) else '0';
 				  
 				  
 	
@@ -279,11 +262,11 @@ architecture vga_bsprite2a of vga_bsprite2a is
 	xpix4 <= hc - hbp - C4;
 	
 	turn <= sw(0);
-	hill12 <= "0000000";
+	hill12 <= "0001111";
 	hill22 <= "1111111";
 	hill32 <= "0000000";
 	hill42 <= "1010100";
-	hill52 <= "0000000";
+	hill52 <= "0110100";
 --hill12 <= "10" & hillCounter(6 downto 0);
 --hill22 <= hillCounter(10 downto 4);
 --hill32 <= hillCounter(14 downto 8);
@@ -297,7 +280,7 @@ architecture vga_bsprite2a of vga_bsprite2a is
 	spriteon2f <= '1' when (((hc > C2 + hbp) and (hc <= C2 + hbp + tw)) and ((vc >= R2 + vbp) and (vc < R2 + vbp + th))) else '0';
 	--landscape
 	spriteonGrnd <= '1' when (((hc >= hbp) and (hc < 640 + hbp)) and ((vc >= 440 + vbp) and (vc < vbp + 480))) else '0';  
-	spriteonB1 <= '1' when (((hc >= 195 + hbp) and (hc <= 245 + hbp)) and ((vc >= 201 + hill12) and (vc < 551)))else '0';	--vbp=31
+	spriteonB1 <= '1' when (((hc > 195 + hbp) and (hc <= 245 + hbp)) and ((vc >= 201 + hill12) and (vc < 551)))else '0';	--vbp=31
 	spriteonB2 <= '1' when (((hc > 245 + hbp) and (hc <= 295 + hbp)) and ((vc >= 201 + hill22) and (vc < 551)))else '0';
 	spriteonB3 <= '1' when (((hc > 295 + hbp) and (hc <= 345 + hbp)) and ((vc >= 201 + hill32) and (vc < 551)))else '0';
 	spriteonB4 <= '1' when (((hc > 345 + hbp) and (hc <= 395 + hbp)) and ((vc >= 201 + hill42) and (vc < 551)))else '0';
@@ -342,36 +325,39 @@ architecture vga_bsprite2a of vga_bsprite2a is
 	
 	-- for fonts of angle
 	process(RMht1, RMht2)
-	begin
-		if RMht1 < 60 then			 --tank 1 angle font
-			font1 <= "00000101";
-			font2 <= Rmht1 - 50;
-			if RMht1 < 50 then
-				font1 <= "00000100";
-				font2 <= Rmht1 - 40;
-			end if;
-				if RMht1 < 40 then
-					font1 <= "00000011";
-					font2 <= Rmht1 - 30; 
+	begin	
+		if tank2Turn = '1' then
+			if RMht1 < 60 then			 --tank 1 angle font
+				font1 <= "00000101";
+				font2 <= Rmht1 - 50;
+				if RMht1 < 50 then
+					font1 <= "00000100";
+					font2 <= Rmht1 - 40;
 				end if;
-		else
-			font1 <= "00000110";
-			font2 <= "00000000";
-		end if;
-		if RMht2 < 60 then			 --tank2 angle font
-			font3 <= "00000101";
-			font4 <= Rmht2 - 50;
-			if RMht2 < 50 then
-				font3 <= "00000100";
-				font4 <= Rmht2 - 40; 
+					if RMht1 < 40 then
+						font1 <= "00000011";
+						font2 <= Rmht1 - 30; 
+					end if;
+			else
+				font1 <= "00000110";
+				font2 <= "00000000";
 			end if;
-				if RMht2 < 40 then
-					font3 <= "00000011";
-					font4 <= Rmht2 - 30;
+		elsif tank1Turn = '1' then
+			if RMht2 < 60 then			 --tank2 angle font
+				font1 <= "00000101";
+				font2 <= Rmht2 - 50;
+				if RMht2 < 50 then
+					font1 <= "00000100";
+					font2 <= Rmht2 - 40; 
 				end if;
-		else
-			font3 <= "00000110";
-			font4 <= "00000000";
+					if RMht2 < 40 then
+						font1 <= "00000011";
+						font2 <= Rmht2 - 30;
+					end if;
+			else
+				font1 <= "00000110";
+				font2 <= "00000000";
+			end if;
 		end if;
 	end process;
 	

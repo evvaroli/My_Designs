@@ -1,4 +1,4 @@
-timestamp=1398369299766
+timestamp=1398375507652
 
 [buttonmux]
 A/buttonmux=A/buttonMux 21|./../src/buttonMux.vhd|29|1*1817459
@@ -184,23 +184,23 @@ Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_640x480=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [vga_bsprite2a]
-A/vga_bsprite2a=21|./../src/vga_bsprite2a.vhd|42|1*2587377
-BinI32/vga_bsprite2a=3*262397
+A/vga_bsprite2a=21|./../src/vga_bsprite2a.vhd|42|1*2930096
+BinI32/vga_bsprite2a=3*301170
 I=0*503327
-I/vga_bsprite2a=0*663105
+I/vga_bsprite2a=0*783523
 M=11|0|vb4|1398365158811|./../src/vga_bsprite2a.vhd|0*501739*0x0d59bfec8da538ba123b7d9f146911ca6be0b6c8|0*503236*0x5eebbfaf24833dd780412b1f91e05209
-M/vga_bsprite2a=21|0|vb4|1398369299623|./../src/vga_bsprite2a.vhd|0*651878*0x1e06d984efaadb7fec05edded56e6f05f6a994ad|0*662997*0x856b180bf611ec746a6bfcb1befebd18
+M/vga_bsprite2a=21|0|vb4|1398375507515|./../src/vga_bsprite2a.vhd|0*772836*0x32ed2188c7b73b077938923e65f9e3d47f3605d6|0*783415*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/vga_bsprite2a.vhd|6
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_bsprite2a=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [vga_bsprite2a_top]
-A/vga_bsprite2a_top=21|./../src/vga_bsprite2a_top.vhd|35|1*2162933
-BinI32/vga_bsprite2a_top=3*261921
+A/vga_bsprite2a_top=21|./../src/vga_bsprite2a_top.vhd|35|1*2795430
+BinI32/vga_bsprite2a_top=3*287356
 I=0*58099
-I/vga_bsprite2a_top=0*529040
+I/vga_bsprite2a_top=0*722211
 M=11|0|vb4|1398008218323|./../src/vga_bsprite2a_top.vhd|0*57059*0x73018d03c96cf7af8ab6a6cac77bdb0e111105af|0*58000*0x5eebbfaf24833dd780412b1f91e05209
-M/vga_bsprite2a_top=21|0|vb4|1398365418804|./../src/vga_bsprite2a_top.vhd|0*522327*0x0737f08be9ad87a8adc21d67a2c1c124244b7453|0*528920*0x856b180bf611ec746a6bfcb1befebd18
+M/vga_bsprite2a_top=21|0|vb4|1398371711265|./../src/vga_bsprite2a_top.vhd|0*715706*0xdac4a398d70f3a9c9460cfe3d2c74a63273adcf0|0*722091*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/vga_bsprite2a_top.vhd|5
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/vga_bsprite2a_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
@@ -209,12 +209,12 @@ Version/vga_bsprite2a_top=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b
 A/vga_stripes=*21|./../src/titleScreen.vhd|13|
 
 [whoseturn]
-A/whoseturn=A/whoseTurn 21|./../src/whoseTurn.vhd|16|1*1877369
-BinI32/whoseturn=3*223621
+A/whoseturn=A/whoseTurn 21|./../src/whoseTurn.vhd|16|1*2874319
+BinI32/whoseturn=3*299588
 I=0*387918
-I/whoseturn=I/whoseTurn 0*410862
+I/whoseturn=I/whoseTurn 0*750839
 M=11|0|vb4|1398361262116|./../src/whoseTurn.vhd|0*387507*0x8132b0aabde4c3c648915c3b89b09a08669720f5|0*387835*0x5eebbfaf24833dd780412b1f91e05209
-M/whoseturn=M/whoseTurn 21|0|vb4|1398361647926|./../src/whoseTurn.vhd|0*388021*0x0f7f60ecc2da0e871c01d7382a3880d3a2b3cc33|0*389464*0x856b180bf611ec746a6bfcb1befebd18
+M/whoseturn=M/whoseTurn 21|0|vb4|1398373748016|./../src/whoseTurn.vhd|0*749017*0x3a8f3dc20ebf948c9ef9e9f0a665ea593a75ebfb|0*750743*0x856b180bf611ec746a6bfcb1befebd18
 R=./../src/whoseTurn.vhd|4
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/whoseturn=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
@@ -242,13 +242,13 @@ Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/x7segb=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [~A]
-ModifyID=2353
+ModifyID=2455
 Version=73
 
 [~MFT]
-0=1153|0project.mgf|663105|587519
-1=437|1project.mgf|2587377|2455589
-3=405|3project.mgf|262397|246588
+0=1247|0project.mgf|783523|708402
+1=471|1project.mgf|2930096|2797989
+3=439|3project.mgf|301170|285025
 
 [~U]
 buttonmux=buttonMux 11|0*45137|
