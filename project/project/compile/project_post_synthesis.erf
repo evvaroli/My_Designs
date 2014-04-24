@@ -1,6 +1,6 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 
-BEGINPROGRESS c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd
+MESSAGE "File: C:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 
+BEGINPROGRESS C:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd
 MESSAGE "Compile Entity "vga_bsprite2a_top"" 
 MESSAGE "Compile Architecture "STRUCTURE" of Entity "vga_bsprite2a_top"" 
 MESSAGE "Start Netlist compilation mode." 
@@ -84,7 +84,7 @@ UPDATEPROGRESS 78
 UPDATEPROGRESS 79
 UPDATEPROGRESS 80
 UPDATEPROGRESS 81
-WARNING ELAB1_0026: "There is no default binding for component "titleImage". (No entity named "titleImage" was found)." "c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 1732 0
-WARNING ELAB1_0026: "There is no default binding for component "fonts". (No entity named "fonts" was found)." "c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 1759 0
-ENDPROGRESS c:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd
+WARNING ELAB1_0026: "There is no default binding for component "titleImage". (No entity named "titleImage" was found)." "C:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 1749 0
+WARNING ELAB1_0026: "There is no default binding for component "fonts". (No entity named "fonts" was found)." "C:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd" 1776 0
+ENDPROGRESS C:\My_Designs\project\project\synthesis\vga_bsprite2a_top.vhd
 SUCCESS "Compile success 0 Errors 2 Warnings  Analysis time :  0.4 [s]" 

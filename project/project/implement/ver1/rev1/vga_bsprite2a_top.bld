@@ -2,17 +2,17 @@ Release 14.7 ngdbuild P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -p
-3S500EFG320-5 -aul -sd c:\My_Designs\project\project\synthesis -sd
-c:\My_Designs\project\project\compile -sd c:\My_Designs\project\project\src -sd
+3S500EFG320-5 -aul -sd C:\My_Designs\project\project\synthesis -sd
+C:\My_Designs\project\project\compile -sd C:\My_Designs\project\project\src -sd
 C:\Aldec\Active-HDL Student Edition\vlib\SPARTAN3E\compile -uc
 vga_bsprite2a_top.ucf vga_bsprite2a_top.ngc vga_bsprite2a_top.ngd
 
 Reading NGO file
-"c:/My_Designs/project/project/implement/ver1/rev1/vga_bsprite2a_top.ngc" ...
-Loading design module "c:\My_Designs\project\project\src/titleImage.ngc"...
+"C:/My_Designs/project/project/implement/ver1/rev1/vga_bsprite2a_top.ngc" ...
+Loading design module "C:\My_Designs\project\project\src/titleImage.ngc"...
 Reading module "fonts.ngo" ( "fonts.ngo" unchanged since last run )...
 Loading design module
-"c:\My_Designs\project\project\implement\ver1\rev1\fonts.ngo"...
+"C:\My_Designs\project\project\implement\ver1\rev1\fonts.ngo"...
 Gathering constraint information from source properties...
 Done.
 
@@ -20,498 +20,498 @@ Annotating constraints to design from ucf file "vga_bsprite2a_top.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 INFO:ConstraintSystem:59 - Constraint <NET "RxD"  LOC = "U6"  ;>
-   [vga_bsprite2a_top.ucf(54)]: NET "RxD" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(59)]: NET "RxD" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "RxD"  LOC = "U6"  ;> [vga_bsprite2a_top.ucf(54)]' could not be found
+   '<NET "RxD"  LOC = "U6"  ;> [vga_bsprite2a_top.ucf(59)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "TxD"  LOC = "P9"  ;>
-   [vga_bsprite2a_top.ucf(55)]: NET "TxD" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(60)]: NET "TxD" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "TxD"  LOC = "P9"  ;> [vga_bsprite2a_top.ucf(55)]' could not be found
+   '<NET "TxD"  LOC = "P9"  ;> [vga_bsprite2a_top.ucf(60)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "OE_L" LOC= "T2";>
-   [vga_bsprite2a_top.ucf(70)]: NET "OE_L" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(75)]: NET "OE_L" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "OE_L" LOC= "T2";> [vga_bsprite2a_top.ucf(70)]' could not be found and
+   '<NET "OE_L" LOC= "T2";> [vga_bsprite2a_top.ucf(75)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "WE_L" LOC= "N7";>
-   [vga_bsprite2a_top.ucf(71)]: NET "WE_L" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(76)]: NET "WE_L" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "WE_L" LOC= "N7";> [vga_bsprite2a_top.ucf(71)]' could not be found and
+   '<NET "WE_L" LOC= "N7";> [vga_bsprite2a_top.ucf(76)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "RamADV_L" LOC= "J4";>
-   [vga_bsprite2a_top.ucf(72)]: NET "RamADV_L" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(77)]: NET "RamADV_L" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "RamADV_L" LOC= "J4";> [vga_bsprite2a_top.ucf(72)]' could not be found
+   '<NET "RamADV_L" LOC= "J4";> [vga_bsprite2a_top.ucf(77)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "CE_L" LOC= "R6";>
-   [vga_bsprite2a_top.ucf(73)]: NET "CE_L" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(78)]: NET "CE_L" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "CE_L" LOC= "R6";> [vga_bsprite2a_top.ucf(73)]' could not be found and
+   '<NET "CE_L" LOC= "R6";> [vga_bsprite2a_top.ucf(78)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "RamCLK" LOC= "H5";>
-   [vga_bsprite2a_top.ucf(74)]: NET "RamCLK" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(79)]: NET "RamCLK" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "RamCLK" LOC= "H5";> [vga_bsprite2a_top.ucf(74)]' could not be found
+   '<NET "RamCLK" LOC= "H5";> [vga_bsprite2a_top.ucf(79)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "RamCRE" LOC= "P7";>
-   [vga_bsprite2a_top.ucf(75)]: NET "RamCRE" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(80)]: NET "RamCRE" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "RamCRE" LOC= "P7";> [vga_bsprite2a_top.ucf(75)]' could not be found
+   '<NET "RamCRE" LOC= "P7";> [vga_bsprite2a_top.ucf(80)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "LB_L" LOC= "K5";>
-   [vga_bsprite2a_top.ucf(76)]: NET "LB_L" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(81)]: NET "LB_L" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "LB_L" LOC= "K5";> [vga_bsprite2a_top.ucf(76)]' could not be found and
+   '<NET "LB_L" LOC= "K5";> [vga_bsprite2a_top.ucf(81)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "UB_L" LOC= "K4";>
-   [vga_bsprite2a_top.ucf(77)]: NET "UB_L" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(82)]: NET "UB_L" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "UB_L" LOC= "K4";> [vga_bsprite2a_top.ucf(77)]' could not be found and
+   '<NET "UB_L" LOC= "K4";> [vga_bsprite2a_top.ucf(82)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "RamWAIT" LOC= "F5";>
-   [vga_bsprite2a_top.ucf(78)]: NET "RamWAIT" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(83)]: NET "RamWAIT" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "RamWAIT" LOC= "F5";> [vga_bsprite2a_top.ucf(78)]' could not be found
+   '<NET "RamWAIT" LOC= "F5";> [vga_bsprite2a_top.ucf(83)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "FlashRP_L" LOC= "T5";>
-   [vga_bsprite2a_top.ucf(79)]: NET "FlashRP_L" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(84)]: NET "FlashRP_L" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "FlashRP_L" LOC= "T5";> [vga_bsprite2a_top.ucf(79)]' could not be found
+   '<NET "FlashRP_L" LOC= "T5";> [vga_bsprite2a_top.ucf(84)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "FlashCE_L" LOC= "R5";>
-   [vga_bsprite2a_top.ucf(80)]: NET "FlashCE_L" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(85)]: NET "FlashCE_L" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "FlashCE_L" LOC= "R5";> [vga_bsprite2a_top.ucf(80)]' could not be found
+   '<NET "FlashCE_L" LOC= "R5";> [vga_bsprite2a_top.ucf(85)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "FlashSTS" LOC= "D3";>
-   [vga_bsprite2a_top.ucf(81)]: NET "FlashSTS" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(86)]: NET "FlashSTS" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "FlashSTS" LOC= "D3";> [vga_bsprite2a_top.ucf(81)]' could not be found
+   '<NET "FlashSTS" LOC= "D3";> [vga_bsprite2a_top.ucf(86)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<0>" LOC= "J1";>
-   [vga_bsprite2a_top.ucf(82)]: NET "A<0>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(87)]: NET "A<0>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<0>" LOC= "J1";> [vga_bsprite2a_top.ucf(82)]' could not be found and
+   '<NET "A<0>" LOC= "J1";> [vga_bsprite2a_top.ucf(87)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<1>" LOC= "J2";>
-   [vga_bsprite2a_top.ucf(83)]: NET "A<1>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(88)]: NET "A<1>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<1>" LOC= "J2";> [vga_bsprite2a_top.ucf(83)]' could not be found and
+   '<NET "A<1>" LOC= "J2";> [vga_bsprite2a_top.ucf(88)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<2>" LOC= "H4";>
-   [vga_bsprite2a_top.ucf(84)]: NET "A<2>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(89)]: NET "A<2>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<2>" LOC= "H4";> [vga_bsprite2a_top.ucf(84)]' could not be found and
+   '<NET "A<2>" LOC= "H4";> [vga_bsprite2a_top.ucf(89)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<3>" LOC= "H1";>
-   [vga_bsprite2a_top.ucf(85)]: NET "A<3>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(90)]: NET "A<3>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<3>" LOC= "H1";> [vga_bsprite2a_top.ucf(85)]' could not be found and
+   '<NET "A<3>" LOC= "H1";> [vga_bsprite2a_top.ucf(90)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<4>" LOC= "H2";>
-   [vga_bsprite2a_top.ucf(86)]: NET "A<4>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(91)]: NET "A<4>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<4>" LOC= "H2";> [vga_bsprite2a_top.ucf(86)]' could not be found and
+   '<NET "A<4>" LOC= "H2";> [vga_bsprite2a_top.ucf(91)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<5>" LOC= "J5";>
-   [vga_bsprite2a_top.ucf(87)]: NET "A<5>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(92)]: NET "A<5>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<5>" LOC= "J5";> [vga_bsprite2a_top.ucf(87)]' could not be found and
+   '<NET "A<5>" LOC= "J5";> [vga_bsprite2a_top.ucf(92)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<6>" LOC= "H3";>
-   [vga_bsprite2a_top.ucf(88)]: NET "A<6>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(93)]: NET "A<6>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<6>" LOC= "H3";> [vga_bsprite2a_top.ucf(88)]' could not be found and
+   '<NET "A<6>" LOC= "H3";> [vga_bsprite2a_top.ucf(93)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<7>" LOC= "H6";>
-   [vga_bsprite2a_top.ucf(89)]: NET "A<7>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(94)]: NET "A<7>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<7>" LOC= "H6";> [vga_bsprite2a_top.ucf(89)]' could not be found and
+   '<NET "A<7>" LOC= "H6";> [vga_bsprite2a_top.ucf(94)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<8>" LOC= "F1";>
-   [vga_bsprite2a_top.ucf(90)]: NET "A<8>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(95)]: NET "A<8>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<8>" LOC= "F1";> [vga_bsprite2a_top.ucf(90)]' could not be found and
+   '<NET "A<8>" LOC= "F1";> [vga_bsprite2a_top.ucf(95)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<9>" LOC= "G3";>
-   [vga_bsprite2a_top.ucf(91)]: NET "A<9>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(96)]: NET "A<9>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<9>" LOC= "G3";> [vga_bsprite2a_top.ucf(91)]' could not be found and
+   '<NET "A<9>" LOC= "G3";> [vga_bsprite2a_top.ucf(96)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<10>" LOC= "G6";>
-   [vga_bsprite2a_top.ucf(92)]: NET "A<10>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(97)]: NET "A<10>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<10>" LOC= "G6";> [vga_bsprite2a_top.ucf(92)]' could not be found and
+   '<NET "A<10>" LOC= "G6";> [vga_bsprite2a_top.ucf(97)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<11>" LOC= "G5";>
-   [vga_bsprite2a_top.ucf(93)]: NET "A<11>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(98)]: NET "A<11>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<11>" LOC= "G5";> [vga_bsprite2a_top.ucf(93)]' could not be found and
+   '<NET "A<11>" LOC= "G5";> [vga_bsprite2a_top.ucf(98)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<12>" LOC= "G4";>
-   [vga_bsprite2a_top.ucf(94)]: NET "A<12>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(99)]: NET "A<12>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<12>" LOC= "G4";> [vga_bsprite2a_top.ucf(94)]' could not be found and
+   '<NET "A<12>" LOC= "G4";> [vga_bsprite2a_top.ucf(99)]' could not be found and
    so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<13>" LOC= "F2";>
-   [vga_bsprite2a_top.ucf(95)]: NET "A<13>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(100)]: NET "A<13>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<13>" LOC= "F2";> [vga_bsprite2a_top.ucf(95)]' could not be found and
-   so the Locate constraint will be removed.
+   '<NET "A<13>" LOC= "F2";> [vga_bsprite2a_top.ucf(100)]' could not be found
+   and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<14>" LOC= "E1";>
-   [vga_bsprite2a_top.ucf(96)]: NET "A<14>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(101)]: NET "A<14>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<14>" LOC= "E1";> [vga_bsprite2a_top.ucf(96)]' could not be found and
-   so the Locate constraint will be removed.
+   '<NET "A<14>" LOC= "E1";> [vga_bsprite2a_top.ucf(101)]' could not be found
+   and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<15>" LOC= "M5";>
-   [vga_bsprite2a_top.ucf(97)]: NET "A<15>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(102)]: NET "A<15>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<15>" LOC= "M5";> [vga_bsprite2a_top.ucf(97)]' could not be found and
-   so the Locate constraint will be removed.
+   '<NET "A<15>" LOC= "M5";> [vga_bsprite2a_top.ucf(102)]' could not be found
+   and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<16>" LOC= "E2";>
-   [vga_bsprite2a_top.ucf(98)]: NET "A<16>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(103)]: NET "A<16>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<16>" LOC= "E2";> [vga_bsprite2a_top.ucf(98)]' could not be found and
-   so the Locate constraint will be removed.
+   '<NET "A<16>" LOC= "E2";> [vga_bsprite2a_top.ucf(103)]' could not be found
+   and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<17>" LOC= "C2";>
-   [vga_bsprite2a_top.ucf(99)]: NET "A<17>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(104)]: NET "A<17>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<17>" LOC= "C2";> [vga_bsprite2a_top.ucf(99)]' could not be found and
-   so the Locate constraint will be removed.
+   '<NET "A<17>" LOC= "C2";> [vga_bsprite2a_top.ucf(104)]' could not be found
+   and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<18>" LOC= "C1";>
-   [vga_bsprite2a_top.ucf(100)]: NET "A<18>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(105)]: NET "A<18>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<18>" LOC= "C1";> [vga_bsprite2a_top.ucf(100)]' could not be found
+   '<NET "A<18>" LOC= "C1";> [vga_bsprite2a_top.ucf(105)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<19>" LOC= "D2";>
-   [vga_bsprite2a_top.ucf(101)]: NET "A<19>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(106)]: NET "A<19>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<19>" LOC= "D2";> [vga_bsprite2a_top.ucf(101)]' could not be found
+   '<NET "A<19>" LOC= "D2";> [vga_bsprite2a_top.ucf(106)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<20>" LOC= "K3";>
-   [vga_bsprite2a_top.ucf(102)]: NET "A<20>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(107)]: NET "A<20>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<20>" LOC= "K3";> [vga_bsprite2a_top.ucf(102)]' could not be found
+   '<NET "A<20>" LOC= "K3";> [vga_bsprite2a_top.ucf(107)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<21>" LOC= "D1";>
-   [vga_bsprite2a_top.ucf(103)]: NET "A<21>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(108)]: NET "A<21>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<21>" LOC= "D1";> [vga_bsprite2a_top.ucf(103)]' could not be found
+   '<NET "A<21>" LOC= "D1";> [vga_bsprite2a_top.ucf(108)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "A<22>" LOC= "K6";>
-   [vga_bsprite2a_top.ucf(104)]: NET "A<22>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(109)]: NET "A<22>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "A<22>" LOC= "K6";> [vga_bsprite2a_top.ucf(104)]' could not be found
+   '<NET "A<22>" LOC= "K6";> [vga_bsprite2a_top.ucf(109)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<0>" LOC= "L1";>
-   [vga_bsprite2a_top.ucf(105)]: NET "DQ<0>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(110)]: NET "DQ<0>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<0>" LOC= "L1";> [vga_bsprite2a_top.ucf(105)]' could not be found
+   '<NET "DQ<0>" LOC= "L1";> [vga_bsprite2a_top.ucf(110)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<1>" LOC= "L4";>
-   [vga_bsprite2a_top.ucf(106)]: NET "DQ<1>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(111)]: NET "DQ<1>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<1>" LOC= "L4";> [vga_bsprite2a_top.ucf(106)]' could not be found
+   '<NET "DQ<1>" LOC= "L4";> [vga_bsprite2a_top.ucf(111)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<2>" LOC= "L6";>
-   [vga_bsprite2a_top.ucf(107)]: NET "DQ<2>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(112)]: NET "DQ<2>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<2>" LOC= "L6";> [vga_bsprite2a_top.ucf(107)]' could not be found
+   '<NET "DQ<2>" LOC= "L6";> [vga_bsprite2a_top.ucf(112)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<3>" LOC= "M4";>
-   [vga_bsprite2a_top.ucf(108)]: NET "DQ<3>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(113)]: NET "DQ<3>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<3>" LOC= "M4";> [vga_bsprite2a_top.ucf(108)]' could not be found
+   '<NET "DQ<3>" LOC= "M4";> [vga_bsprite2a_top.ucf(113)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<4>" LOC= "N5";>
-   [vga_bsprite2a_top.ucf(109)]: NET "DQ<4>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(114)]: NET "DQ<4>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<4>" LOC= "N5";> [vga_bsprite2a_top.ucf(109)]' could not be found
+   '<NET "DQ<4>" LOC= "N5";> [vga_bsprite2a_top.ucf(114)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<5>" LOC= "P1";>
-   [vga_bsprite2a_top.ucf(110)]: NET "DQ<5>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(115)]: NET "DQ<5>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<5>" LOC= "P1";> [vga_bsprite2a_top.ucf(110)]' could not be found
+   '<NET "DQ<5>" LOC= "P1";> [vga_bsprite2a_top.ucf(115)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<6>" LOC= "P2";>
-   [vga_bsprite2a_top.ucf(111)]: NET "DQ<6>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(116)]: NET "DQ<6>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<6>" LOC= "P2";> [vga_bsprite2a_top.ucf(111)]' could not be found
+   '<NET "DQ<6>" LOC= "P2";> [vga_bsprite2a_top.ucf(116)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<7>" LOC= "R2";>
-   [vga_bsprite2a_top.ucf(112)]: NET "DQ<7>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(117)]: NET "DQ<7>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<7>" LOC= "R2";> [vga_bsprite2a_top.ucf(112)]' could not be found
+   '<NET "DQ<7>" LOC= "R2";> [vga_bsprite2a_top.ucf(117)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<8>" LOC= "L3";>
-   [vga_bsprite2a_top.ucf(113)]: NET "DQ<8>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(118)]: NET "DQ<8>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<8>" LOC= "L3";> [vga_bsprite2a_top.ucf(113)]' could not be found
+   '<NET "DQ<8>" LOC= "L3";> [vga_bsprite2a_top.ucf(118)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<9>" LOC= "L5";>
-   [vga_bsprite2a_top.ucf(114)]: NET "DQ<9>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(119)]: NET "DQ<9>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<9>" LOC= "L5";> [vga_bsprite2a_top.ucf(114)]' could not be found
+   '<NET "DQ<9>" LOC= "L5";> [vga_bsprite2a_top.ucf(119)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<10>" LOC= "M3";>
-   [vga_bsprite2a_top.ucf(115)]: NET "DQ<10>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(120)]: NET "DQ<10>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<10>" LOC= "M3";> [vga_bsprite2a_top.ucf(115)]' could not be found
+   '<NET "DQ<10>" LOC= "M3";> [vga_bsprite2a_top.ucf(120)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<11>" LOC= "M6";>
-   [vga_bsprite2a_top.ucf(116)]: NET "DQ<11>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(121)]: NET "DQ<11>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<11>" LOC= "M6";> [vga_bsprite2a_top.ucf(116)]' could not be found
+   '<NET "DQ<11>" LOC= "M6";> [vga_bsprite2a_top.ucf(121)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<12>" LOC= "L2";>
-   [vga_bsprite2a_top.ucf(117)]: NET "DQ<12>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(122)]: NET "DQ<12>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<12>" LOC= "L2";> [vga_bsprite2a_top.ucf(117)]' could not be found
+   '<NET "DQ<12>" LOC= "L2";> [vga_bsprite2a_top.ucf(122)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<13>" LOC= "N4";>
-   [vga_bsprite2a_top.ucf(118)]: NET "DQ<13>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(123)]: NET "DQ<13>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<13>" LOC= "N4";> [vga_bsprite2a_top.ucf(118)]' could not be found
+   '<NET "DQ<13>" LOC= "N4";> [vga_bsprite2a_top.ucf(123)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<14>" LOC= "R3";>
-   [vga_bsprite2a_top.ucf(119)]: NET "DQ<14>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(124)]: NET "DQ<14>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<14>" LOC= "R3";> [vga_bsprite2a_top.ucf(119)]' could not be found
+   '<NET "DQ<14>" LOC= "R3";> [vga_bsprite2a_top.ucf(124)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "DQ<15>" LOC= "T1";>
-   [vga_bsprite2a_top.ucf(120)]: NET "DQ<15>" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(125)]: NET "DQ<15>" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "DQ<15>" LOC= "T1";> [vga_bsprite2a_top.ucf(120)]' could not be found
+   '<NET "DQ<15>" LOC= "T1";> [vga_bsprite2a_top.ucf(125)]' could not be found
    and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "PS2C"  LOC = "R12"  ;>
-   [vga_bsprite2a_top.ucf(123)]: NET "PS2C" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(128)]: NET "PS2C" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "PS2C"  LOC = "R12"  ;> [vga_bsprite2a_top.ucf(123)]' could not be
+   '<NET "PS2C"  LOC = "R12"  ;> [vga_bsprite2a_top.ucf(128)]' could not be
    found and so the Locate constraint will be removed.
 
 INFO:ConstraintSystem:59 - Constraint <NET "PS2D"  LOC = "P11"  ;>
-   [vga_bsprite2a_top.ucf(124)]: NET "PS2D" not found.  Please verify that:
+   [vga_bsprite2a_top.ucf(129)]: NET "PS2D" not found.  Please verify that:
    1. The specified design element actually exists in the original design.
    2. The specified object is spelled correctly in the constraint source file.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "PS2D"  LOC = "P11"  ;> [vga_bsprite2a_top.ucf(124)]' could not be
+   '<NET "PS2D"  LOC = "P11"  ;> [vga_bsprite2a_top.ucf(129)]' could not be
    found and so the Locate constraint will be removed.
 
 Done...
@@ -529,7 +529,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  55
 
-Total memory usage is 136032 kilobytes
+Total memory usage is 136288 kilobytes
 
 Writing NGD file "vga_bsprite2a_top.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec

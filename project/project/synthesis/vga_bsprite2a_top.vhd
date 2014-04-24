@@ -7,7 +7,7 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: vga_bsprite2a_top.vhd
--- /___/   /\     Timestamp: Wed Apr 23 19:06:57 2014
+-- /___/   /\     Timestamp: Thu Apr 24 15:55:42 2014
 -- \   \  /  \ 
 --  \___\/\___\
 --             
@@ -85,447 +85,393 @@ architecture STRUCTURE of vga_bsprite2a_top is
   end component;
   signal M1_0_Q : STD_LOGIC; 
   signal M1_0_bdd2 : STD_LOGIC; 
-  signal M1_10_Q_2 : STD_LOGIC; 
-  signal M1_10_bdd5 : STD_LOGIC; 
+  signal M1_10_Q : STD_LOGIC; 
+  signal M1_10_1_3 : STD_LOGIC; 
+  signal M1_10_2 : STD_LOGIC; 
   signal M1_10_bdd7 : STD_LOGIC; 
-  signal M1_11_Q_5 : STD_LOGIC; 
-  signal M1_13_Q_6 : STD_LOGIC; 
-  signal M1_14_Q : STD_LOGIC; 
+  signal M1_10_bdd8 : STD_LOGIC; 
+  signal M1_11_Q_7 : STD_LOGIC; 
   signal M1_14_bdd1 : STD_LOGIC; 
-  signal M1_15_Q_9 : STD_LOGIC; 
-  signal M1_18_Q : STD_LOGIC; 
-  signal M1_19_Q_11 : STD_LOGIC; 
+  signal M1_18_Q_9 : STD_LOGIC; 
+  signal M1_19_Q : STD_LOGIC; 
   signal M1_1_Q : STD_LOGIC; 
-  signal M1_20_Q : STD_LOGIC; 
+  signal M1_20_Q_12 : STD_LOGIC; 
   signal M1_21_Q : STD_LOGIC; 
   signal M1_21_bdd5 : STD_LOGIC; 
   signal M1_21_bdd8 : STD_LOGIC; 
   signal M1_22_Q : STD_LOGIC; 
-  signal M1_22_34_18 : STD_LOGIC; 
+  signal M1_22_27_17 : STD_LOGIC; 
   signal M1_22_bdd0 : STD_LOGIC; 
   signal M1_22_bdd12 : STD_LOGIC; 
   signal M1_22_bdd4 : STD_LOGIC; 
   signal M1_22_bdd7 : STD_LOGIC; 
   signal M1_22_bdd9 : STD_LOGIC; 
   signal M1_23_Q : STD_LOGIC; 
-  signal M1_23_14_25 : STD_LOGIC; 
-  signal M1_23_37_26 : STD_LOGIC; 
+  signal M1_23_22_24 : STD_LOGIC; 
+  signal M1_23_30_25 : STD_LOGIC; 
   signal M1_23_bdd0 : STD_LOGIC; 
   signal M1_23_bdd1 : STD_LOGIC; 
-  signal M1_23_bdd3 : STD_LOGIC; 
   signal M1_23_bdd6 : STD_LOGIC; 
   signal M1_24_Q : STD_LOGIC; 
   signal M1_24_bdd0 : STD_LOGIC; 
-  signal M1_24_bdd2 : STD_LOGIC; 
-  signal M1_24_bdd4 : STD_LOGIC; 
   signal M1_25_Q : STD_LOGIC; 
-  signal M1_25_35_36 : STD_LOGIC; 
-  signal M1_25_80_37 : STD_LOGIC; 
+  signal M1_25_2 : STD_LOGIC; 
+  signal M1_25_54 : STD_LOGIC; 
+  signal M1_25_541_34 : STD_LOGIC; 
+  signal M1_25_542_35 : STD_LOGIC; 
   signal M1_25_bdd1 : STD_LOGIC; 
   signal M1_26_Q : STD_LOGIC; 
-  signal M1_26_25_40 : STD_LOGIC; 
-  signal M1_26_58_41 : STD_LOGIC; 
+  signal M1_26_25_38 : STD_LOGIC; 
+  signal M1_26_58_39 : STD_LOGIC; 
   signal M1_26_bdd0 : STD_LOGIC; 
   signal M1_27_Q : STD_LOGIC; 
-  signal M1_27_116_44 : STD_LOGIC; 
-  signal M1_27_127_45 : STD_LOGIC; 
-  signal M1_27_40_46 : STD_LOGIC; 
+  signal M1_27_119_42 : STD_LOGIC; 
+  signal M1_27_13 : STD_LOGIC; 
+  signal M1_27_45 : STD_LOGIC; 
+  signal M1_27_451_45 : STD_LOGIC; 
+  signal M1_27_452_46 : STD_LOGIC; 
   signal M1_27_bdd0 : STD_LOGIC; 
   signal M1_27_bdd4 : STD_LOGIC; 
   signal M1_28_Q : STD_LOGIC; 
-  signal M1_28_0 : STD_LOGIC; 
-  signal M1_28_46_51 : STD_LOGIC; 
-  signal M1_28_69_52 : STD_LOGIC; 
+  signal M1_28_12_50 : STD_LOGIC; 
+  signal M1_28_129 : STD_LOGIC; 
+  signal M1_28_1291_52 : STD_LOGIC; 
+  signal M1_28_1292_53 : STD_LOGIC; 
+  signal M1_28_33 : STD_LOGIC; 
+  signal M1_28_331_55 : STD_LOGIC; 
+  signal M1_28_332_56 : STD_LOGIC; 
+  signal M1_28_71_57 : STD_LOGIC; 
+  signal M1_28_bdd1 : STD_LOGIC; 
   signal M1_29_Q : STD_LOGIC; 
-  signal M1_29_23 : STD_LOGIC; 
-  signal M1_29_231_55 : STD_LOGIC; 
-  signal M1_29_56_56 : STD_LOGIC; 
-  signal M1_29_65 : STD_LOGIC; 
-  signal M1_29_80_58 : STD_LOGIC; 
+  signal M1_29_26 : STD_LOGIC; 
+  signal M1_29_261_61 : STD_LOGIC; 
+  signal M1_29_262_62 : STD_LOGIC; 
+  signal M1_29_69_63 : STD_LOGIC; 
+  signal M1_29_77_64 : STD_LOGIC; 
+  signal M1_29_bdd5 : STD_LOGIC; 
   signal M1_2_Q : STD_LOGIC; 
   signal M1_30_Q : STD_LOGIC; 
-  signal M1_30_117 : STD_LOGIC; 
-  signal M1_30_65_62 : STD_LOGIC; 
-  signal M1_30_98 : STD_LOGIC; 
+  signal M1_30_104_68 : STD_LOGIC; 
+  signal M1_30_51_69 : STD_LOGIC; 
   signal M1_31_Q : STD_LOGIC; 
-  signal M1_31_14_65 : STD_LOGIC; 
+  signal M1_31_25 : STD_LOGIC; 
+  signal M1_31_251_72 : STD_LOGIC; 
+  signal M1_31_252_73 : STD_LOGIC; 
+  signal M1_31_62_74 : STD_LOGIC; 
   signal M1_3_Q : STD_LOGIC; 
-  signal M1_3_1_67 : STD_LOGIC; 
-  signal M1_3_2_68 : STD_LOGIC; 
-  signal M1_4_Q : STD_LOGIC; 
-  signal M1_5_Q_70 : STD_LOGIC; 
-  signal M1_6_Q : STD_LOGIC; 
-  signal M1_8_Q : STD_LOGIC; 
+  signal M1_3_1_76 : STD_LOGIC; 
+  signal M1_3_2_77 : STD_LOGIC; 
+  signal M1_3_bdd3 : STD_LOGIC; 
+  signal M1_4_Q_79 : STD_LOGIC; 
+  signal M1_4_SW1 : STD_LOGIC; 
+  signal M1_4_SW11_81 : STD_LOGIC; 
+  signal M1_4_bdd0 : STD_LOGIC; 
+  signal M1_5_Q_83 : STD_LOGIC; 
+  signal M1_8_Q_84 : STD_LOGIC; 
   signal M1_9_Q : STD_LOGIC; 
-  signal M1_9_1_74 : STD_LOGIC; 
-  signal M1_9_2_75 : STD_LOGIC; 
+  signal M1_9_1_86 : STD_LOGIC; 
+  signal M1_9_2 : STD_LOGIC; 
   signal M1a_10_Q : STD_LOGIC; 
   signal M1a_11_Q : STD_LOGIC; 
-  signal M1a_11_1_78 : STD_LOGIC; 
-  signal M1a_11_2_79 : STD_LOGIC; 
+  signal M1a_12_bdd0 : STD_LOGIC; 
   signal M1a_12_bdd1 : STD_LOGIC; 
-  signal M1a_14_Q_81 : STD_LOGIC; 
   signal M1a_14_bdd0 : STD_LOGIC; 
-  signal M1a_16_Q_83 : STD_LOGIC; 
-  signal M1a_18_Q : STD_LOGIC; 
+  signal M1a_18_Q_93 : STD_LOGIC; 
   signal M1a_19_Q : STD_LOGIC; 
-  signal M1a_1_10_86 : STD_LOGIC; 
-  signal M1a_1_22_87 : STD_LOGIC; 
-  signal M1a_20_Q_88 : STD_LOGIC; 
+  signal M1a_1_Q_95 : STD_LOGIC; 
+  signal M1a_20_Q_96 : STD_LOGIC; 
   signal M1a_21_Q : STD_LOGIC; 
+  signal M1a_21_25_98 : STD_LOGIC; 
   signal M1a_22_Q : STD_LOGIC; 
-  signal M1a_22_37 : STD_LOGIC; 
-  signal M1a_22_371_92 : STD_LOGIC; 
-  signal M1a_22_40_SW0 : STD_LOGIC; 
-  signal M1a_22_40_SW01_94 : STD_LOGIC; 
   signal M1a_22_bdd0 : STD_LOGIC; 
   signal M1a_23_Q : STD_LOGIC; 
-  signal M1a_23_9_97 : STD_LOGIC; 
+  signal M1a_23_0_102 : STD_LOGIC; 
+  signal M1a_23_15_103 : STD_LOGIC; 
+  signal M1a_23_4_104 : STD_LOGIC; 
   signal M1a_24_Q : STD_LOGIC; 
-  signal M1a_24_13_99 : STD_LOGIC; 
-  signal M1a_24_38_100 : STD_LOGIC; 
+  signal M1a_24_38_106 : STD_LOGIC; 
   signal M1a_24_bdd1 : STD_LOGIC; 
   signal M1a_25_Q : STD_LOGIC; 
+  signal M1a_25_36 : STD_LOGIC; 
   signal M1a_26_Q : STD_LOGIC; 
-  signal M1a_26_33_104 : STD_LOGIC; 
-  signal M1a_26_53_105 : STD_LOGIC; 
+  signal M1a_26_33_111 : STD_LOGIC; 
+  signal M1a_26_55_112 : STD_LOGIC; 
   signal M1a_27_Q : STD_LOGIC; 
-  signal M1a_27_130_107 : STD_LOGIC; 
-  signal M1a_27_2_108 : STD_LOGIC; 
-  signal M1a_27_80_109 : STD_LOGIC; 
-  signal M1a_27_82_110 : STD_LOGIC; 
+  signal M1a_27_52_114 : STD_LOGIC; 
   signal M1a_28_Q : STD_LOGIC; 
-  signal M1a_28_19_112 : STD_LOGIC; 
-  signal M1a_28_31 : STD_LOGIC; 
-  signal M1a_28_311_114 : STD_LOGIC; 
-  signal M1a_28_65 : STD_LOGIC; 
-  signal M1a_28_651_116 : STD_LOGIC; 
+  signal M1a_28_63_SW0 : STD_LOGIC; 
   signal M1a_29_Q : STD_LOGIC; 
-  signal M1a_29_32 : STD_LOGIC; 
-  signal M1a_29_321_119 : STD_LOGIC; 
-  signal M1a_29_322_120 : STD_LOGIC; 
-  signal M1a_29_58_121 : STD_LOGIC; 
-  signal M1a_2_Q_122 : STD_LOGIC; 
-  signal M1a_30_36_123 : STD_LOGIC; 
+  signal M1a_29_32_118 : STD_LOGIC; 
+  signal M1a_29_58_119 : STD_LOGIC; 
+  signal M1a_2_Q_120 : STD_LOGIC; 
+  signal M1a_30_37_121 : STD_LOGIC; 
   signal M1a_3_Q : STD_LOGIC; 
-  signal M1a_3_1_125 : STD_LOGIC; 
-  signal M1a_3_2_126 : STD_LOGIC; 
-  signal M1a_4_Q_127 : STD_LOGIC; 
+  signal M1a_3_1_123 : STD_LOGIC; 
+  signal M1a_3_2_124 : STD_LOGIC; 
   signal M1a_4_bdd0 : STD_LOGIC; 
-  signal M1a_5_Q : STD_LOGIC; 
   signal M1a_8_Q : STD_LOGIC; 
   signal M1a_8_1 : STD_LOGIC; 
+  signal M1a_8_11_128 : STD_LOGIC; 
   signal M1a_9_Q : STD_LOGIC; 
   signal M2_0_Q : STD_LOGIC; 
-  signal M2_0_14_134 : STD_LOGIC; 
-  signal M2_0_bdd1 : STD_LOGIC; 
+  signal M2_0_27_131 : STD_LOGIC; 
   signal M2_0_bdd13 : STD_LOGIC; 
-  signal M2_0_bdd16 : STD_LOGIC; 
-  signal M2_0_bdd3 : STD_LOGIC; 
+  signal M2_0_bdd18 : STD_LOGIC; 
+  signal M2_0_bdd2 : STD_LOGIC; 
+  signal M2_0_bdd20 : STD_LOGIC; 
+  signal M2_0_bdd4 : STD_LOGIC; 
   signal M2_0_bdd6 : STD_LOGIC; 
   signal M2_0_bdd9 : STD_LOGIC; 
   signal M2_10_Q : STD_LOGIC; 
+  signal M2_10_23 : STD_LOGIC; 
+  signal M2_10_231_141 : STD_LOGIC; 
+  signal M2_10_232_142 : STD_LOGIC; 
+  signal M2_10_8 : STD_LOGIC; 
+  signal M2_10_bdd0 : STD_LOGIC; 
   signal M2_10_bdd14 : STD_LOGIC; 
+  signal M2_10_bdd5 : STD_LOGIC; 
+  signal M2_11_Q_147 : STD_LOGIC; 
+  signal M2_11_bdd0 : STD_LOGIC; 
+  signal M2_12_Q : STD_LOGIC; 
+  signal M2_12_44 : STD_LOGIC; 
+  signal M2_12_bdd5 : STD_LOGIC; 
   signal M2_13_Q : STD_LOGIC; 
-  signal M2_13_1_144 : STD_LOGIC; 
-  signal M2_15_Q_145 : STD_LOGIC; 
-  signal M2_16_Q_146 : STD_LOGIC; 
-  signal M2_19_Q_147 : STD_LOGIC; 
+  signal M2_18_bdd0 : STD_LOGIC; 
   signal M2_1_Q : STD_LOGIC; 
-  signal M2_1_121 : STD_LOGIC; 
-  signal M2_1_65_150 : STD_LOGIC; 
+  signal M2_1_101_155 : STD_LOGIC; 
+  signal M2_1_63_156 : STD_LOGIC; 
   signal M2_1_bdd1 : STD_LOGIC; 
+  signal M2_20_Q : STD_LOGIC; 
+  signal M2_20_12_159 : STD_LOGIC; 
   signal M2_21_Q : STD_LOGIC; 
-  signal M2_21_1_153 : STD_LOGIC; 
-  signal M2_21_2_154 : STD_LOGIC; 
+  signal M2_21_bdd0 : STD_LOGIC; 
   signal M2_22_Q : STD_LOGIC; 
-  signal M2_26_Q_156 : STD_LOGIC; 
-  signal M2_28_Q : STD_LOGIC; 
+  signal M2_22_1_163 : STD_LOGIC; 
+  signal M2_22_2_164 : STD_LOGIC; 
+  signal M2_23_Q_165 : STD_LOGIC; 
+  signal M2_28_Q_166 : STD_LOGIC; 
+  signal M2_29_Q : STD_LOGIC; 
   signal M2_2_Q : STD_LOGIC; 
-  signal M2_2_23 : STD_LOGIC; 
-  signal M2_2_231_160 : STD_LOGIC; 
-  signal M2_2_56_161 : STD_LOGIC; 
-  signal M2_2_80_162 : STD_LOGIC; 
+  signal M2_2_111_169 : STD_LOGIC; 
+  signal M2_2_70_170 : STD_LOGIC; 
+  signal M2_2_bdd5 : STD_LOGIC; 
   signal M2_30_Q : STD_LOGIC; 
   signal M2_3_Q : STD_LOGIC; 
-  signal M2_3_111 : STD_LOGIC; 
-  signal M2_3_50_166 : STD_LOGIC; 
-  signal M2_3_74_167 : STD_LOGIC; 
-  signal M2_3_8_168 : STD_LOGIC; 
-  signal M2_3_bdd6 : STD_LOGIC; 
-  signal M2_3_bdd9 : STD_LOGIC; 
+  signal M2_3_19_174 : STD_LOGIC; 
+  signal M2_3_24_175 : STD_LOGIC; 
+  signal M2_3_5_176 : STD_LOGIC; 
+  signal M2_3_94_177 : STD_LOGIC; 
+  signal M2_3_bdd7 : STD_LOGIC; 
   signal M2_4_Q : STD_LOGIC; 
-  signal M2_4_106_172 : STD_LOGIC; 
+  signal M2_4_122_180 : STD_LOGIC; 
+  signal M2_4_133_181 : STD_LOGIC; 
+  signal M2_4_36_182 : STD_LOGIC; 
+  signal M2_4_46_183 : STD_LOGIC; 
   signal M2_4_bdd0 : STD_LOGIC; 
-  signal M2_4_bdd4 : STD_LOGIC; 
+  signal M2_4_bdd10 : STD_LOGIC; 
+  signal M2_4_bdd2 : STD_LOGIC; 
   signal M2_5_Q : STD_LOGIC; 
-  signal M2_5_25_176 : STD_LOGIC; 
-  signal M2_5_58_177 : STD_LOGIC; 
-  signal M2_5_bdd0 : STD_LOGIC; 
+  signal M2_5_103 : STD_LOGIC; 
+  signal M2_5_1031_189 : STD_LOGIC; 
+  signal M2_5_1032_190 : STD_LOGIC; 
+  signal M2_5_160 : STD_LOGIC; 
+  signal M2_5_1601_192 : STD_LOGIC; 
+  signal M2_5_1602_193 : STD_LOGIC; 
+  signal M2_5_31 : STD_LOGIC; 
+  signal M2_5_311_195 : STD_LOGIC; 
+  signal M2_5_45 : STD_LOGIC; 
+  signal M2_5_451_197 : STD_LOGIC; 
+  signal M2_5_452_198 : STD_LOGIC; 
+  signal M2_5_bdd2 : STD_LOGIC; 
   signal M2_6_Q : STD_LOGIC; 
-  signal M2_6_54_180 : STD_LOGIC; 
-  signal M2_6_93_181 : STD_LOGIC; 
-  signal M2_6_bdd0 : STD_LOGIC; 
+  signal M2_6_108_201 : STD_LOGIC; 
+  signal M2_6_17_202 : STD_LOGIC; 
+  signal M2_6_171_203 : STD_LOGIC; 
+  signal M2_6_bdd1 : STD_LOGIC; 
   signal M2_7_Q : STD_LOGIC; 
+  signal M2_7_43_206 : STD_LOGIC; 
+  signal M2_7_75_207 : STD_LOGIC; 
   signal M2_7_bdd0 : STD_LOGIC; 
   signal M2_8_Q : STD_LOGIC; 
-  signal M2_8_14_186 : STD_LOGIC; 
-  signal M2_8_37_187 : STD_LOGIC; 
-  signal M2_8_bdd1 : STD_LOGIC; 
+  signal M2_8_53_210 : STD_LOGIC; 
   signal M2_9_Q : STD_LOGIC; 
-  signal M2_9_34_190 : STD_LOGIC; 
-  signal M2_9_bdd0 : STD_LOGIC; 
+  signal M2_9_31_212 : STD_LOGIC; 
+  signal M2_9_69_213 : STD_LOGIC; 
   signal M2a_10_Q : STD_LOGIC; 
-  signal M2a_12_Q_193 : STD_LOGIC; 
-  signal M2a_13_Q_194 : STD_LOGIC; 
-  signal M2a_1_36_195 : STD_LOGIC; 
-  signal M2a_1_64_196 : STD_LOGIC; 
-  signal M2a_20_Q_197 : STD_LOGIC; 
-  signal M2a_22_Q_198 : STD_LOGIC; 
-  signal M2a_28_Q_199 : STD_LOGIC; 
-  signal M2a_29_Q : STD_LOGIC; 
+  signal M2a_10_28_215 : STD_LOGIC; 
+  signal M2a_11_Q : STD_LOGIC; 
+  signal M2a_11_25_217 : STD_LOGIC; 
+  signal M2a_11_37_218 : STD_LOGIC; 
+  signal M2a_12_Q : STD_LOGIC; 
+  signal M2a_13_Q : STD_LOGIC; 
+  signal M2a_14_Q_221 : STD_LOGIC; 
+  signal M2a_15_Q : STD_LOGIC; 
+  signal M2a_16_Q : STD_LOGIC; 
+  signal M2a_1_Q_224 : STD_LOGIC; 
+  signal M2a_20_Q : STD_LOGIC; 
+  signal M2a_21_Q : STD_LOGIC; 
+  signal M2a_22_Q : STD_LOGIC; 
+  signal M2a_24_Q : STD_LOGIC; 
+  signal M2a_26_Q : STD_LOGIC; 
+  signal M2a_28_Q : STD_LOGIC; 
+  signal M2a_29_2_231 : STD_LOGIC; 
+  signal M2a_29_59_232 : STD_LOGIC; 
   signal M2a_2_Q : STD_LOGIC; 
-  signal M2a_2_32 : STD_LOGIC; 
-  signal M2a_2_321_203 : STD_LOGIC; 
-  signal M2a_2_322_204 : STD_LOGIC; 
-  signal M2a_30_Q_205 : STD_LOGIC; 
+  signal M2a_2_18_234 : STD_LOGIC; 
+  signal M2a_2_46_235 : STD_LOGIC; 
+  signal M2a_30_19_236 : STD_LOGIC; 
   signal M2a_3_Q : STD_LOGIC; 
-  signal M2a_3_19_207 : STD_LOGIC; 
-  signal M2a_3_31 : STD_LOGIC; 
-  signal M2a_3_311_209 : STD_LOGIC; 
-  signal M2a_4_80_210 : STD_LOGIC; 
-  signal M2a_5_111_211 : STD_LOGIC; 
-  signal M2a_5_63_212 : STD_LOGIC; 
+  signal M2a_3_1_238 : STD_LOGIC; 
+  signal M2a_3_2_239 : STD_LOGIC; 
+  signal M2a_3_3_240 : STD_LOGIC; 
+  signal M2a_3_f5_241 : STD_LOGIC; 
+  signal M2a_4_Q : STD_LOGIC; 
+  signal M2a_4_114_243 : STD_LOGIC; 
+  signal M2a_4_194_244 : STD_LOGIC; 
+  signal M2a_4_20_245 : STD_LOGIC; 
+  signal M2a_4_36_246 : STD_LOGIC; 
+  signal M2a_4_58_247 : STD_LOGIC; 
+  signal M2a_4_76 : STD_LOGIC; 
+  signal M2a_4_761 : STD_LOGIC; 
+  signal M2a_4_762_250 : STD_LOGIC; 
+  signal M2a_4_9_251 : STD_LOGIC; 
+  signal M2a_5_Q : STD_LOGIC; 
+  signal M2a_5_101_253 : STD_LOGIC; 
+  signal M2a_5_125_254 : STD_LOGIC; 
+  signal M2a_5_64_SW0 : STD_LOGIC; 
   signal M2a_6_Q : STD_LOGIC; 
-  signal M2a_6_bdd0 : STD_LOGIC; 
+  signal M2a_6_32 : STD_LOGIC; 
+  signal M2a_6_51_258 : STD_LOGIC; 
   signal M2a_6_bdd1 : STD_LOGIC; 
   signal M2a_7_Q : STD_LOGIC; 
-  signal M2a_7_13_217 : STD_LOGIC; 
-  signal M2a_7_38_218 : STD_LOGIC; 
+  signal M2a_7_53_261 : STD_LOGIC; 
   signal M2a_8_Q : STD_LOGIC; 
-  signal M2a_8_11_220 : STD_LOGIC; 
+  signal M2a_8_29_263 : STD_LOGIC; 
+  signal M2a_8_94 : STD_LOGIC; 
+  signal M2a_8_941_265 : STD_LOGIC; 
   signal M2a_9_Q : STD_LOGIC; 
-  signal M2a_9_40_SW0 : STD_LOGIC; 
-  signal M2a_9_40_SW01_223 : STD_LOGIC; 
+  signal M2a_9_33_267 : STD_LOGIC; 
+  signal M2a_9_67 : STD_LOGIC; 
+  signal M2a_9_671_269 : STD_LOGIC; 
   signal N0 : STD_LOGIC; 
   signal N01 : STD_LOGIC; 
   signal N1 : STD_LOGIC; 
-  signal N11 : STD_LOGIC; 
-  signal N139 : STD_LOGIC; 
-  signal N141 : STD_LOGIC; 
-  signal N143 : STD_LOGIC; 
-  signal N145 : STD_LOGIC; 
-  signal N157 : STD_LOGIC; 
-  signal N159 : STD_LOGIC; 
-  signal N165 : STD_LOGIC; 
-  signal N167 : STD_LOGIC; 
-  signal N169 : STD_LOGIC; 
-  signal N171 : STD_LOGIC; 
-  signal N179 : STD_LOGIC; 
+  signal N10 : STD_LOGIC; 
+  signal N12 : STD_LOGIC; 
+  signal N14 : STD_LOGIC; 
+  signal N147 : STD_LOGIC; 
+  signal N149 : STD_LOGIC; 
+  signal N151 : STD_LOGIC; 
+  signal N153 : STD_LOGIC; 
+  signal N158 : STD_LOGIC; 
+  signal N16 : STD_LOGIC; 
+  signal N160 : STD_LOGIC; 
+  signal N168 : STD_LOGIC; 
+  signal N170 : STD_LOGIC; 
+  signal N178 : STD_LOGIC; 
+  signal N18 : STD_LOGIC; 
   signal N180 : STD_LOGIC; 
   signal N182 : STD_LOGIC; 
   signal N184 : STD_LOGIC; 
-  signal N186 : STD_LOGIC; 
-  signal N192 : STD_LOGIC; 
-  signal N194 : STD_LOGIC; 
-  signal N196 : STD_LOGIC; 
-  signal N198 : STD_LOGIC; 
-  signal N2 : STD_LOGIC; 
+  signal N185 : STD_LOGIC; 
+  signal N190 : STD_LOGIC; 
+  signal N200 : STD_LOGIC; 
+  signal N202 : STD_LOGIC; 
   signal N204 : STD_LOGIC; 
-  signal N21 : STD_LOGIC; 
+  signal N205 : STD_LOGIC; 
+  signal N206 : STD_LOGIC; 
+  signal N207 : STD_LOGIC; 
+  signal N208 : STD_LOGIC; 
   signal N210 : STD_LOGIC; 
   signal N212 : STD_LOGIC; 
   signal N214 : STD_LOGIC; 
+  signal N22 : STD_LOGIC; 
   signal N222 : STD_LOGIC; 
   signal N224 : STD_LOGIC; 
-  signal N228 : STD_LOGIC; 
-  signal N230 : STD_LOGIC; 
-  signal N232 : STD_LOGIC; 
-  signal N234 : STD_LOGIC; 
   signal N236 : STD_LOGIC; 
-  signal N238 : STD_LOGIC; 
-  signal N240 : STD_LOGIC; 
-  signal N242 : STD_LOGIC; 
-  signal N244 : STD_LOGIC; 
+  signal N24 : STD_LOGIC; 
   signal N246 : STD_LOGIC; 
   signal N248 : STD_LOGIC; 
-  signal N254 : STD_LOGIC; 
+  signal N250 : STD_LOGIC; 
+  signal N252 : STD_LOGIC; 
   signal N256 : STD_LOGIC; 
-  signal N258 : STD_LOGIC; 
-  signal N260 : STD_LOGIC; 
-  signal N262 : STD_LOGIC; 
-  signal N264 : STD_LOGIC; 
-  signal N266 : STD_LOGIC; 
-  signal N270 : STD_LOGIC; 
-  signal N274 : STD_LOGIC; 
-  signal N278 : STD_LOGIC; 
-  signal N280 : STD_LOGIC; 
+  signal N26 : STD_LOGIC; 
+  signal N268 : STD_LOGIC; 
+  signal N27 : STD_LOGIC; 
+  signal N272 : STD_LOGIC; 
+  signal N276 : STD_LOGIC; 
+  signal N282 : STD_LOGIC; 
+  signal N284 : STD_LOGIC; 
   signal N286 : STD_LOGIC; 
   signal N288 : STD_LOGIC; 
-  signal N292 : STD_LOGIC; 
+  signal N29 : STD_LOGIC; 
+  signal N290 : STD_LOGIC; 
   signal N294 : STD_LOGIC; 
   signal N296 : STD_LOGIC; 
   signal N298 : STD_LOGIC; 
-  signal N306 : STD_LOGIC; 
-  signal N308 : STD_LOGIC; 
-  signal N310 : STD_LOGIC; 
-  signal N312 : STD_LOGIC; 
+  signal N30 : STD_LOGIC; 
+  signal N300 : STD_LOGIC; 
+  signal N302 : STD_LOGIC; 
+  signal N304 : STD_LOGIC; 
   signal N314 : STD_LOGIC; 
   signal N316 : STD_LOGIC; 
   signal N318 : STD_LOGIC; 
+  signal N320 : STD_LOGIC; 
   signal N322 : STD_LOGIC; 
   signal N324 : STD_LOGIC; 
   signal N326 : STD_LOGIC; 
-  signal N328 : STD_LOGIC; 
   signal N330 : STD_LOGIC; 
   signal N332 : STD_LOGIC; 
-  signal N336 : STD_LOGIC; 
   signal N338 : STD_LOGIC; 
   signal N340 : STD_LOGIC; 
-  signal N342 : STD_LOGIC; 
-  signal N344 : STD_LOGIC; 
-  signal N346 : STD_LOGIC; 
-  signal N348 : STD_LOGIC; 
+  signal N350 : STD_LOGIC; 
   signal N352 : STD_LOGIC; 
-  signal N353 : STD_LOGIC; 
   signal N354 : STD_LOGIC; 
-  signal N355 : STD_LOGIC; 
   signal N356 : STD_LOGIC; 
-  signal N357 : STD_LOGIC; 
   signal N358 : STD_LOGIC; 
-  signal N359 : STD_LOGIC; 
+  signal N36 : STD_LOGIC; 
   signal N360 : STD_LOGIC; 
-  signal N361 : STD_LOGIC; 
   signal N362 : STD_LOGIC; 
-  signal N363 : STD_LOGIC; 
   signal N364 : STD_LOGIC; 
-  signal N365 : STD_LOGIC; 
   signal N366 : STD_LOGIC; 
-  signal N367 : STD_LOGIC; 
-  signal N368 : STD_LOGIC; 
-  signal N369 : STD_LOGIC; 
+  signal N37 : STD_LOGIC; 
   signal N370 : STD_LOGIC; 
-  signal N371 : STD_LOGIC; 
   signal N372 : STD_LOGIC; 
-  signal N373 : STD_LOGIC; 
-  signal N374 : STD_LOGIC; 
-  signal N375 : STD_LOGIC; 
   signal N376 : STD_LOGIC; 
-  signal N377 : STD_LOGIC; 
   signal N378 : STD_LOGIC; 
-  signal N379 : STD_LOGIC; 
-  signal N380 : STD_LOGIC; 
-  signal N381 : STD_LOGIC; 
   signal N382 : STD_LOGIC; 
-  signal N383 : STD_LOGIC; 
   signal N384 : STD_LOGIC; 
-  signal N385 : STD_LOGIC; 
-  signal N386 : STD_LOGIC; 
-  signal N387 : STD_LOGIC; 
-  signal N388 : STD_LOGIC; 
-  signal N389 : STD_LOGIC; 
   signal N390 : STD_LOGIC; 
-  signal N391 : STD_LOGIC; 
   signal N392 : STD_LOGIC; 
-  signal N393 : STD_LOGIC; 
-  signal N394 : STD_LOGIC; 
-  signal N395 : STD_LOGIC; 
   signal N396 : STD_LOGIC; 
-  signal N397 : STD_LOGIC; 
-  signal N398 : STD_LOGIC; 
-  signal N399 : STD_LOGIC; 
   signal N4 : STD_LOGIC; 
   signal N400 : STD_LOGIC; 
-  signal N401 : STD_LOGIC; 
-  signal N402 : STD_LOGIC; 
-  signal N403 : STD_LOGIC; 
-  signal N404 : STD_LOGIC; 
-  signal N405 : STD_LOGIC; 
   signal N406 : STD_LOGIC; 
-  signal N407 : STD_LOGIC; 
   signal N408 : STD_LOGIC; 
-  signal N409 : STD_LOGIC; 
   signal N410 : STD_LOGIC; 
-  signal N411 : STD_LOGIC; 
   signal N412 : STD_LOGIC; 
-  signal N413 : STD_LOGIC; 
   signal N414 : STD_LOGIC; 
-  signal N415 : STD_LOGIC; 
-  signal N416 : STD_LOGIC; 
-  signal N417 : STD_LOGIC; 
-  signal N418 : STD_LOGIC; 
-  signal N419 : STD_LOGIC; 
   signal N42 : STD_LOGIC; 
   signal N420 : STD_LOGIC; 
-  signal N421 : STD_LOGIC; 
   signal N422 : STD_LOGIC; 
-  signal N423 : STD_LOGIC; 
   signal N424 : STD_LOGIC; 
-  signal N425 : STD_LOGIC; 
-  signal N426 : STD_LOGIC; 
-  signal N427 : STD_LOGIC; 
-  signal N428 : STD_LOGIC; 
-  signal N429 : STD_LOGIC; 
-  signal N430 : STD_LOGIC; 
-  signal N431 : STD_LOGIC; 
-  signal N432 : STD_LOGIC; 
-  signal N433 : STD_LOGIC; 
   signal N434 : STD_LOGIC; 
-  signal N435 : STD_LOGIC; 
   signal N436 : STD_LOGIC; 
-  signal N437 : STD_LOGIC; 
   signal N438 : STD_LOGIC; 
-  signal N439 : STD_LOGIC; 
   signal N440 : STD_LOGIC; 
-  signal N441 : STD_LOGIC; 
-  signal N442 : STD_LOGIC; 
-  signal N443 : STD_LOGIC; 
   signal N444 : STD_LOGIC; 
-  signal N445 : STD_LOGIC; 
-  signal N446 : STD_LOGIC; 
-  signal N447 : STD_LOGIC; 
   signal N448 : STD_LOGIC; 
-  signal N449 : STD_LOGIC; 
   signal N450 : STD_LOGIC; 
-  signal N451 : STD_LOGIC; 
   signal N452 : STD_LOGIC; 
-  signal N453 : STD_LOGIC; 
-  signal N454 : STD_LOGIC; 
-  signal N455 : STD_LOGIC; 
   signal N456 : STD_LOGIC; 
-  signal N457 : STD_LOGIC; 
   signal N458 : STD_LOGIC; 
-  signal N459 : STD_LOGIC; 
-  signal N460 : STD_LOGIC; 
-  signal N461 : STD_LOGIC; 
-  signal N462 : STD_LOGIC; 
-  signal N463 : STD_LOGIC; 
   signal N464 : STD_LOGIC; 
-  signal N465 : STD_LOGIC; 
   signal N466 : STD_LOGIC; 
-  signal N467 : STD_LOGIC; 
-  signal N468 : STD_LOGIC; 
-  signal N469 : STD_LOGIC; 
-  signal N470 : STD_LOGIC; 
-  signal N471 : STD_LOGIC; 
-  signal N472 : STD_LOGIC; 
-  signal N473 : STD_LOGIC; 
-  signal N474 : STD_LOGIC; 
-  signal N475 : STD_LOGIC; 
-  signal N476 : STD_LOGIC; 
-  signal N477 : STD_LOGIC; 
-  signal N478 : STD_LOGIC; 
-  signal N479 : STD_LOGIC; 
-  signal N480 : STD_LOGIC; 
-  signal N481 : STD_LOGIC; 
-  signal N482 : STD_LOGIC; 
-  signal N483 : STD_LOGIC; 
-  signal N484 : STD_LOGIC; 
-  signal N485 : STD_LOGIC; 
   signal N486 : STD_LOGIC; 
   signal N487 : STD_LOGIC; 
   signal N488 : STD_LOGIC; 
   signal N489 : STD_LOGIC; 
+  signal N49 : STD_LOGIC; 
   signal N490 : STD_LOGIC; 
   signal N491 : STD_LOGIC; 
   signal N492 : STD_LOGIC; 
@@ -546,6 +492,7 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal N507 : STD_LOGIC; 
   signal N508 : STD_LOGIC; 
   signal N509 : STD_LOGIC; 
+  signal N51 : STD_LOGIC; 
   signal N510 : STD_LOGIC; 
   signal N511 : STD_LOGIC; 
   signal N512 : STD_LOGIC; 
@@ -563,38 +510,200 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal N524 : STD_LOGIC; 
   signal N525 : STD_LOGIC; 
   signal N526 : STD_LOGIC; 
-  signal N62 : STD_LOGIC; 
-  signal N73 : STD_LOGIC; 
-  signal N80 : STD_LOGIC; 
-  signal N82 : STD_LOGIC; 
-  signal N93 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_10_rt_505 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_11_rt_507 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_12_rt_509 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_13_rt_511 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_14_rt_513 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_15_rt_515 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_16_rt_517 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_1_rt_519 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_2_rt_521 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_3_rt_523 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_4_rt_525 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_5_rt_527 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_6_rt_529 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_7_rt_531 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_8_rt_533 : STD_LOGIC; 
-  signal U1_Mcount_q_cy_9_rt_535 : STD_LOGIC; 
-  signal U1_Mcount_q_xor_17_rt_537 : STD_LOGIC; 
+  signal N527 : STD_LOGIC; 
+  signal N528 : STD_LOGIC; 
+  signal N529 : STD_LOGIC; 
+  signal N53 : STD_LOGIC; 
+  signal N530 : STD_LOGIC; 
+  signal N531 : STD_LOGIC; 
+  signal N532 : STD_LOGIC; 
+  signal N533 : STD_LOGIC; 
+  signal N534 : STD_LOGIC; 
+  signal N535 : STD_LOGIC; 
+  signal N536 : STD_LOGIC; 
+  signal N537 : STD_LOGIC; 
+  signal N538 : STD_LOGIC; 
+  signal N539 : STD_LOGIC; 
+  signal N540 : STD_LOGIC; 
+  signal N541 : STD_LOGIC; 
+  signal N542 : STD_LOGIC; 
+  signal N543 : STD_LOGIC; 
+  signal N544 : STD_LOGIC; 
+  signal N545 : STD_LOGIC; 
+  signal N546 : STD_LOGIC; 
+  signal N547 : STD_LOGIC; 
+  signal N548 : STD_LOGIC; 
+  signal N549 : STD_LOGIC; 
+  signal N55 : STD_LOGIC; 
+  signal N550 : STD_LOGIC; 
+  signal N551 : STD_LOGIC; 
+  signal N552 : STD_LOGIC; 
+  signal N553 : STD_LOGIC; 
+  signal N554 : STD_LOGIC; 
+  signal N555 : STD_LOGIC; 
+  signal N556 : STD_LOGIC; 
+  signal N557 : STD_LOGIC; 
+  signal N558 : STD_LOGIC; 
+  signal N559 : STD_LOGIC; 
+  signal N560 : STD_LOGIC; 
+  signal N561 : STD_LOGIC; 
+  signal N562 : STD_LOGIC; 
+  signal N563 : STD_LOGIC; 
+  signal N564 : STD_LOGIC; 
+  signal N565 : STD_LOGIC; 
+  signal N566 : STD_LOGIC; 
+  signal N567 : STD_LOGIC; 
+  signal N568 : STD_LOGIC; 
+  signal N569 : STD_LOGIC; 
+  signal N57 : STD_LOGIC; 
+  signal N570 : STD_LOGIC; 
+  signal N571 : STD_LOGIC; 
+  signal N572 : STD_LOGIC; 
+  signal N573 : STD_LOGIC; 
+  signal N574 : STD_LOGIC; 
+  signal N575 : STD_LOGIC; 
+  signal N576 : STD_LOGIC; 
+  signal N577 : STD_LOGIC; 
+  signal N578 : STD_LOGIC; 
+  signal N579 : STD_LOGIC; 
+  signal N580 : STD_LOGIC; 
+  signal N581 : STD_LOGIC; 
+  signal N582 : STD_LOGIC; 
+  signal N583 : STD_LOGIC; 
+  signal N584 : STD_LOGIC; 
+  signal N585 : STD_LOGIC; 
+  signal N586 : STD_LOGIC; 
+  signal N587 : STD_LOGIC; 
+  signal N588 : STD_LOGIC; 
+  signal N589 : STD_LOGIC; 
+  signal N590 : STD_LOGIC; 
+  signal N591 : STD_LOGIC; 
+  signal N592 : STD_LOGIC; 
+  signal N593 : STD_LOGIC; 
+  signal N594 : STD_LOGIC; 
+  signal N595 : STD_LOGIC; 
+  signal N596 : STD_LOGIC; 
+  signal N597 : STD_LOGIC; 
+  signal N598 : STD_LOGIC; 
+  signal N599 : STD_LOGIC; 
+  signal N6 : STD_LOGIC; 
+  signal N600 : STD_LOGIC; 
+  signal N601 : STD_LOGIC; 
+  signal N602 : STD_LOGIC; 
+  signal N603 : STD_LOGIC; 
+  signal N604 : STD_LOGIC; 
+  signal N605 : STD_LOGIC; 
+  signal N606 : STD_LOGIC; 
+  signal N607 : STD_LOGIC; 
+  signal N608 : STD_LOGIC; 
+  signal N609 : STD_LOGIC; 
+  signal N61 : STD_LOGIC; 
+  signal N610 : STD_LOGIC; 
+  signal N611 : STD_LOGIC; 
+  signal N612 : STD_LOGIC; 
+  signal N613 : STD_LOGIC; 
+  signal N614 : STD_LOGIC; 
+  signal N615 : STD_LOGIC; 
+  signal N616 : STD_LOGIC; 
+  signal N617 : STD_LOGIC; 
+  signal N618 : STD_LOGIC; 
+  signal N619 : STD_LOGIC; 
+  signal N620 : STD_LOGIC; 
+  signal N621 : STD_LOGIC; 
+  signal N622 : STD_LOGIC; 
+  signal N623 : STD_LOGIC; 
+  signal N624 : STD_LOGIC; 
+  signal N625 : STD_LOGIC; 
+  signal N626 : STD_LOGIC; 
+  signal N627 : STD_LOGIC; 
+  signal N628 : STD_LOGIC; 
+  signal N629 : STD_LOGIC; 
+  signal N630 : STD_LOGIC; 
+  signal N631 : STD_LOGIC; 
+  signal N632 : STD_LOGIC; 
+  signal N633 : STD_LOGIC; 
+  signal N634 : STD_LOGIC; 
+  signal N635 : STD_LOGIC; 
+  signal N636 : STD_LOGIC; 
+  signal N637 : STD_LOGIC; 
+  signal N638 : STD_LOGIC; 
+  signal N639 : STD_LOGIC; 
+  signal N640 : STD_LOGIC; 
+  signal N641 : STD_LOGIC; 
+  signal N642 : STD_LOGIC; 
+  signal N643 : STD_LOGIC; 
+  signal N644 : STD_LOGIC; 
+  signal N645 : STD_LOGIC; 
+  signal N646 : STD_LOGIC; 
+  signal N647 : STD_LOGIC; 
+  signal N648 : STD_LOGIC; 
+  signal N649 : STD_LOGIC; 
+  signal N650 : STD_LOGIC; 
+  signal N651 : STD_LOGIC; 
+  signal N652 : STD_LOGIC; 
+  signal N653 : STD_LOGIC; 
+  signal N654 : STD_LOGIC; 
+  signal N655 : STD_LOGIC; 
+  signal N656 : STD_LOGIC; 
+  signal N657 : STD_LOGIC; 
+  signal N658 : STD_LOGIC; 
+  signal N659 : STD_LOGIC; 
+  signal N660 : STD_LOGIC; 
+  signal N661 : STD_LOGIC; 
+  signal N662 : STD_LOGIC; 
+  signal N663 : STD_LOGIC; 
+  signal N664 : STD_LOGIC; 
+  signal N665 : STD_LOGIC; 
+  signal N666 : STD_LOGIC; 
+  signal N667 : STD_LOGIC; 
+  signal N668 : STD_LOGIC; 
+  signal N669 : STD_LOGIC; 
+  signal N67 : STD_LOGIC; 
+  signal N670 : STD_LOGIC; 
+  signal N671 : STD_LOGIC; 
+  signal N672 : STD_LOGIC; 
+  signal N673 : STD_LOGIC; 
+  signal N674 : STD_LOGIC; 
+  signal N675 : STD_LOGIC; 
+  signal N676 : STD_LOGIC; 
+  signal N677 : STD_LOGIC; 
+  signal N678 : STD_LOGIC; 
+  signal N679 : STD_LOGIC; 
+  signal N680 : STD_LOGIC; 
+  signal N681 : STD_LOGIC; 
+  signal N682 : STD_LOGIC; 
+  signal N683 : STD_LOGIC; 
+  signal N7 : STD_LOGIC; 
+  signal N72 : STD_LOGIC; 
+  signal N76 : STD_LOGIC; 
+  signal N9 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_10_rt_614 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_11_rt_616 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_12_rt_618 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_13_rt_620 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_14_rt_622 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_15_rt_624 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_16_rt_626 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_1_rt_628 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_2_rt_630 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_3_rt_632 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_4_rt_634 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_5_rt_636 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_6_rt_638 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_7_rt_640 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_8_rt_642 : STD_LOGIC; 
+  signal U1_Mcount_q_cy_9_rt_644 : STD_LOGIC; 
+  signal U1_Mcount_q_xor_17_rt_646 : STD_LOGIC; 
   signal U1_q_01 : STD_LOGIC; 
   signal U1_q_171 : STD_LOGIC; 
-  signal U2_Mcount_hcs_cy_1_rt_560 : STD_LOGIC; 
-  signal U2_Mcount_hcs_cy_2_rt_562 : STD_LOGIC; 
-  signal U2_Mcount_hcs_cy_3_rt_564 : STD_LOGIC; 
-  signal U2_Mcount_hcs_cy_4_rt_566 : STD_LOGIC; 
-  signal U2_Mcount_hcs_cy_5_rt_568 : STD_LOGIC; 
-  signal U2_Mcount_hcs_cy_6_rt_570 : STD_LOGIC; 
-  signal U2_Mcount_hcs_cy_7_rt_572 : STD_LOGIC; 
-  signal U2_Mcount_hcs_cy_8_rt_574 : STD_LOGIC; 
+  signal U2_Mcount_hcs_cy_1_rt_669 : STD_LOGIC; 
+  signal U2_Mcount_hcs_cy_2_rt_671 : STD_LOGIC; 
+  signal U2_Mcount_hcs_cy_3_rt_673 : STD_LOGIC; 
+  signal U2_Mcount_hcs_cy_4_rt_675 : STD_LOGIC; 
+  signal U2_Mcount_hcs_cy_5_rt_677 : STD_LOGIC; 
+  signal U2_Mcount_hcs_cy_6_rt_679 : STD_LOGIC; 
+  signal U2_Mcount_hcs_cy_7_rt_681 : STD_LOGIC; 
+  signal U2_Mcount_hcs_cy_8_rt_683 : STD_LOGIC; 
   signal U2_Mcount_hcs_eqn_0 : STD_LOGIC; 
   signal U2_Mcount_hcs_eqn_1 : STD_LOGIC; 
   signal U2_Mcount_hcs_eqn_2 : STD_LOGIC; 
@@ -605,15 +714,15 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal U2_Mcount_hcs_eqn_7 : STD_LOGIC; 
   signal U2_Mcount_hcs_eqn_8 : STD_LOGIC; 
   signal U2_Mcount_hcs_eqn_9 : STD_LOGIC; 
-  signal U2_Mcount_hcs_xor_9_rt_586 : STD_LOGIC; 
-  signal U2_Mcount_vcs_cy_1_rt_589 : STD_LOGIC; 
-  signal U2_Mcount_vcs_cy_2_rt_591 : STD_LOGIC; 
-  signal U2_Mcount_vcs_cy_3_rt_593 : STD_LOGIC; 
-  signal U2_Mcount_vcs_cy_4_rt_595 : STD_LOGIC; 
-  signal U2_Mcount_vcs_cy_5_rt_597 : STD_LOGIC; 
-  signal U2_Mcount_vcs_cy_6_rt_599 : STD_LOGIC; 
-  signal U2_Mcount_vcs_cy_7_rt_601 : STD_LOGIC; 
-  signal U2_Mcount_vcs_cy_8_rt_603 : STD_LOGIC; 
+  signal U2_Mcount_hcs_xor_9_rt_695 : STD_LOGIC; 
+  signal U2_Mcount_vcs_cy_1_rt_698 : STD_LOGIC; 
+  signal U2_Mcount_vcs_cy_2_rt_700 : STD_LOGIC; 
+  signal U2_Mcount_vcs_cy_3_rt_702 : STD_LOGIC; 
+  signal U2_Mcount_vcs_cy_4_rt_704 : STD_LOGIC; 
+  signal U2_Mcount_vcs_cy_5_rt_706 : STD_LOGIC; 
+  signal U2_Mcount_vcs_cy_6_rt_708 : STD_LOGIC; 
+  signal U2_Mcount_vcs_cy_7_rt_710 : STD_LOGIC; 
+  signal U2_Mcount_vcs_cy_8_rt_712 : STD_LOGIC; 
   signal U2_Mcount_vcs_eqn_0 : STD_LOGIC; 
   signal U2_Mcount_vcs_eqn_1 : STD_LOGIC; 
   signal U2_Mcount_vcs_eqn_2 : STD_LOGIC; 
@@ -624,8 +733,9 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal U2_Mcount_vcs_eqn_7 : STD_LOGIC; 
   signal U2_Mcount_vcs_eqn_8 : STD_LOGIC; 
   signal U2_Mcount_vcs_eqn_9 : STD_LOGIC; 
-  signal U2_Mcount_vcs_xor_9_rt_615 : STD_LOGIC; 
+  signal U2_Mcount_vcs_xor_9_rt_724 : STD_LOGIC; 
   signal U2_N2 : STD_LOGIC; 
+  signal U2_N3 : STD_LOGIC; 
   signal U2_Result_0_1 : STD_LOGIC; 
   signal U2_Result_1_1 : STD_LOGIC; 
   signal U2_Result_2_1 : STD_LOGIC; 
@@ -638,300 +748,466 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal U2_Result_9_1 : STD_LOGIC; 
   signal U2_clr_inv : STD_LOGIC; 
   signal U2_hcs_cmp_eq0000 : STD_LOGIC; 
-  signal U2_hcs_cmp_eq000010_649 : STD_LOGIC; 
-  signal U2_hcs_cmp_eq00005_650 : STD_LOGIC; 
-  signal U2_vcs_cmp_eq0000_661 : STD_LOGIC; 
-  signal U2_vidon_and00000_662 : STD_LOGIC; 
-  signal U2_vidon_and0000105_663 : STD_LOGIC; 
-  signal U2_vidon_and0000117_664 : STD_LOGIC; 
+  signal U2_hcs_cmp_eq000010_759 : STD_LOGIC; 
+  signal U2_hcs_cmp_eq00005_760 : STD_LOGIC; 
+  signal U2_vcs_cmp_eq0000_771 : STD_LOGIC; 
+  signal U2_vidon_and00000_772 : STD_LOGIC; 
+  signal U2_vidon_and0000105_773 : STD_LOGIC; 
+  signal U2_vidon_and0000117_774 : STD_LOGIC; 
   signal U2_vidon_and000018 : STD_LOGIC; 
-  signal U2_vidon_and0000181_666 : STD_LOGIC; 
+  signal U2_vidon_and0000181_776 : STD_LOGIC; 
   signal U2_vidon_and000026 : STD_LOGIC; 
-  signal U2_vidon_and0000261_668 : STD_LOGIC; 
-  signal U2_vidon_and000039_669 : STD_LOGIC; 
-  signal U2_vidon_and00006_670 : STD_LOGIC; 
+  signal U2_vidon_and0000261_778 : STD_LOGIC; 
+  signal U2_vidon_and000039_779 : STD_LOGIC; 
+  signal U2_vidon_and00006_780 : STD_LOGIC; 
   signal U2_vidon_and000065 : STD_LOGIC; 
-  signal U2_vidon_and0000651_672 : STD_LOGIC; 
-  signal U2_vidon_and000080_673 : STD_LOGIC; 
-  signal U2_vsenable_674 : STD_LOGIC; 
-  signal U3_B_675 : STD_LOGIC; 
+  signal U2_vidon_and0000651_782 : STD_LOGIC; 
+  signal U2_vidon_and000080_783 : STD_LOGIC; 
+  signal U2_vsenable_784 : STD_LOGIC; 
+  signal U3_B_785 : STD_LOGIC; 
   signal U3_B_and0000 : STD_LOGIC; 
-  signal U3_B_mux0012 : STD_LOGIC; 
-  signal U3_B_mux001236_678 : STD_LOGIC; 
-  signal U3_B_mux00124_679 : STD_LOGIC; 
-  signal U3_B_mux001249_680 : STD_LOGIC; 
-  signal U3_B_mux001254_681 : STD_LOGIC; 
-  signal U3_B_mux001269_682 : STD_LOGIC; 
-  signal U3_B_mux00129_683 : STD_LOGIC; 
+  signal U3_B_mux0016 : STD_LOGIC; 
+  signal U3_B_mux001612_788 : STD_LOGIC; 
+  signal U3_B_mux0016124_789 : STD_LOGIC; 
+  signal U3_B_mux0016128_790 : STD_LOGIC; 
+  signal U3_B_mux001617_791 : STD_LOGIC; 
+  signal U3_B_mux001618_792 : STD_LOGIC; 
+  signal U3_B_mux001662_793 : STD_LOGIC; 
+  signal U3_B_mux00167_794 : STD_LOGIC; 
+  signal U3_B_mux001685_795 : STD_LOGIC; 
   signal U3_C1_not0001 : STD_LOGIC; 
-  signal U3_C1_not000110_695 : STD_LOGIC; 
-  signal U3_C1_not0001105_696 : STD_LOGIC; 
-  signal U3_C1_not000127_697 : STD_LOGIC; 
-  signal U3_C1_not00014_698 : STD_LOGIC; 
-  signal U3_C1_not000147_699 : STD_LOGIC; 
-  signal U3_C1_not00015_700 : STD_LOGIC; 
-  signal U3_C1_not000152_701 : STD_LOGIC; 
-  signal U3_C1_not000183_702 : STD_LOGIC; 
+  signal U3_C1_not000110_807 : STD_LOGIC; 
+  signal U3_C1_not0001105_808 : STD_LOGIC; 
+  signal U3_C1_not000127_809 : STD_LOGIC; 
+  signal U3_C1_not00014_810 : STD_LOGIC; 
+  signal U3_C1_not000147_811 : STD_LOGIC; 
+  signal U3_C1_not00015_812 : STD_LOGIC; 
+  signal U3_C1_not000183_813 : STD_LOGIC; 
+  signal U3_C2_5_1_820 : STD_LOGIC; 
   signal U3_C2_not0001 : STD_LOGIC; 
-  signal U3_C2_not00011_714 : STD_LOGIC; 
-  signal U3_C2_not000113_715 : STD_LOGIC; 
-  signal U3_C2_not000123_716 : STD_LOGIC; 
-  signal U3_C2_not000150_717 : STD_LOGIC; 
-  signal U3_C2_not00016_718 : STD_LOGIC; 
-  signal U3_C2_not000164_719 : STD_LOGIC; 
+  signal U3_C2_not00011_826 : STD_LOGIC; 
+  signal U3_C2_not000113_827 : STD_LOGIC; 
+  signal U3_C2_not000123_828 : STD_LOGIC; 
+  signal U3_C2_not000150_829 : STD_LOGIC; 
+  signal U3_C2_not00016_830 : STD_LOGIC; 
+  signal U3_C2_not000164_831 : STD_LOGIC; 
+  signal U3_CM1_0_and0000 : STD_LOGIC; 
+  signal U3_CM1_0_and0001 : STD_LOGIC; 
+  signal U3_CM1_1_and0000 : STD_LOGIC; 
+  signal U3_CM1_1_and0001 : STD_LOGIC; 
+  signal U3_CM1_2_and0000 : STD_LOGIC; 
+  signal U3_CM1_2_and0001 : STD_LOGIC; 
+  signal U3_CM1_3_and0000 : STD_LOGIC; 
+  signal U3_CM1_3_and0001 : STD_LOGIC; 
+  signal U3_CM1_4_and0000 : STD_LOGIC; 
+  signal U3_CM1_4_and0001 : STD_LOGIC; 
+  signal U3_CM1_5_and0000 : STD_LOGIC; 
+  signal U3_CM1_5_and0001 : STD_LOGIC; 
+  signal U3_CM1_6_and0000 : STD_LOGIC; 
+  signal U3_CM1_6_and0001 : STD_LOGIC; 
+  signal U3_CM1_7_and0000 : STD_LOGIC; 
+  signal U3_CM1_7_and0001 : STD_LOGIC; 
+  signal U3_CM1_8_and0000 : STD_LOGIC; 
+  signal U3_CM1_8_and0001 : STD_LOGIC; 
+  signal U3_CM1_9_and0000 : STD_LOGIC; 
+  signal U3_CM1_9_and0001 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_cy_1_rt_864 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_cy_2_rt_866 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_cy_3_rt_868 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_cy_4_rt_870 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_cy_5_rt_872 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_cy_6_rt_874 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_cy_7_rt_876 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_cy_8_rt_878 : STD_LOGIC; 
+  signal U3_CM1_Madd_add0000_xor_9_rt_880 : STD_LOGIC; 
+  signal U3_CM1_and0000 : STD_LOGIC; 
+  signal U3_CM2_0_and0000 : STD_LOGIC; 
+  signal U3_CM2_0_and0001 : STD_LOGIC; 
+  signal U3_CM2_1_and0000 : STD_LOGIC; 
+  signal U3_CM2_1_and0001 : STD_LOGIC; 
+  signal U3_CM2_2_and0000 : STD_LOGIC; 
+  signal U3_CM2_2_and0001 : STD_LOGIC; 
+  signal U3_CM2_3_and0000 : STD_LOGIC; 
+  signal U3_CM2_3_and0001 : STD_LOGIC; 
+  signal U3_CM2_4_and0000 : STD_LOGIC; 
+  signal U3_CM2_4_and0001 : STD_LOGIC; 
+  signal U3_CM2_5_and0000 : STD_LOGIC; 
+  signal U3_CM2_5_and0001 : STD_LOGIC; 
+  signal U3_CM2_6_and0000 : STD_LOGIC; 
+  signal U3_CM2_6_and0001 : STD_LOGIC; 
+  signal U3_CM2_7_and0000 : STD_LOGIC; 
+  signal U3_CM2_7_and0001 : STD_LOGIC; 
+  signal U3_CM2_8_and0000 : STD_LOGIC; 
+  signal U3_CM2_8_and0001 : STD_LOGIC; 
+  signal U3_CM2_9_and0000 : STD_LOGIC; 
+  signal U3_CM2_9_and0001 : STD_LOGIC; 
+  signal U3_CM2_Msub_sub0000_cy_0_rt_943 : STD_LOGIC; 
+  signal U3_CM2_and0000 : STD_LOGIC; 
   signal U3_M1_mux0000 : STD_LOGIC; 
   signal U3_M1a_mux0000 : STD_LOGIC; 
   signal U3_M2_mux0000 : STD_LOGIC; 
   signal U3_M2a_mux0000 : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_cy_2_rt_998 : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_cy_5_rt_1002 : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_cy_6_rt_1004 : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_cy_7_rt_1006 : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_cy_8_rt_1008 : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_lut_0_Q : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_lut_1_Q : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_lut_3_Q : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_lut_4_1 : STD_LOGIC; 
+  signal U3_Madd_CM1_add0000_xor_9_rt_1013 : STD_LOGIC; 
   signal U3_Madd_spriteon1_addsub0001_cy_5_Q : STD_LOGIC; 
   signal U3_Madd_spriteon1_addsub0001_cy_7_Q : STD_LOGIC; 
   signal U3_Madd_spriteon2_addsub0000_cy_5_Q : STD_LOGIC; 
   signal U3_Madd_spriteon2_addsub0000_cy_7_Q : STD_LOGIC; 
-  signal U3_Madd_spriteonB1_add0000_cy_3_Q : STD_LOGIC; 
-  signal U3_Madd_spriteonB1_add0000_cy_5_Q : STD_LOGIC; 
-  signal U3_Madd_spriteonB3_add0000_cy_3_Q : STD_LOGIC; 
-  signal U3_Madd_spriteonB3_add0000_cy_5_Q : STD_LOGIC; 
-  signal U3_Madd_spriteonB4_add0000_cy_3_Q : STD_LOGIC; 
-  signal U3_Madd_spriteonB4_add0000_cy_5_Q : STD_LOGIC; 
-  signal U3_Madd_spriteonB5_add0000_cy_3_Q : STD_LOGIC; 
-  signal U3_Madd_spriteonB5_add0000_cy_5_Q : STD_LOGIC; 
-  signal U3_Madd_tank1_angle_calc_addsub0000_cy_3_Q : STD_LOGIC; 
-  signal U3_Madd_tank1_angle_calc_addsub0000_cy_5_Q : STD_LOGIC; 
-  signal U3_Madd_tank1rom10s_cy_8_rt_751 : STD_LOGIC; 
-  signal U3_Madd_tank1rom10s_cy_9_rt_752 : STD_LOGIC; 
-  signal U3_Madd_tank1rom1s_cy_8_rt_762 : STD_LOGIC; 
-  signal U3_Madd_tank1rom1s_cy_9_rt_763 : STD_LOGIC; 
-  signal U3_Madd_tank2_angle_calc_addsub0000_cy_3_Q : STD_LOGIC; 
-  signal U3_Madd_tank2_angle_calc_addsub0000_cy_5_Q : STD_LOGIC; 
-  signal U3_Mcompar_spriteonB1_cmp_ge0000_cy_0_rt_888 : STD_LOGIC; 
-  signal U3_Mcompar_spriteonB2_cmp_ge0000_cy_0_rt_905 : STD_LOGIC; 
-  signal U3_Mcompar_spriteonB2_cmp_ge0000_cy_1_rt_907 : STD_LOGIC; 
-  signal U3_Mcompar_spriteonB5_cmp_ge0000_cy_0_rt_956 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_10_rt_1012 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_11_rt_1014 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_12_rt_1016 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_13_rt_1018 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_14_rt_1020 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_15_rt_1022 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_16_rt_1024 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_1_rt_1026 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_2_rt_1028 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_3_rt_1030 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_4_rt_1032 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_5_rt_1034 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_6_rt_1036 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_7_rt_1038 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_8_rt_1040 : STD_LOGIC; 
-  signal U3_Mcount_q_cy_9_rt_1042 : STD_LOGIC; 
-  signal U3_Mcount_q_xor_17_rt_1044 : STD_LOGIC; 
-  signal U3_Mcount_tank1_angle_calc : STD_LOGIC; 
-  signal U3_Mcount_tank1_angle_calc1 : STD_LOGIC; 
-  signal U3_Mcount_tank1_angle_calc2 : STD_LOGIC; 
-  signal U3_Mcount_tank1_angle_calc3 : STD_LOGIC; 
-  signal U3_Mcount_tank1_angle_calc4 : STD_LOGIC; 
-  signal U3_Mcount_tank1_angle_calc5 : STD_LOGIC; 
-  signal U3_Mcount_tank1_angle_calc6 : STD_LOGIC; 
-  signal U3_Mcount_tank1_angle_calc7 : STD_LOGIC; 
-  signal U3_Mcount_tank2_angle_calc : STD_LOGIC; 
-  signal U3_Mcount_tank2_angle_calc1 : STD_LOGIC; 
-  signal U3_Mcount_tank2_angle_calc2 : STD_LOGIC; 
-  signal U3_Mcount_tank2_angle_calc3 : STD_LOGIC; 
-  signal U3_Mcount_tank2_angle_calc4 : STD_LOGIC; 
-  signal U3_Mcount_tank2_angle_calc5 : STD_LOGIC; 
-  signal U3_Mcount_tank2_angle_calc6 : STD_LOGIC; 
-  signal U3_Mcount_tank2_angle_calc7 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_10_1091 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_3_f7_1092 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_4_f6_1093 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_4_f7_1094 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_5_f5_1095 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_5_f6_1096 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0000_xor_4_11 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0000_xor_5_11_1027 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0000_xor_6_11_1028 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0000_xor_7_11_1029 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0001_cy_1_rt_1032 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0001_cy_3_rt_1035 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0001_lut_0_Q : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0001_lut_2_Q : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0002_cy_5_rt_1049 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0002_cy_6_rt_1051 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0002_cy_7_rt_1053 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0002_cy_8_rt_1055 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0002_xor_9_rt_1061 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_cy_1_rt_1064 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_cy_3_rt_1067 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_cy_4_rt_1069 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_cy_5_rt_1071 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_cy_6_rt_1073 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_cy_7_rt_1075 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_cy_8_rt_1077 : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_lut_0_Q : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_lut_2_Q : STD_LOGIC; 
+  signal U3_Madd_spriteonM1_addsub0003_xor_9_rt_1080 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0000_xor_4_11 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0000_xor_5_11_1082 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0000_xor_6_11_1083 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0000_xor_7_11_1084 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0001_cy_1_rt_1087 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0001_cy_3_rt_1090 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0001_lut_0_Q : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0001_lut_2_Q : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0002_cy_5_rt_1104 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0002_cy_6_rt_1106 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0002_cy_7_rt_1108 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0002_cy_8_rt_1110 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0002_xor_9_rt_1116 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_cy_1_rt_1119 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_cy_3_rt_1122 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_cy_4_rt_1124 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_cy_5_rt_1126 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_cy_6_rt_1128 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_cy_7_rt_1130 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_cy_8_rt_1132 : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_lut_0_Q : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_lut_2_Q : STD_LOGIC; 
+  signal U3_Madd_spriteonM2_addsub0003_xor_9_rt_1135 : STD_LOGIC; 
+  signal U3_Madd_tank1ascii1s_add0000_cy_5_bdd2 : STD_LOGIC; 
+  signal U3_Madd_tank1rom10s_lut_4_Q_1144 : STD_LOGIC; 
+  signal U3_Madd_tank1rom10s_lut_5_Q_1145 : STD_LOGIC; 
+  signal U3_Madd_tank1rom10s_lut_6_Q_1146 : STD_LOGIC; 
+  signal U3_Madd_tank1rom10s_lut_8_Q_1147 : STD_LOGIC; 
+  signal U3_Madd_tank1rom10s_lut_9_Q_1148 : STD_LOGIC; 
+  signal U3_Madd_tank2rom10s_lut_4_Q_1171 : STD_LOGIC; 
+  signal U3_Madd_tank2rom10s_lut_5_Q_1172 : STD_LOGIC; 
+  signal U3_Madd_tank2rom10s_lut_6_Q_1173 : STD_LOGIC; 
+  signal U3_Madd_tank2rom10s_lut_8_Q_1174 : STD_LOGIC; 
+  signal U3_Madd_tank2rom10s_lut_9_Q_1175 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_10_rt_1541 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_11_rt_1543 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_12_rt_1545 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_13_rt_1547 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_14_rt_1549 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_15_rt_1551 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_16_rt_1553 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_17_rt_1555 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_18_rt_1557 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_19_rt_1559 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_1_rt_1561 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_2_rt_1563 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_3_rt_1565 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_4_rt_1567 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_5_rt_1569 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_6_rt_1571 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_7_rt_1573 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_8_rt_1575 : STD_LOGIC; 
+  signal U3_Mcount_q_cy_9_rt_1577 : STD_LOGIC; 
+  signal U3_Mcount_q_xor_20_rt_1579 : STD_LOGIC; 
+  signal U3_Mhorz_1580 : STD_LOGIC; 
+  signal U3_Mhorz_cmp_ne0000 : STD_LOGIC; 
+  signal U3_Mhorz_cmp_ne0000113_1582 : STD_LOGIC; 
+  signal U3_Mhorz_cmp_ne000032_1583 : STD_LOGIC; 
+  signal U3_Mhorz_cmp_ne000065_1584 : STD_LOGIC; 
+  signal U3_Mhorz_cmp_ne0001 : STD_LOGIC; 
+  signal U3_Mhorz_cmp_ne0001113_1586 : STD_LOGIC; 
+  signal U3_Mhorz_cmp_ne000132_1587 : STD_LOGIC; 
+  signal U3_Mhorz_cmp_ne000165_1588 : STD_LOGIC; 
+  signal U3_Mhorz_not0001_1589 : STD_LOGIC; 
+  signal U3_Mhorz_or0000 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_10_1591 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_3_f7_1592 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_4_f6_1593 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_4_f7_1594 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_5_f5_1595 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_5_f6_1596 : STD_LOGIC; 
   signal U3_Mmux_M1_mux0000_5_f61 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_6_1098 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_6_f5_1099 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_6_1598 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_6_f5_1599 : STD_LOGIC; 
   signal U3_Mmux_M1_mux0000_6_f51 : STD_LOGIC; 
   signal U3_Mmux_M1_mux0000_6_f52 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_6_f6_1102 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_7_1103 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_71_1104 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_72_1105 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_73_1106 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_7_f5_1107 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_6_f6_1602 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_7_1603 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_71_1604 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_72_1605 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_73_1606 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_7_f5_1607 : STD_LOGIC; 
   signal U3_Mmux_M1_mux0000_7_f51 : STD_LOGIC; 
   signal U3_Mmux_M1_mux0000_7_f52 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_8_1110 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_81_1111 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_82_1112 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_83_1113 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_83_SW0 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_84_1115 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_85_1116 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_8_f5_1117 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_9_1118 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_91_1119 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_92_1120 : STD_LOGIC; 
-  signal U3_Mmux_M1_mux0000_93_1121 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_10_1122 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_3_f7_1123 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_4_f6_1124 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_4_f7_1125 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_5_f5_1126 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_5_f6_1127 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_8_1610 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_81_1611 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_82_1612 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_83_1613 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_84_1614 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_85_1615 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_8_f5_1616 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_9_1617 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_91_1618 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_92_1619 : STD_LOGIC; 
+  signal U3_Mmux_M1_mux0000_93_1620 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_10_1621 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_3_f7_1622 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_4_f6_1623 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_4_f7_1624 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_5_f5_1625 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_5_f6_1626 : STD_LOGIC; 
   signal U3_Mmux_M1a_mux0000_5_f61 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_6_1129 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_6_f5_1130 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_6_1628 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_6_f5_1629 : STD_LOGIC; 
   signal U3_Mmux_M1a_mux0000_6_f51 : STD_LOGIC; 
   signal U3_Mmux_M1a_mux0000_6_f52 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_6_f6_1133 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_7_1134 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_71_1135 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_72_1136 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_73_1137 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_73_SW0 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_73_SW01_1139 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_7_f5_1140 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_6_f6_1632 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_7_1633 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_71_1634 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_72_1635 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_73_1636 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_7_f5_1637 : STD_LOGIC; 
   signal U3_Mmux_M1a_mux0000_7_f51 : STD_LOGIC; 
   signal U3_Mmux_M1a_mux0000_7_f52 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_8_1143 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_81_1144 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_82_1145 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_83_1146 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_84_1147 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_85_1148 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_8_f5_1149 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_9_1150 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_91_1151 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_92_1152 : STD_LOGIC; 
-  signal U3_Mmux_M1a_mux0000_93_1153 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_10_1154 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_3_f7_1155 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_4_f6_1156 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_4_f7_1157 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_5_f5_1158 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_5_f6_1159 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_8_1640 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_81_1641 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_82_1642 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_83_1643 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_84_1644 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_85_1645 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_8_f5_1646 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_9_1647 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_91_1648 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_92_1649 : STD_LOGIC; 
+  signal U3_Mmux_M1a_mux0000_93_1650 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_10_1651 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_3_f7_1652 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_4_f6_1653 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_4_f7_1654 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_5_f5_1655 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_5_f6_1656 : STD_LOGIC; 
   signal U3_Mmux_M2_mux0000_5_f61 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_6_1161 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_6_f5_1162 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_6_1658 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_6_f5_1659 : STD_LOGIC; 
   signal U3_Mmux_M2_mux0000_6_f51 : STD_LOGIC; 
   signal U3_Mmux_M2_mux0000_6_f52 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_6_f6_1165 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_7_1166 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_71_1167 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_72_1168 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_73_1169 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_7_f5_1170 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_6_f6_1662 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_7_1663 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_71_1664 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_72_1665 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_73_1666 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_7_f5_1667 : STD_LOGIC; 
   signal U3_Mmux_M2_mux0000_7_f51 : STD_LOGIC; 
   signal U3_Mmux_M2_mux0000_7_f52 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_8_1173 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_81_1174 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_82_1175 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_83_1176 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_84_1177 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_85_1178 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_8_f5_1179 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_9_1180 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_91_1181 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_92_1182 : STD_LOGIC; 
-  signal U3_Mmux_M2_mux0000_93_1183 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_10_1184 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_3_f7_1185 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_4_f6_1186 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_4_f7_1187 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_5_f5_1188 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_5_f6_1189 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_8_1670 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_81_1671 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_82_1672 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_83_1673 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_84_1674 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_85_1675 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_8_f5_1676 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_9_1677 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_91_1678 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_92_1679 : STD_LOGIC; 
+  signal U3_Mmux_M2_mux0000_93_1680 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_10_1681 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_3_f7_1682 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_4_f6_1683 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_4_f7_1684 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_5_f5_1685 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_5_f6_1686 : STD_LOGIC; 
   signal U3_Mmux_M2a_mux0000_5_f61 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_6_1191 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_6_f5_1192 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_6_1688 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_6_f5_1689 : STD_LOGIC; 
   signal U3_Mmux_M2a_mux0000_6_f51 : STD_LOGIC; 
   signal U3_Mmux_M2a_mux0000_6_f52 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_6_f6_1195 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_7_1196 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_71_1197 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_72_1198 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_73_1199 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_7_f5_1200 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_6_f6_1692 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_7_1693 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_71_1694 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_72_1695 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_73_1696 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_7_f5_1697 : STD_LOGIC; 
   signal U3_Mmux_M2a_mux0000_7_f51 : STD_LOGIC; 
   signal U3_Mmux_M2a_mux0000_7_f52 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_8_1203 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_81_1204 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_82_1205 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_83_1206 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_84_1207 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_85_1208 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_8_1700 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_81_1701 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_82_1702 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_82_SW0 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_83_1704 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_84_1705 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_85_1706 : STD_LOGIC; 
   signal U3_Mmux_M2a_mux0000_8_SW0 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_8_SW01_1210 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_8_f5_1211 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_9_1212 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_91_1213 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_92_1214 : STD_LOGIC; 
-  signal U3_Mmux_M2a_mux0000_93_1215 : STD_LOGIC; 
-  signal U3_Mmux_tank110sM_mux0000_3_f5_1216 : STD_LOGIC; 
-  signal U3_Mmux_tank110sM_mux0000_4_1217 : STD_LOGIC; 
-  signal U3_Mmux_tank110sM_mux0000_4_f5_1218 : STD_LOGIC; 
-  signal U3_Mmux_tank110sM_mux0000_5_1219 : STD_LOGIC; 
-  signal U3_Mmux_tank110sM_mux0000_51_1220 : STD_LOGIC; 
-  signal U3_Mmux_tank110sM_mux0000_6_1221 : STD_LOGIC; 
-  signal U3_Mmux_tank11sM_mux0000_3_f5_1222 : STD_LOGIC; 
-  signal U3_Mmux_tank11sM_mux0000_4_1223 : STD_LOGIC; 
-  signal U3_Mmux_tank11sM_mux0000_4_f5_1224 : STD_LOGIC; 
-  signal U3_Mmux_tank11sM_mux0000_5_1225 : STD_LOGIC; 
-  signal U3_Mmux_tank11sM_mux0000_51_1226 : STD_LOGIC; 
-  signal U3_Mmux_tank11sM_mux0000_6_1227 : STD_LOGIC; 
-  signal U3_Msub_ypix1_addsub0000_cy_0_rt_1247 : STD_LOGIC; 
-  signal U3_Msub_ypix1_addsub0000_cy_1_rt_1249 : STD_LOGIC; 
-  signal U3_Msub_ypix1_addsub0000_cy_2_rt_1251 : STD_LOGIC; 
-  signal U3_Msub_ypix1_addsub0000_cy_3_rt_1253 : STD_LOGIC; 
-  signal U3_Msub_ypix1_addsub0000_cy_4_rt_1255 : STD_LOGIC; 
-  signal U3_Msub_ypix1_addsub0000_lut_9_1 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_cy_0_rt_1267 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_cy_1_rt_1269 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_cy_2_rt_1271 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_cy_3_rt_1273 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_cy_4_rt_1275 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_cy_5_rt_1277 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_cy_6_rt_1279 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_cy_8_rt_1282 : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_lut_7_Q : STD_LOGIC; 
-  signal U3_Msub_ypix1_sub0000_lut_9_Q : STD_LOGIC; 
-  signal U3_N111 : STD_LOGIC; 
-  signal U3_N12 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_8_f5_1708 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_9_1709 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_91_1710 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_92_1711 : STD_LOGIC; 
+  signal U3_Mmux_M2a_mux0000_93_1712 : STD_LOGIC; 
+  signal U3_Mmux_tank110sM_mux0000_3_f5_1713 : STD_LOGIC; 
+  signal U3_Mmux_tank110sM_mux0000_4_1714 : STD_LOGIC; 
+  signal U3_Mmux_tank110sM_mux0000_4_f5_1715 : STD_LOGIC; 
+  signal U3_Mmux_tank110sM_mux0000_5_1716 : STD_LOGIC; 
+  signal U3_Mmux_tank110sM_mux0000_51_1717 : STD_LOGIC; 
+  signal U3_Mmux_tank110sM_mux0000_6_1718 : STD_LOGIC; 
+  signal U3_Mmux_tank11sM_mux0000_3_f5_1719 : STD_LOGIC; 
+  signal U3_Mmux_tank11sM_mux0000_4_1720 : STD_LOGIC; 
+  signal U3_Mmux_tank11sM_mux0000_4_f5_1721 : STD_LOGIC; 
+  signal U3_Mmux_tank11sM_mux0000_5_1722 : STD_LOGIC; 
+  signal U3_Mmux_tank11sM_mux0000_51_1723 : STD_LOGIC; 
+  signal U3_Mmux_tank11sM_mux0000_6_1724 : STD_LOGIC; 
+  signal U3_Mmux_tank210sM_mux0000_3_f5_1725 : STD_LOGIC; 
+  signal U3_Mmux_tank210sM_mux0000_4_1726 : STD_LOGIC; 
+  signal U3_Mmux_tank210sM_mux0000_4_f5_1727 : STD_LOGIC; 
+  signal U3_Mmux_tank210sM_mux0000_5_1728 : STD_LOGIC; 
+  signal U3_Mmux_tank210sM_mux0000_51_1729 : STD_LOGIC; 
+  signal U3_Mmux_tank210sM_mux0000_6_1730 : STD_LOGIC; 
+  signal U3_Mmux_tank21sM_mux0000_3_f5_1731 : STD_LOGIC; 
+  signal U3_Mmux_tank21sM_mux0000_4_1732 : STD_LOGIC; 
+  signal U3_Mmux_tank21sM_mux0000_4_f5_1733 : STD_LOGIC; 
+  signal U3_Mmux_tank21sM_mux0000_5_1734 : STD_LOGIC; 
+  signal U3_Mmux_tank21sM_mux0000_51_1735 : STD_LOGIC; 
+  signal U3_Mmux_tank21sM_mux0000_6_1736 : STD_LOGIC; 
+  signal U3_Msub_CM2_sub0000_cy_1_rt_1738 : STD_LOGIC; 
+  signal U3_Msub_tank1rom10s_sub0000_cy_0_rt_1774 : STD_LOGIC; 
+  signal U3_Msub_tank1rom10s_sub0000_cy_1_rt_1776 : STD_LOGIC; 
+  signal U3_Msub_tank1rom10s_sub0000_cy_2_rt_1778 : STD_LOGIC; 
+  signal U3_Msub_tank1rom10s_sub0000_cy_3_rt_1780 : STD_LOGIC; 
+  signal U3_Msub_tank1rom10s_sub0000_cy_4_rt_1782 : STD_LOGIC; 
+  signal U3_N0 : STD_LOGIC; 
+  signal U3_N1 : STD_LOGIC; 
   signal U3_N13 : STD_LOGIC; 
+  signal U3_N14 : STD_LOGIC; 
   signal U3_N15 : STD_LOGIC; 
-  signal U3_N49 : STD_LOGIC; 
+  signal U3_N191 : STD_LOGIC; 
+  signal U3_N25 : STD_LOGIC; 
+  signal U3_N281 : STD_LOGIC; 
+  signal U3_N29 : STD_LOGIC; 
+  signal U3_N33 : STD_LOGIC; 
+  signal U3_N37 : STD_LOGIC; 
   signal U3_N50 : STD_LOGIC; 
-  signal U3_N52 : STD_LOGIC; 
-  signal U3_N53 : STD_LOGIC; 
-  signal U3_N57 : STD_LOGIC; 
-  signal U3_N8 : STD_LOGIC; 
-  signal U3_Q_0_1295 : STD_LOGIC; 
-  signal U3_Q_1_1296 : STD_LOGIC; 
-  signal U3_Q_10_1297 : STD_LOGIC; 
-  signal U3_Q_11_1298 : STD_LOGIC; 
-  signal U3_Q_12_1299 : STD_LOGIC; 
-  signal U3_Q_13_1300 : STD_LOGIC; 
-  signal U3_Q_14_1301 : STD_LOGIC; 
-  signal U3_Q_15_1302 : STD_LOGIC; 
-  signal U3_Q_16_1303 : STD_LOGIC; 
-  signal U3_Q_2_1304 : STD_LOGIC; 
-  signal U3_Q_3_1305 : STD_LOGIC; 
-  signal U3_Q_4_1306 : STD_LOGIC; 
-  signal U3_Q_5_1307 : STD_LOGIC; 
-  signal U3_Q_6_1308 : STD_LOGIC; 
-  signal U3_Q_7_1309 : STD_LOGIC; 
-  signal U3_Q_8_1310 : STD_LOGIC; 
-  signal U3_Q_9_1311 : STD_LOGIC; 
+  signal U3_N80 : STD_LOGIC; 
+  signal U3_N82 : STD_LOGIC; 
+  signal U3_N87 : STD_LOGIC; 
+  signal U3_N89 : STD_LOGIC; 
+  signal U3_N90 : STD_LOGIC; 
+  signal U3_Q_0_1811 : STD_LOGIC; 
+  signal U3_Q_1_1812 : STD_LOGIC; 
+  signal U3_Q_10_1813 : STD_LOGIC; 
+  signal U3_Q_11_1814 : STD_LOGIC; 
+  signal U3_Q_12_1815 : STD_LOGIC; 
+  signal U3_Q_13_1816 : STD_LOGIC; 
+  signal U3_Q_14_1817 : STD_LOGIC; 
+  signal U3_Q_15_1818 : STD_LOGIC; 
+  signal U3_Q_16_1819 : STD_LOGIC; 
+  signal U3_Q_17_1820 : STD_LOGIC; 
+  signal U3_Q_2_1821 : STD_LOGIC; 
+  signal U3_Q_3_1822 : STD_LOGIC; 
+  signal U3_Q_4_1823 : STD_LOGIC; 
+  signal U3_Q_5_1824 : STD_LOGIC; 
+  signal U3_Q_6_1825 : STD_LOGIC; 
+  signal U3_Q_7_1826 : STD_LOGIC; 
+  signal U3_Q_8_1827 : STD_LOGIC; 
+  signal U3_Q_9_1828 : STD_LOGIC; 
+  signal U3_RM1_and0000 : STD_LOGIC; 
+  signal U3_RM2_and0000 : STD_LOGIC; 
+  signal U3_RMcnt2_0_and0000 : STD_LOGIC; 
+  signal U3_RMcnt2_0_and0001 : STD_LOGIC; 
+  signal U3_RMcnt2_1_and0000 : STD_LOGIC; 
+  signal U3_RMcnt2_1_and0001 : STD_LOGIC; 
+  signal U3_RMcnt2_2_and0000 : STD_LOGIC; 
+  signal U3_RMcnt2_2_and0001 : STD_LOGIC; 
+  signal U3_RMcnt2_3_and0000 : STD_LOGIC; 
+  signal U3_RMcnt2_3_and0001 : STD_LOGIC; 
+  signal U3_RMcnt2_4_and0000 : STD_LOGIC; 
+  signal U3_RMcnt2_4_and0001 : STD_LOGIC; 
+  signal U3_RMcnt2_5_and0000 : STD_LOGIC; 
+  signal U3_RMcnt2_5_and0001 : STD_LOGIC; 
+  signal U3_RMcnt2_Q_mux0000_2_1 : STD_LOGIC; 
+  signal U3_RMcnt2_Q_mux0000_4_1 : STD_LOGIC; 
+  signal U3_RMcnt2_Q_mux0000_5_SW0 : STD_LOGIC; 
+  signal U3_RMcnt2_Q_mux0000_5_SW01_1919 : STD_LOGIC; 
+  signal U3_RMcnt2_and0000 : STD_LOGIC; 
+  signal U3_RMcnt2_and0001 : STD_LOGIC; 
+  signal U3_RMcnt2_and000112_1922 : STD_LOGIC; 
+  signal U3_RMcnt_0_and0000 : STD_LOGIC; 
+  signal U3_RMcnt_0_and0001 : STD_LOGIC; 
+  signal U3_RMcnt_1_and0000 : STD_LOGIC; 
+  signal U3_RMcnt_1_and0001 : STD_LOGIC; 
+  signal U3_RMcnt_2_and0000 : STD_LOGIC; 
+  signal U3_RMcnt_2_and0001 : STD_LOGIC; 
+  signal U3_RMcnt_3_and0000 : STD_LOGIC; 
+  signal U3_RMcnt_3_and0001 : STD_LOGIC; 
+  signal U3_RMcnt_4_and0000 : STD_LOGIC; 
+  signal U3_RMcnt_4_and0001 : STD_LOGIC; 
+  signal U3_RMcnt_5_and0000 : STD_LOGIC; 
+  signal U3_RMcnt_5_and0001 : STD_LOGIC; 
+  signal U3_RMcnt_Q_mux0000_2_1 : STD_LOGIC; 
+  signal U3_RMcnt_Q_mux0000_4_1 : STD_LOGIC; 
+  signal U3_RMcnt_Q_mux0000_5_SW0 : STD_LOGIC; 
+  signal U3_RMcnt_Q_mux0000_5_SW01_1951 : STD_LOGIC; 
+  signal U3_RMcnt_and0000 : STD_LOGIC; 
+  signal U3_RMcnt_and0001 : STD_LOGIC; 
+  signal U3_RMcnt_and000112_1954 : STD_LOGIC; 
+  signal U3_RMht1_not0001 : STD_LOGIC; 
+  signal U3_RMht1_not000110_1962 : STD_LOGIC; 
+  signal U3_RMht1_not0001127_1963 : STD_LOGIC; 
+  signal U3_RMht1_not0001_bdd1 : STD_LOGIC; 
+  signal U3_RMht2_not0001 : STD_LOGIC; 
+  signal U3_RMht2_not000124_1972 : STD_LOGIC; 
   signal U3_Result_0_1 : STD_LOGIC; 
   signal U3_Result_0_2 : STD_LOGIC; 
+  signal U3_Result_0_3 : STD_LOGIC; 
+  signal U3_Result_0_4 : STD_LOGIC; 
   signal U3_Result_1_1 : STD_LOGIC; 
   signal U3_Result_1_2 : STD_LOGIC; 
+  signal U3_Result_1_3 : STD_LOGIC; 
+  signal U3_Result_1_4 : STD_LOGIC; 
   signal U3_Result_2_1 : STD_LOGIC; 
   signal U3_Result_2_2 : STD_LOGIC; 
-  signal U3_Result_3_1 : STD_LOGIC; 
-  signal U3_Result_3_2 : STD_LOGIC; 
-  signal U3_Result_4_1 : STD_LOGIC; 
-  signal U3_Result_4_2 : STD_LOGIC; 
+  signal U3_Result_2_3 : STD_LOGIC; 
+  signal U3_Result_2_4 : STD_LOGIC; 
+  signal U3_Result_3_1_2000 : STD_LOGIC; 
+  signal U3_Result_3_2_2001 : STD_LOGIC; 
+  signal U3_Result_3_3 : STD_LOGIC; 
+  signal U3_Result_3_4 : STD_LOGIC; 
+  signal U3_Result_4_1_2005 : STD_LOGIC; 
+  signal U3_Result_4_2_2006 : STD_LOGIC; 
+  signal U3_Result_4_3 : STD_LOGIC; 
+  signal U3_Result_4_4 : STD_LOGIC; 
   signal U3_Result_5_1 : STD_LOGIC; 
+  signal U3_Result_5_136_2011 : STD_LOGIC; 
   signal U3_Result_5_2 : STD_LOGIC; 
+  signal U3_Result_5_236_2013 : STD_LOGIC; 
+  signal U3_Result_5_3 : STD_LOGIC; 
+  signal U3_Result_5_4 : STD_LOGIC; 
   signal U3_Result_6_1 : STD_LOGIC; 
   signal U3_Result_6_2 : STD_LOGIC; 
   signal U3_Result_7_1 : STD_LOGIC; 
@@ -942,121 +1218,178 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal U3_Result_9_2 : STD_LOGIC; 
   signal U3_blue_and0000 : STD_LOGIC; 
   signal U3_blue_and0001 : STD_LOGIC; 
-  signal U3_blue_and0001117 : STD_LOGIC; 
-  signal U3_blue_and00011171_1353 : STD_LOGIC; 
-  signal U3_blue_and0001137 : STD_LOGIC; 
-  signal U3_blue_and00011371_1355 : STD_LOGIC; 
-  signal U3_blue_and0001163_1356 : STD_LOGIC; 
+  signal U3_blue_and0001138_2030 : STD_LOGIC; 
+  signal U3_blue_and0001156_2031 : STD_LOGIC; 
   signal U3_blue_and0002 : STD_LOGIC; 
+  signal U3_blue_and0003 : STD_LOGIC; 
+  signal U3_blue_and0004 : STD_LOGIC; 
+  signal U3_destroy1_2035 : STD_LOGIC; 
+  signal U3_destroy1_mux0015 : STD_LOGIC; 
+  signal U3_destroy1_mux001527_2037 : STD_LOGIC; 
+  signal U3_destroy1_mux00154_2038 : STD_LOGIC; 
+  signal U3_destroy1_mux001541_2039 : STD_LOGIC; 
+  signal U3_destroy1_mux001562_2040 : STD_LOGIC; 
+  signal U3_destroy2_2041 : STD_LOGIC; 
+  signal U3_destroy2_mux0017 : STD_LOGIC; 
+  signal U3_destroy2_mux001719 : STD_LOGIC; 
+  signal U3_destroy2_mux0017191_2044 : STD_LOGIC; 
+  signal U3_destroy2_mux001727_2045 : STD_LOGIC; 
+  signal U3_destroy2_mux001766_2046 : STD_LOGIC; 
+  signal U3_font1_0_1 : STD_LOGIC; 
+  signal U3_font2_0_Q : STD_LOGIC; 
+  signal U3_font2_0_1 : STD_LOGIC; 
+  signal U3_font2_2_Q : STD_LOGIC; 
+  signal U3_font3_cmp_lt0000 : STD_LOGIC; 
+  signal U3_font3_cmp_lt0001 : STD_LOGIC; 
+  signal U3_font3_cmp_lt0002 : STD_LOGIC; 
+  signal U3_font4_2_Q : STD_LOGIC; 
+  signal U3_font4_2_1_2056 : STD_LOGIC; 
+  signal U3_font4_2_2_2057 : STD_LOGIC; 
+  signal U3_font4_4_Q : STD_LOGIC; 
+  signal U3_font4_5_Q : STD_LOGIC; 
+  signal U3_green_1_116_2060 : STD_LOGIC; 
+  signal U3_green_1_138_2061 : STD_LOGIC; 
+  signal U3_green_2_112_2062 : STD_LOGIC; 
+  signal U3_green_2_17 : STD_LOGIC; 
   signal U3_leftBTN_inv1_inv1 : STD_LOGIC; 
-  signal U3_q_171 : STD_LOGIC; 
-  signal U3_red_2_11_1361 : STD_LOGIC; 
+  signal U3_q_181 : STD_LOGIC; 
+  signal U3_q_191 : STD_LOGIC; 
+  signal U3_q_201 : STD_LOGIC; 
+  signal U3_red_0_328 : STD_LOGIC; 
+  signal U3_rise_2072 : STD_LOGIC; 
+  signal U3_rise2_2073 : STD_LOGIC; 
+  signal U3_rise2_and0000_2074 : STD_LOGIC; 
+  signal U3_rise_and0000_2075 : STD_LOGIC; 
   signal U3_spriteon1_cmp_ge0000 : STD_LOGIC; 
   signal U3_spriteon2_cmp_ge0000 : STD_LOGIC; 
   signal U3_spriteon2f_cmp_le0000 : STD_LOGIC; 
   signal U3_spriteonB1 : STD_LOGIC; 
-  signal U3_spriteonB1_and000036_1373 : STD_LOGIC; 
-  signal U3_spriteonB1_and000048_1374 : STD_LOGIC; 
-  signal U3_spriteonB1_and000063 : STD_LOGIC; 
-  signal U3_spriteonB1_cmp_ge0000 : STD_LOGIC; 
+  signal U3_spriteonB1_and0000113 : STD_LOGIC; 
+  signal U3_spriteonB1_and0000115_2098 : STD_LOGIC; 
+  signal U3_spriteonB1_and000017_2099 : STD_LOGIC; 
+  signal U3_spriteonB1_and00004_2100 : STD_LOGIC; 
+  signal U3_spriteonB1_cmp_le00001 : STD_LOGIC; 
+  signal U3_spriteonB1_cmp_le00002 : STD_LOGIC; 
   signal U3_spriteonB1_cmp_lt0000 : STD_LOGIC; 
+  signal U3_spriteonB1_cmp_lt0000212_2104 : STD_LOGIC; 
+  signal U3_spriteonB1_cmp_lt0000235 : STD_LOGIC; 
+  signal U3_spriteonB1_cmp_lt00002351_2106 : STD_LOGIC; 
   signal U3_spriteonB2 : STD_LOGIC; 
-  signal U3_spriteonB2_and000028 : STD_LOGIC; 
-  signal U3_spriteonB2_and0000281_1380 : STD_LOGIC; 
-  signal U3_spriteonB2_and0000282_1381 : STD_LOGIC; 
-  signal U3_spriteonB2_and000040_1382 : STD_LOGIC; 
-  signal U3_spriteonB2_cmp_ge0000 : STD_LOGIC; 
+  signal U3_spriteonB2_and00005_2108 : STD_LOGIC; 
   signal U3_spriteonB3 : STD_LOGIC; 
-  signal U3_spriteonB3_and000020_1386 : STD_LOGIC; 
-  signal U3_spriteonB3_cmp_ge0000 : STD_LOGIC; 
-  signal U3_spriteonB3_cmp_le0000112_1388 : STD_LOGIC; 
-  signal U3_spriteonB3_cmp_le0000128_1389 : STD_LOGIC; 
+  signal U3_spriteonB3_cmp_le0000112_2110 : STD_LOGIC; 
+  signal U3_spriteonB3_cmp_le0000128_2111 : STD_LOGIC; 
+  signal U3_spriteonB3_cmp_le00002 : STD_LOGIC; 
   signal U3_spriteonB4 : STD_LOGIC; 
-  signal U3_spriteonB4_and000029_1392 : STD_LOGIC; 
-  signal U3_spriteonB4_and000029_SW0 : STD_LOGIC; 
-  signal U3_spriteonB4_and000041_1394 : STD_LOGIC; 
-  signal U3_spriteonB4_cmp_ge0000 : STD_LOGIC; 
+  signal U3_spriteonB4_and000019 : STD_LOGIC; 
+  signal U3_spriteonB4_and0000191_2115 : STD_LOGIC; 
+  signal U3_spriteonB4_and000050_2116 : STD_LOGIC; 
+  signal U3_spriteonB4_and00009 : STD_LOGIC; 
+  signal U3_spriteonB4_and000091_2118 : STD_LOGIC; 
+  signal U3_spriteonB4_cmp_le0000 : STD_LOGIC; 
+  signal U3_spriteonB4_cmp_le0000121_2120 : STD_LOGIC; 
+  signal U3_spriteonB4_cmp_le000018_2121 : STD_LOGIC; 
   signal U3_spriteonB5 : STD_LOGIC; 
-  signal U3_spriteonB5_and000041_1397 : STD_LOGIC; 
-  signal U3_spriteonB5_and000063_1398 : STD_LOGIC; 
-  signal U3_spriteonB5_cmp_ge0000 : STD_LOGIC; 
+  signal U3_spriteonB5_and000012_2123 : STD_LOGIC; 
+  signal U3_spriteonB5_and000039_2124 : STD_LOGIC; 
   signal U3_spriteonGrnd : STD_LOGIC; 
-  signal U3_spriteonGrnd_and0000109 : STD_LOGIC; 
-  signal U3_spriteonGrnd_and0000124_1402 : STD_LOGIC; 
-  signal U3_spriteonGrnd_and000026_1403 : STD_LOGIC; 
-  signal U3_spriteonGrnd_and000047_1404 : STD_LOGIC; 
-  signal U3_spriteonGrnd_and000074_1405 : STD_LOGIC; 
-  signal U3_spriteonGrnd_and00009 : STD_LOGIC; 
-  signal U3_spriteonGrnd_and000091_1407 : STD_LOGIC; 
-  signal U3_spriteonGrnd_and000093_1408 : STD_LOGIC; 
+  signal U3_spriteonGrnd_and0000103_2126 : STD_LOGIC; 
+  signal U3_spriteonGrnd_and0000117_2127 : STD_LOGIC; 
+  signal U3_spriteonGrnd_and000017_2128 : STD_LOGIC; 
+  signal U3_spriteonGrnd_and000020_2129 : STD_LOGIC; 
+  signal U3_spriteonGrnd_and000041_2130 : STD_LOGIC; 
+  signal U3_spriteonGrnd_and00005 : STD_LOGIC; 
+  signal U3_spriteonGrnd_and000063_2132 : STD_LOGIC; 
+  signal U3_spriteonM1 : STD_LOGIC; 
+  signal U3_spriteonM1_addsub0000_8_2_2139 : STD_LOGIC; 
+  signal U3_spriteonM1_addsub0000_8_bdd0 : STD_LOGIC; 
+  signal U3_spriteonM1_addsub0000_9_1_2142 : STD_LOGIC; 
+  signal U3_spriteonM1_cmp_ge0000 : STD_LOGIC; 
+  signal U3_spriteonM1_cmp_le0000 : STD_LOGIC; 
+  signal U3_spriteonM2 : STD_LOGIC; 
+  signal U3_spriteonM2_addsub0000_8_2_2181 : STD_LOGIC; 
+  signal U3_spriteonM2_addsub0000_8_bdd0 : STD_LOGIC; 
+  signal U3_spriteonM2_addsub0000_9_1_2184 : STD_LOGIC; 
+  signal U3_spriteonM2_cmp_ge0000 : STD_LOGIC; 
+  signal U3_spriteonM2_cmp_le0000 : STD_LOGIC; 
   signal U3_tank110sM_mux0000 : STD_LOGIC; 
   signal U3_tank11sM_mux0000 : STD_LOGIC; 
   signal U3_tank1Angle10s : STD_LOGIC; 
-  signal U3_tank1Angle10s_and000042_1412 : STD_LOGIC; 
-  signal U3_tank1Angle10s_and000055_1413 : STD_LOGIC; 
-  signal U3_tank1Angle10s_cmp_gt0000 : STD_LOGIC; 
-  signal U3_tank1Angle10s_cmp_le0000130_SW0 : STD_LOGIC; 
-  signal U3_tank1Angle10s_cmp_le00002 : STD_LOGIC; 
+  signal U3_tank1Angle10s_and00000_2220 : STD_LOGIC; 
+  signal U3_tank1Angle10s_and0000128 : STD_LOGIC; 
+  signal U3_tank1Angle10s_and00001281_2222 : STD_LOGIC; 
+  signal U3_tank1Angle10s_and000017_2223 : STD_LOGIC; 
   signal U3_tank1Angle1s : STD_LOGIC; 
-  signal U3_tank1Angle1s_and000012_1418 : STD_LOGIC; 
-  signal U3_tank1Angle1s_and000036_1419 : STD_LOGIC; 
-  signal U3_tank1_angle_calc_and0000 : STD_LOGIC; 
-  signal U3_tank1_angle_calc_and000021_1429 : STD_LOGIC; 
-  signal U3_tank1_angle_calc_and00003_1430 : STD_LOGIC; 
-  signal U3_tank1_angle_calc_cmp_eq0001_1431 : STD_LOGIC; 
-  signal U3_tank1_angle_calc_not0001 : STD_LOGIC; 
-  signal U3_tank2_angle_calc_and0000 : STD_LOGIC; 
-  signal U3_tank2_angle_calc_and000017_1443 : STD_LOGIC; 
-  signal U3_tank2_angle_calc_and00003_1444 : STD_LOGIC; 
-  signal U3_tank2_angle_calc_cmp_eq0001_1445 : STD_LOGIC; 
-  signal U3_tank2_angle_calc_not0001 : STD_LOGIC; 
-  signal a_to_g_0_OBUF_1480 : STD_LOGIC; 
-  signal a_to_g_1_OBUF_1481 : STD_LOGIC; 
-  signal a_to_g_2_OBUF_1482 : STD_LOGIC; 
-  signal a_to_g_3_OBUF_1483 : STD_LOGIC; 
-  signal a_to_g_4_OBUF_1484 : STD_LOGIC; 
-  signal a_to_g_5_OBUF_1485 : STD_LOGIC; 
-  signal a_to_g_6_OBUF_1486 : STD_LOGIC; 
-  signal an_0_OBUF_1491 : STD_LOGIC; 
-  signal an_1_OBUF_1492 : STD_LOGIC; 
-  signal an_2_OBUF_1493 : STD_LOGIC; 
-  signal an_3_OBUF_1494 : STD_LOGIC; 
-  signal blue_0_OBUF_1497 : STD_LOGIC; 
-  signal blue_1_OBUF_1498 : STD_LOGIC; 
-  signal btn_3_IBUF_1524 : STD_LOGIC; 
-  signal green_0_OBUF_1529 : STD_LOGIC; 
-  signal green_1_OBUF_1530 : STD_LOGIC; 
-  signal green_2_OBUF_1531 : STD_LOGIC; 
-  signal hsync_OBUF_1533 : STD_LOGIC; 
-  signal ja1_IBUF_1535 : STD_LOGIC; 
-  signal ja2_OBUF_1537 : STD_LOGIC; 
-  signal ja3_OBUF_1539 : STD_LOGIC; 
-  signal ld_0_OBUF_1548 : STD_LOGIC; 
-  signal ld_1_OBUF_1549 : STD_LOGIC; 
-  signal ld_2_OBUF_1550 : STD_LOGIC; 
-  signal ld_3_OBUF_1551 : STD_LOGIC; 
-  signal ld_4_OBUF_1552 : STD_LOGIC; 
-  signal ld_5_OBUF_1553 : STD_LOGIC; 
-  signal ld_6_OBUF_1554 : STD_LOGIC; 
-  signal ld_7_OBUF_1555 : STD_LOGIC; 
-  signal mclk_BUFGP_1557 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_cy_1_rt_1560 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_cy_2_rt_1562 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_cy_3_rt_1564 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_cy_4_rt_1566 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_cy_5_rt_1568 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_cy_6_rt_1570 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_cy_7_rt_1572 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_cy_8_rt_1574 : STD_LOGIC; 
-  signal nes_Madd_scalar_next_addsub0000_xor_9_rt_1576 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_cy_1_rt_1579 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_cy_2_rt_1581 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_cy_3_rt_1583 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_cy_4_rt_1585 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_cy_5_rt_1587 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_cy_6_rt_1589 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_cy_7_rt_1591 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_cy_8_rt_1593 : STD_LOGIC; 
+  signal U3_tank1Angle1s_and000010_2225 : STD_LOGIC; 
+  signal U3_tank1Angle1s_and000018_2226 : STD_LOGIC; 
+  signal U3_tank1HP_0_Q : STD_LOGIC; 
+  signal U3_tank1HP_2_Q : STD_LOGIC; 
+  signal U3_tank1HP_mux0005_0_Q_2229 : STD_LOGIC; 
+  signal U3_tank1HP_mux0005_2_Q_2230 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_10_11_2236 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_10_111_2237 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_10_112_2238 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_10_113_2239 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_10_114_2240 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_10_115_2241 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_10_bdd0 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_7_1_2247 : STD_LOGIC; 
+  signal U3_tank1rom10s_sub0001_7_11_2248 : STD_LOGIC; 
+  signal U3_tank210sM_mux0000 : STD_LOGIC; 
+  signal U3_tank21sM_mux0000 : STD_LOGIC; 
+  signal U3_tank2Angle10s : STD_LOGIC; 
+  signal U3_tank2Angle1s : STD_LOGIC; 
+  signal U3_tank2HP_0_Q : STD_LOGIC; 
+  signal U3_tank2HP_2_Q : STD_LOGIC; 
+  signal U3_tank2HP_mux0007_0_Q_2257 : STD_LOGIC; 
+  signal U3_tank2HP_mux0007_2_Q_2258 : STD_LOGIC; 
+  signal a_to_g_0_OBUF_2266 : STD_LOGIC; 
+  signal a_to_g_1_OBUF_2267 : STD_LOGIC; 
+  signal a_to_g_2_OBUF_2268 : STD_LOGIC; 
+  signal a_to_g_3_OBUF_2269 : STD_LOGIC; 
+  signal a_to_g_4_OBUF_2270 : STD_LOGIC; 
+  signal a_to_g_5_OBUF_2271 : STD_LOGIC; 
+  signal a_to_g_6_OBUF_2272 : STD_LOGIC; 
+  signal an_0_OBUF_2277 : STD_LOGIC; 
+  signal an_1_OBUF_2278 : STD_LOGIC; 
+  signal an_2_OBUF_2279 : STD_LOGIC; 
+  signal an_3_OBUF_2280 : STD_LOGIC; 
+  signal blue_0_OBUF_2283 : STD_LOGIC; 
+  signal blue_1_OBUF_2284 : STD_LOGIC; 
+  signal btn_3_IBUF_2310 : STD_LOGIC; 
+  signal green_0_OBUF_2315 : STD_LOGIC; 
+  signal green_1_OBUF_2316 : STD_LOGIC; 
+  signal green_2_OBUF_2317 : STD_LOGIC; 
+  signal hsync_OBUF_2319 : STD_LOGIC; 
+  signal ja1_IBUF_2321 : STD_LOGIC; 
+  signal ja2_OBUF_2323 : STD_LOGIC; 
+  signal ja3_OBUF_2325 : STD_LOGIC; 
+  signal ld_0_OBUF_2334 : STD_LOGIC; 
+  signal ld_1_OBUF_2335 : STD_LOGIC; 
+  signal ld_2_OBUF_2336 : STD_LOGIC; 
+  signal ld_3_OBUF_2337 : STD_LOGIC; 
+  signal ld_4_OBUF_2338 : STD_LOGIC; 
+  signal ld_5_OBUF_2339 : STD_LOGIC; 
+  signal ld_6_OBUF_2340 : STD_LOGIC; 
+  signal ld_7_OBUF_2341 : STD_LOGIC; 
+  signal mclk_BUFGP_2343 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_cy_1_rt_2346 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_cy_2_rt_2348 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_cy_3_rt_2350 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_cy_4_rt_2352 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_cy_5_rt_2354 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_cy_6_rt_2356 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_cy_7_rt_2358 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_cy_8_rt_2360 : STD_LOGIC; 
+  signal nes_Madd_scalar_next_addsub0000_xor_9_rt_2362 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_cy_1_rt_2365 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_cy_2_rt_2367 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_cy_3_rt_2369 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_cy_4_rt_2371 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_cy_5_rt_2373 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_cy_6_rt_2375 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_cy_7_rt_2377 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_cy_8_rt_2379 : STD_LOGIC; 
   signal nes_Mcount_counter_reg_eqn_0 : STD_LOGIC; 
   signal nes_Mcount_counter_reg_eqn_1 : STD_LOGIC; 
   signal nes_Mcount_counter_reg_eqn_2 : STD_LOGIC; 
@@ -1067,177 +1400,119 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal nes_Mcount_counter_reg_eqn_7 : STD_LOGIC; 
   signal nes_Mcount_counter_reg_eqn_8 : STD_LOGIC; 
   signal nes_Mcount_counter_reg_eqn_9 : STD_LOGIC; 
-  signal nes_Mcount_counter_reg_xor_9_rt_1605 : STD_LOGIC; 
+  signal nes_Mcount_counter_reg_xor_9_rt_2391 : STD_LOGIC; 
   signal nes_N0 : STD_LOGIC; 
   signal nes_N11 : STD_LOGIC; 
-  signal nes_a_reg_1618 : STD_LOGIC; 
+  signal nes_a_reg_2404 : STD_LOGIC; 
   signal nes_a_reg_cmp_eq0000 : STD_LOGIC; 
-  signal nes_b_reg_1620 : STD_LOGIC; 
+  signal nes_b_reg_2406 : STD_LOGIC; 
   signal nes_b_reg_cmp_eq0000 : STD_LOGIC; 
-  signal nes_counter_reg_cmp_eq0000112_1632 : STD_LOGIC; 
-  signal nes_counter_reg_cmp_eq0000125_1633 : STD_LOGIC; 
+  signal nes_counter_reg_cmp_eq0000112_2418 : STD_LOGIC; 
+  signal nes_counter_reg_cmp_eq0000125_2419 : STD_LOGIC; 
   signal nes_counter_reg_not0001 : STD_LOGIC; 
-  signal nes_down_reg_1635 : STD_LOGIC; 
+  signal nes_down_reg_2421 : STD_LOGIC; 
   signal nes_down_reg_cmp_eq0000 : STD_LOGIC; 
-  signal nes_left_reg_1637 : STD_LOGIC; 
+  signal nes_left_reg_2423 : STD_LOGIC; 
   signal nes_left_reg_cmp_eq0000 : STD_LOGIC; 
   signal nes_left_reg_not0001 : STD_LOGIC; 
-  signal nes_nes_clk31_1640 : STD_LOGIC; 
-  signal nes_right_reg_1641 : STD_LOGIC; 
+  signal nes_nes_clk31_2426 : STD_LOGIC; 
+  signal nes_right_reg_2427 : STD_LOGIC; 
   signal nes_right_reg_cmp_eq0000 : STD_LOGIC; 
   signal nes_scalar_next_cmp_eq0000 : STD_LOGIC; 
-  signal nes_scalar_next_cmp_eq000021_1664 : STD_LOGIC; 
-  signal nes_sel_reg_1675 : STD_LOGIC; 
+  signal nes_scalar_next_cmp_eq000010_2450 : STD_LOGIC; 
+  signal nes_scalar_next_cmp_eq000021_2451 : STD_LOGIC; 
+  signal nes_sel_reg_2462 : STD_LOGIC; 
   signal nes_sel_reg_cmp_eq0000 : STD_LOGIC; 
-  signal nes_start_reg_1677 : STD_LOGIC; 
+  signal nes_start_reg_2464 : STD_LOGIC; 
   signal nes_start_reg_cmp_eq0000 : STD_LOGIC; 
-  signal nes_up_reg_1679 : STD_LOGIC; 
+  signal nes_up_reg_2466 : STD_LOGIC; 
   signal nes_up_reg_cmp_eq0000 : STD_LOGIC; 
-  signal red_0_OBUF_1684 : STD_LOGIC; 
-  signal red_1_OBUF_1685 : STD_LOGIC; 
-  signal red_2_OBUF_1686 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_cy_1_rt_1694 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_cy_2_rt_1696 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_cy_3_rt_1698 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_cy_4_rt_1700 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_cy_5_rt_1702 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_cy_6_rt_1704 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_0 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_0121_1706 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_018_1707 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_1 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_2 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_3 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_4 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_5 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_6 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_eqn_7 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_lut_0_1 : STD_LOGIC; 
-  signal screenstate_Mcount_sig_hill3_xor_7_rt_1716 : STD_LOGIC; 
-  signal screenstate_N0 : STD_LOGIC; 
-  signal screenstate_N13 : STD_LOGIC; 
-  signal screenstate_N3 : STD_LOGIC; 
-  signal screenstate_N30 : STD_LOGIC; 
-  signal screenstate_present_state_FSM_FFd1_1729 : STD_LOGIC; 
+  signal red_0_OBUF_2471 : STD_LOGIC; 
+  signal red_1_OBUF_2472 : STD_LOGIC; 
+  signal red_2_OBUF_2473 : STD_LOGIC; 
+  signal screenstate_present_state_FSM_FFd1_2478 : STD_LOGIC; 
   signal screenstate_present_state_FSM_FFd1_In : STD_LOGIC; 
-  signal screenstate_present_state_FSM_FFd2_1731 : STD_LOGIC; 
-  signal screenstate_sig_hill1_and0001 : STD_LOGIC; 
-  signal screenstate_sig_hill4_mux0001_0_bdd2 : STD_LOGIC; 
-  signal screenstate_sig_hill4_mux0001_1_115_1778 : STD_LOGIC; 
-  signal screenstate_sig_hill4_mux0001_1_128_1779 : STD_LOGIC; 
-  signal screenstate_sig_hill4_mux0001_1_181_1780 : STD_LOGIC; 
-  signal screenstate_sig_hill4_mux0001_4_bdd2 : STD_LOGIC; 
-  signal screenstate_sig_hill4_mux0001_5_bdd0 : STD_LOGIC; 
-  signal screenstate_sig_hill5_addsub0000_5_bdd0 : STD_LOGIC; 
-  signal selector_blue_0_7_1804 : STD_LOGIC; 
-  signal selector_blue_0_8_1805 : STD_LOGIC; 
-  signal selector_green_0_20_1806 : STD_LOGIC; 
-  signal selector_green_0_39_1807 : STD_LOGIC; 
-  signal selector_green_0_71_1808 : STD_LOGIC; 
-  signal selector_green_0_76_1809 : STD_LOGIC; 
-  signal selector_green_1_11 : STD_LOGIC; 
-  signal selector_green_1_111_1811 : STD_LOGIC; 
-  signal selector_green_1_43_1812 : STD_LOGIC; 
-  signal selector_green_2_31_1813 : STD_LOGIC; 
-  signal selector_green_2_4_1814 : STD_LOGIC; 
-  signal selector_red_0_10_1815 : STD_LOGIC; 
-  signal selector_red_0_115_1816 : STD_LOGIC; 
-  signal selector_red_0_24_1817 : STD_LOGIC; 
-  signal selector_red_0_37_1818 : STD_LOGIC; 
+  signal screenstate_present_state_FSM_FFd2_2480 : STD_LOGIC; 
+  signal selector_blue_0_53_2481 : STD_LOGIC; 
+  signal selector_blue_1_17_2482 : STD_LOGIC; 
+  signal selector_blue_1_46_2483 : STD_LOGIC; 
+  signal selector_green_0_103_2484 : STD_LOGIC; 
+  signal selector_green_0_58_2485 : STD_LOGIC; 
+  signal selector_green_0_98_2486 : STD_LOGIC; 
+  signal selector_green_1_21_2487 : STD_LOGIC; 
+  signal selector_green_1_64_2488 : STD_LOGIC; 
+  signal selector_green_2_21_2489 : STD_LOGIC; 
+  signal selector_green_2_38_2490 : STD_LOGIC; 
+  signal selector_green_2_93_2491 : STD_LOGIC; 
+  signal selector_red_0_34_2492 : STD_LOGIC; 
+  signal selector_red_0_34_SW0 : STD_LOGIC; 
+  signal selector_red_0_34_SW01_2494 : STD_LOGIC; 
+  signal selector_red_0_77_2495 : STD_LOGIC; 
+  signal selector_red_1_11 : STD_LOGIC; 
+  signal selector_red_1_111_2497 : STD_LOGIC; 
+  signal selector_red_1_112_2498 : STD_LOGIC; 
+  signal selector_red_1_47_2499 : STD_LOGIC; 
+  signal selector_red_2_20_2500 : STD_LOGIC; 
+  signal selector_red_2_63_2501 : STD_LOGIC; 
   signal sig_gameA : STD_LOGIC; 
+  signal sig_gameB : STD_LOGIC; 
   signal sig_gameDown : STD_LOGIC; 
   signal sig_gameRight : STD_LOGIC; 
-  signal sig_gameUp : STD_LOGIC; 
-  signal sw_0_IBUF_1883 : STD_LOGIC; 
-  signal sw_1_IBUF_1884 : STD_LOGIC; 
-  signal sw_2_IBUF_1885 : STD_LOGIC; 
-  signal sw_3_IBUF_1886 : STD_LOGIC; 
-  signal sw_4_IBUF_1887 : STD_LOGIC; 
-  signal sw_5_IBUF_1888 : STD_LOGIC; 
-  signal sw_6_IBUF_1889 : STD_LOGIC; 
-  signal sw_7_IBUF_1890 : STD_LOGIC; 
-  signal title_Madd_rom_addr2_add0000_Madd_cy_10_rt_1892 : STD_LOGIC; 
-  signal title_Madd_rom_addr2_add0000_Madd_cy_11_rt_1894 : STD_LOGIC; 
-  signal title_Madd_rom_addr2_add0000_Madd_cy_12_rt_1896 : STD_LOGIC; 
-  signal title_Madd_rom_addr2_add0000_Madd_cy_13_rt_1898 : STD_LOGIC; 
-  signal title_Madd_rom_addr2_addsub0001_Madd_cy_12_rt_1928 : STD_LOGIC; 
-  signal title_Msub_ypix_addsub0000_cy_0_rt_1946 : STD_LOGIC; 
-  signal title_Msub_ypix_addsub0000_cy_1_rt_1948 : STD_LOGIC; 
-  signal title_Msub_ypix_addsub0000_cy_2_rt_1950 : STD_LOGIC; 
-  signal title_Msub_ypix_addsub0000_cy_3_rt_1952 : STD_LOGIC; 
-  signal title_Msub_ypix_addsub0000_cy_4_rt_1954 : STD_LOGIC; 
-  signal title_Msub_ypix_lut_4_Q : STD_LOGIC; 
-  signal title_Msub_ypix_lut_5_Q : STD_LOGIC; 
-  signal title_Msub_ypix_lut_7_Q : STD_LOGIC; 
-  signal title_Msub_ypix_xor_6_11_1967 : STD_LOGIC; 
-  signal title_N01 : STD_LOGIC; 
-  signal title_N27 : STD_LOGIC; 
-  signal title_N7 : STD_LOGIC; 
+  signal sig_tank1 : STD_LOGIC; 
+  signal sig_tank1_angle_calc_2_Q : STD_LOGIC; 
+  signal sig_tank1_angle_calc_4_Q : STD_LOGIC; 
+  signal sig_tank1_angle_calc_5_Q : STD_LOGIC; 
+  signal sig_tank2 : STD_LOGIC; 
   signal title_green_cmp_lt0000 : STD_LOGIC; 
-  signal title_green_cmp_lt0000225_1972 : STD_LOGIC; 
+  signal title_green_cmp_lt0000225_2589 : STD_LOGIC; 
   signal title_spriteon : STD_LOGIC; 
-  signal title_spriteon_and0000119_1992 : STD_LOGIC; 
-  signal title_spriteon_and0000124_1993 : STD_LOGIC; 
-  signal title_spriteon_and000016_1994 : STD_LOGIC; 
-  signal title_spriteon_and0000169_1995 : STD_LOGIC; 
-  signal title_spriteon_and0000178_1996 : STD_LOGIC; 
-  signal title_spriteon_and000019_1997 : STD_LOGIC; 
-  signal title_spriteon_and0000205_1998 : STD_LOGIC; 
-  signal title_spriteon_and000035_1999 : STD_LOGIC; 
-  signal title_spriteon_and000038_2000 : STD_LOGIC; 
-  signal title_spriteon_and000052_2001 : STD_LOGIC; 
-  signal title_spriteon_and00006_2002 : STD_LOGIC; 
+  signal title_spriteon_and0000119_2591 : STD_LOGIC; 
+  signal title_spriteon_and0000124_2592 : STD_LOGIC; 
+  signal title_spriteon_and0000169_2593 : STD_LOGIC; 
+  signal title_spriteon_and0000178_2594 : STD_LOGIC; 
+  signal title_spriteon_and000019_2595 : STD_LOGIC; 
+  signal title_spriteon_and0000205_2596 : STD_LOGIC; 
+  signal title_spriteon_and000035_2597 : STD_LOGIC; 
+  signal title_spriteon_and000038_2598 : STD_LOGIC; 
+  signal title_spriteon_and000052_2599 : STD_LOGIC; 
+  signal title_spriteon_and000059_2600 : STD_LOGIC; 
   signal title_spriteon_and000087 : STD_LOGIC; 
-  signal title_spriteon_and0000871_2004 : STD_LOGIC; 
-  signal title_ypix_3_Q : STD_LOGIC; 
-  signal title_ypix_4_Q : STD_LOGIC; 
-  signal title_ypix_5_Q : STD_LOGIC; 
-  signal title_ypix_6_Q : STD_LOGIC; 
-  signal title_ypix_8_Q : STD_LOGIC; 
-  signal title_ypix_9_Q : STD_LOGIC; 
-  signal title_ypix_addsub0000_0_Q : STD_LOGIC; 
-  signal title_ypix_addsub0000_1_Q : STD_LOGIC; 
-  signal title_ypix_addsub0000_2_Q : STD_LOGIC; 
-  signal title_ypix_addsub0000_6_Q : STD_LOGIC; 
-  signal title_ypix_addsub0000_8_Q : STD_LOGIC; 
-  signal title_ypix_addsub0000_9_Q : STD_LOGIC; 
+  signal title_spriteon_and0000871_2602 : STD_LOGIC; 
   signal vidon : STD_LOGIC; 
-  signal vsync_OBUF_2020 : STD_LOGIC; 
-  signal who_present_state_FSM_FFd1_2021 : STD_LOGIC; 
-  signal who_present_state_FSM_FFd2_2022 : STD_LOGIC; 
+  signal vsync_OBUF_2605 : STD_LOGIC; 
+  signal who_delay1_2606 : STD_LOGIC; 
+  signal who_delay2_2607 : STD_LOGIC; 
+  signal who_delay3_2608 : STD_LOGIC; 
+  signal who_present_state_FSM_FFd1_2609 : STD_LOGIC; 
+  signal who_present_state_FSM_FFd1_In : STD_LOGIC; 
+  signal who_present_state_FSM_FFd2_2611 : STD_LOGIC; 
   signal who_present_state_FSM_FFd2_In : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_10_rt_2026 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_11_rt_2028 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_12_rt_2030 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_13_rt_2032 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_14_rt_2034 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_15_rt_2036 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_16_rt_2038 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_17_rt_2040 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_18_rt_2042 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_1_rt_2044 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_2_rt_2046 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_3_rt_2048 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_4_rt_2050 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_5_rt_2052 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_6_rt_2054 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_7_rt_2056 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_8_rt_2058 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_cy_9_rt_2060 : STD_LOGIC; 
-  signal x7_Mcount_clkdiv_xor_19_rt_2062 : STD_LOGIC; 
-  signal x7_Mmux_digit_3_2063 : STD_LOGIC; 
-  signal x7_Mmux_digit_31_2064 : STD_LOGIC; 
-  signal x7_Mmux_digit_32_2065 : STD_LOGIC; 
-  signal x7_Mmux_digit_33_2066 : STD_LOGIC; 
-  signal x7_Mmux_digit_4_2067 : STD_LOGIC; 
-  signal x7_Mmux_digit_41_2068 : STD_LOGIC; 
-  signal x7_Mmux_digit_42_2069 : STD_LOGIC; 
-  signal x7_Mmux_digit_43_2070 : STD_LOGIC; 
-  signal x7_an_1_mux000115_2091 : STD_LOGIC; 
-  signal x7_an_1_mux00012_2092 : STD_LOGIC; 
-  signal x7_an_1_mux000128 : STD_LOGIC; 
-  signal x7_an_1_mux000152_2094 : STD_LOGIC; 
-  signal x7_an_2_mux000128_2095 : STD_LOGIC; 
+  signal who_present_state_FSM_N0 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_10_rt_2616 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_11_rt_2618 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_12_rt_2620 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_13_rt_2622 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_14_rt_2624 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_15_rt_2626 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_16_rt_2628 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_17_rt_2630 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_18_rt_2632 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_1_rt_2634 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_2_rt_2636 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_3_rt_2638 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_4_rt_2640 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_5_rt_2642 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_6_rt_2644 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_7_rt_2646 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_8_rt_2648 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_cy_9_rt_2650 : STD_LOGIC; 
+  signal x7_Mcount_clkdiv_xor_19_rt_2652 : STD_LOGIC; 
+  signal x7_Mmux_digit_3_2653 : STD_LOGIC; 
+  signal x7_Mmux_digit_31_2654 : STD_LOGIC; 
+  signal x7_Mmux_digit_4_2655 : STD_LOGIC; 
+  signal x7_Mmux_digit_41_2656 : STD_LOGIC; 
+  signal x7_an_1_mux000110_2677 : STD_LOGIC; 
+  signal x7_an_2_mux000117_2678 : STD_LOGIC; 
   signal Result : STD_LOGIC_VECTOR ( 17 downto 0 ); 
   signal U1_Mcount_q_cy : STD_LOGIC_VECTOR ( 16 downto 0 ); 
   signal U1_Mcount_q_lut : STD_LOGIC_VECTOR ( 0 downto 0 ); 
@@ -1251,14 +1526,42 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal U2_vcs : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal U3_C1 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal U3_C2 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_CM1 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_CM1_Madd_add0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_CM1_Madd_add0000_lut : STD_LOGIC_VECTOR ( 0 downto 0 ); 
+  signal U3_CM1_Q_mux0000 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_CM1_add0000 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_CM1_add0000_0 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_CM2 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_CM2_Msub_sub0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_CM2_Msub_sub0000_lut : STD_LOGIC_VECTOR ( 9 downto 1 ); 
+  signal U3_CM2_Q_mux0000 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_CM2_sub0000 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_CM2_sub0000_1 : STD_LOGIC_VECTOR ( 9 downto 1 ); 
+  signal U3_Madd_CM1_add0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
   signal U3_Madd_spriteon1_addsub0000_cy : STD_LOGIC_VECTOR ( 7 downto 7 ); 
   signal U3_Madd_spriteon1_addsub0001_lut : STD_LOGIC_VECTOR ( 7 downto 6 ); 
   signal U3_Madd_spriteon2_addsub0000_lut : STD_LOGIC_VECTOR ( 9 downto 6 ); 
-  signal U3_Madd_spriteon2f_add0002_cy : STD_LOGIC_VECTOR ( 7 downto 7 ); 
-  signal U3_Madd_tank1rom10s_cy : STD_LOGIC_VECTOR ( 8 downto 4 ); 
-  signal U3_Madd_tank1rom10s_lut : STD_LOGIC_VECTOR ( 7 downto 4 ); 
-  signal U3_Madd_tank1rom1s_cy : STD_LOGIC_VECTOR ( 8 downto 4 ); 
-  signal U3_Madd_tank1rom1s_lut : STD_LOGIC_VECTOR ( 7 downto 4 ); 
+  signal U3_Madd_spriteon2f_add0004_cy : STD_LOGIC_VECTOR ( 7 downto 7 ); 
+  signal U3_Madd_spriteonM1_addsub0001_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Madd_spriteonM1_addsub0002_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Madd_spriteonM1_addsub0002_lut : STD_LOGIC_VECTOR ( 4 downto 0 ); 
+  signal U3_Madd_spriteonM1_addsub0003_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Madd_spriteonM2_addsub0001_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Madd_spriteonM2_addsub0002_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Madd_spriteonM2_addsub0002_lut : STD_LOGIC_VECTOR ( 4 downto 0 ); 
+  signal U3_Madd_spriteonM2_addsub0003_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Madd_tank1rom10s_cy : STD_LOGIC_VECTOR ( 10 downto 4 ); 
+  signal U3_Madd_tank1rom1s_cy : STD_LOGIC_VECTOR ( 10 downto 4 ); 
+  signal U3_Madd_tank1rom1s_lut : STD_LOGIC_VECTOR ( 10 downto 4 ); 
+  signal U3_Madd_tank2ascii1s_add0000_cy : STD_LOGIC_VECTOR ( 4 downto 4 ); 
+  signal U3_Madd_tank2rom10s_cy : STD_LOGIC_VECTOR ( 10 downto 4 ); 
+  signal U3_Madd_tank2rom1s_cy : STD_LOGIC_VECTOR ( 10 downto 4 ); 
+  signal U3_Madd_tank2rom1s_lut : STD_LOGIC_VECTOR ( 10 downto 4 ); 
+  signal U3_Maddsub_RM1_share0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Maddsub_RM1_share0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Maddsub_RM2_share0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Maddsub_RM2_share0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal U3_Mcompar_spriteon1_cmp_ge0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
   signal U3_Mcompar_spriteon1_cmp_ge0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal U3_Mcompar_spriteon1_cmp_lt0000_cy : STD_LOGIC_VECTOR ( 9 downto 0 ); 
@@ -1271,48 +1574,71 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal U3_Mcompar_spriteon2f_cmp_gt0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal U3_Mcompar_spriteon2f_cmp_le0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
   signal U3_Mcompar_spriteon2f_cmp_le0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
-  signal U3_Mcompar_spriteonB1_cmp_ge0000_cy : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_Mcompar_spriteonB1_cmp_ge0000_lut : STD_LOGIC_VECTOR ( 8 downto 1 ); 
-  signal U3_Mcompar_spriteonB2_cmp_ge0000_cy : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_Mcompar_spriteonB2_cmp_ge0000_lut : STD_LOGIC_VECTOR ( 8 downto 2 ); 
-  signal U3_Mcompar_spriteonB3_cmp_ge0000_cy : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_Mcompar_spriteonB3_cmp_ge0000_lut : STD_LOGIC_VECTOR ( 8 downto 0 ); 
-  signal U3_Mcompar_spriteonB4_cmp_ge0000_cy : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_Mcompar_spriteonB4_cmp_ge0000_lut : STD_LOGIC_VECTOR ( 8 downto 0 ); 
-  signal U3_Mcompar_spriteonB5_cmp_ge0000_cy : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_Mcompar_spriteonB5_cmp_ge0000_lut : STD_LOGIC_VECTOR ( 8 downto 1 ); 
+  signal U3_Mcompar_spriteonM1_cmp_ge0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Mcompar_spriteonM1_cmp_ge0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM1_cmp_gt0000_cy : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM1_cmp_gt0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM1_cmp_le0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Mcompar_spriteonM1_cmp_le0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM1_cmp_lt0000_cy : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM1_cmp_lt0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM2_cmp_ge0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Mcompar_spriteonM2_cmp_ge0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM2_cmp_gt0000_cy : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM2_cmp_gt0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM2_cmp_le0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Mcompar_spriteonM2_cmp_le0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM2_cmp_lt0000_cy : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_Mcompar_spriteonM2_cmp_lt0000_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal U3_Mcount_C1_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
   signal U3_Mcount_C1_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal U3_Mcount_C2_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
   signal U3_Mcount_C2_lut : STD_LOGIC_VECTOR ( 9 downto 0 ); 
-  signal U3_Mcount_q_cy : STD_LOGIC_VECTOR ( 16 downto 0 ); 
+  signal U3_Mcount_q_cy : STD_LOGIC_VECTOR ( 19 downto 0 ); 
   signal U3_Mcount_q_lut : STD_LOGIC_VECTOR ( 0 downto 0 ); 
-  signal U3_Mcount_tank1_angle_calc_cy : STD_LOGIC_VECTOR ( 6 downto 0 ); 
-  signal U3_Mcount_tank1_angle_calc_lut : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_Mcount_tank2_angle_calc_cy : STD_LOGIC_VECTOR ( 6 downto 0 ); 
-  signal U3_Mcount_tank2_angle_calc_lut : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_Msub_xpix1_Madd_cy : STD_LOGIC_VECTOR ( 3 downto 0 ); 
-  signal U3_Msub_xpix1_Madd_lut : STD_LOGIC_VECTOR ( 4 downto 0 ); 
-  signal U3_Msub_xpix2_Madd_cy : STD_LOGIC_VECTOR ( 3 downto 0 ); 
-  signal U3_Msub_xpix2_Madd_lut : STD_LOGIC_VECTOR ( 4 downto 0 ); 
-  signal U3_Msub_ypix1_addsub0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
-  signal U3_Msub_ypix1_addsub0000_lut : STD_LOGIC_VECTOR ( 9 downto 5 ); 
-  signal U3_Msub_ypix1_sub0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
-  signal U3_Result : STD_LOGIC_VECTOR ( 17 downto 0 ); 
-  signal U3_q : STD_LOGIC_VECTOR ( 17 downto 17 ); 
+  signal U3_Msub_CM2_sub0000_cy : STD_LOGIC_VECTOR ( 8 downto 1 ); 
+  signal U3_Msub_CM2_sub0000_lut : STD_LOGIC_VECTOR ( 9 downto 2 ); 
+  signal U3_Msub_font4_sub0002_cy : STD_LOGIC_VECTOR ( 3 downto 3 ); 
+  signal U3_Msub_rom_pix1_Madd_cy : STD_LOGIC_VECTOR ( 3 downto 0 ); 
+  signal U3_Msub_rom_pix1_Madd_lut : STD_LOGIC_VECTOR ( 4 downto 0 ); 
+  signal U3_Msub_rom_pix2_Madd_cy : STD_LOGIC_VECTOR ( 3 downto 0 ); 
+  signal U3_Msub_rom_pix2_Madd_lut : STD_LOGIC_VECTOR ( 4 downto 0 ); 
+  signal U3_Msub_tank1rom10s_sub0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
+  signal U3_Msub_tank1rom10s_sub0000_lut : STD_LOGIC_VECTOR ( 9 downto 5 ); 
+  signal U3_Msub_tank1rom10s_sub0001_cy : STD_LOGIC_VECTOR ( 4 downto 4 ); 
+  signal U3_Msub_ypix1_Madd_lut : STD_LOGIC_VECTOR ( 5 downto 5 ); 
+  signal U3_RM1 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_RM1_mux0002 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_RM1_share0000 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_RM2 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_RM2_mux0002 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_RM2_share0000 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_RMcnt2 : STD_LOGIC_VECTOR ( 5 downto 0 ); 
+  signal U3_RMcnt2_Maddsub_addsub0000_lut : STD_LOGIC_VECTOR ( 1 downto 1 ); 
+  signal U3_RMcnt2_Q_mux0000 : STD_LOGIC_VECTOR ( 5 downto 0 ); 
+  signal U3_RMcnt : STD_LOGIC_VECTOR ( 5 downto 0 ); 
+  signal U3_RMcnt_Maddsub_addsub0000_lut : STD_LOGIC_VECTOR ( 1 downto 1 ); 
+  signal U3_RMcnt_Q_mux0000 : STD_LOGIC_VECTOR ( 5 downto 0 ); 
+  signal U3_RMht1 : STD_LOGIC_VECTOR ( 5 downto 0 ); 
+  signal U3_RMht2 : STD_LOGIC_VECTOR ( 5 downto 0 ); 
+  signal U3_Result : STD_LOGIC_VECTOR ( 20 downto 0 ); 
+  signal U3_font1 : STD_LOGIC_VECTOR ( 0 downto 0 ); 
+  signal U3_q : STD_LOGIC_VECTOR ( 20 downto 18 ); 
+  signal U3_rom_pix1 : STD_LOGIC_VECTOR ( 4 downto 0 ); 
+  signal U3_rom_pix2 : STD_LOGIC_VECTOR ( 4 downto 0 ); 
   signal U3_spriteon1_addsub0001 : STD_LOGIC_VECTOR ( 9 downto 9 ); 
   signal U3_spriteon2_addsub0000 : STD_LOGIC_VECTOR ( 9 downto 5 ); 
-  signal U3_spriteon2f_add0002 : STD_LOGIC_VECTOR ( 4 downto 4 ); 
-  signal U3_spriteonB3_add0000 : STD_LOGIC_VECTOR ( 3 downto 3 ); 
-  signal U3_spriteonB4_add0000 : STD_LOGIC_VECTOR ( 3 downto 3 ); 
-  signal U3_tank1_angle_calc : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_tank1_angle_calc_mux0004 : STD_LOGIC_VECTOR ( 0 downto 0 ); 
-  signal U3_tank2_angle_calc : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal U3_tank2_angle_calc_mux0004 : STD_LOGIC_VECTOR ( 0 downto 0 ); 
-  signal U3_xpix1 : STD_LOGIC_VECTOR ( 4 downto 0 ); 
-  signal U3_xpix2 : STD_LOGIC_VECTOR ( 4 downto 0 ); 
-  signal U3_ypix1 : STD_LOGIC_VECTOR ( 9 downto 5 ); 
-  signal U3_ypix1_addsub0000 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_spriteon2f_add0004 : STD_LOGIC_VECTOR ( 4 downto 4 ); 
+  signal U3_spriteonM1_addsub0000 : STD_LOGIC_VECTOR ( 9 downto 4 ); 
+  signal U3_spriteonM1_addsub0001 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_spriteonM1_addsub0002 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_spriteonM1_addsub0003 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_spriteonM2_addsub0000 : STD_LOGIC_VECTOR ( 9 downto 4 ); 
+  signal U3_spriteonM2_addsub0001 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_spriteonM2_addsub0002 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_spriteonM2_addsub0003 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
+  signal U3_tank1rom10s_sub0000 : STD_LOGIC_VECTOR ( 9 downto 6 ); 
+  signal U3_tank1rom10s_sub0001 : STD_LOGIC_VECTOR ( 10 downto 4 ); 
   signal bounce_delay1 : STD_LOGIC_VECTOR ( 7 downto 0 ); 
   signal bounce_delay2 : STD_LOGIC_VECTOR ( 7 downto 0 ); 
   signal bounce_delay3 : STD_LOGIC_VECTOR ( 7 downto 0 ); 
@@ -1325,40 +1651,17 @@ architecture STRUCTURE of vga_bsprite2a_top is
   signal nes_scalar_next : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal nes_scalar_next_addsub0000 : STD_LOGIC_VECTOR ( 9 downto 0 ); 
   signal nes_scalar_reg : STD_LOGIC_VECTOR ( 9 downto 0 ); 
-  signal rom1_addr : STD_LOGIC_VECTOR ( 4 downto 0 ); 
-  signal screenstate_Mcount_sig_hill3_cy : STD_LOGIC_VECTOR ( 6 downto 0 ); 
-  signal screenstate_Result : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal screenstate_sig_hill1 : STD_LOGIC_VECTOR ( 7 downto 1 ); 
-  signal screenstate_sig_hill1_addsub0000 : STD_LOGIC_VECTOR ( 7 downto 2 ); 
-  signal screenstate_sig_hill1_mux0001 : STD_LOGIC_VECTOR ( 6 downto 6 ); 
-  signal screenstate_sig_hill2 : STD_LOGIC_VECTOR ( 7 downto 2 ); 
-  signal screenstate_sig_hill2_addsub0000 : STD_LOGIC_VECTOR ( 7 downto 3 ); 
-  signal screenstate_sig_hill2_mux0001 : STD_LOGIC_VECTOR ( 5 downto 5 ); 
-  signal screenstate_sig_hill3 : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal screenstate_sig_hill4 : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal screenstate_sig_hill4_mux0001 : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal screenstate_sig_hill5 : STD_LOGIC_VECTOR ( 7 downto 1 ); 
-  signal screenstate_sig_hill5_addsub0000 : STD_LOGIC_VECTOR ( 7 downto 2 ); 
-  signal screenstate_sig_hill5_mux0001 : STD_LOGIC_VECTOR ( 6 downto 6 ); 
+  signal rom1_addr : STD_LOGIC_VECTOR ( 4 downto 1 ); 
   signal sig_MTitle : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal sig_gameRed : STD_LOGIC_VECTOR ( 1 downto 1 ); 
-  signal sig_romTitle_addr14 : STD_LOGIC_VECTOR ( 14 downto 2 ); 
   signal sig_tank110sM : STD_LOGIC_VECTOR ( 7 downto 0 ); 
   signal sig_tank11sM : STD_LOGIC_VECTOR ( 7 downto 0 ); 
-  signal sig_tank1rom10s : STD_LOGIC_VECTOR ( 10 downto 4 ); 
-  signal sig_tank1rom1s : STD_LOGIC_VECTOR ( 10 downto 4 ); 
-  signal title_Madd_rom_addr2_add0000_Madd_cy : STD_LOGIC_VECTOR ( 13 downto 3 ); 
-  signal title_Madd_rom_addr2_add0000_Madd_lut : STD_LOGIC_VECTOR ( 9 downto 3 ); 
-  signal title_Madd_rom_addr2_addsub0000_Madd_cy : STD_LOGIC_VECTOR ( 11 downto 6 ); 
-  signal title_Madd_rom_addr2_addsub0000_Madd_lut : STD_LOGIC_VECTOR ( 11 downto 6 ); 
-  signal title_Madd_rom_addr2_addsub0001_Madd_cy : STD_LOGIC_VECTOR ( 12 downto 3 ); 
-  signal title_Madd_rom_addr2_addsub0001_Madd_lut : STD_LOGIC_VECTOR ( 11 downto 3 ); 
-  signal title_Msub_ypix_addsub0000_cy : STD_LOGIC_VECTOR ( 8 downto 0 ); 
-  signal title_Msub_ypix_addsub0000_lut : STD_LOGIC_VECTOR ( 8 downto 5 ); 
-  signal title_Msub_ypix_cy : STD_LOGIC_VECTOR ( 3 downto 3 ); 
-  signal title_rom_addr2_addsub0000 : STD_LOGIC_VECTOR ( 14 downto 8 ); 
-  signal title_rom_addr2_addsub0001 : STD_LOGIC_VECTOR ( 14 downto 4 ); 
-  signal title_xpix : STD_LOGIC_VECTOR ( 5 downto 5 ); 
+  signal sig_tank1rom10s : STD_LOGIC_VECTOR ( 11 downto 0 ); 
+  signal sig_tank1rom1s : STD_LOGIC_VECTOR ( 11 downto 4 ); 
+  signal sig_tank210sM : STD_LOGIC_VECTOR ( 7 downto 0 ); 
+  signal sig_tank21sM : STD_LOGIC_VECTOR ( 7 downto 0 ); 
+  signal sig_tank2_angle_calc : STD_LOGIC_VECTOR ( 5 downto 5 ); 
+  signal sig_tank2rom10s : STD_LOGIC_VECTOR ( 11 downto 4 ); 
+  signal sig_tank2rom1s : STD_LOGIC_VECTOR ( 11 downto 4 ); 
   signal x7_Mcount_clkdiv_cy : STD_LOGIC_VECTOR ( 18 downto 0 ); 
   signal x7_Mcount_clkdiv_lut : STD_LOGIC_VECTOR ( 0 downto 0 ); 
   signal x7_Result : STD_LOGIC_VECTOR ( 19 downto 0 ); 
@@ -1380,8 +1683,8 @@ begin
     port map (
       C => U1_q(0),
       D => who_present_state_FSM_FFd2_In,
-      PRE => btn_3_IBUF_1524,
-      Q => who_present_state_FSM_FFd2_2022
+      PRE => btn_3_IBUF_2310,
+      Q => who_present_state_FSM_FFd2_2611
     );
   who_present_state_FSM_FFd1 : FDC
     generic map(
@@ -1389,133 +1692,154 @@ begin
     )
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
+      D => who_present_state_FSM_FFd1_In,
+      Q => who_present_state_FSM_FFd1_2609
+    );
+  who_delay3 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => who_delay2_2607,
+      Q => who_delay3_2608
+    );
+  who_delay2 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => who_delay1_2606,
+      Q => who_delay2_2607
+    );
+  who_delay1 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
       D => sig_gameA,
-      Q => who_present_state_FSM_FFd1_2021
+      Q => who_delay1_2606
     );
   U1_q_0 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(0),
       Q => U1_q_01
     );
   U1_q_1 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(1),
       Q => U1_q(1)
     );
   U1_q_2 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(2),
       Q => U1_q(2)
     );
   U1_q_3 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(3),
       Q => U1_q(3)
     );
   U1_q_4 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(4),
       Q => U1_q(4)
     );
   U1_q_5 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(5),
       Q => U1_q(5)
     );
   U1_q_6 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(6),
       Q => U1_q(6)
     );
   U1_q_7 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(7),
       Q => U1_q(7)
     );
   U1_q_8 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(8),
       Q => U1_q(8)
     );
   U1_q_9 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(9),
       Q => U1_q(9)
     );
   U1_q_10 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(10),
       Q => U1_q(10)
     );
   U1_q_11 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(11),
       Q => U1_q(11)
     );
   U1_q_12 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(12),
       Q => U1_q(12)
     );
   U1_q_13 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(13),
       Q => U1_q(13)
     );
   U1_q_14 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(14),
       Q => U1_q(14)
     );
   U1_q_15 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(15),
       Q => U1_q(15)
     );
   U1_q_16 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(16),
       Q => U1_q(16)
     );
   U1_q_17 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => Result(17),
       Q => U1_q_171
     );
@@ -1536,214 +1860,214 @@ begin
     port map (
       CI => U1_Mcount_q_cy(0),
       DI => N0,
-      S => U1_Mcount_q_cy_1_rt_519,
+      S => U1_Mcount_q_cy_1_rt_628,
       O => U1_Mcount_q_cy(1)
     );
   U1_Mcount_q_xor_1_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(0),
-      LI => U1_Mcount_q_cy_1_rt_519,
+      LI => U1_Mcount_q_cy_1_rt_628,
       O => Result(1)
     );
   U1_Mcount_q_cy_2_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(1),
       DI => N0,
-      S => U1_Mcount_q_cy_2_rt_521,
+      S => U1_Mcount_q_cy_2_rt_630,
       O => U1_Mcount_q_cy(2)
     );
   U1_Mcount_q_xor_2_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(1),
-      LI => U1_Mcount_q_cy_2_rt_521,
+      LI => U1_Mcount_q_cy_2_rt_630,
       O => Result(2)
     );
   U1_Mcount_q_cy_3_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(2),
       DI => N0,
-      S => U1_Mcount_q_cy_3_rt_523,
+      S => U1_Mcount_q_cy_3_rt_632,
       O => U1_Mcount_q_cy(3)
     );
   U1_Mcount_q_xor_3_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(2),
-      LI => U1_Mcount_q_cy_3_rt_523,
+      LI => U1_Mcount_q_cy_3_rt_632,
       O => Result(3)
     );
   U1_Mcount_q_cy_4_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(3),
       DI => N0,
-      S => U1_Mcount_q_cy_4_rt_525,
+      S => U1_Mcount_q_cy_4_rt_634,
       O => U1_Mcount_q_cy(4)
     );
   U1_Mcount_q_xor_4_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(3),
-      LI => U1_Mcount_q_cy_4_rt_525,
+      LI => U1_Mcount_q_cy_4_rt_634,
       O => Result(4)
     );
   U1_Mcount_q_cy_5_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(4),
       DI => N0,
-      S => U1_Mcount_q_cy_5_rt_527,
+      S => U1_Mcount_q_cy_5_rt_636,
       O => U1_Mcount_q_cy(5)
     );
   U1_Mcount_q_xor_5_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(4),
-      LI => U1_Mcount_q_cy_5_rt_527,
+      LI => U1_Mcount_q_cy_5_rt_636,
       O => Result(5)
     );
   U1_Mcount_q_cy_6_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(5),
       DI => N0,
-      S => U1_Mcount_q_cy_6_rt_529,
+      S => U1_Mcount_q_cy_6_rt_638,
       O => U1_Mcount_q_cy(6)
     );
   U1_Mcount_q_xor_6_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(5),
-      LI => U1_Mcount_q_cy_6_rt_529,
+      LI => U1_Mcount_q_cy_6_rt_638,
       O => Result(6)
     );
   U1_Mcount_q_cy_7_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(6),
       DI => N0,
-      S => U1_Mcount_q_cy_7_rt_531,
+      S => U1_Mcount_q_cy_7_rt_640,
       O => U1_Mcount_q_cy(7)
     );
   U1_Mcount_q_xor_7_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(6),
-      LI => U1_Mcount_q_cy_7_rt_531,
+      LI => U1_Mcount_q_cy_7_rt_640,
       O => Result(7)
     );
   U1_Mcount_q_cy_8_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(7),
       DI => N0,
-      S => U1_Mcount_q_cy_8_rt_533,
+      S => U1_Mcount_q_cy_8_rt_642,
       O => U1_Mcount_q_cy(8)
     );
   U1_Mcount_q_xor_8_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(7),
-      LI => U1_Mcount_q_cy_8_rt_533,
+      LI => U1_Mcount_q_cy_8_rt_642,
       O => Result(8)
     );
   U1_Mcount_q_cy_9_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(8),
       DI => N0,
-      S => U1_Mcount_q_cy_9_rt_535,
+      S => U1_Mcount_q_cy_9_rt_644,
       O => U1_Mcount_q_cy(9)
     );
   U1_Mcount_q_xor_9_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(8),
-      LI => U1_Mcount_q_cy_9_rt_535,
+      LI => U1_Mcount_q_cy_9_rt_644,
       O => Result(9)
     );
   U1_Mcount_q_cy_10_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(9),
       DI => N0,
-      S => U1_Mcount_q_cy_10_rt_505,
+      S => U1_Mcount_q_cy_10_rt_614,
       O => U1_Mcount_q_cy(10)
     );
   U1_Mcount_q_xor_10_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(9),
-      LI => U1_Mcount_q_cy_10_rt_505,
+      LI => U1_Mcount_q_cy_10_rt_614,
       O => Result(10)
     );
   U1_Mcount_q_cy_11_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(10),
       DI => N0,
-      S => U1_Mcount_q_cy_11_rt_507,
+      S => U1_Mcount_q_cy_11_rt_616,
       O => U1_Mcount_q_cy(11)
     );
   U1_Mcount_q_xor_11_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(10),
-      LI => U1_Mcount_q_cy_11_rt_507,
+      LI => U1_Mcount_q_cy_11_rt_616,
       O => Result(11)
     );
   U1_Mcount_q_cy_12_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(11),
       DI => N0,
-      S => U1_Mcount_q_cy_12_rt_509,
+      S => U1_Mcount_q_cy_12_rt_618,
       O => U1_Mcount_q_cy(12)
     );
   U1_Mcount_q_xor_12_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(11),
-      LI => U1_Mcount_q_cy_12_rt_509,
+      LI => U1_Mcount_q_cy_12_rt_618,
       O => Result(12)
     );
   U1_Mcount_q_cy_13_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(12),
       DI => N0,
-      S => U1_Mcount_q_cy_13_rt_511,
+      S => U1_Mcount_q_cy_13_rt_620,
       O => U1_Mcount_q_cy(13)
     );
   U1_Mcount_q_xor_13_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(12),
-      LI => U1_Mcount_q_cy_13_rt_511,
+      LI => U1_Mcount_q_cy_13_rt_620,
       O => Result(13)
     );
   U1_Mcount_q_cy_14_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(13),
       DI => N0,
-      S => U1_Mcount_q_cy_14_rt_513,
+      S => U1_Mcount_q_cy_14_rt_622,
       O => U1_Mcount_q_cy(14)
     );
   U1_Mcount_q_xor_14_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(13),
-      LI => U1_Mcount_q_cy_14_rt_513,
+      LI => U1_Mcount_q_cy_14_rt_622,
       O => Result(14)
     );
   U1_Mcount_q_cy_15_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(14),
       DI => N0,
-      S => U1_Mcount_q_cy_15_rt_515,
+      S => U1_Mcount_q_cy_15_rt_624,
       O => U1_Mcount_q_cy(15)
     );
   U1_Mcount_q_xor_15_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(14),
-      LI => U1_Mcount_q_cy_15_rt_515,
+      LI => U1_Mcount_q_cy_15_rt_624,
       O => Result(15)
     );
   U1_Mcount_q_cy_16_Q : MUXCY
     port map (
       CI => U1_Mcount_q_cy(15),
       DI => N0,
-      S => U1_Mcount_q_cy_16_rt_517,
+      S => U1_Mcount_q_cy_16_rt_626,
       O => U1_Mcount_q_cy(16)
     );
   U1_Mcount_q_xor_16_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(15),
-      LI => U1_Mcount_q_cy_16_rt_517,
+      LI => U1_Mcount_q_cy_16_rt_626,
       O => Result(16)
     );
   U1_Mcount_q_xor_17_Q : XORCY
     port map (
       CI => U1_Mcount_q_cy(16),
-      LI => U1_Mcount_q_xor_17_rt_537,
+      LI => U1_Mcount_q_xor_17_rt_646,
       O => Result(17)
     );
   t : titleImage
@@ -1757,21 +2081,21 @@ begin
       douta(2) => sig_MTitle(2),
       douta(1) => sig_MTitle(1),
       douta(0) => sig_MTitle(0),
-      addra(14) => sig_romTitle_addr14(14),
-      addra(13) => sig_romTitle_addr14(13),
-      addra(12) => sig_romTitle_addr14(12),
-      addra(11) => sig_romTitle_addr14(11),
-      addra(10) => sig_romTitle_addr14(10),
-      addra(9) => sig_romTitle_addr14(9),
-      addra(8) => sig_romTitle_addr14(8),
-      addra(7) => sig_romTitle_addr14(7),
-      addra(6) => sig_romTitle_addr14(6),
-      addra(5) => sig_romTitle_addr14(5),
-      addra(4) => sig_romTitle_addr14(4),
-      addra(3) => sig_romTitle_addr14(3),
-      addra(2) => sig_romTitle_addr14(2),
-      addra(1) => U2_hcs(1),
-      addra(0) => U2_hcs(0)
+      addra(14) => N0,
+      addra(13) => N0,
+      addra(12) => N0,
+      addra(11) => N0,
+      addra(10) => N0,
+      addra(9) => N0,
+      addra(8) => N0,
+      addra(7) => N0,
+      addra(6) => N0,
+      addra(5) => N0,
+      addra(4) => N0,
+      addra(3) => N0,
+      addra(2) => N0,
+      addra(1) => N0,
+      addra(0) => N0
     );
   tank1font10s : fonts
     port map (
@@ -1784,7 +2108,7 @@ begin
       dout(2) => sig_tank110sM(5),
       dout(1) => sig_tank110sM(6),
       dout(0) => sig_tank110sM(7),
-      addr(11) => N0,
+      addr(11) => sig_tank1rom10s(11),
       addr(10) => sig_tank1rom10s(10),
       addr(9) => sig_tank1rom10s(9),
       addr(8) => sig_tank1rom10s(8),
@@ -1792,10 +2116,10 @@ begin
       addr(6) => sig_tank1rom10s(6),
       addr(5) => sig_tank1rom10s(5),
       addr(4) => sig_tank1rom10s(4),
-      addr(3) => rom1_addr(3),
-      addr(2) => rom1_addr(2),
-      addr(1) => rom1_addr(1),
-      addr(0) => rom1_addr(0)
+      addr(3) => sig_tank1rom10s(3),
+      addr(2) => sig_tank1rom10s(2),
+      addr(1) => sig_tank1rom10s(1),
+      addr(0) => sig_tank1rom10s(0)
     );
   tank1font1s : fonts
     port map (
@@ -1808,7 +2132,7 @@ begin
       dout(2) => sig_tank11sM(5),
       dout(1) => sig_tank11sM(6),
       dout(0) => sig_tank11sM(7),
-      addr(11) => N0,
+      addr(11) => sig_tank1rom1s(11),
       addr(10) => sig_tank1rom1s(10),
       addr(9) => sig_tank1rom1s(9),
       addr(8) => sig_tank1rom1s(8),
@@ -1816,119 +2140,167 @@ begin
       addr(6) => sig_tank1rom1s(6),
       addr(5) => sig_tank1rom1s(5),
       addr(4) => sig_tank1rom1s(4),
-      addr(3) => rom1_addr(3),
-      addr(2) => rom1_addr(2),
-      addr(1) => rom1_addr(1),
-      addr(0) => rom1_addr(0)
+      addr(3) => sig_tank1rom10s(3),
+      addr(2) => sig_tank1rom10s(2),
+      addr(1) => sig_tank1rom10s(1),
+      addr(0) => sig_tank1rom10s(0)
+    );
+  tank2font10s : fonts
+    port map (
+      clk => U1_q(0),
+      dout(7) => sig_tank210sM(0),
+      dout(6) => sig_tank210sM(1),
+      dout(5) => sig_tank210sM(2),
+      dout(4) => sig_tank210sM(3),
+      dout(3) => sig_tank210sM(4),
+      dout(2) => sig_tank210sM(5),
+      dout(1) => sig_tank210sM(6),
+      dout(0) => sig_tank210sM(7),
+      addr(11) => sig_tank2rom10s(11),
+      addr(10) => sig_tank2rom10s(10),
+      addr(9) => sig_tank2rom10s(9),
+      addr(8) => sig_tank2rom10s(8),
+      addr(7) => sig_tank2rom10s(7),
+      addr(6) => sig_tank2rom10s(6),
+      addr(5) => sig_tank2rom10s(5),
+      addr(4) => sig_tank2rom10s(4),
+      addr(3) => sig_tank1rom10s(3),
+      addr(2) => sig_tank1rom10s(2),
+      addr(1) => sig_tank1rom10s(1),
+      addr(0) => sig_tank1rom10s(0)
+    );
+  tank2font1s : fonts
+    port map (
+      clk => U1_q(0),
+      dout(7) => sig_tank21sM(0),
+      dout(6) => sig_tank21sM(1),
+      dout(5) => sig_tank21sM(2),
+      dout(4) => sig_tank21sM(3),
+      dout(3) => sig_tank21sM(4),
+      dout(2) => sig_tank21sM(5),
+      dout(1) => sig_tank21sM(6),
+      dout(0) => sig_tank21sM(7),
+      addr(11) => sig_tank2rom1s(11),
+      addr(10) => sig_tank2rom1s(10),
+      addr(9) => sig_tank2rom1s(9),
+      addr(8) => sig_tank2rom1s(8),
+      addr(7) => sig_tank2rom1s(7),
+      addr(6) => sig_tank2rom1s(6),
+      addr(5) => sig_tank2rom1s(5),
+      addr(4) => sig_tank2rom1s(4),
+      addr(3) => sig_tank1rom10s(3),
+      addr(2) => sig_tank1rom10s(2),
+      addr(1) => sig_tank1rom10s(1),
+      addr(0) => sig_tank1rom10s(0)
     );
   U2_Mcount_hcs_xor_9_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(8),
-      LI => U2_Mcount_hcs_xor_9_rt_586,
+      LI => U2_Mcount_hcs_xor_9_rt_695,
       O => U2_Result_9_1
     );
   U2_Mcount_hcs_xor_8_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(7),
-      LI => U2_Mcount_hcs_cy_8_rt_574,
+      LI => U2_Mcount_hcs_cy_8_rt_683,
       O => U2_Result_8_1
     );
   U2_Mcount_hcs_cy_8_Q : MUXCY
     port map (
       CI => U2_Mcount_hcs_cy(7),
       DI => N0,
-      S => U2_Mcount_hcs_cy_8_rt_574,
+      S => U2_Mcount_hcs_cy_8_rt_683,
       O => U2_Mcount_hcs_cy(8)
     );
   U2_Mcount_hcs_xor_7_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(6),
-      LI => U2_Mcount_hcs_cy_7_rt_572,
+      LI => U2_Mcount_hcs_cy_7_rt_681,
       O => U2_Result_7_1
     );
   U2_Mcount_hcs_cy_7_Q : MUXCY
     port map (
       CI => U2_Mcount_hcs_cy(6),
       DI => N0,
-      S => U2_Mcount_hcs_cy_7_rt_572,
+      S => U2_Mcount_hcs_cy_7_rt_681,
       O => U2_Mcount_hcs_cy(7)
     );
   U2_Mcount_hcs_xor_6_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(5),
-      LI => U2_Mcount_hcs_cy_6_rt_570,
+      LI => U2_Mcount_hcs_cy_6_rt_679,
       O => U2_Result_6_1
     );
   U2_Mcount_hcs_cy_6_Q : MUXCY
     port map (
       CI => U2_Mcount_hcs_cy(5),
       DI => N0,
-      S => U2_Mcount_hcs_cy_6_rt_570,
+      S => U2_Mcount_hcs_cy_6_rt_679,
       O => U2_Mcount_hcs_cy(6)
     );
   U2_Mcount_hcs_xor_5_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(4),
-      LI => U2_Mcount_hcs_cy_5_rt_568,
+      LI => U2_Mcount_hcs_cy_5_rt_677,
       O => U2_Result_5_1
     );
   U2_Mcount_hcs_cy_5_Q : MUXCY
     port map (
       CI => U2_Mcount_hcs_cy(4),
       DI => N0,
-      S => U2_Mcount_hcs_cy_5_rt_568,
+      S => U2_Mcount_hcs_cy_5_rt_677,
       O => U2_Mcount_hcs_cy(5)
     );
   U2_Mcount_hcs_xor_4_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(3),
-      LI => U2_Mcount_hcs_cy_4_rt_566,
+      LI => U2_Mcount_hcs_cy_4_rt_675,
       O => U2_Result_4_1
     );
   U2_Mcount_hcs_cy_4_Q : MUXCY
     port map (
       CI => U2_Mcount_hcs_cy(3),
       DI => N0,
-      S => U2_Mcount_hcs_cy_4_rt_566,
+      S => U2_Mcount_hcs_cy_4_rt_675,
       O => U2_Mcount_hcs_cy(4)
     );
   U2_Mcount_hcs_xor_3_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(2),
-      LI => U2_Mcount_hcs_cy_3_rt_564,
+      LI => U2_Mcount_hcs_cy_3_rt_673,
       O => U2_Result_3_1
     );
   U2_Mcount_hcs_cy_3_Q : MUXCY
     port map (
       CI => U2_Mcount_hcs_cy(2),
       DI => N0,
-      S => U2_Mcount_hcs_cy_3_rt_564,
+      S => U2_Mcount_hcs_cy_3_rt_673,
       O => U2_Mcount_hcs_cy(3)
     );
   U2_Mcount_hcs_xor_2_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(1),
-      LI => U2_Mcount_hcs_cy_2_rt_562,
+      LI => U2_Mcount_hcs_cy_2_rt_671,
       O => U2_Result_2_1
     );
   U2_Mcount_hcs_cy_2_Q : MUXCY
     port map (
       CI => U2_Mcount_hcs_cy(1),
       DI => N0,
-      S => U2_Mcount_hcs_cy_2_rt_562,
+      S => U2_Mcount_hcs_cy_2_rt_671,
       O => U2_Mcount_hcs_cy(2)
     );
   U2_Mcount_hcs_xor_1_Q : XORCY
     port map (
       CI => U2_Mcount_hcs_cy(0),
-      LI => U2_Mcount_hcs_cy_1_rt_560,
+      LI => U2_Mcount_hcs_cy_1_rt_669,
       O => U2_Result_1_1
     );
   U2_Mcount_hcs_cy_1_Q : MUXCY
     port map (
       CI => U2_Mcount_hcs_cy(0),
       DI => N0,
-      S => U2_Mcount_hcs_cy_1_rt_560,
+      S => U2_Mcount_hcs_cy_1_rt_669,
       O => U2_Mcount_hcs_cy(1)
     );
   U2_Mcount_hcs_xor_0_Q : XORCY
@@ -1947,111 +2319,111 @@ begin
   U2_Mcount_vcs_xor_9_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(8),
-      LI => U2_Mcount_vcs_xor_9_rt_615,
+      LI => U2_Mcount_vcs_xor_9_rt_724,
       O => U2_Result(9)
     );
   U2_Mcount_vcs_xor_8_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(7),
-      LI => U2_Mcount_vcs_cy_8_rt_603,
+      LI => U2_Mcount_vcs_cy_8_rt_712,
       O => U2_Result(8)
     );
   U2_Mcount_vcs_cy_8_Q : MUXCY
     port map (
       CI => U2_Mcount_vcs_cy(7),
       DI => N0,
-      S => U2_Mcount_vcs_cy_8_rt_603,
+      S => U2_Mcount_vcs_cy_8_rt_712,
       O => U2_Mcount_vcs_cy(8)
     );
   U2_Mcount_vcs_xor_7_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(6),
-      LI => U2_Mcount_vcs_cy_7_rt_601,
+      LI => U2_Mcount_vcs_cy_7_rt_710,
       O => U2_Result(7)
     );
   U2_Mcount_vcs_cy_7_Q : MUXCY
     port map (
       CI => U2_Mcount_vcs_cy(6),
       DI => N0,
-      S => U2_Mcount_vcs_cy_7_rt_601,
+      S => U2_Mcount_vcs_cy_7_rt_710,
       O => U2_Mcount_vcs_cy(7)
     );
   U2_Mcount_vcs_xor_6_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(5),
-      LI => U2_Mcount_vcs_cy_6_rt_599,
+      LI => U2_Mcount_vcs_cy_6_rt_708,
       O => U2_Result(6)
     );
   U2_Mcount_vcs_cy_6_Q : MUXCY
     port map (
       CI => U2_Mcount_vcs_cy(5),
       DI => N0,
-      S => U2_Mcount_vcs_cy_6_rt_599,
+      S => U2_Mcount_vcs_cy_6_rt_708,
       O => U2_Mcount_vcs_cy(6)
     );
   U2_Mcount_vcs_xor_5_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(4),
-      LI => U2_Mcount_vcs_cy_5_rt_597,
+      LI => U2_Mcount_vcs_cy_5_rt_706,
       O => U2_Result(5)
     );
   U2_Mcount_vcs_cy_5_Q : MUXCY
     port map (
       CI => U2_Mcount_vcs_cy(4),
       DI => N0,
-      S => U2_Mcount_vcs_cy_5_rt_597,
+      S => U2_Mcount_vcs_cy_5_rt_706,
       O => U2_Mcount_vcs_cy(5)
     );
   U2_Mcount_vcs_xor_4_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(3),
-      LI => U2_Mcount_vcs_cy_4_rt_595,
+      LI => U2_Mcount_vcs_cy_4_rt_704,
       O => U2_Result(4)
     );
   U2_Mcount_vcs_cy_4_Q : MUXCY
     port map (
       CI => U2_Mcount_vcs_cy(3),
       DI => N0,
-      S => U2_Mcount_vcs_cy_4_rt_595,
+      S => U2_Mcount_vcs_cy_4_rt_704,
       O => U2_Mcount_vcs_cy(4)
     );
   U2_Mcount_vcs_xor_3_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(2),
-      LI => U2_Mcount_vcs_cy_3_rt_593,
+      LI => U2_Mcount_vcs_cy_3_rt_702,
       O => U2_Result(3)
     );
   U2_Mcount_vcs_cy_3_Q : MUXCY
     port map (
       CI => U2_Mcount_vcs_cy(2),
       DI => N0,
-      S => U2_Mcount_vcs_cy_3_rt_593,
+      S => U2_Mcount_vcs_cy_3_rt_702,
       O => U2_Mcount_vcs_cy(3)
     );
   U2_Mcount_vcs_xor_2_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(1),
-      LI => U2_Mcount_vcs_cy_2_rt_591,
+      LI => U2_Mcount_vcs_cy_2_rt_700,
       O => U2_Result(2)
     );
   U2_Mcount_vcs_cy_2_Q : MUXCY
     port map (
       CI => U2_Mcount_vcs_cy(1),
       DI => N0,
-      S => U2_Mcount_vcs_cy_2_rt_591,
+      S => U2_Mcount_vcs_cy_2_rt_700,
       O => U2_Mcount_vcs_cy(2)
     );
   U2_Mcount_vcs_xor_1_Q : XORCY
     port map (
       CI => U2_Mcount_vcs_cy(0),
-      LI => U2_Mcount_vcs_cy_1_rt_589,
+      LI => U2_Mcount_vcs_cy_1_rt_698,
       O => U2_Result(1)
     );
   U2_Mcount_vcs_cy_1_Q : MUXCY
     port map (
       CI => U2_Mcount_vcs_cy(0),
       DI => N0,
-      S => U2_Mcount_vcs_cy_1_rt_589,
+      S => U2_Mcount_vcs_cy_1_rt_698,
       O => U2_Mcount_vcs_cy(1)
     );
   U2_Mcount_vcs_xor_0_Q : XORCY
@@ -2070,150 +2442,150 @@ begin
   U2_hcs_9 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_9,
       Q => U2_hcs(9)
     );
   U2_hcs_8 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_8,
       Q => U2_hcs(8)
     );
   U2_hcs_7 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_7,
       Q => U2_hcs(7)
     );
   U2_hcs_6 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_6,
       Q => U2_hcs(6)
     );
   U2_hcs_5 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_5,
       Q => U2_hcs(5)
     );
   U2_hcs_4 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_4,
       Q => U2_hcs(4)
     );
   U2_hcs_3 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_3,
       Q => U2_hcs(3)
     );
   U2_hcs_2 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_2,
       Q => U2_hcs(2)
     );
   U2_hcs_1 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_1,
       Q => U2_hcs(1)
     );
   U2_hcs_0 : FDC
     port map (
       C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_hcs_eqn_0,
       Q => U2_hcs(0)
     );
   U2_vcs_9 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_9,
       Q => U2_vcs(9)
     );
   U2_vcs_8 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_8,
       Q => U2_vcs(8)
     );
   U2_vcs_7 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_7,
       Q => U2_vcs(7)
     );
   U2_vcs_6 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_6,
       Q => U2_vcs(6)
     );
   U2_vcs_5 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_5,
       Q => U2_vcs(5)
     );
   U2_vcs_4 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_4,
       Q => U2_vcs(4)
     );
   U2_vcs_3 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_3,
       Q => U2_vcs(3)
     );
   U2_vcs_2 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_2,
       Q => U2_vcs(2)
     );
   U2_vcs_1 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_1,
       Q => U2_vcs(1)
     );
   U2_vcs_0 : FDCE
     port map (
       C => U1_q(0),
-      CE => U2_vsenable_674,
-      CLR => btn_3_IBUF_1524,
+      CE => U2_vsenable_784,
+      CLR => btn_3_IBUF_2310,
       D => U2_Mcount_vcs_eqn_0,
       Q => U2_vcs(0)
     );
@@ -2222,68 +2594,3340 @@ begin
       C => U1_q(0),
       CE => U2_clr_inv,
       D => U2_hcs_cmp_eq0000,
-      Q => U2_vsenable_674
+      Q => U2_vsenable_784
     );
-  U3_Mmux_tank11sM_mux0000_4 : LUT3
+  x7_Mmux_digit_2_f5 : MUXF5
+    port map (
+      I0 => x7_Mmux_digit_4_2655,
+      I1 => x7_Mmux_digit_3_2653,
+      S => x7_clkdiv(19),
+      O => x7_digit(0)
+    );
+  x7_Mmux_digit_2_f5_0 : MUXF5
+    port map (
+      I0 => x7_Mmux_digit_41_2656,
+      I1 => x7_Mmux_digit_31_2654,
+      S => x7_clkdiv(19),
+      O => x7_digit(1)
+    );
+  x7_Mcount_clkdiv_xor_19_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(18),
+      LI => x7_Mcount_clkdiv_xor_19_rt_2652,
+      O => x7_Result(19)
+    );
+  x7_Mcount_clkdiv_xor_18_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(17),
+      LI => x7_Mcount_clkdiv_cy_18_rt_2632,
+      O => x7_Result(18)
+    );
+  x7_Mcount_clkdiv_cy_18_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(17),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_18_rt_2632,
+      O => x7_Mcount_clkdiv_cy(18)
+    );
+  x7_Mcount_clkdiv_xor_17_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(16),
+      LI => x7_Mcount_clkdiv_cy_17_rt_2630,
+      O => x7_Result(17)
+    );
+  x7_Mcount_clkdiv_cy_17_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(16),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_17_rt_2630,
+      O => x7_Mcount_clkdiv_cy(17)
+    );
+  x7_Mcount_clkdiv_xor_16_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(15),
+      LI => x7_Mcount_clkdiv_cy_16_rt_2628,
+      O => x7_Result(16)
+    );
+  x7_Mcount_clkdiv_cy_16_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(15),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_16_rt_2628,
+      O => x7_Mcount_clkdiv_cy(16)
+    );
+  x7_Mcount_clkdiv_xor_15_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(14),
+      LI => x7_Mcount_clkdiv_cy_15_rt_2626,
+      O => x7_Result(15)
+    );
+  x7_Mcount_clkdiv_cy_15_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(14),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_15_rt_2626,
+      O => x7_Mcount_clkdiv_cy(15)
+    );
+  x7_Mcount_clkdiv_xor_14_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(13),
+      LI => x7_Mcount_clkdiv_cy_14_rt_2624,
+      O => x7_Result(14)
+    );
+  x7_Mcount_clkdiv_cy_14_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(13),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_14_rt_2624,
+      O => x7_Mcount_clkdiv_cy(14)
+    );
+  x7_Mcount_clkdiv_xor_13_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(12),
+      LI => x7_Mcount_clkdiv_cy_13_rt_2622,
+      O => x7_Result(13)
+    );
+  x7_Mcount_clkdiv_cy_13_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(12),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_13_rt_2622,
+      O => x7_Mcount_clkdiv_cy(13)
+    );
+  x7_Mcount_clkdiv_xor_12_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(11),
+      LI => x7_Mcount_clkdiv_cy_12_rt_2620,
+      O => x7_Result(12)
+    );
+  x7_Mcount_clkdiv_cy_12_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(11),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_12_rt_2620,
+      O => x7_Mcount_clkdiv_cy(12)
+    );
+  x7_Mcount_clkdiv_xor_11_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(10),
+      LI => x7_Mcount_clkdiv_cy_11_rt_2618,
+      O => x7_Result(11)
+    );
+  x7_Mcount_clkdiv_cy_11_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(10),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_11_rt_2618,
+      O => x7_Mcount_clkdiv_cy(11)
+    );
+  x7_Mcount_clkdiv_xor_10_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(9),
+      LI => x7_Mcount_clkdiv_cy_10_rt_2616,
+      O => x7_Result(10)
+    );
+  x7_Mcount_clkdiv_cy_10_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(9),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_10_rt_2616,
+      O => x7_Mcount_clkdiv_cy(10)
+    );
+  x7_Mcount_clkdiv_xor_9_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(8),
+      LI => x7_Mcount_clkdiv_cy_9_rt_2650,
+      O => x7_Result(9)
+    );
+  x7_Mcount_clkdiv_cy_9_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(8),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_9_rt_2650,
+      O => x7_Mcount_clkdiv_cy(9)
+    );
+  x7_Mcount_clkdiv_xor_8_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(7),
+      LI => x7_Mcount_clkdiv_cy_8_rt_2648,
+      O => x7_Result(8)
+    );
+  x7_Mcount_clkdiv_cy_8_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(7),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_8_rt_2648,
+      O => x7_Mcount_clkdiv_cy(8)
+    );
+  x7_Mcount_clkdiv_xor_7_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(6),
+      LI => x7_Mcount_clkdiv_cy_7_rt_2646,
+      O => x7_Result(7)
+    );
+  x7_Mcount_clkdiv_cy_7_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(6),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_7_rt_2646,
+      O => x7_Mcount_clkdiv_cy(7)
+    );
+  x7_Mcount_clkdiv_xor_6_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(5),
+      LI => x7_Mcount_clkdiv_cy_6_rt_2644,
+      O => x7_Result(6)
+    );
+  x7_Mcount_clkdiv_cy_6_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(5),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_6_rt_2644,
+      O => x7_Mcount_clkdiv_cy(6)
+    );
+  x7_Mcount_clkdiv_xor_5_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(4),
+      LI => x7_Mcount_clkdiv_cy_5_rt_2642,
+      O => x7_Result(5)
+    );
+  x7_Mcount_clkdiv_cy_5_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(4),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_5_rt_2642,
+      O => x7_Mcount_clkdiv_cy(5)
+    );
+  x7_Mcount_clkdiv_xor_4_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(3),
+      LI => x7_Mcount_clkdiv_cy_4_rt_2640,
+      O => x7_Result(4)
+    );
+  x7_Mcount_clkdiv_cy_4_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(3),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_4_rt_2640,
+      O => x7_Mcount_clkdiv_cy(4)
+    );
+  x7_Mcount_clkdiv_xor_3_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(2),
+      LI => x7_Mcount_clkdiv_cy_3_rt_2638,
+      O => x7_Result(3)
+    );
+  x7_Mcount_clkdiv_cy_3_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(2),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_3_rt_2638,
+      O => x7_Mcount_clkdiv_cy(3)
+    );
+  x7_Mcount_clkdiv_xor_2_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(1),
+      LI => x7_Mcount_clkdiv_cy_2_rt_2636,
+      O => x7_Result(2)
+    );
+  x7_Mcount_clkdiv_cy_2_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(1),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_2_rt_2636,
+      O => x7_Mcount_clkdiv_cy(2)
+    );
+  x7_Mcount_clkdiv_xor_1_Q : XORCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(0),
+      LI => x7_Mcount_clkdiv_cy_1_rt_2634,
+      O => x7_Result(1)
+    );
+  x7_Mcount_clkdiv_cy_1_Q : MUXCY
+    port map (
+      CI => x7_Mcount_clkdiv_cy(0),
+      DI => N0,
+      S => x7_Mcount_clkdiv_cy_1_rt_2634,
+      O => x7_Mcount_clkdiv_cy(1)
+    );
+  x7_Mcount_clkdiv_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => x7_Mcount_clkdiv_lut(0),
+      O => x7_Result(0)
+    );
+  x7_Mcount_clkdiv_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => x7_Mcount_clkdiv_lut(0),
+      O => x7_Mcount_clkdiv_cy(0)
+    );
+  x7_clkdiv_19 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(19),
+      Q => x7_clkdiv(19)
+    );
+  x7_clkdiv_18 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(18),
+      Q => x7_clkdiv(18)
+    );
+  x7_clkdiv_17 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(17),
+      Q => x7_clkdiv(17)
+    );
+  x7_clkdiv_16 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(16),
+      Q => x7_clkdiv(16)
+    );
+  x7_clkdiv_15 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(15),
+      Q => x7_clkdiv(15)
+    );
+  x7_clkdiv_14 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(14),
+      Q => x7_clkdiv(14)
+    );
+  x7_clkdiv_13 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(13),
+      Q => x7_clkdiv(13)
+    );
+  x7_clkdiv_12 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(12),
+      Q => x7_clkdiv(12)
+    );
+  x7_clkdiv_11 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(11),
+      Q => x7_clkdiv(11)
+    );
+  x7_clkdiv_10 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(10),
+      Q => x7_clkdiv(10)
+    );
+  x7_clkdiv_9 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(9),
+      Q => x7_clkdiv(9)
+    );
+  x7_clkdiv_8 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(8),
+      Q => x7_clkdiv(8)
+    );
+  x7_clkdiv_7 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(7),
+      Q => x7_clkdiv(7)
+    );
+  x7_clkdiv_6 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(6),
+      Q => x7_clkdiv(6)
+    );
+  x7_clkdiv_5 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(5),
+      Q => x7_clkdiv(5)
+    );
+  x7_clkdiv_4 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(4),
+      Q => x7_clkdiv(4)
+    );
+  x7_clkdiv_3 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(3),
+      Q => x7_clkdiv(3)
+    );
+  x7_clkdiv_2 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(2),
+      Q => x7_clkdiv(2)
+    );
+  x7_clkdiv_1 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(1),
+      Q => x7_clkdiv(1)
+    );
+  x7_clkdiv_0 : FDC
+    port map (
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => x7_Result(0),
+      Q => x7_clkdiv(0)
+    );
+  screenstate_present_state_FSM_FFd2 : FDP
     generic map(
-      INIT => X"E4"
+      INIT => '0'
     )
     port map (
-      I0 => U2_hcs(0),
-      I1 => sig_tank11sM(6),
-      I2 => sig_tank11sM(7),
-      O => U3_Mmux_tank11sM_mux0000_4_1223
+      C => mclk_BUFGP_2343,
+      D => N1,
+      PRE => btn_3_IBUF_2310,
+      Q => screenstate_present_state_FSM_FFd2_2480
     );
-  U3_Mmux_tank11sM_mux0000_5 : LUT3
+  screenstate_present_state_FSM_FFd1 : FDC
     generic map(
-      INIT => X"E4"
+      INIT => '0'
     )
     port map (
-      I0 => U2_hcs(0),
-      I1 => sig_tank11sM(4),
-      I2 => sig_tank11sM(5),
-      O => U3_Mmux_tank11sM_mux0000_5_1225
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => screenstate_present_state_FSM_FFd1_In,
+      Q => screenstate_present_state_FSM_FFd1_2478
     );
-  U3_Mmux_tank11sM_mux0000_3_f5 : MUXF5
+  bounce_delay3_7 : FDC
     port map (
-      I0 => U3_Mmux_tank11sM_mux0000_5_1225,
-      I1 => U3_Mmux_tank11sM_mux0000_4_1223,
-      S => U2_hcs(1),
-      O => U3_Mmux_tank11sM_mux0000_3_f5_1222
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay2(7),
+      Q => bounce_delay3(7)
     );
-  U3_Mmux_tank11sM_mux0000_51 : LUT3
+  bounce_delay3_6 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay2(6),
+      Q => bounce_delay3(6)
+    );
+  bounce_delay3_5 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay2(5),
+      Q => bounce_delay3(5)
+    );
+  bounce_delay3_4 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay2(4),
+      Q => bounce_delay3(4)
+    );
+  bounce_delay3_3 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay2(3),
+      Q => bounce_delay3(3)
+    );
+  bounce_delay3_2 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay2(2),
+      Q => bounce_delay3(2)
+    );
+  bounce_delay3_1 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay2(1),
+      Q => bounce_delay3(1)
+    );
+  bounce_delay3_0 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay2(0),
+      Q => bounce_delay3(0)
+    );
+  bounce_delay2_7 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay1(7),
+      Q => bounce_delay2(7)
+    );
+  bounce_delay2_6 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay1(6),
+      Q => bounce_delay2(6)
+    );
+  bounce_delay2_5 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay1(5),
+      Q => bounce_delay2(5)
+    );
+  bounce_delay2_4 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay1(4),
+      Q => bounce_delay2(4)
+    );
+  bounce_delay2_3 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay1(3),
+      Q => bounce_delay2(3)
+    );
+  bounce_delay2_2 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay1(2),
+      Q => bounce_delay2(2)
+    );
+  bounce_delay2_1 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay1(1),
+      Q => bounce_delay2(1)
+    );
+  bounce_delay2_0 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => bounce_delay1(0),
+      Q => bounce_delay2(0)
+    );
+  bounce_delay1_7 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => nes_left_reg_2423,
+      Q => bounce_delay1(7)
+    );
+  bounce_delay1_6 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => nes_down_reg_2421,
+      Q => bounce_delay1(6)
+    );
+  bounce_delay1_5 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => nes_up_reg_2466,
+      Q => bounce_delay1(5)
+    );
+  bounce_delay1_4 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => nes_right_reg_2427,
+      Q => bounce_delay1(4)
+    );
+  bounce_delay1_3 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => nes_sel_reg_2462,
+      Q => bounce_delay1(3)
+    );
+  bounce_delay1_2 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => nes_start_reg_2464,
+      Q => bounce_delay1(2)
+    );
+  bounce_delay1_1 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => nes_b_reg_2406,
+      Q => bounce_delay1(1)
+    );
+  bounce_delay1_0 : FDC
+    port map (
+      C => U1_q(17),
+      CLR => btn_3_IBUF_2310,
+      D => nes_a_reg_2404,
+      Q => bounce_delay1(0)
+    );
+  nes_Mcount_counter_reg_xor_9_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(8),
+      LI => nes_Mcount_counter_reg_xor_9_rt_2391,
+      O => nes_Result(9)
+    );
+  nes_Mcount_counter_reg_xor_8_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(7),
+      LI => nes_Mcount_counter_reg_cy_8_rt_2379,
+      O => nes_Result(8)
+    );
+  nes_Mcount_counter_reg_cy_8_Q : MUXCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(7),
+      DI => N0,
+      S => nes_Mcount_counter_reg_cy_8_rt_2379,
+      O => nes_Mcount_counter_reg_cy(8)
+    );
+  nes_Mcount_counter_reg_xor_7_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(6),
+      LI => nes_Mcount_counter_reg_cy_7_rt_2377,
+      O => nes_Result(7)
+    );
+  nes_Mcount_counter_reg_cy_7_Q : MUXCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(6),
+      DI => N0,
+      S => nes_Mcount_counter_reg_cy_7_rt_2377,
+      O => nes_Mcount_counter_reg_cy(7)
+    );
+  nes_Mcount_counter_reg_xor_6_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(5),
+      LI => nes_Mcount_counter_reg_cy_6_rt_2375,
+      O => nes_Result(6)
+    );
+  nes_Mcount_counter_reg_cy_6_Q : MUXCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(5),
+      DI => N0,
+      S => nes_Mcount_counter_reg_cy_6_rt_2375,
+      O => nes_Mcount_counter_reg_cy(6)
+    );
+  nes_Mcount_counter_reg_xor_5_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(4),
+      LI => nes_Mcount_counter_reg_cy_5_rt_2373,
+      O => nes_Result(5)
+    );
+  nes_Mcount_counter_reg_cy_5_Q : MUXCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(4),
+      DI => N0,
+      S => nes_Mcount_counter_reg_cy_5_rt_2373,
+      O => nes_Mcount_counter_reg_cy(5)
+    );
+  nes_Mcount_counter_reg_xor_4_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(3),
+      LI => nes_Mcount_counter_reg_cy_4_rt_2371,
+      O => nes_Result(4)
+    );
+  nes_Mcount_counter_reg_cy_4_Q : MUXCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(3),
+      DI => N0,
+      S => nes_Mcount_counter_reg_cy_4_rt_2371,
+      O => nes_Mcount_counter_reg_cy(4)
+    );
+  nes_Mcount_counter_reg_xor_3_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(2),
+      LI => nes_Mcount_counter_reg_cy_3_rt_2369,
+      O => nes_Result(3)
+    );
+  nes_Mcount_counter_reg_cy_3_Q : MUXCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(2),
+      DI => N0,
+      S => nes_Mcount_counter_reg_cy_3_rt_2369,
+      O => nes_Mcount_counter_reg_cy(3)
+    );
+  nes_Mcount_counter_reg_xor_2_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(1),
+      LI => nes_Mcount_counter_reg_cy_2_rt_2367,
+      O => nes_Result(2)
+    );
+  nes_Mcount_counter_reg_cy_2_Q : MUXCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(1),
+      DI => N0,
+      S => nes_Mcount_counter_reg_cy_2_rt_2367,
+      O => nes_Mcount_counter_reg_cy(2)
+    );
+  nes_Mcount_counter_reg_xor_1_Q : XORCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(0),
+      LI => nes_Mcount_counter_reg_cy_1_rt_2365,
+      O => nes_Result(1)
+    );
+  nes_Mcount_counter_reg_cy_1_Q : MUXCY
+    port map (
+      CI => nes_Mcount_counter_reg_cy(0),
+      DI => N0,
+      S => nes_Mcount_counter_reg_cy_1_rt_2365,
+      O => nes_Mcount_counter_reg_cy(1)
+    );
+  nes_Mcount_counter_reg_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => nes_Mcount_counter_reg_lut(0),
+      O => nes_Result(0)
+    );
+  nes_Mcount_counter_reg_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => nes_Mcount_counter_reg_lut(0),
+      O => nes_Mcount_counter_reg_cy(0)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_9_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(8),
+      LI => nes_Madd_scalar_next_addsub0000_xor_9_rt_2362,
+      O => nes_scalar_next_addsub0000(9)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_8_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(7),
+      LI => nes_Madd_scalar_next_addsub0000_cy_8_rt_2360,
+      O => nes_scalar_next_addsub0000(8)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_8_Q : MUXCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(7),
+      DI => N0,
+      S => nes_Madd_scalar_next_addsub0000_cy_8_rt_2360,
+      O => nes_Madd_scalar_next_addsub0000_cy(8)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_7_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(6),
+      LI => nes_Madd_scalar_next_addsub0000_cy_7_rt_2358,
+      O => nes_scalar_next_addsub0000(7)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_7_Q : MUXCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(6),
+      DI => N0,
+      S => nes_Madd_scalar_next_addsub0000_cy_7_rt_2358,
+      O => nes_Madd_scalar_next_addsub0000_cy(7)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_6_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(5),
+      LI => nes_Madd_scalar_next_addsub0000_cy_6_rt_2356,
+      O => nes_scalar_next_addsub0000(6)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_6_Q : MUXCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(5),
+      DI => N0,
+      S => nes_Madd_scalar_next_addsub0000_cy_6_rt_2356,
+      O => nes_Madd_scalar_next_addsub0000_cy(6)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_5_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(4),
+      LI => nes_Madd_scalar_next_addsub0000_cy_5_rt_2354,
+      O => nes_scalar_next_addsub0000(5)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_5_Q : MUXCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(4),
+      DI => N0,
+      S => nes_Madd_scalar_next_addsub0000_cy_5_rt_2354,
+      O => nes_Madd_scalar_next_addsub0000_cy(5)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_4_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(3),
+      LI => nes_Madd_scalar_next_addsub0000_cy_4_rt_2352,
+      O => nes_scalar_next_addsub0000(4)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_4_Q : MUXCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(3),
+      DI => N0,
+      S => nes_Madd_scalar_next_addsub0000_cy_4_rt_2352,
+      O => nes_Madd_scalar_next_addsub0000_cy(4)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_3_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(2),
+      LI => nes_Madd_scalar_next_addsub0000_cy_3_rt_2350,
+      O => nes_scalar_next_addsub0000(3)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_3_Q : MUXCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(2),
+      DI => N0,
+      S => nes_Madd_scalar_next_addsub0000_cy_3_rt_2350,
+      O => nes_Madd_scalar_next_addsub0000_cy(3)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_2_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(1),
+      LI => nes_Madd_scalar_next_addsub0000_cy_2_rt_2348,
+      O => nes_scalar_next_addsub0000(2)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_2_Q : MUXCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(1),
+      DI => N0,
+      S => nes_Madd_scalar_next_addsub0000_cy_2_rt_2348,
+      O => nes_Madd_scalar_next_addsub0000_cy(2)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_1_Q : XORCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(0),
+      LI => nes_Madd_scalar_next_addsub0000_cy_1_rt_2346,
+      O => nes_scalar_next_addsub0000(1)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_1_Q : MUXCY
+    port map (
+      CI => nes_Madd_scalar_next_addsub0000_cy(0),
+      DI => N0,
+      S => nes_Madd_scalar_next_addsub0000_cy_1_rt_2346,
+      O => nes_Madd_scalar_next_addsub0000_cy(1)
+    );
+  nes_Madd_scalar_next_addsub0000_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => nes_Madd_scalar_next_addsub0000_lut(0),
+      O => nes_scalar_next_addsub0000(0)
+    );
+  nes_Madd_scalar_next_addsub0000_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => nes_Madd_scalar_next_addsub0000_lut(0),
+      O => nes_Madd_scalar_next_addsub0000_cy(0)
+    );
+  nes_counter_reg_9 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_9,
+      Q => nes_counter_reg(9)
+    );
+  nes_counter_reg_8 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_8,
+      Q => nes_counter_reg(8)
+    );
+  nes_counter_reg_7 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_7,
+      Q => nes_counter_reg(7)
+    );
+  nes_counter_reg_6 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_6,
+      Q => nes_counter_reg(6)
+    );
+  nes_counter_reg_5 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_5,
+      Q => nes_counter_reg(5)
+    );
+  nes_counter_reg_4 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_4,
+      Q => nes_counter_reg(4)
+    );
+  nes_counter_reg_3 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_3,
+      Q => nes_counter_reg(3)
+    );
+  nes_counter_reg_2 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_2,
+      Q => nes_counter_reg(2)
+    );
+  nes_counter_reg_1 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_1,
+      Q => nes_counter_reg(1)
+    );
+  nes_counter_reg_0 : FDCE
+    port map (
+      C => U1_q(0),
+      CE => nes_counter_reg_not0001,
+      CLR => btn_3_IBUF_2310,
+      D => nes_Mcount_counter_reg_eqn_0,
+      Q => nes_counter_reg(0)
+    );
+  nes_right_reg : FDE
+    port map (
+      C => U1_q(0),
+      CE => nes_right_reg_cmp_eq0000,
+      D => nes_left_reg_not0001,
+      Q => nes_right_reg_2427
+    );
+  nes_b_reg : FDE
+    port map (
+      C => U1_q(0),
+      CE => nes_b_reg_cmp_eq0000,
+      D => nes_left_reg_not0001,
+      Q => nes_b_reg_2406
+    );
+  nes_sel_reg : FDE
+    port map (
+      C => U1_q(0),
+      CE => nes_sel_reg_cmp_eq0000,
+      D => nes_left_reg_not0001,
+      Q => nes_sel_reg_2462
+    );
+  nes_start_reg : FDE
+    port map (
+      C => U1_q(0),
+      CE => nes_start_reg_cmp_eq0000,
+      D => nes_left_reg_not0001,
+      Q => nes_start_reg_2464
+    );
+  nes_a_reg : FDE
+    port map (
+      C => U1_q(0),
+      CE => nes_a_reg_cmp_eq0000,
+      D => nes_left_reg_not0001,
+      Q => nes_a_reg_2404
+    );
+  nes_up_reg : FDE
+    port map (
+      C => U1_q(0),
+      CE => nes_up_reg_cmp_eq0000,
+      D => nes_left_reg_not0001,
+      Q => nes_up_reg_2466
+    );
+  nes_scalar_reg_9 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(9),
+      Q => nes_scalar_reg(9)
+    );
+  nes_scalar_reg_8 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(8),
+      Q => nes_scalar_reg(8)
+    );
+  nes_scalar_reg_7 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(7),
+      Q => nes_scalar_reg(7)
+    );
+  nes_scalar_reg_6 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(6),
+      Q => nes_scalar_reg(6)
+    );
+  nes_scalar_reg_5 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(5),
+      Q => nes_scalar_reg(5)
+    );
+  nes_scalar_reg_4 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(4),
+      Q => nes_scalar_reg(4)
+    );
+  nes_scalar_reg_3 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(3),
+      Q => nes_scalar_reg(3)
+    );
+  nes_scalar_reg_2 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(2),
+      Q => nes_scalar_reg(2)
+    );
+  nes_scalar_reg_1 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(1),
+      Q => nes_scalar_reg(1)
+    );
+  nes_scalar_reg_0 : FDC
+    port map (
+      C => U1_q(0),
+      CLR => btn_3_IBUF_2310,
+      D => nes_scalar_next(0),
+      Q => nes_scalar_reg(0)
+    );
+  nes_down_reg : FDE
+    port map (
+      C => U1_q(0),
+      CE => nes_down_reg_cmp_eq0000,
+      D => nes_left_reg_not0001,
+      Q => nes_down_reg_2421
+    );
+  nes_left_reg : FDE
+    port map (
+      C => U1_q(0),
+      CE => nes_left_reg_cmp_eq0000,
+      D => nes_left_reg_not0001,
+      Q => nes_left_reg_2423
+    );
+  U3_RMcnt_0 : FDCPE
     generic map(
-      INIT => X"E4"
+      INIT => '1'
     )
     port map (
-      I0 => U2_hcs(0),
-      I1 => sig_tank11sM(2),
-      I2 => sig_tank11sM(3),
-      O => U3_Mmux_tank11sM_mux0000_51_1226
+      C => U3_q(20),
+      CE => U3_RMcnt_and0001,
+      CLR => U3_RMcnt_0_and0000,
+      D => U3_RMcnt_Q_mux0000(0),
+      PRE => U3_RMcnt_0_and0001,
+      Q => U3_RMcnt(0)
     );
-  U3_Mmux_tank11sM_mux0000_6 : LUT3
+  U3_RMcnt_1 : FDCPE
     generic map(
-      INIT => X"E4"
+      INIT => '1'
     )
     port map (
-      I0 => U2_hcs(0),
-      I1 => sig_tank11sM(0),
-      I2 => sig_tank11sM(1),
-      O => U3_Mmux_tank11sM_mux0000_6_1227
+      C => U3_q(20),
+      CE => U3_RMcnt_and0001,
+      CLR => U3_RMcnt_1_and0000,
+      D => U3_RMcnt_Q_mux0000(1),
+      PRE => U3_RMcnt_1_and0001,
+      Q => U3_RMcnt(1)
     );
-  U3_Mmux_tank11sM_mux0000_4_f5 : MUXF5
+  U3_RMcnt_2 : FDCPE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      I0 => U3_Mmux_tank11sM_mux0000_6_1227,
-      I1 => U3_Mmux_tank11sM_mux0000_51_1226,
-      S => U2_hcs(1),
-      O => U3_Mmux_tank11sM_mux0000_4_f5_1224
+      C => U3_q(20),
+      CE => U3_RMcnt_and0001,
+      CLR => U3_RMcnt_2_and0000,
+      D => U3_RMcnt_Q_mux0000(2),
+      PRE => U3_RMcnt_2_and0001,
+      Q => U3_RMcnt(2)
     );
-  U3_Mmux_tank11sM_mux0000_2_f6 : MUXF6
+  U3_RMcnt_3 : FDCPE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      I0 => U3_Mmux_tank11sM_mux0000_4_f5_1224,
-      I1 => U3_Mmux_tank11sM_mux0000_3_f5_1222,
-      S => U2_hcs(2),
-      O => U3_tank11sM_mux0000
+      C => U3_q(20),
+      CE => U3_RMcnt_and0001,
+      CLR => U3_RMcnt_3_and0000,
+      D => U3_RMcnt_Q_mux0000(3),
+      PRE => U3_RMcnt_3_and0001,
+      Q => U3_RMcnt(3)
+    );
+  U3_RMcnt_4 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RMcnt_and0001,
+      CLR => U3_RMcnt_4_and0000,
+      D => U3_RMcnt_Q_mux0000(4),
+      PRE => U3_RMcnt_4_and0001,
+      Q => U3_RMcnt(4)
+    );
+  U3_RMcnt_5 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RMcnt_and0001,
+      CLR => U3_RMcnt_5_and0000,
+      D => U3_RMcnt_Q_mux0000(5),
+      PRE => U3_RMcnt_5_and0001,
+      Q => U3_RMcnt(5)
+    );
+  U3_RMcnt2_0 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RMcnt2_and0001,
+      CLR => U3_RMcnt2_0_and0000,
+      D => U3_RMcnt2_Q_mux0000(0),
+      PRE => U3_RMcnt2_0_and0001,
+      Q => U3_RMcnt2(0)
+    );
+  U3_RMcnt2_1 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RMcnt2_and0001,
+      CLR => U3_RMcnt2_1_and0000,
+      D => U3_RMcnt2_Q_mux0000(1),
+      PRE => U3_RMcnt2_1_and0001,
+      Q => U3_RMcnt2(1)
+    );
+  U3_RMcnt2_2 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RMcnt2_and0001,
+      CLR => U3_RMcnt2_2_and0000,
+      D => U3_RMcnt2_Q_mux0000(2),
+      PRE => U3_RMcnt2_2_and0001,
+      Q => U3_RMcnt2(2)
+    );
+  U3_RMcnt2_3 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RMcnt2_and0001,
+      CLR => U3_RMcnt2_3_and0000,
+      D => U3_RMcnt2_Q_mux0000(3),
+      PRE => U3_RMcnt2_3_and0001,
+      Q => U3_RMcnt2(3)
+    );
+  U3_RMcnt2_4 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RMcnt2_and0001,
+      CLR => U3_RMcnt2_4_and0000,
+      D => U3_RMcnt2_Q_mux0000(4),
+      PRE => U3_RMcnt2_4_and0001,
+      Q => U3_RMcnt2(4)
+    );
+  U3_RMcnt2_5 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RMcnt2_and0001,
+      CLR => U3_RMcnt2_5_and0000,
+      D => U3_RMcnt2_Q_mux0000(5),
+      PRE => U3_RMcnt2_5_and0001,
+      Q => U3_RMcnt2(5)
+    );
+  U3_CM1_Madd_add0000_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => U3_CM1_Madd_add0000_lut(0),
+      O => U3_CM1_Madd_add0000_cy(0)
+    );
+  U3_CM1_Madd_add0000_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_CM1_Madd_add0000_lut(0),
+      O => U3_CM1_add0000(0)
+    );
+  U3_CM1_Madd_add0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(0),
+      DI => N0,
+      S => U3_CM1_Madd_add0000_cy_1_rt_864,
+      O => U3_CM1_Madd_add0000_cy(1)
+    );
+  U3_CM1_Madd_add0000_xor_1_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(0),
+      LI => U3_CM1_Madd_add0000_cy_1_rt_864,
+      O => U3_CM1_add0000(1)
+    );
+  U3_CM1_Madd_add0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(1),
+      DI => N0,
+      S => U3_CM1_Madd_add0000_cy_2_rt_866,
+      O => U3_CM1_Madd_add0000_cy(2)
+    );
+  U3_CM1_Madd_add0000_xor_2_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(1),
+      LI => U3_CM1_Madd_add0000_cy_2_rt_866,
+      O => U3_CM1_add0000(2)
+    );
+  U3_CM1_Madd_add0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(2),
+      DI => N0,
+      S => U3_CM1_Madd_add0000_cy_3_rt_868,
+      O => U3_CM1_Madd_add0000_cy(3)
+    );
+  U3_CM1_Madd_add0000_xor_3_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(2),
+      LI => U3_CM1_Madd_add0000_cy_3_rt_868,
+      O => U3_CM1_add0000(3)
+    );
+  U3_CM1_Madd_add0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(3),
+      DI => N0,
+      S => U3_CM1_Madd_add0000_cy_4_rt_870,
+      O => U3_CM1_Madd_add0000_cy(4)
+    );
+  U3_CM1_Madd_add0000_xor_4_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(3),
+      LI => U3_CM1_Madd_add0000_cy_4_rt_870,
+      O => U3_CM1_add0000(4)
+    );
+  U3_CM1_Madd_add0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(4),
+      DI => N0,
+      S => U3_CM1_Madd_add0000_cy_5_rt_872,
+      O => U3_CM1_Madd_add0000_cy(5)
+    );
+  U3_CM1_Madd_add0000_xor_5_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(4),
+      LI => U3_CM1_Madd_add0000_cy_5_rt_872,
+      O => U3_CM1_add0000(5)
+    );
+  U3_CM1_Madd_add0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(5),
+      DI => N0,
+      S => U3_CM1_Madd_add0000_cy_6_rt_874,
+      O => U3_CM1_Madd_add0000_cy(6)
+    );
+  U3_CM1_Madd_add0000_xor_6_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(5),
+      LI => U3_CM1_Madd_add0000_cy_6_rt_874,
+      O => U3_CM1_add0000(6)
+    );
+  U3_CM1_Madd_add0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(6),
+      DI => N0,
+      S => U3_CM1_Madd_add0000_cy_7_rt_876,
+      O => U3_CM1_Madd_add0000_cy(7)
+    );
+  U3_CM1_Madd_add0000_xor_7_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(6),
+      LI => U3_CM1_Madd_add0000_cy_7_rt_876,
+      O => U3_CM1_add0000(7)
+    );
+  U3_CM1_Madd_add0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(7),
+      DI => N0,
+      S => U3_CM1_Madd_add0000_cy_8_rt_878,
+      O => U3_CM1_Madd_add0000_cy(8)
+    );
+  U3_CM1_Madd_add0000_xor_8_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(7),
+      LI => U3_CM1_Madd_add0000_cy_8_rt_878,
+      O => U3_CM1_add0000(8)
+    );
+  U3_CM1_Madd_add0000_xor_9_Q : XORCY
+    port map (
+      CI => U3_CM1_Madd_add0000_cy(8),
+      LI => U3_CM1_Madd_add0000_xor_9_rt_880,
+      O => U3_CM1_add0000(9)
+    );
+  U3_CM1_0 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_0_and0000,
+      D => U3_CM1_Q_mux0000(0),
+      PRE => U3_CM1_0_and0001,
+      Q => U3_CM1(0)
+    );
+  U3_CM1_1 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_1_and0000,
+      D => U3_CM1_Q_mux0000(1),
+      PRE => U3_CM1_1_and0001,
+      Q => U3_CM1(1)
+    );
+  U3_CM1_2 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_2_and0000,
+      D => U3_CM1_Q_mux0000(2),
+      PRE => U3_CM1_2_and0001,
+      Q => U3_CM1(2)
+    );
+  U3_CM1_3 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_3_and0000,
+      D => U3_CM1_Q_mux0000(3),
+      PRE => U3_CM1_3_and0001,
+      Q => U3_CM1(3)
+    );
+  U3_CM1_4 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_4_and0000,
+      D => U3_CM1_Q_mux0000(4),
+      PRE => U3_CM1_4_and0001,
+      Q => U3_CM1(4)
+    );
+  U3_CM1_5 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_5_and0000,
+      D => U3_CM1_Q_mux0000(5),
+      PRE => U3_CM1_5_and0001,
+      Q => U3_CM1(5)
+    );
+  U3_CM1_6 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_6_and0000,
+      D => U3_CM1_Q_mux0000(6),
+      PRE => U3_CM1_6_and0001,
+      Q => U3_CM1(6)
+    );
+  U3_CM1_7 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_7_and0000,
+      D => U3_CM1_Q_mux0000(7),
+      PRE => U3_CM1_7_and0001,
+      Q => U3_CM1(7)
+    );
+  U3_CM1_8 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_8_and0000,
+      D => U3_CM1_Q_mux0000(8),
+      PRE => U3_CM1_8_and0001,
+      Q => U3_CM1(8)
+    );
+  U3_CM1_9 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM1_and0000,
+      CLR => U3_CM1_9_and0000,
+      D => U3_CM1_Q_mux0000(9),
+      PRE => U3_CM1_9_and0001,
+      Q => U3_CM1(9)
+    );
+  U3_CM2_Msub_sub0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => N0,
+      S => U3_CM2_Msub_sub0000_cy_0_rt_943,
+      O => U3_CM2_Msub_sub0000_cy(0)
+    );
+  U3_CM2_Msub_sub0000_xor_0_Q : XORCY
+    port map (
+      CI => N1,
+      LI => U3_CM2_Msub_sub0000_cy_0_rt_943,
+      O => U3_CM2_sub0000(0)
+    );
+  U3_CM2_Msub_sub0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(0),
+      DI => N1,
+      S => U3_CM2_Msub_sub0000_lut(1),
+      O => U3_CM2_Msub_sub0000_cy(1)
+    );
+  U3_CM2_Msub_sub0000_xor_1_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(0),
+      LI => U3_CM2_Msub_sub0000_lut(1),
+      O => U3_CM2_sub0000(1)
+    );
+  U3_CM2_Msub_sub0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(1),
+      DI => N1,
+      S => U3_CM2_Msub_sub0000_lut(2),
+      O => U3_CM2_Msub_sub0000_cy(2)
+    );
+  U3_CM2_Msub_sub0000_xor_2_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(1),
+      LI => U3_CM2_Msub_sub0000_lut(2),
+      O => U3_CM2_sub0000(2)
+    );
+  U3_CM2_Msub_sub0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(2),
+      DI => N1,
+      S => U3_CM2_Msub_sub0000_lut(3),
+      O => U3_CM2_Msub_sub0000_cy(3)
+    );
+  U3_CM2_Msub_sub0000_xor_3_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(2),
+      LI => U3_CM2_Msub_sub0000_lut(3),
+      O => U3_CM2_sub0000(3)
+    );
+  U3_CM2_Msub_sub0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(3),
+      DI => N1,
+      S => U3_CM2_Msub_sub0000_lut(4),
+      O => U3_CM2_Msub_sub0000_cy(4)
+    );
+  U3_CM2_Msub_sub0000_xor_4_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(3),
+      LI => U3_CM2_Msub_sub0000_lut(4),
+      O => U3_CM2_sub0000(4)
+    );
+  U3_CM2_Msub_sub0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(4),
+      DI => N1,
+      S => U3_CM2_Msub_sub0000_lut(5),
+      O => U3_CM2_Msub_sub0000_cy(5)
+    );
+  U3_CM2_Msub_sub0000_xor_5_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(4),
+      LI => U3_CM2_Msub_sub0000_lut(5),
+      O => U3_CM2_sub0000(5)
+    );
+  U3_CM2_Msub_sub0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(5),
+      DI => N1,
+      S => U3_CM2_Msub_sub0000_lut(6),
+      O => U3_CM2_Msub_sub0000_cy(6)
+    );
+  U3_CM2_Msub_sub0000_xor_6_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(5),
+      LI => U3_CM2_Msub_sub0000_lut(6),
+      O => U3_CM2_sub0000(6)
+    );
+  U3_CM2_Msub_sub0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(6),
+      DI => N1,
+      S => U3_CM2_Msub_sub0000_lut(7),
+      O => U3_CM2_Msub_sub0000_cy(7)
+    );
+  U3_CM2_Msub_sub0000_xor_7_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(6),
+      LI => U3_CM2_Msub_sub0000_lut(7),
+      O => U3_CM2_sub0000(7)
+    );
+  U3_CM2_Msub_sub0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(7),
+      DI => N1,
+      S => U3_CM2_Msub_sub0000_lut(8),
+      O => U3_CM2_Msub_sub0000_cy(8)
+    );
+  U3_CM2_Msub_sub0000_xor_8_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(7),
+      LI => U3_CM2_Msub_sub0000_lut(8),
+      O => U3_CM2_sub0000(8)
+    );
+  U3_CM2_Msub_sub0000_xor_9_Q : XORCY
+    port map (
+      CI => U3_CM2_Msub_sub0000_cy(8),
+      LI => U3_CM2_Msub_sub0000_lut(9),
+      O => U3_CM2_sub0000(9)
+    );
+  U3_CM2_0 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_0_and0000,
+      D => U3_CM2_Q_mux0000(0),
+      PRE => U3_CM2_0_and0001,
+      Q => U3_CM2(0)
+    );
+  U3_CM2_1 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_1_and0000,
+      D => U3_CM2_Q_mux0000(1),
+      PRE => U3_CM2_1_and0001,
+      Q => U3_CM2(1)
+    );
+  U3_CM2_2 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_2_and0000,
+      D => U3_CM2_Q_mux0000(2),
+      PRE => U3_CM2_2_and0001,
+      Q => U3_CM2(2)
+    );
+  U3_CM2_3 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_3_and0000,
+      D => U3_CM2_Q_mux0000(3),
+      PRE => U3_CM2_3_and0001,
+      Q => U3_CM2(3)
+    );
+  U3_CM2_4 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_4_and0000,
+      D => U3_CM2_Q_mux0000(4),
+      PRE => U3_CM2_4_and0001,
+      Q => U3_CM2(4)
+    );
+  U3_CM2_5 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_5_and0000,
+      D => U3_CM2_Q_mux0000(5),
+      PRE => U3_CM2_5_and0001,
+      Q => U3_CM2(5)
+    );
+  U3_CM2_6 : FDCPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_6_and0000,
+      D => U3_CM2_Q_mux0000(6),
+      PRE => U3_CM2_6_and0001,
+      Q => U3_CM2(6)
+    );
+  U3_CM2_7 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_7_and0000,
+      D => U3_CM2_Q_mux0000(7),
+      PRE => U3_CM2_7_and0001,
+      Q => U3_CM2(7)
+    );
+  U3_CM2_8 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_8_and0000,
+      D => U3_CM2_Q_mux0000(8),
+      PRE => U3_CM2_8_and0001,
+      Q => U3_CM2(8)
+    );
+  U3_CM2_9 : FDCPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(18),
+      CE => U3_CM2_and0000,
+      CLR => U3_CM2_9_and0000,
+      D => U3_CM2_Q_mux0000(9),
+      PRE => U3_CM2_9_and0001,
+      Q => U3_CM2(9)
+    );
+  U3_RM1_2 : FDPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      D => U3_RM1_mux0002(7),
+      PRE => U3_RMcnt_and0000,
+      Q => U3_RM1(2)
+    );
+  U3_RM1_0 : FDPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      D => U3_RM1_mux0002(9),
+      PRE => U3_RMcnt_and0000,
+      Q => U3_RM1(0)
+    );
+  U3_RM1_1 : FDPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      D => U3_RM1_mux0002(8),
+      PRE => U3_RMcnt_and0000,
+      Q => U3_RM1(1)
+    );
+  U3_RM1_3 : FDCE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      CLR => U3_RMcnt_and0000,
+      D => U3_RM1_mux0002(6),
+      Q => U3_RM1(3)
+    );
+  U3_RM1_4 : FDPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      D => U3_RM1_mux0002(5),
+      PRE => U3_RMcnt_and0000,
+      Q => U3_RM1(4)
+    );
+  U3_RM1_7 : FDPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      D => U3_RM1_mux0002(2),
+      PRE => U3_RMcnt_and0000,
+      Q => U3_RM1(7)
+    );
+  U3_RM1_5 : FDCE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      CLR => U3_RMcnt_and0000,
+      D => U3_RM1_mux0002(4),
+      Q => U3_RM1(5)
+    );
+  U3_RM1_6 : FDPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      D => U3_RM1_mux0002(3),
+      PRE => U3_RMcnt_and0000,
+      Q => U3_RM1(6)
+    );
+  U3_RM1_8 : FDPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      D => U3_RM1_mux0002(1),
+      PRE => U3_RMcnt_and0000,
+      Q => U3_RM1(8)
+    );
+  U3_RM1_9 : FDCE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM1_and0000,
+      CLR => U3_RMcnt_and0000,
+      D => U3_RM1_mux0002(0),
+      Q => U3_RM1(9)
+    );
+  U3_RM2_2 : FDPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      D => U3_RM2_mux0002(7),
+      PRE => U3_RMcnt2_and0000,
+      Q => U3_RM2(2)
+    );
+  U3_RM2_0 : FDPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      D => U3_RM2_mux0002(9),
+      PRE => U3_RMcnt2_and0000,
+      Q => U3_RM2(0)
+    );
+  U3_RM2_1 : FDPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      D => U3_RM2_mux0002(8),
+      PRE => U3_RMcnt2_and0000,
+      Q => U3_RM2(1)
+    );
+  U3_RM2_3 : FDCE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      CLR => U3_RMcnt2_and0000,
+      D => U3_RM2_mux0002(6),
+      Q => U3_RM2(3)
+    );
+  U3_RM2_4 : FDPE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      D => U3_RM2_mux0002(5),
+      PRE => U3_RMcnt2_and0000,
+      Q => U3_RM2(4)
+    );
+  U3_RM2_7 : FDPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      D => U3_RM2_mux0002(2),
+      PRE => U3_RMcnt2_and0000,
+      Q => U3_RM2(7)
+    );
+  U3_RM2_5 : FDCE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      CLR => U3_RMcnt2_and0000,
+      D => U3_RM2_mux0002(4),
+      Q => U3_RM2(5)
+    );
+  U3_RM2_6 : FDPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      D => U3_RM2_mux0002(3),
+      PRE => U3_RMcnt2_and0000,
+      Q => U3_RM2(6)
+    );
+  U3_RM2_8 : FDPE
+    generic map(
+      INIT => '1'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      D => U3_RM2_mux0002(1),
+      PRE => U3_RMcnt2_and0000,
+      Q => U3_RM2(8)
+    );
+  U3_RM2_9 : FDCE
+    generic map(
+      INIT => '0'
+    )
+    port map (
+      C => U3_q(20),
+      CE => U3_RM2_and0000,
+      CLR => U3_RMcnt2_and0000,
+      D => U3_RM2_mux0002(0),
+      Q => U3_RM2(9)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(8),
+      DI => U3_spriteonM2_addsub0001(9),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(9),
+      O => U3_spriteonM2_cmp_le0000
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_9_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(9),
+      I1 => U2_hcs(9),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(9)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(7),
+      DI => U3_spriteonM2_addsub0001(8),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(8),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(8)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_8_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(8),
+      I1 => U2_hcs(8),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(8)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(6),
+      DI => U3_spriteonM2_addsub0001(7),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(7),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(7)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(7),
+      I1 => U2_hcs(7),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(7)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(5),
+      DI => U3_spriteonM2_addsub0001(6),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(6),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(6)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_6_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(6),
+      I1 => U2_hcs(6),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(6)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(4),
+      DI => U3_spriteonM2_addsub0001(5),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(5),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(5)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_5_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(5),
+      I1 => U2_hcs(5),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(5)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(3),
+      DI => U3_spriteonM2_addsub0001(4),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(4),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(4)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_4_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(4),
+      I1 => U2_hcs(4),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(4)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(2),
+      DI => U3_spriteonM2_addsub0001(3),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(3),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(3)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(3),
+      I1 => U2_hcs(3),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(3)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(1),
+      DI => U3_spriteonM2_addsub0001(2),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(2),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(2)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(2),
+      I1 => U2_hcs(2),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(2)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_le0000_cy(0),
+      DI => U3_spriteonM2_addsub0001(1),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(1),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(1)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(1),
+      I1 => U2_hcs(1),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(1)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U3_spriteonM2_addsub0001(0),
+      S => U3_Mcompar_spriteonM2_cmp_le0000_lut(0),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_cy(0)
+    );
+  U3_Mcompar_spriteonM2_cmp_le0000_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0001(0),
+      I1 => U2_hcs(0),
+      O => U3_Mcompar_spriteonM2_cmp_le0000_lut(0)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(8),
+      DI => U3_spriteonM1_addsub0001(9),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(9),
+      O => U3_spriteonM1_cmp_le0000
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_9_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(9),
+      I1 => U2_hcs(9),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(9)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(7),
+      DI => U3_spriteonM1_addsub0001(8),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(8),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(8)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_8_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(8),
+      I1 => U2_hcs(8),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(8)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(6),
+      DI => U3_spriteonM1_addsub0001(7),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(7),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(7)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(7),
+      I1 => U2_hcs(7),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(7)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(5),
+      DI => U3_spriteonM1_addsub0001(6),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(6),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(6)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_6_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(6),
+      I1 => U2_hcs(6),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(6)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(4),
+      DI => U3_spriteonM1_addsub0001(5),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(5),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(5)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_5_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(5),
+      I1 => U2_hcs(5),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(5)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(3),
+      DI => U3_spriteonM1_addsub0001(4),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(4),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(4)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_4_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(4),
+      I1 => U2_hcs(4),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(4)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(2),
+      DI => U3_spriteonM1_addsub0001(3),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(3),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(3)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(3),
+      I1 => U2_hcs(3),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(3)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(1),
+      DI => U3_spriteonM1_addsub0001(2),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(2),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(2)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(2),
+      I1 => U2_hcs(2),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(2)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_le0000_cy(0),
+      DI => U3_spriteonM1_addsub0001(1),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(1),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(1)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(1),
+      I1 => U2_hcs(1),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(1)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U3_spriteonM1_addsub0001(0),
+      S => U3_Mcompar_spriteonM1_cmp_le0000_lut(0),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_cy(0)
+    );
+  U3_Mcompar_spriteonM1_cmp_le0000_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0001(0),
+      I1 => U2_hcs(0),
+      O => U3_Mcompar_spriteonM1_cmp_le0000_lut(0)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(8),
+      DI => U2_vcs(9),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(9),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(9)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_9_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(9),
+      I1 => U3_spriteonM2_addsub0003(9),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(9)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(7),
+      DI => U2_vcs(8),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(8),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(8)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_8_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(8),
+      I1 => U3_spriteonM2_addsub0003(8),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(8)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(6),
+      DI => U2_vcs(7),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(7),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(7)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(7),
+      I1 => U3_spriteonM2_addsub0003(7),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(7)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(5),
+      DI => U2_vcs(6),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(6),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(6)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_6_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U3_spriteonM2_addsub0003(6),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(6)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(4),
+      DI => U2_vcs(5),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(5),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(5)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_5_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(5),
+      I1 => U3_spriteonM2_addsub0003(5),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(5)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(3),
+      DI => U2_vcs(4),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(4),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(4)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_4_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(4),
+      I1 => U3_spriteonM2_addsub0003(4),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(4)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(2),
+      DI => U2_vcs(3),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(3),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(3)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(3),
+      I1 => U3_spriteonM2_addsub0003(3),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(3)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(1),
+      DI => U2_vcs(2),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(2),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(2)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(2),
+      I1 => U3_spriteonM2_addsub0003(2),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(2)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_lt0000_cy(0),
+      DI => U2_vcs(1),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(1),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(1)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(1),
+      I1 => U3_spriteonM2_addsub0003(1),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(1)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U2_vcs(0),
+      S => U3_Mcompar_spriteonM2_cmp_lt0000_lut(0),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_cy(0)
+    );
+  U3_Mcompar_spriteonM2_cmp_lt0000_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(0),
+      I1 => U3_spriteonM2_addsub0003(0),
+      O => U3_Mcompar_spriteonM2_cmp_lt0000_lut(0)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(8),
+      DI => U3_spriteonM2_addsub0000(9),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(9),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(9)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(7),
+      DI => U3_spriteonM2_addsub0000(8),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(8),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(8)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(6),
+      DI => U3_spriteonM2_addsub0000(7),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(7),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(7)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0000(7),
+      I1 => U2_hcs(7),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(7)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(5),
+      DI => U3_spriteonM2_addsub0000(6),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(6),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(6)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(4),
+      DI => U3_spriteonM2_addsub0000(5),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(5),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(5)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(3),
+      DI => U3_spriteonM2_addsub0000(4),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(4),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(4)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(2),
+      DI => U3_CM2(3),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(3),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(3)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM2(3),
+      I1 => U2_hcs(3),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(3)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(1),
+      DI => U3_CM2(2),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(2),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(2)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM2(2),
+      I1 => U2_hcs(2),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(2)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_gt0000_cy(0),
+      DI => U3_CM2(1),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(1),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(1)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM2(1),
+      I1 => U2_hcs(1),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(1)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U3_CM2(0),
+      S => U3_Mcompar_spriteonM2_cmp_gt0000_lut(0),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_cy(0)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM2(0),
+      I1 => U2_hcs(0),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(0)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(8),
+      DI => U2_vcs(9),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(9),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(9)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_9_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(9),
+      I1 => U3_spriteonM1_addsub0003(9),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(9)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(7),
+      DI => U2_vcs(8),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(8),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(8)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_8_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(8),
+      I1 => U3_spriteonM1_addsub0003(8),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(8)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(6),
+      DI => U2_vcs(7),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(7),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(7)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(7),
+      I1 => U3_spriteonM1_addsub0003(7),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(7)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(5),
+      DI => U2_vcs(6),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(6),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(6)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_6_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U3_spriteonM1_addsub0003(6),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(6)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(4),
+      DI => U2_vcs(5),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(5),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(5)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_5_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(5),
+      I1 => U3_spriteonM1_addsub0003(5),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(5)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(3),
+      DI => U2_vcs(4),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(4),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(4)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_4_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(4),
+      I1 => U3_spriteonM1_addsub0003(4),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(4)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(2),
+      DI => U2_vcs(3),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(3),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(3)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(3),
+      I1 => U3_spriteonM1_addsub0003(3),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(3)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(1),
+      DI => U2_vcs(2),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(2),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(2)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(2),
+      I1 => U3_spriteonM1_addsub0003(2),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(2)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_lt0000_cy(0),
+      DI => U2_vcs(1),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(1),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(1)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(1),
+      I1 => U3_spriteonM1_addsub0003(1),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(1)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U2_vcs(0),
+      S => U3_Mcompar_spriteonM1_cmp_lt0000_lut(0),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_cy(0)
+    );
+  U3_Mcompar_spriteonM1_cmp_lt0000_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(0),
+      I1 => U3_spriteonM1_addsub0003(0),
+      O => U3_Mcompar_spriteonM1_cmp_lt0000_lut(0)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(8),
+      DI => U3_spriteonM1_addsub0000(9),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(9),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(9)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(7),
+      DI => U3_spriteonM1_addsub0000(8),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(8),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(8)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(6),
+      DI => U3_spriteonM1_addsub0000(7),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(7),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(7)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0000(7),
+      I1 => U2_hcs(7),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(7)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(5),
+      DI => U3_spriteonM1_addsub0000(6),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(6),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(6)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(4),
+      DI => U3_spriteonM1_addsub0000(5),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(5),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(5)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(3),
+      DI => U3_spriteonM1_addsub0000(4),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(4),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(4)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(2),
+      DI => U3_CM1(3),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(3),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(3)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM1(3),
+      I1 => U2_hcs(3),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(3)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(1),
+      DI => U3_CM1(2),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(2),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(2)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM1(2),
+      I1 => U2_hcs(2),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(2)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_gt0000_cy(0),
+      DI => U3_CM1(1),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(1),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(1)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM1(1),
+      I1 => U2_hcs(1),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(1)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U3_CM1(0),
+      S => U3_Mcompar_spriteonM1_cmp_gt0000_lut(0),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_cy(0)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM1(0),
+      I1 => U2_hcs(0),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(0)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_9_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(8),
+      LI => U3_spriteonM2_addsub0000_9_1_2184,
+      O => U3_spriteonM2_addsub0001(9)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_8_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(7),
+      LI => U3_spriteonM2_addsub0000_8_2_2181,
+      O => U3_spriteonM2_addsub0001(8)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(7),
+      DI => N0,
+      S => U3_spriteonM2_addsub0000_8_2_2181,
+      O => U3_Madd_spriteonM2_addsub0001_cy(8)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_7_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(6),
+      LI => U3_Madd_spriteonM2_addsub0000_xor_7_11_1084,
+      O => U3_spriteonM2_addsub0001(7)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(6),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0000_xor_7_11_1084,
+      O => U3_Madd_spriteonM2_addsub0001_cy(7)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_6_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(5),
+      LI => U3_Madd_spriteonM2_addsub0000_xor_6_11_1083,
+      O => U3_spriteonM2_addsub0001(6)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(5),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0000_xor_6_11_1083,
+      O => U3_Madd_spriteonM2_addsub0001_cy(6)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_5_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(4),
+      LI => U3_Madd_spriteonM2_addsub0000_xor_5_11_1082,
+      O => U3_spriteonM2_addsub0001(5)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(4),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0000_xor_5_11_1082,
+      O => U3_Madd_spriteonM2_addsub0001_cy(5)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_4_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(3),
+      LI => U3_Madd_spriteonM2_addsub0000_xor_4_11,
+      O => U3_spriteonM2_addsub0001(4)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(3),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0000_xor_4_11,
+      O => U3_Madd_spriteonM2_addsub0001_cy(4)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_3_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(2),
+      LI => U3_Madd_spriteonM2_addsub0001_cy_3_rt_1090,
+      O => U3_spriteonM2_addsub0001(3)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(2),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0001_cy_3_rt_1090,
+      O => U3_Madd_spriteonM2_addsub0001_cy(3)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_2_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(1),
+      LI => U3_Madd_spriteonM2_addsub0001_lut_2_Q,
+      O => U3_spriteonM2_addsub0001(2)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(1),
+      DI => N1,
+      S => U3_Madd_spriteonM2_addsub0001_lut_2_Q,
+      O => U3_Madd_spriteonM2_addsub0001_cy(2)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_1_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(0),
+      LI => U3_Madd_spriteonM2_addsub0001_cy_1_rt_1087,
+      O => U3_spriteonM2_addsub0001(1)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0001_cy(0),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0001_cy_1_rt_1087,
+      O => U3_Madd_spriteonM2_addsub0001_cy(1)
+    );
+  U3_Madd_spriteonM2_addsub0001_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_spriteonM2_addsub0001_lut_0_Q,
+      O => U3_spriteonM2_addsub0001(0)
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => U3_Madd_spriteonM2_addsub0001_lut_0_Q,
+      O => U3_Madd_spriteonM2_addsub0001_cy(0)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_9_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(8),
+      LI => U3_spriteonM1_addsub0000_9_1_2142,
+      O => U3_spriteonM1_addsub0001(9)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_8_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(7),
+      LI => U3_spriteonM1_addsub0000_8_2_2139,
+      O => U3_spriteonM1_addsub0001(8)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(7),
+      DI => N0,
+      S => U3_spriteonM1_addsub0000_8_2_2139,
+      O => U3_Madd_spriteonM1_addsub0001_cy(8)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_7_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(6),
+      LI => U3_Madd_spriteonM1_addsub0000_xor_7_11_1029,
+      O => U3_spriteonM1_addsub0001(7)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(6),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0000_xor_7_11_1029,
+      O => U3_Madd_spriteonM1_addsub0001_cy(7)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_6_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(5),
+      LI => U3_Madd_spriteonM1_addsub0000_xor_6_11_1028,
+      O => U3_spriteonM1_addsub0001(6)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(5),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0000_xor_6_11_1028,
+      O => U3_Madd_spriteonM1_addsub0001_cy(6)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_5_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(4),
+      LI => U3_Madd_spriteonM1_addsub0000_xor_5_11_1027,
+      O => U3_spriteonM1_addsub0001(5)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(4),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0000_xor_5_11_1027,
+      O => U3_Madd_spriteonM1_addsub0001_cy(5)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_4_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(3),
+      LI => U3_Madd_spriteonM1_addsub0000_xor_4_11,
+      O => U3_spriteonM1_addsub0001(4)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(3),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0000_xor_4_11,
+      O => U3_Madd_spriteonM1_addsub0001_cy(4)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_3_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(2),
+      LI => U3_Madd_spriteonM1_addsub0001_cy_3_rt_1035,
+      O => U3_spriteonM1_addsub0001(3)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(2),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0001_cy_3_rt_1035,
+      O => U3_Madd_spriteonM1_addsub0001_cy(3)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_2_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(1),
+      LI => U3_Madd_spriteonM1_addsub0001_lut_2_Q,
+      O => U3_spriteonM1_addsub0001(2)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(1),
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0001_lut_2_Q,
+      O => U3_Madd_spriteonM1_addsub0001_cy(2)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_1_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(0),
+      LI => U3_Madd_spriteonM1_addsub0001_cy_1_rt_1032,
+      O => U3_spriteonM1_addsub0001(1)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0001_cy(0),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0001_cy_1_rt_1032,
+      O => U3_Madd_spriteonM1_addsub0001_cy(1)
+    );
+  U3_Madd_spriteonM1_addsub0001_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_spriteonM1_addsub0001_lut_0_Q,
+      O => U3_spriteonM1_addsub0001(0)
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0001_lut_0_Q,
+      O => U3_Madd_spriteonM1_addsub0001_cy(0)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(8),
+      DI => U2_vcs(9),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(9),
+      O => U3_spriteonM2_cmp_ge0000
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_9_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(9),
+      I1 => U3_spriteonM2_addsub0002(9),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(9)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(7),
+      DI => U2_vcs(8),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(8),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(8)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_8_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(8),
+      I1 => U3_spriteonM2_addsub0002(8),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(8)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(6),
+      DI => U2_vcs(7),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(7),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(7)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(7),
+      I1 => U3_spriteonM2_addsub0002(7),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(7)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(5),
+      DI => U2_vcs(6),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(6),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(6)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_6_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U3_spriteonM2_addsub0002(6),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(6)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(4),
+      DI => U2_vcs(5),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(5),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(5)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_5_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(5),
+      I1 => U3_spriteonM2_addsub0002(5),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(5)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(3),
+      DI => U2_vcs(4),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(4),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(4)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_4_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(4),
+      I1 => U3_spriteonM2_addsub0002(4),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(4)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(2),
+      DI => U2_vcs(3),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(3),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(3)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(3),
+      I1 => U3_spriteonM2_addsub0002(3),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(3)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(1),
+      DI => U2_vcs(2),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(2),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(2)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(2),
+      I1 => U3_spriteonM2_addsub0002(2),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(2)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM2_cmp_ge0000_cy(0),
+      DI => U2_vcs(1),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(1),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(1)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(1),
+      I1 => U3_spriteonM2_addsub0002(1),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(1)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U2_vcs(0),
+      S => U3_Mcompar_spriteonM2_cmp_ge0000_lut(0),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_cy(0)
+    );
+  U3_Mcompar_spriteonM2_cmp_ge0000_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(0),
+      I1 => U3_spriteonM2_addsub0002(0),
+      O => U3_Mcompar_spriteonM2_cmp_ge0000_lut(0)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(8),
+      DI => U2_vcs(9),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(9),
+      O => U3_spriteonM1_cmp_ge0000
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_9_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(9),
+      I1 => U3_spriteonM1_addsub0002(9),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(9)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(7),
+      DI => U2_vcs(8),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(8),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(8)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_8_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(8),
+      I1 => U3_spriteonM1_addsub0002(8),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(8)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(6),
+      DI => U2_vcs(7),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(7),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(7)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(7),
+      I1 => U3_spriteonM1_addsub0002(7),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(7)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(5),
+      DI => U2_vcs(6),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(6),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(6)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_6_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U3_spriteonM1_addsub0002(6),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(6)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(4),
+      DI => U2_vcs(5),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(5),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(5)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_5_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(5),
+      I1 => U3_spriteonM1_addsub0002(5),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(5)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(3),
+      DI => U2_vcs(4),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(4),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(4)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_4_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(4),
+      I1 => U3_spriteonM1_addsub0002(4),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(4)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(2),
+      DI => U2_vcs(3),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(3),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(3)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(3),
+      I1 => U3_spriteonM1_addsub0002(3),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(3)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(1),
+      DI => U2_vcs(2),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(2),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(2)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(2),
+      I1 => U3_spriteonM1_addsub0002(2),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(2)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteonM1_cmp_ge0000_cy(0),
+      DI => U2_vcs(1),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(1),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(1)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(1),
+      I1 => U3_spriteonM1_addsub0002(1),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(1)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U2_vcs(0),
+      S => U3_Mcompar_spriteonM1_cmp_ge0000_lut(0),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_cy(0)
+    );
+  U3_Mcompar_spriteonM1_cmp_ge0000_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_vcs(0),
+      I1 => U3_spriteonM1_addsub0002(0),
+      O => U3_Mcompar_spriteonM1_cmp_ge0000_lut(0)
     );
   U3_Mcompar_spriteon2_cmp_lt0000_cy_9_Q : MUXCY
     port map (
@@ -2580,7 +6224,7 @@ begin
   U3_Mcompar_spriteon2f_cmp_le0000_cy_4_Q : MUXCY
     port map (
       CI => U3_Mcompar_spriteon2f_cmp_le0000_cy(3),
-      DI => U3_spriteon2f_add0002(4),
+      DI => U3_spriteon2f_add0004(4),
       S => U3_Mcompar_spriteon2f_cmp_le0000_lut(4),
       O => U3_Mcompar_spriteon2f_cmp_le0000_cy(4)
     );
@@ -2648,82 +6292,204 @@ begin
       I1 => U2_hcs(0),
       O => U3_Mcompar_spriteon2f_cmp_le0000_lut(0)
     );
+  U3_Mmux_tank21sM_mux0000_4 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank21sM(6),
+      I2 => sig_tank21sM(7),
+      O => U3_Mmux_tank21sM_mux0000_4_1732
+    );
+  U3_Mmux_tank21sM_mux0000_5 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank21sM(4),
+      I2 => sig_tank21sM(5),
+      O => U3_Mmux_tank21sM_mux0000_5_1734
+    );
+  U3_Mmux_tank21sM_mux0000_3_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_tank21sM_mux0000_5_1734,
+      I1 => U3_Mmux_tank21sM_mux0000_4_1732,
+      S => U2_hcs(1),
+      O => U3_Mmux_tank21sM_mux0000_3_f5_1731
+    );
+  U3_Mmux_tank21sM_mux0000_51 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank21sM(2),
+      I2 => sig_tank21sM(3),
+      O => U3_Mmux_tank21sM_mux0000_51_1735
+    );
+  U3_Mmux_tank21sM_mux0000_6 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank21sM(0),
+      I2 => sig_tank21sM(1),
+      O => U3_Mmux_tank21sM_mux0000_6_1736
+    );
+  U3_Mmux_tank21sM_mux0000_4_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_tank21sM_mux0000_6_1736,
+      I1 => U3_Mmux_tank21sM_mux0000_51_1735,
+      S => U2_hcs(1),
+      O => U3_Mmux_tank21sM_mux0000_4_f5_1733
+    );
+  U3_Mmux_tank21sM_mux0000_2_f6 : MUXF6
+    port map (
+      I0 => U3_Mmux_tank21sM_mux0000_4_f5_1733,
+      I1 => U3_Mmux_tank21sM_mux0000_3_f5_1731,
+      S => U2_hcs(2),
+      O => U3_tank21sM_mux0000
+    );
+  U3_Mmux_tank210sM_mux0000_4 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank210sM(6),
+      I2 => sig_tank210sM(7),
+      O => U3_Mmux_tank210sM_mux0000_4_1726
+    );
+  U3_Mmux_tank210sM_mux0000_5 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank210sM(4),
+      I2 => sig_tank210sM(5),
+      O => U3_Mmux_tank210sM_mux0000_5_1728
+    );
+  U3_Mmux_tank210sM_mux0000_3_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_tank210sM_mux0000_5_1728,
+      I1 => U3_Mmux_tank210sM_mux0000_4_1726,
+      S => U2_hcs(1),
+      O => U3_Mmux_tank210sM_mux0000_3_f5_1725
+    );
+  U3_Mmux_tank210sM_mux0000_51 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank210sM(2),
+      I2 => sig_tank210sM(3),
+      O => U3_Mmux_tank210sM_mux0000_51_1729
+    );
+  U3_Mmux_tank210sM_mux0000_6 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank210sM(0),
+      I2 => sig_tank210sM(1),
+      O => U3_Mmux_tank210sM_mux0000_6_1730
+    );
+  U3_Mmux_tank210sM_mux0000_4_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_tank210sM_mux0000_6_1730,
+      I1 => U3_Mmux_tank210sM_mux0000_51_1729,
+      S => U2_hcs(1),
+      O => U3_Mmux_tank210sM_mux0000_4_f5_1727
+    );
+  U3_Mmux_tank210sM_mux0000_2_f6 : MUXF6
+    port map (
+      I0 => U3_Mmux_tank210sM_mux0000_4_f5_1727,
+      I1 => U3_Mmux_tank210sM_mux0000_3_f5_1725,
+      S => U2_hcs(2),
+      O => U3_tank210sM_mux0000
+    );
   U3_Mmux_M1a_mux0000_7 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
+      I0 => U3_rom_pix1(0),
       I1 => M1a_28_Q,
       I2 => M1a_29_Q,
-      O => U3_Mmux_M1a_mux0000_7_1134
+      O => U3_Mmux_M1a_mux0000_7_1633
     );
   U3_Mmux_M1a_mux0000_5_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M1a_mux0000_7_1134,
-      I1 => U3_Mmux_M1a_mux0000_6_1129,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1a_mux0000_5_f5_1126
+      I0 => U3_Mmux_M1a_mux0000_7_1633,
+      I1 => U3_Mmux_M1a_mux0000_6_1628,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1a_mux0000_5_f5_1625
     );
   U3_Mmux_M1a_mux0000_71 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
+      I0 => U3_rom_pix1(0),
       I1 => M1a_26_Q,
       I2 => M1a_27_Q,
-      O => U3_Mmux_M1a_mux0000_71_1135
+      O => U3_Mmux_M1a_mux0000_71_1634
     );
   U3_Mmux_M1a_mux0000_8 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
+      I0 => U3_rom_pix1(0),
       I1 => M1a_24_Q,
       I2 => M1a_25_Q,
-      O => U3_Mmux_M1a_mux0000_8_1143
+      O => U3_Mmux_M1a_mux0000_8_1640
     );
   U3_Mmux_M1a_mux0000_6_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M1a_mux0000_8_1143,
-      I1 => U3_Mmux_M1a_mux0000_71_1135,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1a_mux0000_6_f5_1130
+      I0 => U3_Mmux_M1a_mux0000_8_1640,
+      I1 => U3_Mmux_M1a_mux0000_71_1634,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1a_mux0000_6_f5_1629
     );
   U3_Mmux_M1a_mux0000_4_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_M1a_mux0000_6_f5_1130,
-      I1 => U3_Mmux_M1a_mux0000_5_f5_1126,
-      S => U3_xpix1(2),
-      O => U3_Mmux_M1a_mux0000_4_f6_1124
+      I0 => U3_Mmux_M1a_mux0000_6_f5_1629,
+      I1 => U3_Mmux_M1a_mux0000_5_f5_1625,
+      S => U3_rom_pix1(2),
+      O => U3_Mmux_M1a_mux0000_4_f6_1623
     );
   U3_Mmux_M1a_mux0000_72 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
+      I0 => U3_rom_pix1(0),
       I1 => M1a_22_Q,
       I2 => M1a_23_Q,
-      O => U3_Mmux_M1a_mux0000_72_1136
+      O => U3_Mmux_M1a_mux0000_72_1635
     );
   U3_Mmux_M1a_mux0000_81 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
-      I1 => M1a_20_Q_88,
+      I0 => U3_rom_pix1(0),
+      I1 => M1a_20_Q_96,
       I2 => M1a_21_Q,
-      O => U3_Mmux_M1a_mux0000_81_1144
+      O => U3_Mmux_M1a_mux0000_81_1641
     );
   U3_Mmux_M1a_mux0000_6_f5_0 : MUXF5
     port map (
-      I0 => U3_Mmux_M1a_mux0000_81_1144,
-      I1 => U3_Mmux_M1a_mux0000_72_1136,
-      S => U3_xpix1(1),
+      I0 => U3_Mmux_M1a_mux0000_81_1641,
+      I1 => U3_Mmux_M1a_mux0000_72_1635,
+      S => U3_rom_pix1(1),
       O => U3_Mmux_M1a_mux0000_6_f51
     );
   U3_Mmux_M1a_mux0000_82 : LUT3
@@ -2731,47 +6497,37 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
-      I1 => M1a_18_Q,
+      I0 => U3_rom_pix1(0),
+      I1 => M1a_18_Q_93,
       I2 => M1a_19_Q,
-      O => U3_Mmux_M1a_mux0000_82_1145
-    );
-  U3_Mmux_M1a_mux0000_9 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1a_16_Q_83,
-      I2 => M1a_14_Q_81,
-      O => U3_Mmux_M1a_mux0000_9_1150
+      O => U3_Mmux_M1a_mux0000_82_1642
     );
   U3_Mmux_M1a_mux0000_7_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M1a_mux0000_9_1150,
-      I1 => U3_Mmux_M1a_mux0000_82_1145,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1a_mux0000_7_f5_1140
+      I0 => U3_Mmux_M1a_mux0000_9_1647,
+      I1 => U3_Mmux_M1a_mux0000_82_1642,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1a_mux0000_7_f5_1637
     );
   U3_Mmux_M1a_mux0000_5_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_M1a_mux0000_7_f5_1140,
+      I0 => U3_Mmux_M1a_mux0000_7_f5_1637,
       I1 => U3_Mmux_M1a_mux0000_6_f51,
-      S => U3_xpix1(2),
-      O => U3_Mmux_M1a_mux0000_5_f6_1127
+      S => U3_rom_pix1(2),
+      O => U3_Mmux_M1a_mux0000_5_f6_1626
     );
   U3_Mmux_M1a_mux0000_3_f7 : MUXF7
     port map (
-      I0 => U3_Mmux_M1a_mux0000_5_f6_1127,
-      I1 => U3_Mmux_M1a_mux0000_4_f6_1124,
-      S => U3_xpix1(3),
-      O => U3_Mmux_M1a_mux0000_3_f7_1123
+      I0 => U3_Mmux_M1a_mux0000_5_f6_1626,
+      I1 => U3_Mmux_M1a_mux0000_4_f6_1623,
+      S => U3_rom_pix1(3),
+      O => U3_Mmux_M1a_mux0000_3_f7_1622
     );
   U3_Mmux_M1a_mux0000_6_f5_1 : MUXF5
     port map (
-      I0 => U3_Mmux_M1a_mux0000_83_1146,
-      I1 => U3_Mmux_M1a_mux0000_73_1137,
-      S => U3_xpix1(1),
+      I0 => U3_Mmux_M1a_mux0000_83_1643,
+      I1 => U3_Mmux_M1a_mux0000_73_1636,
+      S => U3_rom_pix1(1),
       O => U3_Mmux_M1a_mux0000_6_f52
     );
   U3_Mmux_M1a_mux0000_84 : LUT3
@@ -2779,50 +6535,40 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
+      I0 => U3_rom_pix1(0),
       I1 => M1a_10_Q,
       I2 => M1a_11_Q,
-      O => U3_Mmux_M1a_mux0000_84_1147
+      O => U3_Mmux_M1a_mux0000_84_1644
     );
   U3_Mmux_M1a_mux0000_91 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
+      I0 => U3_rom_pix1(0),
       I1 => M1a_8_Q,
       I2 => M1a_9_Q,
-      O => U3_Mmux_M1a_mux0000_91_1151
+      O => U3_Mmux_M1a_mux0000_91_1648
     );
   U3_Mmux_M1a_mux0000_7_f5_0 : MUXF5
     port map (
-      I0 => U3_Mmux_M1a_mux0000_91_1151,
-      I1 => U3_Mmux_M1a_mux0000_84_1147,
-      S => U3_xpix1(1),
+      I0 => U3_Mmux_M1a_mux0000_91_1648,
+      I1 => U3_Mmux_M1a_mux0000_84_1644,
+      S => U3_rom_pix1(1),
       O => U3_Mmux_M1a_mux0000_7_f51
     );
   U3_Mmux_M1a_mux0000_5_f6_0 : MUXF6
     port map (
       I0 => U3_Mmux_M1a_mux0000_7_f51,
       I1 => U3_Mmux_M1a_mux0000_6_f52,
-      S => U3_xpix1(2),
+      S => U3_rom_pix1(2),
       O => U3_Mmux_M1a_mux0000_5_f61
-    );
-  U3_Mmux_M1a_mux0000_92 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1a_4_Q_127,
-      I2 => M1a_5_Q,
-      O => U3_Mmux_M1a_mux0000_92_1152
     );
   U3_Mmux_M1a_mux0000_7_f5_1 : MUXF5
     port map (
-      I0 => U3_Mmux_M1a_mux0000_92_1152,
-      I1 => U3_Mmux_M1a_mux0000_85_1148,
-      S => U3_xpix1(1),
+      I0 => U3_Mmux_M1a_mux0000_92_1649,
+      I1 => U3_Mmux_M1a_mux0000_85_1645,
+      S => U3_rom_pix1(1),
       O => U3_Mmux_M1a_mux0000_7_f52
     );
   U3_Mmux_M1a_mux0000_93 : LUT3
@@ -2830,143 +6576,153 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix1(0),
-      I1 => M1a_2_Q_122,
+      I0 => U3_rom_pix1(0),
+      I1 => M1a_2_Q_120,
       I2 => M1a_3_Q,
-      O => U3_Mmux_M1a_mux0000_93_1153
+      O => U3_Mmux_M1a_mux0000_93_1650
+    );
+  U3_Mmux_M1a_mux0000_10 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => N0,
+      I2 => M1a_1_Q_95,
+      O => U3_Mmux_M1a_mux0000_10_1621
     );
   U3_Mmux_M1a_mux0000_8_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M1a_mux0000_10_1122,
-      I1 => U3_Mmux_M1a_mux0000_93_1153,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1a_mux0000_8_f5_1149
+      I0 => U3_Mmux_M1a_mux0000_10_1621,
+      I1 => U3_Mmux_M1a_mux0000_93_1650,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1a_mux0000_8_f5_1646
     );
   U3_Mmux_M1a_mux0000_6_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_M1a_mux0000_8_f5_1149,
+      I0 => U3_Mmux_M1a_mux0000_8_f5_1646,
       I1 => U3_Mmux_M1a_mux0000_7_f52,
-      S => U3_xpix1(2),
-      O => U3_Mmux_M1a_mux0000_6_f6_1133
+      S => U3_rom_pix1(2),
+      O => U3_Mmux_M1a_mux0000_6_f6_1632
     );
   U3_Mmux_M1a_mux0000_4_f7 : MUXF7
     port map (
-      I0 => U3_Mmux_M1a_mux0000_6_f6_1133,
+      I0 => U3_Mmux_M1a_mux0000_6_f6_1632,
       I1 => U3_Mmux_M1a_mux0000_5_f61,
-      S => U3_xpix1(3),
-      O => U3_Mmux_M1a_mux0000_4_f7_1125
+      S => U3_rom_pix1(3),
+      O => U3_Mmux_M1a_mux0000_4_f7_1624
     );
   U3_Mmux_M1a_mux0000_2_f8 : MUXF8
     port map (
-      I0 => U3_Mmux_M1a_mux0000_4_f7_1125,
-      I1 => U3_Mmux_M1a_mux0000_3_f7_1123,
-      S => U3_xpix1(4),
+      I0 => U3_Mmux_M1a_mux0000_4_f7_1624,
+      I1 => U3_Mmux_M1a_mux0000_3_f7_1622,
+      S => U3_rom_pix1(4),
       O => U3_M1a_mux0000
-    );
-  U3_Mmux_M2a_mux0000_6 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix2(0),
-      I1 => M2a_30_Q_205,
-      I2 => N0,
-      O => U3_Mmux_M2a_mux0000_6_1191
-    );
-  U3_Mmux_M2a_mux0000_7 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix2(0),
-      I1 => M2a_28_Q_199,
-      I2 => M2a_29_Q,
-      O => U3_Mmux_M2a_mux0000_7_1196
     );
   U3_Mmux_M2a_mux0000_5_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M2a_mux0000_7_1196,
-      I1 => U3_Mmux_M2a_mux0000_6_1191,
-      S => U3_xpix2(1),
-      O => U3_Mmux_M2a_mux0000_5_f5_1188
+      I0 => U3_Mmux_M2a_mux0000_7_1693,
+      I1 => U3_Mmux_M2a_mux0000_6_1688,
+      S => U3_rom_pix2(1),
+      O => U3_Mmux_M2a_mux0000_5_f5_1685
     );
-  U3_Mmux_M2a_mux0000_6_f5 : MUXF5
-    port map (
-      I0 => U3_Mmux_M2a_mux0000_8_1203,
-      I1 => U3_Mmux_M2a_mux0000_71_1197,
-      S => U3_xpix2(1),
-      O => U3_Mmux_M2a_mux0000_6_f5_1192
-    );
-  U3_Mmux_M2a_mux0000_4_f6 : MUXF6
-    port map (
-      I0 => U3_Mmux_M2a_mux0000_6_f5_1192,
-      I1 => U3_Mmux_M2a_mux0000_5_f5_1188,
-      S => U3_xpix2(2),
-      O => U3_Mmux_M2a_mux0000_4_f6_1186
-    );
-  U3_Mmux_M2a_mux0000_72 : LUT3
+  U3_Mmux_M2a_mux0000_71 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => M2a_22_Q_198,
-      I2 => M1a_8_Q,
-      O => U3_Mmux_M2a_mux0000_72_1198
+      I0 => U3_rom_pix2(0),
+      I1 => M2a_26_Q,
+      I2 => M2a_24_Q,
+      O => U3_Mmux_M2a_mux0000_71_1694
+    );
+  U3_Mmux_M2a_mux0000_6_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_M2a_mux0000_8_1700,
+      I1 => U3_Mmux_M2a_mux0000_71_1694,
+      S => U3_rom_pix2(1),
+      O => U3_Mmux_M2a_mux0000_6_f5_1689
+    );
+  U3_Mmux_M2a_mux0000_4_f6 : MUXF6
+    port map (
+      I0 => U3_Mmux_M2a_mux0000_6_f5_1689,
+      I1 => U3_Mmux_M2a_mux0000_5_f5_1685,
+      S => U3_rom_pix2(2),
+      O => U3_Mmux_M2a_mux0000_4_f6_1683
     );
   U3_Mmux_M2a_mux0000_81 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => M2a_20_Q_197,
-      I2 => M1a_10_Q,
-      O => U3_Mmux_M2a_mux0000_81_1204
+      I0 => U3_rom_pix2(0),
+      I1 => M2a_20_Q,
+      I2 => M2a_21_Q,
+      O => U3_Mmux_M2a_mux0000_81_1701
     );
   U3_Mmux_M2a_mux0000_6_f5_0 : MUXF5
     port map (
-      I0 => U3_Mmux_M2a_mux0000_81_1204,
-      I1 => U3_Mmux_M2a_mux0000_72_1198,
-      S => U3_xpix2(1),
+      I0 => U3_Mmux_M2a_mux0000_81_1701,
+      I1 => U3_Mmux_M2a_mux0000_72_1695,
+      S => U3_rom_pix2(1),
       O => U3_Mmux_M2a_mux0000_6_f51
+    );
+  U3_Mmux_M2a_mux0000_9 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix2(0),
+      I1 => M2a_16_Q,
+      I2 => M2a_14_Q_221,
+      O => U3_Mmux_M2a_mux0000_9_1709
     );
   U3_Mmux_M2a_mux0000_7_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M2a_mux0000_9_1212,
-      I1 => U3_Mmux_M2a_mux0000_82_1205,
-      S => U3_xpix2(1),
-      O => U3_Mmux_M2a_mux0000_7_f5_1200
+      I0 => U3_Mmux_M2a_mux0000_9_1709,
+      I1 => U3_Mmux_M2a_mux0000_82_1702,
+      S => U3_rom_pix2(1),
+      O => U3_Mmux_M2a_mux0000_7_f5_1697
     );
   U3_Mmux_M2a_mux0000_5_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_M2a_mux0000_7_f5_1200,
+      I0 => U3_Mmux_M2a_mux0000_7_f5_1697,
       I1 => U3_Mmux_M2a_mux0000_6_f51,
-      S => U3_xpix2(2),
-      O => U3_Mmux_M2a_mux0000_5_f6_1189
+      S => U3_rom_pix2(2),
+      O => U3_Mmux_M2a_mux0000_5_f6_1686
     );
   U3_Mmux_M2a_mux0000_3_f7 : MUXF7
     port map (
-      I0 => U3_Mmux_M2a_mux0000_5_f6_1189,
-      I1 => U3_Mmux_M2a_mux0000_4_f6_1186,
-      S => U3_xpix2(3),
-      O => U3_Mmux_M2a_mux0000_3_f7_1185
+      I0 => U3_Mmux_M2a_mux0000_5_f6_1686,
+      I1 => U3_Mmux_M2a_mux0000_4_f6_1683,
+      S => U3_rom_pix2(3),
+      O => U3_Mmux_M2a_mux0000_3_f7_1682
+    );
+  U3_Mmux_M2a_mux0000_73 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix2(0),
+      I1 => M2a_14_Q_221,
+      I2 => M2a_15_Q,
+      O => U3_Mmux_M2a_mux0000_73_1696
     );
   U3_Mmux_M2a_mux0000_83 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => M2a_12_Q_193,
-      I2 => M2a_13_Q_194,
-      O => U3_Mmux_M2a_mux0000_83_1206
+      I0 => U3_rom_pix2(0),
+      I1 => M2a_12_Q,
+      I2 => M2a_13_Q,
+      O => U3_Mmux_M2a_mux0000_83_1704
     );
   U3_Mmux_M2a_mux0000_6_f5_1 : MUXF5
     port map (
-      I0 => U3_Mmux_M2a_mux0000_83_1206,
-      I1 => U3_Mmux_M2a_mux0000_73_1199,
-      S => U3_xpix2(1),
+      I0 => U3_Mmux_M2a_mux0000_83_1704,
+      I1 => U3_Mmux_M2a_mux0000_73_1696,
+      S => U3_rom_pix2(1),
       O => U3_Mmux_M2a_mux0000_6_f52
     );
   U3_Mmux_M2a_mux0000_84 : LUT3
@@ -2974,33 +6730,33 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2a_10_Q,
-      I2 => M1a_20_Q_88,
-      O => U3_Mmux_M2a_mux0000_84_1207
+      I2 => M2a_11_Q,
+      O => U3_Mmux_M2a_mux0000_84_1705
     );
   U3_Mmux_M2a_mux0000_91 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2a_8_Q,
       I2 => M2a_9_Q,
-      O => U3_Mmux_M2a_mux0000_91_1213
+      O => U3_Mmux_M2a_mux0000_91_1710
     );
   U3_Mmux_M2a_mux0000_7_f5_0 : MUXF5
     port map (
-      I0 => U3_Mmux_M2a_mux0000_91_1213,
-      I1 => U3_Mmux_M2a_mux0000_84_1207,
-      S => U3_xpix2(1),
+      I0 => U3_Mmux_M2a_mux0000_91_1710,
+      I1 => U3_Mmux_M2a_mux0000_84_1705,
+      S => U3_rom_pix2(1),
       O => U3_Mmux_M2a_mux0000_7_f51
     );
   U3_Mmux_M2a_mux0000_5_f6_0 : MUXF6
     port map (
       I0 => U3_Mmux_M2a_mux0000_7_f51,
       I1 => U3_Mmux_M2a_mux0000_6_f52,
-      S => U3_xpix2(2),
+      S => U3_rom_pix2(2),
       O => U3_Mmux_M2a_mux0000_5_f61
     );
   U3_Mmux_M2a_mux0000_85 : LUT3
@@ -3008,16 +6764,26 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2a_6_Q,
       I2 => M2a_7_Q,
-      O => U3_Mmux_M2a_mux0000_85_1208
+      O => U3_Mmux_M2a_mux0000_85_1706
+    );
+  U3_Mmux_M2a_mux0000_92 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix2(0),
+      I1 => M2a_4_Q,
+      I2 => M2a_5_Q,
+      O => U3_Mmux_M2a_mux0000_92_1711
     );
   U3_Mmux_M2a_mux0000_7_f5_1 : MUXF5
     port map (
-      I0 => U3_Mmux_M2a_mux0000_92_1214,
-      I1 => U3_Mmux_M2a_mux0000_85_1208,
-      S => U3_xpix2(1),
+      I0 => U3_Mmux_M2a_mux0000_92_1711,
+      I1 => U3_Mmux_M2a_mux0000_85_1706,
+      S => U3_rom_pix2(1),
       O => U3_Mmux_M2a_mux0000_7_f52
     );
   U3_Mmux_M2a_mux0000_93 : LUT3
@@ -3025,283 +6791,48 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2a_2_Q,
       I2 => M2a_3_Q,
-      O => U3_Mmux_M2a_mux0000_93_1215
+      O => U3_Mmux_M2a_mux0000_93_1712
+    );
+  U3_Mmux_M2a_mux0000_10 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix2(0),
+      I1 => N0,
+      I2 => M2a_1_Q_224,
+      O => U3_Mmux_M2a_mux0000_10_1681
     );
   U3_Mmux_M2a_mux0000_8_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M2a_mux0000_10_1184,
-      I1 => U3_Mmux_M2a_mux0000_93_1215,
-      S => U3_xpix2(1),
-      O => U3_Mmux_M2a_mux0000_8_f5_1211
+      I0 => U3_Mmux_M2a_mux0000_10_1681,
+      I1 => U3_Mmux_M2a_mux0000_93_1712,
+      S => U3_rom_pix2(1),
+      O => U3_Mmux_M2a_mux0000_8_f5_1708
     );
   U3_Mmux_M2a_mux0000_6_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_M2a_mux0000_8_f5_1211,
+      I0 => U3_Mmux_M2a_mux0000_8_f5_1708,
       I1 => U3_Mmux_M2a_mux0000_7_f52,
-      S => U3_xpix2(2),
-      O => U3_Mmux_M2a_mux0000_6_f6_1195
+      S => U3_rom_pix2(2),
+      O => U3_Mmux_M2a_mux0000_6_f6_1692
     );
   U3_Mmux_M2a_mux0000_4_f7 : MUXF7
     port map (
-      I0 => U3_Mmux_M2a_mux0000_6_f6_1195,
+      I0 => U3_Mmux_M2a_mux0000_6_f6_1692,
       I1 => U3_Mmux_M2a_mux0000_5_f61,
-      S => U3_xpix2(3),
-      O => U3_Mmux_M2a_mux0000_4_f7_1187
+      S => U3_rom_pix2(3),
+      O => U3_Mmux_M2a_mux0000_4_f7_1684
     );
   U3_Mmux_M2a_mux0000_2_f8 : MUXF8
     port map (
-      I0 => U3_Mmux_M2a_mux0000_4_f7_1187,
-      I1 => U3_Mmux_M2a_mux0000_3_f7_1185,
-      S => U3_xpix2(4),
+      I0 => U3_Mmux_M2a_mux0000_4_f7_1684,
+      I1 => U3_Mmux_M2a_mux0000_3_f7_1682,
+      S => U3_rom_pix2(4),
       O => U3_M2a_mux0000
-    );
-  U3_Mmux_M1_mux0000_6 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_30_Q,
-      I2 => M1_31_Q,
-      O => U3_Mmux_M1_mux0000_6_1098
-    );
-  U3_Mmux_M1_mux0000_7 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_28_Q,
-      I2 => M1_29_Q,
-      O => U3_Mmux_M1_mux0000_7_1103
-    );
-  U3_Mmux_M1_mux0000_5_f5 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_7_1103,
-      I1 => U3_Mmux_M1_mux0000_6_1098,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1_mux0000_5_f5_1095
-    );
-  U3_Mmux_M1_mux0000_71 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_26_Q,
-      I2 => M1_27_Q,
-      O => U3_Mmux_M1_mux0000_71_1104
-    );
-  U3_Mmux_M1_mux0000_8 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_24_Q,
-      I2 => M1_25_Q,
-      O => U3_Mmux_M1_mux0000_8_1110
-    );
-  U3_Mmux_M1_mux0000_6_f5 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_8_1110,
-      I1 => U3_Mmux_M1_mux0000_71_1104,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1_mux0000_6_f5_1099
-    );
-  U3_Mmux_M1_mux0000_4_f6 : MUXF6
-    port map (
-      I0 => U3_Mmux_M1_mux0000_6_f5_1099,
-      I1 => U3_Mmux_M1_mux0000_5_f5_1095,
-      S => U3_xpix1(2),
-      O => U3_Mmux_M1_mux0000_4_f6_1093
-    );
-  U3_Mmux_M1_mux0000_72 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_22_Q,
-      I2 => M1_23_Q,
-      O => U3_Mmux_M1_mux0000_72_1105
-    );
-  U3_Mmux_M1_mux0000_81 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_20_Q,
-      I2 => M1_21_Q,
-      O => U3_Mmux_M1_mux0000_81_1111
-    );
-  U3_Mmux_M1_mux0000_6_f5_0 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_81_1111,
-      I1 => U3_Mmux_M1_mux0000_72_1105,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1_mux0000_6_f51
-    );
-  U3_Mmux_M1_mux0000_82 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_18_Q,
-      I2 => M1_19_Q_11,
-      O => U3_Mmux_M1_mux0000_82_1112
-    );
-  U3_Mmux_M1_mux0000_7_f5 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_9_1118,
-      I1 => U3_Mmux_M1_mux0000_82_1112,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1_mux0000_7_f5_1107
-    );
-  U3_Mmux_M1_mux0000_5_f6 : MUXF6
-    port map (
-      I0 => U3_Mmux_M1_mux0000_7_f5_1107,
-      I1 => U3_Mmux_M1_mux0000_6_f51,
-      S => U3_xpix1(2),
-      O => U3_Mmux_M1_mux0000_5_f6_1096
-    );
-  U3_Mmux_M1_mux0000_3_f7 : MUXF7
-    port map (
-      I0 => U3_Mmux_M1_mux0000_5_f6_1096,
-      I1 => U3_Mmux_M1_mux0000_4_f6_1093,
-      S => U3_xpix1(3),
-      O => U3_Mmux_M1_mux0000_3_f7_1092
-    );
-  U3_Mmux_M1_mux0000_73 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_14_Q,
-      I2 => M1_15_Q_9,
-      O => U3_Mmux_M1_mux0000_73_1106
-    );
-  U3_Mmux_M1_mux0000_6_f5_1 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_83_1113,
-      I1 => U3_Mmux_M1_mux0000_73_1106,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1_mux0000_6_f52
-    );
-  U3_Mmux_M1_mux0000_84 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_10_Q_2,
-      I2 => M1_11_Q_5,
-      O => U3_Mmux_M1_mux0000_84_1115
-    );
-  U3_Mmux_M1_mux0000_91 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_8_Q,
-      I2 => M1_9_Q,
-      O => U3_Mmux_M1_mux0000_91_1119
-    );
-  U3_Mmux_M1_mux0000_7_f5_0 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_91_1119,
-      I1 => U3_Mmux_M1_mux0000_84_1115,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1_mux0000_7_f51
-    );
-  U3_Mmux_M1_mux0000_5_f6_0 : MUXF6
-    port map (
-      I0 => U3_Mmux_M1_mux0000_7_f51,
-      I1 => U3_Mmux_M1_mux0000_6_f52,
-      S => U3_xpix1(2),
-      O => U3_Mmux_M1_mux0000_5_f61
-    );
-  U3_Mmux_M1_mux0000_85 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_6_Q,
-      I2 => M1_4_Q,
-      O => U3_Mmux_M1_mux0000_85_1116
-    );
-  U3_Mmux_M1_mux0000_92 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_4_Q,
-      I2 => M1_5_Q_70,
-      O => U3_Mmux_M1_mux0000_92_1120
-    );
-  U3_Mmux_M1_mux0000_7_f5_1 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_92_1120,
-      I1 => U3_Mmux_M1_mux0000_85_1116,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1_mux0000_7_f52
-    );
-  U3_Mmux_M1_mux0000_93 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_2_Q,
-      I2 => M1_3_Q,
-      O => U3_Mmux_M1_mux0000_93_1121
-    );
-  U3_Mmux_M1_mux0000_10 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => M1_0_Q,
-      I2 => M1_1_Q,
-      O => U3_Mmux_M1_mux0000_10_1091
-    );
-  U3_Mmux_M1_mux0000_8_f5 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_10_1091,
-      I1 => U3_Mmux_M1_mux0000_93_1121,
-      S => U3_xpix1(1),
-      O => U3_Mmux_M1_mux0000_8_f5_1117
-    );
-  U3_Mmux_M1_mux0000_6_f6 : MUXF6
-    port map (
-      I0 => U3_Mmux_M1_mux0000_8_f5_1117,
-      I1 => U3_Mmux_M1_mux0000_7_f52,
-      S => U3_xpix1(2),
-      O => U3_Mmux_M1_mux0000_6_f6_1102
-    );
-  U3_Mmux_M1_mux0000_4_f7 : MUXF7
-    port map (
-      I0 => U3_Mmux_M1_mux0000_6_f6_1102,
-      I1 => U3_Mmux_M1_mux0000_5_f61,
-      S => U3_xpix1(3),
-      O => U3_Mmux_M1_mux0000_4_f7_1094
-    );
-  U3_Mmux_M1_mux0000_2_f8 : MUXF8
-    port map (
-      I0 => U3_Mmux_M1_mux0000_4_f7_1094,
-      I1 => U3_Mmux_M1_mux0000_3_f7_1092,
-      S => U3_xpix1(4),
-      O => U3_M1_mux0000
     );
   U3_Mmux_tank110sM_mux0000_4 : LUT3
     generic map(
@@ -3311,7 +6842,7 @@ begin
       I0 => U2_hcs(0),
       I1 => sig_tank110sM(6),
       I2 => sig_tank110sM(7),
-      O => U3_Mmux_tank110sM_mux0000_4_1217
+      O => U3_Mmux_tank110sM_mux0000_4_1714
     );
   U3_Mmux_tank110sM_mux0000_5 : LUT3
     generic map(
@@ -3321,14 +6852,14 @@ begin
       I0 => U2_hcs(0),
       I1 => sig_tank110sM(4),
       I2 => sig_tank110sM(5),
-      O => U3_Mmux_tank110sM_mux0000_5_1219
+      O => U3_Mmux_tank110sM_mux0000_5_1716
     );
   U3_Mmux_tank110sM_mux0000_3_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_tank110sM_mux0000_5_1219,
-      I1 => U3_Mmux_tank110sM_mux0000_4_1217,
+      I0 => U3_Mmux_tank110sM_mux0000_5_1716,
+      I1 => U3_Mmux_tank110sM_mux0000_4_1714,
       S => U2_hcs(1),
-      O => U3_Mmux_tank110sM_mux0000_3_f5_1216
+      O => U3_Mmux_tank110sM_mux0000_3_f5_1713
     );
   U3_Mmux_tank110sM_mux0000_51 : LUT3
     generic map(
@@ -3338,7 +6869,7 @@ begin
       I0 => U2_hcs(0),
       I1 => sig_tank110sM(2),
       I2 => sig_tank110sM(3),
-      O => U3_Mmux_tank110sM_mux0000_51_1220
+      O => U3_Mmux_tank110sM_mux0000_51_1717
     );
   U3_Mmux_tank110sM_mux0000_6 : LUT3
     generic map(
@@ -3348,176 +6879,412 @@ begin
       I0 => U2_hcs(0),
       I1 => sig_tank110sM(0),
       I2 => sig_tank110sM(1),
-      O => U3_Mmux_tank110sM_mux0000_6_1221
+      O => U3_Mmux_tank110sM_mux0000_6_1718
     );
   U3_Mmux_tank110sM_mux0000_4_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_tank110sM_mux0000_6_1221,
-      I1 => U3_Mmux_tank110sM_mux0000_51_1220,
+      I0 => U3_Mmux_tank110sM_mux0000_6_1718,
+      I1 => U3_Mmux_tank110sM_mux0000_51_1717,
       S => U2_hcs(1),
-      O => U3_Mmux_tank110sM_mux0000_4_f5_1218
+      O => U3_Mmux_tank110sM_mux0000_4_f5_1715
     );
   U3_Mmux_tank110sM_mux0000_2_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_tank110sM_mux0000_4_f5_1218,
-      I1 => U3_Mmux_tank110sM_mux0000_3_f5_1216,
+      I0 => U3_Mmux_tank110sM_mux0000_4_f5_1715,
+      I1 => U3_Mmux_tank110sM_mux0000_3_f5_1713,
       S => U2_hcs(2),
       O => U3_tank110sM_mux0000
+    );
+  U3_Mmux_tank11sM_mux0000_4 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank11sM(6),
+      I2 => sig_tank11sM(7),
+      O => U3_Mmux_tank11sM_mux0000_4_1720
+    );
+  U3_Mmux_tank11sM_mux0000_5 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank11sM(4),
+      I2 => sig_tank11sM(5),
+      O => U3_Mmux_tank11sM_mux0000_5_1722
+    );
+  U3_Mmux_tank11sM_mux0000_3_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_tank11sM_mux0000_5_1722,
+      I1 => U3_Mmux_tank11sM_mux0000_4_1720,
+      S => U2_hcs(1),
+      O => U3_Mmux_tank11sM_mux0000_3_f5_1719
+    );
+  U3_Mmux_tank11sM_mux0000_51 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank11sM(2),
+      I2 => sig_tank11sM(3),
+      O => U3_Mmux_tank11sM_mux0000_51_1723
+    );
+  U3_Mmux_tank11sM_mux0000_6 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => sig_tank11sM(0),
+      I2 => sig_tank11sM(1),
+      O => U3_Mmux_tank11sM_mux0000_6_1724
+    );
+  U3_Mmux_tank11sM_mux0000_4_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_tank11sM_mux0000_6_1724,
+      I1 => U3_Mmux_tank11sM_mux0000_51_1723,
+      S => U2_hcs(1),
+      O => U3_Mmux_tank11sM_mux0000_4_f5_1721
+    );
+  U3_Mmux_tank11sM_mux0000_2_f6 : MUXF6
+    port map (
+      I0 => U3_Mmux_tank11sM_mux0000_4_f5_1721,
+      I1 => U3_Mmux_tank11sM_mux0000_3_f5_1719,
+      S => U2_hcs(2),
+      O => U3_tank11sM_mux0000
+    );
+  U3_Mmux_M1_mux0000_6 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_30_Q,
+      I2 => M1_31_Q,
+      O => U3_Mmux_M1_mux0000_6_1598
+    );
+  U3_Mmux_M1_mux0000_7 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_28_Q,
+      I2 => M1_29_Q,
+      O => U3_Mmux_M1_mux0000_7_1603
+    );
+  U3_Mmux_M1_mux0000_5_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_M1_mux0000_7_1603,
+      I1 => U3_Mmux_M1_mux0000_6_1598,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1_mux0000_5_f5_1595
+    );
+  U3_Mmux_M1_mux0000_71 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_26_Q,
+      I2 => M1_27_Q,
+      O => U3_Mmux_M1_mux0000_71_1604
+    );
+  U3_Mmux_M1_mux0000_8 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_24_Q,
+      I2 => M1_25_Q,
+      O => U3_Mmux_M1_mux0000_8_1610
+    );
+  U3_Mmux_M1_mux0000_6_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_M1_mux0000_8_1610,
+      I1 => U3_Mmux_M1_mux0000_71_1604,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1_mux0000_6_f5_1599
+    );
+  U3_Mmux_M1_mux0000_4_f6 : MUXF6
+    port map (
+      I0 => U3_Mmux_M1_mux0000_6_f5_1599,
+      I1 => U3_Mmux_M1_mux0000_5_f5_1595,
+      S => U3_rom_pix1(2),
+      O => U3_Mmux_M1_mux0000_4_f6_1593
+    );
+  U3_Mmux_M1_mux0000_72 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_22_Q,
+      I2 => M1_23_Q,
+      O => U3_Mmux_M1_mux0000_72_1605
+    );
+  U3_Mmux_M1_mux0000_81 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_20_Q_12,
+      I2 => M1_21_Q,
+      O => U3_Mmux_M1_mux0000_81_1611
+    );
+  U3_Mmux_M1_mux0000_6_f5_0 : MUXF5
+    port map (
+      I0 => U3_Mmux_M1_mux0000_81_1611,
+      I1 => U3_Mmux_M1_mux0000_72_1605,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1_mux0000_6_f51
+    );
+  U3_Mmux_M1_mux0000_82 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_18_Q_9,
+      I2 => M1_19_Q,
+      O => U3_Mmux_M1_mux0000_82_1612
+    );
+  U3_Mmux_M1_mux0000_7_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_M1_mux0000_9_1617,
+      I1 => U3_Mmux_M1_mux0000_82_1612,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1_mux0000_7_f5_1607
+    );
+  U3_Mmux_M1_mux0000_5_f6 : MUXF6
+    port map (
+      I0 => U3_Mmux_M1_mux0000_7_f5_1607,
+      I1 => U3_Mmux_M1_mux0000_6_f51,
+      S => U3_rom_pix1(2),
+      O => U3_Mmux_M1_mux0000_5_f6_1596
+    );
+  U3_Mmux_M1_mux0000_3_f7 : MUXF7
+    port map (
+      I0 => U3_Mmux_M1_mux0000_5_f6_1596,
+      I1 => U3_Mmux_M1_mux0000_4_f6_1593,
+      S => U3_rom_pix1(3),
+      O => U3_Mmux_M1_mux0000_3_f7_1592
+    );
+  U3_Mmux_M1_mux0000_6_f5_1 : MUXF5
+    port map (
+      I0 => U3_Mmux_M1_mux0000_83_1613,
+      I1 => U3_Mmux_M1_mux0000_73_1606,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1_mux0000_6_f52
+    );
+  U3_Mmux_M1_mux0000_84 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_10_Q,
+      I2 => M1_11_Q_7,
+      O => U3_Mmux_M1_mux0000_84_1614
+    );
+  U3_Mmux_M1_mux0000_91 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_8_Q_84,
+      I2 => M1_9_Q,
+      O => U3_Mmux_M1_mux0000_91_1618
+    );
+  U3_Mmux_M1_mux0000_7_f5_0 : MUXF5
+    port map (
+      I0 => U3_Mmux_M1_mux0000_91_1618,
+      I1 => U3_Mmux_M1_mux0000_84_1614,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1_mux0000_7_f51
+    );
+  U3_Mmux_M1_mux0000_5_f6_0 : MUXF6
+    port map (
+      I0 => U3_Mmux_M1_mux0000_7_f51,
+      I1 => U3_Mmux_M1_mux0000_6_f52,
+      S => U3_rom_pix1(2),
+      O => U3_Mmux_M1_mux0000_5_f61
+    );
+  U3_Mmux_M1_mux0000_92 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_4_Q_79,
+      I2 => M1_5_Q_83,
+      O => U3_Mmux_M1_mux0000_92_1619
+    );
+  U3_Mmux_M1_mux0000_7_f5_1 : MUXF5
+    port map (
+      I0 => U3_Mmux_M1_mux0000_92_1619,
+      I1 => U3_Mmux_M1_mux0000_85_1615,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1_mux0000_7_f52
+    );
+  U3_Mmux_M1_mux0000_93 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_2_Q,
+      I2 => M1_3_Q,
+      O => U3_Mmux_M1_mux0000_93_1620
+    );
+  U3_Mmux_M1_mux0000_10 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => M1_0_Q,
+      I2 => M1_1_Q,
+      O => U3_Mmux_M1_mux0000_10_1591
+    );
+  U3_Mmux_M1_mux0000_8_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_M1_mux0000_10_1591,
+      I1 => U3_Mmux_M1_mux0000_93_1620,
+      S => U3_rom_pix1(1),
+      O => U3_Mmux_M1_mux0000_8_f5_1616
+    );
+  U3_Mmux_M1_mux0000_6_f6 : MUXF6
+    port map (
+      I0 => U3_Mmux_M1_mux0000_8_f5_1616,
+      I1 => U3_Mmux_M1_mux0000_7_f52,
+      S => U3_rom_pix1(2),
+      O => U3_Mmux_M1_mux0000_6_f6_1602
+    );
+  U3_Mmux_M1_mux0000_4_f7 : MUXF7
+    port map (
+      I0 => U3_Mmux_M1_mux0000_6_f6_1602,
+      I1 => U3_Mmux_M1_mux0000_5_f61,
+      S => U3_rom_pix1(3),
+      O => U3_Mmux_M1_mux0000_4_f7_1594
+    );
+  U3_Mmux_M1_mux0000_2_f8 : MUXF8
+    port map (
+      I0 => U3_Mmux_M1_mux0000_4_f7_1594,
+      I1 => U3_Mmux_M1_mux0000_3_f7_1592,
+      S => U3_rom_pix1(4),
+      O => U3_M1_mux0000
     );
   U3_Mmux_M2_mux0000_6 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2_30_Q,
       I2 => M1_0_Q,
-      O => U3_Mmux_M2_mux0000_6_1161
+      O => U3_Mmux_M2_mux0000_6_1658
     );
   U3_Mmux_M2_mux0000_7 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => M2_28_Q,
-      I2 => M1_2_Q,
-      O => U3_Mmux_M2_mux0000_7_1166
+      I0 => U3_rom_pix2(0),
+      I1 => M2_28_Q_166,
+      I2 => M2_29_Q,
+      O => U3_Mmux_M2_mux0000_7_1663
     );
   U3_Mmux_M2_mux0000_5_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M2_mux0000_7_1166,
-      I1 => U3_Mmux_M2_mux0000_6_1161,
-      S => U3_xpix2(1),
-      O => U3_Mmux_M2_mux0000_5_f5_1158
-    );
-  U3_Mmux_M2_mux0000_71 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix2(0),
-      I1 => M2_26_Q_156,
-      I2 => M1_4_Q,
-      O => U3_Mmux_M2_mux0000_71_1167
-    );
-  U3_Mmux_M2_mux0000_8 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix2(0),
-      I1 => M1_4_Q,
-      I2 => M1_6_Q,
-      O => U3_Mmux_M2_mux0000_8_1173
+      I0 => U3_Mmux_M2_mux0000_7_1663,
+      I1 => U3_Mmux_M2_mux0000_6_1658,
+      S => U3_rom_pix2(1),
+      O => U3_Mmux_M2_mux0000_5_f5_1655
     );
   U3_Mmux_M2_mux0000_6_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M2_mux0000_8_1173,
-      I1 => U3_Mmux_M2_mux0000_71_1167,
-      S => U3_xpix2(1),
-      O => U3_Mmux_M2_mux0000_6_f5_1162
+      I0 => U3_Mmux_M2_mux0000_8_1670,
+      I1 => U3_Mmux_M2_mux0000_71_1664,
+      S => U3_rom_pix2(1),
+      O => U3_Mmux_M2_mux0000_6_f5_1659
     );
   U3_Mmux_M2_mux0000_4_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_M2_mux0000_6_f5_1162,
-      I1 => U3_Mmux_M2_mux0000_5_f5_1158,
-      S => U3_xpix2(2),
-      O => U3_Mmux_M2_mux0000_4_f6_1156
+      I0 => U3_Mmux_M2_mux0000_6_f5_1659,
+      I1 => U3_Mmux_M2_mux0000_5_f5_1655,
+      S => U3_rom_pix2(2),
+      O => U3_Mmux_M2_mux0000_4_f6_1653
     );
   U3_Mmux_M2_mux0000_72 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2_22_Q,
-      I2 => M1_8_Q,
-      O => U3_Mmux_M2_mux0000_72_1168
+      I2 => M2_23_Q_165,
+      O => U3_Mmux_M2_mux0000_72_1665
     );
   U3_Mmux_M2_mux0000_81 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => M1_11_Q_5,
+      I0 => U3_rom_pix2(0),
+      I1 => M2_20_Q,
       I2 => M2_21_Q,
-      O => U3_Mmux_M2_mux0000_81_1174
+      O => U3_Mmux_M2_mux0000_81_1671
     );
   U3_Mmux_M2_mux0000_6_f5_0 : MUXF5
     port map (
-      I0 => U3_Mmux_M2_mux0000_81_1174,
-      I1 => U3_Mmux_M2_mux0000_72_1168,
-      S => U3_xpix2(1),
+      I0 => U3_Mmux_M2_mux0000_81_1671,
+      I1 => U3_Mmux_M2_mux0000_72_1665,
+      S => U3_rom_pix2(1),
       O => U3_Mmux_M2_mux0000_6_f51
-    );
-  U3_Mmux_M2_mux0000_82 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix2(0),
-      I1 => M1_13_Q_6,
-      I2 => M2_19_Q_147,
-      O => U3_Mmux_M2_mux0000_82_1175
-    );
-  U3_Mmux_M2_mux0000_9 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix2(0),
-      I1 => M2_16_Q_146,
-      I2 => M1_14_Q,
-      O => U3_Mmux_M2_mux0000_9_1180
     );
   U3_Mmux_M2_mux0000_7_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M2_mux0000_9_1180,
-      I1 => U3_Mmux_M2_mux0000_82_1175,
-      S => U3_xpix2(1),
-      O => U3_Mmux_M2_mux0000_7_f5_1170
+      I0 => U3_Mmux_M2_mux0000_9_1677,
+      I1 => U3_Mmux_M2_mux0000_82_1672,
+      S => U3_rom_pix2(1),
+      O => U3_Mmux_M2_mux0000_7_f5_1667
     );
   U3_Mmux_M2_mux0000_5_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_M2_mux0000_7_f5_1170,
+      I0 => U3_Mmux_M2_mux0000_7_f5_1667,
       I1 => U3_Mmux_M2_mux0000_6_f51,
-      S => U3_xpix2(2),
-      O => U3_Mmux_M2_mux0000_5_f6_1159
+      S => U3_rom_pix2(2),
+      O => U3_Mmux_M2_mux0000_5_f6_1656
     );
   U3_Mmux_M2_mux0000_3_f7 : MUXF7
     port map (
-      I0 => U3_Mmux_M2_mux0000_5_f6_1159,
-      I1 => U3_Mmux_M2_mux0000_4_f6_1156,
-      S => U3_xpix2(3),
-      O => U3_Mmux_M2_mux0000_3_f7_1155
-    );
-  U3_Mmux_M2_mux0000_73 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix2(0),
-      I1 => M1_14_Q,
-      I2 => M2_15_Q_145,
-      O => U3_Mmux_M2_mux0000_73_1169
+      I0 => U3_Mmux_M2_mux0000_5_f6_1656,
+      I1 => U3_Mmux_M2_mux0000_4_f6_1653,
+      S => U3_rom_pix2(3),
+      O => U3_Mmux_M2_mux0000_3_f7_1652
     );
   U3_Mmux_M2_mux0000_83 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => M1_19_Q_11,
-      I2 => M1_18_Q,
-      O => U3_Mmux_M2_mux0000_83_1176
+      I0 => U3_rom_pix2(0),
+      I1 => M2_12_Q,
+      I2 => M2_13_Q,
+      O => U3_Mmux_M2_mux0000_83_1673
     );
   U3_Mmux_M2_mux0000_6_f5_1 : MUXF5
     port map (
-      I0 => U3_Mmux_M2_mux0000_83_1176,
-      I1 => U3_Mmux_M2_mux0000_73_1169,
-      S => U3_xpix2(1),
+      I0 => U3_Mmux_M2_mux0000_83_1673,
+      I1 => U3_Mmux_M2_mux0000_73_1666,
+      S => U3_rom_pix2(1),
       O => U3_Mmux_M2_mux0000_6_f52
     );
   U3_Mmux_M2_mux0000_84 : LUT3
@@ -3525,33 +7292,33 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2_10_Q,
-      I2 => M1_20_Q,
-      O => U3_Mmux_M2_mux0000_84_1177
+      I2 => M2_11_Q_147,
+      O => U3_Mmux_M2_mux0000_84_1674
     );
   U3_Mmux_M2_mux0000_91 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2_8_Q,
       I2 => M2_9_Q,
-      O => U3_Mmux_M2_mux0000_91_1181
+      O => U3_Mmux_M2_mux0000_91_1678
     );
   U3_Mmux_M2_mux0000_7_f5_0 : MUXF5
     port map (
-      I0 => U3_Mmux_M2_mux0000_91_1181,
-      I1 => U3_Mmux_M2_mux0000_84_1177,
-      S => U3_xpix2(1),
+      I0 => U3_Mmux_M2_mux0000_91_1678,
+      I1 => U3_Mmux_M2_mux0000_84_1674,
+      S => U3_rom_pix2(1),
       O => U3_Mmux_M2_mux0000_7_f51
     );
   U3_Mmux_M2_mux0000_5_f6_0 : MUXF6
     port map (
       I0 => U3_Mmux_M2_mux0000_7_f51,
       I1 => U3_Mmux_M2_mux0000_6_f52,
-      S => U3_xpix2(2),
+      S => U3_rom_pix2(2),
       O => U3_Mmux_M2_mux0000_5_f61
     );
   U3_Mmux_M2_mux0000_85 : LUT3
@@ -3559,26 +7326,26 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2_6_Q,
       I2 => M2_7_Q,
-      O => U3_Mmux_M2_mux0000_85_1178
+      O => U3_Mmux_M2_mux0000_85_1675
     );
   U3_Mmux_M2_mux0000_92 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2_4_Q,
       I2 => M2_5_Q,
-      O => U3_Mmux_M2_mux0000_92_1182
+      O => U3_Mmux_M2_mux0000_92_1679
     );
   U3_Mmux_M2_mux0000_7_f5_1 : MUXF5
     port map (
-      I0 => U3_Mmux_M2_mux0000_92_1182,
-      I1 => U3_Mmux_M2_mux0000_85_1178,
-      S => U3_xpix2(1),
+      I0 => U3_Mmux_M2_mux0000_92_1679,
+      I1 => U3_Mmux_M2_mux0000_85_1675,
+      S => U3_rom_pix2(1),
       O => U3_Mmux_M2_mux0000_7_f52
     );
   U3_Mmux_M2_mux0000_93 : LUT3
@@ -3586,73 +7353,435 @@ begin
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2_2_Q,
       I2 => M2_3_Q,
-      O => U3_Mmux_M2_mux0000_93_1183
+      O => U3_Mmux_M2_mux0000_93_1680
     );
   U3_Mmux_M2_mux0000_10 : LUT3
     generic map(
       INIT => X"E4"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => U3_rom_pix2(0),
       I1 => M2_0_Q,
       I2 => M2_1_Q,
-      O => U3_Mmux_M2_mux0000_10_1154
+      O => U3_Mmux_M2_mux0000_10_1651
     );
   U3_Mmux_M2_mux0000_8_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M2_mux0000_10_1154,
-      I1 => U3_Mmux_M2_mux0000_93_1183,
-      S => U3_xpix2(1),
-      O => U3_Mmux_M2_mux0000_8_f5_1179
+      I0 => U3_Mmux_M2_mux0000_10_1651,
+      I1 => U3_Mmux_M2_mux0000_93_1680,
+      S => U3_rom_pix2(1),
+      O => U3_Mmux_M2_mux0000_8_f5_1676
     );
   U3_Mmux_M2_mux0000_6_f6 : MUXF6
     port map (
-      I0 => U3_Mmux_M2_mux0000_8_f5_1179,
+      I0 => U3_Mmux_M2_mux0000_8_f5_1676,
       I1 => U3_Mmux_M2_mux0000_7_f52,
-      S => U3_xpix2(2),
-      O => U3_Mmux_M2_mux0000_6_f6_1165
+      S => U3_rom_pix2(2),
+      O => U3_Mmux_M2_mux0000_6_f6_1662
     );
   U3_Mmux_M2_mux0000_4_f7 : MUXF7
     port map (
-      I0 => U3_Mmux_M2_mux0000_6_f6_1165,
+      I0 => U3_Mmux_M2_mux0000_6_f6_1662,
       I1 => U3_Mmux_M2_mux0000_5_f61,
-      S => U3_xpix2(3),
-      O => U3_Mmux_M2_mux0000_4_f7_1157
+      S => U3_rom_pix2(3),
+      O => U3_Mmux_M2_mux0000_4_f7_1654
     );
   U3_Mmux_M2_mux0000_2_f8 : MUXF8
     port map (
-      I0 => U3_Mmux_M2_mux0000_4_f7_1157,
-      I1 => U3_Mmux_M2_mux0000_3_f7_1155,
-      S => U3_xpix2(4),
+      I0 => U3_Mmux_M2_mux0000_4_f7_1654,
+      I1 => U3_Mmux_M2_mux0000_3_f7_1652,
+      S => U3_rom_pix2(4),
       O => U3_M2_mux0000
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_9_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(8),
+      LI => U3_Madd_spriteonM2_addsub0003_xor_9_rt_1135,
+      O => U3_spriteonM2_addsub0003(9)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_8_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(7),
+      LI => U3_Madd_spriteonM2_addsub0003_cy_8_rt_1132,
+      O => U3_spriteonM2_addsub0003(8)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(7),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0003_cy_8_rt_1132,
+      O => U3_Madd_spriteonM2_addsub0003_cy(8)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_7_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(6),
+      LI => U3_Madd_spriteonM2_addsub0003_cy_7_rt_1130,
+      O => U3_spriteonM2_addsub0003(7)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(6),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0003_cy_7_rt_1130,
+      O => U3_Madd_spriteonM2_addsub0003_cy(7)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_6_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(5),
+      LI => U3_Madd_spriteonM2_addsub0003_cy_6_rt_1128,
+      O => U3_spriteonM2_addsub0003(6)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(5),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0003_cy_6_rt_1128,
+      O => U3_Madd_spriteonM2_addsub0003_cy(6)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_5_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(4),
+      LI => U3_Madd_spriteonM2_addsub0003_cy_5_rt_1126,
+      O => U3_spriteonM2_addsub0003(5)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(4),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0003_cy_5_rt_1126,
+      O => U3_Madd_spriteonM2_addsub0003_cy(5)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_4_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(3),
+      LI => U3_Madd_spriteonM2_addsub0003_cy_4_rt_1124,
+      O => U3_spriteonM2_addsub0003(4)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(3),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0003_cy_4_rt_1124,
+      O => U3_Madd_spriteonM2_addsub0003_cy(4)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_3_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(2),
+      LI => U3_Madd_spriteonM2_addsub0003_cy_3_rt_1122,
+      O => U3_spriteonM2_addsub0003(3)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(2),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0003_cy_3_rt_1122,
+      O => U3_Madd_spriteonM2_addsub0003_cy(3)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_2_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(1),
+      LI => U3_Madd_spriteonM2_addsub0003_lut_2_Q,
+      O => U3_spriteonM2_addsub0003(2)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(1),
+      DI => N1,
+      S => U3_Madd_spriteonM2_addsub0003_lut_2_Q,
+      O => U3_Madd_spriteonM2_addsub0003_cy(2)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_1_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(0),
+      LI => U3_Madd_spriteonM2_addsub0003_cy_1_rt_1119,
+      O => U3_spriteonM2_addsub0003(1)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0003_cy(0),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0003_cy_1_rt_1119,
+      O => U3_Madd_spriteonM2_addsub0003_cy(1)
+    );
+  U3_Madd_spriteonM2_addsub0003_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_spriteonM2_addsub0003_lut_0_Q,
+      O => U3_spriteonM2_addsub0003(0)
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => U3_Madd_spriteonM2_addsub0003_lut_0_Q,
+      O => U3_Madd_spriteonM2_addsub0003_cy(0)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_9_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(8),
+      LI => U3_Madd_spriteonM1_addsub0003_xor_9_rt_1080,
+      O => U3_spriteonM1_addsub0003(9)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_8_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(7),
+      LI => U3_Madd_spriteonM1_addsub0003_cy_8_rt_1077,
+      O => U3_spriteonM1_addsub0003(8)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(7),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0003_cy_8_rt_1077,
+      O => U3_Madd_spriteonM1_addsub0003_cy(8)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_7_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(6),
+      LI => U3_Madd_spriteonM1_addsub0003_cy_7_rt_1075,
+      O => U3_spriteonM1_addsub0003(7)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(6),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0003_cy_7_rt_1075,
+      O => U3_Madd_spriteonM1_addsub0003_cy(7)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_6_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(5),
+      LI => U3_Madd_spriteonM1_addsub0003_cy_6_rt_1073,
+      O => U3_spriteonM1_addsub0003(6)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(5),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0003_cy_6_rt_1073,
+      O => U3_Madd_spriteonM1_addsub0003_cy(6)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_5_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(4),
+      LI => U3_Madd_spriteonM1_addsub0003_cy_5_rt_1071,
+      O => U3_spriteonM1_addsub0003(5)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(4),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0003_cy_5_rt_1071,
+      O => U3_Madd_spriteonM1_addsub0003_cy(5)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_4_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(3),
+      LI => U3_Madd_spriteonM1_addsub0003_cy_4_rt_1069,
+      O => U3_spriteonM1_addsub0003(4)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(3),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0003_cy_4_rt_1069,
+      O => U3_Madd_spriteonM1_addsub0003_cy(4)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_3_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(2),
+      LI => U3_Madd_spriteonM1_addsub0003_cy_3_rt_1067,
+      O => U3_spriteonM1_addsub0003(3)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(2),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0003_cy_3_rt_1067,
+      O => U3_Madd_spriteonM1_addsub0003_cy(3)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_2_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(1),
+      LI => U3_Madd_spriteonM1_addsub0003_lut_2_Q,
+      O => U3_spriteonM1_addsub0003(2)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(1),
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0003_lut_2_Q,
+      O => U3_Madd_spriteonM1_addsub0003_cy(2)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_1_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(0),
+      LI => U3_Madd_spriteonM1_addsub0003_cy_1_rt_1064,
+      O => U3_spriteonM1_addsub0003(1)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0003_cy(0),
+      DI => N0,
+      S => U3_Madd_spriteonM1_addsub0003_cy_1_rt_1064,
+      O => U3_Madd_spriteonM1_addsub0003_cy(1)
+    );
+  U3_Madd_spriteonM1_addsub0003_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_spriteonM1_addsub0003_lut_0_Q,
+      O => U3_spriteonM1_addsub0003(0)
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0003_lut_0_Q,
+      O => U3_Madd_spriteonM1_addsub0003_cy(0)
+    );
+  U3_Madd_tank2rom1s_xor_11_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(10),
+      LI => U3_tank1rom10s_sub0001_10_112_2238,
+      O => sig_tank2rom1s(11)
+    );
+  U3_Madd_tank2rom1s_xor_10_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(9),
+      LI => U3_Madd_tank2rom1s_lut(10),
+      O => sig_tank2rom1s(10)
+    );
+  U3_Madd_tank2rom1s_cy_10_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(9),
+      DI => U3_tank1rom10s_sub0001(10),
+      S => U3_Madd_tank2rom1s_lut(10),
+      O => U3_Madd_tank2rom1s_cy(10)
+    );
+  U3_Madd_tank2rom1s_xor_9_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(8),
+      LI => U3_Madd_tank2rom1s_lut(9),
+      O => sig_tank2rom1s(9)
+    );
+  U3_Madd_tank2rom1s_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(8),
+      DI => U3_tank1rom10s_sub0001(9),
+      S => U3_Madd_tank2rom1s_lut(9),
+      O => U3_Madd_tank2rom1s_cy(9)
+    );
+  U3_Madd_tank2rom1s_xor_8_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(7),
+      LI => U3_Madd_tank2rom1s_lut(8),
+      O => sig_tank2rom1s(8)
+    );
+  U3_Madd_tank2rom1s_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(7),
+      DI => U3_tank1rom10s_sub0001(8),
+      S => U3_Madd_tank2rom1s_lut(8),
+      O => U3_Madd_tank2rom1s_cy(8)
+    );
+  U3_Madd_tank2rom1s_xor_7_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(6),
+      LI => U3_Madd_tank2rom1s_lut(7),
+      O => sig_tank2rom1s(7)
+    );
+  U3_Madd_tank2rom1s_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(6),
+      DI => U3_tank1rom10s_sub0001(7),
+      S => U3_Madd_tank2rom1s_lut(7),
+      O => U3_Madd_tank2rom1s_cy(7)
+    );
+  U3_Madd_tank2rom1s_xor_6_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(5),
+      LI => U3_Madd_tank2rom1s_lut(6),
+      O => sig_tank2rom1s(6)
+    );
+  U3_Madd_tank2rom1s_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(5),
+      DI => U3_tank1rom10s_sub0001(6),
+      S => U3_Madd_tank2rom1s_lut(6),
+      O => U3_Madd_tank2rom1s_cy(6)
+    );
+  U3_Madd_tank2rom1s_xor_5_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(4),
+      LI => U3_Madd_tank2rom1s_lut(5),
+      O => sig_tank2rom1s(5)
+    );
+  U3_Madd_tank2rom1s_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom1s_cy(4),
+      DI => U3_tank1rom10s_sub0001(5),
+      S => U3_Madd_tank2rom1s_lut(5),
+      O => U3_Madd_tank2rom1s_cy(5)
+    );
+  U3_Madd_tank2rom1s_xor_4_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_tank2rom1s_lut(4),
+      O => sig_tank2rom1s(4)
+    );
+  U3_Madd_tank2rom1s_cy_4_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => U3_tank1rom10s_sub0001(4),
+      S => U3_Madd_tank2rom1s_lut(4),
+      O => U3_Madd_tank2rom1s_cy(4)
+    );
+  U3_Madd_tank1rom1s_xor_11_Q : XORCY
+    port map (
+      CI => U3_Madd_tank1rom1s_cy(10),
+      LI => U3_tank1rom10s_sub0001_10_113_2239,
+      O => sig_tank1rom1s(11)
+    );
+  U3_Madd_tank1rom1s_xor_10_Q : XORCY
+    port map (
+      CI => U3_Madd_tank1rom1s_cy(9),
+      LI => U3_Madd_tank1rom1s_lut(10),
+      O => sig_tank1rom1s(10)
+    );
+  U3_Madd_tank1rom1s_cy_10_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank1rom1s_cy(9),
+      DI => U3_tank1rom10s_sub0001(10),
+      S => U3_Madd_tank1rom1s_lut(10),
+      O => U3_Madd_tank1rom1s_cy(10)
     );
   U3_Madd_tank1rom1s_xor_9_Q : XORCY
     port map (
       CI => U3_Madd_tank1rom1s_cy(8),
-      LI => U3_Madd_tank1rom1s_cy_9_rt_763,
+      LI => U3_Madd_tank1rom1s_lut(9),
       O => sig_tank1rom1s(9)
     );
   U3_Madd_tank1rom1s_cy_9_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom1s_cy(8),
-      DI => N0,
-      S => U3_Madd_tank1rom1s_cy_9_rt_763,
-      O => sig_tank1rom1s(10)
+      DI => U3_tank1rom10s_sub0001(9),
+      S => U3_Madd_tank1rom1s_lut(9),
+      O => U3_Madd_tank1rom1s_cy(9)
     );
   U3_Madd_tank1rom1s_xor_8_Q : XORCY
     port map (
       CI => U3_Madd_tank1rom1s_cy(7),
-      LI => U3_Madd_tank1rom1s_cy_8_rt_762,
+      LI => U3_Madd_tank1rom1s_lut(8),
       O => sig_tank1rom1s(8)
     );
   U3_Madd_tank1rom1s_cy_8_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom1s_cy(7),
-      DI => N0,
-      S => U3_Madd_tank1rom1s_cy_8_rt_762,
+      DI => U3_tank1rom10s_sub0001(8),
+      S => U3_Madd_tank1rom1s_lut(8),
       O => U3_Madd_tank1rom1s_cy(8)
     );
   U3_Madd_tank1rom1s_xor_7_Q : XORCY
@@ -3664,18 +7793,9 @@ begin
   U3_Madd_tank1rom1s_cy_7_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom1s_cy(6),
-      DI => U3_ypix1(7),
+      DI => U3_tank1rom10s_sub0001(7),
       S => U3_Madd_tank1rom1s_lut(7),
       O => U3_Madd_tank1rom1s_cy(7)
-    );
-  U3_Madd_tank1rom1s_lut_7_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U3_ypix1(7),
-      I1 => sw_3_IBUF_1886,
-      O => U3_Madd_tank1rom1s_lut(7)
     );
   U3_Madd_tank1rom1s_xor_6_Q : XORCY
     port map (
@@ -3686,18 +7806,9 @@ begin
   U3_Madd_tank1rom1s_cy_6_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom1s_cy(5),
-      DI => U3_ypix1(6),
+      DI => U3_tank1rom10s_sub0001(6),
       S => U3_Madd_tank1rom1s_lut(6),
       O => U3_Madd_tank1rom1s_cy(6)
-    );
-  U3_Madd_tank1rom1s_lut_6_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U3_ypix1(6),
-      I1 => sw_2_IBUF_1885,
-      O => U3_Madd_tank1rom1s_lut(6)
     );
   U3_Madd_tank1rom1s_xor_5_Q : XORCY
     port map (
@@ -3708,18 +7819,9 @@ begin
   U3_Madd_tank1rom1s_cy_5_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom1s_cy(4),
-      DI => U3_ypix1(5),
+      DI => U3_tank1rom10s_sub0001(5),
       S => U3_Madd_tank1rom1s_lut(5),
       O => U3_Madd_tank1rom1s_cy(5)
-    );
-  U3_Madd_tank1rom1s_lut_5_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U3_ypix1(5),
-      I1 => sw_1_IBUF_1884,
-      O => U3_Madd_tank1rom1s_lut(5)
     );
   U3_Madd_tank1rom1s_xor_4_Q : XORCY
     port map (
@@ -3730,7 +7832,7 @@ begin
   U3_Madd_tank1rom1s_cy_4_Q : MUXCY
     port map (
       CI => N0,
-      DI => rom1_addr(4),
+      DI => U3_tank1rom10s_sub0001(4),
       S => U3_Madd_tank1rom1s_lut(4),
       O => U3_Madd_tank1rom1s_cy(4)
     );
@@ -3739,113 +7841,105 @@ begin
       INIT => X"6"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => sw_0_IBUF_1883,
+      I0 => U3_tank1rom10s_sub0001(4),
+      I1 => U3_font2_0_Q,
       O => U3_Madd_tank1rom1s_lut(4)
+    );
+  U3_Madd_tank1rom10s_xor_11_Q : XORCY
+    port map (
+      CI => U3_Madd_tank1rom10s_cy(10),
+      LI => U3_tank1rom10s_sub0001_10_114_2240,
+      O => sig_tank1rom10s(11)
+    );
+  U3_Madd_tank1rom10s_xor_10_Q : XORCY
+    port map (
+      CI => U3_Madd_tank1rom10s_cy(9),
+      LI => U3_tank1rom10s_sub0001_10_11_2236,
+      O => sig_tank1rom10s(10)
+    );
+  U3_Madd_tank1rom10s_cy_10_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank1rom10s_cy(9),
+      DI => N0,
+      S => U3_tank1rom10s_sub0001_10_11_2236,
+      O => U3_Madd_tank1rom10s_cy(10)
     );
   U3_Madd_tank1rom10s_xor_9_Q : XORCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(8),
-      LI => U3_Madd_tank1rom10s_cy_9_rt_752,
+      LI => U3_Madd_tank1rom10s_lut_9_Q_1148,
       O => sig_tank1rom10s(9)
     );
   U3_Madd_tank1rom10s_cy_9_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(8),
-      DI => N0,
-      S => U3_Madd_tank1rom10s_cy_9_rt_752,
-      O => sig_tank1rom10s(10)
+      DI => N1,
+      S => U3_Madd_tank1rom10s_lut_9_Q_1148,
+      O => U3_Madd_tank1rom10s_cy(9)
     );
   U3_Madd_tank1rom10s_xor_8_Q : XORCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(7),
-      LI => U3_Madd_tank1rom10s_cy_8_rt_751,
+      LI => U3_Madd_tank1rom10s_lut_8_Q_1147,
       O => sig_tank1rom10s(8)
     );
   U3_Madd_tank1rom10s_cy_8_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(7),
-      DI => N0,
-      S => U3_Madd_tank1rom10s_cy_8_rt_751,
+      DI => N1,
+      S => U3_Madd_tank1rom10s_lut_8_Q_1147,
       O => U3_Madd_tank1rom10s_cy(8)
     );
   U3_Madd_tank1rom10s_xor_7_Q : XORCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(6),
-      LI => U3_Madd_tank1rom10s_lut(7),
+      LI => U3_tank1rom10s_sub0001_7_1_2247,
       O => sig_tank1rom10s(7)
     );
   U3_Madd_tank1rom10s_cy_7_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(6),
-      DI => U3_ypix1(7),
-      S => U3_Madd_tank1rom10s_lut(7),
+      DI => N0,
+      S => U3_tank1rom10s_sub0001_7_1_2247,
       O => U3_Madd_tank1rom10s_cy(7)
-    );
-  U3_Madd_tank1rom10s_lut_7_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U3_ypix1(7),
-      I1 => sw_7_IBUF_1890,
-      O => U3_Madd_tank1rom10s_lut(7)
     );
   U3_Madd_tank1rom10s_xor_6_Q : XORCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(5),
-      LI => U3_Madd_tank1rom10s_lut(6),
+      LI => U3_Madd_tank1rom10s_lut_6_Q_1146,
       O => sig_tank1rom10s(6)
     );
   U3_Madd_tank1rom10s_cy_6_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(5),
-      DI => U3_ypix1(6),
-      S => U3_Madd_tank1rom10s_lut(6),
+      DI => U3_tank1rom10s_sub0001(6),
+      S => U3_Madd_tank1rom10s_lut_6_Q_1146,
       O => U3_Madd_tank1rom10s_cy(6)
-    );
-  U3_Madd_tank1rom10s_lut_6_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U3_ypix1(6),
-      I1 => sw_6_IBUF_1889,
-      O => U3_Madd_tank1rom10s_lut(6)
     );
   U3_Madd_tank1rom10s_xor_5_Q : XORCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(4),
-      LI => U3_Madd_tank1rom10s_lut(5),
+      LI => U3_Madd_tank1rom10s_lut_5_Q_1145,
       O => sig_tank1rom10s(5)
     );
   U3_Madd_tank1rom10s_cy_5_Q : MUXCY
     port map (
       CI => U3_Madd_tank1rom10s_cy(4),
-      DI => U3_ypix1(5),
-      S => U3_Madd_tank1rom10s_lut(5),
+      DI => U3_tank1rom10s_sub0001(5),
+      S => U3_Madd_tank1rom10s_lut_5_Q_1145,
       O => U3_Madd_tank1rom10s_cy(5)
-    );
-  U3_Madd_tank1rom10s_lut_5_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U3_ypix1(5),
-      I1 => sw_5_IBUF_1888,
-      O => U3_Madd_tank1rom10s_lut(5)
     );
   U3_Madd_tank1rom10s_xor_4_Q : XORCY
     port map (
       CI => N0,
-      LI => U3_Madd_tank1rom10s_lut(4),
+      LI => U3_Madd_tank1rom10s_lut_4_Q_1144,
       O => sig_tank1rom10s(4)
     );
   U3_Madd_tank1rom10s_cy_4_Q : MUXCY
     port map (
       CI => N0,
-      DI => rom1_addr(4),
-      S => U3_Madd_tank1rom10s_lut(4),
+      DI => U3_tank1rom10s_sub0001(4),
+      S => U3_Madd_tank1rom10s_lut_4_Q_1144,
       O => U3_Madd_tank1rom10s_cy(4)
     );
   U3_Madd_tank1rom10s_lut_4_Q : LUT2
@@ -3853,312 +7947,294 @@ begin
       INIT => X"6"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => sw_4_IBUF_1887,
-      O => U3_Madd_tank1rom10s_lut(4)
+      I0 => U3_tank1rom10s_sub0001(4),
+      I1 => U3_font1(0),
+      O => U3_Madd_tank1rom10s_lut_4_Q_1144
     );
-  U3_Msub_xpix2_Madd_xor_4_Q : XORCY
+  U3_Madd_tank2rom10s_xor_11_Q : XORCY
     port map (
-      CI => U3_Msub_xpix2_Madd_cy(3),
-      LI => U3_Msub_xpix2_Madd_lut(4),
-      O => U3_xpix2(4)
+      CI => U3_Madd_tank2rom10s_cy(10),
+      LI => U3_tank1rom10s_sub0001_10_115_2241,
+      O => sig_tank2rom10s(11)
     );
-  U3_Msub_xpix2_Madd_xor_3_Q : XORCY
+  U3_Madd_tank2rom10s_xor_10_Q : XORCY
     port map (
-      CI => U3_Msub_xpix2_Madd_cy(2),
-      LI => U3_Msub_xpix2_Madd_lut(3),
-      O => U3_xpix2(3)
+      CI => U3_Madd_tank2rom10s_cy(9),
+      LI => U3_tank1rom10s_sub0001_10_111_2237,
+      O => sig_tank2rom10s(10)
     );
-  U3_Msub_xpix2_Madd_cy_3_Q : MUXCY
+  U3_Madd_tank2rom10s_cy_10_Q : MUXCY
     port map (
-      CI => U3_Msub_xpix2_Madd_cy(2),
+      CI => U3_Madd_tank2rom10s_cy(9),
+      DI => N0,
+      S => U3_tank1rom10s_sub0001_10_111_2237,
+      O => U3_Madd_tank2rom10s_cy(10)
+    );
+  U3_Madd_tank2rom10s_xor_9_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(8),
+      LI => U3_Madd_tank2rom10s_lut_9_Q_1175,
+      O => sig_tank2rom10s(9)
+    );
+  U3_Madd_tank2rom10s_cy_9_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(8),
+      DI => N1,
+      S => U3_Madd_tank2rom10s_lut_9_Q_1175,
+      O => U3_Madd_tank2rom10s_cy(9)
+    );
+  U3_Madd_tank2rom10s_xor_8_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(7),
+      LI => U3_Madd_tank2rom10s_lut_8_Q_1174,
+      O => sig_tank2rom10s(8)
+    );
+  U3_Madd_tank2rom10s_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(7),
+      DI => N1,
+      S => U3_Madd_tank2rom10s_lut_8_Q_1174,
+      O => U3_Madd_tank2rom10s_cy(8)
+    );
+  U3_Madd_tank2rom10s_xor_7_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(6),
+      LI => U3_tank1rom10s_sub0001_7_11_2248,
+      O => sig_tank2rom10s(7)
+    );
+  U3_Madd_tank2rom10s_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(6),
+      DI => N0,
+      S => U3_tank1rom10s_sub0001_7_11_2248,
+      O => U3_Madd_tank2rom10s_cy(7)
+    );
+  U3_Madd_tank2rom10s_xor_6_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(5),
+      LI => U3_Madd_tank2rom10s_lut_6_Q_1173,
+      O => sig_tank2rom10s(6)
+    );
+  U3_Madd_tank2rom10s_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(5),
+      DI => U3_tank1rom10s_sub0001(6),
+      S => U3_Madd_tank2rom10s_lut_6_Q_1173,
+      O => U3_Madd_tank2rom10s_cy(6)
+    );
+  U3_Madd_tank2rom10s_xor_5_Q : XORCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(4),
+      LI => U3_Madd_tank2rom10s_lut_5_Q_1172,
+      O => sig_tank2rom10s(5)
+    );
+  U3_Madd_tank2rom10s_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Madd_tank2rom10s_cy(4),
+      DI => U3_tank1rom10s_sub0001(5),
+      S => U3_Madd_tank2rom10s_lut_5_Q_1172,
+      O => U3_Madd_tank2rom10s_cy(5)
+    );
+  U3_Madd_tank2rom10s_xor_4_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_tank2rom10s_lut_4_Q_1171,
+      O => sig_tank2rom10s(4)
+    );
+  U3_Madd_tank2rom10s_cy_4_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => U3_tank1rom10s_sub0001(4),
+      S => U3_Madd_tank2rom10s_lut_4_Q_1171,
+      O => U3_Madd_tank2rom10s_cy(4)
+    );
+  U3_Msub_rom_pix1_Madd_xor_4_Q : XORCY
+    port map (
+      CI => U3_Msub_rom_pix1_Madd_cy(3),
+      LI => U3_Msub_rom_pix1_Madd_lut(4),
+      O => U3_rom_pix1(4)
+    );
+  U3_Msub_rom_pix1_Madd_xor_3_Q : XORCY
+    port map (
+      CI => U3_Msub_rom_pix1_Madd_cy(2),
+      LI => U3_Msub_rom_pix1_Madd_lut(3),
+      O => U3_rom_pix1(3)
+    );
+  U3_Msub_rom_pix1_Madd_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Msub_rom_pix1_Madd_cy(2),
       DI => U2_hcs(3),
-      S => U3_Msub_xpix2_Madd_lut(3),
-      O => U3_Msub_xpix2_Madd_cy(3)
+      S => U3_Msub_rom_pix1_Madd_lut(3),
+      O => U3_Msub_rom_pix1_Madd_cy(3)
     );
-  U3_Msub_xpix2_Madd_lut_3_Q : LUT2
+  U3_Msub_rom_pix1_Madd_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_hcs(3),
+      I1 => U3_C1(3),
+      O => U3_Msub_rom_pix1_Madd_lut(3)
+    );
+  U3_Msub_rom_pix1_Madd_xor_2_Q : XORCY
+    port map (
+      CI => U3_Msub_rom_pix1_Madd_cy(1),
+      LI => U3_Msub_rom_pix1_Madd_lut(2),
+      O => U3_rom_pix1(2)
+    );
+  U3_Msub_rom_pix1_Madd_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Msub_rom_pix1_Madd_cy(1),
+      DI => U2_hcs(2),
+      S => U3_Msub_rom_pix1_Madd_lut(2),
+      O => U3_Msub_rom_pix1_Madd_cy(2)
+    );
+  U3_Msub_rom_pix1_Madd_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_hcs(2),
+      I1 => U3_C1(2),
+      O => U3_Msub_rom_pix1_Madd_lut(2)
+    );
+  U3_Msub_rom_pix1_Madd_xor_1_Q : XORCY
+    port map (
+      CI => U3_Msub_rom_pix1_Madd_cy(0),
+      LI => U3_Msub_rom_pix1_Madd_lut(1),
+      O => U3_rom_pix1(1)
+    );
+  U3_Msub_rom_pix1_Madd_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Msub_rom_pix1_Madd_cy(0),
+      DI => U2_hcs(1),
+      S => U3_Msub_rom_pix1_Madd_lut(1),
+      O => U3_Msub_rom_pix1_Madd_cy(1)
+    );
+  U3_Msub_rom_pix1_Madd_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_hcs(1),
+      I1 => U3_C1(1),
+      O => U3_Msub_rom_pix1_Madd_lut(1)
+    );
+  U3_Msub_rom_pix1_Madd_xor_0_Q : XORCY
+    port map (
+      CI => N1,
+      LI => U3_Msub_rom_pix1_Madd_lut(0),
+      O => U3_rom_pix1(0)
+    );
+  U3_Msub_rom_pix1_Madd_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => U2_hcs(0),
+      S => U3_Msub_rom_pix1_Madd_lut(0),
+      O => U3_Msub_rom_pix1_Madd_cy(0)
+    );
+  U3_Msub_rom_pix1_Madd_lut_0_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_hcs(0),
+      I1 => U3_C1(0),
+      O => U3_Msub_rom_pix1_Madd_lut(0)
+    );
+  U3_Msub_rom_pix2_Madd_xor_4_Q : XORCY
+    port map (
+      CI => U3_Msub_rom_pix2_Madd_cy(3),
+      LI => U3_Msub_rom_pix2_Madd_lut(4),
+      O => U3_rom_pix2(4)
+    );
+  U3_Msub_rom_pix2_Madd_xor_3_Q : XORCY
+    port map (
+      CI => U3_Msub_rom_pix2_Madd_cy(2),
+      LI => U3_Msub_rom_pix2_Madd_lut(3),
+      O => U3_rom_pix2(3)
+    );
+  U3_Msub_rom_pix2_Madd_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Msub_rom_pix2_Madd_cy(2),
+      DI => U2_hcs(3),
+      S => U3_Msub_rom_pix2_Madd_lut(3),
+      O => U3_Msub_rom_pix2_Madd_cy(3)
+    );
+  U3_Msub_rom_pix2_Madd_lut_3_Q : LUT2
     generic map(
       INIT => X"9"
     )
     port map (
       I0 => U2_hcs(3),
       I1 => U3_C2(3),
-      O => U3_Msub_xpix2_Madd_lut(3)
+      O => U3_Msub_rom_pix2_Madd_lut(3)
     );
-  U3_Msub_xpix2_Madd_xor_2_Q : XORCY
+  U3_Msub_rom_pix2_Madd_xor_2_Q : XORCY
     port map (
-      CI => U3_Msub_xpix2_Madd_cy(1),
-      LI => U3_Msub_xpix2_Madd_lut(2),
-      O => U3_xpix2(2)
+      CI => U3_Msub_rom_pix2_Madd_cy(1),
+      LI => U3_Msub_rom_pix2_Madd_lut(2),
+      O => U3_rom_pix2(2)
     );
-  U3_Msub_xpix2_Madd_cy_2_Q : MUXCY
+  U3_Msub_rom_pix2_Madd_cy_2_Q : MUXCY
     port map (
-      CI => U3_Msub_xpix2_Madd_cy(1),
+      CI => U3_Msub_rom_pix2_Madd_cy(1),
       DI => U2_hcs(2),
-      S => U3_Msub_xpix2_Madd_lut(2),
-      O => U3_Msub_xpix2_Madd_cy(2)
+      S => U3_Msub_rom_pix2_Madd_lut(2),
+      O => U3_Msub_rom_pix2_Madd_cy(2)
     );
-  U3_Msub_xpix2_Madd_lut_2_Q : LUT2
+  U3_Msub_rom_pix2_Madd_lut_2_Q : LUT2
     generic map(
       INIT => X"9"
     )
     port map (
       I0 => U2_hcs(2),
       I1 => U3_C2(2),
-      O => U3_Msub_xpix2_Madd_lut(2)
+      O => U3_Msub_rom_pix2_Madd_lut(2)
     );
-  U3_Msub_xpix2_Madd_xor_1_Q : XORCY
+  U3_Msub_rom_pix2_Madd_xor_1_Q : XORCY
     port map (
-      CI => U3_Msub_xpix2_Madd_cy(0),
-      LI => U3_Msub_xpix2_Madd_lut(1),
-      O => U3_xpix2(1)
+      CI => U3_Msub_rom_pix2_Madd_cy(0),
+      LI => U3_Msub_rom_pix2_Madd_lut(1),
+      O => U3_rom_pix2(1)
     );
-  U3_Msub_xpix2_Madd_cy_1_Q : MUXCY
+  U3_Msub_rom_pix2_Madd_cy_1_Q : MUXCY
     port map (
-      CI => U3_Msub_xpix2_Madd_cy(0),
+      CI => U3_Msub_rom_pix2_Madd_cy(0),
       DI => U2_hcs(1),
-      S => U3_Msub_xpix2_Madd_lut(1),
-      O => U3_Msub_xpix2_Madd_cy(1)
+      S => U3_Msub_rom_pix2_Madd_lut(1),
+      O => U3_Msub_rom_pix2_Madd_cy(1)
     );
-  U3_Msub_xpix2_Madd_lut_1_Q : LUT2
+  U3_Msub_rom_pix2_Madd_lut_1_Q : LUT2
     generic map(
       INIT => X"9"
     )
     port map (
       I0 => U2_hcs(1),
       I1 => U3_C2(1),
-      O => U3_Msub_xpix2_Madd_lut(1)
+      O => U3_Msub_rom_pix2_Madd_lut(1)
     );
-  U3_Msub_xpix2_Madd_xor_0_Q : XORCY
+  U3_Msub_rom_pix2_Madd_xor_0_Q : XORCY
     port map (
       CI => N1,
-      LI => U3_Msub_xpix2_Madd_lut(0),
-      O => U3_xpix2(0)
+      LI => U3_Msub_rom_pix2_Madd_lut(0),
+      O => U3_rom_pix2(0)
     );
-  U3_Msub_xpix2_Madd_cy_0_Q : MUXCY
+  U3_Msub_rom_pix2_Madd_cy_0_Q : MUXCY
     port map (
       CI => N1,
       DI => U2_hcs(0),
-      S => U3_Msub_xpix2_Madd_lut(0),
-      O => U3_Msub_xpix2_Madd_cy(0)
+      S => U3_Msub_rom_pix2_Madd_lut(0),
+      O => U3_Msub_rom_pix2_Madd_cy(0)
     );
-  U3_Msub_xpix2_Madd_lut_0_Q : LUT2
+  U3_Msub_rom_pix2_Madd_lut_0_Q : LUT2
     generic map(
       INIT => X"9"
     )
     port map (
       I0 => U2_hcs(0),
       I1 => U3_C2(0),
-      O => U3_Msub_xpix2_Madd_lut(0)
-    );
-  U3_Msub_xpix1_Madd_xor_4_Q : XORCY
-    port map (
-      CI => U3_Msub_xpix1_Madd_cy(3),
-      LI => U3_Msub_xpix1_Madd_lut(4),
-      O => U3_xpix1(4)
-    );
-  U3_Msub_xpix1_Madd_xor_3_Q : XORCY
-    port map (
-      CI => U3_Msub_xpix1_Madd_cy(2),
-      LI => U3_Msub_xpix1_Madd_lut(3),
-      O => U3_xpix1(3)
-    );
-  U3_Msub_xpix1_Madd_cy_3_Q : MUXCY
-    port map (
-      CI => U3_Msub_xpix1_Madd_cy(2),
-      DI => U2_hcs(3),
-      S => U3_Msub_xpix1_Madd_lut(3),
-      O => U3_Msub_xpix1_Madd_cy(3)
-    );
-  U3_Msub_xpix1_Madd_lut_3_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(3),
-      I1 => U3_C1(3),
-      O => U3_Msub_xpix1_Madd_lut(3)
-    );
-  U3_Msub_xpix1_Madd_xor_2_Q : XORCY
-    port map (
-      CI => U3_Msub_xpix1_Madd_cy(1),
-      LI => U3_Msub_xpix1_Madd_lut(2),
-      O => U3_xpix1(2)
-    );
-  U3_Msub_xpix1_Madd_cy_2_Q : MUXCY
-    port map (
-      CI => U3_Msub_xpix1_Madd_cy(1),
-      DI => U2_hcs(2),
-      S => U3_Msub_xpix1_Madd_lut(2),
-      O => U3_Msub_xpix1_Madd_cy(2)
-    );
-  U3_Msub_xpix1_Madd_lut_2_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(2),
-      I1 => U3_C1(2),
-      O => U3_Msub_xpix1_Madd_lut(2)
-    );
-  U3_Msub_xpix1_Madd_xor_1_Q : XORCY
-    port map (
-      CI => U3_Msub_xpix1_Madd_cy(0),
-      LI => U3_Msub_xpix1_Madd_lut(1),
-      O => U3_xpix1(1)
-    );
-  U3_Msub_xpix1_Madd_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Msub_xpix1_Madd_cy(0),
-      DI => U2_hcs(1),
-      S => U3_Msub_xpix1_Madd_lut(1),
-      O => U3_Msub_xpix1_Madd_cy(1)
-    );
-  U3_Msub_xpix1_Madd_lut_1_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(1),
-      I1 => U3_C1(1),
-      O => U3_Msub_xpix1_Madd_lut(1)
-    );
-  U3_Msub_xpix1_Madd_xor_0_Q : XORCY
-    port map (
-      CI => N1,
-      LI => U3_Msub_xpix1_Madd_lut(0),
-      O => U3_xpix1(0)
-    );
-  U3_Msub_xpix1_Madd_cy_0_Q : MUXCY
-    port map (
-      CI => N1,
-      DI => U2_hcs(0),
-      S => U3_Msub_xpix1_Madd_lut(0),
-      O => U3_Msub_xpix1_Madd_cy(0)
-    );
-  U3_Msub_xpix1_Madd_lut_0_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(0),
-      I1 => U3_C1(0),
-      O => U3_Msub_xpix1_Madd_lut(0)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_9_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(8),
-      DI => U2_hcs(9),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(9),
-      O => U3_spriteon1_cmp_ge0000
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_8_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(7),
-      DI => U2_hcs(8),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(8),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(8)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_7_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(6),
-      DI => U2_hcs(7),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(7),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(7)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_7_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(7),
-      I1 => U3_Madd_spriteon1_addsub0001_lut(7),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(7)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_6_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(5),
-      DI => U2_hcs(6),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(6),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(6)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_5_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(4),
-      DI => U2_hcs(5),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(5),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(5)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_4_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(3),
-      DI => U2_hcs(4),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(4),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(4)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_3_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(2),
-      DI => U2_hcs(3),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(3),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(3)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_3_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(3),
-      I1 => U3_C1(3),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(3)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_2_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(1),
-      DI => U2_hcs(2),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(2),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(2)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_2_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(2),
-      I1 => U3_C1(2),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(2)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(0),
-      DI => U2_hcs(1),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(1),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(1)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_1_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(1),
-      I1 => U3_C1(1),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(1)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_cy_0_Q : MUXCY
-    port map (
-      CI => N1,
-      DI => U2_hcs(0),
-      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(0),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(0)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_0_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_hcs(0),
-      I1 => U3_C1(0),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(0)
+      O => U3_Msub_rom_pix2_Madd_lut(0)
     );
   U3_Mcompar_spriteon2_cmp_ge0000_cy_9_Q : MUXCY
     port map (
@@ -4275,428 +8351,120 @@ begin
       I1 => U3_C2(0),
       O => U3_Mcompar_spriteon2_cmp_ge0000_lut(0)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_8_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_9_Q : MUXCY
     port map (
-      CI => U3_Mcompar_spriteonB5_cmp_ge0000_cy(7),
-      DI => N1,
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_lut(8),
-      O => U3_spriteonB5_cmp_ge0000
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(8),
+      DI => U2_hcs(9),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(9),
+      O => U3_spriteon1_cmp_ge0000
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_lut_8_Q : LUT2
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(7),
+      DI => U2_hcs(8),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(8),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(8)
+    );
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(6),
+      DI => U2_hcs(7),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(7),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(7)
+    );
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_7_Q : LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"9"
     )
     port map (
-      I0 => U2_vcs(8),
-      I1 => U2_vcs(9),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_lut(8)
+      I0 => U2_hcs(7),
+      I1 => U3_Madd_spriteon1_addsub0001_lut(7),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(7)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_7_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_6_Q : MUXCY
     port map (
-      CI => U3_Mcompar_spriteonB5_cmp_ge0000_cy(6),
-      DI => U2_vcs(7),
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_lut(7),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy(7)
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(5),
+      DI => U2_hcs(6),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(6),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(6)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_6_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_5_Q : MUXCY
     port map (
-      CI => U3_Mcompar_spriteonB5_cmp_ge0000_cy(5),
-      DI => U2_vcs(6),
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_lut(6),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy(6)
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(4),
+      DI => U2_hcs(5),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(5),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(5)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_5_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_4_Q : MUXCY
     port map (
-      CI => U3_Mcompar_spriteonB5_cmp_ge0000_cy(4),
-      DI => U2_vcs(5),
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_lut(5),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy(5)
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(3),
+      DI => U2_hcs(4),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(4),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(4)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_4_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_3_Q : MUXCY
     port map (
-      CI => U3_Mcompar_spriteonB5_cmp_ge0000_cy(3),
-      DI => U2_vcs(4),
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_lut(4),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy(4)
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(2),
+      DI => U2_hcs(3),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(3),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(3)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_3_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_3_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
     port map (
-      CI => U3_Mcompar_spriteonB5_cmp_ge0000_cy(2),
-      DI => U2_vcs(3),
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_lut(3),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy(3)
+      I0 => U2_hcs(3),
+      I1 => U3_C1(3),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(3)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_2_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_2_Q : MUXCY
     port map (
-      CI => U3_Mcompar_spriteonB5_cmp_ge0000_cy(1),
-      DI => U2_vcs(2),
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_lut(2),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy(2)
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(1),
+      DI => U2_hcs(2),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(2),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(2)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_1_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_2_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
     port map (
-      CI => U3_Mcompar_spriteonB5_cmp_ge0000_cy(0),
-      DI => U2_vcs(1),
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_lut(1),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy(1)
+      I0 => U2_hcs(2),
+      I1 => U3_C1(2),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(2)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_0_Q : MUXCY
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Mcompar_spriteon1_cmp_ge0000_cy(0),
+      DI => U2_hcs(1),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(1),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(1)
+    );
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_1_Q : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U2_hcs(1),
+      I1 => U3_C1(1),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(1)
+    );
+  U3_Mcompar_spriteon1_cmp_ge0000_cy_0_Q : MUXCY
     port map (
       CI => N1,
-      DI => N0,
-      S => U3_Mcompar_spriteonB5_cmp_ge0000_cy_0_rt_956,
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy(0)
+      DI => U2_hcs(0),
+      S => U3_Mcompar_spriteon1_cmp_ge0000_lut(0),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_cy(0)
     );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_8_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB4_cmp_ge0000_cy(7),
-      DI => N1,
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(8),
-      O => U3_spriteonB4_cmp_ge0000
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_8_Q : LUT2
-    generic map(
-      INIT => X"1"
-    )
-    port map (
-      I0 => U2_vcs(8),
-      I1 => U2_vcs(9),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(8)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_7_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB4_cmp_ge0000_cy(6),
-      DI => U2_vcs(7),
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(7),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_cy(7)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_6_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB4_cmp_ge0000_cy(5),
-      DI => U2_vcs(6),
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(6),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_cy(6)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_5_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB4_cmp_ge0000_cy(4),
-      DI => U2_vcs(5),
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(5),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_cy(5)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_4_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB4_cmp_ge0000_cy(3),
-      DI => U2_vcs(4),
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(4),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_cy(4)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_3_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB4_cmp_ge0000_cy(2),
-      DI => U2_vcs(3),
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(3),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_cy(3)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_3_Q : LUT2
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_0_Q : LUT2
     generic map(
       INIT => X"9"
     )
     port map (
-      I0 => U2_vcs(3),
-      I1 => U3_spriteonB4_add0000(3),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(3)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_2_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB4_cmp_ge0000_cy(1),
-      DI => U2_vcs(2),
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(2),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_cy(2)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB4_cmp_ge0000_cy(0),
-      DI => U2_vcs(1),
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(1),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_cy(1)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_cy_0_Q : MUXCY
-    port map (
-      CI => N1,
-      DI => U2_vcs(0),
-      S => U3_Mcompar_spriteonB4_cmp_ge0000_lut(0),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_cy(0)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_8_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB3_cmp_ge0000_cy(7),
-      DI => N1,
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(8),
-      O => U3_spriteonB3_cmp_ge0000
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_8_Q : LUT2
-    generic map(
-      INIT => X"1"
-    )
-    port map (
-      I0 => U2_vcs(8),
-      I1 => U2_vcs(9),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(8)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_7_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB3_cmp_ge0000_cy(6),
-      DI => U2_vcs(7),
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(7),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_cy(7)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_6_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB3_cmp_ge0000_cy(5),
-      DI => U2_vcs(6),
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(6),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_cy(6)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_5_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB3_cmp_ge0000_cy(4),
-      DI => U2_vcs(5),
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(5),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_cy(5)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_4_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB3_cmp_ge0000_cy(3),
-      DI => U2_vcs(4),
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(4),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_cy(4)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_3_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB3_cmp_ge0000_cy(2),
-      DI => U2_vcs(3),
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(3),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_cy(3)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_3_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_vcs(3),
-      I1 => U3_spriteonB3_add0000(3),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(3)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_2_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB3_cmp_ge0000_cy(1),
-      DI => U2_vcs(2),
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(2),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_cy(2)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB3_cmp_ge0000_cy(0),
-      DI => U2_vcs(1),
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(1),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_cy(1)
-    );
-  U3_Mcompar_spriteonB3_cmp_ge0000_cy_0_Q : MUXCY
-    port map (
-      CI => N1,
-      DI => U2_vcs(0),
-      S => U3_Mcompar_spriteonB3_cmp_ge0000_lut(0),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_cy(0)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_8_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB2_cmp_ge0000_cy(7),
-      DI => N1,
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_lut(8),
-      O => U3_spriteonB2_cmp_ge0000
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_lut_8_Q : LUT2
-    generic map(
-      INIT => X"1"
-    )
-    port map (
-      I0 => U2_vcs(8),
-      I1 => U2_vcs(9),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_lut(8)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_7_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB2_cmp_ge0000_cy(6),
-      DI => U2_vcs(7),
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_lut(7),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy(7)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_6_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB2_cmp_ge0000_cy(5),
-      DI => U2_vcs(6),
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_lut(6),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy(6)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_lut_6_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_vcs(6),
-      I1 => screenstate_sig_hill2(6),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_lut(6)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_5_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB2_cmp_ge0000_cy(4),
-      DI => U2_vcs(5),
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_lut(5),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy(5)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_lut_5_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_vcs(5),
-      I1 => screenstate_sig_hill2(5),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_lut(5)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_4_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB2_cmp_ge0000_cy(3),
-      DI => U2_vcs(4),
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_lut(4),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy(4)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_lut_4_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_vcs(4),
-      I1 => screenstate_sig_hill2(4),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_lut(4)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_3_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB2_cmp_ge0000_cy(2),
-      DI => U2_vcs(3),
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_lut(3),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy(3)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_lut_3_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_vcs(3),
-      I1 => screenstate_sig_hill2(3),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_lut(3)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_2_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB2_cmp_ge0000_cy(1),
-      DI => U2_vcs(2),
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_lut(2),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy(2)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_lut_2_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => U2_vcs(2),
-      I1 => screenstate_sig_hill2(2),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_lut(2)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB2_cmp_ge0000_cy(0),
-      DI => N0,
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_cy_1_rt_907,
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy(1)
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_0_Q : MUXCY
-    port map (
-      CI => N1,
-      DI => N0,
-      S => U3_Mcompar_spriteonB2_cmp_ge0000_cy_0_rt_905,
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy(0)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_8_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB1_cmp_ge0000_cy(7),
-      DI => N1,
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_lut(8),
-      O => U3_spriteonB1_cmp_ge0000
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_lut_8_Q : LUT2
-    generic map(
-      INIT => X"1"
-    )
-    port map (
-      I0 => U2_vcs(8),
-      I1 => U2_vcs(9),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_lut(8)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_7_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB1_cmp_ge0000_cy(6),
-      DI => U2_vcs(7),
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_lut(7),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy(7)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_6_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB1_cmp_ge0000_cy(5),
-      DI => U2_vcs(6),
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_lut(6),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy(6)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_5_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB1_cmp_ge0000_cy(4),
-      DI => U2_vcs(5),
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_lut(5),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy(5)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_4_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB1_cmp_ge0000_cy(3),
-      DI => U2_vcs(4),
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_lut(4),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy(4)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_3_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB1_cmp_ge0000_cy(2),
-      DI => U2_vcs(3),
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_lut(3),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy(3)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_2_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB1_cmp_ge0000_cy(1),
-      DI => U2_vcs(2),
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_lut(2),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy(2)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Mcompar_spriteonB1_cmp_ge0000_cy(0),
-      DI => U2_vcs(1),
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_lut(1),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy(1)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_0_Q : MUXCY
-    port map (
-      CI => N1,
-      DI => N0,
-      S => U3_Mcompar_spriteonB1_cmp_ge0000_cy_0_rt_888,
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy(0)
+      I0 => U2_hcs(0),
+      I1 => U3_C1(0),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(0)
     );
   U3_Mcompar_spriteon2f_cmp_gt0000_cy_9_Q : MUXCY
     port map (
@@ -4745,7 +8513,7 @@ begin
   U3_Mcompar_spriteon2f_cmp_gt0000_cy_4_Q : MUXCY
     port map (
       CI => U3_Mcompar_spriteon2f_cmp_gt0000_cy(3),
-      DI => U3_spriteon2f_add0002(4),
+      DI => U3_spriteon2f_add0004(4),
       S => U3_Mcompar_spriteon2f_cmp_gt0000_lut(4),
       O => U3_Mcompar_spriteon2f_cmp_gt0000_cy(4)
     );
@@ -4813,128 +8581,687 @@ begin
       I1 => U2_hcs(0),
       O => U3_Mcompar_spriteon2f_cmp_gt0000_lut(0)
     );
-  U3_Msub_ypix1_sub0000_xor_9_Q : XORCY
+  U3_Madd_spriteonM2_addsub0002_xor_9_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(8),
-      LI => U3_Msub_ypix1_sub0000_lut_9_Q,
-      O => U3_ypix1(9)
+      CI => U3_Madd_spriteonM2_addsub0002_cy(8),
+      LI => U3_Madd_spriteonM2_addsub0002_xor_9_rt_1116,
+      O => U3_spriteonM2_addsub0002(9)
     );
-  U3_Msub_ypix1_sub0000_xor_8_Q : XORCY
+  U3_Madd_spriteonM2_addsub0002_xor_8_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(7),
-      LI => U3_Msub_ypix1_sub0000_cy_8_rt_1282,
-      O => U3_ypix1(8)
+      CI => U3_Madd_spriteonM2_addsub0002_cy(7),
+      LI => U3_Madd_spriteonM2_addsub0002_cy_8_rt_1110,
+      O => U3_spriteonM2_addsub0002(8)
     );
-  U3_Msub_ypix1_sub0000_cy_8_Q : MUXCY
+  U3_Madd_spriteonM2_addsub0002_cy_8_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(7),
+      CI => U3_Madd_spriteonM2_addsub0002_cy(7),
       DI => N0,
-      S => U3_Msub_ypix1_sub0000_cy_8_rt_1282,
-      O => U3_Msub_ypix1_sub0000_cy(8)
+      S => U3_Madd_spriteonM2_addsub0002_cy_8_rt_1110,
+      O => U3_Madd_spriteonM2_addsub0002_cy(8)
     );
-  U3_Msub_ypix1_sub0000_xor_7_Q : XORCY
+  U3_Madd_spriteonM2_addsub0002_xor_7_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(6),
-      LI => U3_Msub_ypix1_sub0000_lut_7_Q,
-      O => U3_ypix1(7)
+      CI => U3_Madd_spriteonM2_addsub0002_cy(6),
+      LI => U3_Madd_spriteonM2_addsub0002_cy_7_rt_1108,
+      O => U3_spriteonM2_addsub0002(7)
     );
-  U3_Msub_ypix1_sub0000_cy_7_Q : MUXCY
+  U3_Madd_spriteonM2_addsub0002_cy_7_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(6),
+      CI => U3_Madd_spriteonM2_addsub0002_cy(6),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0002_cy_7_rt_1108,
+      O => U3_Madd_spriteonM2_addsub0002_cy(7)
+    );
+  U3_Madd_spriteonM2_addsub0002_xor_6_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(5),
+      LI => U3_Madd_spriteonM2_addsub0002_cy_6_rt_1106,
+      O => U3_spriteonM2_addsub0002(6)
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(5),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0002_cy_6_rt_1106,
+      O => U3_Madd_spriteonM2_addsub0002_cy(6)
+    );
+  U3_Madd_spriteonM2_addsub0002_xor_5_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(4),
+      LI => U3_Madd_spriteonM2_addsub0002_cy_5_rt_1104,
+      O => U3_spriteonM2_addsub0002(5)
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(4),
+      DI => N0,
+      S => U3_Madd_spriteonM2_addsub0002_cy_5_rt_1104,
+      O => U3_Madd_spriteonM2_addsub0002_cy(5)
+    );
+  U3_Madd_spriteonM2_addsub0002_xor_4_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(3),
+      LI => U3_Madd_spriteonM2_addsub0002_lut(4),
+      O => U3_spriteonM2_addsub0002(4)
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(3),
       DI => N1,
-      S => U3_Msub_ypix1_sub0000_lut_7_Q,
-      O => U3_Msub_ypix1_sub0000_cy(7)
+      S => U3_Madd_spriteonM2_addsub0002_lut(4),
+      O => U3_Madd_spriteonM2_addsub0002_cy(4)
     );
-  U3_Msub_ypix1_sub0000_xor_6_Q : XORCY
+  U3_Madd_spriteonM2_addsub0002_xor_3_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(5),
-      LI => U3_Msub_ypix1_sub0000_cy_6_rt_1279,
-      O => U3_ypix1(6)
+      CI => U3_Madd_spriteonM2_addsub0002_cy(2),
+      LI => U3_Madd_spriteonM2_addsub0002_lut(3),
+      O => U3_spriteonM2_addsub0002(3)
     );
-  U3_Msub_ypix1_sub0000_cy_6_Q : MUXCY
+  U3_Madd_spriteonM2_addsub0002_cy_3_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(5),
+      CI => U3_Madd_spriteonM2_addsub0002_cy(2),
+      DI => N1,
+      S => U3_Madd_spriteonM2_addsub0002_lut(3),
+      O => U3_Madd_spriteonM2_addsub0002_cy(3)
+    );
+  U3_Madd_spriteonM2_addsub0002_xor_2_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(1),
+      LI => U3_Madd_spriteonM2_addsub0002_lut(2),
+      O => U3_spriteonM2_addsub0002(2)
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(1),
+      DI => N1,
+      S => U3_Madd_spriteonM2_addsub0002_lut(2),
+      O => U3_Madd_spriteonM2_addsub0002_cy(2)
+    );
+  U3_Madd_spriteonM2_addsub0002_xor_1_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(0),
+      LI => U3_Madd_spriteonM2_addsub0002_lut(1),
+      O => U3_spriteonM2_addsub0002(1)
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM2_addsub0002_cy(0),
+      DI => N1,
+      S => U3_Madd_spriteonM2_addsub0002_lut(1),
+      O => U3_Madd_spriteonM2_addsub0002_cy(1)
+    );
+  U3_Madd_spriteonM2_addsub0002_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_spriteonM2_addsub0002_lut(0),
+      O => U3_spriteonM2_addsub0002(0)
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => U3_Madd_spriteonM2_addsub0002_lut(0),
+      O => U3_Madd_spriteonM2_addsub0002_cy(0)
+    );
+  U3_Madd_spriteonM1_addsub0002_xor_9_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0002_cy(8),
+      LI => U3_Madd_spriteonM1_addsub0002_xor_9_rt_1061,
+      O => U3_spriteonM1_addsub0002(9)
+    );
+  U3_Madd_spriteonM1_addsub0002_xor_8_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0002_cy(7),
+      LI => U3_Madd_spriteonM1_addsub0002_cy_8_rt_1055,
+      O => U3_spriteonM1_addsub0002(8)
+    );
+  U3_Madd_spriteonM1_addsub0002_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0002_cy(7),
       DI => N0,
-      S => U3_Msub_ypix1_sub0000_cy_6_rt_1279,
-      O => U3_Msub_ypix1_sub0000_cy(6)
+      S => U3_Madd_spriteonM1_addsub0002_cy_8_rt_1055,
+      O => U3_Madd_spriteonM1_addsub0002_cy(8)
     );
-  U3_Msub_ypix1_sub0000_xor_5_Q : XORCY
+  U3_Madd_spriteonM1_addsub0002_xor_7_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(4),
-      LI => U3_Msub_ypix1_sub0000_cy_5_rt_1277,
-      O => U3_ypix1(5)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(6),
+      LI => U3_Madd_spriteonM1_addsub0002_cy_7_rt_1053,
+      O => U3_spriteonM1_addsub0002(7)
     );
-  U3_Msub_ypix1_sub0000_cy_5_Q : MUXCY
+  U3_Madd_spriteonM1_addsub0002_cy_7_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(4),
+      CI => U3_Madd_spriteonM1_addsub0002_cy(6),
       DI => N0,
-      S => U3_Msub_ypix1_sub0000_cy_5_rt_1277,
-      O => U3_Msub_ypix1_sub0000_cy(5)
+      S => U3_Madd_spriteonM1_addsub0002_cy_7_rt_1053,
+      O => U3_Madd_spriteonM1_addsub0002_cy(7)
     );
-  U3_Msub_ypix1_sub0000_xor_4_Q : XORCY
+  U3_Madd_spriteonM1_addsub0002_xor_6_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(3),
-      LI => U3_Msub_ypix1_sub0000_cy_4_rt_1275,
-      O => rom1_addr(4)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(5),
+      LI => U3_Madd_spriteonM1_addsub0002_cy_6_rt_1051,
+      O => U3_spriteonM1_addsub0002(6)
     );
-  U3_Msub_ypix1_sub0000_cy_4_Q : MUXCY
+  U3_Madd_spriteonM1_addsub0002_cy_6_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(3),
+      CI => U3_Madd_spriteonM1_addsub0002_cy(5),
       DI => N0,
-      S => U3_Msub_ypix1_sub0000_cy_4_rt_1275,
-      O => U3_Msub_ypix1_sub0000_cy(4)
+      S => U3_Madd_spriteonM1_addsub0002_cy_6_rt_1051,
+      O => U3_Madd_spriteonM1_addsub0002_cy(6)
     );
-  U3_Msub_ypix1_sub0000_xor_3_Q : XORCY
+  U3_Madd_spriteonM1_addsub0002_xor_5_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(2),
-      LI => U3_Msub_ypix1_sub0000_cy_3_rt_1273,
-      O => rom1_addr(3)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(4),
+      LI => U3_Madd_spriteonM1_addsub0002_cy_5_rt_1049,
+      O => U3_spriteonM1_addsub0002(5)
     );
-  U3_Msub_ypix1_sub0000_cy_3_Q : MUXCY
+  U3_Madd_spriteonM1_addsub0002_cy_5_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(2),
+      CI => U3_Madd_spriteonM1_addsub0002_cy(4),
       DI => N0,
-      S => U3_Msub_ypix1_sub0000_cy_3_rt_1273,
-      O => U3_Msub_ypix1_sub0000_cy(3)
+      S => U3_Madd_spriteonM1_addsub0002_cy_5_rt_1049,
+      O => U3_Madd_spriteonM1_addsub0002_cy(5)
     );
-  U3_Msub_ypix1_sub0000_xor_2_Q : XORCY
+  U3_Madd_spriteonM1_addsub0002_xor_4_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(1),
-      LI => U3_Msub_ypix1_sub0000_cy_2_rt_1271,
-      O => rom1_addr(2)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(3),
+      LI => U3_Madd_spriteonM1_addsub0002_lut(4),
+      O => U3_spriteonM1_addsub0002(4)
     );
-  U3_Msub_ypix1_sub0000_cy_2_Q : MUXCY
+  U3_Madd_spriteonM1_addsub0002_cy_4_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(1),
-      DI => N0,
-      S => U3_Msub_ypix1_sub0000_cy_2_rt_1271,
-      O => U3_Msub_ypix1_sub0000_cy(2)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(3),
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0002_lut(4),
+      O => U3_Madd_spriteonM1_addsub0002_cy(4)
     );
-  U3_Msub_ypix1_sub0000_xor_1_Q : XORCY
+  U3_Madd_spriteonM1_addsub0002_xor_3_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(0),
-      LI => U3_Msub_ypix1_sub0000_cy_1_rt_1269,
-      O => rom1_addr(1)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(2),
+      LI => U3_Madd_spriteonM1_addsub0002_lut(3),
+      O => U3_spriteonM1_addsub0002(3)
     );
-  U3_Msub_ypix1_sub0000_cy_1_Q : MUXCY
+  U3_Madd_spriteonM1_addsub0002_cy_3_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_sub0000_cy(0),
-      DI => N0,
-      S => U3_Msub_ypix1_sub0000_cy_1_rt_1269,
-      O => U3_Msub_ypix1_sub0000_cy(1)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(2),
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0002_lut(3),
+      O => U3_Madd_spriteonM1_addsub0002_cy(3)
     );
-  U3_Msub_ypix1_sub0000_xor_0_Q : XORCY
+  U3_Madd_spriteonM1_addsub0002_xor_2_Q : XORCY
     port map (
-      CI => N1,
-      LI => U3_Msub_ypix1_sub0000_cy_0_rt_1267,
-      O => rom1_addr(0)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(1),
+      LI => U3_Madd_spriteonM1_addsub0002_lut(2),
+      O => U3_spriteonM1_addsub0002(2)
     );
-  U3_Msub_ypix1_sub0000_cy_0_Q : MUXCY
+  U3_Madd_spriteonM1_addsub0002_cy_2_Q : MUXCY
     port map (
-      CI => N1,
-      DI => N0,
-      S => U3_Msub_ypix1_sub0000_cy_0_rt_1267,
-      O => U3_Msub_ypix1_sub0000_cy(0)
+      CI => U3_Madd_spriteonM1_addsub0002_cy(1),
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0002_lut(2),
+      O => U3_Madd_spriteonM1_addsub0002_cy(2)
+    );
+  U3_Madd_spriteonM1_addsub0002_xor_1_Q : XORCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0002_cy(0),
+      LI => U3_Madd_spriteonM1_addsub0002_lut(1),
+      O => U3_spriteonM1_addsub0002(1)
+    );
+  U3_Madd_spriteonM1_addsub0002_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Madd_spriteonM1_addsub0002_cy(0),
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0002_lut(1),
+      O => U3_Madd_spriteonM1_addsub0002_cy(1)
+    );
+  U3_Madd_spriteonM1_addsub0002_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_spriteonM1_addsub0002_lut(0),
+      O => U3_spriteonM1_addsub0002(0)
+    );
+  U3_Madd_spriteonM1_addsub0002_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => U3_Madd_spriteonM1_addsub0002_lut(0),
+      O => U3_Madd_spriteonM1_addsub0002_cy(0)
+    );
+  U3_Maddsub_RM2_share0000_xor_9_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(8),
+      LI => U3_Maddsub_RM2_share0000_lut(9),
+      O => U3_RM2_share0000(9)
+    );
+  U3_Maddsub_RM2_share0000_lut_9_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM2(9),
+      I1 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(9)
+    );
+  U3_Maddsub_RM2_share0000_xor_8_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(7),
+      LI => U3_Maddsub_RM2_share0000_lut(8),
+      O => U3_RM2_share0000(8)
+    );
+  U3_Maddsub_RM2_share0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(7),
+      DI => U3_RM2(8),
+      S => U3_Maddsub_RM2_share0000_lut(8),
+      O => U3_Maddsub_RM2_share0000_cy(8)
+    );
+  U3_Maddsub_RM2_share0000_lut_8_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM2(8),
+      I1 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(8)
+    );
+  U3_Maddsub_RM2_share0000_xor_7_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(6),
+      LI => U3_Maddsub_RM2_share0000_lut(7),
+      O => U3_RM2_share0000(7)
+    );
+  U3_Maddsub_RM2_share0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(6),
+      DI => U3_RM2(7),
+      S => U3_Maddsub_RM2_share0000_lut(7),
+      O => U3_Maddsub_RM2_share0000_cy(7)
+    );
+  U3_Maddsub_RM2_share0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM2(7),
+      I1 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(7)
+    );
+  U3_Maddsub_RM2_share0000_xor_6_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(5),
+      LI => U3_Maddsub_RM2_share0000_lut(6),
+      O => U3_RM2_share0000(6)
+    );
+  U3_Maddsub_RM2_share0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(5),
+      DI => U3_RM2(6),
+      S => U3_Maddsub_RM2_share0000_lut(6),
+      O => U3_Maddsub_RM2_share0000_cy(6)
+    );
+  U3_Maddsub_RM2_share0000_lut_6_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM2(6),
+      I1 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(6)
+    );
+  U3_Maddsub_RM2_share0000_xor_5_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(4),
+      LI => U3_Maddsub_RM2_share0000_lut(5),
+      O => U3_RM2_share0000(5)
+    );
+  U3_Maddsub_RM2_share0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(4),
+      DI => U3_RM2(5),
+      S => U3_Maddsub_RM2_share0000_lut(5),
+      O => U3_Maddsub_RM2_share0000_cy(5)
+    );
+  U3_Maddsub_RM2_share0000_lut_5_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM2(5),
+      I1 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(5)
+    );
+  U3_Maddsub_RM2_share0000_xor_4_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(3),
+      LI => U3_Maddsub_RM2_share0000_lut(4),
+      O => U3_RM2_share0000(4)
+    );
+  U3_Maddsub_RM2_share0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(3),
+      DI => U3_RM2(4),
+      S => U3_Maddsub_RM2_share0000_lut(4),
+      O => U3_Maddsub_RM2_share0000_cy(4)
+    );
+  U3_Maddsub_RM2_share0000_lut_4_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM2(4),
+      I1 => U3_RMcnt2(5),
+      I2 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(4)
+    );
+  U3_Maddsub_RM2_share0000_xor_3_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(2),
+      LI => U3_Maddsub_RM2_share0000_lut(3),
+      O => U3_RM2_share0000(3)
+    );
+  U3_Maddsub_RM2_share0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(2),
+      DI => U3_RM2(3),
+      S => U3_Maddsub_RM2_share0000_lut(3),
+      O => U3_Maddsub_RM2_share0000_cy(3)
+    );
+  U3_Maddsub_RM2_share0000_lut_3_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM2(3),
+      I1 => U3_RMcnt2(4),
+      I2 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(3)
+    );
+  U3_Maddsub_RM2_share0000_xor_2_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(1),
+      LI => U3_Maddsub_RM2_share0000_lut(2),
+      O => U3_RM2_share0000(2)
+    );
+  U3_Maddsub_RM2_share0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(1),
+      DI => U3_RM2(2),
+      S => U3_Maddsub_RM2_share0000_lut(2),
+      O => U3_Maddsub_RM2_share0000_cy(2)
+    );
+  U3_Maddsub_RM2_share0000_lut_2_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM2(2),
+      I1 => U3_RMcnt2(3),
+      I2 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(2)
+    );
+  U3_Maddsub_RM2_share0000_xor_1_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(0),
+      LI => U3_Maddsub_RM2_share0000_lut(1),
+      O => U3_RM2_share0000(1)
+    );
+  U3_Maddsub_RM2_share0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM2_share0000_cy(0),
+      DI => U3_RM2(1),
+      S => U3_Maddsub_RM2_share0000_lut(1),
+      O => U3_Maddsub_RM2_share0000_cy(1)
+    );
+  U3_Maddsub_RM2_share0000_lut_1_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM2(1),
+      I1 => U3_RMcnt2(2),
+      I2 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(1)
+    );
+  U3_Maddsub_RM2_share0000_xor_0_Q : XORCY
+    port map (
+      CI => U3_rise2_2073,
+      LI => U3_Maddsub_RM2_share0000_lut(0),
+      O => U3_RM2_share0000(0)
+    );
+  U3_Maddsub_RM2_share0000_cy_0_Q : MUXCY
+    port map (
+      CI => U3_rise2_2073,
+      DI => U3_RM2(0),
+      S => U3_Maddsub_RM2_share0000_lut(0),
+      O => U3_Maddsub_RM2_share0000_cy(0)
+    );
+  U3_Maddsub_RM2_share0000_lut_0_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM2(0),
+      I1 => U3_RMcnt2(1),
+      I2 => U3_rise2_2073,
+      O => U3_Maddsub_RM2_share0000_lut(0)
+    );
+  U3_Maddsub_RM1_share0000_xor_9_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(8),
+      LI => U3_Maddsub_RM1_share0000_lut(9),
+      O => U3_RM1_share0000(9)
+    );
+  U3_Maddsub_RM1_share0000_lut_9_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM1(9),
+      I1 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(9)
+    );
+  U3_Maddsub_RM1_share0000_xor_8_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(7),
+      LI => U3_Maddsub_RM1_share0000_lut(8),
+      O => U3_RM1_share0000(8)
+    );
+  U3_Maddsub_RM1_share0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(7),
+      DI => U3_RM1(8),
+      S => U3_Maddsub_RM1_share0000_lut(8),
+      O => U3_Maddsub_RM1_share0000_cy(8)
+    );
+  U3_Maddsub_RM1_share0000_lut_8_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM1(8),
+      I1 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(8)
+    );
+  U3_Maddsub_RM1_share0000_xor_7_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(6),
+      LI => U3_Maddsub_RM1_share0000_lut(7),
+      O => U3_RM1_share0000(7)
+    );
+  U3_Maddsub_RM1_share0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(6),
+      DI => U3_RM1(7),
+      S => U3_Maddsub_RM1_share0000_lut(7),
+      O => U3_Maddsub_RM1_share0000_cy(7)
+    );
+  U3_Maddsub_RM1_share0000_lut_7_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM1(7),
+      I1 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(7)
+    );
+  U3_Maddsub_RM1_share0000_xor_6_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(5),
+      LI => U3_Maddsub_RM1_share0000_lut(6),
+      O => U3_RM1_share0000(6)
+    );
+  U3_Maddsub_RM1_share0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(5),
+      DI => U3_RM1(6),
+      S => U3_Maddsub_RM1_share0000_lut(6),
+      O => U3_Maddsub_RM1_share0000_cy(6)
+    );
+  U3_Maddsub_RM1_share0000_lut_6_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM1(6),
+      I1 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(6)
+    );
+  U3_Maddsub_RM1_share0000_xor_5_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(4),
+      LI => U3_Maddsub_RM1_share0000_lut(5),
+      O => U3_RM1_share0000(5)
+    );
+  U3_Maddsub_RM1_share0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(4),
+      DI => U3_RM1(5),
+      S => U3_Maddsub_RM1_share0000_lut(5),
+      O => U3_Maddsub_RM1_share0000_cy(5)
+    );
+  U3_Maddsub_RM1_share0000_lut_5_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RM1(5),
+      I1 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(5)
+    );
+  U3_Maddsub_RM1_share0000_xor_4_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(3),
+      LI => U3_Maddsub_RM1_share0000_lut(4),
+      O => U3_RM1_share0000(4)
+    );
+  U3_Maddsub_RM1_share0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(3),
+      DI => U3_RM1(4),
+      S => U3_Maddsub_RM1_share0000_lut(4),
+      O => U3_Maddsub_RM1_share0000_cy(4)
+    );
+  U3_Maddsub_RM1_share0000_lut_4_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM1(4),
+      I1 => U3_RMcnt(5),
+      I2 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(4)
+    );
+  U3_Maddsub_RM1_share0000_xor_3_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(2),
+      LI => U3_Maddsub_RM1_share0000_lut(3),
+      O => U3_RM1_share0000(3)
+    );
+  U3_Maddsub_RM1_share0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(2),
+      DI => U3_RM1(3),
+      S => U3_Maddsub_RM1_share0000_lut(3),
+      O => U3_Maddsub_RM1_share0000_cy(3)
+    );
+  U3_Maddsub_RM1_share0000_lut_3_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM1(3),
+      I1 => U3_RMcnt(4),
+      I2 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(3)
+    );
+  U3_Maddsub_RM1_share0000_xor_2_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(1),
+      LI => U3_Maddsub_RM1_share0000_lut(2),
+      O => U3_RM1_share0000(2)
+    );
+  U3_Maddsub_RM1_share0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(1),
+      DI => U3_RM1(2),
+      S => U3_Maddsub_RM1_share0000_lut(2),
+      O => U3_Maddsub_RM1_share0000_cy(2)
+    );
+  U3_Maddsub_RM1_share0000_lut_2_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM1(2),
+      I1 => U3_RMcnt(3),
+      I2 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(2)
+    );
+  U3_Maddsub_RM1_share0000_xor_1_Q : XORCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(0),
+      LI => U3_Maddsub_RM1_share0000_lut(1),
+      O => U3_RM1_share0000(1)
+    );
+  U3_Maddsub_RM1_share0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Maddsub_RM1_share0000_cy(0),
+      DI => U3_RM1(1),
+      S => U3_Maddsub_RM1_share0000_lut(1),
+      O => U3_Maddsub_RM1_share0000_cy(1)
+    );
+  U3_Maddsub_RM1_share0000_lut_1_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM1(1),
+      I1 => U3_RMcnt(2),
+      I2 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(1)
+    );
+  U3_Maddsub_RM1_share0000_xor_0_Q : XORCY
+    port map (
+      CI => U3_rise_2072,
+      LI => U3_Maddsub_RM1_share0000_lut(0),
+      O => U3_RM1_share0000(0)
+    );
+  U3_Maddsub_RM1_share0000_cy_0_Q : MUXCY
+    port map (
+      CI => U3_rise_2072,
+      DI => U3_RM1(0),
+      S => U3_Maddsub_RM1_share0000_lut(0),
+      O => U3_Maddsub_RM1_share0000_cy(0)
+    );
+  U3_Maddsub_RM1_share0000_lut_0_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_RM1(0),
+      I1 => U3_RMcnt(1),
+      I2 => U3_rise_2072,
+      O => U3_Maddsub_RM1_share0000_lut(0)
     );
   U3_Mcount_C2_xor_9_Q : XORCY
     port map (
@@ -4985,12 +9312,12 @@ begin
     port map (
       CI => U3_Mcount_C2_cy(4),
       LI => U3_Mcount_C2_lut(5),
-      O => U3_Result_5_2
+      O => U3_Result_5_4
     );
   U3_Mcount_C2_cy_5_Q : MUXCY
     port map (
       CI => U3_Mcount_C2_cy(4),
-      DI => U3_C2(5),
+      DI => U3_C2_5_1_820,
       S => U3_Mcount_C2_lut(5),
       O => U3_Mcount_C2_cy(5)
     );
@@ -4998,7 +9325,7 @@ begin
     port map (
       CI => U3_Mcount_C2_cy(3),
       LI => U3_Mcount_C2_lut(4),
-      O => U3_Result_4_2
+      O => U3_Result_4_4
     );
   U3_Mcount_C2_cy_4_Q : MUXCY
     port map (
@@ -5011,7 +9338,7 @@ begin
     port map (
       CI => U3_Mcount_C2_cy(2),
       LI => U3_Mcount_C2_lut(3),
-      O => U3_Result_3_2
+      O => U3_Result_3_4
     );
   U3_Mcount_C2_cy_3_Q : MUXCY
     port map (
@@ -5024,7 +9351,7 @@ begin
     port map (
       CI => U3_Mcount_C2_cy(1),
       LI => U3_Mcount_C2_lut(2),
-      O => U3_Result_2_2
+      O => U3_Result_2_4
     );
   U3_Mcount_C2_cy_2_Q : MUXCY
     port map (
@@ -5037,7 +9364,7 @@ begin
     port map (
       CI => U3_Mcount_C2_cy(0),
       LI => U3_Mcount_C2_lut(1),
-      O => U3_Result_1_2
+      O => U3_Result_1_4
     );
   U3_Mcount_C2_cy_1_Q : MUXCY
     port map (
@@ -5050,7 +9377,7 @@ begin
     port map (
       CI => U3_leftBTN_inv1_inv1,
       LI => U3_Mcount_C2_lut(0),
-      O => U3_Result_0_2
+      O => U3_Result_0_4
     );
   U3_Mcount_C2_cy_0_Q : MUXCY
     port map (
@@ -5108,7 +9435,7 @@ begin
     port map (
       CI => U3_Mcount_C1_cy(4),
       LI => U3_Mcount_C1_lut(5),
-      O => U3_Result_5_1
+      O => U3_Result_5_3
     );
   U3_Mcount_C1_cy_5_Q : MUXCY
     port map (
@@ -5121,7 +9448,7 @@ begin
     port map (
       CI => U3_Mcount_C1_cy(3),
       LI => U3_Mcount_C1_lut(4),
-      O => U3_Result_4_1
+      O => U3_Result_4_3
     );
   U3_Mcount_C1_cy_4_Q : MUXCY
     port map (
@@ -5134,7 +9461,7 @@ begin
     port map (
       CI => U3_Mcount_C1_cy(2),
       LI => U3_Mcount_C1_lut(3),
-      O => U3_Result_3_1
+      O => U3_Result_3_3
     );
   U3_Mcount_C1_cy_3_Q : MUXCY
     port map (
@@ -5147,7 +9474,7 @@ begin
     port map (
       CI => U3_Mcount_C1_cy(1),
       LI => U3_Mcount_C1_lut(2),
-      O => U3_Result_2_1
+      O => U3_Result_2_3
     );
   U3_Mcount_C1_cy_2_Q : MUXCY
     port map (
@@ -5160,7 +9487,7 @@ begin
     port map (
       CI => U3_Mcount_C1_cy(0),
       LI => U3_Mcount_C1_lut(1),
-      O => U3_Result_1_1
+      O => U3_Result_1_3
     );
   U3_Mcount_C1_cy_1_Q : MUXCY
     port map (
@@ -5173,7 +9500,7 @@ begin
     port map (
       CI => U3_leftBTN_inv1_inv1,
       LI => U3_Mcount_C1_lut(0),
-      O => U3_Result_0_1
+      O => U3_Result_0_3
     );
   U3_Mcount_C1_cy_0_Q : MUXCY
     port map (
@@ -5182,218 +9509,257 @@ begin
       S => U3_Mcount_C1_lut(0),
       O => U3_Mcount_C1_cy(0)
     );
+  U3_Mcount_q_xor_20_Q : XORCY
+    port map (
+      CI => U3_Mcount_q_cy(19),
+      LI => U3_Mcount_q_xor_20_rt_1579,
+      O => U3_Result(20)
+    );
+  U3_Mcount_q_xor_19_Q : XORCY
+    port map (
+      CI => U3_Mcount_q_cy(18),
+      LI => U3_Mcount_q_cy_19_rt_1559,
+      O => U3_Result(19)
+    );
+  U3_Mcount_q_cy_19_Q : MUXCY
+    port map (
+      CI => U3_Mcount_q_cy(18),
+      DI => N0,
+      S => U3_Mcount_q_cy_19_rt_1559,
+      O => U3_Mcount_q_cy(19)
+    );
+  U3_Mcount_q_xor_18_Q : XORCY
+    port map (
+      CI => U3_Mcount_q_cy(17),
+      LI => U3_Mcount_q_cy_18_rt_1557,
+      O => U3_Result(18)
+    );
+  U3_Mcount_q_cy_18_Q : MUXCY
+    port map (
+      CI => U3_Mcount_q_cy(17),
+      DI => N0,
+      S => U3_Mcount_q_cy_18_rt_1557,
+      O => U3_Mcount_q_cy(18)
+    );
   U3_Mcount_q_xor_17_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(16),
-      LI => U3_Mcount_q_xor_17_rt_1044,
+      LI => U3_Mcount_q_cy_17_rt_1555,
       O => U3_Result(17)
+    );
+  U3_Mcount_q_cy_17_Q : MUXCY
+    port map (
+      CI => U3_Mcount_q_cy(16),
+      DI => N0,
+      S => U3_Mcount_q_cy_17_rt_1555,
+      O => U3_Mcount_q_cy(17)
     );
   U3_Mcount_q_xor_16_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(15),
-      LI => U3_Mcount_q_cy_16_rt_1024,
+      LI => U3_Mcount_q_cy_16_rt_1553,
       O => U3_Result(16)
     );
   U3_Mcount_q_cy_16_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(15),
       DI => N0,
-      S => U3_Mcount_q_cy_16_rt_1024,
+      S => U3_Mcount_q_cy_16_rt_1553,
       O => U3_Mcount_q_cy(16)
     );
   U3_Mcount_q_xor_15_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(14),
-      LI => U3_Mcount_q_cy_15_rt_1022,
+      LI => U3_Mcount_q_cy_15_rt_1551,
       O => U3_Result(15)
     );
   U3_Mcount_q_cy_15_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(14),
       DI => N0,
-      S => U3_Mcount_q_cy_15_rt_1022,
+      S => U3_Mcount_q_cy_15_rt_1551,
       O => U3_Mcount_q_cy(15)
     );
   U3_Mcount_q_xor_14_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(13),
-      LI => U3_Mcount_q_cy_14_rt_1020,
+      LI => U3_Mcount_q_cy_14_rt_1549,
       O => U3_Result(14)
     );
   U3_Mcount_q_cy_14_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(13),
       DI => N0,
-      S => U3_Mcount_q_cy_14_rt_1020,
+      S => U3_Mcount_q_cy_14_rt_1549,
       O => U3_Mcount_q_cy(14)
     );
   U3_Mcount_q_xor_13_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(12),
-      LI => U3_Mcount_q_cy_13_rt_1018,
+      LI => U3_Mcount_q_cy_13_rt_1547,
       O => U3_Result(13)
     );
   U3_Mcount_q_cy_13_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(12),
       DI => N0,
-      S => U3_Mcount_q_cy_13_rt_1018,
+      S => U3_Mcount_q_cy_13_rt_1547,
       O => U3_Mcount_q_cy(13)
     );
   U3_Mcount_q_xor_12_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(11),
-      LI => U3_Mcount_q_cy_12_rt_1016,
+      LI => U3_Mcount_q_cy_12_rt_1545,
       O => U3_Result(12)
     );
   U3_Mcount_q_cy_12_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(11),
       DI => N0,
-      S => U3_Mcount_q_cy_12_rt_1016,
+      S => U3_Mcount_q_cy_12_rt_1545,
       O => U3_Mcount_q_cy(12)
     );
   U3_Mcount_q_xor_11_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(10),
-      LI => U3_Mcount_q_cy_11_rt_1014,
+      LI => U3_Mcount_q_cy_11_rt_1543,
       O => U3_Result(11)
     );
   U3_Mcount_q_cy_11_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(10),
       DI => N0,
-      S => U3_Mcount_q_cy_11_rt_1014,
+      S => U3_Mcount_q_cy_11_rt_1543,
       O => U3_Mcount_q_cy(11)
     );
   U3_Mcount_q_xor_10_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(9),
-      LI => U3_Mcount_q_cy_10_rt_1012,
+      LI => U3_Mcount_q_cy_10_rt_1541,
       O => U3_Result(10)
     );
   U3_Mcount_q_cy_10_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(9),
       DI => N0,
-      S => U3_Mcount_q_cy_10_rt_1012,
+      S => U3_Mcount_q_cy_10_rt_1541,
       O => U3_Mcount_q_cy(10)
     );
   U3_Mcount_q_xor_9_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(8),
-      LI => U3_Mcount_q_cy_9_rt_1042,
+      LI => U3_Mcount_q_cy_9_rt_1577,
       O => U3_Result(9)
     );
   U3_Mcount_q_cy_9_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(8),
       DI => N0,
-      S => U3_Mcount_q_cy_9_rt_1042,
+      S => U3_Mcount_q_cy_9_rt_1577,
       O => U3_Mcount_q_cy(9)
     );
   U3_Mcount_q_xor_8_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(7),
-      LI => U3_Mcount_q_cy_8_rt_1040,
+      LI => U3_Mcount_q_cy_8_rt_1575,
       O => U3_Result(8)
     );
   U3_Mcount_q_cy_8_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(7),
       DI => N0,
-      S => U3_Mcount_q_cy_8_rt_1040,
+      S => U3_Mcount_q_cy_8_rt_1575,
       O => U3_Mcount_q_cy(8)
     );
   U3_Mcount_q_xor_7_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(6),
-      LI => U3_Mcount_q_cy_7_rt_1038,
+      LI => U3_Mcount_q_cy_7_rt_1573,
       O => U3_Result(7)
     );
   U3_Mcount_q_cy_7_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(6),
       DI => N0,
-      S => U3_Mcount_q_cy_7_rt_1038,
+      S => U3_Mcount_q_cy_7_rt_1573,
       O => U3_Mcount_q_cy(7)
     );
   U3_Mcount_q_xor_6_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(5),
-      LI => U3_Mcount_q_cy_6_rt_1036,
+      LI => U3_Mcount_q_cy_6_rt_1571,
       O => U3_Result(6)
     );
   U3_Mcount_q_cy_6_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(5),
       DI => N0,
-      S => U3_Mcount_q_cy_6_rt_1036,
+      S => U3_Mcount_q_cy_6_rt_1571,
       O => U3_Mcount_q_cy(6)
     );
   U3_Mcount_q_xor_5_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(4),
-      LI => U3_Mcount_q_cy_5_rt_1034,
+      LI => U3_Mcount_q_cy_5_rt_1569,
       O => U3_Result(5)
     );
   U3_Mcount_q_cy_5_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(4),
       DI => N0,
-      S => U3_Mcount_q_cy_5_rt_1034,
+      S => U3_Mcount_q_cy_5_rt_1569,
       O => U3_Mcount_q_cy(5)
     );
   U3_Mcount_q_xor_4_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(3),
-      LI => U3_Mcount_q_cy_4_rt_1032,
+      LI => U3_Mcount_q_cy_4_rt_1567,
       O => U3_Result(4)
     );
   U3_Mcount_q_cy_4_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(3),
       DI => N0,
-      S => U3_Mcount_q_cy_4_rt_1032,
+      S => U3_Mcount_q_cy_4_rt_1567,
       O => U3_Mcount_q_cy(4)
     );
   U3_Mcount_q_xor_3_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(2),
-      LI => U3_Mcount_q_cy_3_rt_1030,
+      LI => U3_Mcount_q_cy_3_rt_1565,
       O => U3_Result(3)
     );
   U3_Mcount_q_cy_3_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(2),
       DI => N0,
-      S => U3_Mcount_q_cy_3_rt_1030,
+      S => U3_Mcount_q_cy_3_rt_1565,
       O => U3_Mcount_q_cy(3)
     );
   U3_Mcount_q_xor_2_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(1),
-      LI => U3_Mcount_q_cy_2_rt_1028,
+      LI => U3_Mcount_q_cy_2_rt_1563,
       O => U3_Result(2)
     );
   U3_Mcount_q_cy_2_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(1),
       DI => N0,
-      S => U3_Mcount_q_cy_2_rt_1028,
+      S => U3_Mcount_q_cy_2_rt_1563,
       O => U3_Mcount_q_cy(2)
     );
   U3_Mcount_q_xor_1_Q : XORCY
     port map (
       CI => U3_Mcount_q_cy(0),
-      LI => U3_Mcount_q_cy_1_rt_1026,
+      LI => U3_Mcount_q_cy_1_rt_1561,
       O => U3_Result(1)
     );
   U3_Mcount_q_cy_1_Q : MUXCY
     port map (
       CI => U3_Mcount_q_cy(0),
       DI => N0,
-      S => U3_Mcount_q_cy_1_rt_1026,
+      S => U3_Mcount_q_cy_1_rt_1561,
       O => U3_Mcount_q_cy(1)
     );
   U3_Mcount_q_xor_0_Q : XORCY
@@ -5409,135 +9775,368 @@ begin
       S => U3_Mcount_q_lut(0),
       O => U3_Mcount_q_cy(0)
     );
-  U3_Msub_ypix1_addsub0000_xor_9_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_9_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(8),
-      LI => U3_Msub_ypix1_addsub0000_lut_9_1,
-      O => U3_ypix1_addsub0000(9)
+      CI => U3_Msub_CM2_sub0000_cy(8),
+      LI => U3_Msub_CM2_sub0000_lut(9),
+      O => U3_CM2_sub0000_1(9)
     );
-  U3_Msub_ypix1_addsub0000_xor_8_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_8_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(7),
-      LI => U3_Msub_ypix1_addsub0000_lut(8),
-      O => U3_ypix1_addsub0000(8)
+      CI => U3_Msub_CM2_sub0000_cy(7),
+      LI => U3_Msub_CM2_sub0000_lut(8),
+      O => U3_CM2_sub0000_1(8)
     );
-  U3_Msub_ypix1_addsub0000_cy_8_Q : MUXCY
+  U3_Msub_CM2_sub0000_cy_8_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(7),
+      CI => U3_Msub_CM2_sub0000_cy(7),
       DI => N1,
-      S => U3_Msub_ypix1_addsub0000_lut(8),
-      O => U3_Msub_ypix1_addsub0000_cy(8)
+      S => U3_Msub_CM2_sub0000_lut(8),
+      O => U3_Msub_CM2_sub0000_cy(8)
     );
-  U3_Msub_ypix1_addsub0000_xor_7_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_7_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(6),
-      LI => U3_Msub_ypix1_addsub0000_lut(7),
-      O => U3_ypix1_addsub0000(7)
+      CI => U3_Msub_CM2_sub0000_cy(6),
+      LI => U3_Msub_CM2_sub0000_lut(7),
+      O => U3_CM2_sub0000_1(7)
     );
-  U3_Msub_ypix1_addsub0000_cy_7_Q : MUXCY
+  U3_Msub_CM2_sub0000_cy_7_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(6),
+      CI => U3_Msub_CM2_sub0000_cy(6),
       DI => N1,
-      S => U3_Msub_ypix1_addsub0000_lut(7),
-      O => U3_Msub_ypix1_addsub0000_cy(7)
+      S => U3_Msub_CM2_sub0000_lut(7),
+      O => U3_Msub_CM2_sub0000_cy(7)
     );
-  U3_Msub_ypix1_addsub0000_xor_6_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_6_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(5),
-      LI => U3_Msub_ypix1_addsub0000_lut(6),
-      O => U3_ypix1_addsub0000(6)
+      CI => U3_Msub_CM2_sub0000_cy(5),
+      LI => U3_Msub_CM2_sub0000_lut(6),
+      O => U3_CM2_sub0000_1(6)
     );
-  U3_Msub_ypix1_addsub0000_cy_6_Q : MUXCY
+  U3_Msub_CM2_sub0000_cy_6_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(5),
+      CI => U3_Msub_CM2_sub0000_cy(5),
       DI => N1,
-      S => U3_Msub_ypix1_addsub0000_lut(6),
-      O => U3_Msub_ypix1_addsub0000_cy(6)
+      S => U3_Msub_CM2_sub0000_lut(6),
+      O => U3_Msub_CM2_sub0000_cy(6)
     );
-  U3_Msub_ypix1_addsub0000_xor_5_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_5_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(4),
-      LI => U3_Msub_ypix1_addsub0000_lut(5),
-      O => U3_ypix1_addsub0000(5)
+      CI => U3_Msub_CM2_sub0000_cy(4),
+      LI => U3_Msub_CM2_sub0000_lut(5),
+      O => U3_CM2_sub0000_1(5)
     );
-  U3_Msub_ypix1_addsub0000_cy_5_Q : MUXCY
+  U3_Msub_CM2_sub0000_cy_5_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(4),
+      CI => U3_Msub_CM2_sub0000_cy(4),
       DI => N1,
-      S => U3_Msub_ypix1_addsub0000_lut(5),
-      O => U3_Msub_ypix1_addsub0000_cy(5)
+      S => U3_Msub_CM2_sub0000_lut(5),
+      O => U3_Msub_CM2_sub0000_cy(5)
     );
-  U3_Msub_ypix1_addsub0000_xor_4_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_4_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(3),
-      LI => U3_Msub_ypix1_addsub0000_cy_4_rt_1255,
-      O => U3_ypix1_addsub0000(4)
+      CI => U3_Msub_CM2_sub0000_cy(3),
+      LI => U3_Msub_CM2_sub0000_lut(4),
+      O => U3_CM2_sub0000_1(4)
     );
-  U3_Msub_ypix1_addsub0000_cy_4_Q : MUXCY
+  U3_Msub_CM2_sub0000_cy_4_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(3),
-      DI => N0,
-      S => U3_Msub_ypix1_addsub0000_cy_4_rt_1255,
-      O => U3_Msub_ypix1_addsub0000_cy(4)
+      CI => U3_Msub_CM2_sub0000_cy(3),
+      DI => N1,
+      S => U3_Msub_CM2_sub0000_lut(4),
+      O => U3_Msub_CM2_sub0000_cy(4)
     );
-  U3_Msub_ypix1_addsub0000_xor_3_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_3_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(2),
-      LI => U3_Msub_ypix1_addsub0000_cy_3_rt_1253,
-      O => U3_ypix1_addsub0000(3)
+      CI => U3_Msub_CM2_sub0000_cy(2),
+      LI => U3_Msub_CM2_sub0000_lut(3),
+      O => U3_CM2_sub0000_1(3)
     );
-  U3_Msub_ypix1_addsub0000_cy_3_Q : MUXCY
+  U3_Msub_CM2_sub0000_cy_3_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(2),
-      DI => N0,
-      S => U3_Msub_ypix1_addsub0000_cy_3_rt_1253,
-      O => U3_Msub_ypix1_addsub0000_cy(3)
+      CI => U3_Msub_CM2_sub0000_cy(2),
+      DI => N1,
+      S => U3_Msub_CM2_sub0000_lut(3),
+      O => U3_Msub_CM2_sub0000_cy(3)
     );
-  U3_Msub_ypix1_addsub0000_xor_2_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_2_Q : XORCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(1),
-      LI => U3_Msub_ypix1_addsub0000_cy_2_rt_1251,
-      O => U3_ypix1_addsub0000(2)
+      CI => U3_Msub_CM2_sub0000_cy(1),
+      LI => U3_Msub_CM2_sub0000_lut(2),
+      O => U3_CM2_sub0000_1(2)
     );
-  U3_Msub_ypix1_addsub0000_cy_2_Q : MUXCY
+  U3_Msub_CM2_sub0000_cy_2_Q : MUXCY
     port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(1),
-      DI => N0,
-      S => U3_Msub_ypix1_addsub0000_cy_2_rt_1251,
-      O => U3_Msub_ypix1_addsub0000_cy(2)
+      CI => U3_Msub_CM2_sub0000_cy(1),
+      DI => N1,
+      S => U3_Msub_CM2_sub0000_lut(2),
+      O => U3_Msub_CM2_sub0000_cy(2)
     );
-  U3_Msub_ypix1_addsub0000_xor_1_Q : XORCY
-    port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(0),
-      LI => U3_Msub_ypix1_addsub0000_cy_1_rt_1249,
-      O => U3_ypix1_addsub0000(1)
-    );
-  U3_Msub_ypix1_addsub0000_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Msub_ypix1_addsub0000_cy(0),
-      DI => N0,
-      S => U3_Msub_ypix1_addsub0000_cy_1_rt_1249,
-      O => U3_Msub_ypix1_addsub0000_cy(1)
-    );
-  U3_Msub_ypix1_addsub0000_xor_0_Q : XORCY
+  U3_Msub_CM2_sub0000_xor_1_Q : XORCY
     port map (
       CI => N1,
-      LI => U3_Mcompar_spriteonB5_cmp_ge0000_cy_0_rt_956,
-      O => U3_ypix1_addsub0000(0)
+      LI => U3_Msub_CM2_sub0000_cy_1_rt_1738,
+      O => U3_CM2_sub0000_1(1)
     );
-  U3_Msub_ypix1_addsub0000_cy_0_Q : MUXCY
+  U3_Msub_CM2_sub0000_cy_1_Q : MUXCY
     port map (
       CI => N1,
       DI => N0,
-      S => U3_Msub_ypix1_addsub0000_cy_0_rt_1247,
-      O => U3_Msub_ypix1_addsub0000_cy(0)
+      S => U3_Msub_CM2_sub0000_cy_1_rt_1738,
+      O => U3_Msub_CM2_sub0000_cy(1)
+    );
+  U3_Madd_CM1_add0000_xor_9_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(8),
+      LI => U3_Madd_CM1_add0000_xor_9_rt_1013,
+      O => U3_CM1_add0000_0(9)
+    );
+  U3_Madd_CM1_add0000_xor_8_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(7),
+      LI => U3_Madd_CM1_add0000_cy_8_rt_1008,
+      O => U3_CM1_add0000_0(8)
+    );
+  U3_Madd_CM1_add0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(7),
+      DI => N0,
+      S => U3_Madd_CM1_add0000_cy_8_rt_1008,
+      O => U3_Madd_CM1_add0000_cy(8)
+    );
+  U3_Madd_CM1_add0000_xor_7_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(6),
+      LI => U3_Madd_CM1_add0000_cy_7_rt_1006,
+      O => U3_CM1_add0000_0(7)
+    );
+  U3_Madd_CM1_add0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(6),
+      DI => N0,
+      S => U3_Madd_CM1_add0000_cy_7_rt_1006,
+      O => U3_Madd_CM1_add0000_cy(7)
+    );
+  U3_Madd_CM1_add0000_xor_6_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(5),
+      LI => U3_Madd_CM1_add0000_cy_6_rt_1004,
+      O => U3_CM1_add0000_0(6)
+    );
+  U3_Madd_CM1_add0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(5),
+      DI => N0,
+      S => U3_Madd_CM1_add0000_cy_6_rt_1004,
+      O => U3_Madd_CM1_add0000_cy(6)
+    );
+  U3_Madd_CM1_add0000_xor_5_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(4),
+      LI => U3_Madd_CM1_add0000_cy_5_rt_1002,
+      O => U3_CM1_add0000_0(5)
+    );
+  U3_Madd_CM1_add0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(4),
+      DI => N0,
+      S => U3_Madd_CM1_add0000_cy_5_rt_1002,
+      O => U3_Madd_CM1_add0000_cy(5)
+    );
+  U3_Madd_CM1_add0000_xor_4_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(3),
+      LI => U3_Madd_CM1_add0000_lut_4_1,
+      O => U3_CM1_add0000_0(4)
+    );
+  U3_Madd_CM1_add0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(3),
+      DI => N1,
+      S => U3_Madd_CM1_add0000_lut_4_1,
+      O => U3_Madd_CM1_add0000_cy(4)
+    );
+  U3_Madd_CM1_add0000_xor_3_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(2),
+      LI => U3_Madd_CM1_add0000_lut_3_Q,
+      O => U3_CM1_add0000_0(3)
+    );
+  U3_Madd_CM1_add0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(2),
+      DI => N1,
+      S => U3_Madd_CM1_add0000_lut_3_Q,
+      O => U3_Madd_CM1_add0000_cy(3)
+    );
+  U3_Madd_CM1_add0000_xor_2_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(1),
+      LI => U3_Madd_CM1_add0000_cy_2_rt_998,
+      O => U3_CM1_add0000_0(2)
+    );
+  U3_Madd_CM1_add0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(1),
+      DI => N0,
+      S => U3_Madd_CM1_add0000_cy_2_rt_998,
+      O => U3_Madd_CM1_add0000_cy(2)
+    );
+  U3_Madd_CM1_add0000_xor_1_Q : XORCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(0),
+      LI => U3_Madd_CM1_add0000_lut_1_Q,
+      O => U3_CM1_add0000_0(1)
+    );
+  U3_Madd_CM1_add0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Madd_CM1_add0000_cy(0),
+      DI => N1,
+      S => U3_Madd_CM1_add0000_lut_1_Q,
+      O => U3_Madd_CM1_add0000_cy(1)
+    );
+  U3_Madd_CM1_add0000_xor_0_Q : XORCY
+    port map (
+      CI => N0,
+      LI => U3_Madd_CM1_add0000_lut_0_Q,
+      O => U3_CM1_add0000_0(0)
+    );
+  U3_Madd_CM1_add0000_cy_0_Q : MUXCY
+    port map (
+      CI => N0,
+      DI => N1,
+      S => U3_Madd_CM1_add0000_lut_0_Q,
+      O => U3_Madd_CM1_add0000_cy(0)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_9_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(8),
+      LI => U3_Msub_tank1rom10s_sub0000_lut(9),
+      O => U3_tank1rom10s_sub0000(9)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_8_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(7),
+      LI => U3_Msub_tank1rom10s_sub0000_lut(8),
+      O => U3_tank1rom10s_sub0000(8)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_8_Q : MUXCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(7),
+      DI => N1,
+      S => U3_Msub_tank1rom10s_sub0000_lut(8),
+      O => U3_Msub_tank1rom10s_sub0000_cy(8)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_7_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(6),
+      LI => U3_Msub_tank1rom10s_sub0000_lut(7),
+      O => U3_tank1rom10s_sub0000(7)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_7_Q : MUXCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(6),
+      DI => N1,
+      S => U3_Msub_tank1rom10s_sub0000_lut(7),
+      O => U3_Msub_tank1rom10s_sub0000_cy(7)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_6_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(5),
+      LI => U3_Msub_tank1rom10s_sub0000_lut(6),
+      O => U3_tank1rom10s_sub0000(6)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_6_Q : MUXCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(5),
+      DI => N1,
+      S => U3_Msub_tank1rom10s_sub0000_lut(6),
+      O => U3_Msub_tank1rom10s_sub0000_cy(6)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_5_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(4),
+      LI => U3_Msub_tank1rom10s_sub0000_lut(5),
+      O => U3_Msub_ypix1_Madd_lut(5)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_5_Q : MUXCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(4),
+      DI => N1,
+      S => U3_Msub_tank1rom10s_sub0000_lut(5),
+      O => U3_Msub_tank1rom10s_sub0000_cy(5)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_4_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(3),
+      LI => U3_Msub_tank1rom10s_sub0000_cy_4_rt_1782,
+      O => U3_Msub_tank1rom10s_sub0001_cy(4)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_4_Q : MUXCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(3),
+      DI => N0,
+      S => U3_Msub_tank1rom10s_sub0000_cy_4_rt_1782,
+      O => U3_Msub_tank1rom10s_sub0000_cy(4)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_3_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(2),
+      LI => U3_Msub_tank1rom10s_sub0000_cy_3_rt_1780,
+      O => sig_tank1rom10s(3)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_3_Q : MUXCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(2),
+      DI => N0,
+      S => U3_Msub_tank1rom10s_sub0000_cy_3_rt_1780,
+      O => U3_Msub_tank1rom10s_sub0000_cy(3)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_2_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(1),
+      LI => U3_Msub_tank1rom10s_sub0000_cy_2_rt_1778,
+      O => sig_tank1rom10s(2)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_2_Q : MUXCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(1),
+      DI => N0,
+      S => U3_Msub_tank1rom10s_sub0000_cy_2_rt_1778,
+      O => U3_Msub_tank1rom10s_sub0000_cy(2)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_1_Q : XORCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(0),
+      LI => U3_Msub_tank1rom10s_sub0000_cy_1_rt_1776,
+      O => sig_tank1rom10s(1)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_1_Q : MUXCY
+    port map (
+      CI => U3_Msub_tank1rom10s_sub0000_cy(0),
+      DI => N0,
+      S => U3_Msub_tank1rom10s_sub0000_cy_1_rt_1776,
+      O => U3_Msub_tank1rom10s_sub0000_cy(1)
+    );
+  U3_Msub_tank1rom10s_sub0000_xor_0_Q : XORCY
+    port map (
+      CI => N1,
+      LI => U3_Msub_tank1rom10s_sub0000_cy_0_rt_1774,
+      O => sig_tank1rom10s(0)
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_0_Q : MUXCY
+    port map (
+      CI => N1,
+      DI => N0,
+      S => U3_Msub_tank1rom10s_sub0000_cy_0_rt_1774,
+      O => U3_Msub_tank1rom10s_sub0000_cy(0)
     );
   U3_C2_9 : FDE
     generic map(
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
       D => U3_Result_9_2,
       Q => U3_C2(9)
@@ -5547,7 +10146,7 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
       D => U3_Result_8_2,
       Q => U3_C2(8)
@@ -5557,7 +10156,7 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
       D => U3_Result_7_2,
       Q => U3_C2(7)
@@ -5567,7 +10166,7 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
       D => U3_Result_6_2,
       Q => U3_C2(6)
@@ -5577,9 +10176,9 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
-      D => U3_Result_5_2,
+      D => U3_Result_5_4,
       Q => U3_C2(5)
     );
   U3_C2_4 : FDE
@@ -5587,9 +10186,9 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
-      D => U3_Result_4_2,
+      D => U3_Result_4_4,
       Q => U3_C2(4)
     );
   U3_C2_3 : FDE
@@ -5597,9 +10196,9 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
-      D => U3_Result_3_2,
+      D => U3_Result_3_4,
       Q => U3_C2(3)
     );
   U3_C2_2 : FDE
@@ -5607,9 +10206,9 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
-      D => U3_Result_2_2,
+      D => U3_Result_2_4,
       Q => U3_C2(2)
     );
   U3_C2_1 : FDE
@@ -5617,9 +10216,9 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
-      D => U3_Result_1_2,
+      D => U3_Result_1_4,
       Q => U3_C2(1)
     );
   U3_C2_0 : FDE
@@ -5627,9 +10226,9 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C2_not0001,
-      D => U3_Result_0_2,
+      D => U3_Result_0_4,
       Q => U3_C2(0)
     );
   U3_C1_9 : FDE
@@ -5637,7 +10236,7 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
       D => U3_Result_9_1,
       Q => U3_C1(9)
@@ -5647,7 +10246,7 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
       D => U3_Result_8_1,
       Q => U3_C1(8)
@@ -5657,7 +10256,7 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
       D => U3_Result_7_1,
       Q => U3_C1(7)
@@ -5667,7 +10266,7 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
       D => U3_Result_6_1,
       Q => U3_C1(6)
@@ -5677,9 +10276,9 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
-      D => U3_Result_5_1,
+      D => U3_Result_5_3,
       Q => U3_C1(5)
     );
   U3_C1_4 : FDE
@@ -5687,9 +10286,9 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
-      D => U3_Result_4_1,
+      D => U3_Result_4_3,
       Q => U3_C1(4)
     );
   U3_C1_3 : FDE
@@ -5697,9 +10296,9 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
-      D => U3_Result_3_1,
+      D => U3_Result_3_3,
       Q => U3_C1(3)
     );
   U3_C1_2 : FDE
@@ -5707,9 +10306,9 @@ begin
       INIT => '1'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
-      D => U3_Result_2_1,
+      D => U3_Result_2_3,
       Q => U3_C1(2)
     );
   U3_C1_1 : FDE
@@ -5717,9 +10316,9 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
-      D => U3_Result_1_1,
+      D => U3_Result_1_3,
       Q => U3_C1(1)
     );
   U3_C1_0 : FDE
@@ -5727,2501 +10326,382 @@ begin
       INIT => '0'
     )
     port map (
-      C => U3_q(17),
+      C => U3_q(19),
       CE => U3_C1_not0001,
-      D => U3_Result_0_1,
+      D => U3_Result_0_3,
       Q => U3_C1(0)
     );
-  U3_tank2_angle_calc_7 : FDRE
+  U3_RMht2_5 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank2_angle_calc_not0001,
-      D => U3_Mcount_tank2_angle_calc7,
-      R => U3_tank2_angle_calc_and0000,
-      Q => U3_tank2_angle_calc(7)
+      C => U3_q(19),
+      CE => U3_RMht2_not0001,
+      D => U3_Result_5_2,
+      Q => U3_RMht2(5)
     );
-  U3_tank2_angle_calc_6 : FDRE
+  U3_RMht2_4 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank2_angle_calc_not0001,
-      D => U3_Mcount_tank2_angle_calc6,
-      R => U3_tank2_angle_calc_and0000,
-      Q => U3_tank2_angle_calc(6)
+      C => U3_q(19),
+      CE => U3_RMht2_not0001,
+      D => U3_Result_4_2_2006,
+      Q => U3_RMht2(4)
     );
-  U3_tank2_angle_calc_5 : FDRE
+  U3_RMht2_3 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank2_angle_calc_not0001,
-      D => U3_Mcount_tank2_angle_calc5,
-      R => U3_tank2_angle_calc_and0000,
-      Q => U3_tank2_angle_calc(5)
+      C => U3_q(19),
+      CE => U3_RMht2_not0001,
+      D => U3_Result_3_2_2001,
+      Q => U3_RMht2(3)
     );
-  U3_tank2_angle_calc_4 : FDRE
+  U3_RMht2_2 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank2_angle_calc_not0001,
-      D => U3_Mcount_tank2_angle_calc4,
-      R => U3_tank2_angle_calc_and0000,
-      Q => U3_tank2_angle_calc(4)
+      C => U3_q(19),
+      CE => U3_RMht2_not0001,
+      D => U3_Result_2_2,
+      Q => U3_RMht2(2)
     );
-  U3_tank2_angle_calc_3 : FDRE
+  U3_RMht2_1 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank2_angle_calc_not0001,
-      D => U3_Mcount_tank2_angle_calc3,
-      R => U3_tank2_angle_calc_and0000,
-      Q => U3_tank2_angle_calc(3)
+      C => U3_q(19),
+      CE => U3_RMht2_not0001,
+      D => U3_Result_1_2,
+      Q => U3_RMht2(1)
     );
-  U3_tank2_angle_calc_2 : FDRE
+  U3_RMht2_0 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank2_angle_calc_not0001,
-      D => U3_Mcount_tank2_angle_calc2,
-      R => U3_tank2_angle_calc_and0000,
-      Q => U3_tank2_angle_calc(2)
+      C => U3_q(19),
+      CE => U3_RMht2_not0001,
+      D => U3_Result_0_2,
+      Q => U3_RMht2(0)
     );
-  U3_tank2_angle_calc_1 : FDRE
+  U3_RMht1_5 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank2_angle_calc_not0001,
-      D => U3_Mcount_tank2_angle_calc1,
-      R => U3_tank2_angle_calc_and0000,
-      Q => U3_tank2_angle_calc(1)
+      C => U3_q(19),
+      CE => U3_RMht1_not0001,
+      D => U3_Result_5_1,
+      Q => U3_RMht1(5)
     );
-  U3_tank2_angle_calc_0 : FDRE
+  U3_RMht1_4 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank2_angle_calc_not0001,
-      D => U3_Mcount_tank2_angle_calc,
-      R => U3_tank2_angle_calc_and0000,
-      Q => U3_tank2_angle_calc(0)
+      C => U3_q(19),
+      CE => U3_RMht1_not0001,
+      D => U3_Result_4_1_2005,
+      Q => U3_RMht1(4)
     );
-  U3_tank1_angle_calc_7 : FDRE
+  U3_RMht1_3 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank1_angle_calc_not0001,
-      D => U3_Mcount_tank1_angle_calc7,
-      R => U3_tank1_angle_calc_and0000,
-      Q => U3_tank1_angle_calc(7)
+      C => U3_q(19),
+      CE => U3_RMht1_not0001,
+      D => U3_Result_3_1_2000,
+      Q => U3_RMht1(3)
     );
-  U3_tank1_angle_calc_6 : FDRE
+  U3_RMht1_2 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank1_angle_calc_not0001,
-      D => U3_Mcount_tank1_angle_calc6,
-      R => U3_tank1_angle_calc_and0000,
-      Q => U3_tank1_angle_calc(6)
+      C => U3_q(19),
+      CE => U3_RMht1_not0001,
+      D => U3_Result_2_1,
+      Q => U3_RMht1(2)
     );
-  U3_tank1_angle_calc_5 : FDRE
+  U3_RMht1_1 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank1_angle_calc_not0001,
-      D => U3_Mcount_tank1_angle_calc5,
-      R => U3_tank1_angle_calc_and0000,
-      Q => U3_tank1_angle_calc(5)
+      C => U3_q(19),
+      CE => U3_RMht1_not0001,
+      D => U3_Result_1_1,
+      Q => U3_RMht1(1)
     );
-  U3_tank1_angle_calc_4 : FDRE
+  U3_RMht1_0 : FDE
+    generic map(
+      INIT => '1'
+    )
     port map (
-      C => U3_q(17),
-      CE => U3_tank1_angle_calc_not0001,
-      D => U3_Mcount_tank1_angle_calc4,
-      R => U3_tank1_angle_calc_and0000,
-      Q => U3_tank1_angle_calc(4)
+      C => U3_q(19),
+      CE => U3_RMht1_not0001,
+      D => U3_Result_0_1,
+      Q => U3_RMht1(0)
     );
-  U3_tank1_angle_calc_3 : FDRE
+  U3_q_20 : FDC
     port map (
-      C => U3_q(17),
-      CE => U3_tank1_angle_calc_not0001,
-      D => U3_Mcount_tank1_angle_calc3,
-      R => U3_tank1_angle_calc_and0000,
-      Q => U3_tank1_angle_calc(3)
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => U3_Result(20),
+      Q => U3_q_201
     );
-  U3_tank1_angle_calc_2 : FDRE
+  U3_q_19 : FDC
     port map (
-      C => U3_q(17),
-      CE => U3_tank1_angle_calc_not0001,
-      D => U3_Mcount_tank1_angle_calc2,
-      R => U3_tank1_angle_calc_and0000,
-      Q => U3_tank1_angle_calc(2)
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => U3_Result(19),
+      Q => U3_q_191
     );
-  U3_tank1_angle_calc_1 : FDRE
+  U3_q_18 : FDC
     port map (
-      C => U3_q(17),
-      CE => U3_tank1_angle_calc_not0001,
-      D => U3_Mcount_tank1_angle_calc1,
-      R => U3_tank1_angle_calc_and0000,
-      Q => U3_tank1_angle_calc(1)
-    );
-  U3_tank1_angle_calc_0 : FDRE
-    port map (
-      C => U3_q(17),
-      CE => U3_tank1_angle_calc_not0001,
-      D => U3_Mcount_tank1_angle_calc,
-      R => U3_tank1_angle_calc_and0000,
-      Q => U3_tank1_angle_calc(0)
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
+      D => U3_Result(18),
+      Q => U3_q_181
     );
   U3_q_17 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(17),
-      Q => U3_q_171
+      Q => U3_Q_17_1820
     );
   U3_q_16 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(16),
-      Q => U3_Q_16_1303
+      Q => U3_Q_16_1819
     );
   U3_q_15 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(15),
-      Q => U3_Q_15_1302
+      Q => U3_Q_15_1818
     );
   U3_q_14 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(14),
-      Q => U3_Q_14_1301
+      Q => U3_Q_14_1817
     );
   U3_q_13 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(13),
-      Q => U3_Q_13_1300
+      Q => U3_Q_13_1816
     );
   U3_q_12 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(12),
-      Q => U3_Q_12_1299
+      Q => U3_Q_12_1815
     );
   U3_q_11 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(11),
-      Q => U3_Q_11_1298
+      Q => U3_Q_11_1814
     );
   U3_q_10 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(10),
-      Q => U3_Q_10_1297
+      Q => U3_Q_10_1813
     );
   U3_q_9 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(9),
-      Q => U3_Q_9_1311
+      Q => U3_Q_9_1828
     );
   U3_q_8 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(8),
-      Q => U3_Q_8_1310
+      Q => U3_Q_8_1827
     );
   U3_q_7 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(7),
-      Q => U3_Q_7_1309
+      Q => U3_Q_7_1826
     );
   U3_q_6 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(6),
-      Q => U3_Q_6_1308
+      Q => U3_Q_6_1825
     );
   U3_q_5 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(5),
-      Q => U3_Q_5_1307
+      Q => U3_Q_5_1824
     );
   U3_q_4 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(4),
-      Q => U3_Q_4_1306
+      Q => U3_Q_4_1823
     );
   U3_q_3 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(3),
-      Q => U3_Q_3_1305
+      Q => U3_Q_3_1822
     );
   U3_q_2 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(2),
-      Q => U3_Q_2_1304
+      Q => U3_Q_2_1821
     );
   U3_q_1 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(1),
-      Q => U3_Q_1_1296
+      Q => U3_Q_1_1812
     );
   U3_q_0 : FDC
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
+      C => mclk_BUFGP_2343,
+      CLR => btn_3_IBUF_2310,
       D => U3_Result(0),
-      Q => U3_Q_0_1295
+      Q => U3_Q_0_1811
     );
-  U3_Mcount_tank2_angle_calc_xor_7_Q : XORCY
+  U3_tank2HP_2 : LD
+    generic map(
+      INIT => '1'
+    )
     port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(6),
-      LI => U3_Mcount_tank2_angle_calc_lut(7),
-      O => U3_Mcount_tank2_angle_calc7
+      D => U3_tank2HP_mux0007_0_Q_2257,
+      G => vidon,
+      Q => U3_tank2HP_2_Q
     );
-  U3_Mcount_tank2_angle_calc_xor_6_Q : XORCY
+  U3_tank2HP_0 : LD
+    generic map(
+      INIT => '0'
+    )
     port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(5),
-      LI => U3_Mcount_tank2_angle_calc_lut(6),
-      O => U3_Mcount_tank2_angle_calc6
+      D => U3_tank2HP_mux0007_2_Q_2258,
+      G => vidon,
+      Q => U3_tank2HP_0_Q
     );
-  U3_Mcount_tank2_angle_calc_cy_6_Q : MUXCY
+  U3_tank1HP_2 : LD
+    generic map(
+      INIT => '1'
+    )
     port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(5),
-      DI => N1,
-      S => U3_Mcount_tank2_angle_calc_lut(6),
-      O => U3_Mcount_tank2_angle_calc_cy(6)
+      D => U3_tank1HP_mux0005_0_Q_2229,
+      G => vidon,
+      Q => U3_tank1HP_2_Q
     );
-  U3_Mcount_tank2_angle_calc_xor_5_Q : XORCY
+  U3_tank1HP_0 : LD
+    generic map(
+      INIT => '0'
+    )
     port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(4),
-      LI => U3_Mcount_tank2_angle_calc_lut(5),
-      O => U3_Mcount_tank2_angle_calc5
-    );
-  U3_Mcount_tank2_angle_calc_cy_5_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(4),
-      DI => N1,
-      S => U3_Mcount_tank2_angle_calc_lut(5),
-      O => U3_Mcount_tank2_angle_calc_cy(5)
-    );
-  U3_Mcount_tank2_angle_calc_xor_4_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(3),
-      LI => U3_Mcount_tank2_angle_calc_lut(4),
-      O => U3_Mcount_tank2_angle_calc4
-    );
-  U3_Mcount_tank2_angle_calc_cy_4_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(3),
-      DI => N1,
-      S => U3_Mcount_tank2_angle_calc_lut(4),
-      O => U3_Mcount_tank2_angle_calc_cy(4)
-    );
-  U3_Mcount_tank2_angle_calc_xor_3_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(2),
-      LI => U3_Mcount_tank2_angle_calc_lut(3),
-      O => U3_Mcount_tank2_angle_calc3
-    );
-  U3_Mcount_tank2_angle_calc_cy_3_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(2),
-      DI => N1,
-      S => U3_Mcount_tank2_angle_calc_lut(3),
-      O => U3_Mcount_tank2_angle_calc_cy(3)
-    );
-  U3_Mcount_tank2_angle_calc_xor_2_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(1),
-      LI => U3_Mcount_tank2_angle_calc_lut(2),
-      O => U3_Mcount_tank2_angle_calc2
-    );
-  U3_Mcount_tank2_angle_calc_cy_2_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(1),
-      DI => N1,
-      S => U3_Mcount_tank2_angle_calc_lut(2),
-      O => U3_Mcount_tank2_angle_calc_cy(2)
-    );
-  U3_Mcount_tank2_angle_calc_xor_1_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(0),
-      LI => U3_Mcount_tank2_angle_calc_lut(1),
-      O => U3_Mcount_tank2_angle_calc1
-    );
-  U3_Mcount_tank2_angle_calc_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank2_angle_calc_cy(0),
-      DI => N1,
-      S => U3_Mcount_tank2_angle_calc_lut(1),
-      O => U3_Mcount_tank2_angle_calc_cy(1)
-    );
-  U3_Mcount_tank2_angle_calc_xor_0_Q : XORCY
-    port map (
-      CI => sig_gameUp,
-      LI => U3_Mcount_tank2_angle_calc_lut(0),
-      O => U3_Mcount_tank2_angle_calc
-    );
-  U3_Mcount_tank2_angle_calc_cy_0_Q : MUXCY
-    port map (
-      CI => sig_gameUp,
-      DI => N1,
-      S => U3_Mcount_tank2_angle_calc_lut(0),
-      O => U3_Mcount_tank2_angle_calc_cy(0)
-    );
-  U3_Mcount_tank1_angle_calc_xor_7_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(6),
-      LI => U3_Mcount_tank1_angle_calc_lut(7),
-      O => U3_Mcount_tank1_angle_calc7
-    );
-  U3_Mcount_tank1_angle_calc_xor_6_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(5),
-      LI => U3_Mcount_tank1_angle_calc_lut(6),
-      O => U3_Mcount_tank1_angle_calc6
-    );
-  U3_Mcount_tank1_angle_calc_cy_6_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(5),
-      DI => N1,
-      S => U3_Mcount_tank1_angle_calc_lut(6),
-      O => U3_Mcount_tank1_angle_calc_cy(6)
-    );
-  U3_Mcount_tank1_angle_calc_xor_5_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(4),
-      LI => U3_Mcount_tank1_angle_calc_lut(5),
-      O => U3_Mcount_tank1_angle_calc5
-    );
-  U3_Mcount_tank1_angle_calc_cy_5_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(4),
-      DI => N1,
-      S => U3_Mcount_tank1_angle_calc_lut(5),
-      O => U3_Mcount_tank1_angle_calc_cy(5)
-    );
-  U3_Mcount_tank1_angle_calc_xor_4_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(3),
-      LI => U3_Mcount_tank1_angle_calc_lut(4),
-      O => U3_Mcount_tank1_angle_calc4
-    );
-  U3_Mcount_tank1_angle_calc_cy_4_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(3),
-      DI => N1,
-      S => U3_Mcount_tank1_angle_calc_lut(4),
-      O => U3_Mcount_tank1_angle_calc_cy(4)
-    );
-  U3_Mcount_tank1_angle_calc_xor_3_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(2),
-      LI => U3_Mcount_tank1_angle_calc_lut(3),
-      O => U3_Mcount_tank1_angle_calc3
-    );
-  U3_Mcount_tank1_angle_calc_cy_3_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(2),
-      DI => N1,
-      S => U3_Mcount_tank1_angle_calc_lut(3),
-      O => U3_Mcount_tank1_angle_calc_cy(3)
-    );
-  U3_Mcount_tank1_angle_calc_xor_2_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(1),
-      LI => U3_Mcount_tank1_angle_calc_lut(2),
-      O => U3_Mcount_tank1_angle_calc2
-    );
-  U3_Mcount_tank1_angle_calc_cy_2_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(1),
-      DI => N1,
-      S => U3_Mcount_tank1_angle_calc_lut(2),
-      O => U3_Mcount_tank1_angle_calc_cy(2)
-    );
-  U3_Mcount_tank1_angle_calc_xor_1_Q : XORCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(0),
-      LI => U3_Mcount_tank1_angle_calc_lut(1),
-      O => U3_Mcount_tank1_angle_calc1
-    );
-  U3_Mcount_tank1_angle_calc_cy_1_Q : MUXCY
-    port map (
-      CI => U3_Mcount_tank1_angle_calc_cy(0),
-      DI => N1,
-      S => U3_Mcount_tank1_angle_calc_lut(1),
-      O => U3_Mcount_tank1_angle_calc_cy(1)
-    );
-  U3_Mcount_tank1_angle_calc_xor_0_Q : XORCY
-    port map (
-      CI => sig_gameUp,
-      LI => U3_Mcount_tank1_angle_calc_lut(0),
-      O => U3_Mcount_tank1_angle_calc
-    );
-  U3_Mcount_tank1_angle_calc_cy_0_Q : MUXCY
-    port map (
-      CI => sig_gameUp,
-      DI => N1,
-      S => U3_Mcount_tank1_angle_calc_lut(0),
-      O => U3_Mcount_tank1_angle_calc_cy(0)
+      D => U3_tank1HP_mux0005_2_Q_2230,
+      G => vidon,
+      Q => U3_tank1HP_0_Q
     );
   U3_B : LDE_1
     port map (
-      D => U3_B_mux0012,
+      D => U3_B_mux0016,
       G => U3_B_and0000,
       GE => vidon,
-      Q => U3_B_675
+      Q => U3_B_785
     );
-  x7_Mmux_digit_3 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => U3_tank1_angle_calc(0),
-      I2 => U3_tank1_angle_calc(4),
-      O => x7_Mmux_digit_3_2063
-    );
-  x7_Mmux_digit_4 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => U3_tank2_angle_calc(0),
-      I2 => U3_tank2_angle_calc(4),
-      O => x7_Mmux_digit_4_2067
-    );
-  x7_Mmux_digit_2_f5 : MUXF5
-    port map (
-      I0 => x7_Mmux_digit_4_2067,
-      I1 => x7_Mmux_digit_3_2063,
-      S => x7_clkdiv(19),
-      O => x7_digit(0)
-    );
-  x7_Mmux_digit_31 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => U3_tank1_angle_calc(1),
-      I2 => U3_tank1_angle_calc(5),
-      O => x7_Mmux_digit_31_2064
-    );
-  x7_Mmux_digit_41 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => U3_tank2_angle_calc(1),
-      I2 => U3_tank2_angle_calc(5),
-      O => x7_Mmux_digit_41_2068
-    );
-  x7_Mmux_digit_2_f5_0 : MUXF5
-    port map (
-      I0 => x7_Mmux_digit_41_2068,
-      I1 => x7_Mmux_digit_31_2064,
-      S => x7_clkdiv(19),
-      O => x7_digit(1)
-    );
-  x7_Mmux_digit_32 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => U3_tank1_angle_calc(2),
-      I2 => U3_tank1_angle_calc(6),
-      O => x7_Mmux_digit_32_2065
-    );
-  x7_Mmux_digit_42 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => U3_tank2_angle_calc(2),
-      I2 => U3_tank2_angle_calc(6),
-      O => x7_Mmux_digit_42_2069
-    );
-  x7_Mmux_digit_2_f5_1 : MUXF5
-    port map (
-      I0 => x7_Mmux_digit_42_2069,
-      I1 => x7_Mmux_digit_32_2065,
-      S => x7_clkdiv(19),
-      O => x7_digit(2)
-    );
-  x7_Mmux_digit_33 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => U3_tank1_angle_calc(3),
-      I2 => U3_tank1_angle_calc(7),
-      O => x7_Mmux_digit_33_2066
-    );
-  x7_Mmux_digit_43 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => U3_tank2_angle_calc(3),
-      I2 => U3_tank2_angle_calc(7),
-      O => x7_Mmux_digit_43_2070
-    );
-  x7_Mmux_digit_2_f5_2 : MUXF5
-    port map (
-      I0 => x7_Mmux_digit_43_2070,
-      I1 => x7_Mmux_digit_33_2066,
-      S => x7_clkdiv(19),
-      O => x7_digit(3)
-    );
-  x7_Mcount_clkdiv_xor_19_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(18),
-      LI => x7_Mcount_clkdiv_xor_19_rt_2062,
-      O => x7_Result(19)
-    );
-  x7_Mcount_clkdiv_xor_18_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(17),
-      LI => x7_Mcount_clkdiv_cy_18_rt_2042,
-      O => x7_Result(18)
-    );
-  x7_Mcount_clkdiv_cy_18_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(17),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_18_rt_2042,
-      O => x7_Mcount_clkdiv_cy(18)
-    );
-  x7_Mcount_clkdiv_xor_17_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(16),
-      LI => x7_Mcount_clkdiv_cy_17_rt_2040,
-      O => x7_Result(17)
-    );
-  x7_Mcount_clkdiv_cy_17_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(16),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_17_rt_2040,
-      O => x7_Mcount_clkdiv_cy(17)
-    );
-  x7_Mcount_clkdiv_xor_16_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(15),
-      LI => x7_Mcount_clkdiv_cy_16_rt_2038,
-      O => x7_Result(16)
-    );
-  x7_Mcount_clkdiv_cy_16_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(15),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_16_rt_2038,
-      O => x7_Mcount_clkdiv_cy(16)
-    );
-  x7_Mcount_clkdiv_xor_15_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(14),
-      LI => x7_Mcount_clkdiv_cy_15_rt_2036,
-      O => x7_Result(15)
-    );
-  x7_Mcount_clkdiv_cy_15_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(14),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_15_rt_2036,
-      O => x7_Mcount_clkdiv_cy(15)
-    );
-  x7_Mcount_clkdiv_xor_14_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(13),
-      LI => x7_Mcount_clkdiv_cy_14_rt_2034,
-      O => x7_Result(14)
-    );
-  x7_Mcount_clkdiv_cy_14_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(13),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_14_rt_2034,
-      O => x7_Mcount_clkdiv_cy(14)
-    );
-  x7_Mcount_clkdiv_xor_13_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(12),
-      LI => x7_Mcount_clkdiv_cy_13_rt_2032,
-      O => x7_Result(13)
-    );
-  x7_Mcount_clkdiv_cy_13_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(12),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_13_rt_2032,
-      O => x7_Mcount_clkdiv_cy(13)
-    );
-  x7_Mcount_clkdiv_xor_12_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(11),
-      LI => x7_Mcount_clkdiv_cy_12_rt_2030,
-      O => x7_Result(12)
-    );
-  x7_Mcount_clkdiv_cy_12_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(11),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_12_rt_2030,
-      O => x7_Mcount_clkdiv_cy(12)
-    );
-  x7_Mcount_clkdiv_xor_11_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(10),
-      LI => x7_Mcount_clkdiv_cy_11_rt_2028,
-      O => x7_Result(11)
-    );
-  x7_Mcount_clkdiv_cy_11_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(10),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_11_rt_2028,
-      O => x7_Mcount_clkdiv_cy(11)
-    );
-  x7_Mcount_clkdiv_xor_10_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(9),
-      LI => x7_Mcount_clkdiv_cy_10_rt_2026,
-      O => x7_Result(10)
-    );
-  x7_Mcount_clkdiv_cy_10_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(9),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_10_rt_2026,
-      O => x7_Mcount_clkdiv_cy(10)
-    );
-  x7_Mcount_clkdiv_xor_9_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(8),
-      LI => x7_Mcount_clkdiv_cy_9_rt_2060,
-      O => x7_Result(9)
-    );
-  x7_Mcount_clkdiv_cy_9_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(8),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_9_rt_2060,
-      O => x7_Mcount_clkdiv_cy(9)
-    );
-  x7_Mcount_clkdiv_xor_8_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(7),
-      LI => x7_Mcount_clkdiv_cy_8_rt_2058,
-      O => x7_Result(8)
-    );
-  x7_Mcount_clkdiv_cy_8_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(7),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_8_rt_2058,
-      O => x7_Mcount_clkdiv_cy(8)
-    );
-  x7_Mcount_clkdiv_xor_7_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(6),
-      LI => x7_Mcount_clkdiv_cy_7_rt_2056,
-      O => x7_Result(7)
-    );
-  x7_Mcount_clkdiv_cy_7_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(6),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_7_rt_2056,
-      O => x7_Mcount_clkdiv_cy(7)
-    );
-  x7_Mcount_clkdiv_xor_6_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(5),
-      LI => x7_Mcount_clkdiv_cy_6_rt_2054,
-      O => x7_Result(6)
-    );
-  x7_Mcount_clkdiv_cy_6_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(5),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_6_rt_2054,
-      O => x7_Mcount_clkdiv_cy(6)
-    );
-  x7_Mcount_clkdiv_xor_5_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(4),
-      LI => x7_Mcount_clkdiv_cy_5_rt_2052,
-      O => x7_Result(5)
-    );
-  x7_Mcount_clkdiv_cy_5_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(4),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_5_rt_2052,
-      O => x7_Mcount_clkdiv_cy(5)
-    );
-  x7_Mcount_clkdiv_xor_4_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(3),
-      LI => x7_Mcount_clkdiv_cy_4_rt_2050,
-      O => x7_Result(4)
-    );
-  x7_Mcount_clkdiv_cy_4_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(3),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_4_rt_2050,
-      O => x7_Mcount_clkdiv_cy(4)
-    );
-  x7_Mcount_clkdiv_xor_3_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(2),
-      LI => x7_Mcount_clkdiv_cy_3_rt_2048,
-      O => x7_Result(3)
-    );
-  x7_Mcount_clkdiv_cy_3_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(2),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_3_rt_2048,
-      O => x7_Mcount_clkdiv_cy(3)
-    );
-  x7_Mcount_clkdiv_xor_2_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(1),
-      LI => x7_Mcount_clkdiv_cy_2_rt_2046,
-      O => x7_Result(2)
-    );
-  x7_Mcount_clkdiv_cy_2_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(1),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_2_rt_2046,
-      O => x7_Mcount_clkdiv_cy(2)
-    );
-  x7_Mcount_clkdiv_xor_1_Q : XORCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(0),
-      LI => x7_Mcount_clkdiv_cy_1_rt_2044,
-      O => x7_Result(1)
-    );
-  x7_Mcount_clkdiv_cy_1_Q : MUXCY
-    port map (
-      CI => x7_Mcount_clkdiv_cy(0),
-      DI => N0,
-      S => x7_Mcount_clkdiv_cy_1_rt_2044,
-      O => x7_Mcount_clkdiv_cy(1)
-    );
-  x7_Mcount_clkdiv_xor_0_Q : XORCY
-    port map (
-      CI => N0,
-      LI => x7_Mcount_clkdiv_lut(0),
-      O => x7_Result(0)
-    );
-  x7_Mcount_clkdiv_cy_0_Q : MUXCY
-    port map (
-      CI => N0,
-      DI => N1,
-      S => x7_Mcount_clkdiv_lut(0),
-      O => x7_Mcount_clkdiv_cy(0)
-    );
-  x7_clkdiv_19 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(19),
-      Q => x7_clkdiv(19)
-    );
-  x7_clkdiv_18 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(18),
-      Q => x7_clkdiv(18)
-    );
-  x7_clkdiv_17 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(17),
-      Q => x7_clkdiv(17)
-    );
-  x7_clkdiv_16 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(16),
-      Q => x7_clkdiv(16)
-    );
-  x7_clkdiv_15 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(15),
-      Q => x7_clkdiv(15)
-    );
-  x7_clkdiv_14 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(14),
-      Q => x7_clkdiv(14)
-    );
-  x7_clkdiv_13 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(13),
-      Q => x7_clkdiv(13)
-    );
-  x7_clkdiv_12 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(12),
-      Q => x7_clkdiv(12)
-    );
-  x7_clkdiv_11 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(11),
-      Q => x7_clkdiv(11)
-    );
-  x7_clkdiv_10 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(10),
-      Q => x7_clkdiv(10)
-    );
-  x7_clkdiv_9 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(9),
-      Q => x7_clkdiv(9)
-    );
-  x7_clkdiv_8 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(8),
-      Q => x7_clkdiv(8)
-    );
-  x7_clkdiv_7 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(7),
-      Q => x7_clkdiv(7)
-    );
-  x7_clkdiv_6 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(6),
-      Q => x7_clkdiv(6)
-    );
-  x7_clkdiv_5 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(5),
-      Q => x7_clkdiv(5)
-    );
-  x7_clkdiv_4 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(4),
-      Q => x7_clkdiv(4)
-    );
-  x7_clkdiv_3 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(3),
-      Q => x7_clkdiv(3)
-    );
-  x7_clkdiv_2 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(2),
-      Q => x7_clkdiv(2)
-    );
-  x7_clkdiv_1 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(1),
-      Q => x7_clkdiv(1)
-    );
-  x7_clkdiv_0 : FDC
-    port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => x7_Result(0),
-      Q => x7_clkdiv(0)
-    );
-  screenstate_Mcount_sig_hill3_xor_7_Q : XORCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(6),
-      LI => screenstate_Mcount_sig_hill3_xor_7_rt_1716,
-      O => screenstate_Result(7)
-    );
-  screenstate_Mcount_sig_hill3_xor_6_Q : XORCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(5),
-      LI => screenstate_Mcount_sig_hill3_cy_6_rt_1704,
-      O => screenstate_Result(6)
-    );
-  screenstate_Mcount_sig_hill3_cy_6_Q : MUXCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(5),
-      DI => N0,
-      S => screenstate_Mcount_sig_hill3_cy_6_rt_1704,
-      O => screenstate_Mcount_sig_hill3_cy(6)
-    );
-  screenstate_Mcount_sig_hill3_xor_5_Q : XORCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(4),
-      LI => screenstate_Mcount_sig_hill3_cy_5_rt_1702,
-      O => screenstate_Result(5)
-    );
-  screenstate_Mcount_sig_hill3_cy_5_Q : MUXCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(4),
-      DI => N0,
-      S => screenstate_Mcount_sig_hill3_cy_5_rt_1702,
-      O => screenstate_Mcount_sig_hill3_cy(5)
-    );
-  screenstate_Mcount_sig_hill3_xor_4_Q : XORCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(3),
-      LI => screenstate_Mcount_sig_hill3_cy_4_rt_1700,
-      O => screenstate_Result(4)
-    );
-  screenstate_Mcount_sig_hill3_cy_4_Q : MUXCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(3),
-      DI => N0,
-      S => screenstate_Mcount_sig_hill3_cy_4_rt_1700,
-      O => screenstate_Mcount_sig_hill3_cy(4)
-    );
-  screenstate_Mcount_sig_hill3_xor_3_Q : XORCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(2),
-      LI => screenstate_Mcount_sig_hill3_cy_3_rt_1698,
-      O => screenstate_Result(3)
-    );
-  screenstate_Mcount_sig_hill3_cy_3_Q : MUXCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(2),
-      DI => N0,
-      S => screenstate_Mcount_sig_hill3_cy_3_rt_1698,
-      O => screenstate_Mcount_sig_hill3_cy(3)
-    );
-  screenstate_Mcount_sig_hill3_xor_2_Q : XORCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(1),
-      LI => screenstate_Mcount_sig_hill3_cy_2_rt_1696,
-      O => screenstate_Result(2)
-    );
-  screenstate_Mcount_sig_hill3_cy_2_Q : MUXCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(1),
-      DI => N0,
-      S => screenstate_Mcount_sig_hill3_cy_2_rt_1696,
-      O => screenstate_Mcount_sig_hill3_cy(2)
-    );
-  screenstate_Mcount_sig_hill3_xor_1_Q : XORCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(0),
-      LI => screenstate_Mcount_sig_hill3_cy_1_rt_1694,
-      O => screenstate_Result(1)
-    );
-  screenstate_Mcount_sig_hill3_cy_1_Q : MUXCY
-    port map (
-      CI => screenstate_Mcount_sig_hill3_cy(0),
-      DI => N0,
-      S => screenstate_Mcount_sig_hill3_cy_1_rt_1694,
-      O => screenstate_Mcount_sig_hill3_cy(1)
-    );
-  screenstate_Mcount_sig_hill3_xor_0_Q : XORCY
-    port map (
-      CI => N0,
-      LI => screenstate_Mcount_sig_hill3_lut_0_1,
-      O => screenstate_Result(0)
-    );
-  screenstate_Mcount_sig_hill3_cy_0_Q : MUXCY
-    port map (
-      CI => N0,
-      DI => N1,
-      S => screenstate_Mcount_sig_hill3_lut_0_1,
-      O => screenstate_Mcount_sig_hill3_cy(0)
-    );
-  screenstate_sig_hill3_7 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_Mcount_sig_hill3_eqn_7,
-      Q => screenstate_sig_hill3(7)
-    );
-  screenstate_sig_hill3_6 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_Mcount_sig_hill3_eqn_6,
-      Q => screenstate_sig_hill3(6)
-    );
-  screenstate_sig_hill3_5 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_Mcount_sig_hill3_eqn_5,
-      Q => screenstate_sig_hill3(5)
-    );
-  screenstate_sig_hill3_4 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_Mcount_sig_hill3_eqn_4,
-      Q => screenstate_sig_hill3(4)
-    );
-  screenstate_sig_hill3_3 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_Mcount_sig_hill3_eqn_3,
-      Q => screenstate_sig_hill3(3)
-    );
-  screenstate_sig_hill3_2 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_Mcount_sig_hill3_eqn_2,
-      Q => screenstate_sig_hill3(2)
-    );
-  screenstate_sig_hill3_1 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_Mcount_sig_hill3_eqn_1,
-      Q => screenstate_sig_hill3(1)
-    );
-  screenstate_sig_hill3_0 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_Mcount_sig_hill3_eqn_0,
-      Q => screenstate_sig_hill3(0)
-    );
-  screenstate_present_state_FSM_FFd2 : FDP
+  U3_destroy1 : LD
     generic map(
       INIT => '0'
     )
     port map (
-      C => mclk_BUFGP_1557,
-      D => N1,
-      PRE => btn_3_IBUF_1524,
-      Q => screenstate_present_state_FSM_FFd2_1731
+      D => U3_destroy1_mux0015,
+      G => vidon,
+      Q => U3_destroy1_2035
     );
-  screenstate_present_state_FSM_FFd1 : FDC
+  U3_destroy2 : LD
     generic map(
       INIT => '0'
     )
     port map (
-      C => mclk_BUFGP_1557,
-      CLR => btn_3_IBUF_1524,
-      D => screenstate_present_state_FSM_FFd1_In,
-      Q => screenstate_present_state_FSM_FFd1_1729
+      D => U3_destroy2_mux0017,
+      G => vidon,
+      Q => U3_destroy2_2041
     );
-  screenstate_sig_hill5_7 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill5_addsub0000(7),
-      Q => screenstate_sig_hill5(7)
-    );
-  screenstate_sig_hill5_6 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill5_addsub0000(6),
-      Q => screenstate_sig_hill5(6)
-    );
-  screenstate_sig_hill5_5 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill5_addsub0000(5),
-      Q => screenstate_sig_hill5(5)
-    );
-  screenstate_sig_hill5_4 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill5_addsub0000(4),
-      Q => screenstate_sig_hill5(4)
-    );
-  screenstate_sig_hill5_3 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill5_addsub0000(3),
-      Q => screenstate_sig_hill5(3)
-    );
-  screenstate_sig_hill5_2 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill5_addsub0000(2),
-      Q => screenstate_sig_hill5(2)
-    );
-  screenstate_sig_hill5_1 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill5_mux0001(6),
-      Q => screenstate_sig_hill5(1)
-    );
-  screenstate_sig_hill4_7 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill4_mux0001(0),
-      Q => screenstate_sig_hill4(7)
-    );
-  screenstate_sig_hill4_6 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill4_mux0001(1),
-      Q => screenstate_sig_hill4(6)
-    );
-  screenstate_sig_hill4_5 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill4_mux0001(2),
-      Q => screenstate_sig_hill4(5)
-    );
-  screenstate_sig_hill4_4 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill4_mux0001(3),
-      Q => screenstate_sig_hill4(4)
-    );
-  screenstate_sig_hill4_3 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill4_mux0001(4),
-      Q => screenstate_sig_hill4(3)
-    );
-  screenstate_sig_hill4_2 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill4_mux0001(5),
-      Q => screenstate_sig_hill4(2)
-    );
-  screenstate_sig_hill4_1 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill4_mux0001(6),
-      Q => screenstate_sig_hill4(1)
-    );
-  screenstate_sig_hill4_0 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill4_mux0001(7),
-      Q => screenstate_sig_hill4(0)
-    );
-  screenstate_sig_hill1_7 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill1_addsub0000(7),
-      Q => screenstate_sig_hill1(7)
-    );
-  screenstate_sig_hill1_6 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill1_addsub0000(6),
-      Q => screenstate_sig_hill1(6)
-    );
-  screenstate_sig_hill1_5 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill1_addsub0000(5),
-      Q => screenstate_sig_hill1(5)
-    );
-  screenstate_sig_hill1_4 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill1_addsub0000(4),
-      Q => screenstate_sig_hill1(4)
-    );
-  screenstate_sig_hill1_3 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill1_addsub0000(3),
-      Q => screenstate_sig_hill1(3)
-    );
-  screenstate_sig_hill1_2 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill1_addsub0000(2),
-      Q => screenstate_sig_hill1(2)
-    );
-  screenstate_sig_hill1_1 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill1_mux0001(6),
-      Q => screenstate_sig_hill1(1)
-    );
-  screenstate_sig_hill2_7 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill2_addsub0000(7),
-      Q => screenstate_sig_hill2(7)
-    );
-  screenstate_sig_hill2_6 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill2_addsub0000(6),
-      Q => screenstate_sig_hill2(6)
-    );
-  screenstate_sig_hill2_5 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill2_addsub0000(5),
-      Q => screenstate_sig_hill2(5)
-    );
-  screenstate_sig_hill2_4 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill2_addsub0000(4),
-      Q => screenstate_sig_hill2(4)
-    );
-  screenstate_sig_hill2_3 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill2_addsub0000(3),
-      Q => screenstate_sig_hill2(3)
-    );
-  screenstate_sig_hill2_2 : FDE
-    port map (
-      C => mclk_BUFGP_1557,
-      CE => screenstate_sig_hill1_and0001,
-      D => screenstate_sig_hill2_mux0001(5),
-      Q => screenstate_sig_hill2(2)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_14_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(13),
-      LI => title_rom_addr2_addsub0001(14),
-      O => sig_romTitle_addr14(14)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_13_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(12),
-      LI => title_Madd_rom_addr2_add0000_Madd_cy_13_rt_1898,
-      O => sig_romTitle_addr14(13)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_13_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(12),
-      DI => N0,
-      S => title_Madd_rom_addr2_add0000_Madd_cy_13_rt_1898,
-      O => title_Madd_rom_addr2_add0000_Madd_cy(13)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_12_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(11),
-      LI => title_Madd_rom_addr2_add0000_Madd_cy_12_rt_1896,
-      O => sig_romTitle_addr14(12)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_12_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(11),
-      DI => N0,
-      S => title_Madd_rom_addr2_add0000_Madd_cy_12_rt_1896,
-      O => title_Madd_rom_addr2_add0000_Madd_cy(12)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_11_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(10),
-      LI => title_Madd_rom_addr2_add0000_Madd_cy_11_rt_1894,
-      O => sig_romTitle_addr14(11)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_11_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(10),
-      DI => N0,
-      S => title_Madd_rom_addr2_add0000_Madd_cy_11_rt_1894,
-      O => title_Madd_rom_addr2_add0000_Madd_cy(11)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_10_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(9),
-      LI => title_Madd_rom_addr2_add0000_Madd_cy_10_rt_1892,
-      O => sig_romTitle_addr14(10)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_10_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(9),
-      DI => N0,
-      S => title_Madd_rom_addr2_add0000_Madd_cy_10_rt_1892,
-      O => title_Madd_rom_addr2_add0000_Madd_cy(10)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_9_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(8),
-      LI => title_Madd_rom_addr2_add0000_Madd_lut(9),
-      O => sig_romTitle_addr14(9)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_9_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(8),
-      DI => title_rom_addr2_addsub0001(9),
-      S => title_Madd_rom_addr2_add0000_Madd_lut(9),
-      O => title_Madd_rom_addr2_add0000_Madd_cy(9)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_8_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(7),
-      LI => title_Madd_rom_addr2_add0000_Madd_lut(8),
-      O => sig_romTitle_addr14(8)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_8_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(7),
-      DI => title_rom_addr2_addsub0001(8),
-      S => title_Madd_rom_addr2_add0000_Madd_lut(8),
-      O => title_Madd_rom_addr2_add0000_Madd_cy(8)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_7_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(6),
-      LI => title_Madd_rom_addr2_add0000_Madd_lut(7),
-      O => sig_romTitle_addr14(7)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_7_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(6),
-      DI => title_rom_addr2_addsub0001(7),
-      S => title_Madd_rom_addr2_add0000_Madd_lut(7),
-      O => title_Madd_rom_addr2_add0000_Madd_cy(7)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_6_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(5),
-      LI => title_Madd_rom_addr2_add0000_Madd_lut(6),
-      O => sig_romTitle_addr14(6)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_6_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(5),
-      DI => title_rom_addr2_addsub0001(6),
-      S => title_Madd_rom_addr2_add0000_Madd_lut(6),
-      O => title_Madd_rom_addr2_add0000_Madd_cy(6)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_5_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(4),
-      LI => title_Madd_rom_addr2_add0000_Madd_lut(5),
-      O => sig_romTitle_addr14(5)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_5_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(4),
-      DI => title_rom_addr2_addsub0001(5),
-      S => title_Madd_rom_addr2_add0000_Madd_lut(5),
-      O => title_Madd_rom_addr2_add0000_Madd_cy(5)
-    );
-  title_Madd_rom_addr2_add0000_Madd_lut_5_Q : LUT2
+  U3_rise2 : FDPE
     generic map(
-      INIT => X"6"
+      INIT => '1'
     )
     port map (
-      I0 => title_rom_addr2_addsub0001(5),
-      I1 => title_xpix(5),
-      O => title_Madd_rom_addr2_add0000_Madd_lut(5)
+      C => U3_q(20),
+      CE => U3_rise2_and0000_2074,
+      D => N0,
+      PRE => U3_RMcnt2_and0000,
+      Q => U3_rise2_2073
     );
-  title_Madd_rom_addr2_add0000_Madd_xor_4_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(3),
-      LI => title_Madd_rom_addr2_add0000_Madd_lut(4),
-      O => sig_romTitle_addr14(4)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_4_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_add0000_Madd_cy(3),
-      DI => title_rom_addr2_addsub0001(4),
-      S => title_Madd_rom_addr2_add0000_Madd_lut(4),
-      O => title_Madd_rom_addr2_add0000_Madd_cy(4)
-    );
-  title_Madd_rom_addr2_add0000_Madd_xor_3_Q : XORCY
-    port map (
-      CI => N0,
-      LI => title_Madd_rom_addr2_add0000_Madd_lut(3),
-      O => sig_romTitle_addr14(3)
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_3_Q : MUXCY
-    port map (
-      CI => N0,
-      DI => title_ypix_addsub0000_0_Q,
-      S => title_Madd_rom_addr2_add0000_Madd_lut(3),
-      O => title_Madd_rom_addr2_add0000_Madd_cy(3)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_13_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(12),
-      LI => title_rom_addr2_addsub0000(14),
-      O => title_rom_addr2_addsub0001(14)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_12_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(11),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_cy_12_rt_1928,
-      O => title_rom_addr2_addsub0001(13)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_12_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(11),
-      DI => N0,
-      S => title_Madd_rom_addr2_addsub0001_Madd_cy_12_rt_1928,
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(12)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_11_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(10),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(11),
-      O => title_rom_addr2_addsub0001(12)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_11_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(10),
-      DI => title_rom_addr2_addsub0000(12),
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(11),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(11)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_11_Q : LUT2
+  U3_rise : FDPE
     generic map(
-      INIT => X"6"
+      INIT => '1'
     )
     port map (
-      I0 => title_rom_addr2_addsub0000(12),
-      I1 => title_ypix_9_Q,
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(11)
+      C => U3_q(20),
+      CE => U3_rise_and0000_2075,
+      D => N0,
+      PRE => U3_RMcnt_and0000,
+      Q => U3_rise_2072
     );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_10_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(9),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(10),
-      O => title_rom_addr2_addsub0001(11)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_10_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(9),
-      DI => title_rom_addr2_addsub0000(11),
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(10),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(10)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_9_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(8),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(9),
-      O => title_rom_addr2_addsub0001(10)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_9_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(8),
-      DI => title_rom_addr2_addsub0000(10),
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(9),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(9)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_8_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(7),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(8),
-      O => title_rom_addr2_addsub0001(9)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_8_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(7),
-      DI => title_rom_addr2_addsub0000(9),
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(8),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(8)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_8_Q : LUT2
+  U3_Mhorz : FDPE
     generic map(
-      INIT => X"6"
+      INIT => '0'
     )
     port map (
-      I0 => title_rom_addr2_addsub0000(9),
-      I1 => title_ypix_6_Q,
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(8)
+      C => U3_q(20),
+      CE => U3_Mhorz_not0001_1589,
+      D => N0,
+      PRE => U3_Mhorz_or0000,
+      Q => U3_Mhorz_1580
     );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_7_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(6),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(7),
-      O => title_rom_addr2_addsub0001(8)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_7_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(6),
-      DI => title_rom_addr2_addsub0000(8),
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(7),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(7)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_6_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(5),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(6),
-      O => title_rom_addr2_addsub0001(7)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_6_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(5),
-      DI => title_ypix_3_Q,
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(6),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(6)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_5_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(4),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(5),
-      O => title_rom_addr2_addsub0001(6)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_5_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(4),
-      DI => title_ypix_addsub0000_2_Q,
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(5),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(5)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_4_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(3),
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(4),
-      O => title_rom_addr2_addsub0001(5)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_4_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0001_Madd_cy(3),
-      DI => title_ypix_addsub0000_1_Q,
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(4),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(4)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_4_Q : LUT2
+  U3_destroy2_mux00173 : LUT4
     generic map(
-      INIT => X"6"
+      INIT => X"0001"
     )
     port map (
-      I0 => title_ypix_addsub0000_1_Q,
-      I1 => title_ypix_addsub0000_2_Q,
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(4)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_xor_3_Q : XORCY
-    port map (
-      CI => N0,
-      LI => title_Madd_rom_addr2_addsub0001_Madd_lut(3),
-      O => title_rom_addr2_addsub0001(4)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_3_Q : MUXCY
-    port map (
-      CI => N0,
-      DI => title_ypix_addsub0000_0_Q,
-      S => title_Madd_rom_addr2_addsub0001_Madd_lut(3),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy(3)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_3_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => title_ypix_addsub0000_0_Q,
-      I1 => title_ypix_addsub0000_1_Q,
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(3)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_xor_12_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(11),
-      LI => title_Msub_ypix_xor_6_11_1967,
-      O => title_rom_addr2_addsub0000(14)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_xor_11_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(10),
-      LI => title_Madd_rom_addr2_addsub0000_Madd_lut(11),
-      O => title_rom_addr2_addsub0000(13)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_cy_11_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(10),
-      DI => title_ypix_5_Q,
-      S => title_Madd_rom_addr2_addsub0000_Madd_lut(11),
-      O => title_Madd_rom_addr2_addsub0000_Madd_cy(11)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_xor_10_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(9),
-      LI => title_Madd_rom_addr2_addsub0000_Madd_lut(10),
-      O => title_rom_addr2_addsub0000(12)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_cy_10_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(9),
-      DI => title_ypix_4_Q,
-      S => title_Madd_rom_addr2_addsub0000_Madd_lut(10),
-      O => title_Madd_rom_addr2_addsub0000_Madd_cy(10)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_xor_9_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(8),
-      LI => title_Madd_rom_addr2_addsub0000_Madd_lut(9),
-      O => title_rom_addr2_addsub0000(11)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_cy_9_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(8),
-      DI => title_ypix_3_Q,
-      S => title_Madd_rom_addr2_addsub0000_Madd_lut(9),
-      O => title_Madd_rom_addr2_addsub0000_Madd_cy(9)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_xor_8_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(7),
-      LI => title_Madd_rom_addr2_addsub0000_Madd_lut(8),
-      O => title_rom_addr2_addsub0000(10)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_cy_8_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(7),
-      DI => title_ypix_addsub0000_2_Q,
-      S => title_Madd_rom_addr2_addsub0000_Madd_lut(8),
-      O => title_Madd_rom_addr2_addsub0000_Madd_cy(8)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_lut_8_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => title_ypix_addsub0000_2_Q,
-      I1 => title_ypix_6_Q,
-      O => title_Madd_rom_addr2_addsub0000_Madd_lut(8)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_xor_7_Q : XORCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(6),
-      LI => title_Madd_rom_addr2_addsub0000_Madd_lut(7),
-      O => title_rom_addr2_addsub0000(9)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_cy_7_Q : MUXCY
-    port map (
-      CI => title_Madd_rom_addr2_addsub0000_Madd_cy(6),
-      DI => title_ypix_addsub0000_1_Q,
-      S => title_Madd_rom_addr2_addsub0000_Madd_lut(7),
-      O => title_Madd_rom_addr2_addsub0000_Madd_cy(7)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_xor_6_Q : XORCY
-    port map (
-      CI => N0,
-      LI => title_Madd_rom_addr2_addsub0000_Madd_lut(6),
-      O => title_rom_addr2_addsub0000(8)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_cy_6_Q : MUXCY
-    port map (
-      CI => N0,
-      DI => title_ypix_addsub0000_0_Q,
-      S => title_Madd_rom_addr2_addsub0000_Madd_lut(6),
-      O => title_Madd_rom_addr2_addsub0000_Madd_cy(6)
-    );
-  title_Msub_ypix_addsub0000_xor_9_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(8),
-      LI => U3_Msub_ypix1_addsub0000_lut(9),
-      O => title_ypix_addsub0000_9_Q
-    );
-  title_Msub_ypix_addsub0000_xor_8_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(7),
-      LI => title_Msub_ypix_addsub0000_lut(8),
-      O => title_ypix_addsub0000_8_Q
-    );
-  title_Msub_ypix_addsub0000_cy_8_Q : MUXCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(7),
-      DI => N1,
-      S => title_Msub_ypix_addsub0000_lut(8),
-      O => title_Msub_ypix_addsub0000_cy(8)
-    );
-  title_Msub_ypix_addsub0000_xor_7_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(6),
-      LI => title_Msub_ypix_addsub0000_lut(7),
-      O => title_Msub_ypix_lut_7_Q
-    );
-  title_Msub_ypix_addsub0000_cy_7_Q : MUXCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(6),
-      DI => N1,
-      S => title_Msub_ypix_addsub0000_lut(7),
-      O => title_Msub_ypix_addsub0000_cy(7)
-    );
-  title_Msub_ypix_addsub0000_xor_6_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(5),
-      LI => title_Msub_ypix_addsub0000_lut(6),
-      O => title_ypix_addsub0000_6_Q
-    );
-  title_Msub_ypix_addsub0000_cy_6_Q : MUXCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(5),
-      DI => N1,
-      S => title_Msub_ypix_addsub0000_lut(6),
-      O => title_Msub_ypix_addsub0000_cy(6)
-    );
-  title_Msub_ypix_addsub0000_xor_5_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(4),
-      LI => title_Msub_ypix_addsub0000_lut(5),
-      O => title_Msub_ypix_lut_5_Q
-    );
-  title_Msub_ypix_addsub0000_cy_5_Q : MUXCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(4),
-      DI => N1,
-      S => title_Msub_ypix_addsub0000_lut(5),
-      O => title_Msub_ypix_addsub0000_cy(5)
-    );
-  title_Msub_ypix_addsub0000_xor_4_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(3),
-      LI => title_Msub_ypix_addsub0000_cy_4_rt_1954,
-      O => title_Msub_ypix_lut_4_Q
-    );
-  title_Msub_ypix_addsub0000_cy_4_Q : MUXCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(3),
-      DI => N0,
-      S => title_Msub_ypix_addsub0000_cy_4_rt_1954,
-      O => title_Msub_ypix_addsub0000_cy(4)
-    );
-  title_Msub_ypix_addsub0000_xor_3_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(2),
-      LI => title_Msub_ypix_addsub0000_cy_3_rt_1952,
-      O => title_Msub_ypix_cy(3)
-    );
-  title_Msub_ypix_addsub0000_cy_3_Q : MUXCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(2),
-      DI => N0,
-      S => title_Msub_ypix_addsub0000_cy_3_rt_1952,
-      O => title_Msub_ypix_addsub0000_cy(3)
-    );
-  title_Msub_ypix_addsub0000_xor_2_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(1),
-      LI => title_Msub_ypix_addsub0000_cy_2_rt_1950,
-      O => title_ypix_addsub0000_2_Q
-    );
-  title_Msub_ypix_addsub0000_cy_2_Q : MUXCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(1),
-      DI => N0,
-      S => title_Msub_ypix_addsub0000_cy_2_rt_1950,
-      O => title_Msub_ypix_addsub0000_cy(2)
-    );
-  title_Msub_ypix_addsub0000_xor_1_Q : XORCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(0),
-      LI => title_Msub_ypix_addsub0000_cy_1_rt_1948,
-      O => title_ypix_addsub0000_1_Q
-    );
-  title_Msub_ypix_addsub0000_cy_1_Q : MUXCY
-    port map (
-      CI => title_Msub_ypix_addsub0000_cy(0),
-      DI => N0,
-      S => title_Msub_ypix_addsub0000_cy_1_rt_1948,
-      O => title_Msub_ypix_addsub0000_cy(1)
-    );
-  title_Msub_ypix_addsub0000_xor_0_Q : XORCY
-    port map (
-      CI => N1,
-      LI => U3_Mcompar_spriteonB2_cmp_ge0000_cy_0_rt_905,
-      O => title_ypix_addsub0000_0_Q
-    );
-  title_Msub_ypix_addsub0000_cy_0_Q : MUXCY
-    port map (
-      CI => N1,
-      DI => N0,
-      S => title_Msub_ypix_addsub0000_cy_0_rt_1946,
-      O => title_Msub_ypix_addsub0000_cy(0)
-    );
-  bounce_delay3_7 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay2(7),
-      Q => bounce_delay3(7)
-    );
-  bounce_delay3_6 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay2(6),
-      Q => bounce_delay3(6)
-    );
-  bounce_delay3_5 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay2(5),
-      Q => bounce_delay3(5)
-    );
-  bounce_delay3_4 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay2(4),
-      Q => bounce_delay3(4)
-    );
-  bounce_delay3_3 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay2(3),
-      Q => bounce_delay3(3)
-    );
-  bounce_delay3_2 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay2(2),
-      Q => bounce_delay3(2)
-    );
-  bounce_delay3_1 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay2(1),
-      Q => bounce_delay3(1)
-    );
-  bounce_delay3_0 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay2(0),
-      Q => bounce_delay3(0)
-    );
-  bounce_delay2_7 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay1(7),
-      Q => bounce_delay2(7)
-    );
-  bounce_delay2_6 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay1(6),
-      Q => bounce_delay2(6)
-    );
-  bounce_delay2_5 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay1(5),
-      Q => bounce_delay2(5)
-    );
-  bounce_delay2_4 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay1(4),
-      Q => bounce_delay2(4)
-    );
-  bounce_delay2_3 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay1(3),
-      Q => bounce_delay2(3)
-    );
-  bounce_delay2_2 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay1(2),
-      Q => bounce_delay2(2)
-    );
-  bounce_delay2_1 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay1(1),
-      Q => bounce_delay2(1)
-    );
-  bounce_delay2_0 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => bounce_delay1(0),
-      Q => bounce_delay2(0)
-    );
-  bounce_delay1_7 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => nes_left_reg_1637,
-      Q => bounce_delay1(7)
-    );
-  bounce_delay1_6 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => nes_down_reg_1635,
-      Q => bounce_delay1(6)
-    );
-  bounce_delay1_5 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => nes_up_reg_1679,
-      Q => bounce_delay1(5)
-    );
-  bounce_delay1_4 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => nes_right_reg_1641,
-      Q => bounce_delay1(4)
-    );
-  bounce_delay1_3 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => nes_sel_reg_1675,
-      Q => bounce_delay1(3)
-    );
-  bounce_delay1_2 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => nes_start_reg_1677,
-      Q => bounce_delay1(2)
-    );
-  bounce_delay1_1 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => nes_b_reg_1620,
-      Q => bounce_delay1(1)
-    );
-  bounce_delay1_0 : FDC
-    port map (
-      C => U1_q(17),
-      CLR => btn_3_IBUF_1524,
-      D => nes_a_reg_1618,
-      Q => bounce_delay1(0)
-    );
-  nes_Mcount_counter_reg_xor_9_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(8),
-      LI => nes_Mcount_counter_reg_xor_9_rt_1605,
-      O => nes_Result(9)
-    );
-  nes_Mcount_counter_reg_xor_8_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(7),
-      LI => nes_Mcount_counter_reg_cy_8_rt_1593,
-      O => nes_Result(8)
-    );
-  nes_Mcount_counter_reg_cy_8_Q : MUXCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(7),
-      DI => N0,
-      S => nes_Mcount_counter_reg_cy_8_rt_1593,
-      O => nes_Mcount_counter_reg_cy(8)
-    );
-  nes_Mcount_counter_reg_xor_7_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(6),
-      LI => nes_Mcount_counter_reg_cy_7_rt_1591,
-      O => nes_Result(7)
-    );
-  nes_Mcount_counter_reg_cy_7_Q : MUXCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(6),
-      DI => N0,
-      S => nes_Mcount_counter_reg_cy_7_rt_1591,
-      O => nes_Mcount_counter_reg_cy(7)
-    );
-  nes_Mcount_counter_reg_xor_6_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(5),
-      LI => nes_Mcount_counter_reg_cy_6_rt_1589,
-      O => nes_Result(6)
-    );
-  nes_Mcount_counter_reg_cy_6_Q : MUXCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(5),
-      DI => N0,
-      S => nes_Mcount_counter_reg_cy_6_rt_1589,
-      O => nes_Mcount_counter_reg_cy(6)
-    );
-  nes_Mcount_counter_reg_xor_5_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(4),
-      LI => nes_Mcount_counter_reg_cy_5_rt_1587,
-      O => nes_Result(5)
-    );
-  nes_Mcount_counter_reg_cy_5_Q : MUXCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(4),
-      DI => N0,
-      S => nes_Mcount_counter_reg_cy_5_rt_1587,
-      O => nes_Mcount_counter_reg_cy(5)
-    );
-  nes_Mcount_counter_reg_xor_4_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(3),
-      LI => nes_Mcount_counter_reg_cy_4_rt_1585,
-      O => nes_Result(4)
-    );
-  nes_Mcount_counter_reg_cy_4_Q : MUXCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(3),
-      DI => N0,
-      S => nes_Mcount_counter_reg_cy_4_rt_1585,
-      O => nes_Mcount_counter_reg_cy(4)
-    );
-  nes_Mcount_counter_reg_xor_3_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(2),
-      LI => nes_Mcount_counter_reg_cy_3_rt_1583,
-      O => nes_Result(3)
-    );
-  nes_Mcount_counter_reg_cy_3_Q : MUXCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(2),
-      DI => N0,
-      S => nes_Mcount_counter_reg_cy_3_rt_1583,
-      O => nes_Mcount_counter_reg_cy(3)
-    );
-  nes_Mcount_counter_reg_xor_2_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(1),
-      LI => nes_Mcount_counter_reg_cy_2_rt_1581,
-      O => nes_Result(2)
-    );
-  nes_Mcount_counter_reg_cy_2_Q : MUXCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(1),
-      DI => N0,
-      S => nes_Mcount_counter_reg_cy_2_rt_1581,
-      O => nes_Mcount_counter_reg_cy(2)
-    );
-  nes_Mcount_counter_reg_xor_1_Q : XORCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(0),
-      LI => nes_Mcount_counter_reg_cy_1_rt_1579,
-      O => nes_Result(1)
-    );
-  nes_Mcount_counter_reg_cy_1_Q : MUXCY
-    port map (
-      CI => nes_Mcount_counter_reg_cy(0),
-      DI => N0,
-      S => nes_Mcount_counter_reg_cy_1_rt_1579,
-      O => nes_Mcount_counter_reg_cy(1)
-    );
-  nes_Mcount_counter_reg_xor_0_Q : XORCY
-    port map (
-      CI => N0,
-      LI => nes_Mcount_counter_reg_lut(0),
-      O => nes_Result(0)
-    );
-  nes_Mcount_counter_reg_cy_0_Q : MUXCY
-    port map (
-      CI => N0,
-      DI => N1,
-      S => nes_Mcount_counter_reg_lut(0),
-      O => nes_Mcount_counter_reg_cy(0)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_9_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(8),
-      LI => nes_Madd_scalar_next_addsub0000_xor_9_rt_1576,
-      O => nes_scalar_next_addsub0000(9)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_8_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(7),
-      LI => nes_Madd_scalar_next_addsub0000_cy_8_rt_1574,
-      O => nes_scalar_next_addsub0000(8)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_8_Q : MUXCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(7),
-      DI => N0,
-      S => nes_Madd_scalar_next_addsub0000_cy_8_rt_1574,
-      O => nes_Madd_scalar_next_addsub0000_cy(8)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_7_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(6),
-      LI => nes_Madd_scalar_next_addsub0000_cy_7_rt_1572,
-      O => nes_scalar_next_addsub0000(7)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_7_Q : MUXCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(6),
-      DI => N0,
-      S => nes_Madd_scalar_next_addsub0000_cy_7_rt_1572,
-      O => nes_Madd_scalar_next_addsub0000_cy(7)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_6_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(5),
-      LI => nes_Madd_scalar_next_addsub0000_cy_6_rt_1570,
-      O => nes_scalar_next_addsub0000(6)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_6_Q : MUXCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(5),
-      DI => N0,
-      S => nes_Madd_scalar_next_addsub0000_cy_6_rt_1570,
-      O => nes_Madd_scalar_next_addsub0000_cy(6)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_5_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(4),
-      LI => nes_Madd_scalar_next_addsub0000_cy_5_rt_1568,
-      O => nes_scalar_next_addsub0000(5)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_5_Q : MUXCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(4),
-      DI => N0,
-      S => nes_Madd_scalar_next_addsub0000_cy_5_rt_1568,
-      O => nes_Madd_scalar_next_addsub0000_cy(5)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_4_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(3),
-      LI => nes_Madd_scalar_next_addsub0000_cy_4_rt_1566,
-      O => nes_scalar_next_addsub0000(4)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_4_Q : MUXCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(3),
-      DI => N0,
-      S => nes_Madd_scalar_next_addsub0000_cy_4_rt_1566,
-      O => nes_Madd_scalar_next_addsub0000_cy(4)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_3_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(2),
-      LI => nes_Madd_scalar_next_addsub0000_cy_3_rt_1564,
-      O => nes_scalar_next_addsub0000(3)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_3_Q : MUXCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(2),
-      DI => N0,
-      S => nes_Madd_scalar_next_addsub0000_cy_3_rt_1564,
-      O => nes_Madd_scalar_next_addsub0000_cy(3)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_2_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(1),
-      LI => nes_Madd_scalar_next_addsub0000_cy_2_rt_1562,
-      O => nes_scalar_next_addsub0000(2)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_2_Q : MUXCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(1),
-      DI => N0,
-      S => nes_Madd_scalar_next_addsub0000_cy_2_rt_1562,
-      O => nes_Madd_scalar_next_addsub0000_cy(2)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_1_Q : XORCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(0),
-      LI => nes_Madd_scalar_next_addsub0000_cy_1_rt_1560,
-      O => nes_scalar_next_addsub0000(1)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_1_Q : MUXCY
-    port map (
-      CI => nes_Madd_scalar_next_addsub0000_cy(0),
-      DI => N0,
-      S => nes_Madd_scalar_next_addsub0000_cy_1_rt_1560,
-      O => nes_Madd_scalar_next_addsub0000_cy(1)
-    );
-  nes_Madd_scalar_next_addsub0000_xor_0_Q : XORCY
-    port map (
-      CI => N0,
-      LI => nes_Madd_scalar_next_addsub0000_lut(0),
-      O => nes_scalar_next_addsub0000(0)
-    );
-  nes_Madd_scalar_next_addsub0000_cy_0_Q : MUXCY
-    port map (
-      CI => N0,
-      DI => N1,
-      S => nes_Madd_scalar_next_addsub0000_lut(0),
-      O => nes_Madd_scalar_next_addsub0000_cy(0)
-    );
-  nes_counter_reg_9 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_9,
-      Q => nes_counter_reg(9)
-    );
-  nes_counter_reg_8 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_8,
-      Q => nes_counter_reg(8)
-    );
-  nes_counter_reg_7 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_7,
-      Q => nes_counter_reg(7)
-    );
-  nes_counter_reg_6 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_6,
-      Q => nes_counter_reg(6)
-    );
-  nes_counter_reg_5 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_5,
-      Q => nes_counter_reg(5)
-    );
-  nes_counter_reg_4 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_4,
-      Q => nes_counter_reg(4)
-    );
-  nes_counter_reg_3 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_3,
-      Q => nes_counter_reg(3)
-    );
-  nes_counter_reg_2 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_2,
-      Q => nes_counter_reg(2)
-    );
-  nes_counter_reg_1 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_1,
-      Q => nes_counter_reg(1)
-    );
-  nes_counter_reg_0 : FDCE
-    port map (
-      C => U1_q(0),
-      CE => nes_counter_reg_not0001,
-      CLR => btn_3_IBUF_1524,
-      D => nes_Mcount_counter_reg_eqn_0,
-      Q => nes_counter_reg(0)
-    );
-  nes_right_reg : FDE
-    port map (
-      C => U1_q(0),
-      CE => nes_right_reg_cmp_eq0000,
-      D => nes_left_reg_not0001,
-      Q => nes_right_reg_1641
-    );
-  nes_b_reg : FDE
-    port map (
-      C => U1_q(0),
-      CE => nes_b_reg_cmp_eq0000,
-      D => nes_left_reg_not0001,
-      Q => nes_b_reg_1620
-    );
-  nes_sel_reg : FDE
-    port map (
-      C => U1_q(0),
-      CE => nes_sel_reg_cmp_eq0000,
-      D => nes_left_reg_not0001,
-      Q => nes_sel_reg_1675
-    );
-  nes_start_reg : FDE
-    port map (
-      C => U1_q(0),
-      CE => nes_start_reg_cmp_eq0000,
-      D => nes_left_reg_not0001,
-      Q => nes_start_reg_1677
-    );
-  nes_a_reg : FDE
-    port map (
-      C => U1_q(0),
-      CE => nes_a_reg_cmp_eq0000,
-      D => nes_left_reg_not0001,
-      Q => nes_a_reg_1618
-    );
-  nes_up_reg : FDE
-    port map (
-      C => U1_q(0),
-      CE => nes_up_reg_cmp_eq0000,
-      D => nes_left_reg_not0001,
-      Q => nes_up_reg_1679
-    );
-  nes_scalar_reg_9 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(9),
-      Q => nes_scalar_reg(9)
-    );
-  nes_scalar_reg_8 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(8),
-      Q => nes_scalar_reg(8)
-    );
-  nes_scalar_reg_7 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(7),
-      Q => nes_scalar_reg(7)
-    );
-  nes_scalar_reg_6 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(6),
-      Q => nes_scalar_reg(6)
-    );
-  nes_scalar_reg_5 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(5),
-      Q => nes_scalar_reg(5)
-    );
-  nes_scalar_reg_4 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(4),
-      Q => nes_scalar_reg(4)
-    );
-  nes_scalar_reg_3 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(3),
-      Q => nes_scalar_reg(3)
-    );
-  nes_scalar_reg_2 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(2),
-      Q => nes_scalar_reg(2)
-    );
-  nes_scalar_reg_1 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(1),
-      Q => nes_scalar_reg(1)
-    );
-  nes_scalar_reg_0 : FDC
-    port map (
-      C => U1_q(0),
-      CLR => btn_3_IBUF_1524,
-      D => nes_scalar_next(0),
-      Q => nes_scalar_reg(0)
-    );
-  nes_down_reg : FDE
-    port map (
-      C => U1_q(0),
-      CE => nes_down_reg_cmp_eq0000,
-      D => nes_left_reg_not0001,
-      Q => nes_down_reg_1635
-    );
-  nes_left_reg : FDE
-    port map (
-      C => U1_q(0),
-      CE => nes_left_reg_cmp_eq0000,
-      D => nes_left_reg_not0001,
-      Q => nes_left_reg_1637
+      I0 => U3_blue_and0002,
+      I1 => U3_spriteonB3,
+      I2 => U3_spriteonB4,
+      I3 => N01,
+      O => U3_N33
     );
   x7_an_0_mux00011 : LUT2
     generic map(
@@ -8230,7 +10710,7 @@ begin
     port map (
       I0 => x7_clkdiv(18),
       I1 => x7_clkdiv(19),
-      O => an_0_OBUF_1491
+      O => an_0_OBUF_2277
     );
   bounce_outp_7_1 : LUT3
     generic map(
@@ -8240,7 +10720,7 @@ begin
       I0 => bounce_delay3(7),
       I1 => bounce_delay2(7),
       I2 => bounce_delay1(7),
-      O => ld_7_OBUF_1555
+      O => ld_7_OBUF_2341
     );
   bounce_outp_6_1 : LUT3
     generic map(
@@ -8250,7 +10730,7 @@ begin
       I0 => bounce_delay3(6),
       I1 => bounce_delay2(6),
       I2 => bounce_delay1(6),
-      O => ld_6_OBUF_1554
+      O => ld_6_OBUF_2340
     );
   bounce_outp_5_1 : LUT3
     generic map(
@@ -8260,7 +10740,7 @@ begin
       I0 => bounce_delay3(5),
       I1 => bounce_delay2(5),
       I2 => bounce_delay1(5),
-      O => ld_5_OBUF_1553
+      O => ld_5_OBUF_2339
     );
   bounce_outp_4_1 : LUT3
     generic map(
@@ -8270,7 +10750,7 @@ begin
       I0 => bounce_delay3(4),
       I1 => bounce_delay2(4),
       I2 => bounce_delay1(4),
-      O => ld_4_OBUF_1552
+      O => ld_4_OBUF_2338
     );
   bounce_outp_3_1 : LUT3
     generic map(
@@ -8280,7 +10760,7 @@ begin
       I0 => bounce_delay3(3),
       I1 => bounce_delay2(3),
       I2 => bounce_delay1(3),
-      O => ld_3_OBUF_1551
+      O => ld_3_OBUF_2337
     );
   bounce_outp_2_1 : LUT3
     generic map(
@@ -8290,7 +10770,7 @@ begin
       I0 => bounce_delay3(2),
       I1 => bounce_delay2(2),
       I2 => bounce_delay1(2),
-      O => ld_2_OBUF_1550
+      O => ld_2_OBUF_2336
     );
   bounce_outp_1_1 : LUT3
     generic map(
@@ -8300,7 +10780,7 @@ begin
       I0 => bounce_delay3(1),
       I1 => bounce_delay2(1),
       I2 => bounce_delay1(1),
-      O => ld_1_OBUF_1549
+      O => ld_1_OBUF_2335
     );
   bounce_outp_0_1 : LUT3
     generic map(
@@ -8310,7 +10790,7 @@ begin
       I0 => bounce_delay3(0),
       I1 => bounce_delay2(0),
       I2 => bounce_delay1(0),
-      O => ld_0_OBUF_1548
+      O => ld_0_OBUF_2334
     );
   U2_hsync1 : LUT3
     generic map(
@@ -8320,117 +10800,94 @@ begin
       I0 => U2_hcs(7),
       I1 => U2_hcs(8),
       I2 => U2_hcs(9),
-      O => hsync_OBUF_1533
-    );
-  screenstate_Madd_sig_hill5_addsub0000_xor_2_11 : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => screenstate_sig_hill5(1),
-      I1 => screenstate_sig_hill5(2),
-      O => screenstate_sig_hill5_addsub0000(2)
-    );
-  screenstate_Madd_sig_hill2_addsub0000_xor_3_11 : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => screenstate_sig_hill2(2),
-      I1 => screenstate_sig_hill2(3),
-      O => screenstate_sig_hill2_addsub0000(3)
-    );
-  screenstate_Madd_sig_hill1_addsub0000_xor_2_11 : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => screenstate_sig_hill1(1),
-      I1 => screenstate_sig_hill1(2),
-      O => screenstate_sig_hill1_addsub0000(2)
+      O => hsync_OBUF_2319
     );
   screenstate_present_state_FSM_FFd1_In1 : LUT3
     generic map(
       INIT => X"EA"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_2_OBUF_1550,
-      I2 => screenstate_present_state_FSM_FFd2_1731,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_2_OBUF_2336,
+      I2 => screenstate_present_state_FSM_FFd2_2480,
       O => screenstate_present_state_FSM_FFd1_In
     );
-  screenstate_Madd_sig_hill5_addsub0000_xor_3_11 : LUT3
+  U3_Result_2_21 : LUT4
     generic map(
-      INIT => X"A9"
+      INIT => X"B4D2"
     )
     port map (
-      I0 => screenstate_sig_hill5(3),
-      I1 => screenstate_sig_hill5(2),
-      I2 => screenstate_sig_hill5(1),
-      O => screenstate_sig_hill5_addsub0000(3)
+      I0 => sig_gameDown,
+      I1 => U3_RMht2(0),
+      I2 => U3_RMht2(2),
+      I3 => U3_RMht2(1),
+      O => U3_Result_2_2
     );
-  screenstate_Madd_sig_hill2_addsub0000_xor_4_11 : LUT3
+  U3_Result_2_11 : LUT4
     generic map(
-      INIT => X"56"
+      INIT => X"B4D2"
     )
     port map (
-      I0 => screenstate_sig_hill2(4),
-      I1 => screenstate_sig_hill2(3),
-      I2 => screenstate_sig_hill2(2),
-      O => screenstate_sig_hill2_addsub0000(4)
+      I0 => sig_gameDown,
+      I1 => U3_RMht1(0),
+      I2 => U3_RMht1(2),
+      I3 => U3_RMht1(1),
+      O => U3_Result_2_1
     );
-  who_present_state_FSM_FFd2_In11 : LUT4
+  U3_tank1HP_mux0005_0_Q : LUT4
     generic map(
-      INIT => X"A666"
+      INIT => X"CC4C"
     )
     port map (
-      I0 => who_present_state_FSM_FFd2_2022,
-      I1 => who_present_state_FSM_FFd1_2021,
-      I2 => ld_0_OBUF_1548,
-      I3 => screenstate_present_state_FSM_FFd1_1729,
-      O => who_present_state_FSM_FFd2_In
+      I0 => U3_blue_and0000,
+      I1 => N4,
+      I2 => U3_spriteonM2,
+      I3 => U3_B_and0000,
+      O => U3_tank1HP_mux0005_0_Q_2229
     );
-  screenstate_Madd_sig_hill5_addsub0000_xor_4_11 : LUT4
+  U3_tank2HP_mux0007_2_SW1 : LUT4
     generic map(
-      INIT => X"AAA9"
+      INIT => X"FB51"
     )
     port map (
-      I0 => screenstate_sig_hill5(4),
-      I1 => screenstate_sig_hill5(2),
-      I2 => screenstate_sig_hill5(1),
-      I3 => screenstate_sig_hill5(3),
-      O => screenstate_sig_hill5_addsub0000(4)
+      I0 => U3_spriteonM1,
+      I1 => U3_tank2HP_0_Q,
+      I2 => sig_gameB,
+      I3 => U3_tank2HP_2_Q,
+      O => N7
     );
-  x7_an_3_mux0001_SW0 : LUT3
+  U3_tank2HP_mux0007_2_Q : LUT4
     generic map(
-      INIT => X"FE"
+      INIT => X"02DF"
     )
     port map (
-      I0 => U3_tank1_angle_calc(6),
-      I1 => U3_tank1_angle_calc(5),
-      I2 => U3_tank1_angle_calc(4),
-      O => N01
+      I0 => U3_blue_and0002,
+      I1 => U3_N29,
+      I2 => N7,
+      I3 => N6,
+      O => U3_tank2HP_mux0007_2_Q_2258
     );
-  x7_an_3_mux0001 : LUT4
+  U3_tank1HP_mux0005_2_SW1 : LUT4
     generic map(
-      INIT => X"57FF"
+      INIT => X"FB51"
     )
     port map (
-      I0 => x7_clkdiv(18),
-      I1 => N01,
-      I2 => U3_tank1_angle_calc(7),
-      I3 => x7_clkdiv(19),
-      O => an_3_OBUF_1494
+      I0 => U3_spriteonM2,
+      I1 => U3_tank1HP_0_Q,
+      I2 => sig_gameB,
+      I3 => U3_tank1HP_2_Q,
+      O => N10
     );
-  screenstate_sig_hill1_and00011 : LUT3
+  U3_tank1HP_mux0005_2_Q : LUT4
     generic map(
-      INIT => X"02"
+      INIT => X"02DF"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd2_1731,
-      I1 => screenstate_present_state_FSM_FFd1_1729,
-      I2 => btn_3_IBUF_1524,
-      O => screenstate_sig_hill1_and0001
+      I0 => U3_blue_and0000,
+      I1 => U3_B_and0000,
+      I2 => N10,
+      I3 => N9,
+      O => U3_tank1HP_mux0005_2_Q_2230
     );
   U2_vsync_SW0 : LUT3
     generic map(
@@ -8440,40 +10897,18 @@ begin
       I0 => U2_vcs(3),
       I1 => U2_vcs(4),
       I2 => U2_vcs(9),
-      O => N2
+      O => N12
     );
   U2_vsync : LUT4
     generic map(
-      INIT => X"FFFB"
+      INIT => X"FEFF"
     )
     port map (
-      I0 => U2_vcs(1),
-      I1 => U2_N2,
+      I0 => N12,
+      I1 => U2_vcs(1),
       I2 => U2_vcs(2),
-      I3 => N2,
-      O => vsync_OBUF_2020
-    );
-  x7_an_2_mux000115 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(2),
-      I1 => U3_tank1_angle_calc(3),
-      I2 => U3_tank1_angle_calc(4),
-      I3 => U3_tank1_angle_calc(5),
-      O => x7_an_1_mux000128
-    );
-  x7_an_2_mux000128 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(6),
-      I1 => U3_tank1_angle_calc(7),
-      I2 => U3_tank1_angle_calc(0),
-      I3 => U3_tank1_angle_calc(1),
-      O => x7_an_2_mux000128_2095
+      I3 => U2_N2,
+      O => vsync_OBUF_2605
     );
   nes_nes_clk31 : LUT4
     generic map(
@@ -8484,291 +10919,121 @@ begin
       I1 => nes_counter_reg(7),
       I2 => nes_counter_reg(6),
       I3 => nes_counter_reg(5),
-      O => nes_nes_clk31_1640
+      O => nes_nes_clk31_2426
     );
-  screenstate_sig_hill5_addsub0000_5_2 : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => screenstate_sig_hill5(5),
-      I1 => screenstate_sig_hill5_addsub0000_5_bdd0,
-      O => screenstate_sig_hill5_addsub0000(5)
-    );
-  screenstate_sig_hill4_mux0001_3_11 : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(4),
-      I1 => screenstate_sig_hill4_mux0001_0_bdd2,
-      O => screenstate_sig_hill4_mux0001(3)
-    );
-  screenstate_Madd_sig_hill2_addsub0000_xor_5_121 : LUT3
-    generic map(
-      INIT => X"C8"
-    )
-    port map (
-      I0 => screenstate_sig_hill2(2),
-      I1 => screenstate_sig_hill2(4),
-      I2 => screenstate_sig_hill2(3),
-      O => screenstate_N30
-    );
-  screenstate_sig_hill5_addsub0000_6_1 : LUT3
-    generic map(
-      INIT => X"9A"
-    )
-    port map (
-      I0 => screenstate_sig_hill5(6),
-      I1 => screenstate_sig_hill5_addsub0000_5_bdd0,
-      I2 => screenstate_sig_hill5(5),
-      O => screenstate_sig_hill5_addsub0000(6)
-    );
-  screenstate_sig_hill4_mux0001_2_11 : LUT3
-    generic map(
-      INIT => X"9A"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(5),
-      I1 => screenstate_sig_hill4_mux0001_0_bdd2,
-      I2 => screenstate_sig_hill4(4),
-      O => screenstate_sig_hill4_mux0001(2)
-    );
-  screenstate_Madd_sig_hill2_addsub0000_xor_6_11 : LUT3
-    generic map(
-      INIT => X"78"
-    )
-    port map (
-      I0 => screenstate_N30,
-      I1 => screenstate_sig_hill2(5),
-      I2 => screenstate_sig_hill2(6),
-      O => screenstate_sig_hill2_addsub0000(6)
-    );
-  screenstate_sig_hill5_addsub0000_5_11 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => screenstate_sig_hill5(2),
-      I1 => screenstate_sig_hill5(1),
-      I2 => screenstate_sig_hill5(4),
-      I3 => screenstate_sig_hill5(3),
-      O => screenstate_sig_hill5_addsub0000_5_bdd0
-    );
-  screenstate_sig_hill5_addsub0000_7_1 : LUT4
-    generic map(
-      INIT => X"C6CC"
-    )
-    port map (
-      I0 => screenstate_sig_hill5(5),
-      I1 => screenstate_sig_hill5(7),
-      I2 => screenstate_sig_hill5_addsub0000_5_bdd0,
-      I3 => screenstate_sig_hill5(6),
-      O => screenstate_sig_hill5_addsub0000(7)
-    );
-  screenstate_Madd_sig_hill2_addsub0000_xor_7_11 : LUT4
-    generic map(
-      INIT => X"6CCC"
-    )
-    port map (
-      I0 => screenstate_sig_hill2(6),
-      I1 => screenstate_sig_hill2(7),
-      I2 => screenstate_sig_hill2(5),
-      I3 => screenstate_N30,
-      O => screenstate_sig_hill2_addsub0000(7)
-    );
-  screenstate_Madd_sig_hill1_addsub0000_xor_5_11 : LUT4
-    generic map(
-      INIT => X"6CCC"
-    )
-    port map (
-      I0 => screenstate_sig_hill1(4),
-      I1 => screenstate_sig_hill1(5),
-      I2 => screenstate_sig_hill1(3),
-      I3 => N515,
-      O => screenstate_sig_hill1_addsub0000(5)
-    );
-  x7_Mrom_a_to_g21 : LUT4
-    generic map(
-      INIT => X"445C"
-    )
-    port map (
-      I0 => x7_digit(3),
-      I1 => x7_digit(0),
-      I2 => x7_digit(2),
-      I3 => x7_digit(1),
-      O => a_to_g_2_OBUF_1482
-    );
-  x7_Mrom_a_to_g41 : LUT4
-    generic map(
-      INIT => X"80C2"
-    )
-    port map (
-      I0 => x7_digit(1),
-      I1 => x7_digit(2),
-      I2 => x7_digit(3),
-      I3 => x7_digit(0),
-      O => a_to_g_4_OBUF_1484
-    );
-  x7_Mrom_a_to_g111 : LUT4
-    generic map(
-      INIT => X"0382"
-    )
-    port map (
-      I0 => x7_digit(0),
-      I1 => x7_digit(3),
-      I2 => x7_digit(2),
-      I3 => x7_digit(1),
-      O => a_to_g_1_OBUF_1481
-    );
-  x7_Mrom_a_to_g51 : LUT4
-    generic map(
-      INIT => X"AC48"
-    )
-    port map (
-      I0 => x7_digit(3),
-      I1 => x7_digit(2),
-      I2 => x7_digit(0),
-      I3 => x7_digit(1),
-      O => a_to_g_5_OBUF_1485
-    );
-  x7_Mrom_a_to_g11 : LUT4
-    generic map(
-      INIT => X"2141"
-    )
-    port map (
-      I0 => x7_digit(1),
-      I1 => x7_digit(3),
-      I2 => x7_digit(2),
-      I3 => x7_digit(0),
-      O => a_to_g_0_OBUF_1480
-    );
-  x7_Mrom_a_to_g31 : LUT4
-    generic map(
-      INIT => X"9806"
-    )
-    port map (
-      I0 => x7_digit(0),
-      I1 => x7_digit(2),
-      I2 => x7_digit(3),
-      I3 => x7_digit(1),
-      O => a_to_g_3_OBUF_1483
-    );
-  x7_Mrom_a_to_g61 : LUT4
-    generic map(
-      INIT => X"4184"
-    )
-    port map (
-      I0 => x7_digit(1),
-      I1 => x7_digit(0),
-      I2 => x7_digit(3),
-      I3 => x7_digit(2),
-      O => a_to_g_6_OBUF_1486
-    );
-  x7_an_1_mux00012 : LUT2
-    generic map(
-      INIT => X"D"
-    )
-    port map (
-      I0 => x7_clkdiv(18),
-      I1 => x7_clkdiv(19),
-      O => x7_an_1_mux00012_2092
-    );
-  x7_an_1_mux000115 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(6),
-      I1 => U3_tank2_angle_calc(7),
-      I2 => U3_tank1_angle_calc(0),
-      I3 => U3_tank1_angle_calc(1),
-      O => x7_an_1_mux000115_2091
-    );
-  x7_an_1_mux000152 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(6),
-      I1 => U3_tank1_angle_calc(7),
-      I2 => U3_tank2_angle_calc(4),
-      I3 => U3_tank2_angle_calc(5),
-      O => x7_an_1_mux000152_2094
-    );
-  x7_an_1_mux000172 : LUT4
-    generic map(
-      INIT => X"EAAA"
-    )
-    port map (
-      I0 => x7_an_1_mux00012_2092,
-      I1 => x7_an_1_mux000115_2091,
-      I2 => x7_an_1_mux000128,
-      I3 => x7_an_1_mux000152_2094,
-      O => an_1_OBUF_1492
-    );
-  screenstate_Mcount_sig_hill3_eqn_0122 : LUT2
-    generic map(
-      INIT => X"E"
-    )
-    port map (
-      I0 => N512,
-      I1 => screenstate_Mcount_sig_hill3_eqn_0121_1706,
-      O => screenstate_N0
-    );
-  U3_tank2_angle_calc_and000017 : LUT4
-    generic map(
-      INIT => X"0020"
-    )
-    port map (
-      I0 => sig_gameDown,
-      I1 => sig_gameUp,
-      I2 => who_present_state_FSM_FFd2_2022,
-      I3 => U3_tank2_angle_calc(1),
-      O => U3_tank2_angle_calc_and000017_1443
-    );
-  U3_tank2_angle_calc_and000029 : LUT4
-    generic map(
-      INIT => X"2000"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc_and00003_1444,
-      I1 => U3_tank2_angle_calc(6),
-      I2 => U3_tank2_angle_calc_and000017_1443,
-      I3 => U3_N50,
-      O => U3_tank2_angle_calc_and0000
-    );
-  U3_tank1_angle_calc_and000021 : LUT4
+  U3_rise_and0000 : LUT4
     generic map(
       INIT => X"0100"
     )
     port map (
-      I0 => who_present_state_FSM_FFd2_2022,
-      I1 => sig_gameUp,
-      I2 => U3_tank1_angle_calc(1),
-      I3 => sig_gameDown,
-      O => U3_tank1_angle_calc_and000021_1429
+      I0 => U3_RMcnt(1),
+      I1 => U3_RMcnt(2),
+      I2 => N14,
+      I3 => U3_RMcnt(0),
+      O => U3_rise_and0000_2075
     );
-  U3_tank1_angle_calc_and000034 : LUT4
+  U3_rise2_and0000 : LUT4
     generic map(
-      INIT => X"2000"
+      INIT => X"0100"
     )
     port map (
-      I0 => U3_tank1_angle_calc_and00003_1430,
-      I1 => U3_tank1_angle_calc(6),
-      I2 => U3_tank1_angle_calc_and000021_1429,
-      I3 => U3_N49,
-      O => U3_tank1_angle_calc_and0000
+      I0 => U3_RMcnt2(1),
+      I1 => U3_RMcnt2(2),
+      I2 => N16,
+      I3 => U3_RMcnt2(0),
+      O => U3_rise2_and0000_2074
+    );
+  who_present_state_FSM_FFd2_In2 : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => who_present_state_FSM_FFd2_2611,
+      I1 => who_present_state_FSM_N0,
+      O => who_present_state_FSM_FFd2_In
+    );
+  who_present_state_FSM_FFd2_In11 : LUT4
+    generic map(
+      INIT => X"FEFF"
+    )
+    port map (
+      I0 => who_present_state_FSM_FFd1_2609,
+      I1 => who_delay2_2607,
+      I2 => who_delay1_2606,
+      I3 => who_delay3_2608,
+      O => who_present_state_FSM_N0
+    );
+  U3_destroy2_mux001727 : LUT4
+    generic map(
+      INIT => X"FF08"
+    )
+    port map (
+      I0 => U3_tank1HP_2_Q,
+      I1 => U3_blue_and0000,
+      I2 => U3_B_and0000,
+      I3 => U3_destroy2_mux001719,
+      O => U3_destroy2_mux001727_2045
+    );
+  U3_destroy1_mux00154 : LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+    port map (
+      I0 => U3_blue_and0002,
+      I1 => U3_blue_and0001,
+      I2 => U3_blue_and0000,
+      I3 => U3_B_and0000,
+      O => U3_destroy1_mux00154_2038
+    );
+  U3_destroy1_mux001541 : LUT3
+    generic map(
+      INIT => X"02"
+    )
+    port map (
+      I0 => U3_spriteonB1,
+      I1 => U3_blue_and0002,
+      I2 => U3_spriteonGrnd,
+      O => U3_destroy1_mux001541_2039
+    );
+  U3_destroy1_mux001571 : LUT2
+    generic map(
+      INIT => X"E"
+    )
+    port map (
+      I0 => U3_destroy1_mux001527_2037,
+      I1 => U3_destroy1_mux001562_2040,
+      O => U3_destroy1_mux0015
+    );
+  U3_CM2_Q_mux0000_1_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(1),
+      I2 => U3_CM2_sub0000_1(1),
+      O => U3_CM2_Q_mux0000(1)
+    );
+  x7_an_3_mux00011 : LUT4
+    generic map(
+      INIT => X"57FF"
+    )
+    port map (
+      I0 => x7_clkdiv(18),
+      I1 => sig_tank1_angle_calc_5_Q,
+      I2 => sig_tank1_angle_calc_4_Q,
+      I3 => x7_clkdiv(19),
+      O => an_3_OBUF_2280
     );
   nes_up_reg_cmp_eq00001 : LUT4
     generic map(
-      INIT => X"0400"
+      INIT => X"0200"
     )
     port map (
-      I0 => nes_counter_reg(1),
-      I1 => nes_counter_reg(3),
+      I0 => nes_counter_reg(3),
+      I1 => nes_counter_reg(1),
       I2 => nes_counter_reg(2),
-      I3 => N514,
+      I3 => N676,
       O => nes_up_reg_cmp_eq0000
     );
   nes_start_reg_cmp_eq00001 : LUT4
@@ -8828,11 +11093,11 @@ begin
     );
   nes_b_reg_cmp_eq00001 : LUT4
     generic map(
-      INIT => X"0400"
+      INIT => X"0200"
     )
     port map (
-      I0 => nes_counter_reg(3),
-      I1 => nes_counter_reg(1),
+      I0 => nes_counter_reg(1),
+      I1 => nes_counter_reg(3),
       I2 => nes_counter_reg(2),
       I3 => nes_N0,
       O => nes_b_reg_cmp_eq0000
@@ -8857,53 +11122,34 @@ begin
       I1 => nes_counter_reg(6),
       I2 => nes_counter_reg(5),
       I3 => nes_counter_reg(4),
-      O => N4
+      O => N18
     );
-  screenstate_sig_hill4_mux0001_5_21 : LUT2
+  U3_Msub_font2_sub0002_xor_2_11 : LUT2
     generic map(
-      INIT => X"D"
+      INIT => X"6"
     )
     port map (
-      I0 => screenstate_sig_hill4(3),
-      I1 => screenstate_sig_hill4_mux0001_4_bdd2,
-      O => screenstate_sig_hill4_mux0001_5_bdd0
+      I0 => U3_RMht1(2),
+      I1 => U3_RMht1(1),
+      O => sig_tank1_angle_calc_2_Q
     );
   nes_scalar_next_0_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(0),
+      I0 => nes_scalar_next_addsub0000(0),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(0)
     );
   U2_Mcount_vcs_eqn_01 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => N525,
-      I1 => U2_Result(0),
+      I0 => U2_Result(0),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_0
-    );
-  screenstate_Madd_sig_hill1_addsub0000_xor_6_12 : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => screenstate_sig_hill1(6),
-      I1 => N516,
-      O => screenstate_sig_hill1_addsub0000(6)
-    );
-  screenstate_Madd_sig_hill1_addsub0000_xor_7_11 : LUT3
-    generic map(
-      INIT => X"9A"
-    )
-    port map (
-      I0 => screenstate_sig_hill1(7),
-      I1 => screenstate_N13,
-      I2 => screenstate_sig_hill1(6),
-      O => screenstate_sig_hill1_addsub0000(7)
     );
   U2_vcs_cmp_eq000011 : LUT4
     generic map(
@@ -8916,91 +11162,58 @@ begin
       I3 => U2_vcs(6),
       O => U2_N2
     );
-  screenstate_sig_hill4_mux0001_6_11 : LUT4
+  U3_RMcnt_Q_mux0000_1_1 : LUT4
     generic map(
-      INIT => X"83C3"
+      INIT => X"F606"
     )
     port map (
-      I0 => screenstate_sig_hill4_mux0001_5_bdd0,
-      I1 => screenstate_sig_hill4(0),
-      I2 => screenstate_sig_hill4(1),
-      I3 => screenstate_sig_hill4(2),
-      O => screenstate_sig_hill4_mux0001(6)
+      I0 => U3_RMcnt(0),
+      I1 => U3_RMcnt_Maddsub_addsub0000_lut(1),
+      I2 => U3_RMcnt_and0000,
+      I3 => U3_RMht1(1),
+      O => U3_RMcnt_Q_mux0000(1)
     );
-  screenstate_sig_hill4_mux0001_5_11 : LUT4
+  U3_RMcnt2_Q_mux0000_1_1 : LUT4
     generic map(
-      INIT => X"E161"
+      INIT => X"F606"
     )
     port map (
-      I0 => screenstate_sig_hill4(0),
-      I1 => screenstate_sig_hill4(1),
-      I2 => screenstate_sig_hill4(2),
-      I3 => screenstate_sig_hill4_mux0001_5_bdd0,
-      O => screenstate_sig_hill4_mux0001(5)
+      I0 => U3_RMcnt2(0),
+      I1 => U3_RMcnt2_Maddsub_addsub0000_lut(1),
+      I2 => U3_RMcnt2_and0000,
+      I3 => U3_RMht2(1),
+      O => U3_RMcnt2_Q_mux0000(1)
     );
   U2_hcs_cmp_eq00005 : LUT4
     generic map(
       INIT => X"8000"
     )
     port map (
-      I0 => U2_hcs(0),
-      I1 => U2_hcs(1),
-      I2 => U2_hcs(9),
-      I3 => N522,
-      O => U2_hcs_cmp_eq00005_650
+      I0 => U2_hcs(1),
+      I1 => U2_hcs(9),
+      I2 => U2_hcs(0),
+      I3 => N681,
+      O => U2_hcs_cmp_eq00005_760
     );
   U2_hcs_cmp_eq0000111 : LUT2
     generic map(
       INIT => X"8"
     )
     port map (
-      I0 => N517,
-      I1 => U2_hcs_cmp_eq00005_650,
+      I0 => N677,
+      I1 => U2_hcs_cmp_eq00005_760,
       O => U2_hcs_cmp_eq0000
     );
-  U3_B_mux00124 : LUT4
+  nes_scalar_next_cmp_eq000010 : LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"1000"
     )
     port map (
-      I0 => U3_spriteonGrnd,
-      I1 => U3_spriteonB5,
-      I2 => U3_N8,
-      I3 => U3_blue_and0002,
-      O => U3_B_mux00124_679
-    );
-  U3_B_mux001236 : LUT4
-    generic map(
-      INIT => X"D888"
-    )
-    port map (
-      I0 => U3_tank1Angle10s,
-      I1 => U3_tank110sM_mux0000,
-      I2 => U3_tank11sM_mux0000,
-      I3 => U3_tank1Angle1s,
-      O => U3_B_mux001236_678
-    );
-  U3_B_mux001254 : LUT4
-    generic map(
-      INIT => X"0100"
-    )
-    port map (
-      I0 => U3_blue_and0001,
-      I1 => U3_blue_and0000,
-      I2 => U3_spriteonGrnd,
-      I3 => U3_B_mux001249_680,
-      O => U3_B_mux001254_681
-    );
-  U3_B_mux001269 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U3_spriteonB3,
-      I1 => U3_spriteonB2,
-      I2 => U3_spriteonB1,
-      I3 => U3_blue_and0002,
-      O => U3_B_mux001269_682
+      I0 => nes_scalar_reg(7),
+      I1 => nes_scalar_reg(5),
+      I2 => nes_scalar_reg(4),
+      I3 => nes_scalar_reg(6),
+      O => nes_scalar_next_cmp_eq000010_2450
     );
   nes_scalar_next_cmp_eq000021 : LUT4
     generic map(
@@ -9011,108 +11224,188 @@ begin
       I1 => nes_scalar_reg(3),
       I2 => nes_scalar_reg(2),
       I3 => nes_scalar_reg(1),
-      O => nes_scalar_next_cmp_eq000021_1664
+      O => nes_scalar_next_cmp_eq000021_2451
     );
   nes_scalar_next_1_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(1),
+      I0 => nes_scalar_next_addsub0000(1),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(1)
     );
   U2_Mcount_vcs_eqn_11 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
-      I1 => U2_Result(1),
+      I0 => U2_Result(1),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_1
+    );
+  U3_CM2_Q_mux0000_2_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(2),
+      I2 => U3_CM2_sub0000_1(2),
+      O => U3_CM2_Q_mux0000(2)
+    );
+  U3_CM1_Q_mux0000_1_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(1),
+      I2 => U3_CM1_add0000_0(1),
+      O => U3_CM1_Q_mux0000(1)
+    );
+  U3_Result_3_2_SW0 : LUT4
+    generic map(
+      INIT => X"0180"
+    )
+    port map (
+      I0 => U3_RMht2(2),
+      I1 => U3_RMht2(1),
+      I2 => U3_RMht2(0),
+      I3 => sig_gameDown,
+      O => N22
+    );
+  U3_Result_3_2 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RMht2(3),
+      I1 => N22,
+      O => U3_Result_3_2_2001
+    );
+  U3_Result_3_1 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RMht1(3),
+      I1 => N24,
+      O => U3_Result_3_1_2000
     );
   nes_scalar_next_2_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(2),
+      I0 => nes_scalar_next_addsub0000(2),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(2)
     );
   U2_Mcount_vcs_eqn_21 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
-      I1 => U2_Result(2),
+      I0 => U2_Result(2),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_2
     );
-  title_Msub_xpix_xor_5_11 : LUT4
+  U3_CM2_Q_mux0000_3_1 : LUT3
     generic map(
-      INIT => X"AAA9"
+      INIT => X"E4"
     )
     port map (
-      I0 => U2_hcs(5),
-      I1 => U2_hcs(3),
-      I2 => U2_hcs(2),
-      I3 => U2_hcs(4),
-      O => title_xpix(5)
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(3),
+      I2 => U3_CM2_sub0000_1(3),
+      O => U3_CM2_Q_mux0000(3)
     );
-  screenstate_Mcount_sig_hill3_eqn_31 : LUT2
+  U3_CM1_Q_mux0000_2_1 : LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"E4"
     )
     port map (
-      I0 => screenstate_Result(3),
-      I1 => screenstate_N0,
-      O => screenstate_Mcount_sig_hill3_eqn_3
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(2),
+      I2 => U3_CM1_add0000_0(2),
+      O => U3_CM1_Q_mux0000(2)
     );
   nes_scalar_next_3_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(3),
+      I0 => nes_scalar_next_addsub0000(3),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(3)
     );
   U2_Mcount_vcs_eqn_31 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
-      I1 => U2_Result(3),
+      I0 => U2_Result(3),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_3
     );
-  screenstate_Mcount_sig_hill3_eqn_41 : LUT2
+  U3_CM2_Q_mux0000_4_1 : LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"E4"
     )
     port map (
-      I0 => screenstate_Result(4),
-      I1 => screenstate_N0,
-      O => screenstate_Mcount_sig_hill3_eqn_4
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(4),
+      I2 => U3_CM2_sub0000_1(4),
+      O => U3_CM2_Q_mux0000(4)
+    );
+  U3_CM1_Q_mux0000_3_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(3),
+      I2 => U3_CM1_add0000_0(3),
+      O => U3_CM1_Q_mux0000(3)
     );
   nes_scalar_next_4_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(4),
+      I0 => nes_scalar_next_addsub0000(4),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(4)
     );
   U2_Mcount_vcs_eqn_41 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
-      I1 => U2_Result(4),
+      I0 => U2_Result(4),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_4
+    );
+  U3_CM2_Q_mux0000_5_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(5),
+      I2 => U3_CM2_sub0000_1(5),
+      O => U3_CM2_Q_mux0000(5)
+    );
+  U3_CM1_Q_mux0000_4_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(4),
+      I2 => U3_CM1_add0000_0(4),
+      O => U3_CM1_Q_mux0000(4)
     );
   title_green_cmp_lt0000225 : LUT4
     generic map(
@@ -9123,61 +11416,83 @@ begin
       I1 => U2_vcs(6),
       I2 => U2_vcs(5),
       I3 => U2_vcs(4),
-      O => title_green_cmp_lt0000225_1972
-    );
-  screenstate_Mcount_sig_hill3_eqn_51 : LUT2
-    generic map(
-      INIT => X"8"
-    )
-    port map (
-      I0 => screenstate_Result(5),
-      I1 => screenstate_N0,
-      O => screenstate_Mcount_sig_hill3_eqn_5
+      O => title_green_cmp_lt0000225_2589
     );
   nes_scalar_next_5_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(5),
+      I0 => nes_scalar_next_addsub0000(5),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(5)
     );
   U2_Mcount_vcs_eqn_51 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
-      I1 => U2_Result(5),
+      I0 => U2_Result(5),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_5
     );
-  screenstate_Mcount_sig_hill3_eqn_61 : LUT2
+  U3_CM2_Q_mux0000_6_1 : LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"E4"
     )
     port map (
-      I0 => screenstate_Result(6),
-      I1 => screenstate_N0,
-      O => screenstate_Mcount_sig_hill3_eqn_6
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(6),
+      I2 => U3_CM2_sub0000_1(6),
+      O => U3_CM2_Q_mux0000(6)
+    );
+  U3_CM1_Q_mux0000_5_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(5),
+      I2 => U3_CM1_add0000_0(5),
+      O => U3_CM1_Q_mux0000(5)
     );
   nes_scalar_next_6_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(6),
+      I0 => nes_scalar_next_addsub0000(6),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(6)
     );
   U2_Mcount_vcs_eqn_61 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
-      I1 => U2_Result(6),
+      I0 => U2_Result(6),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_6
+    );
+  U3_CM2_Q_mux0000_7_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(7),
+      I2 => U3_CM2_sub0000_1(7),
+      O => U3_CM2_Q_mux0000(7)
+    );
+  U3_CM1_Q_mux0000_6_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(6),
+      I2 => U3_CM1_add0000_0(6),
+      O => U3_CM1_Q_mux0000(6)
     );
   nes_counter_reg_cmp_eq0000125 : LUT4
     generic map(
@@ -9188,69 +11503,187 @@ begin
       I1 => nes_counter_reg(8),
       I2 => nes_counter_reg(5),
       I3 => nes_counter_reg(6),
-      O => nes_counter_reg_cmp_eq0000125_1633
+      O => nes_counter_reg_cmp_eq0000125_2419
     );
   nes_counter_reg_cmp_eq0000126 : LUT2
     generic map(
       INIT => X"8"
     )
     port map (
-      I0 => nes_counter_reg_cmp_eq0000125_1633,
-      I1 => N518,
+      I0 => nes_counter_reg_cmp_eq0000125_2419,
+      I1 => N678,
       O => nes_N11
-    );
-  screenstate_Mcount_sig_hill3_eqn_71 : LUT2
-    generic map(
-      INIT => X"8"
-    )
-    port map (
-      I0 => screenstate_Result(7),
-      I1 => screenstate_N0,
-      O => screenstate_Mcount_sig_hill3_eqn_7
     );
   nes_scalar_next_7_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(7),
+      I0 => nes_scalar_next_addsub0000(7),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(7)
     );
   U2_Mcount_vcs_eqn_71 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
-      I1 => U2_Result(7),
+      I0 => U2_Result(7),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_7
+    );
+  U3_CM2_Q_mux0000_8_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(8),
+      I2 => U3_CM2_sub0000_1(8),
+      O => U3_CM2_Q_mux0000(8)
+    );
+  U3_CM1_Q_mux0000_7_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(7),
+      I2 => U3_CM1_add0000_0(7),
+      O => U3_CM1_Q_mux0000(7)
+    );
+  U3_tank1_angle_5_1 : LUT3
+    generic map(
+      INIT => X"93"
+    )
+    port map (
+      I0 => U3_RMht1(4),
+      I1 => U3_RMht1(5),
+      I2 => U3_Madd_tank1ascii1s_add0000_cy_5_bdd2,
+      O => sig_tank1_angle_calc_5_Q
+    );
+  x7_Mrom_a_to_g21 : LUT4
+    generic map(
+      INIT => X"445C"
+    )
+    port map (
+      I0 => x7_digit(3),
+      I1 => x7_digit(0),
+      I2 => x7_digit(2),
+      I3 => x7_digit(1),
+      O => a_to_g_2_OBUF_2268
+    );
+  x7_Mrom_a_to_g41 : LUT4
+    generic map(
+      INIT => X"C140"
+    )
+    port map (
+      I0 => x7_digit(0),
+      I1 => x7_digit(2),
+      I2 => x7_digit(3),
+      I3 => x7_digit(1),
+      O => a_to_g_4_OBUF_2270
+    );
+  x7_Mrom_a_to_g111 : LUT4
+    generic map(
+      INIT => X"0382"
+    )
+    port map (
+      I0 => x7_digit(0),
+      I1 => x7_digit(3),
+      I2 => x7_digit(2),
+      I3 => x7_digit(1),
+      O => a_to_g_1_OBUF_2267
+    );
+  x7_Mrom_a_to_g51 : LUT4
+    generic map(
+      INIT => X"AC48"
+    )
+    port map (
+      I0 => x7_digit(3),
+      I1 => x7_digit(2),
+      I2 => x7_digit(0),
+      I3 => x7_digit(1),
+      O => a_to_g_5_OBUF_2271
+    );
+  x7_Mrom_a_to_g11 : LUT4
+    generic map(
+      INIT => X"2141"
+    )
+    port map (
+      I0 => x7_digit(1),
+      I1 => x7_digit(3),
+      I2 => x7_digit(2),
+      I3 => x7_digit(0),
+      O => a_to_g_0_OBUF_2266
+    );
+  x7_Mrom_a_to_g31 : LUT4
+    generic map(
+      INIT => X"9806"
+    )
+    port map (
+      I0 => x7_digit(0),
+      I1 => x7_digit(2),
+      I2 => x7_digit(3),
+      I3 => x7_digit(1),
+      O => a_to_g_3_OBUF_2269
+    );
+  x7_Mrom_a_to_g61 : LUT4
+    generic map(
+      INIT => X"4184"
+    )
+    port map (
+      I0 => x7_digit(1),
+      I1 => x7_digit(0),
+      I2 => x7_digit(3),
+      I3 => x7_digit(2),
+      O => a_to_g_6_OBUF_2272
     );
   nes_scalar_next_8_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(8),
+      I0 => nes_scalar_next_addsub0000(8),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(8)
     );
   U2_Mcount_vcs_eqn_81 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
-      I1 => U2_Result(8),
+      I0 => U2_Result(8),
+      I1 => U2_vcs_cmp_eq0000_771,
       O => U2_Mcount_vcs_eqn_8
+    );
+  U3_CM2_Q_mux0000_9_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM2_sub0000(9),
+      I2 => U3_CM2_sub0000_1(9),
+      O => U3_CM2_Q_mux0000(9)
+    );
+  U3_CM1_Q_mux0000_8_1 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(8),
+      I2 => U3_CM1_add0000_0(8),
+      O => U3_CM1_Q_mux0000(8)
     );
   nes_scalar_next_9_1 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => nes_scalar_next_cmp_eq0000,
-      I1 => nes_scalar_next_addsub0000(9),
+      I0 => nes_scalar_next_addsub0000(9),
+      I1 => nes_scalar_next_cmp_eq0000,
       O => nes_scalar_next(9)
     );
   U2_Mcount_vcs_eqn_91 : LUT2
@@ -9258,73 +11691,319 @@ begin
       INIT => X"4"
     )
     port map (
-      I0 => U2_vcs_cmp_eq0000_661,
+      I0 => N682,
       I1 => U2_Result(9),
       O => U2_Mcount_vcs_eqn_9
     );
-  screenstate_sig_hill4_mux0001_4_31 : LUT4
+  U3_CM1_Q_mux0000_9_1 : LUT3
     generic map(
-      INIT => X"FDFF"
+      INIT => X"E4"
     )
     port map (
-      I0 => screenstate_sig_hill4(5),
-      I1 => screenstate_sig_hill4(6),
-      I2 => screenstate_sig_hill4(7),
-      I3 => screenstate_sig_hill4(4),
-      O => screenstate_sig_hill4_mux0001_4_bdd2
+      I0 => sig_gameA,
+      I1 => U3_CM1_add0000(9),
+      I2 => U3_CM1_add0000_0(9),
+      O => U3_CM1_Q_mux0000(9)
     );
-  U3_tank2_angle_calc_mux0004_0_1 : LUT4
+  U3_Madd_tank1ascii1s_add0000_cy_5_31 : LUT3
     generic map(
-      INIT => X"006A"
+      INIT => X"80"
     )
     port map (
-      I0 => U3_tank2_angle_calc(7),
-      I1 => U3_tank2_angle_calc(6),
-      I2 => U3_Madd_tank2_angle_calc_addsub0000_cy_5_Q,
-      I3 => N523,
-      O => U3_tank2_angle_calc_mux0004(0)
+      I0 => U3_RMht1(1),
+      I1 => U3_RMht1(2),
+      I2 => U3_RMht1(3),
+      O => U3_Madd_tank1ascii1s_add0000_cy_5_bdd2
     );
-  U3_tank1_angle_calc_mux0004_0_1 : LUT4
+  U3_RM2_mux0002_9_1 : LUT2
     generic map(
-      INIT => X"006A"
+      INIT => X"8"
     )
     port map (
-      I0 => U3_tank1_angle_calc(7),
-      I1 => U3_tank1_angle_calc(6),
-      I2 => U3_Madd_tank1_angle_calc_addsub0000_cy_5_Q,
-      I3 => N524,
-      O => U3_tank1_angle_calc_mux0004(0)
+      I0 => U3_RM2_share0000(0),
+      I1 => U3_N14,
+      O => U3_RM2_mux0002(9)
     );
-  screenstate_sig_hill4_mux0001_0_2_SW0 : LUT2
+  U3_RM2_mux0002_8_1 : LUT2
     generic map(
-      INIT => X"7"
+      INIT => X"8"
     )
     port map (
-      I0 => screenstate_sig_hill4(4),
-      I1 => screenstate_sig_hill4(6),
-      O => N11
+      I0 => U3_RM2_share0000(1),
+      I1 => U3_N14,
+      O => U3_RM2_mux0002(8)
     );
-  screenstate_sig_hill4_mux0001_0_2 : LUT4
+  U3_RM2_mux0002_7_1 : LUT2
     generic map(
-      INIT => X"AAA6"
+      INIT => X"8"
     )
     port map (
-      I0 => screenstate_sig_hill4(7),
-      I1 => screenstate_sig_hill4(5),
-      I2 => screenstate_sig_hill4_mux0001_0_bdd2,
-      I3 => N11,
-      O => screenstate_sig_hill4_mux0001(0)
+      I0 => U3_RM2_share0000(2),
+      I1 => U3_N14,
+      O => U3_RM2_mux0002(7)
+    );
+  U3_RM2_mux0002_6_1 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_RM2_share0000(3),
+      I1 => U3_N14,
+      O => U3_RM2_mux0002(6)
+    );
+  U3_RM2_mux0002_5_1 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_RM2_share0000(4),
+      I1 => U3_N14,
+      O => U3_RM2_mux0002(5)
+    );
+  U3_RM2_mux0002_4_1 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => U3_N14,
+      I1 => U3_RM2_share0000(5),
+      O => U3_RM2_mux0002(4)
+    );
+  U3_RM2_mux0002_3_1 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => U3_N14,
+      I1 => U3_RM2_share0000(6),
+      O => U3_RM2_mux0002(3)
+    );
+  U3_RM2_mux0002_2_1 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => U3_N14,
+      I1 => U3_RM2_share0000(7),
+      O => U3_RM2_mux0002(2)
+    );
+  U3_RM2_mux0002_1_1 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => U3_N14,
+      I1 => U3_RM2_share0000(8),
+      O => U3_RM2_mux0002(1)
+    );
+  U3_RM2_mux0002_0_1 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_N14,
+      I1 => U3_RM2_share0000(9),
+      O => U3_RM2_mux0002(0)
+    );
+  U3_RM1_mux0002_9_1 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_RM1_share0000(0),
+      I1 => U3_N13,
+      O => U3_RM1_mux0002(9)
+    );
+  U3_RM1_mux0002_8_1 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_RM1_share0000(1),
+      I1 => U3_N13,
+      O => U3_RM1_mux0002(8)
+    );
+  U3_RM1_mux0002_7_1 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_RM1_share0000(2),
+      I1 => U3_N13,
+      O => U3_RM1_mux0002(7)
+    );
+  U3_RM1_mux0002_6_1 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_RM1_share0000(3),
+      I1 => U3_N13,
+      O => U3_RM1_mux0002(6)
+    );
+  U3_RM1_mux0002_5_1 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_RM1_share0000(4),
+      I1 => U3_N13,
+      O => U3_RM1_mux0002(5)
+    );
+  U3_RM1_mux0002_4_1 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => U3_N13,
+      I1 => U3_RM1_share0000(5),
+      O => U3_RM1_mux0002(4)
+    );
+  U3_RM1_mux0002_3_1 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => U3_N13,
+      I1 => U3_RM1_share0000(6),
+      O => U3_RM1_mux0002(3)
+    );
+  U3_RM1_mux0002_2_1 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => U3_N13,
+      I1 => U3_RM1_share0000(7),
+      O => U3_RM1_mux0002(2)
+    );
+  U3_RM1_mux0002_1_1 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => U3_N13,
+      I1 => U3_RM1_share0000(8),
+      O => U3_RM1_mux0002(1)
+    );
+  U3_RM1_mux0002_0_2 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_N13,
+      I1 => U3_RM1_share0000(9),
+      O => U3_RM1_mux0002(0)
+    );
+  U3_Result_4_2_SW0 : LUT4
+    generic map(
+      INIT => X"0100"
+    )
+    port map (
+      I0 => U3_RMht2(1),
+      I1 => U3_RMht2(0),
+      I2 => U3_RMht2(3),
+      I3 => sig_gameDown,
+      O => N26
+    );
+  U3_Result_4_2_SW1 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => U3_RMht2(0),
+      I1 => sig_gameDown,
+      I2 => U3_RMht2(3),
+      I3 => U3_RMht2(1),
+      O => N27
+    );
+  U3_Result_4_2 : LUT4
+    generic map(
+      INIT => X"569A"
+    )
+    port map (
+      I0 => U3_RMht2(4),
+      I1 => U3_RMht2(2),
+      I2 => N26,
+      I3 => N27,
+      O => U3_Result_4_2_2006
+    );
+  U3_Result_4_1_SW0 : LUT4
+    generic map(
+      INIT => X"0100"
+    )
+    port map (
+      I0 => U3_RMht1(1),
+      I1 => U3_RMht1(0),
+      I2 => U3_RMht1(3),
+      I3 => sig_gameDown,
+      O => N29
+    );
+  U3_Result_4_1_SW1 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => U3_RMht1(0),
+      I1 => sig_gameDown,
+      I2 => U3_RMht1(3),
+      I3 => U3_RMht1(1),
+      O => N30
+    );
+  U3_Result_4_1 : LUT4
+    generic map(
+      INIT => X"569A"
+    )
+    port map (
+      I0 => U3_RMht1(4),
+      I1 => U3_RMht1(2),
+      I2 => N29,
+      I3 => N30,
+      O => U3_Result_4_1_2005
+    );
+  U3_Mhorz_cmp_ne000165 : LUT4
+    generic map(
+      INIT => X"7BDE"
+    )
+    port map (
+      I0 => U3_RMht2(2),
+      I1 => U3_RMht2(3),
+      I2 => U3_RMcnt2(2),
+      I3 => U3_RMcnt2(3),
+      O => U3_Mhorz_cmp_ne000165_1588
+    );
+  U3_Mhorz_cmp_ne0001113 : LUT4
+    generic map(
+      INIT => X"7BDE"
+    )
+    port map (
+      I0 => U3_RMht2(0),
+      I1 => U3_RMht2(1),
+      I2 => U3_RMcnt2(0),
+      I3 => U3_RMcnt2(1),
+      O => U3_Mhorz_cmp_ne0001113_1586
+    );
+  U3_font3_cmp_lt00001 : LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+    port map (
+      I0 => U3_RMht2(5),
+      I1 => U3_RMht2(4),
+      I2 => U3_RMht2(2),
+      I3 => U3_RMht2(3),
+      O => U3_font3_cmp_lt0000
     );
   U3_C2_not00016 : LUT4
     generic map(
       INIT => X"8000"
     )
     port map (
-      I0 => U3_C2(1),
-      I1 => U3_C2(4),
-      I2 => U3_C2(2),
-      I3 => U3_C2_not00011_714,
-      O => U3_C2_not00016_718
+      I0 => U3_C2(3),
+      I1 => U3_C2(2),
+      I2 => U3_C2(4),
+      I3 => U3_C2_not00011_826,
+      O => U3_C2_not00016_830
     );
   U3_C2_not000113 : LUT2
     generic map(
@@ -9333,18 +12012,40 @@ begin
     port map (
       I0 => U3_C2(7),
       I1 => U3_C2(8),
-      O => U3_C2_not000113_715
+      O => U3_C2_not000113_827
     );
-  U3_C2_not000186 : LUT4
+  U3_C2_not000188 : LUT4
     generic map(
-      INIT => X"C888"
+      INIT => X"5450"
     )
     port map (
-      I0 => U3_C2_not000164_719,
-      I1 => who_present_state_FSM_FFd2_2022,
-      I2 => U3_leftBTN_inv1_inv1,
-      I3 => U3_C2_not000123_716,
+      I0 => U3_N37,
+      I1 => U3_leftBTN_inv1_inv1,
+      I2 => U3_C2_not000164_831,
+      I3 => U3_C2_not000123_828,
       O => U3_C2_not0001
+    );
+  U3_Mhorz_cmp_ne000065 : LUT4
+    generic map(
+      INIT => X"7BDE"
+    )
+    port map (
+      I0 => U3_RMht1(2),
+      I1 => U3_RMht1(3),
+      I2 => U3_RMcnt(2),
+      I3 => U3_RMcnt(3),
+      O => U3_Mhorz_cmp_ne000065_1584
+    );
+  U3_Mhorz_cmp_ne0000113 : LUT4
+    generic map(
+      INIT => X"7BDE"
+    )
+    port map (
+      I0 => U3_RMht1(0),
+      I1 => U3_RMht1(1),
+      I2 => U3_RMcnt(0),
+      I3 => U3_RMcnt(1),
+      O => U3_Mhorz_cmp_ne0000113_1582
     );
   U3_C1_not00015 : LUT2
     generic map(
@@ -9353,7 +12054,7 @@ begin
     port map (
       I0 => U3_C1(0),
       I1 => U3_C1(1),
-      O => U3_C1_not00015_700
+      O => U3_C1_not00015_812
     );
   U3_C1_not000110 : LUT4
     generic map(
@@ -9364,7 +12065,7 @@ begin
       I1 => U3_C1(7),
       I2 => U3_C1(8),
       I3 => U3_C1(6),
-      O => U3_C1_not000110_695
+      O => U3_C1_not000110_807
     );
   U3_C1_not000127 : LUT4
     generic map(
@@ -9372,21 +12073,19 @@ begin
     )
     port map (
       I0 => U3_leftBTN_inv1_inv1,
-      I1 => U3_C1_not00015_700,
-      I2 => U3_C1_not000110_695,
-      I3 => U3_C1_not00014_698,
-      O => U3_C1_not000127_697
+      I1 => U3_C1_not00015_812,
+      I2 => U3_C1_not000110_807,
+      I3 => U3_C1_not00014_810,
+      O => U3_C1_not000127_809
     );
-  U3_C1_not000152 : LUT4
+  U3_C1_not000147 : LUT2
     generic map(
-      INIT => X"1300"
+      INIT => X"1"
     )
     port map (
-      I0 => U3_C1(1),
-      I1 => U3_C1(2),
-      I2 => U3_C1(0),
-      I3 => U3_C1_not000147_699,
-      O => U3_C1_not000152_701
+      I0 => U3_C1(2),
+      I1 => U3_C1(4),
+      O => U3_C1_not000147_811
     );
   U3_C1_not0001105 : LUT4
     generic map(
@@ -9394,106 +12093,219 @@ begin
     )
     port map (
       I0 => U3_leftBTN_inv1_inv1,
-      I1 => U3_C1(9),
-      I2 => U3_C1(8),
+      I1 => U3_C1(8),
+      I2 => U3_C1(9),
       I3 => sig_gameRight,
-      O => U3_C1_not0001105_696
+      O => U3_C1_not0001105_808
     );
-  U3_C1_not0001144 : LUT4
+  U3_C1_not0001142 : LUT4
     generic map(
-      INIT => X"5450"
+      INIT => X"A8A0"
     )
     port map (
-      I0 => who_present_state_FSM_FFd2_2022,
-      I1 => U3_C1_not0001105_696,
-      I2 => U3_C1_not000127_697,
-      I3 => U3_C1_not000183_702,
+      I0 => sig_tank2,
+      I1 => U3_C1_not0001105_808,
+      I2 => U3_C1_not000127_809,
+      I3 => U3_C1_not000183_813,
       O => U3_C1_not0001
     );
-  screenstate_sig_hill4_mux0001_1_115 : LUT4
+  U3_tank1rom10s_sub0001_5_1 : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_Msub_ypix1_Madd_lut(5),
+      I1 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => U3_tank1rom10s_sub0001(5)
+    );
+  U3_B_mux00167 : LUT4
+    generic map(
+      INIT => X"FEFF"
+    )
+    port map (
+      I0 => U3_blue_and0001,
+      I1 => U3_blue_and0000,
+      I2 => U3_spriteonGrnd,
+      I3 => U3_N0,
+      O => U3_B_mux00167_794
+    );
+  U3_B_mux001612 : LUT4
     generic map(
       INIT => X"FFFE"
     )
     port map (
-      I0 => screenstate_sig_hill4(2),
-      I1 => screenstate_sig_hill4(0),
-      I2 => screenstate_sig_hill4(1),
-      I3 => screenstate_sig_hill4(3),
-      O => screenstate_sig_hill4_mux0001_1_115_1778
+      I0 => U3_spriteonB5,
+      I1 => U3_spriteonB4,
+      I2 => U3_spriteonB3,
+      I3 => U3_spriteonB2,
+      O => U3_B_mux001612_788
     );
-  screenstate_sig_hill4_mux0001_1_128 : LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(2),
-      I1 => screenstate_sig_hill4(0),
-      I2 => screenstate_sig_hill4(1),
-      I3 => screenstate_sig_hill4(3),
-      O => screenstate_sig_hill4_mux0001_1_128_1779
-    );
-  U3_tank2_angle_calc_and0000110 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(5),
-      I1 => U3_tank2_angle_calc(2),
-      I2 => U3_tank2_angle_calc(7),
-      I3 => U3_tank2_angle_calc(0),
-      O => U3_N50
-    );
-  U3_tank1_angle_calc_and0000110 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(5),
-      I1 => U3_tank1_angle_calc(2),
-      I2 => U3_tank1_angle_calc(7),
-      I3 => U3_tank1_angle_calc(0),
-      O => U3_N49
-    );
-  U3_Madd_tank2_angle_calc_addsub0000_cy_5_11 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(5),
-      I1 => U3_tank2_angle_calc(4),
-      I2 => N520,
-      O => U3_Madd_tank2_angle_calc_addsub0000_cy_5_Q
-    );
-  U3_Madd_tank1_angle_calc_addsub0000_cy_5_11 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(5),
-      I1 => U3_tank1_angle_calc(4),
-      I2 => N521,
-      O => U3_Madd_tank1_angle_calc_addsub0000_cy_5_Q
-    );
-  title_Msub_xpix_xor_8_111 : LUT3
-    generic map(
-      INIT => X"13"
-    )
-    port map (
-      I0 => U2_hcs(6),
-      I1 => U2_hcs(7),
-      I2 => title_N01,
-      O => title_N27
-    );
-  title_Msub_xpix_xor_9_111 : LUT4
+  U3_B_mux001617 : LUT4
     generic map(
       INIT => X"FFFE"
     )
     port map (
-      I0 => U2_hcs(4),
-      I1 => U2_hcs(3),
-      I2 => U2_hcs(5),
-      I3 => U2_hcs(2),
-      O => title_N01
+      I0 => U3_spriteonB1,
+      I1 => U3_blue_and0004,
+      I2 => U3_blue_and0003,
+      I3 => U3_blue_and0002,
+      O => U3_B_mux001617_791
+    );
+  U3_B_mux001618 : LUT2
+    generic map(
+      INIT => X"E"
+    )
+    port map (
+      I0 => U3_B_mux001612_788,
+      I1 => U3_B_mux001617_791,
+      O => U3_B_mux001618_792
+    );
+  U3_B_mux001662 : LUT4
+    generic map(
+      INIT => X"D888"
+    )
+    port map (
+      I0 => U3_tank2Angle10s,
+      I1 => U3_tank210sM_mux0000,
+      I2 => U3_tank21sM_mux0000,
+      I3 => U3_tank2Angle1s,
+      O => U3_B_mux001662_793
+    );
+  U3_B_mux0016124 : LUT4
+    generic map(
+      INIT => X"0001"
+    )
+    port map (
+      I0 => U3_spriteonB5,
+      I1 => U3_spriteonB1,
+      I2 => U3_blue_and0004,
+      I3 => U3_blue_and0003,
+      O => U3_B_mux0016124_789
+    );
+  U3_B_mux0016128 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U3_blue_and0001,
+      I1 => U3_blue_and0000,
+      I2 => U3_N33,
+      I3 => U3_B_mux0016124_789,
+      O => U3_B_mux0016128_790
+    );
+  U3_Result_5_236 : LUT4
+    generic map(
+      INIT => X"AAA9"
+    )
+    port map (
+      I0 => U3_RMht2(5),
+      I1 => U3_RMht2(2),
+      I2 => U3_RMht2(4),
+      I3 => U3_RMht2(3),
+      O => U3_Result_5_236_2013
+    );
+  U3_Result_5_136 : LUT4
+    generic map(
+      INIT => X"AAA9"
+    )
+    port map (
+      I0 => U3_RMht1(5),
+      I1 => U3_RMht1(2),
+      I2 => U3_RMht1(4),
+      I3 => U3_RMht1(3),
+      O => U3_Result_5_136_2011
+    );
+  who_present_state_FSM_Out11 : LUT2
+    generic map(
+      INIT => X"1"
+    )
+    port map (
+      I0 => who_present_state_FSM_FFd2_2611,
+      I1 => who_present_state_FSM_FFd1_2609,
+      O => sig_tank1
+    );
+  who_present_state_FSM_Out01 : LUT2
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => who_present_state_FSM_FFd2_2611,
+      I1 => who_present_state_FSM_FFd1_2609,
+      O => sig_tank2
+    );
+  U3_font2_3_1_SW0 : LUT4
+    generic map(
+      INIT => X"63F3"
+    )
+    port map (
+      I0 => U3_RMht1(1),
+      I1 => U3_RMht1(3),
+      I2 => U3_RMht1(5),
+      I3 => U3_RMht1(4),
+      O => N36
+    );
+  U3_font2_3_1_SW1 : LUT4
+    generic map(
+      INIT => X"FC8F"
+    )
+    port map (
+      I0 => U3_RMht1(4),
+      I1 => U3_RMht1(5),
+      I2 => U3_RMht1(1),
+      I3 => U3_RMht1(3),
+      O => N37
+    );
+  U3_font3_cmp_lt00011 : LUT3
+    generic map(
+      INIT => X"57"
+    )
+    port map (
+      I0 => U3_RMht2(5),
+      I1 => U3_RMht2(3),
+      I2 => U3_RMht2(4),
+      O => U3_font3_cmp_lt0001
+    );
+  U3_tank1rom10s_sub0001_6_1 : LUT3
+    generic map(
+      INIT => X"C9"
+    )
+    port map (
+      I0 => U3_Msub_ypix1_Madd_lut(5),
+      I1 => U3_tank1rom10s_sub0000(6),
+      I2 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => U3_tank1rom10s_sub0001(6)
+    );
+  U3_tank1rom10s_sub0001_7_1 : LUT4
+    generic map(
+      INIT => X"AAA9"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(7),
+      I1 => U3_Msub_ypix1_Madd_lut(5),
+      I2 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I3 => U3_tank1rom10s_sub0000(6),
+      O => U3_tank1rom10s_sub0001(7)
+    );
+  U3_font2_1_1_SW0 : LUT4
+    generic map(
+      INIT => X"D9AE"
+    )
+    port map (
+      I0 => U3_RMht1(1),
+      I1 => U3_RMht1(4),
+      I2 => U3_RMht1(2),
+      I3 => U3_RMht1(3),
+      O => N42
+    );
+  U3_Msub_font4_sub0002_xor_5_11 : LUT3
+    generic map(
+      INIT => X"93"
+    )
+    port map (
+      I0 => U3_RMht2(4),
+      I1 => U3_RMht2(5),
+      I2 => U3_Msub_font4_sub0002_cy(3),
+      O => sig_tank2_angle_calc(5)
     );
   U2_vidon_and00000 : LUT2
     generic map(
@@ -9502,7 +12314,7 @@ begin
     port map (
       I0 => U2_hcs(8),
       I1 => U2_hcs(9),
-      O => U2_vidon_and00000_662
+      O => U2_vidon_and00000_772
     );
   U2_vidon_and00006 : LUT4
     generic map(
@@ -9513,7 +12325,7 @@ begin
       I1 => U2_hcs(6),
       I2 => U2_hcs(5),
       I3 => U2_hcs(4),
-      O => U2_vidon_and00006_670
+      O => U2_vidon_and00006_780
     );
   U2_vidon_and000039 : LUT4
     generic map(
@@ -9521,10 +12333,10 @@ begin
     )
     port map (
       I0 => U2_vidon_and000026,
-      I1 => U2_vidon_and00006_670,
+      I1 => U2_vidon_and00006_780,
       I2 => U2_vidon_and000018,
-      I3 => U2_vidon_and00000_662,
-      O => U2_vidon_and000039_669
+      I3 => U2_vidon_and00000_772,
+      O => U2_vidon_and000039_779
     );
   U2_vidon_and000080 : LUT4
     generic map(
@@ -9535,7 +12347,7 @@ begin
       I1 => U2_vcs(4),
       I2 => U2_vcs(7),
       I3 => U2_vcs(6),
-      O => U2_vidon_and000080_673
+      O => U2_vidon_and000080_783
     );
   U2_vidon_and0000105 : LUT4
     generic map(
@@ -9543,41 +12355,41 @@ begin
     )
     port map (
       I0 => U2_hcs(8),
-      I1 => U3_spriteonGrnd_and0000109,
+      I1 => U2_N3,
       I2 => U2_hcs(4),
       I3 => U2_hcs(9),
-      O => U2_vidon_and0000105_663
+      O => U2_vidon_and0000105_773
     );
   U2_vidon_and0000117 : LUT4
     generic map(
       INIT => X"0A08"
     )
     port map (
-      I0 => U2_vidon_and0000105_663,
-      I1 => U2_vidon_and000080_673,
+      I0 => U2_vidon_and0000105_773,
+      I1 => U2_vidon_and000080_783,
       I2 => U2_vcs(9),
       I3 => U2_vidon_and000065,
-      O => U2_vidon_and0000117_664
+      O => U2_vidon_and0000117_774
     );
   U2_vidon_and0000131 : LUT2
     generic map(
       INIT => X"8"
     )
     port map (
-      I0 => U2_vidon_and000039_669,
-      I1 => U2_vidon_and0000117_664,
+      I0 => U2_vidon_and000039_779,
+      I1 => U2_vidon_and0000117_774,
       O => vidon
     );
   title_spriteon_and00006 : LUT4
     generic map(
-      INIT => X"EAAA"
+      INIT => X"FF80"
     )
     port map (
-      I0 => U2_vcs(3),
-      I1 => U2_vcs(2),
-      I2 => U2_vcs(1),
-      I3 => U2_vcs(0),
-      O => title_spriteon_and00006_2002
+      I0 => U2_vcs(2),
+      I1 => U2_vcs(1),
+      I2 => U2_vcs(0),
+      I3 => U2_vcs(3),
+      O => U3_spriteonGrnd_and00005
     );
   title_spriteon_and000016 : LUT2
     generic map(
@@ -9586,7 +12398,7 @@ begin
     port map (
       I0 => U2_vcs(7),
       I1 => U2_vcs(6),
-      O => title_spriteon_and000016_1994
+      O => U3_spriteonB1_and0000113
     );
   title_spriteon_and000019 : LUT4
     generic map(
@@ -9594,10 +12406,10 @@ begin
     )
     port map (
       I0 => U2_vcs(5),
-      I1 => title_spriteon_and000016_1994,
+      I1 => U3_spriteonB1_and0000113,
       I2 => U2_vcs(4),
-      I3 => title_spriteon_and00006_2002,
-      O => title_spriteon_and000019_1997
+      I3 => U3_spriteonGrnd_and00005,
+      O => title_spriteon_and000019_2595
     );
   title_spriteon_and000035 : LUT3
     generic map(
@@ -9607,7 +12419,7 @@ begin
       I0 => U2_hcs(4),
       I1 => U2_hcs(5),
       I2 => U2_hcs(3),
-      O => title_spriteon_and000035_1999
+      O => title_spriteon_and000035_2597
     );
   title_spriteon_and000038 : LUT3
     generic map(
@@ -9617,27 +12429,27 @@ begin
       I0 => U2_hcs(0),
       I1 => U2_hcs(2),
       I2 => U2_hcs(1),
-      O => title_spriteon_and000038_2000
+      O => title_spriteon_and000038_2598
     );
   title_spriteon_and000052 : LUT4
     generic map(
-      INIT => X"FFA8"
+      INIT => X"FAF8"
     )
     port map (
       I0 => U2_hcs(6),
-      I1 => title_spriteon_and000035_1999,
-      I2 => title_spriteon_and000038_2000,
-      I3 => U2_hcs(7),
-      O => title_spriteon_and000052_2001
+      I1 => title_spriteon_and000035_2597,
+      I2 => U2_hcs(7),
+      I3 => title_spriteon_and000038_2598,
+      O => title_spriteon_and000052_2599
     );
   title_spriteon_and000059 : LUT2
     generic map(
-      INIT => X"4"
+      INIT => X"2"
     )
     port map (
-      I0 => U2_hcs(9),
-      I1 => U2_hcs(8),
-      O => U3_spriteonB1_and000063
+      I0 => U2_hcs(8),
+      I1 => U2_hcs(9),
+      O => title_spriteon_and000059_2600
     );
   title_spriteon_and0000119 : LUT3
     generic map(
@@ -9647,18 +12459,18 @@ begin
       I0 => U2_hcs(9),
       I1 => U2_hcs(8),
       I2 => U2_hcs(7),
-      O => title_spriteon_and0000119_1992
+      O => title_spriteon_and0000119_2591
     );
   title_spriteon_and0000124 : LUT4
     generic map(
       INIT => X"22A2"
     )
     port map (
-      I0 => title_spriteon_and0000119_1992,
+      I0 => title_spriteon_and0000119_2591,
       I1 => U2_hcs(6),
       I2 => title_spriteon_and000087,
       I3 => U2_hcs(5),
-      O => title_spriteon_and0000124_1993
+      O => title_spriteon_and0000124_2592
     );
   title_spriteon_and0000169 : LUT3
     generic map(
@@ -9668,7 +12480,7 @@ begin
       I0 => U2_vcs(1),
       I1 => U2_vcs(0),
       I2 => U2_vcs(2),
-      O => title_spriteon_and0000169_1995
+      O => title_spriteon_and0000169_2593
     );
   title_spriteon_and0000178 : LUT3
     generic map(
@@ -9678,7 +12490,7 @@ begin
       I0 => U2_vcs(4),
       I1 => U2_vcs(3),
       I2 => U2_vcs(5),
-      O => title_spriteon_and0000178_1996
+      O => title_spriteon_and0000178_2594
     );
   title_spriteon_and0000205 : LUT4
     generic map(
@@ -9687,390 +12499,510 @@ begin
     port map (
       I0 => U2_vcs(6),
       I1 => U2_vcs(7),
-      I2 => title_spriteon_and0000169_1995,
-      I3 => title_spriteon_and0000178_1996,
-      O => title_spriteon_and0000205_1998
+      I2 => title_spriteon_and0000169_2593,
+      I3 => title_spriteon_and0000178_2594,
+      O => title_spriteon_and0000205_2596
     );
-  U3_blue_and0001163 : LUT4
+  U3_RMht1_not0001127 : LUT4
     generic map(
-      INIT => X"0020"
+      INIT => X"EC4C"
     )
     port map (
-      I0 => U2_vcs(8),
-      I1 => U2_vcs(9),
-      I2 => U2_vcs(7),
-      I3 => U2_vcs(6),
-      O => U3_blue_and0001163_1356
+      I0 => U3_RMht1(3),
+      I1 => U3_RMht1_not0001_bdd1,
+      I2 => U3_RMht1(2),
+      I3 => U3_RMht1_not000110_1962,
+      O => U3_RMht1_not0001127_1963
     );
-  U3_blue_and0001166 : LUT4
+  U3_tank1rom10s_sub0001_10_11 : LUT3
+    generic map(
+      INIT => X"01"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0001_10_bdd0,
+      I1 => U3_tank1rom10s_sub0000(9),
+      I2 => U3_tank1rom10s_sub0000(8),
+      O => U3_tank1rom10s_sub0001(10)
+    );
+  U3_Msub_font4_sub0002_cy_3_11 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => U3_RMht2(1),
+      I1 => U3_RMht2(2),
+      I2 => U3_RMht2(3),
+      O => U3_Msub_font4_sub0002_cy(3)
+    );
+  U3_tank1rom10s_sub0001_9_11 : LUT3
+    generic map(
+      INIT => X"C9"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(8),
+      I1 => U3_tank1rom10s_sub0000(9),
+      I2 => U3_tank1rom10s_sub0001_10_bdd0,
+      O => U3_tank1rom10s_sub0001(9)
+    );
+  U3_tank1rom10s_sub0001_8_11 : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(8),
+      I1 => U3_tank1rom10s_sub0001_10_bdd0,
+      O => U3_tank1rom10s_sub0001(8)
+    );
+  U3_tank1rom10s_sub0001_10_21 : LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+    port map (
+      I0 => U3_Msub_ypix1_Madd_lut(5),
+      I1 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I2 => U3_tank1rom10s_sub0000(7),
+      I3 => U3_tank1rom10s_sub0000(6),
+      O => U3_tank1rom10s_sub0001_10_bdd0
+    );
+  U3_RMcnt_Maddsub_addsub0000_lut_1_1 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RMcnt(1),
+      I1 => U3_rise_2072,
+      O => U3_RMcnt_Maddsub_addsub0000_lut(1)
+    );
+  U3_RMcnt2_Maddsub_addsub0000_lut_1_1 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RMcnt2(1),
+      I1 => U3_rise2_2073,
+      O => U3_RMcnt2_Maddsub_addsub0000_lut(1)
+    );
+  U3_blue_and0001156 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U2_vcs(9),
+      I2 => U2_vcs(8),
+      I3 => U2_vcs(7),
+      O => U3_blue_and0001156_2031
+    );
+  U3_blue_and0001157 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_blue_and0001138_2030,
+      I1 => U3_blue_and0001156_2031,
+      O => U3_N90
+    );
+  U3_spriteonB4_cmp_le000018 : LUT3
+    generic map(
+      INIT => X"7F"
+    )
+    port map (
+      I0 => U2_hcs(3),
+      I1 => U2_hcs(2),
+      I2 => U2_hcs(4),
+      O => U3_spriteonB4_cmp_le000018_2121
+    );
+  U3_spriteonB4_cmp_le0000121 : LUT4
+    generic map(
+      INIT => X"0001"
+    )
+    port map (
+      I0 => U2_hcs(5),
+      I1 => U2_hcs(6),
+      I2 => U2_hcs(7),
+      I3 => U2_hcs(8),
+      O => U3_spriteonB4_cmp_le0000121_2120
+    );
+  U3_spriteonB4_cmp_le0000135 : LUT3
+    generic map(
+      INIT => X"D5"
+    )
+    port map (
+      I0 => U2_hcs(9),
+      I1 => U3_spriteonB4_cmp_le0000121_2120,
+      I2 => U3_spriteonB4_cmp_le000018_2121,
+      O => U3_spriteonB4_cmp_le0000
+    );
+  U3_spriteonGrnd_and000017 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U2_vcs(7),
+      I2 => U2_vcs(8),
+      O => U3_spriteonGrnd_and000017_2128
+    );
+  U3_spriteonGrnd_and000020 : LUT4
     generic map(
       INIT => X"C888"
     )
     port map (
-      I0 => U3_blue_and0001137,
-      I1 => U3_blue_and0001163_1356,
-      I2 => U2_vcs(5),
-      I3 => U3_blue_and0001117,
-      O => U3_N57
+      I0 => U2_vcs(5),
+      I1 => U3_spriteonGrnd_and000017_2128,
+      I2 => U2_vcs(4),
+      I3 => U3_spriteonGrnd_and00005,
+      O => U3_spriteonGrnd_and000020_2129
     );
-  title_Msub_ypix_xor_9_11 : LUT4
+  U3_spriteonGrnd_and000041 : LUT4
     generic map(
-      INIT => X"E1C3"
+      INIT => X"FAF8"
     )
     port map (
-      I0 => title_N7,
-      I1 => title_ypix_addsub0000_8_Q,
-      I2 => title_ypix_addsub0000_9_Q,
-      I3 => title_Msub_ypix_lut_7_Q,
-      O => title_ypix_9_Q
+      I0 => U2_hcs(7),
+      I1 => U2_hcs(6),
+      I2 => U2_vidon_and00000_772,
+      I3 => U3_N80,
+      O => U3_spriteonGrnd_and000041_2130
     );
-  U3_Madd_spriteonB4_add0000_xor_3_11 : LUT4
+  U3_spriteonGrnd_and0000130 : LUT3
     generic map(
-      INIT => X"3C6C"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(0),
-      I1 => screenstate_sig_hill4(3),
-      I2 => screenstate_sig_hill4(2),
-      I3 => screenstate_sig_hill4(1),
-      O => U3_spriteonB4_add0000(3)
-    );
-  U3_Madd_spriteonB3_add0000_xor_3_11 : LUT4
-    generic map(
-      INIT => X"3C6C"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(0),
-      I1 => screenstate_sig_hill3(3),
-      I2 => screenstate_sig_hill3(2),
-      I3 => screenstate_sig_hill3(1),
-      O => U3_spriteonB3_add0000(3)
-    );
-  U3_spriteonB2_and000040 : LUT4
-    generic map(
-      INIT => X"0020"
-    )
-    port map (
-      I0 => U2_hcs(8),
-      I1 => U2_hcs(9),
-      I2 => U2_hcs(7),
-      I3 => U2_hcs(6),
-      O => U3_spriteonB2_and000040_1382
-    );
-  U3_spriteonB2_and000059 : LUT4
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_spriteonB1_cmp_lt0000,
-      I1 => U3_spriteonB2_cmp_ge0000,
-      I2 => U3_spriteonB2_and000028,
-      I3 => U3_spriteonB2_and000040_1382,
-      O => U3_spriteonB2
-    );
-  U3_tank1Angle10s_cmp_gt00001_SW0 : LUT3
-    generic map(
-      INIT => X"FE"
+      INIT => X"C8"
     )
     port map (
       I0 => U2_vcs(9),
-      I1 => U2_vcs(8),
-      I2 => U2_vcs(7),
-      O => N21
+      I1 => U3_spriteonGrnd_and0000117_2127,
+      I2 => U3_spriteonGrnd_and000020_2129,
+      O => U3_spriteonGrnd
     );
-  U3_tank1Angle10s_cmp_gt00001 : LUT4
+  U3_RMcnt_Q_mux0000_5_Q : LUT4
     generic map(
-      INIT => X"FEEE"
+      INIT => X"B88B"
     )
     port map (
-      I0 => U2_vcs(6),
-      I1 => N21,
-      I2 => U2_vcs(5),
-      I3 => U2_vcs(4),
-      O => U3_tank1Angle10s_cmp_gt0000
+      I0 => U3_RMht1(5),
+      I1 => U3_RMcnt_and0000,
+      I2 => U3_rise_2072,
+      I3 => N49,
+      O => U3_RMcnt_Q_mux0000(5)
+    );
+  U3_RMcnt2_Q_mux0000_5_Q : LUT4
+    generic map(
+      INIT => X"B88B"
+    )
+    port map (
+      I0 => U3_RMht2(5),
+      I1 => U3_RMcnt2_and0000,
+      I2 => U3_rise2_2073,
+      I3 => N51,
+      O => U3_RMcnt2_Q_mux0000(5)
+    );
+  U3_font3_cmp_lt00021_SW0 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => U3_RMht2(4),
+      I1 => U3_RMht2(5),
+      O => N53
+    );
+  U3_font3_cmp_lt00021 : LUT4
+    generic map(
+      INIT => X"01FF"
+    )
+    port map (
+      I0 => U3_RMht2(3),
+      I1 => U3_RMht2(2),
+      I2 => U3_RMht2(1),
+      I3 => N53,
+      O => U3_font3_cmp_lt0002
+    );
+  U3_spriteonB3_and00001 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U2_hcs(9),
+      I1 => U3_N191,
+      I2 => U3_N89,
+      I3 => U3_spriteonB3_cmp_le00002,
+      O => U3_spriteonB3
+    );
+  U3_spriteonB2_cmp_le000011_SW0 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => U2_hcs(3),
+      I1 => U2_hcs(4),
+      I2 => U2_hcs(5),
+      O => N55
+    );
+  U3_spriteonB2_cmp_le000011 : LUT4
+    generic map(
+      INIT => X"57FF"
+    )
+    port map (
+      I0 => U2_hcs(7),
+      I1 => N55,
+      I2 => U2_hcs(6),
+      I3 => U2_hcs(8),
+      O => U3_N191
+    );
+  U3_spriteonB1_cmp_le00001_SW0 : LUT4
+    generic map(
+      INIT => X"FFF8"
+    )
+    port map (
+      I0 => U2_hcs(1),
+      I1 => U2_hcs(2),
+      I2 => U2_hcs(3),
+      I3 => U2_hcs(4),
+      O => N57
     );
   U3_spriteonB3_cmp_le0000112 : LUT4
     generic map(
       INIT => X"7FFF"
     )
     port map (
-      I0 => U2_hcs(5),
-      I1 => U2_hcs(8),
-      I2 => U2_hcs(7),
-      I3 => U2_hcs(6),
-      O => U3_spriteonB3_cmp_le0000112_1388
+      I0 => U2_hcs(8),
+      I1 => U2_hcs(5),
+      I2 => U2_hcs(6),
+      I3 => U2_hcs(7),
+      O => U3_spriteonB3_cmp_le0000112_2110
     );
   U3_spriteonB3_cmp_le0000128 : LUT4
     generic map(
-      INIT => X"1113"
+      INIT => X"0155"
     )
     port map (
-      I0 => U2_hcs(3),
-      I1 => U2_hcs(4),
+      I0 => U2_hcs(4),
+      I1 => U2_hcs(2),
       I2 => U2_hcs(1),
-      I3 => U2_hcs(2),
-      O => U3_spriteonB3_cmp_le0000128_1389
+      I3 => U2_hcs(3),
+      O => U3_spriteonB3_cmp_le0000128_2111
     );
-  U3_spriteonGrnd_and000047 : LUT4
+  U3_spriteonB3_cmp_le0000129 : LUT2
     generic map(
-      INIT => X"8000"
+      INIT => X"E"
+    )
+    port map (
+      I0 => U3_spriteonB3_cmp_le0000112_2110,
+      I1 => U3_spriteonB3_cmp_le0000128_2111,
+      O => U3_spriteonB3_cmp_le00002
+    );
+  U3_spriteonB5_and000012 : LUT4
+    generic map(
+      INIT => X"57FF"
+    )
+    port map (
+      I0 => U2_hcs(2),
+      I1 => U2_hcs(0),
+      I2 => U2_hcs(1),
+      I3 => U2_hcs(3),
+      O => U3_spriteonB5_and000012_2123
+    );
+  U3_spriteonB5_and000083 : LUT4
+    generic map(
+      INIT => X"5010"
+    )
+    port map (
+      I0 => U3_spriteonB4_cmp_le0000,
+      I1 => U2_hcs(9),
+      I2 => U3_N89,
+      I3 => U3_spriteonB5_and000039_2124,
+      O => U3_spriteonB5
+    );
+  U3_spriteonB2_and00005 : LUT4
+    generic map(
+      INIT => X"AAA8"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U2_vcs(3),
+      I2 => U2_vcs(4),
+      I3 => U2_vcs(5),
+      O => U3_spriteonB2_and00005_2108
+    );
+  U3_spriteonB4_and000053 : LUT4
+    generic map(
+      INIT => X"C080"
+    )
+    port map (
+      I0 => U2_vcs(9),
+      I1 => U3_spriteonB4_and000050_2116,
+      I2 => U3_spriteonB1_cmp_lt0000,
+      I3 => U3_spriteonB4_and000019,
+      O => U3_spriteonB4
+    );
+  U3_spriteonB1_cmp_lt0000212 : LUT4
+    generic map(
+      INIT => X"555D"
+    )
+    port map (
+      I0 => U2_vcs(5),
+      I1 => title_spriteon_and0000169_2593,
+      I2 => U2_vcs(3),
+      I3 => U2_vcs(4),
+      O => U3_spriteonB1_cmp_lt0000212_2104
+    );
+  U3_spriteonB1_and000017 : LUT4
+    generic map(
+      INIT => X"AAA8"
     )
     port map (
       I0 => U2_vcs(3),
       I1 => U2_vcs(0),
       I2 => U2_vcs(1),
       I3 => U2_vcs(2),
-      O => U3_spriteonGrnd_and000047_1404
+      O => U3_spriteonB1_and000017_2099
     );
-  U3_spriteonGrnd_and0000150 : LUT4
+  U3_spriteonB1_and00004 : LUT4
     generic map(
-      INIT => X"8000"
+      INIT => X"FFF8"
     )
     port map (
-      I0 => U3_spriteonB1_cmp_lt0000,
-      I1 => U3_spriteonGrnd_and000026_1403,
-      I2 => U3_spriteonGrnd_and000074_1405,
-      I3 => U3_spriteonGrnd_and0000124_1402,
-      O => U3_spriteonGrnd
+      I0 => U2_hcs(1),
+      I1 => U2_hcs(0),
+      I2 => U2_hcs(2),
+      I3 => U2_hcs(3),
+      O => U3_spriteonB1_and00004_2100
     );
-  title_Msub_ypix_xor_5_11 : LUT3
+  U3_spriteonB5_cmp_lt00001111 : LUT2
     generic map(
-      INIT => X"78"
+      INIT => X"E"
     )
     port map (
-      I0 => title_Msub_ypix_lut_4_Q,
-      I1 => title_Msub_ypix_cy(3),
-      I2 => title_Msub_ypix_lut_5_Q,
-      O => title_ypix_5_Q
+      I0 => U2_hcs(5),
+      I1 => U2_hcs(4),
+      O => U3_N80
     );
-  title_Msub_ypix_xor_4_11 : LUT2
+  U3_red_0_11 : LUT4
     generic map(
-      INIT => X"6"
+      INIT => X"FFFE"
     )
     port map (
-      I0 => title_Msub_ypix_lut_4_Q,
-      I1 => title_Msub_ypix_cy(3),
-      O => title_ypix_4_Q
+      I0 => U3_tank2Angle10s,
+      I1 => U3_tank2Angle1s,
+      I2 => U3_tank1Angle10s,
+      I3 => U3_tank1Angle1s,
+      O => U3_N0
     );
-  U3_tank1Angle1s_and000036 : LUT4
+  U3_tank2Angle1s_and0000_SW0 : LUT4
     generic map(
-      INIT => X"0100"
+      INIT => X"FDFF"
+    )
+    port map (
+      I0 => U2_hcs(7),
+      I1 => U3_N80,
+      I2 => U2_hcs(8),
+      I3 => U2_hcs(9),
+      O => N61
+    );
+  U3_tank2Angle1s_and0000 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => U2_hcs(3),
+      I1 => N61,
+      I2 => U2_hcs(6),
+      I3 => U3_N82,
+      O => U3_tank2Angle1s
+    );
+  U3_tank2Angle10s_and0000 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U2_hcs(3),
+      I1 => N61,
+      I2 => U2_hcs(6),
+      I3 => U3_N82,
+      O => U3_tank2Angle10s
+    );
+  U3_tank1Angle1s_and000010 : LUT4
+    generic map(
+      INIT => X"1000"
     )
     port map (
       I0 => U2_hcs(4),
-      I1 => U2_vcs(9),
+      I1 => U2_hcs(8),
       I2 => U2_hcs(3),
       I3 => U2_hcs(5),
-      O => U3_tank1Angle1s_and000036_1419
+      O => U3_tank1Angle1s_and000010_2225
     );
-  U3_tank1Angle1s_and000045 : LUT4
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_tank1Angle10s_cmp_le00002,
-      I1 => U3_tank1Angle1s_and000012_1418,
-      I2 => U3_tank1Angle10s_cmp_gt0000,
-      I3 => U3_tank1Angle1s_and000036_1419,
-      O => U3_tank1Angle1s
-    );
-  U3_tank1Angle10s_and000042 : LUT3
+  U3_tank1Angle1s_and000018 : LUT3
     generic map(
       INIT => X"02"
     )
     port map (
       I0 => U2_hcs(7),
-      I1 => U2_hcs(6),
-      I2 => U2_vcs(9),
-      O => U3_tank1Angle10s_and000042_1412
+      I1 => U2_hcs(9),
+      I2 => U2_hcs(6),
+      O => U3_tank1Angle1s_and000018_2226
     );
-  title_Msub_ypix_xor_6_11 : LUT4
-    generic map(
-      INIT => X"9333"
-    )
-    port map (
-      I0 => title_Msub_ypix_cy(3),
-      I1 => title_ypix_addsub0000_6_Q,
-      I2 => title_Msub_ypix_lut_4_Q,
-      I3 => title_Msub_ypix_lut_5_Q,
-      O => title_ypix_6_Q
-    );
-  title_Msub_ypix_xor_8_11 : LUT3
-    generic map(
-      INIT => X"95"
-    )
-    port map (
-      I0 => title_ypix_addsub0000_8_Q,
-      I1 => title_N7,
-      I2 => title_Msub_ypix_lut_7_Q,
-      O => title_ypix_8_Q
-    );
-  U3_Madd_spriteonB5_add0000_cy_5_11 : LUT3
+  U3_tank1Angle1s_and000030 : LUT3
     generic map(
       INIT => X"80"
     )
     port map (
-      I0 => U3_Madd_spriteonB5_add0000_cy_3_Q,
-      I1 => screenstate_sig_hill5(4),
-      I2 => screenstate_sig_hill5(5),
-      O => U3_Madd_spriteonB5_add0000_cy_5_Q
+      I0 => U3_N82,
+      I1 => U3_tank1Angle1s_and000010_2225,
+      I2 => U3_tank1Angle1s_and000018_2226,
+      O => U3_tank1Angle1s
     );
-  U3_Madd_spriteonB5_add0000_cy_3_11 : LUT3
+  U3_tank1Angle10s_and00000 : LUT2
     generic map(
-      INIT => X"80"
+      INIT => X"8"
     )
     port map (
-      I0 => screenstate_sig_hill5(1),
-      I1 => screenstate_sig_hill5(3),
-      I2 => screenstate_sig_hill5(2),
-      O => U3_Madd_spriteonB5_add0000_cy_3_Q
+      I0 => U2_hcs(7),
+      I1 => U2_hcs(5),
+      O => U3_tank1Angle10s_and00000_2220
     );
-  U3_Madd_spriteonB4_add0000_cy_5_11 : LUT3
+  U3_tank1Angle10s_and000017 : LUT4
     generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_Madd_spriteonB4_add0000_cy_3_Q,
-      I1 => screenstate_sig_hill4(4),
-      I2 => screenstate_sig_hill4(5),
-      O => U3_Madd_spriteonB4_add0000_cy_5_Q
-    );
-  U3_Madd_spriteonB3_add0000_cy_5_11 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_Madd_spriteonB3_add0000_cy_3_Q,
-      I1 => screenstate_sig_hill3(4),
-      I2 => screenstate_sig_hill3(5),
-      O => U3_Madd_spriteonB3_add0000_cy_5_Q
-    );
-  U3_Madd_spriteonB1_add0000_cy_5_11 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_Madd_spriteonB1_add0000_cy_3_Q,
-      I1 => screenstate_sig_hill1(4),
-      I2 => screenstate_sig_hill1(5),
-      O => U3_Madd_spriteonB1_add0000_cy_5_Q
-    );
-  U3_Madd_spriteonB1_add0000_cy_3_11 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => screenstate_sig_hill1(1),
-      I1 => screenstate_sig_hill1(3),
-      I2 => screenstate_sig_hill1(2),
-      O => U3_Madd_spriteonB1_add0000_cy_3_Q
-    );
-  U3_Madd_spriteonB4_add0000_cy_3_11 : LUT4
-    generic map(
-      INIT => X"A080"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(2),
-      I1 => screenstate_sig_hill4(1),
-      I2 => screenstate_sig_hill4(3),
-      I3 => screenstate_sig_hill4(0),
-      O => U3_Madd_spriteonB4_add0000_cy_3_Q
-    );
-  U3_Madd_spriteonB3_add0000_cy_3_11 : LUT4
-    generic map(
-      INIT => X"A080"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(2),
-      I1 => screenstate_sig_hill3(1),
-      I2 => screenstate_sig_hill3(3),
-      I3 => screenstate_sig_hill3(0),
-      O => U3_Madd_spriteonB3_add0000_cy_3_Q
-    );
-  U3_B_mux0012112 : LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-    port map (
-      I0 => U3_spriteonB2,
-      I1 => U3_spriteonB1,
-      I2 => U3_spriteonB4,
-      I3 => U3_spriteonB3,
-      O => U3_N8
-    );
-  U3_spriteonB3_and000036 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_spriteonB3_cmp_ge0000,
-      I1 => U3_spriteonB1_cmp_lt0000,
-      I2 => U3_spriteonB3_and000020_1386,
-      O => U3_spriteonB3
-    );
-  U3_spriteonB4_and000073 : LUT4
-    generic map(
-      INIT => X"A080"
-    )
-    port map (
-      I0 => U3_spriteonB1_cmp_lt0000,
-      I1 => U3_spriteonB4_and000029_1392,
-      I2 => U3_spriteonB4_cmp_ge0000,
-      I3 => U3_spriteonB4_and000041_1394,
-      O => U3_spriteonB4
-    );
-  U3_spriteonB5_and000063 : LUT4
-    generic map(
-      INIT => X"0020"
+      INIT => X"0001"
     )
     port map (
       I0 => U2_hcs(9),
+      I1 => U2_hcs(4),
+      I2 => U2_hcs(6),
+      I3 => U2_hcs(3),
+      O => U3_tank1Angle10s_and000017_2223
+    );
+  U3_tank1Angle10s_and000030 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => U3_tank1Angle10s_and00000_2220,
       I1 => U2_hcs(8),
-      I2 => U3_spriteonB1_cmp_lt0000,
-      I3 => U2_hcs(7),
-      O => U3_spriteonB5_and000063_1398
+      I2 => U3_N82,
+      I3 => U3_tank1Angle10s_and000017_2223,
+      O => U3_tank1Angle10s
     );
-  U3_spriteonB5_and000079 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_spriteonB5_cmp_ge0000,
-      I1 => U3_spriteonB5_and000041_1397,
-      I2 => U3_spriteonB5_and000063_1398,
-      O => U3_spriteonB5
-    );
-  U3_spriteonB1_and000082 : LUT4
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_spriteonB1_cmp_ge0000,
-      I1 => U3_spriteonB1_and000048_1374,
-      I2 => U3_spriteonB1_cmp_lt0000,
-      I3 => U3_spriteonB1_and000063,
-      O => U3_spriteonB1
-    );
-  U3_Madd_spriteon2f_add0002_xor_9_11 : LUT3
+  U3_Madd_spriteon2f_add0004_xor_9_11 : LUT3
     generic map(
       INIT => X"78"
     )
     port map (
-      I0 => U3_Madd_spriteon2f_add0002_cy(7),
-      I1 => U3_C2(8),
+      I0 => U3_C2(8),
+      I1 => U3_Madd_spriteon2f_add0004_cy(7),
       I2 => U3_C2(9),
       O => U3_Madd_spriteon2_addsub0000_lut(9)
     );
-  U3_Madd_spriteon2f_add0002_xor_8_11 : LUT2
+  U3_Madd_spriteon2f_add0004_xor_8_11 : LUT2
     generic map(
       INIT => X"6"
     )
     port map (
       I0 => U3_C2(8),
-      I1 => U3_Madd_spriteon2f_add0002_cy(7),
+      I1 => U3_Madd_spriteon2f_add0004_cy(7),
       O => U3_Madd_spriteon2_addsub0000_lut(8)
     );
-  U3_Madd_spriteon2f_add0002_xor_5_11 : LUT2
+  U3_Madd_spriteon2f_add0004_xor_5_11 : LUT2
     generic map(
       INIT => X"6"
     )
@@ -10078,28 +13010,6 @@ begin
       I0 => U3_C2(5),
       I1 => U3_C2(4),
       O => U3_Madd_spriteon2_addsub0000_cy_5_Q
-    );
-  U3_Madd_spriteon2f_add0002_cy_7_11 : LUT4
-    generic map(
-      INIT => X"EAAA"
-    )
-    port map (
-      I0 => U3_C2(7),
-      I1 => U3_C2(6),
-      I2 => U3_C2(5),
-      I3 => U3_C2(4),
-      O => U3_Madd_spriteon2f_add0002_cy(7)
-    );
-  U3_Madd_spriteon1_addsub0000_cy_7_11 : LUT4
-    generic map(
-      INIT => X"EAAA"
-    )
-    port map (
-      I0 => U3_C1(7),
-      I1 => U3_C1(6),
-      I2 => U3_C1(5),
-      I3 => U3_C1(4),
-      O => U3_Madd_spriteon1_addsub0000_cy(7)
     );
   U3_Madd_spriteon1_addsub0000_xor_5_11 : LUT2
     generic map(
@@ -10110,7 +13020,7 @@ begin
       I1 => U3_C1(4),
       O => U3_Madd_spriteon1_addsub0001_cy_5_Q
     );
-  U3_Madd_spriteon2f_add0002_xor_6_11 : LUT3
+  U3_Madd_spriteon2f_add0004_xor_6_11 : LUT3
     generic map(
       INIT => X"78"
     )
@@ -10130,7 +13040,29 @@ begin
       I2 => U3_C1(6),
       O => U3_Madd_spriteon1_addsub0001_lut(6)
     );
-  U3_Madd_spriteon2f_add0002_xor_7_11 : LUT4
+  U3_Madd_spriteon2f_add0004_cy_7_11 : LUT4
+    generic map(
+      INIT => X"FF80"
+    )
+    port map (
+      I0 => U3_C2(6),
+      I1 => U3_C2(5),
+      I2 => U3_C2(4),
+      I3 => U3_C2(7),
+      O => U3_Madd_spriteon2f_add0004_cy(7)
+    );
+  U3_Madd_spriteon1_addsub0000_cy_7_11 : LUT4
+    generic map(
+      INIT => X"FF80"
+    )
+    port map (
+      I0 => U3_C1(6),
+      I1 => U3_C1(5),
+      I2 => U3_C1(4),
+      I3 => U3_C1(7),
+      O => U3_Madd_spriteon1_addsub0000_cy(7)
+    );
+  U3_Madd_spriteon2f_add0004_xor_7_11 : LUT4
     generic map(
       INIT => X"9333"
     )
@@ -10152,371 +13084,293 @@ begin
       I3 => U3_C1(4),
       O => U3_Madd_spriteon1_addsub0001_lut(7)
     );
-  title_Msub_ypix_xor_9_121 : LUT4
+  U3_Madd_spriteonM1_addsub0000_xor_7_11 : LUT4
     generic map(
-      INIT => X"EAAA"
+      INIT => X"9333"
     )
     port map (
-      I0 => title_ypix_addsub0000_6_Q,
-      I1 => title_Msub_ypix_cy(3),
-      I2 => title_Msub_ypix_lut_4_Q,
-      I3 => title_Msub_ypix_lut_5_Q,
-      O => title_N7
+      I0 => U3_CM1(5),
+      I1 => U3_CM1(7),
+      I2 => U3_CM1(6),
+      I3 => U3_CM1(4),
+      O => U3_spriteonM1_addsub0000(7)
     );
-  M1_14_21 : LUT4
+  U3_Madd_spriteonM1_addsub0000_xor_6_11 : LUT3
     generic map(
-      INIT => X"7EFB"
+      INIT => X"78"
     )
     port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(1),
-      O => M1_14_bdd1
+      I0 => U3_CM1(4),
+      I1 => U3_CM1(5),
+      I2 => U3_CM1(6),
+      O => U3_spriteonM1_addsub0000(6)
     );
-  M1_27_11 : LUT4
+  U3_Madd_spriteonM1_addsub0000_xor_5_11 : LUT2
     generic map(
-      INIT => X"DD8B"
+      INIT => X"6"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M1_22_bdd9,
-      I3 => rom1_addr(1),
-      O => M1_27_bdd0
+      I0 => U3_CM1(5),
+      I1 => U3_CM1(4),
+      O => U3_spriteonM1_addsub0000(5)
     );
-  M2_4_11 : LUT4
+  U3_Madd_spriteonM2_addsub0000_xor_7_11 : LUT4
     generic map(
-      INIT => X"DD8B"
+      INIT => X"9333"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M2_0_bdd6,
-      I3 => rom1_addr(1),
-      O => M2_4_bdd0
+      I0 => U3_CM2(5),
+      I1 => U3_CM2(7),
+      I2 => U3_CM2(6),
+      I3 => U3_CM2(4),
+      O => U3_spriteonM2_addsub0000(7)
     );
-  M1a_1_10 : LUT4
+  U3_Madd_spriteonM2_addsub0000_xor_6_11 : LUT3
+    generic map(
+      INIT => X"78"
+    )
+    port map (
+      I0 => U3_CM2(4),
+      I1 => U3_CM2(5),
+      I2 => U3_CM2(6),
+      O => U3_spriteonM2_addsub0000(6)
+    );
+  U3_Madd_spriteonM2_addsub0000_xor_5_11 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_CM2(5),
+      I1 => U3_CM2(4),
+      O => U3_spriteonM2_addsub0000(5)
+    );
+  M2_31_1 : LUT4
+    generic map(
+      INIT => X"666E"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => rom1_addr(4),
+      I2 => rom1_addr(1),
+      I3 => M1_0_bdd2,
+      O => M1_0_Q
+    );
+  U3_spriteonM1_addsub0000_9_1 : LUT3
+    generic map(
+      INIT => X"9A"
+    )
+    port map (
+      I0 => U3_CM1(9),
+      I1 => U3_spriteonM1_addsub0000_8_bdd0,
+      I2 => U3_CM1(8),
+      O => U3_spriteonM1_addsub0000(9)
+    );
+  U3_spriteonM1_addsub0000_8_2 : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM1(8),
+      I1 => U3_spriteonM1_addsub0000_8_bdd0,
+      O => U3_spriteonM1_addsub0000(8)
+    );
+  U3_spriteonM1_addsub0000_8_11 : LUT4
+    generic map(
+      INIT => X"1555"
+    )
+    port map (
+      I0 => U3_CM1(7),
+      I1 => U3_CM1(4),
+      I2 => U3_CM1(5),
+      I3 => U3_CM1(6),
+      O => U3_spriteonM1_addsub0000_8_bdd0
+    );
+  U3_ypix2_4_1_SW0 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      O => N67
+    );
+  U3_ypix2_4_1 : LUT4
+    generic map(
+      INIT => X"E1C3"
+    )
+    port map (
+      I0 => N67,
+      I1 => sig_tank1rom10s(3),
+      I2 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I3 => sig_tank1rom10s(2),
+      O => rom1_addr(4)
+    );
+  U3_spriteonM2_addsub0000_9_1 : LUT3
+    generic map(
+      INIT => X"9A"
+    )
+    port map (
+      I0 => U3_CM2(9),
+      I1 => U3_spriteonM2_addsub0000_8_bdd0,
+      I2 => U3_CM2(8),
+      O => U3_spriteonM2_addsub0000(9)
+    );
+  U3_spriteonM2_addsub0000_8_2 : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM2(8),
+      I1 => U3_spriteonM2_addsub0000_8_bdd0,
+      O => U3_spriteonM2_addsub0000(8)
+    );
+  U3_spriteonM2_addsub0000_8_11 : LUT4
+    generic map(
+      INIT => X"1555"
+    )
+    port map (
+      I0 => U3_CM2(7),
+      I1 => U3_CM2(4),
+      I2 => U3_CM2(5),
+      I3 => U3_CM2(6),
+      O => U3_spriteonM2_addsub0000_8_bdd0
+    );
+  M1_6_SW0 : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1_4_bdd0,
+      I2 => M1_3_bdd3,
+      O => N72
+    );
+  M1_4_Q : LUT3
+    generic map(
+      INIT => X"1B"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => N72,
+      I2 => N76,
+      O => M1_4_Q_79
+    );
+  M2_20_12 : LUT4
     generic map(
       INIT => X"FF02"
     )
     port map (
       I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
+      I1 => rom1_addr(1),
+      I2 => M1_10_bdd7,
       I3 => rom1_addr(4),
-      O => M1a_1_10_86
+      O => M2_20_12_159
+    );
+  M2_20_67 : LUT4
+    generic map(
+      INIT => X"32FA"
+    )
+    port map (
+      I0 => M2_12_44,
+      I1 => rom1_addr(4),
+      I2 => M2_20_12_159,
+      I3 => M2_11_bdd0,
+      O => M2_20_Q
+    );
+  U3_ypix2_1_1 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      O => rom1_addr(1)
+    );
+  M2a_11_25 : LUT4
+    generic map(
+      INIT => X"FF48"
+    )
+    port map (
+      I0 => rom1_addr(1),
+      I1 => rom1_addr(3),
+      I2 => rom1_addr(2),
+      I3 => rom1_addr(4),
+      O => M2a_11_25_217
+    );
+  M2a_11_48 : LUT3
+    generic map(
+      INIT => X"A2"
+    )
+    port map (
+      I0 => M2a_11_25_217,
+      I1 => rom1_addr(4),
+      I2 => M2a_11_37_218,
+      O => M2a_11_Q
+    );
+  M1_9_f5 : MUXF5
+    port map (
+      I0 => M1_9_2,
+      I1 => M1_9_1_86,
+      S => rom1_addr(4),
+      O => M1_9_Q
+    );
+  M1_3_f5 : MUXF5
+    port map (
+      I0 => M1_3_2_77,
+      I1 => M1_3_1_76,
+      S => rom1_addr(4),
+      O => M1_3_Q
+    );
+  U3_ypix2_3_1 : LUT4
+    generic map(
+      INIT => X"9333"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => rom1_addr(3)
     );
   M1a_3_f5 : MUXF5
     port map (
-      I0 => M1a_3_2_126,
-      I1 => M1a_3_1_125,
+      I0 => M1a_3_2_124,
+      I1 => M1a_3_1_123,
       S => rom1_addr(4),
       O => M1a_3_Q
     );
-  M1a_29_58 : LUT4
+  M2a_2_18 : LUT4
     generic map(
-      INIT => X"1131"
+      INIT => X"010B"
     )
     port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(4),
-      I2 => M1_27_bdd4,
+      I0 => sig_tank1rom10s(0),
+      I1 => M2_2_bdd5,
+      I2 => rom1_addr(3),
+      I3 => M2_0_bdd18,
+      O => M2a_2_18_234
+    );
+  M2a_2_46 : LUT4
+    generic map(
+      INIT => X"FF1D"
+    )
+    port map (
+      I0 => M2_0_bdd18,
+      I1 => rom1_addr(3),
+      I2 => M2_0_bdd4,
       I3 => rom1_addr(1),
-      O => M1a_29_58_121
+      O => M2a_2_46_235
     );
-  M1a_29_60 : LUT3
+  M2a_2_60 : LUT4
     generic map(
-      INIT => X"C8"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => M1a_29_58_121,
-      I2 => M1a_29_32,
-      O => M1a_29_Q
-    );
-  M1a_11_2 : LUT4
-    generic map(
-      INIT => X"6CEE"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => M1a_11_2_79
-    );
-  M1a_11_f5 : MUXF5
-    port map (
-      I0 => M1a_11_2_79,
-      I1 => M1a_11_1_78,
-      S => rom1_addr(4),
-      O => M1a_11_Q
-    );
-  M1a_27_2 : LUT3
-    generic map(
-      INIT => X"EA"
+      INIT => X"5010"
     )
     port map (
       I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => M1_27_bdd0,
-      O => M1a_27_2_108
-    );
-  M1a_27_80 : LUT4
-    generic map(
-      INIT => X"2232"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(0),
-      I3 => M1_22_bdd4,
-      O => M1a_27_80_109
-    );
-  M1a_4_Q : LUT3
-    generic map(
-      INIT => X"1B"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => M1a_4_bdd0,
-      I2 => N42,
-      O => M1a_4_Q_127
-    );
-  M2_28_f5 : MUXF5
-    port map (
-      I0 => M1_3_2_68,
-      I1 => M1_3_1_67,
-      S => rom1_addr(4),
-      O => M2_28_Q
-    );
-  M2_22_f5 : MUXF5
-    port map (
-      I0 => M1_9_2_75,
-      I1 => M1_9_1_74,
-      S => rom1_addr(4),
-      O => M2_22_Q
-    );
-  M1a_30_36 : LUT4
-    generic map(
-      INIT => X"068E"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => M1_22_bdd12,
-      I3 => M1_22_bdd7,
-      O => M1a_30_36_123
-    );
-  M1a_28_19 : LUT4
-    generic map(
-      INIT => X"1FBF"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => M1_22_bdd4,
-      I2 => rom1_addr(1),
-      I3 => M1_24_bdd4,
-      O => M1a_28_19_112
-    );
-  M1a_28_69 : LUT4
-    generic map(
-      INIT => X"C888"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => M1a_28_65,
-      I2 => M1a_28_19_112,
-      I3 => M1a_28_31,
-      O => M1a_28_Q
-    );
-  M1_27_21 : LUT2
-    generic map(
-      INIT => X"1"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M1_22_bdd9,
-      O => M1_27_bdd4
-    );
-  M1_23_21 : LUT4
-    generic map(
-      INIT => X"EEE4"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => M1_23_bdd6,
-      O => M1_23_bdd1
-    );
-  M2_15_Q : LUT3
-    generic map(
-      INIT => X"1B"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => M1_14_bdd1,
-      I2 => N62,
-      O => M2_15_Q_145
-    );
-  M2_21_f5 : MUXF5
-    port map (
-      I0 => M2_21_2_154,
-      I1 => M2_21_1_153,
-      S => rom1_addr(4),
-      O => M2_21_Q
-    );
-  M1_13_SW0 : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => rom1_addr(3),
       I1 => rom1_addr(1),
-      O => N82
-    );
-  M1_13_Q : LUT4
-    generic map(
-      INIT => X"2227"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => N80,
-      I2 => M1_0_bdd2,
-      I3 => N82,
-      O => M1_13_Q_6
-    );
-  M2a_1_36 : LUT4
-    generic map(
-      INIT => X"068E"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => M2_0_bdd16,
-      I3 => M2_0_bdd9,
-      O => M2a_1_36_195
-    );
-  M2a_1_64 : LUT4
-    generic map(
-      INIT => X"1113"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(1),
-      I3 => M2_0_bdd1,
-      O => M2a_1_64_196
-    );
-  M2a_3_19 : LUT4
-    generic map(
-      INIT => X"1FBF"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => M2_3_bdd6,
-      I2 => rom1_addr(1),
-      I3 => M2_4_bdd4,
-      O => M2a_3_19_207
-    );
-  M2a_3_69 : LUT4
-    generic map(
-      INIT => X"C888"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => M1a_28_65,
-      I2 => M2a_3_19_207,
-      I3 => M2a_3_31,
-      O => M2a_3_Q
-    );
-  M2_1_98 : LUT2
-    generic map(
-      INIT => X"4"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(1),
-      O => M1_30_98
-    );
-  M2_3_0 : LUT2
-    generic map(
-      INIT => X"E"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      O => M1_28_0
-    );
-  M2_3_8 : LUT4
-    generic map(
-      INIT => X"FFA8"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => M2_3_bdd6,
-      I2 => M1_28_0,
-      I3 => rom1_addr(4),
-      O => M2_3_8_168
-    );
-  M2_3_50 : LUT4
-    generic map(
-      INIT => X"A880"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M2_0_bdd6,
-      I3 => M2_0_bdd13,
-      O => M2_3_50_166
-    );
-  M2_3_310 : LUT2
-    generic map(
-      INIT => X"D"
-    )
-    port map (
-      I0 => M2_0_bdd13,
-      I1 => rom1_addr(2),
-      O => M2_3_bdd6
-    );
-  M2_12_31 : LUT2
-    generic map(
-      INIT => X"D"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      O => M1_10_bdd7
-    );
-  M2_10_31 : LUT2
-    generic map(
-      INIT => X"E"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      O => M1_0_bdd2
-    );
-  M2_0_21 : LUT2
-    generic map(
-      INIT => X"E"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd6,
-      O => M2_0_bdd1
-    );
-  M2_3_54 : LUT3
-    generic map(
-      INIT => X"41"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd6,
-      I2 => M2_0_bdd13,
-      O => M2_3_bdd9
+      I2 => M2a_2_46_235,
+      I3 => M2a_2_18_234,
+      O => M2a_2_Q
     );
   M1_23_31 : LUT3
     generic map(
@@ -10528,454 +13382,291 @@ begin
       I2 => rom1_addr(2),
       O => M1_23_bdd6
     );
-  M2_8_21 : LUT4
+  M1_10_f5 : MUXF5
+    port map (
+      I0 => M1_10_2,
+      I1 => M1_10_1_3,
+      S => rom1_addr(4),
+      O => M1_10_Q
+    );
+  M2_22_f5 : MUXF5
+    port map (
+      I0 => M2_22_2_164,
+      I1 => M2_22_1_163,
+      S => rom1_addr(4),
+      O => M2_22_Q
+    );
+  M2a_1_SW0 : LUT4
     generic map(
-      INIT => X"FA72"
+      INIT => X"FFD8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => M2_0_bdd18,
+      I2 => M2_0_bdd9,
+      I3 => rom1_addr(3),
+      O => N147
+    );
+  M2a_1_Q : LUT4
+    generic map(
+      INIT => X"010B"
     )
     port map (
       I0 => rom1_addr(1),
-      I1 => M2_3_bdd9,
+      I1 => M2_0_bdd2,
+      I2 => rom1_addr(4),
+      I3 => N147,
+      O => M2a_1_Q_224
+    );
+  M2a_3_2 : LUT4
+    generic map(
+      INIT => X"0702"
+    )
+    port map (
+      I0 => rom1_addr(1),
+      I1 => M2_3_bdd7,
+      I2 => rom1_addr(3),
+      I3 => M2_4_bdd10,
+      O => M2a_3_2_239
+    );
+  M2a_3_3 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => rom1_addr(2),
+      I1 => rom1_addr(3),
+      I2 => rom1_addr(1),
+      I3 => M2_0_bdd6,
+      O => M2a_3_3_240
+    );
+  M2a_3_f5 : MUXF5
+    port map (
+      I0 => M2a_3_3_240,
+      I1 => M2a_3_2_239,
+      S => sig_tank1rom10s(0),
+      O => M2a_3_f5_241
+    );
+  M2a_3_f6 : MUXF6
+    port map (
+      I0 => M2a_3_f5_241,
+      I1 => M2a_3_1_238,
+      S => rom1_addr(4),
+      O => M2a_3_Q
+    );
+  M2a_4_20 : LUT4
+    generic map(
+      INIT => X"0F08"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M2_4_bdd2,
+      I2 => rom1_addr(1),
+      I3 => M2a_4_9_251,
+      O => M2a_4_20_245
+    );
+  M2a_4_58 : LUT4
+    generic map(
+      INIT => X"FDD5"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => M2_0_bdd13,
       I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => M2_8_bdd1
+      I3 => M2_0_bdd6,
+      O => M2a_4_58_247
     );
-  M2_14_Q : LUT3
+  M2a_4_114 : LUT4
     generic map(
-      INIT => X"1B"
+      INIT => X"C888"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => M1_14_bdd1,
-      I2 => N93,
-      O => M1_14_Q
+      I0 => M2a_4_36_246,
+      I1 => rom1_addr(1),
+      I2 => M2a_4_58_247,
+      I3 => M2a_4_76,
+      O => M2a_4_114_243
     );
-  M2a_28_Q : LUT3
+  U3_red_1_111 : LUT4
     generic map(
-      INIT => X"E4"
+      INIT => X"FF08"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => M1a_3_2_126,
-      I2 => M1a_3_1_125,
-      O => M2a_28_Q_199
+      I0 => U3_N0,
+      I1 => U3_B_785,
+      I2 => U3_blue_and0004,
+      I3 => U3_blue_and0003,
+      O => U3_N50
     );
-  M2a_2_61 : LUT3
+  selector_blue_1_17 : LUT3
+    generic map(
+      INIT => X"02"
+    )
+    port map (
+      I0 => U3_blue_and0002,
+      I1 => U3_tank2HP_0_Q,
+      I2 => U3_tank2HP_2_Q,
+      O => selector_blue_1_17_2482
+    );
+  M1a_29_58 : LUT4
+    generic map(
+      INIT => X"1131"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => rom1_addr(4),
+      I2 => M1_27_bdd4,
+      I3 => rom1_addr(1),
+      O => M1a_29_58_119
+    );
+  M1a_29_60 : LUT3
     generic map(
       INIT => X"C8"
     )
     port map (
       I0 => rom1_addr(3),
-      I1 => M2a_1_64_196,
-      I2 => M2a_2_32,
-      O => M2a_2_Q
+      I1 => M1a_29_58_119,
+      I2 => M1a_29_32_118,
+      O => M1a_29_Q
     );
-  M1a_24_38 : LUT4
+  M2_1_112 : LUT4
+    generic map(
+      INIT => X"5010"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => rom1_addr(1),
+      I2 => M2_1_101_155,
+      I3 => M2_1_63_156,
+      O => M2_1_Q
+    );
+  M1a_27_52 : LUT4
+    generic map(
+      INIT => X"E68C"
+    )
+    port map (
+      I0 => M1_21_bdd5,
+      I1 => rom1_addr(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_22_bdd9,
+      O => M1a_27_52_114
+    );
+  M2a_5_125 : LUT4
     generic map(
       INIT => X"0D08"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => M1a_24_13_99,
-      I2 => rom1_addr(3),
-      I3 => M1a_24_bdd1,
-      O => M1a_24_38_100
+      I0 => rom1_addr(3),
+      I1 => M2_5_bdd2,
+      I2 => rom1_addr(1),
+      I3 => M2a_5_101_253,
+      O => M2a_5_125_254
     );
-  M2a_4_80 : LUT4
-    generic map(
-      INIT => X"2232"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(0),
-      I3 => M2_3_bdd6,
-      O => M2a_4_80_210
-    );
-  M1_28_46 : LUT4
-    generic map(
-      INIT => X"A880"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M1_22_bdd9,
-      I3 => M1_21_bdd5,
-      O => M1_28_46_51
-    );
-  selector_green_0_39 : LUT3
-    generic map(
-      INIT => X"08"
-    )
-    port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => selector_green_0_20_1806,
-      I2 => U3_blue_and0000,
-      O => selector_green_0_39_1807
-    );
-  selector_green_0_76 : LUT4
-    generic map(
-      INIT => X"8A02"
-    )
-    port map (
-      I0 => selector_green_0_71_1808,
-      I1 => title_spriteon,
-      I2 => title_green_cmp_lt0000,
-      I3 => sig_MTitle(2),
-      O => selector_green_0_76_1809
-    );
-  selector_green_0_80 : LUT3
+  U3_tank2Angle_0_1_SW0 : LUT3
     generic map(
       INIT => X"EA"
     )
     port map (
-      I0 => selector_green_0_76_1809,
-      I1 => U3_N13,
-      I2 => selector_green_0_39_1807,
-      O => green_0_OBUF_1529
-    );
-  M1_22_42 : LUT2
-    generic map(
-      INIT => X"D"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M1_22_bdd9,
-      O => M1_22_bdd7
-    );
-  M2a_7_38 : LUT4
-    generic map(
-      INIT => X"0D08"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2a_7_13_217,
-      I2 => rom1_addr(3),
-      I3 => M2a_6_bdd1,
-      O => M2a_7_38_218
-    );
-  M1_23_37 : LUT4
-    generic map(
-      INIT => X"0B01"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M1_23_bdd3,
-      I2 => rom1_addr(3),
-      I3 => M1_23_14_25,
-      O => M1_23_37_26
-    );
-  M2_0_510 : LUT2
-    generic map(
-      INIT => X"D"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd6,
-      O => M2_0_bdd9
-    );
-  M1_21_52 : LUT2
-    generic map(
-      INIT => X"8"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M1_21_bdd5,
-      O => M1_21_bdd8
-    );
-  M2a_8_11 : LUT4
-    generic map(
-      INIT => X"FFD8"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2a_6_bdd0,
-      I2 => M2_10_bdd14,
-      I3 => rom1_addr(3),
-      O => M2a_8_11_220
-    );
-  M2_8_37 : LUT4
-    generic map(
-      INIT => X"0B01"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2_0_bdd3,
-      I2 => rom1_addr(3),
-      I3 => M2_8_14_186,
-      O => M2_8_37_187
-    );
-  M1a_26_33 : LUT4
-    generic map(
-      INIT => X"AAE8"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M1_21_bdd5,
-      I2 => M1_22_bdd9,
-      I3 => rom1_addr(0),
-      O => M1a_26_33_104
-    );
-  U3_tank2Angle_0_1_SW0 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(4),
-      I1 => U3_tank2_angle_calc(3),
-      I2 => U3_tank2_angle_calc(2),
-      O => N139
+      I0 => U3_RMht2(3),
+      I1 => U3_RMht2(0),
+      I2 => U3_RMht2(1),
+      O => N149
     );
   U3_tank2Angle_0_1 : LUT4
     generic map(
-      INIT => X"FEEE"
+      INIT => X"C080"
     )
     port map (
-      I0 => U3_tank2_angle_calc(6),
-      I1 => U3_tank2_angle_calc(7),
-      I2 => U3_tank2_angle_calc(5),
-      I3 => N139,
+      I0 => U3_RMht2(2),
+      I1 => U3_RMht2(4),
+      I2 => U3_RMht2(5),
+      I3 => N149,
       O => M2_0_bdd13
     );
   U3_tank1Angle_0_1_SW0 : LUT3
     generic map(
-      INIT => X"80"
+      INIT => X"EA"
     )
     port map (
-      I0 => U3_tank1_angle_calc(4),
-      I1 => U3_tank1_angle_calc(3),
-      I2 => U3_tank1_angle_calc(2),
-      O => N141
+      I0 => U3_RMht1(3),
+      I1 => U3_RMht1(0),
+      I2 => U3_RMht1(1),
+      O => N151
     );
   U3_tank1Angle_0_1 : LUT4
     generic map(
-      INIT => X"FEEE"
+      INIT => X"C080"
     )
     port map (
-      I0 => U3_tank1_angle_calc(6),
-      I1 => U3_tank1_angle_calc(7),
-      I2 => U3_tank1_angle_calc(5),
-      I3 => N141,
+      I0 => U3_RMht1(2),
+      I1 => U3_RMht1(4),
+      I2 => U3_RMht1(5),
+      I3 => N151,
       O => M1_21_bdd5
     );
-  U3_tank2Angle_1_SW0 : LUT4
+  M2_10_42 : LUT4
     generic map(
-      INIT => X"8000"
+      INIT => X"5F4E"
     )
     port map (
-      I0 => U3_tank2_angle_calc(4),
-      I1 => U3_tank2_angle_calc(3),
-      I2 => U3_tank2_angle_calc(2),
-      I3 => U3_tank2_angle_calc(1),
-      O => N143
+      I0 => rom1_addr(4),
+      I1 => M2_10_23,
+      I2 => M2_10_bdd0,
+      I3 => M2_10_8,
+      O => M2_10_Q
     );
-  U3_tank2Angle_1_Q : LUT4
+  M1_30_108 : LUT4
     generic map(
-      INIT => X"FFFE"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(7),
-      I1 => U3_tank2_angle_calc(5),
-      I2 => U3_tank2_angle_calc(6),
-      I3 => N143,
-      O => M2_0_bdd6
-    );
-  U3_tank1Angle_1_SW0 : LUT4
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(4),
-      I1 => U3_tank1_angle_calc(3),
-      I2 => U3_tank1_angle_calc(2),
-      I3 => U3_tank1_angle_calc(1),
-      O => N145
-    );
-  U3_tank1Angle_1_Q : LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(7),
-      I1 => U3_tank1_angle_calc(5),
-      I2 => U3_tank1_angle_calc(6),
-      I3 => N145,
-      O => M1_22_bdd9
-    );
-  M2_4_21 : LUT2
-    generic map(
-      INIT => X"D"
-    )
-    port map (
-      I0 => M2_0_bdd6,
-      I1 => rom1_addr(2),
-      O => M2_4_bdd4
-    );
-  M2_10_82 : LUT2
-    generic map(
-      INIT => X"8"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd13,
-      O => M2_10_bdd14
-    );
-  M1_22_210 : LUT2
-    generic map(
-      INIT => X"D"
-    )
-    port map (
-      I0 => M1_21_bdd5,
-      I1 => rom1_addr(2),
-      O => M1_22_bdd4
-    );
-  U3_red_2_11 : LUT4
-    generic map(
-      INIT => X"FF32"
-    )
-    port map (
-      I0 => U3_N8,
-      I1 => U3_spriteonGrnd,
-      I2 => U3_N52,
-      I3 => U3_blue_and0002,
-      O => U3_red_2_11_1361
-    );
-  M2_5_25 : LUT4
-    generic map(
-      INIT => X"FF28"
-    )
-    port map (
-      I0 => M2_0_bdd13,
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(1),
-      O => M2_5_25_176
-    );
-  M2_5_58 : LUT4
-    generic map(
-      INIT => X"24FF"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M2_0_bdd6,
-      I3 => rom1_addr(1),
-      O => M2_5_58_177
-    );
-  M1_27_40 : LUT4
-    generic map(
-      INIT => X"C8E8"
-    )
-    port map (
-      I0 => M1_21_bdd5,
-      I1 => rom1_addr(2),
-      I2 => M1_22_bdd9,
-      I3 => rom1_addr(0),
-      O => M1_27_40_46
-    );
-  M1_27_127 : LUT4
-    generic map(
-      INIT => X"FFF2"
-    )
-    port map (
-      I0 => M1_27_40_46,
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(3),
-      I3 => M1_27_116_44,
-      O => M1_27_127_45
-    );
-  M2a_5_111 : LUT4
-    generic map(
-      INIT => X"FFD8"
+      INIT => X"C888"
     )
     port map (
       I0 => rom1_addr(3),
-      I1 => M2_5_bdd0,
-      I2 => M2a_5_63_212,
-      I3 => rom1_addr(4),
-      O => M2a_5_111_211
+      I1 => M1_30_104_68,
+      I2 => M1_25_2,
+      I3 => M1_30_51_69,
+      O => M1_30_Q
     );
-  M1_25_80 : LUT4
+  M1_28_47 : LUT3
     generic map(
-      INIT => X"FF8D"
+      INIT => X"E8"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => M1_25_35_36,
-      I2 => M1_24_bdd2,
-      I3 => rom1_addr(3),
-      O => M1_25_80_37
+      I0 => rom1_addr(2),
+      I1 => M1_22_bdd9,
+      I2 => M1_21_bdd5,
+      O => M1_27_13
     );
-  selector_red_0_10 : LUT4
+  M1_28_132 : LUT4
     generic map(
-      INIT => X"0F08"
+      INIT => X"C888"
     )
     port map (
-      I0 => U3_B_675,
-      I1 => U3_N12,
-      I2 => U3_spriteonB4,
-      I3 => U3_spriteonB5,
-      O => selector_red_0_10_1815
+      I0 => M1_28_12_50,
+      I1 => M1_28_129,
+      I2 => M1_28_33,
+      I3 => M1_28_71_57,
+      O => M1_28_Q
     );
-  selector_red_0_24 : LUT3
+  selector_green_0_103 : LUT4
     generic map(
-      INIT => X"01"
+      INIT => X"8A02"
     )
     port map (
-      I0 => U3_spriteonB2,
-      I1 => U3_spriteonGrnd,
-      I2 => U3_spriteonB1,
-      O => selector_red_0_24_1817
+      I0 => selector_green_0_98_2486,
+      I1 => title_spriteon,
+      I2 => title_green_cmp_lt0000,
+      I3 => sig_MTitle(2),
+      O => selector_green_0_103_2484
     );
-  selector_red_0_37 : LUT4
+  selector_green_0_107 : LUT3
     generic map(
-      INIT => X"FFA8"
+      INIT => X"EA"
     )
     port map (
-      I0 => selector_red_0_24_1817,
-      I1 => U3_spriteonB3,
-      I2 => selector_red_0_10_1815,
-      I3 => U3_blue_and0002,
-      O => selector_red_0_37_1818
-    );
-  selector_red_0_115 : LUT4
-    generic map(
-      INIT => X"2000"
-    )
-    port map (
-      I0 => vidon,
-      I1 => screenstate_present_state_FSM_FFd1_1729,
-      I2 => sig_MTitle(5),
-      I3 => title_spriteon,
-      O => selector_red_0_115_1816
-    );
-  M1_24_21 : LUT2
-    generic map(
-      INIT => X"D"
-    )
-    port map (
-      I0 => M1_22_bdd9,
-      I1 => rom1_addr(2),
-      O => M1_24_bdd4
-    );
-  U3_blue_0_31 : LUT3
-    generic map(
-      INIT => X"02"
-    )
-    port map (
-      I0 => U3_N13,
-      I1 => U3_spriteonGrnd,
-      I2 => U3_blue_and0000,
-      O => U3_N53
-    );
-  M2_0_92 : LUT3
-    generic map(
-      INIT => X"9F"
-    )
-    port map (
-      I0 => M2_0_bdd13,
-      I1 => M2_0_bdd6,
-      I2 => rom1_addr(2),
-      O => M2_0_bdd16
+      I0 => selector_green_0_103_2484,
+      I1 => U3_N87,
+      I2 => selector_green_0_58_2485,
+      O => green_0_OBUF_2315
     );
   M1_22_72 : LUT3
     generic map(
@@ -10987,169 +13678,430 @@ begin
       I2 => rom1_addr(2),
       O => M1_22_bdd12
     );
-  U3_blue_0_21 : LUT4
+  U3_ypix2_2_1 : LUT3
+    generic map(
+      INIT => X"78"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      O => rom1_addr(2)
+    );
+  U3_blue_and00031 : LUT2
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM1,
+      I1 => U3_destroy1_2035,
+      O => U3_blue_and0003
+    );
+  U3_green_1_138 : LUT4
+    generic map(
+      INIT => X"5554"
+    )
+    port map (
+      I0 => U3_spriteonB5,
+      I1 => U3_blue_and0004,
+      I2 => U3_green_1_116_2060,
+      I3 => U3_blue_and0003,
+      O => U3_green_1_138_2061
+    );
+  U3_green_1_145 : LUT2
+    generic map(
+      INIT => X"E"
+    )
+    port map (
+      I0 => U3_spriteonB4,
+      I1 => U3_green_1_138_2061,
+      O => U3_N1
+    );
+  M1a_23_15 : LUT2
+    generic map(
+      INIT => X"7"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M1_23_bdd1,
+      O => M1a_23_15_103
+    );
+  M2_3_19 : LUT3
+    generic map(
+      INIT => X"E8"
+    )
+    port map (
+      I0 => rom1_addr(2),
+      I1 => M2_0_bdd6,
+      I2 => M2_0_bdd13,
+      O => M2_3_19_174
+    );
+  M2_0_65 : LUT4
+    generic map(
+      INIT => X"0B01"
+    )
+    port map (
+      I0 => rom1_addr(1),
+      I1 => M2_0_bdd2,
+      I2 => rom1_addr(4),
+      I3 => M2_0_27_131,
+      O => M2_0_Q
+    );
+  M2_4_36 : LUT4
+    generic map(
+      INIT => X"FFD8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => M2_3_19_174,
+      I2 => M2_4_bdd10,
+      I3 => rom1_addr(3),
+      O => M2_4_36_182
+    );
+  M2_4_46 : LUT2
+    generic map(
+      INIT => X"7"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M2_4_bdd2,
+      O => M2_4_46_183
+    );
+  U3_blue_and00041 : LUT2
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM2,
+      I1 => U3_destroy2_2041,
+      O => U3_blue_and0004
+    );
+  U3_green_2_32 : LUT4
+    generic map(
+      INIT => X"FF32"
+    )
+    port map (
+      I0 => U3_blue_and0004,
+      I1 => U3_spriteonB5,
+      I2 => N153,
+      I3 => U3_spriteonB4,
+      O => U3_N281
+    );
+  M2_7_43 : LUT4
+    generic map(
+      INIT => X"1800"
+    )
+    port map (
+      I0 => M2_0_bdd6,
+      I1 => M2_0_bdd13,
+      I2 => rom1_addr(2),
+      I3 => sig_tank1rom10s(0),
+      O => M2_7_43_206
+    );
+  M2_7_75 : LUT4
+    generic map(
+      INIT => X"4FEF"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M2_7_43_206,
+      I2 => rom1_addr(1),
+      I3 => M2_7_bdd0,
+      O => M2_7_75_207
+    );
+  M2_5_163 : LUT4
+    generic map(
+      INIT => X"C888"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M2_5_160,
+      I2 => M2_5_45,
+      I3 => M2_5_103,
+      O => M2_5_Q
+    );
+  M2_0_112 : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => M2_0_bdd6,
+      I1 => M2_0_bdd13,
+      O => M2_0_bdd20
+    );
+  U3_destroy2_mux001721 : LUT3
+    generic map(
+      INIT => X"FE"
+    )
+    port map (
+      I0 => U3_blue_and0001,
+      I1 => U3_B_and0000,
+      I2 => U3_blue_and0000,
+      O => U3_N29
+    );
+  U3_red_0_411 : LUT4
     generic map(
       INIT => X"0100"
     )
     port map (
-      I0 => U3_blue_and0002,
-      I1 => U3_blue_and0001,
-      I2 => U3_B_and0000,
+      I0 => U3_spriteonGrnd,
+      I1 => U3_blue_and0002,
+      I2 => U3_N29,
       I3 => vidon,
-      O => U3_N13
+      O => U3_N87
     );
-  M1_26_25 : LUT4
+  U3_tank2Angle_1_SW0 : LUT3
     generic map(
-      INIT => X"FF28"
+      INIT => X"FE"
     )
     port map (
-      I0 => M1_21_bdd5,
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(1),
-      O => M1_26_25_40
+      I0 => U3_RMht2(0),
+      I1 => U3_RMht2(2),
+      I2 => U3_RMht2(1),
+      O => N158
     );
-  M1_26_58 : LUT4
+  U3_tank2Angle_1_Q : LUT4
     generic map(
-      INIT => X"24FF"
+      INIT => X"C888"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M1_22_bdd9,
-      I3 => rom1_addr(1),
-      O => M1_26_58_41
+      I0 => U3_RMht2(4),
+      I1 => U3_RMht2(5),
+      I2 => U3_RMht2(3),
+      I3 => N158,
+      O => M2_0_bdd6
     );
-  selector_green_2_31 : LUT4
+  U3_tank1Angle_1_SW0 : LUT3
+    generic map(
+      INIT => X"FE"
+    )
+    port map (
+      I0 => U3_RMht1(0),
+      I1 => U3_RMht1(2),
+      I2 => U3_RMht1(1),
+      O => N160
+    );
+  U3_tank1Angle_1_Q : LUT4
+    generic map(
+      INIT => X"C888"
+    )
+    port map (
+      I0 => U3_RMht1(4),
+      I1 => U3_RMht1(5),
+      I2 => U3_RMht1(3),
+      I3 => N160,
+      O => M1_22_bdd9
+    );
+  U3_red_0_37 : LUT3
+    generic map(
+      INIT => X"02"
+    )
+    port map (
+      I0 => U3_blue_and0000,
+      I1 => U3_tank1HP_0_Q,
+      I2 => U3_B_and0000,
+      O => U3_green_2_17
+    );
+  U3_green_2_132 : LUT4
+    generic map(
+      INIT => X"CC08"
+    )
+    port map (
+      I0 => U3_green_2_112_2062,
+      I1 => vidon,
+      I2 => U3_N29,
+      I3 => U3_green_2_17,
+      O => U3_N15
+    );
+  selector_red_2_63 : LUT4
     generic map(
       INIT => X"8A02"
     )
     port map (
-      I0 => selector_green_0_71_1808,
+      I0 => selector_green_0_98_2486,
       I1 => title_spriteon,
       I2 => title_green_cmp_lt0000,
-      I3 => sig_MTitle(4),
-      O => selector_green_2_31_1813
+      I3 => sig_MTitle(7),
+      O => selector_red_2_63_2501
     );
-  selector_green_2_36 : LUT4
+  selector_red_2_68 : LUT4
     generic map(
-      INIT => X"FFA8"
+      INIT => X"FAF8"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => U3_N111,
-      I2 => selector_green_2_4_1814,
-      I3 => selector_green_2_31_1813,
-      O => green_2_OBUF_1531
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_N15,
+      I2 => selector_red_2_63_2501,
+      I3 => selector_red_2_20_2500,
+      O => red_2_OBUF_2473
     );
-  selector_blue_0_7 : LUT4
-    generic map(
-      INIT => X"FFF2"
-    )
-    port map (
-      I0 => U3_N15,
-      I1 => U3_spriteonB5,
-      I2 => U3_spriteonB3,
-      I3 => U3_spriteonB4,
-      O => selector_blue_0_7_1804
-    );
-  selector_green_1_43 : LUT4
+  selector_green_1_64 : LUT4
     generic map(
       INIT => X"E040"
     )
     port map (
       I0 => title_spriteon,
       I1 => title_green_cmp_lt0000,
-      I2 => selector_green_0_71_1808,
+      I2 => selector_green_0_98_2486,
       I3 => sig_MTitle(3),
-      O => selector_green_1_43_1812
+      O => selector_green_1_64_2488
     );
-  selector_green_1_48 : LUT4
+  selector_green_1_69 : LUT4
     generic map(
-      INIT => X"FFA8"
+      INIT => X"FAF8"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => U3_N111,
-      I2 => selector_green_1_11,
-      I3 => selector_green_1_43_1812,
-      O => green_1_OBUF_1530
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_N15,
+      I2 => selector_green_1_64_2488,
+      I3 => selector_green_1_21_2487,
+      O => green_1_OBUF_2316
     );
-  M2_6_54 : LUT4
+  M1a_26_33 : LUT4
     generic map(
-      INIT => X"3004"
+      INIT => X"EA8A"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M2_0_bdd6,
-      I3 => M2_0_bdd13,
-      O => M2_6_54_180
+      I0 => rom1_addr(2),
+      I1 => M1_22_bdd9,
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_21_bdd5,
+      O => M1a_26_33_111
     );
-  M2_6_93 : LUT4
+  selector_red_1_47 : LUT4
     generic map(
-      INIT => X"FF8D"
+      INIT => X"E040"
+    )
+    port map (
+      I0 => title_spriteon,
+      I1 => title_green_cmp_lt0000,
+      I2 => selector_green_0_98_2486,
+      I3 => sig_MTitle(6),
+      O => selector_red_1_47_2499
+    );
+  selector_red_1_52 : LUT4
+    generic map(
+      INIT => X"FAF8"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_N25,
+      I2 => selector_red_1_47_2499,
+      I3 => selector_red_1_11,
+      O => red_1_OBUF_2472
+    );
+  M2_6_17 : LUT4
+    generic map(
+      INIT => X"FF1D"
+    )
+    port map (
+      I0 => M2_1_bdd1,
+      I1 => rom1_addr(3),
+      I2 => M2_6_bdd1,
+      I3 => rom1_addr(1),
+      O => M2_6_17_202
+    );
+  M2_6_171 : LUT4
+    generic map(
+      INIT => X"1FBF"
     )
     port map (
       I0 => rom1_addr(1),
-      I1 => M2_6_54_180,
-      I2 => M2_1_bdd1,
-      I3 => rom1_addr(3),
-      O => M2_6_93_181
+      I1 => M2_10_bdd5,
+      I2 => rom1_addr(4),
+      I3 => M2_4_bdd0,
+      O => M2_6_171_203
+    );
+  M2_6_174 : LUT4
+    generic map(
+      INIT => X"C888"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M2_6_171_203,
+      I2 => M2_6_17_202,
+      I3 => M2_6_108_201,
+      O => M2_6_Q
+    );
+  selector_green_2_21 : LUT4
+    generic map(
+      INIT => X"0D08"
+    )
+    port map (
+      I0 => U3_spriteonB3,
+      I1 => U3_N37,
+      I2 => U3_blue_and0002,
+      I3 => U3_N281,
+      O => selector_green_2_21_2489
+    );
+  selector_green_2_38 : LUT4
+    generic map(
+      INIT => X"0A08"
+    )
+    port map (
+      I0 => vidon,
+      I1 => selector_green_2_21_2489,
+      I2 => U3_N29,
+      I3 => selector_blue_1_17_2482,
+      O => selector_green_2_38_2490
+    );
+  selector_green_2_93 : LUT4
+    generic map(
+      INIT => X"8A02"
+    )
+    port map (
+      I0 => selector_green_0_98_2486,
+      I1 => title_spriteon,
+      I2 => title_green_cmp_lt0000,
+      I3 => sig_MTitle(4),
+      O => selector_green_2_93_2491
+    );
+  selector_green_2_98 : LUT4
+    generic map(
+      INIT => X"FAF8"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_N15,
+      I2 => selector_green_2_93_2491,
+      I3 => selector_green_2_38_2490,
+      O => green_2_OBUF_2317
+    );
+  selector_red_0_77 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => vidon,
+      I1 => screenstate_present_state_FSM_FFd1_2478,
+      I2 => sig_MTitle(5),
+      I3 => title_spriteon,
+      O => selector_red_0_77_2495
+    );
+  selector_red_0_80 : LUT4
+    generic map(
+      INIT => X"FAF8"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_N25,
+      I2 => selector_red_0_77_2495,
+      I3 => selector_red_0_34_2492,
+      O => red_0_OBUF_2471
     );
   ja1_IBUF : IBUF
     port map (
       I => ja1,
-      O => ja1_IBUF_1535
+      O => ja1_IBUF_2321
     );
   btn_3_IBUF : IBUF
     port map (
       I => btn(3),
-      O => btn_3_IBUF_1524
-    );
-  sw_7_IBUF : IBUF
-    port map (
-      I => sw(7),
-      O => sw_7_IBUF_1890
-    );
-  sw_6_IBUF : IBUF
-    port map (
-      I => sw(6),
-      O => sw_6_IBUF_1889
-    );
-  sw_5_IBUF : IBUF
-    port map (
-      I => sw(5),
-      O => sw_5_IBUF_1888
-    );
-  sw_4_IBUF : IBUF
-    port map (
-      I => sw(4),
-      O => sw_4_IBUF_1887
-    );
-  sw_3_IBUF : IBUF
-    port map (
-      I => sw(3),
-      O => sw_3_IBUF_1886
-    );
-  sw_2_IBUF : IBUF
-    port map (
-      I => sw(2),
-      O => sw_2_IBUF_1885
-    );
-  sw_1_IBUF : IBUF
-    port map (
-      I => sw(1),
-      O => sw_1_IBUF_1884
-    );
-  sw_0_IBUF : IBUF
-    port map (
-      I => sw(0),
-      O => sw_0_IBUF_1883
+      O => btn_3_IBUF_2310
     );
   vsync_OBUF : OBUF
     port map (
-      I => vsync_OBUF_2020,
+      I => vsync_OBUF_2605,
       O => vsync
     );
   dp_OBUF : OBUF
@@ -11159,152 +14111,152 @@ begin
     );
   ja2_OBUF : OBUF
     port map (
-      I => ja2_OBUF_1537,
+      I => ja2_OBUF_2323,
       O => ja2
     );
   ja3_OBUF : OBUF
     port map (
-      I => ja3_OBUF_1539,
+      I => ja3_OBUF_2325,
       O => ja3
     );
   hsync_OBUF : OBUF
     port map (
-      I => hsync_OBUF_1533,
+      I => hsync_OBUF_2319,
       O => hsync
     );
   an_3_OBUF : OBUF
     port map (
-      I => an_3_OBUF_1494,
+      I => an_3_OBUF_2280,
       O => an(3)
     );
   an_2_OBUF : OBUF
     port map (
-      I => an_2_OBUF_1493,
+      I => an_2_OBUF_2279,
       O => an(2)
     );
   an_1_OBUF : OBUF
     port map (
-      I => an_1_OBUF_1492,
+      I => an_1_OBUF_2278,
       O => an(1)
     );
   an_0_OBUF : OBUF
     port map (
-      I => an_0_OBUF_1491,
+      I => an_0_OBUF_2277,
       O => an(0)
     );
   blue_1_OBUF : OBUF
     port map (
-      I => blue_1_OBUF_1498,
+      I => blue_1_OBUF_2284,
       O => blue(1)
     );
   blue_0_OBUF : OBUF
     port map (
-      I => blue_0_OBUF_1497,
+      I => blue_0_OBUF_2283,
       O => blue(0)
     );
   green_2_OBUF : OBUF
     port map (
-      I => green_2_OBUF_1531,
+      I => green_2_OBUF_2317,
       O => green(2)
     );
   green_1_OBUF : OBUF
     port map (
-      I => green_1_OBUF_1530,
+      I => green_1_OBUF_2316,
       O => green(1)
     );
   green_0_OBUF : OBUF
     port map (
-      I => green_0_OBUF_1529,
+      I => green_0_OBUF_2315,
       O => green(0)
     );
   ld_7_OBUF : OBUF
     port map (
-      I => ld_7_OBUF_1555,
+      I => ld_7_OBUF_2341,
       O => ld(7)
     );
   ld_6_OBUF : OBUF
     port map (
-      I => ld_6_OBUF_1554,
+      I => ld_6_OBUF_2340,
       O => ld(6)
     );
   ld_5_OBUF : OBUF
     port map (
-      I => ld_5_OBUF_1553,
+      I => ld_5_OBUF_2339,
       O => ld(5)
     );
   ld_4_OBUF : OBUF
     port map (
-      I => ld_4_OBUF_1552,
+      I => ld_4_OBUF_2338,
       O => ld(4)
     );
   ld_3_OBUF : OBUF
     port map (
-      I => ld_3_OBUF_1551,
+      I => ld_3_OBUF_2337,
       O => ld(3)
     );
   ld_2_OBUF : OBUF
     port map (
-      I => ld_2_OBUF_1550,
+      I => ld_2_OBUF_2336,
       O => ld(2)
     );
   ld_1_OBUF : OBUF
     port map (
-      I => ld_1_OBUF_1549,
+      I => ld_1_OBUF_2335,
       O => ld(1)
     );
   ld_0_OBUF : OBUF
     port map (
-      I => ld_0_OBUF_1548,
+      I => ld_0_OBUF_2334,
       O => ld(0)
     );
   a_to_g_6_OBUF : OBUF
     port map (
-      I => a_to_g_6_OBUF_1486,
+      I => a_to_g_6_OBUF_2272,
       O => a_to_g(6)
     );
   a_to_g_5_OBUF : OBUF
     port map (
-      I => a_to_g_5_OBUF_1485,
+      I => a_to_g_5_OBUF_2271,
       O => a_to_g(5)
     );
   a_to_g_4_OBUF : OBUF
     port map (
-      I => a_to_g_4_OBUF_1484,
+      I => a_to_g_4_OBUF_2270,
       O => a_to_g(4)
     );
   a_to_g_3_OBUF : OBUF
     port map (
-      I => a_to_g_3_OBUF_1483,
+      I => a_to_g_3_OBUF_2269,
       O => a_to_g(3)
     );
   a_to_g_2_OBUF : OBUF
     port map (
-      I => a_to_g_2_OBUF_1482,
+      I => a_to_g_2_OBUF_2268,
       O => a_to_g(2)
     );
   a_to_g_1_OBUF : OBUF
     port map (
-      I => a_to_g_1_OBUF_1481,
+      I => a_to_g_1_OBUF_2267,
       O => a_to_g(1)
     );
   a_to_g_0_OBUF : OBUF
     port map (
-      I => a_to_g_0_OBUF_1480,
+      I => a_to_g_0_OBUF_2266,
       O => a_to_g(0)
     );
   red_2_OBUF : OBUF
     port map (
-      I => red_2_OBUF_1686,
+      I => red_2_OBUF_2473,
       O => red(2)
     );
   red_1_OBUF : OBUF
     port map (
-      I => red_1_OBUF_1685,
+      I => red_1_OBUF_2472,
       O => red(1)
     );
   red_0_OBUF : OBUF
     port map (
-      I => red_0_OBUF_1684,
+      I => red_0_OBUF_2471,
       O => red(0)
     );
   U1_Mcount_q_cy_1_rt : LUT1
@@ -11313,7 +14265,7 @@ begin
     )
     port map (
       I0 => U1_q(1),
-      O => U1_Mcount_q_cy_1_rt_519
+      O => U1_Mcount_q_cy_1_rt_628
     );
   U1_Mcount_q_cy_2_rt : LUT1
     generic map(
@@ -11321,7 +14273,7 @@ begin
     )
     port map (
       I0 => U1_q(2),
-      O => U1_Mcount_q_cy_2_rt_521
+      O => U1_Mcount_q_cy_2_rt_630
     );
   U1_Mcount_q_cy_3_rt : LUT1
     generic map(
@@ -11329,7 +14281,7 @@ begin
     )
     port map (
       I0 => U1_q(3),
-      O => U1_Mcount_q_cy_3_rt_523
+      O => U1_Mcount_q_cy_3_rt_632
     );
   U1_Mcount_q_cy_4_rt : LUT1
     generic map(
@@ -11337,7 +14289,7 @@ begin
     )
     port map (
       I0 => U1_q(4),
-      O => U1_Mcount_q_cy_4_rt_525
+      O => U1_Mcount_q_cy_4_rt_634
     );
   U1_Mcount_q_cy_5_rt : LUT1
     generic map(
@@ -11345,7 +14297,7 @@ begin
     )
     port map (
       I0 => U1_q(5),
-      O => U1_Mcount_q_cy_5_rt_527
+      O => U1_Mcount_q_cy_5_rt_636
     );
   U1_Mcount_q_cy_6_rt : LUT1
     generic map(
@@ -11353,7 +14305,7 @@ begin
     )
     port map (
       I0 => U1_q(6),
-      O => U1_Mcount_q_cy_6_rt_529
+      O => U1_Mcount_q_cy_6_rt_638
     );
   U1_Mcount_q_cy_7_rt : LUT1
     generic map(
@@ -11361,7 +14313,7 @@ begin
     )
     port map (
       I0 => U1_q(7),
-      O => U1_Mcount_q_cy_7_rt_531
+      O => U1_Mcount_q_cy_7_rt_640
     );
   U1_Mcount_q_cy_8_rt : LUT1
     generic map(
@@ -11369,7 +14321,7 @@ begin
     )
     port map (
       I0 => U1_q(8),
-      O => U1_Mcount_q_cy_8_rt_533
+      O => U1_Mcount_q_cy_8_rt_642
     );
   U1_Mcount_q_cy_9_rt : LUT1
     generic map(
@@ -11377,7 +14329,7 @@ begin
     )
     port map (
       I0 => U1_q(9),
-      O => U1_Mcount_q_cy_9_rt_535
+      O => U1_Mcount_q_cy_9_rt_644
     );
   U1_Mcount_q_cy_10_rt : LUT1
     generic map(
@@ -11385,7 +14337,7 @@ begin
     )
     port map (
       I0 => U1_q(10),
-      O => U1_Mcount_q_cy_10_rt_505
+      O => U1_Mcount_q_cy_10_rt_614
     );
   U1_Mcount_q_cy_11_rt : LUT1
     generic map(
@@ -11393,7 +14345,7 @@ begin
     )
     port map (
       I0 => U1_q(11),
-      O => U1_Mcount_q_cy_11_rt_507
+      O => U1_Mcount_q_cy_11_rt_616
     );
   U1_Mcount_q_cy_12_rt : LUT1
     generic map(
@@ -11401,7 +14353,7 @@ begin
     )
     port map (
       I0 => U1_q(12),
-      O => U1_Mcount_q_cy_12_rt_509
+      O => U1_Mcount_q_cy_12_rt_618
     );
   U1_Mcount_q_cy_13_rt : LUT1
     generic map(
@@ -11409,7 +14361,7 @@ begin
     )
     port map (
       I0 => U1_q(13),
-      O => U1_Mcount_q_cy_13_rt_511
+      O => U1_Mcount_q_cy_13_rt_620
     );
   U1_Mcount_q_cy_14_rt : LUT1
     generic map(
@@ -11417,7 +14369,7 @@ begin
     )
     port map (
       I0 => U1_q(14),
-      O => U1_Mcount_q_cy_14_rt_513
+      O => U1_Mcount_q_cy_14_rt_622
     );
   U1_Mcount_q_cy_15_rt : LUT1
     generic map(
@@ -11425,7 +14377,7 @@ begin
     )
     port map (
       I0 => U1_q(15),
-      O => U1_Mcount_q_cy_15_rt_515
+      O => U1_Mcount_q_cy_15_rt_624
     );
   U1_Mcount_q_cy_16_rt : LUT1
     generic map(
@@ -11433,7 +14385,7 @@ begin
     )
     port map (
       I0 => U1_q(16),
-      O => U1_Mcount_q_cy_16_rt_517
+      O => U1_Mcount_q_cy_16_rt_626
     );
   U2_Mcount_hcs_cy_8_rt : LUT1
     generic map(
@@ -11441,7 +14393,7 @@ begin
     )
     port map (
       I0 => U2_hcs(8),
-      O => U2_Mcount_hcs_cy_8_rt_574
+      O => U2_Mcount_hcs_cy_8_rt_683
     );
   U2_Mcount_hcs_cy_7_rt : LUT1
     generic map(
@@ -11449,7 +14401,7 @@ begin
     )
     port map (
       I0 => U2_hcs(7),
-      O => U2_Mcount_hcs_cy_7_rt_572
+      O => U2_Mcount_hcs_cy_7_rt_681
     );
   U2_Mcount_hcs_cy_6_rt : LUT1
     generic map(
@@ -11457,7 +14409,7 @@ begin
     )
     port map (
       I0 => U2_hcs(6),
-      O => U2_Mcount_hcs_cy_6_rt_570
+      O => U2_Mcount_hcs_cy_6_rt_679
     );
   U2_Mcount_hcs_cy_5_rt : LUT1
     generic map(
@@ -11465,7 +14417,7 @@ begin
     )
     port map (
       I0 => U2_hcs(5),
-      O => U2_Mcount_hcs_cy_5_rt_568
+      O => U2_Mcount_hcs_cy_5_rt_677
     );
   U2_Mcount_hcs_cy_4_rt : LUT1
     generic map(
@@ -11473,7 +14425,7 @@ begin
     )
     port map (
       I0 => U2_hcs(4),
-      O => U2_Mcount_hcs_cy_4_rt_566
+      O => U2_Mcount_hcs_cy_4_rt_675
     );
   U2_Mcount_hcs_cy_3_rt : LUT1
     generic map(
@@ -11481,7 +14433,7 @@ begin
     )
     port map (
       I0 => U2_hcs(3),
-      O => U2_Mcount_hcs_cy_3_rt_564
+      O => U2_Mcount_hcs_cy_3_rt_673
     );
   U2_Mcount_hcs_cy_2_rt : LUT1
     generic map(
@@ -11489,7 +14441,7 @@ begin
     )
     port map (
       I0 => U2_hcs(2),
-      O => U2_Mcount_hcs_cy_2_rt_562
+      O => U2_Mcount_hcs_cy_2_rt_671
     );
   U2_Mcount_hcs_cy_1_rt : LUT1
     generic map(
@@ -11497,7 +14449,7 @@ begin
     )
     port map (
       I0 => U2_hcs(1),
-      O => U2_Mcount_hcs_cy_1_rt_560
+      O => U2_Mcount_hcs_cy_1_rt_669
     );
   U2_Mcount_vcs_cy_8_rt : LUT1
     generic map(
@@ -11505,7 +14457,7 @@ begin
     )
     port map (
       I0 => U2_vcs(8),
-      O => U2_Mcount_vcs_cy_8_rt_603
+      O => U2_Mcount_vcs_cy_8_rt_712
     );
   U2_Mcount_vcs_cy_7_rt : LUT1
     generic map(
@@ -11513,7 +14465,7 @@ begin
     )
     port map (
       I0 => U2_vcs(7),
-      O => U2_Mcount_vcs_cy_7_rt_601
+      O => U2_Mcount_vcs_cy_7_rt_710
     );
   U2_Mcount_vcs_cy_6_rt : LUT1
     generic map(
@@ -11521,7 +14473,7 @@ begin
     )
     port map (
       I0 => U2_vcs(6),
-      O => U2_Mcount_vcs_cy_6_rt_599
+      O => U2_Mcount_vcs_cy_6_rt_708
     );
   U2_Mcount_vcs_cy_5_rt : LUT1
     generic map(
@@ -11529,7 +14481,7 @@ begin
     )
     port map (
       I0 => U2_vcs(5),
-      O => U2_Mcount_vcs_cy_5_rt_597
+      O => U2_Mcount_vcs_cy_5_rt_706
     );
   U2_Mcount_vcs_cy_4_rt : LUT1
     generic map(
@@ -11537,7 +14489,7 @@ begin
     )
     port map (
       I0 => U2_vcs(4),
-      O => U2_Mcount_vcs_cy_4_rt_595
+      O => U2_Mcount_vcs_cy_4_rt_704
     );
   U2_Mcount_vcs_cy_3_rt : LUT1
     generic map(
@@ -11545,7 +14497,7 @@ begin
     )
     port map (
       I0 => U2_vcs(3),
-      O => U2_Mcount_vcs_cy_3_rt_593
+      O => U2_Mcount_vcs_cy_3_rt_702
     );
   U2_Mcount_vcs_cy_2_rt : LUT1
     generic map(
@@ -11553,7 +14505,7 @@ begin
     )
     port map (
       I0 => U2_vcs(2),
-      O => U2_Mcount_vcs_cy_2_rt_591
+      O => U2_Mcount_vcs_cy_2_rt_700
     );
   U2_Mcount_vcs_cy_1_rt : LUT1
     generic map(
@@ -11561,303 +14513,7 @@ begin
     )
     port map (
       I0 => U2_vcs(1),
-      O => U2_Mcount_vcs_cy_1_rt_589
-    );
-  U3_Madd_tank1rom1s_cy_9_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1(9),
-      O => U3_Madd_tank1rom1s_cy_9_rt_763
-    );
-  U3_Madd_tank1rom1s_cy_8_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1(8),
-      O => U3_Madd_tank1rom1s_cy_8_rt_762
-    );
-  U3_Madd_tank1rom10s_cy_9_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1(9),
-      O => U3_Madd_tank1rom10s_cy_9_rt_752
-    );
-  U3_Madd_tank1rom10s_cy_8_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1(8),
-      O => U3_Madd_tank1rom10s_cy_8_rt_751
-    );
-  U3_Mcompar_spriteonB5_cmp_ge0000_cy_0_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(0),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_cy_0_rt_956
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_1_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(1),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy_1_rt_907
-    );
-  U3_Mcompar_spriteonB2_cmp_ge0000_cy_0_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(0),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_cy_0_rt_905
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_cy_0_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(0),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_cy_0_rt_888
-    );
-  U3_Msub_ypix1_sub0000_cy_8_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1_addsub0000(8),
-      O => U3_Msub_ypix1_sub0000_cy_8_rt_1282
-    );
-  U3_Msub_ypix1_sub0000_cy_6_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1_addsub0000(6),
-      O => U3_Msub_ypix1_sub0000_cy_6_rt_1279
-    );
-  U3_Msub_ypix1_sub0000_cy_5_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1_addsub0000(5),
-      O => U3_Msub_ypix1_sub0000_cy_5_rt_1277
-    );
-  U3_Msub_ypix1_sub0000_cy_4_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1_addsub0000(4),
-      O => U3_Msub_ypix1_sub0000_cy_4_rt_1275
-    );
-  U3_Msub_ypix1_sub0000_cy_3_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1_addsub0000(3),
-      O => U3_Msub_ypix1_sub0000_cy_3_rt_1273
-    );
-  U3_Msub_ypix1_sub0000_cy_2_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1_addsub0000(2),
-      O => U3_Msub_ypix1_sub0000_cy_2_rt_1271
-    );
-  U3_Msub_ypix1_sub0000_cy_1_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1_addsub0000(1),
-      O => U3_Msub_ypix1_sub0000_cy_1_rt_1269
-    );
-  U3_Msub_ypix1_sub0000_cy_0_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_ypix1_addsub0000(0),
-      O => U3_Msub_ypix1_sub0000_cy_0_rt_1267
-    );
-  U3_Mcount_q_cy_16_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_16_1303,
-      O => U3_Mcount_q_cy_16_rt_1024
-    );
-  U3_Mcount_q_cy_15_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_15_1302,
-      O => U3_Mcount_q_cy_15_rt_1022
-    );
-  U3_Mcount_q_cy_14_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_14_1301,
-      O => U3_Mcount_q_cy_14_rt_1020
-    );
-  U3_Mcount_q_cy_13_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_13_1300,
-      O => U3_Mcount_q_cy_13_rt_1018
-    );
-  U3_Mcount_q_cy_12_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_12_1299,
-      O => U3_Mcount_q_cy_12_rt_1016
-    );
-  U3_Mcount_q_cy_11_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_11_1298,
-      O => U3_Mcount_q_cy_11_rt_1014
-    );
-  U3_Mcount_q_cy_10_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_10_1297,
-      O => U3_Mcount_q_cy_10_rt_1012
-    );
-  U3_Mcount_q_cy_9_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_9_1311,
-      O => U3_Mcount_q_cy_9_rt_1042
-    );
-  U3_Mcount_q_cy_8_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_8_1310,
-      O => U3_Mcount_q_cy_8_rt_1040
-    );
-  U3_Mcount_q_cy_7_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_7_1309,
-      O => U3_Mcount_q_cy_7_rt_1038
-    );
-  U3_Mcount_q_cy_6_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_6_1308,
-      O => U3_Mcount_q_cy_6_rt_1036
-    );
-  U3_Mcount_q_cy_5_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_5_1307,
-      O => U3_Mcount_q_cy_5_rt_1034
-    );
-  U3_Mcount_q_cy_4_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_4_1306,
-      O => U3_Mcount_q_cy_4_rt_1032
-    );
-  U3_Mcount_q_cy_3_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_3_1305,
-      O => U3_Mcount_q_cy_3_rt_1030
-    );
-  U3_Mcount_q_cy_2_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_2_1304,
-      O => U3_Mcount_q_cy_2_rt_1028
-    );
-  U3_Mcount_q_cy_1_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_Q_1_1296,
-      O => U3_Mcount_q_cy_1_rt_1026
-    );
-  U3_Msub_ypix1_addsub0000_cy_4_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(4),
-      O => U3_Msub_ypix1_addsub0000_cy_4_rt_1255
-    );
-  U3_Msub_ypix1_addsub0000_cy_3_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(3),
-      O => U3_Msub_ypix1_addsub0000_cy_3_rt_1253
-    );
-  U3_Msub_ypix1_addsub0000_cy_2_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(2),
-      O => U3_Msub_ypix1_addsub0000_cy_2_rt_1251
-    );
-  U3_Msub_ypix1_addsub0000_cy_1_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(1),
-      O => U3_Msub_ypix1_addsub0000_cy_1_rt_1249
-    );
-  U3_Msub_ypix1_addsub0000_cy_0_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(0),
-      O => U3_Msub_ypix1_addsub0000_cy_0_rt_1247
+      O => U2_Mcount_vcs_cy_1_rt_698
     );
   x7_Mcount_clkdiv_cy_18_rt : LUT1
     generic map(
@@ -11865,7 +14521,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(18),
-      O => x7_Mcount_clkdiv_cy_18_rt_2042
+      O => x7_Mcount_clkdiv_cy_18_rt_2632
     );
   x7_Mcount_clkdiv_cy_17_rt : LUT1
     generic map(
@@ -11873,7 +14529,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(17),
-      O => x7_Mcount_clkdiv_cy_17_rt_2040
+      O => x7_Mcount_clkdiv_cy_17_rt_2630
     );
   x7_Mcount_clkdiv_cy_16_rt : LUT1
     generic map(
@@ -11881,7 +14537,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(16),
-      O => x7_Mcount_clkdiv_cy_16_rt_2038
+      O => x7_Mcount_clkdiv_cy_16_rt_2628
     );
   x7_Mcount_clkdiv_cy_15_rt : LUT1
     generic map(
@@ -11889,7 +14545,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(15),
-      O => x7_Mcount_clkdiv_cy_15_rt_2036
+      O => x7_Mcount_clkdiv_cy_15_rt_2626
     );
   x7_Mcount_clkdiv_cy_14_rt : LUT1
     generic map(
@@ -11897,7 +14553,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(14),
-      O => x7_Mcount_clkdiv_cy_14_rt_2034
+      O => x7_Mcount_clkdiv_cy_14_rt_2624
     );
   x7_Mcount_clkdiv_cy_13_rt : LUT1
     generic map(
@@ -11905,7 +14561,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(13),
-      O => x7_Mcount_clkdiv_cy_13_rt_2032
+      O => x7_Mcount_clkdiv_cy_13_rt_2622
     );
   x7_Mcount_clkdiv_cy_12_rt : LUT1
     generic map(
@@ -11913,7 +14569,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(12),
-      O => x7_Mcount_clkdiv_cy_12_rt_2030
+      O => x7_Mcount_clkdiv_cy_12_rt_2620
     );
   x7_Mcount_clkdiv_cy_11_rt : LUT1
     generic map(
@@ -11921,7 +14577,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(11),
-      O => x7_Mcount_clkdiv_cy_11_rt_2028
+      O => x7_Mcount_clkdiv_cy_11_rt_2618
     );
   x7_Mcount_clkdiv_cy_10_rt : LUT1
     generic map(
@@ -11929,7 +14585,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(10),
-      O => x7_Mcount_clkdiv_cy_10_rt_2026
+      O => x7_Mcount_clkdiv_cy_10_rt_2616
     );
   x7_Mcount_clkdiv_cy_9_rt : LUT1
     generic map(
@@ -11937,7 +14593,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(9),
-      O => x7_Mcount_clkdiv_cy_9_rt_2060
+      O => x7_Mcount_clkdiv_cy_9_rt_2650
     );
   x7_Mcount_clkdiv_cy_8_rt : LUT1
     generic map(
@@ -11945,7 +14601,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(8),
-      O => x7_Mcount_clkdiv_cy_8_rt_2058
+      O => x7_Mcount_clkdiv_cy_8_rt_2648
     );
   x7_Mcount_clkdiv_cy_7_rt : LUT1
     generic map(
@@ -11953,7 +14609,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(7),
-      O => x7_Mcount_clkdiv_cy_7_rt_2056
+      O => x7_Mcount_clkdiv_cy_7_rt_2646
     );
   x7_Mcount_clkdiv_cy_6_rt : LUT1
     generic map(
@@ -11961,7 +14617,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(6),
-      O => x7_Mcount_clkdiv_cy_6_rt_2054
+      O => x7_Mcount_clkdiv_cy_6_rt_2644
     );
   x7_Mcount_clkdiv_cy_5_rt : LUT1
     generic map(
@@ -11969,7 +14625,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(5),
-      O => x7_Mcount_clkdiv_cy_5_rt_2052
+      O => x7_Mcount_clkdiv_cy_5_rt_2642
     );
   x7_Mcount_clkdiv_cy_4_rt : LUT1
     generic map(
@@ -11977,7 +14633,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(4),
-      O => x7_Mcount_clkdiv_cy_4_rt_2050
+      O => x7_Mcount_clkdiv_cy_4_rt_2640
     );
   x7_Mcount_clkdiv_cy_3_rt : LUT1
     generic map(
@@ -11985,7 +14641,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(3),
-      O => x7_Mcount_clkdiv_cy_3_rt_2048
+      O => x7_Mcount_clkdiv_cy_3_rt_2638
     );
   x7_Mcount_clkdiv_cy_2_rt : LUT1
     generic map(
@@ -11993,7 +14649,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(2),
-      O => x7_Mcount_clkdiv_cy_2_rt_2046
+      O => x7_Mcount_clkdiv_cy_2_rt_2636
     );
   x7_Mcount_clkdiv_cy_1_rt : LUT1
     generic map(
@@ -12001,135 +14657,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(1),
-      O => x7_Mcount_clkdiv_cy_1_rt_2044
-    );
-  screenstate_Mcount_sig_hill3_cy_6_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(6),
-      O => screenstate_Mcount_sig_hill3_cy_6_rt_1704
-    );
-  screenstate_Mcount_sig_hill3_cy_5_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(5),
-      O => screenstate_Mcount_sig_hill3_cy_5_rt_1702
-    );
-  screenstate_Mcount_sig_hill3_cy_4_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(4),
-      O => screenstate_Mcount_sig_hill3_cy_4_rt_1700
-    );
-  screenstate_Mcount_sig_hill3_cy_3_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(3),
-      O => screenstate_Mcount_sig_hill3_cy_3_rt_1698
-    );
-  screenstate_Mcount_sig_hill3_cy_2_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(2),
-      O => screenstate_Mcount_sig_hill3_cy_2_rt_1696
-    );
-  screenstate_Mcount_sig_hill3_cy_1_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(1),
-      O => screenstate_Mcount_sig_hill3_cy_1_rt_1694
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_13_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0001(13),
-      O => title_Madd_rom_addr2_add0000_Madd_cy_13_rt_1898
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_12_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0001(12),
-      O => title_Madd_rom_addr2_add0000_Madd_cy_12_rt_1896
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_11_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0001(11),
-      O => title_Madd_rom_addr2_add0000_Madd_cy_11_rt_1894
-    );
-  title_Madd_rom_addr2_add0000_Madd_cy_10_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0001(10),
-      O => title_Madd_rom_addr2_add0000_Madd_cy_10_rt_1892
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_cy_12_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0000(13),
-      O => title_Madd_rom_addr2_addsub0001_Madd_cy_12_rt_1928
-    );
-  title_Msub_ypix_addsub0000_cy_4_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(4),
-      O => title_Msub_ypix_addsub0000_cy_4_rt_1954
-    );
-  title_Msub_ypix_addsub0000_cy_3_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(3),
-      O => title_Msub_ypix_addsub0000_cy_3_rt_1952
-    );
-  title_Msub_ypix_addsub0000_cy_2_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(2),
-      O => title_Msub_ypix_addsub0000_cy_2_rt_1950
-    );
-  title_Msub_ypix_addsub0000_cy_1_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(1),
-      O => title_Msub_ypix_addsub0000_cy_1_rt_1948
-    );
-  title_Msub_ypix_addsub0000_cy_0_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U2_vcs(0),
-      O => title_Msub_ypix_addsub0000_cy_0_rt_1946
+      O => x7_Mcount_clkdiv_cy_1_rt_2634
     );
   nes_Mcount_counter_reg_cy_8_rt : LUT1
     generic map(
@@ -12137,7 +14665,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(8),
-      O => nes_Mcount_counter_reg_cy_8_rt_1593
+      O => nes_Mcount_counter_reg_cy_8_rt_2379
     );
   nes_Mcount_counter_reg_cy_7_rt : LUT1
     generic map(
@@ -12145,7 +14673,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(7),
-      O => nes_Mcount_counter_reg_cy_7_rt_1591
+      O => nes_Mcount_counter_reg_cy_7_rt_2377
     );
   nes_Mcount_counter_reg_cy_6_rt : LUT1
     generic map(
@@ -12153,7 +14681,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(6),
-      O => nes_Mcount_counter_reg_cy_6_rt_1589
+      O => nes_Mcount_counter_reg_cy_6_rt_2375
     );
   nes_Mcount_counter_reg_cy_5_rt : LUT1
     generic map(
@@ -12161,7 +14689,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(5),
-      O => nes_Mcount_counter_reg_cy_5_rt_1587
+      O => nes_Mcount_counter_reg_cy_5_rt_2373
     );
   nes_Mcount_counter_reg_cy_4_rt : LUT1
     generic map(
@@ -12169,7 +14697,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(4),
-      O => nes_Mcount_counter_reg_cy_4_rt_1585
+      O => nes_Mcount_counter_reg_cy_4_rt_2371
     );
   nes_Mcount_counter_reg_cy_3_rt : LUT1
     generic map(
@@ -12177,7 +14705,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(3),
-      O => nes_Mcount_counter_reg_cy_3_rt_1583
+      O => nes_Mcount_counter_reg_cy_3_rt_2369
     );
   nes_Mcount_counter_reg_cy_2_rt : LUT1
     generic map(
@@ -12185,7 +14713,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_cy_2_rt_1581
+      O => nes_Mcount_counter_reg_cy_2_rt_2367
     );
   nes_Mcount_counter_reg_cy_1_rt : LUT1
     generic map(
@@ -12193,7 +14721,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(1),
-      O => nes_Mcount_counter_reg_cy_1_rt_1579
+      O => nes_Mcount_counter_reg_cy_1_rt_2365
     );
   nes_Madd_scalar_next_addsub0000_cy_8_rt : LUT1
     generic map(
@@ -12201,7 +14729,7 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(8),
-      O => nes_Madd_scalar_next_addsub0000_cy_8_rt_1574
+      O => nes_Madd_scalar_next_addsub0000_cy_8_rt_2360
     );
   nes_Madd_scalar_next_addsub0000_cy_7_rt : LUT1
     generic map(
@@ -12209,7 +14737,7 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(7),
-      O => nes_Madd_scalar_next_addsub0000_cy_7_rt_1572
+      O => nes_Madd_scalar_next_addsub0000_cy_7_rt_2358
     );
   nes_Madd_scalar_next_addsub0000_cy_6_rt : LUT1
     generic map(
@@ -12217,7 +14745,7 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(6),
-      O => nes_Madd_scalar_next_addsub0000_cy_6_rt_1570
+      O => nes_Madd_scalar_next_addsub0000_cy_6_rt_2356
     );
   nes_Madd_scalar_next_addsub0000_cy_5_rt : LUT1
     generic map(
@@ -12225,7 +14753,7 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(5),
-      O => nes_Madd_scalar_next_addsub0000_cy_5_rt_1568
+      O => nes_Madd_scalar_next_addsub0000_cy_5_rt_2354
     );
   nes_Madd_scalar_next_addsub0000_cy_4_rt : LUT1
     generic map(
@@ -12233,7 +14761,7 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(4),
-      O => nes_Madd_scalar_next_addsub0000_cy_4_rt_1566
+      O => nes_Madd_scalar_next_addsub0000_cy_4_rt_2352
     );
   nes_Madd_scalar_next_addsub0000_cy_3_rt : LUT1
     generic map(
@@ -12241,7 +14769,7 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(3),
-      O => nes_Madd_scalar_next_addsub0000_cy_3_rt_1564
+      O => nes_Madd_scalar_next_addsub0000_cy_3_rt_2350
     );
   nes_Madd_scalar_next_addsub0000_cy_2_rt : LUT1
     generic map(
@@ -12249,7 +14777,7 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(2),
-      O => nes_Madd_scalar_next_addsub0000_cy_2_rt_1562
+      O => nes_Madd_scalar_next_addsub0000_cy_2_rt_2348
     );
   nes_Madd_scalar_next_addsub0000_cy_1_rt : LUT1
     generic map(
@@ -12257,7 +14785,647 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(1),
-      O => nes_Madd_scalar_next_addsub0000_cy_1_rt_1560
+      O => nes_Madd_scalar_next_addsub0000_cy_1_rt_2346
+    );
+  U3_CM1_Madd_add0000_cy_1_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(1),
+      O => U3_CM1_Madd_add0000_cy_1_rt_864
+    );
+  U3_CM1_Madd_add0000_cy_2_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(2),
+      O => U3_CM1_Madd_add0000_cy_2_rt_866
+    );
+  U3_CM1_Madd_add0000_cy_3_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(3),
+      O => U3_CM1_Madd_add0000_cy_3_rt_868
+    );
+  U3_CM1_Madd_add0000_cy_4_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(4),
+      O => U3_CM1_Madd_add0000_cy_4_rt_870
+    );
+  U3_CM1_Madd_add0000_cy_5_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(5),
+      O => U3_CM1_Madd_add0000_cy_5_rt_872
+    );
+  U3_CM1_Madd_add0000_cy_6_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(6),
+      O => U3_CM1_Madd_add0000_cy_6_rt_874
+    );
+  U3_CM1_Madd_add0000_cy_7_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(7),
+      O => U3_CM1_Madd_add0000_cy_7_rt_876
+    );
+  U3_CM1_Madd_add0000_cy_8_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(8),
+      O => U3_CM1_Madd_add0000_cy_8_rt_878
+    );
+  U3_CM2_Msub_sub0000_cy_0_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM2(0),
+      O => U3_CM2_Msub_sub0000_cy_0_rt_943
+    );
+  U3_spriteonM2_addsub0000_8_21 : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM2(8),
+      I1 => U3_spriteonM2_addsub0000_8_bdd0,
+      O => U3_spriteonM2_addsub0000_8_2_2181
+    );
+  U3_Madd_spriteonM2_addsub0000_xor_7_111 : LUT4
+    generic map(
+      INIT => X"9333"
+    )
+    port map (
+      I0 => U3_CM2(5),
+      I1 => U3_CM2(7),
+      I2 => U3_CM2(6),
+      I3 => U3_CM2(4),
+      O => U3_Madd_spriteonM2_addsub0000_xor_7_11_1084
+    );
+  U3_Madd_spriteonM2_addsub0000_xor_6_111 : LUT3
+    generic map(
+      INIT => X"78"
+    )
+    port map (
+      I0 => U3_CM2(4),
+      I1 => U3_CM2(5),
+      I2 => U3_CM2(6),
+      O => U3_Madd_spriteonM2_addsub0000_xor_6_11_1083
+    );
+  U3_Madd_spriteonM2_addsub0000_xor_5_111 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_CM2(5),
+      I1 => U3_CM2(4),
+      O => U3_Madd_spriteonM2_addsub0000_xor_5_11_1082
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_3_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM2(3),
+      O => U3_Madd_spriteonM2_addsub0001_cy_3_rt_1090
+    );
+  U3_Madd_spriteonM2_addsub0001_cy_1_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM2(1),
+      O => U3_Madd_spriteonM2_addsub0001_cy_1_rt_1087
+    );
+  U3_spriteonM1_addsub0000_8_21 : LUT2
+    generic map(
+      INIT => X"9"
+    )
+    port map (
+      I0 => U3_CM1(8),
+      I1 => U3_spriteonM1_addsub0000_8_bdd0,
+      O => U3_spriteonM1_addsub0000_8_2_2139
+    );
+  U3_Madd_spriteonM1_addsub0000_xor_7_111 : LUT4
+    generic map(
+      INIT => X"9333"
+    )
+    port map (
+      I0 => U3_CM1(5),
+      I1 => U3_CM1(7),
+      I2 => U3_CM1(6),
+      I3 => U3_CM1(4),
+      O => U3_Madd_spriteonM1_addsub0000_xor_7_11_1029
+    );
+  U3_Madd_spriteonM1_addsub0000_xor_6_111 : LUT3
+    generic map(
+      INIT => X"78"
+    )
+    port map (
+      I0 => U3_CM1(4),
+      I1 => U3_CM1(5),
+      I2 => U3_CM1(6),
+      O => U3_Madd_spriteonM1_addsub0000_xor_6_11_1028
+    );
+  U3_Madd_spriteonM1_addsub0000_xor_5_111 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_CM1(5),
+      I1 => U3_CM1(4),
+      O => U3_Madd_spriteonM1_addsub0000_xor_5_11_1027
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_3_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(3),
+      O => U3_Madd_spriteonM1_addsub0001_cy_3_rt_1035
+    );
+  U3_Madd_spriteonM1_addsub0001_cy_1_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_CM1(1),
+      O => U3_Madd_spriteonM1_addsub0001_cy_1_rt_1032
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_8_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0002(8),
+      O => U3_Madd_spriteonM2_addsub0003_cy_8_rt_1132
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_7_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0002(7),
+      O => U3_Madd_spriteonM2_addsub0003_cy_7_rt_1130
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_6_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0002(6),
+      O => U3_Madd_spriteonM2_addsub0003_cy_6_rt_1128
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_5_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0002(5),
+      O => U3_Madd_spriteonM2_addsub0003_cy_5_rt_1126
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_4_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0002(4),
+      O => U3_Madd_spriteonM2_addsub0003_cy_4_rt_1124
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_3_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0002(3),
+      O => U3_Madd_spriteonM2_addsub0003_cy_3_rt_1122
+    );
+  U3_Madd_spriteonM2_addsub0003_cy_1_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM2_addsub0002(1),
+      O => U3_Madd_spriteonM2_addsub0003_cy_1_rt_1119
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_8_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0002(8),
+      O => U3_Madd_spriteonM1_addsub0003_cy_8_rt_1077
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_7_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0002(7),
+      O => U3_Madd_spriteonM1_addsub0003_cy_7_rt_1075
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_6_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0002(6),
+      O => U3_Madd_spriteonM1_addsub0003_cy_6_rt_1073
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_5_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0002(5),
+      O => U3_Madd_spriteonM1_addsub0003_cy_5_rt_1071
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_4_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0002(4),
+      O => U3_Madd_spriteonM1_addsub0003_cy_4_rt_1069
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_3_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0002(3),
+      O => U3_Madd_spriteonM1_addsub0003_cy_3_rt_1067
+    );
+  U3_Madd_spriteonM1_addsub0003_cy_1_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_spriteonM1_addsub0002(1),
+      O => U3_Madd_spriteonM1_addsub0003_cy_1_rt_1064
+    );
+  U3_tank1rom10s_sub0001_10_111 : LUT3
+    generic map(
+      INIT => X"01"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0001_10_bdd0,
+      I1 => U3_tank1rom10s_sub0000(9),
+      I2 => U3_tank1rom10s_sub0000(8),
+      O => U3_tank1rom10s_sub0001_10_11_2236
+    );
+  U3_tank1rom10s_sub0001_7_11 : LUT4
+    generic map(
+      INIT => X"AAA9"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(7),
+      I1 => U3_Msub_ypix1_Madd_lut(5),
+      I2 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I3 => U3_tank1rom10s_sub0000(6),
+      O => U3_tank1rom10s_sub0001_7_1_2247
+    );
+  U3_tank1rom10s_sub0001_10_112 : LUT3
+    generic map(
+      INIT => X"01"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0001_10_bdd0,
+      I1 => U3_tank1rom10s_sub0000(9),
+      I2 => U3_tank1rom10s_sub0000(8),
+      O => U3_tank1rom10s_sub0001_10_111_2237
+    );
+  U3_tank1rom10s_sub0001_7_12 : LUT4
+    generic map(
+      INIT => X"AAA9"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(7),
+      I1 => U3_Msub_ypix1_Madd_lut(5),
+      I2 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I3 => U3_tank1rom10s_sub0000(6),
+      O => U3_tank1rom10s_sub0001_7_11_2248
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_8_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_RM2(8),
+      O => U3_Madd_spriteonM2_addsub0002_cy_8_rt_1110
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_7_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_RM2(7),
+      O => U3_Madd_spriteonM2_addsub0002_cy_7_rt_1108
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_6_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_RM2(6),
+      O => U3_Madd_spriteonM2_addsub0002_cy_6_rt_1106
+    );
+  U3_Madd_spriteonM2_addsub0002_cy_5_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_RM2(5),
+      O => U3_Madd_spriteonM2_addsub0002_cy_5_rt_1104
+    );
+  U3_Madd_spriteonM1_addsub0002_cy_8_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_RM1(8),
+      O => U3_Madd_spriteonM1_addsub0002_cy_8_rt_1055
+    );
+  U3_Madd_spriteonM1_addsub0002_cy_7_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_RM1(7),
+      O => U3_Madd_spriteonM1_addsub0002_cy_7_rt_1053
+    );
+  U3_Madd_spriteonM1_addsub0002_cy_6_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_RM1(6),
+      O => U3_Madd_spriteonM1_addsub0002_cy_6_rt_1051
+    );
+  U3_Madd_spriteonM1_addsub0002_cy_5_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_RM1(5),
+      O => U3_Madd_spriteonM1_addsub0002_cy_5_rt_1049
+    );
+  U3_Mcount_q_cy_19_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_q_191,
+      O => U3_Mcount_q_cy_19_rt_1559
+    );
+  U3_Mcount_q_cy_18_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_q_181,
+      O => U3_Mcount_q_cy_18_rt_1557
+    );
+  U3_Mcount_q_cy_17_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_17_1820,
+      O => U3_Mcount_q_cy_17_rt_1555
+    );
+  U3_Mcount_q_cy_16_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_16_1819,
+      O => U3_Mcount_q_cy_16_rt_1553
+    );
+  U3_Mcount_q_cy_15_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_15_1818,
+      O => U3_Mcount_q_cy_15_rt_1551
+    );
+  U3_Mcount_q_cy_14_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_14_1817,
+      O => U3_Mcount_q_cy_14_rt_1549
+    );
+  U3_Mcount_q_cy_13_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_13_1816,
+      O => U3_Mcount_q_cy_13_rt_1547
+    );
+  U3_Mcount_q_cy_12_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_12_1815,
+      O => U3_Mcount_q_cy_12_rt_1545
+    );
+  U3_Mcount_q_cy_11_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_11_1814,
+      O => U3_Mcount_q_cy_11_rt_1543
+    );
+  U3_Mcount_q_cy_10_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_10_1813,
+      O => U3_Mcount_q_cy_10_rt_1541
+    );
+  U3_Mcount_q_cy_9_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_9_1828,
+      O => U3_Mcount_q_cy_9_rt_1577
+    );
+  U3_Mcount_q_cy_8_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_8_1827,
+      O => U3_Mcount_q_cy_8_rt_1575
+    );
+  U3_Mcount_q_cy_7_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_7_1826,
+      O => U3_Mcount_q_cy_7_rt_1573
+    );
+  U3_Mcount_q_cy_6_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_6_1825,
+      O => U3_Mcount_q_cy_6_rt_1571
+    );
+  U3_Mcount_q_cy_5_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_5_1824,
+      O => U3_Mcount_q_cy_5_rt_1569
+    );
+  U3_Mcount_q_cy_4_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_4_1823,
+      O => U3_Mcount_q_cy_4_rt_1567
+    );
+  U3_Mcount_q_cy_3_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_3_1822,
+      O => U3_Mcount_q_cy_3_rt_1565
+    );
+  U3_Mcount_q_cy_2_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_2_1821,
+      O => U3_Mcount_q_cy_2_rt_1563
+    );
+  U3_Mcount_q_cy_1_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_Q_1_1812,
+      O => U3_Mcount_q_cy_1_rt_1561
+    );
+  U3_Msub_CM2_sub0000_cy_1_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_C2(1),
+      O => U3_Msub_CM2_sub0000_cy_1_rt_1738
+    );
+  U3_Madd_CM1_add0000_cy_8_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_C1(8),
+      O => U3_Madd_CM1_add0000_cy_8_rt_1008
+    );
+  U3_Madd_CM1_add0000_cy_7_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_C1(7),
+      O => U3_Madd_CM1_add0000_cy_7_rt_1006
+    );
+  U3_Madd_CM1_add0000_cy_6_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_C1(6),
+      O => U3_Madd_CM1_add0000_cy_6_rt_1004
+    );
+  U3_Madd_CM1_add0000_cy_5_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_C1(5),
+      O => U3_Madd_CM1_add0000_cy_5_rt_1002
+    );
+  U3_Madd_CM1_add0000_cy_2_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U3_C1(2),
+      O => U3_Madd_CM1_add0000_cy_2_rt_998
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_4_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U2_vcs(4),
+      O => U3_Msub_tank1rom10s_sub0000_cy_4_rt_1782
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_3_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U2_vcs(3),
+      O => U3_Msub_tank1rom10s_sub0000_cy_3_rt_1780
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_2_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U2_vcs(2),
+      O => U3_Msub_tank1rom10s_sub0000_cy_2_rt_1778
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_1_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U2_vcs(1),
+      O => U3_Msub_tank1rom10s_sub0000_cy_1_rt_1776
+    );
+  U3_Msub_tank1rom10s_sub0000_cy_0_rt : LUT1
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => U2_vcs(0),
+      O => U3_Msub_tank1rom10s_sub0000_cy_0_rt_1774
     );
   U1_Mcount_q_xor_17_rt : LUT1
     generic map(
@@ -12265,7 +15433,7 @@ begin
     )
     port map (
       I0 => U1_q_171,
-      O => U1_Mcount_q_xor_17_rt_537
+      O => U1_Mcount_q_xor_17_rt_646
     );
   U2_Mcount_hcs_xor_9_rt : LUT1
     generic map(
@@ -12273,7 +15441,7 @@ begin
     )
     port map (
       I0 => U2_hcs(9),
-      O => U2_Mcount_hcs_xor_9_rt_586
+      O => U2_Mcount_hcs_xor_9_rt_695
     );
   U2_Mcount_vcs_xor_9_rt : LUT1
     generic map(
@@ -12281,15 +15449,7 @@ begin
     )
     port map (
       I0 => U2_vcs(9),
-      O => U2_Mcount_vcs_xor_9_rt_615
-    );
-  U3_Mcount_q_xor_17_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => U3_q_171,
-      O => U3_Mcount_q_xor_17_rt_1044
+      O => U2_Mcount_vcs_xor_9_rt_724
     );
   x7_Mcount_clkdiv_xor_19_rt : LUT1
     generic map(
@@ -12297,26 +15457,7 @@ begin
     )
     port map (
       I0 => x7_clkdiv(19),
-      O => x7_Mcount_clkdiv_xor_19_rt_2062
-    );
-  screenstate_Mcount_sig_hill3_xor_7_rt : LUT1
-    generic map(
-      INIT => X"2"
-    )
-    port map (
-      I0 => screenstate_sig_hill3(7),
-      O => screenstate_Mcount_sig_hill3_xor_7_rt_1716
-    );
-  title_Msub_ypix_xor_6_111 : LUT4
-    generic map(
-      INIT => X"9333"
-    )
-    port map (
-      I0 => title_Msub_ypix_cy(3),
-      I1 => title_ypix_addsub0000_6_Q,
-      I2 => title_Msub_ypix_lut_4_Q,
-      I3 => title_Msub_ypix_lut_5_Q,
-      O => title_Msub_ypix_xor_6_11_1967
+      O => x7_Mcount_clkdiv_xor_19_rt_2652
     );
   nes_Mcount_counter_reg_xor_9_rt : LUT1
     generic map(
@@ -12324,7 +15465,7 @@ begin
     )
     port map (
       I0 => nes_counter_reg(9),
-      O => nes_Mcount_counter_reg_xor_9_rt_1605
+      O => nes_Mcount_counter_reg_xor_9_rt_2391
     );
   nes_Madd_scalar_next_addsub0000_xor_9_rt : LUT1
     generic map(
@@ -12332,169 +15473,178 @@ begin
     )
     port map (
       I0 => nes_scalar_reg(9),
-      O => nes_Madd_scalar_next_addsub0000_xor_9_rt_1576
+      O => nes_Madd_scalar_next_addsub0000_xor_9_rt_2362
     );
-  M1_9_f51 : LUT3
+  U3_CM1_Madd_add0000_xor_9_rt : LUT1
     generic map(
-      INIT => X"E4"
+      INIT => X"2"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => M1_9_2_75,
-      I2 => M1_9_1_74,
-      O => M1_9_Q
+      I0 => U3_CM1(9),
+      O => U3_CM1_Madd_add0000_xor_9_rt_880
     );
-  M1_3_f51 : LUT3
+  U3_spriteonM2_addsub0000_9_11 : LUT3
     generic map(
-      INIT => X"E4"
+      INIT => X"9A"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => M1_3_2_68,
-      I2 => M1_3_1_67,
-      O => M1_3_Q
+      I0 => U3_CM2(9),
+      I1 => U3_spriteonM2_addsub0000_8_bdd0,
+      I2 => U3_CM2(8),
+      O => U3_spriteonM2_addsub0000_9_1_2184
     );
-  U3_Mcount_tank2_angle_calc_lut_6_Q : LUT4
+  U3_spriteonM1_addsub0000_9_11 : LUT3
     generic map(
-      INIT => X"1193"
+      INIT => X"9A"
     )
     port map (
-      I0 => sig_gameUp,
-      I1 => U3_tank2_angle_calc(6),
-      I2 => U3_Madd_tank2_angle_calc_addsub0000_cy_5_Q,
-      I3 => U3_tank2_angle_calc_cmp_eq0001_1445,
-      O => U3_Mcount_tank2_angle_calc_lut(6)
+      I0 => U3_CM1(9),
+      I1 => U3_spriteonM1_addsub0000_8_bdd0,
+      I2 => U3_CM1(8),
+      O => U3_spriteonM1_addsub0000_9_1_2142
     );
-  U3_Mcount_tank1_angle_calc_lut_6_Q : LUT4
+  U3_Madd_spriteonM2_addsub0003_xor_9_rt : LUT1
     generic map(
-      INIT => X"1193"
+      INIT => X"2"
     )
     port map (
-      I0 => sig_gameUp,
-      I1 => U3_tank1_angle_calc(6),
-      I2 => U3_Madd_tank1_angle_calc_addsub0000_cy_5_Q,
-      I3 => U3_tank1_angle_calc_cmp_eq0001_1431,
-      O => U3_Mcount_tank1_angle_calc_lut(6)
+      I0 => U3_spriteonM2_addsub0002(9),
+      O => U3_Madd_spriteonM2_addsub0003_xor_9_rt_1135
     );
-  U3_Mcount_tank2_angle_calc_lut_4_Q : LUT4
+  U3_Madd_spriteonM1_addsub0003_xor_9_rt : LUT1
     generic map(
-      INIT => X"1193"
+      INIT => X"2"
     )
     port map (
-      I0 => sig_gameUp,
-      I1 => U3_tank2_angle_calc(4),
-      I2 => U3_Madd_tank2_angle_calc_addsub0000_cy_3_Q,
-      I3 => U3_tank2_angle_calc_cmp_eq0001_1445,
-      O => U3_Mcount_tank2_angle_calc_lut(4)
+      I0 => U3_spriteonM1_addsub0002(9),
+      O => U3_Madd_spriteonM1_addsub0003_xor_9_rt_1080
     );
-  U3_Mcount_tank1_angle_calc_lut_4_Q : LUT4
+  U3_tank1rom10s_sub0001_10_113 : LUT3
     generic map(
-      INIT => X"1193"
+      INIT => X"01"
     )
     port map (
-      I0 => sig_gameUp,
-      I1 => U3_tank1_angle_calc(4),
-      I2 => U3_Madd_tank1_angle_calc_addsub0000_cy_3_Q,
-      I3 => U3_tank1_angle_calc_cmp_eq0001_1431,
-      O => U3_Mcount_tank1_angle_calc_lut(4)
+      I0 => U3_tank1rom10s_sub0001_10_bdd0,
+      I1 => U3_tank1rom10s_sub0000(9),
+      I2 => U3_tank1rom10s_sub0000(8),
+      O => U3_tank1rom10s_sub0001_10_112_2238
     );
-  U3_tank2_angle_calc_mux0004_5_1_SW0 : LUT2
+  U3_tank1rom10s_sub0001_10_114 : LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"01"
     )
     port map (
-      I0 => U3_tank2_angle_calc(0),
-      I1 => U3_tank2_angle_calc(1),
-      O => N157
+      I0 => U3_tank1rom10s_sub0001_10_bdd0,
+      I1 => U3_tank1rom10s_sub0000(9),
+      I2 => U3_tank1rom10s_sub0000(8),
+      O => U3_tank1rom10s_sub0001_10_113_2239
     );
-  U3_Mcount_tank2_angle_calc_lut_2_Q : LUT4
+  U3_tank1rom10s_sub0001_10_115 : LUT3
     generic map(
-      INIT => X"BB93"
+      INIT => X"01"
     )
     port map (
-      I0 => sig_gameUp,
-      I1 => U3_tank2_angle_calc(2),
-      I2 => N157,
-      I3 => U3_tank2_angle_calc_cmp_eq0001_1445,
-      O => U3_Mcount_tank2_angle_calc_lut(2)
+      I0 => U3_tank1rom10s_sub0001_10_bdd0,
+      I1 => U3_tank1rom10s_sub0000(9),
+      I2 => U3_tank1rom10s_sub0000(8),
+      O => U3_tank1rom10s_sub0001_10_114_2240
     );
-  U3_tank1_angle_calc_mux0004_5_1_SW0 : LUT2
+  U3_tank1rom10s_sub0001_10_116 : LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"01"
     )
     port map (
-      I0 => U3_tank1_angle_calc(0),
-      I1 => U3_tank1_angle_calc(1),
-      O => N159
+      I0 => U3_tank1rom10s_sub0001_10_bdd0,
+      I1 => U3_tank1rom10s_sub0000(9),
+      I2 => U3_tank1rom10s_sub0000(8),
+      O => U3_tank1rom10s_sub0001_10_115_2241
     );
-  U3_Mcount_tank1_angle_calc_lut_2_Q : LUT4
+  U3_Madd_spriteonM2_addsub0002_xor_9_rt : LUT1
     generic map(
-      INIT => X"BB93"
+      INIT => X"2"
     )
     port map (
-      I0 => sig_gameUp,
-      I1 => U3_tank1_angle_calc(2),
-      I2 => N159,
-      I3 => U3_tank1_angle_calc_cmp_eq0001_1431,
-      O => U3_Mcount_tank1_angle_calc_lut(2)
+      I0 => U3_RM2(9),
+      O => U3_Madd_spriteonM2_addsub0002_xor_9_rt_1116
     );
-  U3_tank2_angle_calc_mux0004_2_1_SW0 : LUT2
+  U3_Madd_spriteonM1_addsub0002_xor_9_rt : LUT1
     generic map(
-      INIT => X"8"
+      INIT => X"2"
     )
     port map (
-      I0 => U3_tank2_angle_calc(4),
-      I1 => U3_Madd_tank2_angle_calc_addsub0000_cy_3_Q,
-      O => N165
+      I0 => U3_RM1(9),
+      O => U3_Madd_spriteonM1_addsub0002_xor_9_rt_1061
     );
-  U3_Mcount_tank2_angle_calc_lut_5_Q : LUT4
+  U3_Mcount_q_xor_20_rt : LUT1
     generic map(
-      INIT => X"BB93"
+      INIT => X"2"
     )
     port map (
-      I0 => sig_gameUp,
-      I1 => U3_tank2_angle_calc(5),
-      I2 => N165,
-      I3 => U3_tank2_angle_calc_cmp_eq0001_1445,
-      O => U3_Mcount_tank2_angle_calc_lut(5)
+      I0 => U3_q_201,
+      O => U3_Mcount_q_xor_20_rt_1579
     );
-  U3_tank1_angle_calc_mux0004_2_1_SW0 : LUT2
+  U3_Madd_CM1_add0000_xor_9_rt : LUT1
     generic map(
-      INIT => X"8"
+      INIT => X"2"
     )
     port map (
-      I0 => U3_tank1_angle_calc(4),
-      I1 => U3_Madd_tank1_angle_calc_addsub0000_cy_3_Q,
-      O => N167
+      I0 => U3_C1(9),
+      O => U3_Madd_CM1_add0000_xor_9_rt_1013
     );
-  U3_Mcount_tank1_angle_calc_lut_5_Q : LUT4
+  U3_RMcnt_Maddsub_addsub0000_cy_3_11_SW0 : LUT4
     generic map(
-      INIT => X"BB93"
+      INIT => X"FE80"
     )
     port map (
-      I0 => sig_gameUp,
-      I1 => U3_tank1_angle_calc(5),
-      I2 => N167,
-      I3 => U3_tank1_angle_calc_cmp_eq0001_1431,
-      O => U3_Mcount_tank1_angle_calc_lut(5)
+      I0 => U3_RMcnt(2),
+      I1 => U3_RMcnt(0),
+      I2 => U3_RMcnt(1),
+      I3 => U3_rise_2072,
+      O => N168
     );
-  U3_tank2_angle_calc_cmp_eq0001_SW0_SW0 : LUT2
+  U3_RMcnt2_Maddsub_addsub0000_cy_3_11_SW0 : LUT4
     generic map(
-      INIT => X"8"
+      INIT => X"FE80"
     )
     port map (
-      I0 => U3_tank2_angle_calc(6),
-      I1 => U3_tank2_angle_calc(4),
-      O => N169
+      I0 => U3_RMcnt2(2),
+      I1 => U3_RMcnt2(0),
+      I2 => U3_RMcnt2(1),
+      I3 => U3_rise2_2073,
+      O => N170
     );
-  U3_tank1_angle_calc_cmp_eq0001_SW0_SW0 : LUT2
+  nes_Mcount_counter_reg_eqn_01 : LUT4
     generic map(
-      INIT => X"8"
+      INIT => X"2AAA"
     )
     port map (
-      I0 => U3_tank1_angle_calc(6),
-      I1 => U3_tank1_angle_calc(4),
-      O => N171
+      I0 => nes_Result(0),
+      I1 => nes_N11,
+      I2 => nes_counter_reg(4),
+      I3 => nes_counter_reg(2),
+      O => nes_Mcount_counter_reg_eqn_0
+    );
+  U3_RM1_mux0002_0_11 : LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+    port map (
+      I0 => U3_rise_2072,
+      I1 => N680,
+      I2 => U3_Mhorz_cmp_ne000065_1584,
+      I3 => U3_Mhorz_cmp_ne0000113_1582,
+      O => U3_N13
+    );
+  U3_RM2_mux0002_0_11 : LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+    port map (
+      I0 => U3_rise2_2073,
+      I1 => N679,
+      I2 => U3_Mhorz_cmp_ne000165_1588,
+      I3 => U3_Mhorz_cmp_ne0001113_1586,
+      O => U3_N14
     );
   nes_counter_reg_not00011 : LUT4
     generic map(
@@ -12503,422 +15653,468 @@ begin
     port map (
       I0 => nes_counter_reg(4),
       I1 => nes_counter_reg(2),
-      I2 => N526,
+      I2 => N683,
       I3 => nes_N11,
       O => nes_counter_reg_not0001
     );
-  U3_Mcount_tank2_angle_calc_lut_7_Q : LUT4
-    generic map(
-      INIT => X"13B3"
-    )
-    port map (
-      I0 => ld_5_OBUF_1553,
-      I1 => U3_tank2_angle_calc(7),
-      I2 => screenstate_present_state_FSM_FFd1_1729,
-      I3 => U3_tank2_angle_calc_mux0004(0),
-      O => U3_Mcount_tank2_angle_calc_lut(7)
-    );
-  U3_Mcount_tank1_angle_calc_lut_7_Q : LUT4
-    generic map(
-      INIT => X"13B3"
-    )
-    port map (
-      I0 => ld_5_OBUF_1553,
-      I1 => U3_tank1_angle_calc(7),
-      I2 => screenstate_present_state_FSM_FFd1_1729,
-      I3 => U3_tank1_angle_calc_mux0004(0),
-      O => U3_Mcount_tank1_angle_calc_lut(7)
-    );
-  screenstate_sig_hill4_mux0001_1_181_SW0 : LUT4
-    generic map(
-      INIT => X"CF2F"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(7),
-      I1 => screenstate_sig_hill4(6),
-      I2 => screenstate_sig_hill4(5),
-      I3 => screenstate_sig_hill4_mux0001_0_bdd2,
-      O => N179
-    );
-  screenstate_sig_hill4_mux0001_1_181_SW1 : LUT4
-    generic map(
-      INIT => X"DF3F"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(7),
-      I1 => screenstate_sig_hill4(6),
-      I2 => screenstate_sig_hill4(5),
-      I3 => N519,
-      O => N180
-    );
-  U3_Mcount_tank2_angle_calc_lut_0_SW0 : LUT4
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(6),
-      I1 => U3_tank2_angle_calc(4),
-      I2 => U3_tank2_angle_calc(3),
-      I3 => U3_tank2_angle_calc(1),
-      O => N182
-    );
-  U3_Mcount_tank2_angle_calc_lut_0_Q : LUT4
-    generic map(
-      INIT => X"EA55"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(0),
-      I1 => U3_N50,
-      I2 => N182,
-      I3 => sig_gameUp,
-      O => U3_Mcount_tank2_angle_calc_lut(0)
-    );
-  U3_Mcount_tank1_angle_calc_lut_0_SW0 : LUT4
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(6),
-      I1 => U3_tank1_angle_calc(4),
-      I2 => U3_tank1_angle_calc(3),
-      I3 => U3_tank1_angle_calc(1),
-      O => N184
-    );
-  U3_Mcount_tank1_angle_calc_lut_0_Q : LUT4
-    generic map(
-      INIT => X"EA55"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(0),
-      I1 => U3_N49,
-      I2 => N184,
-      I3 => sig_gameUp,
-      O => U3_Mcount_tank1_angle_calc_lut(0)
-    );
   U2_Mcount_hcs_eqn_01 : LUT3
     generic map(
-      INIT => X"2A"
+      INIT => X"4C"
     )
     port map (
-      I0 => U2_Result_0_1,
-      I1 => U2_hcs_cmp_eq000010_649,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I0 => U2_hcs_cmp_eq000010_759,
+      I1 => U2_Result_0_1,
+      I2 => U2_hcs_cmp_eq00005_760,
       O => U2_Mcount_hcs_eqn_0
     );
-  nes_Mcount_counter_reg_eqn_01 : LUT4
+  U3_RMcnt_and000144 : LUT4
     generic map(
-      INIT => X"4CCC"
+      INIT => X"A888"
     )
     port map (
-      I0 => nes_N11,
-      I1 => nes_Result(0),
-      I2 => nes_counter_reg(4),
-      I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_0
+      I0 => U3_RM1_and0000,
+      I1 => U3_rise_2072,
+      I2 => N178,
+      I3 => U3_Mhorz_cmp_ne0000,
+      O => U3_RMcnt_and0001
+    );
+  U3_RMcnt2_and000144 : LUT4
+    generic map(
+      INIT => X"A888"
+    )
+    port map (
+      I0 => U3_RM2_and0000,
+      I1 => U3_rise2_2073,
+      I2 => N180,
+      I3 => U3_Mhorz_cmp_ne0001,
+      O => U3_RMcnt2_and0001
     );
   U2_vcs_cmp_eq0000_SW0_SW0 : LUT4
     generic map(
-      INIT => X"FDFF"
+      INIT => X"FBFF"
     )
     port map (
-      I0 => U2_vcs(3),
-      I1 => U2_vcs(2),
+      I0 => U2_vcs(2),
+      I1 => U2_vcs(3),
       I2 => U2_vcs(4),
       I3 => U2_vcs(9),
-      O => N186
-    );
-  nes_Mcount_counter_reg_eqn_11 : LUT4
-    generic map(
-      INIT => X"4CCC"
-    )
-    port map (
-      I0 => nes_N11,
-      I1 => nes_Result(1),
-      I2 => nes_counter_reg(4),
-      I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_1
-    );
-  nes_Mcount_counter_reg_eqn_21 : LUT4
-    generic map(
-      INIT => X"4CCC"
-    )
-    port map (
-      I0 => nes_N11,
-      I1 => nes_Result(2),
-      I2 => nes_counter_reg(4),
-      I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_2
+      O => N182
     );
   U2_Mcount_hcs_eqn_11 : LUT3
     generic map(
       INIT => X"4C"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
+      I0 => U2_hcs_cmp_eq000010_759,
       I1 => U2_Result_1_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I2 => U2_hcs_cmp_eq00005_760,
       O => U2_Mcount_hcs_eqn_1
-    );
-  nes_Mcount_counter_reg_eqn_31 : LUT4
-    generic map(
-      INIT => X"4CCC"
-    )
-    port map (
-      I0 => nes_N11,
-      I1 => nes_Result(3),
-      I2 => nes_counter_reg(4),
-      I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_3
     );
   U2_Mcount_hcs_eqn_21 : LUT3
     generic map(
       INIT => X"4C"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
+      I0 => U2_hcs_cmp_eq000010_759,
       I1 => U2_Result_2_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I2 => U2_hcs_cmp_eq00005_760,
       O => U2_Mcount_hcs_eqn_2
     );
-  nes_Mcount_counter_reg_eqn_41 : LUT4
+  nes_Mcount_counter_reg_eqn_11 : LUT4
     generic map(
-      INIT => X"4CCC"
+      INIT => X"2AAA"
     )
     port map (
-      I0 => nes_N11,
-      I1 => nes_Result(4),
+      I0 => nes_Result(1),
+      I1 => nes_N11,
       I2 => nes_counter_reg(4),
       I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_4
+      O => nes_Mcount_counter_reg_eqn_1
     );
   U2_Mcount_hcs_eqn_31 : LUT3
     generic map(
       INIT => X"4C"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
+      I0 => U2_hcs_cmp_eq000010_759,
       I1 => U2_Result_3_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I2 => U2_hcs_cmp_eq00005_760,
       O => U2_Mcount_hcs_eqn_3
     );
-  nes_Mcount_counter_reg_eqn_51 : LUT4
+  nes_Mcount_counter_reg_eqn_21 : LUT4
     generic map(
-      INIT => X"4CCC"
+      INIT => X"2AAA"
     )
     port map (
-      I0 => nes_N11,
-      I1 => nes_Result(5),
+      I0 => nes_Result(2),
+      I1 => nes_N11,
       I2 => nes_counter_reg(4),
       I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_5
+      O => nes_Mcount_counter_reg_eqn_2
     );
   U2_Mcount_hcs_eqn_41 : LUT3
     generic map(
       INIT => X"4C"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
+      I0 => U2_hcs_cmp_eq000010_759,
       I1 => U2_Result_4_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I2 => U2_hcs_cmp_eq00005_760,
       O => U2_Mcount_hcs_eqn_4
     );
-  nes_Mcount_counter_reg_eqn_61 : LUT4
+  nes_Mcount_counter_reg_eqn_31 : LUT4
     generic map(
-      INIT => X"4CCC"
+      INIT => X"2AAA"
     )
     port map (
-      I0 => nes_N11,
-      I1 => nes_Result(6),
+      I0 => nes_Result(3),
+      I1 => nes_N11,
       I2 => nes_counter_reg(4),
       I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_6
+      O => nes_Mcount_counter_reg_eqn_3
     );
   U2_Mcount_hcs_eqn_51 : LUT3
     generic map(
       INIT => X"4C"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
+      I0 => U2_hcs_cmp_eq000010_759,
       I1 => U2_Result_5_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I2 => U2_hcs_cmp_eq00005_760,
       O => U2_Mcount_hcs_eqn_5
     );
-  nes_Mcount_counter_reg_eqn_71 : LUT4
+  U3_C1_not000152_SW0 : LUT2
     generic map(
-      INIT => X"4CCC"
+      INIT => X"E"
     )
     port map (
-      I0 => nes_N11,
-      I1 => nes_Result(7),
+      I0 => U3_C1(6),
+      I1 => U3_C1(5),
+      O => N184
+    );
+  nes_Mcount_counter_reg_eqn_41 : LUT4
+    generic map(
+      INIT => X"2AAA"
+    )
+    port map (
+      I0 => nes_Result(4),
+      I1 => nes_N11,
       I2 => nes_counter_reg(4),
       I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_7
+      O => nes_Mcount_counter_reg_eqn_4
     );
   U2_Mcount_hcs_eqn_61 : LUT3
     generic map(
       INIT => X"4C"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
+      I0 => U2_hcs_cmp_eq000010_759,
       I1 => U2_Result_6_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I2 => U2_hcs_cmp_eq00005_760,
       O => U2_Mcount_hcs_eqn_6
     );
-  nes_Mcount_counter_reg_eqn_81 : LUT4
+  nes_Mcount_counter_reg_eqn_51 : LUT4
     generic map(
-      INIT => X"4CCC"
+      INIT => X"7F00"
     )
     port map (
-      I0 => nes_N11,
-      I1 => nes_Result(8),
-      I2 => nes_counter_reg(4),
-      I3 => nes_counter_reg(2),
-      O => nes_Mcount_counter_reg_eqn_8
+      I0 => nes_counter_reg(4),
+      I1 => nes_counter_reg(2),
+      I2 => nes_N11,
+      I3 => nes_Result(5),
+      O => nes_Mcount_counter_reg_eqn_5
     );
   U2_Mcount_hcs_eqn_71 : LUT3
     generic map(
       INIT => X"4C"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
+      I0 => U2_hcs_cmp_eq000010_759,
       I1 => U2_Result_7_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I2 => U2_hcs_cmp_eq00005_760,
       O => U2_Mcount_hcs_eqn_7
+    );
+  nes_Mcount_counter_reg_eqn_61 : LUT4
+    generic map(
+      INIT => X"7F00"
+    )
+    port map (
+      I0 => nes_counter_reg(4),
+      I1 => nes_counter_reg(2),
+      I2 => nes_N11,
+      I3 => nes_Result(6),
+      O => nes_Mcount_counter_reg_eqn_6
     );
   U2_Mcount_hcs_eqn_81 : LUT3
     generic map(
-      INIT => X"4C"
+      INIT => X"70"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
-      I1 => U2_Result_8_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I0 => U2_hcs_cmp_eq000010_759,
+      I1 => U2_hcs_cmp_eq00005_760,
+      I2 => U2_Result_8_1,
       O => U2_Mcount_hcs_eqn_8
+    );
+  nes_Mcount_counter_reg_eqn_71 : LUT4
+    generic map(
+      INIT => X"7F00"
+    )
+    port map (
+      I0 => nes_counter_reg(4),
+      I1 => nes_counter_reg(2),
+      I2 => nes_N11,
+      I3 => nes_Result(7),
+      O => nes_Mcount_counter_reg_eqn_7
+    );
+  nes_Mcount_counter_reg_eqn_81 : LUT4
+    generic map(
+      INIT => X"7F00"
+    )
+    port map (
+      I0 => nes_counter_reg(4),
+      I1 => nes_counter_reg(2),
+      I2 => nes_N11,
+      I3 => nes_Result(8),
+      O => nes_Mcount_counter_reg_eqn_8
     );
   nes_Mcount_counter_reg_eqn_91 : LUT4
     generic map(
-      INIT => X"4CCC"
+      INIT => X"7F00"
     )
     port map (
-      I0 => nes_N11,
-      I1 => nes_Result(9),
-      I2 => nes_counter_reg(2),
-      I3 => nes_counter_reg(4),
+      I0 => nes_counter_reg(4),
+      I1 => nes_counter_reg(2),
+      I2 => nes_N11,
+      I3 => nes_Result(9),
       O => nes_Mcount_counter_reg_eqn_9
     );
   U2_Mcount_hcs_eqn_91 : LUT3
     generic map(
-      INIT => X"4C"
+      INIT => X"70"
     )
     port map (
-      I0 => U2_hcs_cmp_eq000010_649,
-      I1 => U2_Result_9_1,
-      I2 => U2_hcs_cmp_eq00005_650,
+      I0 => U2_hcs_cmp_eq000010_759,
+      I1 => U2_hcs_cmp_eq00005_760,
+      I2 => U2_Result_9_1,
       O => U2_Mcount_hcs_eqn_9
     );
-  screenstate_sig_hill4_mux0001_1_1128 : LUT4
+  U3_RMht2_not000137 : LUT4
     generic map(
-      INIT => X"EA0A"
+      INIT => X"3302"
     )
     port map (
-      I0 => screenstate_sig_hill4(6),
-      I1 => screenstate_sig_hill4(5),
-      I2 => screenstate_sig_hill4(4),
-      I3 => screenstate_sig_hill4_mux0001_1_181_1780,
-      O => screenstate_sig_hill4_mux0001(1)
-    );
-  U3_Mcount_tank2_angle_calc_lut_3_SW1 : LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(2),
-      I1 => U3_tank2_angle_calc(0),
-      I2 => U3_tank2_angle_calc(1),
-      I3 => sig_gameUp,
-      O => N192
-    );
-  U3_Mcount_tank2_angle_calc_lut_3_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(3),
-      I1 => N192,
-      O => U3_Mcount_tank2_angle_calc_lut(3)
-    );
-  U3_Mcount_tank1_angle_calc_lut_3_SW1 : LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(2),
-      I1 => U3_tank1_angle_calc(0),
-      I2 => U3_tank1_angle_calc(1),
-      I3 => sig_gameUp,
-      O => N194
-    );
-  U3_Mcount_tank1_angle_calc_lut_3_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(3),
-      I1 => N194,
-      O => U3_Mcount_tank1_angle_calc_lut(3)
-    );
-  U3_B_mux001299_SW0 : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => U3_B_mux001236_678,
-      I1 => U3_B_mux001254_681,
-      I2 => U3_B_mux001269_682,
-      O => N196
-    );
-  U3_B_mux001299 : LUT4
-    generic map(
-      INIT => X"FFA8"
-    )
-    port map (
-      I0 => U3_B_675,
-      I1 => U3_B_mux00124_679,
-      I2 => U3_B_mux00129_683,
-      I3 => N196,
-      O => U3_B_mux0012
+      I0 => sig_gameDown,
+      I1 => U3_N37,
+      I2 => N190,
+      I3 => U3_RMht2_not000124_1972,
+      O => U3_RMht2_not0001
     );
   U3_C2_not000164 : LUT4
     generic map(
-      INIT => X"0C04"
+      INIT => X"5010"
     )
     port map (
-      I0 => U3_C2(9),
-      I1 => sig_gameRight,
-      I2 => U3_leftBTN_inv1_inv1,
-      I3 => U3_C2_not000150_717,
-      O => U3_C2_not000164_719
+      I0 => U3_leftBTN_inv1_inv1,
+      I1 => U3_C2(9),
+      I2 => sig_gameRight,
+      I3 => U3_C2_not000150_829,
+      O => U3_C2_not000164_831
     );
-  nes_scalar_next_cmp_eq000030_SW0 : LUT4
+  U3_RMcnt_and000136_SW0 : LUT3
     generic map(
-      INIT => X"FDFF"
+      INIT => X"F7"
     )
     port map (
-      I0 => nes_scalar_reg(6),
-      I1 => nes_scalar_reg(7),
-      I2 => nes_scalar_reg(8),
-      I3 => nes_scalar_reg(9),
-      O => N198
+      I0 => U3_RMcnt(1),
+      I1 => U3_RMcnt(0),
+      I2 => U3_RMcnt_and000112_1954,
+      O => N178
     );
-  M1a_14_Q : LUT3
+  U3_RMcnt2_and000136_SW0 : LUT3
     generic map(
-      INIT => X"1B"
+      INIT => X"F7"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => M1a_14_bdd0,
-      I2 => N204,
-      O => M1a_14_Q_81
+      I0 => U3_RMcnt2(1),
+      I1 => U3_RMcnt2(0),
+      I2 => U3_RMcnt2_and000112_1922,
+      O => N180
+    );
+  U3_RMht2_not000137_SW0 : LUT4
+    generic map(
+      INIT => X"1555"
+    )
+    port map (
+      I0 => U3_RMht2(5),
+      I1 => U3_RMht2(4),
+      I2 => U3_RMht2(3),
+      I3 => N200,
+      O => N190
+    );
+  U3_C1_not000152_SW1 : MUXF5
+    port map (
+      I0 => N204,
+      I1 => N205,
+      S => U3_C1(3),
+      O => N185
+    );
+  U3_C1_not000152_SW1_F : LUT4
+    generic map(
+      INIT => X"F8F0"
+    )
+    port map (
+      I0 => U3_C1(0),
+      I1 => U3_C1(1),
+      I2 => U3_C1(6),
+      I3 => U3_C1(5),
+      O => N204
+    );
+  U3_C1_not000152_SW1_G : LUT2
+    generic map(
+      INIT => X"E"
+    )
+    port map (
+      I0 => U3_C1(6),
+      I1 => U3_C1(5),
+      O => N205
+    );
+  U3_RMht1_not00011190 : MUXF5
+    port map (
+      I0 => N206,
+      I1 => N207,
+      S => U3_RMht1(5),
+      O => U3_RMht1_not0001
+    );
+  U3_RMht1_not00011190_G : LUT3
+    generic map(
+      INIT => X"E4"
+    )
+    port map (
+      I0 => U3_RMht1(4),
+      I1 => U3_RMht1_not0001_bdd1,
+      I2 => U3_RMht1_not0001127_1963,
+      O => N207
+    );
+  U3_blue_and0001138_SW0 : LUT4
+    generic map(
+      INIT => X"DB9B"
+    )
+    port map (
+      I0 => U2_vcs(2),
+      I1 => U2_vcs(5),
+      I2 => U2_vcs(1),
+      I3 => U2_vcs(0),
+      O => N208
+    );
+  U3_blue_and0001138 : LUT4
+    generic map(
+      INIT => X"3237"
+    )
+    port map (
+      I0 => U2_vcs(3),
+      I1 => U2_vcs(5),
+      I2 => U2_vcs(4),
+      I3 => N208,
+      O => U3_blue_and0001138_2030
+    );
+  U3_spriteonM1_and00001 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U3_Mcompar_spriteonM1_cmp_gt0000_cy(9),
+      I1 => U3_Mcompar_spriteonM1_cmp_lt0000_cy(9),
+      I2 => U3_spriteonM1_cmp_ge0000,
+      I3 => U3_spriteonM1_cmp_le0000,
+      O => U3_spriteonM1
+    );
+  U3_spriteonM2_and00001 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U3_Mcompar_spriteonM2_cmp_gt0000_cy(9),
+      I1 => U3_Mcompar_spriteonM2_cmp_lt0000_cy(9),
+      I2 => U3_spriteonM2_cmp_ge0000,
+      I3 => U3_spriteonM2_cmp_le0000,
+      O => U3_spriteonM2
+    );
+  U3_B_mux0016150_SW0 : LUT4
+    generic map(
+      INIT => X"C888"
+    )
+    port map (
+      I0 => U3_B_mux001685_795,
+      I1 => U3_B_mux0016128_790,
+      I2 => U3_tank110sM_mux0000,
+      I3 => U3_tank1Angle10s,
+      O => N210
+    );
+  U3_B_mux0016150 : LUT4
+    generic map(
+      INIT => X"FAF8"
+    )
+    port map (
+      I0 => U3_B_785,
+      I1 => U3_B_mux001618_792,
+      I2 => N210,
+      I3 => U3_B_mux00167_794,
+      O => U3_B_mux0016
+    );
+  U3_destroy2_mux001780 : LUT4
+    generic map(
+      INIT => X"F888"
+    )
+    port map (
+      I0 => U3_destroy2_2041,
+      I1 => U3_destroy2_mux001766_2046,
+      I2 => U3_spriteonM2,
+      I3 => U3_destroy2_mux001727_2045,
+      O => U3_destroy2_mux0017
+    );
+  U3_Result_5_2197_SW0 : LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+    port map (
+      I0 => U3_RMht2(1),
+      I1 => U3_RMht2(2),
+      I2 => U3_RMht2(3),
+      I3 => U3_RMht2(4),
+      O => N212
+    );
+  U3_Result_5_1197_SW0 : LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+    port map (
+      I0 => U3_RMht1(1),
+      I1 => U3_RMht1(2),
+      I2 => U3_RMht1(3),
+      I3 => U3_RMht1(4),
+      O => N214
+    );
+  U3_tank1Angle10s_and0000159_SW0 : LUT4
+    generic map(
+      INIT => X"F7FF"
+    )
+    port map (
+      I0 => U3_tank1Angle10s_and0000128,
+      I1 => U2_vcs(4),
+      I2 => U2_vcs(9),
+      I3 => U2_vcs(5),
+      O => N224
+    );
+  U3_tank1Angle10s_and0000159 : LUT4
+    generic map(
+      INIT => X"0001"
+    )
+    port map (
+      I0 => U2_vcs(6),
+      I1 => U2_vcs(7),
+      I2 => U2_vcs(8),
+      I3 => N224,
+      O => U3_N82
     );
   U3_Mmux_M1a_mux0000_83 : LUT3
     generic map(
@@ -12927,29 +16123,39 @@ begin
     port map (
       I0 => rom1_addr(4),
       I1 => M1a_12_bdd1,
-      I2 => N210,
-      O => U3_Mmux_M1a_mux0000_83_1146
+      I2 => N246,
+      O => U3_Mmux_M1a_mux0000_83_1643
     );
   U3_Mmux_M2a_mux0000_82 : LUT3
     generic map(
-      INIT => X"4E"
+      INIT => X"1B"
     )
     port map (
       I0 => rom1_addr(4),
-      I1 => N73,
-      I2 => N212,
-      O => U3_Mmux_M2a_mux0000_82_1205
+      I1 => M1a_12_bdd1,
+      I2 => N248,
+      O => U3_Mmux_M2a_mux0000_82_1702
+    );
+  U3_Mmux_M2_mux0000_82 : LUT3
+    generic map(
+      INIT => X"1B"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M2_18_bdd0,
+      I2 => N250,
+      O => U3_Mmux_M2_mux0000_82_1672
     );
   title_spriteon_and0000250_SW0 : LUT4
     generic map(
-      INIT => X"FF15"
+      INIT => X"FF13"
     )
     port map (
-      I0 => title_spriteon_and0000124_1993,
-      I1 => U3_spriteonB1_and000063,
-      I2 => title_spriteon_and000052_2001,
+      I0 => title_spriteon_and000052_2599,
+      I1 => title_spriteon_and0000124_2592,
+      I2 => title_spriteon_and000059_2600,
       I3 => U2_vcs(9),
-      O => N214
+      O => N252
     );
   title_spriteon_and0000250 : LUT4
     generic map(
@@ -12957,431 +16163,268 @@ begin
     )
     port map (
       I0 => U2_vcs(8),
-      I1 => title_spriteon_and0000205_1998,
-      I2 => N214,
-      I3 => title_spriteon_and000019_1997,
+      I1 => title_spriteon_and0000205_2596,
+      I2 => N252,
+      I3 => title_spriteon_and000019_2595,
       O => title_spriteon
+    );
+  M1a_28_63 : LUT4
+    generic map(
+      INIT => X"0D08"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1_28_bdd1,
+      I2 => rom1_addr(3),
+      I3 => N256,
+      O => M1a_28_Q
     );
   U3_Mmux_M1a_mux0000_6 : LUT4
     generic map(
       INIT => X"0A08"
     )
     port map (
-      I0 => M1a_29_58_121,
+      I0 => M1a_29_58_119,
       I1 => rom1_addr(3),
-      I2 => U3_xpix1(0),
-      I3 => M1a_30_36_123,
-      O => U3_Mmux_M1a_mux0000_6_1129
+      I2 => U3_rom_pix1(0),
+      I3 => M1a_30_37_121,
+      O => U3_Mmux_M1a_mux0000_6_1628
     );
-  U3_Mmux_M1a_mux0000_10 : LUT4
+  U3_Mmux_M2a_mux0000_6 : LUT4
     generic map(
-      INIT => X"C040"
+      INIT => X"5010"
+    )
+    port map (
+      I0 => U3_rom_pix2(0),
+      I1 => rom1_addr(4),
+      I2 => M2a_29_2_231,
+      I3 => M2a_30_19_236,
+      O => U3_Mmux_M2a_mux0000_6_1688
+    );
+  U3_B_mux001685 : LUT4
+    generic map(
+      INIT => X"0D08"
+    )
+    port map (
+      I0 => U3_tank1Angle1s,
+      I1 => U3_tank11sM_mux0000,
+      I2 => U3_tank1Angle10s,
+      I3 => U3_B_mux001662_793,
+      O => U3_B_mux001685_795
+    );
+  M2a_4_214 : LUT4
+    generic map(
+      INIT => X"FE54"
     )
     port map (
       I0 => rom1_addr(4),
-      I1 => U3_xpix1(0),
-      I2 => M1a_1_10_86,
-      I3 => M1a_1_22_87,
-      O => U3_Mmux_M1a_mux0000_10_1122
+      I1 => M2a_4_20_245,
+      I2 => M2a_4_114_243,
+      I3 => M2a_4_194_244,
+      O => M2a_4_Q
     );
-  U3_Mmux_M2a_mux0000_10 : LUT4
+  M2_9_95 : LUT4
     generic map(
-      INIT => X"A080"
+      INIT => X"5F4E"
     )
     port map (
-      I0 => U3_xpix2(0),
+      I0 => rom1_addr(4),
+      I1 => M2_9_31_212,
+      I2 => M2_21_bdd0,
+      I3 => M2_9_69_213,
+      O => M2_9_Q
+    );
+  M2_7_119_SW0 : LUT4
+    generic map(
+      INIT => X"FF8B"
+    )
+    port map (
+      I0 => M2_12_bdd5,
       I1 => rom1_addr(3),
-      I2 => M2a_1_64_196,
-      I3 => M2a_1_36_195,
-      O => U3_Mmux_M2a_mux0000_10_1184
+      I2 => M2_1_bdd1,
+      I3 => rom1_addr(1),
+      O => N282
     );
-  M1a_23_9 : LUT4
+  M2_7_119 : LUT4
     generic map(
-      INIT => X"FFD8"
+      INIT => X"40EA"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => M1a_22_bdd0,
-      I2 => M1_21_bdd8,
-      I3 => rom1_addr(3),
-      O => M1a_23_9_97
+      I0 => rom1_addr(4),
+      I1 => N282,
+      I2 => M2_7_75_207,
+      I3 => M2_10_bdd0,
+      O => M2_7_Q
     );
-  M2_3_74 : LUT4
+  x7_Mmux_digit_31 : LUT3
     generic map(
-      INIT => X"0702"
+      INIT => X"B1"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => N222,
-      I2 => rom1_addr(3),
-      I3 => M2_3_50_166,
-      O => M2_3_74_167
+      I0 => x7_clkdiv(18),
+      I1 => U3_RMht1(1),
+      I2 => sig_tank1_angle_calc_5_Q,
+      O => x7_Mmux_digit_31_2654
     );
-  M1_28_69 : LUT4
+  x7_Mmux_digit_41 : LUT3
     generic map(
-      INIT => X"0702"
+      INIT => X"B1"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => N224,
-      I2 => rom1_addr(3),
-      I3 => M1_28_46_51,
-      O => M1_28_69_52
+      I0 => x7_clkdiv(18),
+      I1 => U3_RMht2(1),
+      I2 => sig_tank2_angle_calc(5),
+      O => x7_Mmux_digit_41_2656
     );
   U3_Mcompar_spriteon1_cmp_lt0000_lut_7_Q : LUT4
     generic map(
-      INIT => X"69A5"
+      INIT => X"69C3"
     )
     port map (
-      I0 => U2_hcs(7),
-      I1 => U3_Madd_spriteon1_addsub0001_lut(6),
+      I0 => U3_Madd_spriteon1_addsub0001_cy_5_Q,
+      I1 => U2_hcs(7),
       I2 => U3_Madd_spriteon1_addsub0001_lut(7),
-      I3 => U3_Madd_spriteon1_addsub0001_cy_5_Q,
+      I3 => U3_Madd_spriteon1_addsub0001_lut(6),
       O => U3_Mcompar_spriteon1_cmp_lt0000_lut(7)
     );
-  U3_Mmux_M2a_mux0000_92 : LUT4
+  U3_Mmux_M2a_mux0000_7 : LUT4
     generic map(
       INIT => X"E444"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => N230,
-      I2 => M1a_22_37,
-      I3 => M2a_5_111_211,
-      O => U3_Mmux_M2a_mux0000_92_1214
+      I0 => U3_rom_pix2(0),
+      I1 => M2a_28_Q,
+      I2 => M2a_29_2_231,
+      I3 => M2a_29_59_232,
+      O => U3_Mmux_M2a_mux0000_7_1693
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_lut_7_Q : LUT4
+  U3_Madd_tank2rom1s_lut_10_Q : LUT3
     generic map(
-      INIT => X"9666"
+      INIT => X"56"
     )
     port map (
-      I0 => U2_vcs(7),
-      I1 => screenstate_sig_hill5(7),
-      I2 => screenstate_sig_hill5(6),
-      I3 => U3_Madd_spriteonB5_add0000_cy_5_Q,
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_lut(7)
+      I0 => U3_tank1rom10s_sub0001(10),
+      I1 => U3_font4_5_Q,
+      I2 => U3_Madd_tank2ascii1s_add0000_cy(4),
+      O => U3_Madd_tank2rom1s_lut(10)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_lut_6_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_vcs(6),
-      I1 => screenstate_sig_hill5(6),
-      I2 => U3_Madd_spriteonB5_add0000_cy_5_Q,
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_lut(6)
-    );
-  U3_Mcompar_spriteonB5_cmp_ge0000_lut_5_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => U2_vcs(5),
-      I1 => screenstate_sig_hill5(4),
-      I2 => screenstate_sig_hill5(5),
-      I3 => U3_Madd_spriteonB5_add0000_cy_3_Q,
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_lut(5)
-    );
-  U3_Mcompar_spriteonB5_cmp_ge0000_lut_4_Q : LUT3
+  U3_Madd_tank2rom1s_lut_9_Q : LUT3
     generic map(
       INIT => X"69"
     )
     port map (
-      I0 => U2_vcs(4),
-      I1 => screenstate_sig_hill5(4),
-      I2 => U3_Madd_spriteonB5_add0000_cy_3_Q,
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_lut(4)
+      I0 => U3_tank1rom10s_sub0001(9),
+      I1 => U3_font4_5_Q,
+      I2 => U3_Madd_tank2ascii1s_add0000_cy(4),
+      O => U3_Madd_tank2rom1s_lut(9)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_lut_3_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => U2_vcs(3),
-      I1 => screenstate_sig_hill5(1),
-      I2 => screenstate_sig_hill5(3),
-      I3 => screenstate_sig_hill5(2),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_lut(3)
-    );
-  U3_Mcompar_spriteonB5_cmp_ge0000_lut_2_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_vcs(2),
-      I1 => screenstate_sig_hill5(1),
-      I2 => screenstate_sig_hill5(2),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_lut(2)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_7_Q : LUT4
-    generic map(
-      INIT => X"9666"
-    )
-    port map (
-      I0 => U2_vcs(7),
-      I1 => screenstate_sig_hill4(7),
-      I2 => screenstate_sig_hill4(6),
-      I3 => U3_Madd_spriteonB4_add0000_cy_5_Q,
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(7)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_6_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_vcs(6),
-      I1 => screenstate_sig_hill4(6),
-      I2 => U3_Madd_spriteonB4_add0000_cy_5_Q,
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(6)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_5_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => U2_vcs(5),
-      I1 => screenstate_sig_hill4(4),
-      I2 => screenstate_sig_hill4(5),
-      I3 => U3_Madd_spriteonB4_add0000_cy_3_Q,
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(5)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_4_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_vcs(4),
-      I1 => screenstate_sig_hill4(4),
-      I2 => U3_Madd_spriteonB4_add0000_cy_3_Q,
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(4)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_2_Q : LUT4
-    generic map(
-      INIT => X"6669"
-    )
-    port map (
-      I0 => U2_vcs(2),
-      I1 => screenstate_sig_hill4(2),
-      I2 => screenstate_sig_hill4(0),
-      I3 => screenstate_sig_hill4(1),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(2)
-    );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_1_Q : LUT3
+  U3_Madd_tank2rom1s_lut_8_Q : LUT3
     generic map(
       INIT => X"96"
     )
     port map (
-      I0 => U2_vcs(1),
-      I1 => screenstate_sig_hill4(1),
-      I2 => screenstate_sig_hill4(0),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(1)
+      I0 => U3_tank1rom10s_sub0000(8),
+      I1 => U3_tank1rom10s_sub0001_10_bdd0,
+      I2 => U3_Madd_tank2ascii1s_add0000_cy(4),
+      O => U3_Madd_tank2rom1s_lut(8)
     );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_7_Q : LUT4
+  U3_Madd_tank2rom1s_lut_4_Q : LUT3
     generic map(
-      INIT => X"9666"
+      INIT => X"78"
     )
     port map (
-      I0 => U2_vcs(7),
-      I1 => screenstate_sig_hill3(7),
-      I2 => screenstate_sig_hill3(6),
-      I3 => U3_Madd_spriteonB3_add0000_cy_5_Q,
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(7)
+      I0 => U3_font3_cmp_lt0000,
+      I1 => U3_RMht2(0),
+      I2 => U3_tank1rom10s_sub0001(4),
+      O => U3_Madd_tank2rom1s_lut(4)
     );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_6_Q : LUT3
+  U3_Madd_tank1rom1s_lut_10_Q : LUT4
     generic map(
-      INIT => X"69"
+      INIT => X"E1C3"
     )
     port map (
-      I0 => U2_vcs(6),
-      I1 => screenstate_sig_hill3(6),
-      I2 => U3_Madd_spriteonB3_add0000_cy_5_Q,
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(6)
+      I0 => U3_RMht1(4),
+      I1 => U3_RMht1(5),
+      I2 => U3_tank1rom10s_sub0001(10),
+      I3 => U3_Madd_tank1ascii1s_add0000_cy_5_bdd2,
+      O => U3_Madd_tank1rom1s_lut(10)
     );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_5_Q : LUT4
+  U3_Madd_tank1rom1s_lut_9_Q : LUT4
     generic map(
-      INIT => X"69A5"
+      INIT => X"5556"
     )
     port map (
-      I0 => U2_vcs(5),
-      I1 => screenstate_sig_hill3(4),
-      I2 => screenstate_sig_hill3(5),
-      I3 => U3_Madd_spriteonB3_add0000_cy_3_Q,
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(5)
+      I0 => U3_tank1rom10s_sub0001(9),
+      I1 => U3_Madd_tank1ascii1s_add0000_cy_5_bdd2,
+      I2 => U3_RMht1(4),
+      I3 => U3_RMht1(5),
+      O => U3_Madd_tank1rom1s_lut(9)
     );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_4_Q : LUT3
+  U3_Madd_tank1rom1s_lut_8_Q : LUT4
     generic map(
-      INIT => X"69"
+      INIT => X"5569"
     )
     port map (
-      I0 => U2_vcs(4),
-      I1 => screenstate_sig_hill3(4),
-      I2 => U3_Madd_spriteonB3_add0000_cy_3_Q,
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(4)
+      I0 => U3_tank1rom10s_sub0001(8),
+      I1 => U3_RMht1(4),
+      I2 => U3_Madd_tank1ascii1s_add0000_cy_5_bdd2,
+      I3 => U3_RMht1(5),
+      O => U3_Madd_tank1rom1s_lut(8)
     );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_2_Q : LUT4
+  U3_Madd_tank1rom1s_lut_7_Q : LUT4
     generic map(
-      INIT => X"6669"
+      INIT => X"A695"
     )
     port map (
-      I0 => U2_vcs(2),
-      I1 => screenstate_sig_hill3(2),
-      I2 => screenstate_sig_hill3(0),
-      I3 => screenstate_sig_hill3(1),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(2)
+      I0 => U3_tank1rom10s_sub0001(7),
+      I1 => U3_RMht1(2),
+      I2 => N37,
+      I3 => N36,
+      O => U3_Madd_tank1rom1s_lut(7)
     );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_1_Q : LUT3
+  U3_Madd_tank1rom1s_lut_5_Q : LUT4
     generic map(
-      INIT => X"96"
+      INIT => X"A695"
     )
     port map (
-      I0 => U2_vcs(1),
-      I1 => screenstate_sig_hill3(1),
-      I2 => screenstate_sig_hill3(0),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(1)
+      I0 => U3_tank1rom10s_sub0001(5),
+      I1 => U3_RMht1(5),
+      I2 => N42,
+      I3 => U3_RMht1(1),
+      O => U3_Madd_tank1rom1s_lut(5)
     );
-  U3_Mcompar_spriteonB3_cmp_ge0000_lut_0_Q : LUT2
+  U3_Madd_tank1rom10s_lut_6_Q : LUT4
     generic map(
-      INIT => X"6"
+      INIT => X"56AA"
     )
     port map (
-      I0 => U2_vcs(0),
-      I1 => screenstate_sig_hill3(0),
-      O => U3_Mcompar_spriteonB3_cmp_ge0000_lut(0)
+      I0 => U3_tank1rom10s_sub0001(6),
+      I1 => U3_RMht1(3),
+      I2 => U3_RMht1(4),
+      I3 => U3_RMht1(5),
+      O => U3_Madd_tank1rom10s_lut_6_Q_1146
     );
-  U3_Mcompar_spriteonB2_cmp_ge0000_lut_7_Q : LUT2
+  U3_Madd_tank2rom10s_lut_5_Q : LUT4
     generic map(
-      INIT => X"6"
+      INIT => X"6696"
     )
     port map (
-      I0 => U2_vcs(7),
-      I1 => screenstate_sig_hill2(7),
-      O => U3_Mcompar_spriteonB2_cmp_ge0000_lut(7)
+      I0 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I1 => U3_Msub_ypix1_Madd_lut(5),
+      I2 => U3_font3_cmp_lt0000,
+      I3 => U3_font3_cmp_lt0001,
+      O => U3_Madd_tank2rom10s_lut_5_Q_1172
     );
-  U3_Mcompar_spriteonB1_cmp_ge0000_lut_7_Q : LUT4
+  U3_Madd_tank2rom10s_lut_4_Q : LUT4
     generic map(
-      INIT => X"9666"
+      INIT => X"59AA"
     )
     port map (
-      I0 => U2_vcs(7),
-      I1 => screenstate_sig_hill1(7),
-      I2 => screenstate_sig_hill1(6),
-      I3 => U3_Madd_spriteonB1_add0000_cy_5_Q,
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_lut(7)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_lut_6_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_vcs(6),
-      I1 => screenstate_sig_hill1(6),
-      I2 => U3_Madd_spriteonB1_add0000_cy_5_Q,
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_lut(6)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_lut_5_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => U2_vcs(5),
-      I1 => screenstate_sig_hill1(4),
-      I2 => screenstate_sig_hill1(5),
-      I3 => U3_Madd_spriteonB1_add0000_cy_3_Q,
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_lut(5)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_lut_4_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_vcs(4),
-      I1 => screenstate_sig_hill1(4),
-      I2 => U3_Madd_spriteonB1_add0000_cy_3_Q,
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_lut(4)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_lut_3_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => U2_vcs(3),
-      I1 => screenstate_sig_hill1(1),
-      I2 => screenstate_sig_hill1(3),
-      I3 => screenstate_sig_hill1(2),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_lut(3)
-    );
-  U3_Mcompar_spriteonB1_cmp_ge0000_lut_2_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_vcs(2),
-      I1 => screenstate_sig_hill1(1),
-      I2 => screenstate_sig_hill1(2),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_lut(2)
-    );
-  title_Madd_rom_addr2_add0000_Madd_lut_9_Q : LUT4
-    generic map(
-      INIT => X"9969"
-    )
-    port map (
-      I0 => U2_hcs(9),
-      I1 => title_rom_addr2_addsub0001(9),
-      I2 => U2_hcs(8),
-      I3 => title_N27,
-      O => title_Madd_rom_addr2_add0000_Madd_lut(9)
-    );
-  title_Madd_rom_addr2_add0000_Madd_lut_8_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0001(8),
-      I1 => U2_hcs(8),
-      I2 => title_N27,
-      O => title_Madd_rom_addr2_add0000_Madd_lut(8)
-    );
-  title_Madd_rom_addr2_add0000_Madd_lut_6_Q : LUT3
-    generic map(
-      INIT => X"96"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0001(6),
-      I1 => U2_hcs(6),
-      I2 => title_N01,
-      O => title_Madd_rom_addr2_add0000_Madd_lut(6)
-    );
-  title_Madd_rom_addr2_add0000_Madd_lut_4_Q : LUT4
-    generic map(
-      INIT => X"6669"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0001(4),
-      I1 => U2_hcs(4),
-      I2 => U2_hcs(2),
-      I3 => U2_hcs(3),
-      O => title_Madd_rom_addr2_add0000_Madd_lut(4)
-    );
-  title_Madd_rom_addr2_add0000_Madd_lut_3_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => title_ypix_addsub0000_0_Q,
-      I1 => U2_hcs(3),
-      I2 => U2_hcs(2),
-      O => title_Madd_rom_addr2_add0000_Madd_lut(3)
-    );
-  x7_an_2_mux000141 : LUT4
-    generic map(
-      INIT => X"FDDD"
-    )
-    port map (
-      I0 => x7_clkdiv(19),
-      I1 => x7_clkdiv(18),
-      I2 => x7_an_1_mux000128,
-      I3 => x7_an_2_mux000128_2095,
-      O => an_2_OBUF_1493
+      I0 => U3_tank1rom10s_sub0001(4),
+      I1 => U3_font3_cmp_lt0002,
+      I2 => U3_font3_cmp_lt0001,
+      I3 => U3_font3_cmp_lt0000,
+      O => U3_Madd_tank2rom10s_lut_4_Q_1171
     );
   nes_nes_clk33_SW0 : LUT4
     generic map(
@@ -13391,8 +16434,8 @@ begin
       I0 => nes_counter_reg(3),
       I1 => nes_counter_reg(1),
       I2 => nes_counter_reg(2),
-      I3 => nes_nes_clk31_1640,
-      O => N232
+      I3 => nes_nes_clk31_2426,
+      O => N284
     );
   nes_nes_clk33 : LUT4
     generic map(
@@ -13402,139 +16445,107 @@ begin
       I0 => nes_counter_reg(0),
       I1 => nes_counter_reg(4),
       I2 => nes_counter_reg(9),
-      I3 => N232,
-      O => ja3_OBUF_1539
+      I3 => N284,
+      O => ja3_OBUF_2325
     );
-  U3_spriteonGrnd_and000074_SW0 : LUT4
+  x7_an_1_mux000148 : LUT4
     generic map(
-      INIT => X"FFA8"
+      INIT => X"FF5D"
     )
     port map (
-      I0 => U2_vcs(5),
-      I1 => U2_vcs(4),
-      I2 => U3_spriteonGrnd_and000047_1404,
-      I3 => U2_vcs(6),
-      O => N234
+      I0 => x7_clkdiv(18),
+      I1 => N286,
+      I2 => sig_tank1_angle_calc_2_Q,
+      I3 => x7_clkdiv(19),
+      O => an_1_OBUF_2278
     );
-  U3_spriteonGrnd_and000074 : LUT4
+  title_green_cmp_lt0000242_SW0 : LUT4
     generic map(
-      INIT => X"EAAA"
+      INIT => X"F7FF"
     )
     port map (
-      I0 => U2_vcs(9),
-      I1 => U2_vcs(7),
-      I2 => U2_vcs(8),
-      I3 => N234,
-      O => U3_spriteonGrnd_and000074_1405
+      I0 => U2_vcs(1),
+      I1 => U2_vcs(2),
+      I2 => title_green_cmp_lt0000225_2589,
+      I3 => U2_vcs(3),
+      O => N288
     );
-  U3_tank1Angle10s_cmp_le0000130 : LUT4
+  title_green_cmp_lt0000242 : LUT4
     generic map(
-      INIT => X"0001"
+      INIT => X"0405"
+    )
+    port map (
+      I0 => U2_vcs(8),
+      I1 => N288,
+      I2 => U2_vcs(9),
+      I3 => U2_vcs(0),
+      O => title_green_cmp_lt0000
+    );
+  U3_spriteonGrnd_and000063_SW0 : LUT4
+    generic map(
+      INIT => X"F7FF"
     )
     port map (
       I0 => U2_vcs(6),
       I1 => U2_vcs(7),
-      I2 => U2_vcs(8),
-      I3 => N236,
-      O => U3_tank1Angle10s_cmp_le00002
+      I2 => title_spriteon_and0000169_2593,
+      I3 => U2_vcs(8),
+      O => N290
     );
-  U3_tank1Angle10s_and000055 : LUT4
+  U3_spriteonGrnd_and000063 : LUT4
     generic map(
-      INIT => X"0020"
+      INIT => X"F7FF"
     )
     port map (
-      I0 => U3_tank1Angle10s_and000042_1412,
-      I1 => U2_hcs(9),
-      I2 => U3_tank1Angle10s_cmp_gt0000,
-      I3 => U2_hcs(8),
-      O => U3_tank1Angle10s_and000055_1413
+      I0 => U2_vcs(3),
+      I1 => U2_vcs(4),
+      I2 => N290,
+      I3 => U2_vcs(5),
+      O => U3_spriteonGrnd_and000063_2132
     );
-  U3_spriteonB4_and000029 : LUT4
+  U3_spriteonGrnd_and0000117 : LUT4
     generic map(
-      INIT => X"1333"
+      INIT => X"2000"
     )
     port map (
-      I0 => U2_hcs(3),
-      I1 => N238,
-      I2 => U2_hcs(4),
-      I3 => U2_hcs(2),
-      O => U3_spriteonB4_and000029_1392
+      I0 => U3_spriteonGrnd_and000063_2132,
+      I1 => U2_vcs(9),
+      I2 => U3_spriteonGrnd_and0000103_2126,
+      I3 => U3_spriteonGrnd_and000041_2130,
+      O => U3_spriteonGrnd_and0000117_2127
     );
-  U3_spriteonB5_and000033_SW0 : LUT3
+  U3_spriteonB1_and0000115 : LUT4
     generic map(
-      INIT => X"80"
+      INIT => X"AAA8"
     )
     port map (
-      I0 => U2_hcs(1),
-      I1 => U2_hcs(2),
-      I2 => U2_hcs(3),
-      O => N240
+      I0 => U3_spriteonB1_and0000113,
+      I1 => U2_vcs(4),
+      I2 => U2_vcs(5),
+      I3 => U3_spriteonB1_and000017_2099,
+      O => U3_spriteonB1_and0000115_2098
     );
-  U3_spriteonB1_and000036_SW0 : LUT4
-    generic map(
-      INIT => X"FFFB"
-    )
-    port map (
-      I0 => U2_hcs(5),
-      I1 => U2_hcs(7),
-      I2 => U2_hcs(6),
-      I3 => U2_hcs(3),
-      O => N242
-    );
-  U3_spriteonB1_and000036 : LUT4
-    generic map(
-      INIT => X"0103"
-    )
-    port map (
-      I0 => U2_hcs(2),
-      I1 => U2_hcs(4),
-      I2 => N242,
-      I3 => U2_hcs(1),
-      O => U3_spriteonB1_and000036_1373
-    );
-  U3_spriteonB1_and000048_SW0 : LUT4
-    generic map(
-      INIT => X"FFA8"
-    )
-    port map (
-      I0 => U2_hcs(4),
-      I1 => U2_hcs(2),
-      I2 => U2_hcs(3),
-      I3 => U2_hcs(5),
-      O => N244
-    );
-  U3_spriteonB1_and000048 : LUT4
-    generic map(
-      INIT => X"FF08"
-    )
-    port map (
-      I0 => N244,
-      I1 => U2_hcs(6),
-      I2 => U2_hcs(7),
-      I3 => U3_spriteonB1_and000036_1373,
-      O => U3_spriteonB1_and000048_1374
-    );
-  selector_green_0_20_SW0 : LUT4
-    generic map(
-      INIT => X"5554"
-    )
-    port map (
-      I0 => U3_spriteonB3,
-      I1 => U3_N15,
-      I2 => U3_spriteonB4,
-      I3 => U3_spriteonB5,
-      O => N246
-    );
-  selector_green_0_20 : LUT4
+  M2a_29_2 : LUT4
     generic map(
       INIT => X"FF02"
     )
     port map (
-      I0 => N246,
-      I1 => U3_spriteonB1,
-      I2 => U3_spriteonB2,
-      I3 => U3_spriteonGrnd,
-      O => selector_green_0_20_1806
+      I0 => rom1_addr(3),
+      I1 => rom1_addr(1),
+      I2 => rom1_addr(2),
+      I3 => rom1_addr(4),
+      O => M2a_29_2_231
+    );
+  selector_green_0_58 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U3_spriteonB1,
+      I1 => U3_spriteonB2,
+      I2 => screenstate_present_state_FSM_FFd1_2478,
+      I3 => N294,
+      O => selector_green_0_58_2485
     );
   U3_blue_and00021 : LUT4
     generic map(
@@ -13544,7 +16555,7 @@ begin
       I0 => U3_M2a_mux0000,
       I1 => U3_Mcompar_spriteon2f_cmp_gt0000_cy(9),
       I2 => U3_spriteon2f_cmp_le0000,
-      I3 => U3_N57,
+      I3 => U3_N90,
       O => U3_blue_and0002
     );
   U3_blue_and00011 : LUT4
@@ -13555,69 +16566,81 @@ begin
       I0 => U3_spriteon2_cmp_ge0000,
       I1 => U3_Mcompar_spriteon2_cmp_lt0000_cy(9),
       I2 => U3_M2_mux0000,
-      I3 => U3_N57,
+      I3 => U3_N90,
       O => U3_blue_and0001
     );
-  selector_green_2_4 : LUT4
+  selector_green_1_21 : LUT4
     generic map(
-      INIT => X"AAA8"
+      INIT => X"0D08"
     )
     port map (
-      I0 => U3_N13,
-      I1 => U3_N8,
-      I2 => U3_N52,
-      I3 => U3_spriteonGrnd,
-      O => selector_green_2_4_1814
+      I0 => U3_spriteonB3,
+      I1 => U3_N37,
+      I2 => N296,
+      I3 => U3_N1,
+      O => selector_green_1_21_2487
     );
-  screenstate_Madd_sig_hill2_addsub0000_xor_5_11 : LUT4
+  selector_red_0_34 : LUT4
     generic map(
-      INIT => X"3C6C"
+      INIT => X"0100"
     )
     port map (
-      I0 => screenstate_sig_hill2(2),
-      I1 => screenstate_sig_hill2(5),
-      I2 => screenstate_sig_hill2(4),
-      I3 => screenstate_sig_hill2(3),
-      O => screenstate_sig_hill2_addsub0000(5)
+      I0 => U3_spriteonB1,
+      I1 => U3_spriteonB2,
+      I2 => N298,
+      I3 => U3_N87,
+      O => selector_red_0_34_2492
     );
-  screenstate_Madd_sig_hill1_addsub0000_xor_3_11 : LUT3
+  M2_21_f51 : LUT3
     generic map(
-      INIT => X"56"
+      INIT => X"72"
     )
     port map (
-      I0 => screenstate_sig_hill1(3),
-      I1 => screenstate_sig_hill1(1),
-      I2 => screenstate_sig_hill1(2),
-      O => screenstate_sig_hill1_addsub0000(3)
+      I0 => rom1_addr(4),
+      I1 => M2_21_bdd0,
+      I2 => M1_10_2,
+      O => M2_21_Q
     );
-  screenstate_Madd_sig_hill1_addsub0000_xor_4_11 : LUT4
+  U3_destroy1_mux001562_SW0 : LUT4
     generic map(
-      INIT => X"3C6C"
+      INIT => X"F888"
     )
     port map (
-      I0 => screenstate_sig_hill1(2),
-      I1 => screenstate_sig_hill1(4),
-      I2 => screenstate_sig_hill1(3),
-      I3 => screenstate_sig_hill1(1),
-      O => screenstate_sig_hill1_addsub0000(4)
+      I0 => U3_N33,
+      I1 => U3_spriteonB5,
+      I2 => U3_blue_and0002,
+      I3 => U3_tank2HP_2_Q,
+      O => N300
     );
-  screenstate_Mcount_sig_hill3_eqn_01 : LUT3
+  U3_tank2HP_mux0007_0_SW1 : LUT4
     generic map(
-      INIT => X"C8"
+      INIT => X"FDFF"
     )
     port map (
-      I0 => screenstate_Mcount_sig_hill3_eqn_018_1707,
-      I1 => screenstate_Result(0),
-      I2 => screenstate_Mcount_sig_hill3_eqn_0121_1706,
-      O => screenstate_Mcount_sig_hill3_eqn_0
+      I0 => U3_blue_and0002,
+      I1 => U3_blue_and0001,
+      I2 => U3_blue_and0000,
+      I3 => U3_spriteonM1,
+      O => N302
+    );
+  U3_tank2HP_mux0007_0_Q : LUT4
+    generic map(
+      INIT => X"FAC8"
+    )
+    port map (
+      I0 => U3_tank2HP_2_Q,
+      I1 => U3_B_and0000,
+      I2 => sig_gameB,
+      I3 => N302,
+      O => U3_tank2HP_mux0007_0_Q_2257
     );
   U3_Mcount_C2_lut_1_Q : LUT3
     generic map(
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C2(1),
       O => U3_Mcount_C2_lut(1)
     );
@@ -13626,8 +16649,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(1),
       O => U3_Mcount_C1_lut(1)
     );
@@ -13636,8 +16659,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C2(2),
       O => U3_Mcount_C2_lut(2)
     );
@@ -13646,8 +16669,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(2),
       O => U3_Mcount_C1_lut(2)
     );
@@ -13656,8 +16679,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C2(3),
       O => U3_Mcount_C2_lut(3)
     );
@@ -13666,8 +16689,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(3),
       O => U3_Mcount_C1_lut(3)
     );
@@ -13676,8 +16699,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C2(4),
       O => U3_Mcount_C2_lut(4)
     );
@@ -13686,8 +16709,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(4),
       O => U3_Mcount_C1_lut(4)
     );
@@ -13696,9 +16719,9 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
-      I2 => U3_C2(5),
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
+      I2 => U3_C2_5_1_820,
       O => U3_Mcount_C2_lut(5)
     );
   U3_Mcount_C1_lut_5_Q : LUT3
@@ -13706,8 +16729,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(5),
       O => U3_Mcount_C1_lut(5)
     );
@@ -13716,8 +16739,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C2(6),
       O => U3_Mcount_C2_lut(6)
     );
@@ -13726,8 +16749,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(6),
       O => U3_Mcount_C1_lut(6)
     );
@@ -13736,8 +16759,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C2(7),
       O => U3_Mcount_C2_lut(7)
     );
@@ -13746,8 +16769,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(7),
       O => U3_Mcount_C1_lut(7)
     );
@@ -13756,8 +16779,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C2(8),
       O => U3_Mcount_C2_lut(8)
     );
@@ -13766,8 +16789,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(8),
       O => U3_Mcount_C1_lut(8)
     );
@@ -13776,8 +16799,8 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C2(9),
       O => U3_Mcount_C2_lut(9)
     );
@@ -13786,170 +16809,408 @@ begin
       INIT => X"78"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_7_OBUF_2341,
       I2 => U3_C1(9),
       O => U3_Mcount_C1_lut(9)
     );
-  screenstate_Mcount_sig_hill3_eqn_21 : LUT3
-    generic map(
-      INIT => X"C8"
-    )
-    port map (
-      I0 => screenstate_Mcount_sig_hill3_eqn_018_1707,
-      I1 => screenstate_Result(2),
-      I2 => N513,
-      O => screenstate_Mcount_sig_hill3_eqn_2
-    );
-  screenstate_Mcount_sig_hill3_eqn_11 : LUT3
-    generic map(
-      INIT => X"C8"
-    )
-    port map (
-      I0 => screenstate_Mcount_sig_hill3_eqn_018_1707,
-      I1 => screenstate_Result(1),
-      I2 => screenstate_Mcount_sig_hill3_eqn_0121_1706,
-      O => screenstate_Mcount_sig_hill3_eqn_1
-    );
-  U3_Mcount_tank2_angle_calc_lut_1_Q : LUT4
-    generic map(
-      INIT => X"9333"
-    )
-    port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => U3_tank2_angle_calc(1),
-      I2 => ld_5_OBUF_1553,
-      I3 => U3_tank2_angle_calc(0),
-      O => U3_Mcount_tank2_angle_calc_lut(1)
-    );
-  U3_Mcount_tank1_angle_calc_lut_1_Q : LUT4
-    generic map(
-      INIT => X"9333"
-    )
-    port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => U3_tank1_angle_calc(1),
-      I2 => ld_5_OBUF_1553,
-      I3 => U3_tank1_angle_calc(0),
-      O => U3_Mcount_tank1_angle_calc_lut(1)
-    );
   U3_Mcount_C2_lut_0_Q : LUT3
     generic map(
-      INIT => X"95"
+      INIT => X"93"
     )
     port map (
-      I0 => U3_C2(0),
-      I1 => screenstate_present_state_FSM_FFd1_1729,
-      I2 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_C2(0),
+      I2 => ld_7_OBUF_2341,
       O => U3_Mcount_C2_lut(0)
     );
   U3_Mcount_C1_lut_0_Q : LUT3
     generic map(
-      INIT => X"95"
+      INIT => X"93"
     )
     port map (
-      I0 => U3_C1(0),
-      I1 => screenstate_present_state_FSM_FFd1_1729,
-      I2 => ld_7_OBUF_1555,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_C1(0),
+      I2 => ld_7_OBUF_2341,
       O => U3_Mcount_C1_lut(0)
+    );
+  U3_CM2_Q_mux0000_0_1 : LUT4
+    generic map(
+      INIT => X"EC4C"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_CM2_sub0000(0),
+      I2 => ld_0_OBUF_2334,
+      I3 => U3_C2(0),
+      O => U3_CM2_Q_mux0000(0)
+    );
+  U3_CM1_Q_mux0000_0_1 : LUT4
+    generic map(
+      INIT => X"EC4C"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_CM1_add0000(0),
+      I2 => ld_0_OBUF_2334,
+      I3 => U3_CM1_add0000_0(0),
+      O => U3_CM1_Q_mux0000(0)
+    );
+  U3_tank1HP_mux0005_0_SW0 : LUT3
+    generic map(
+      INIT => X"EA"
+    )
+    port map (
+      I0 => U3_tank1HP_2_Q,
+      I1 => screenstate_present_state_FSM_FFd1_2478,
+      I2 => ld_1_OBUF_2335,
+      O => N4
+    );
+  U3_tank2HP_mux0007_2_SW0 : LUT3
+    generic map(
+      INIT => X"D5"
+    )
+    port map (
+      I0 => U3_tank2HP_0_Q,
+      I1 => screenstate_present_state_FSM_FFd1_2478,
+      I2 => ld_1_OBUF_2335,
+      O => N6
+    );
+  U3_tank1HP_mux0005_2_SW0 : LUT3
+    generic map(
+      INIT => X"D5"
+    )
+    port map (
+      I0 => U3_tank1HP_0_Q,
+      I1 => screenstate_present_state_FSM_FFd1_2478,
+      I2 => ld_1_OBUF_2335,
+      O => N9
+    );
+  U3_destroy1_mux001527_SW0 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => U3_spriteonM1,
+      I1 => U3_spriteonGrnd,
+      I2 => U3_destroy1_mux00154_2038,
+      O => N304
+    );
+  U3_destroy1_mux001527 : LUT4
+    generic map(
+      INIT => X"040C"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => U3_destroy1_2035,
+      I2 => N304,
+      I3 => ld_1_OBUF_2335,
+      O => U3_destroy1_mux001527_2037
+    );
+  who_present_state_FSM_FFd1_In1 : LUT4
+    generic map(
+      INIT => X"D555"
+    )
+    port map (
+      I0 => who_present_state_FSM_N0,
+      I1 => screenstate_present_state_FSM_FFd1_2478,
+      I2 => ld_0_OBUF_2334,
+      I3 => who_present_state_FSM_FFd1_2609,
+      O => who_present_state_FSM_FFd1_In
+    );
+  U3_Result_1_21 : LUT4
+    generic map(
+      INIT => X"9666"
+    )
+    port map (
+      I0 => U3_RMht2(1),
+      I1 => U3_RMht2(0),
+      I2 => screenstate_present_state_FSM_FFd1_2478,
+      I3 => ld_6_OBUF_2340,
+      O => U3_Result_1_2
+    );
+  U3_Result_1_11 : LUT4
+    generic map(
+      INIT => X"9666"
+    )
+    port map (
+      I0 => U3_RMht1(1),
+      I1 => U3_RMht1(0),
+      I2 => screenstate_present_state_FSM_FFd1_2478,
+      I3 => ld_6_OBUF_2340,
+      O => U3_Result_1_1
+    );
+  M2a_18_11 : LUT4
+    generic map(
+      INIT => X"A404"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => M1a_12_bdd1
+    );
+  M2_21_2 : LUT4
+    generic map(
+      INIT => X"0461"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => M1_10_2
+    );
+  M2a_24_11 : LUT4
+    generic map(
+      INIT => X"FE6C"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => M1a_4_bdd0
+    );
+  M2_24_11 : LUT4
+    generic map(
+      INIT => X"7797"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => M1_4_bdd0
+    );
+  M2_13_21 : LUT4
+    generic map(
+      INIT => X"6FF7"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => M1_14_bdd1
+    );
+  M2_20_44 : LUT4
+    generic map(
+      INIT => X"0060"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => M2_12_44
+    );
+  M2_22_2 : LUT4
+    generic map(
+      INIT => X"0862"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => M2_22_2_164
+    );
+  M2a_4_194 : LUT4
+    generic map(
+      INIT => X"44C5"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => M2a_4_194_244
     );
   U3_spriteon2_addsub0000_7_1 : LUT4
     generic map(
-      INIT => X"C387"
+      INIT => X"C393"
     )
     port map (
-      I0 => U3_C2(4),
-      I1 => U3_C2(6),
-      I2 => U3_C2(7),
-      I3 => U3_C2(5),
+      I0 => U3_C2(5),
+      I1 => U3_C2(7),
+      I2 => U3_C2(6),
+      I3 => U3_C2(4),
       O => U3_spriteon2_addsub0000(7)
     );
   U3_Madd_spriteon2_addsub0000_cy_7_1 : LUT4
     generic map(
-      INIT => X"0600"
+      INIT => X"0060"
     )
     port map (
       I0 => U3_C2(4),
       I1 => U3_C2(5),
-      I2 => U3_C2(7),
-      I3 => U3_C2(6),
+      I2 => U3_C2(6),
+      I3 => U3_C2(7),
       O => U3_Madd_spriteon2_addsub0000_cy_7_Q
     );
   U3_Madd_spriteon1_addsub0001_cy_7_11 : LUT4
     generic map(
-      INIT => X"0600"
+      INIT => X"0060"
     )
     port map (
       I0 => U3_C1(4),
       I1 => U3_C1(5),
-      I2 => U3_C1(7),
-      I3 => U3_C1(6),
+      I2 => U3_C1(6),
+      I3 => U3_C1(7),
       O => U3_Madd_spriteon1_addsub0001_cy_7_Q
     );
-  U3_Mmux_M1_mux0000_83 : LUT4
+  U3_font4_5_54 : LUT4
     generic map(
-      INIT => X"2227"
+      INIT => X"1B5F"
+    )
+    port map (
+      I0 => U3_RMht2(5),
+      I1 => U3_Msub_font4_sub0002_cy(3),
+      I2 => N1,
+      I3 => U3_RMht2(4),
+      O => U3_font4_5_Q
+    );
+  M2_4_11 : LUT4
+    generic map(
+      INIT => X"2AEC"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => M2_4_bdd0
+    );
+  M2_10_41 : LUT4
+    generic map(
+      INIT => X"74D4"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(1),
+      O => M2_10_bdd5
+    );
+  M1_23_11 : LUT3
+    generic map(
+      INIT => X"13"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      O => M1_23_bdd0
+    );
+  M2a_4_36 : LUT4
+    generic map(
+      INIT => X"9454"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(1),
+      O => M2a_4_36_246
+    );
+  M1_24_11 : LUT4
+    generic map(
+      INIT => X"FF13"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M1_22_bdd9,
+      I3 => sig_tank1rom10s(2),
+      O => M1_24_bdd0
+    );
+  M1_28_71 : LUT4
+    generic map(
+      INIT => X"22A8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => M1_27_13,
+      I3 => sig_tank1rom10s(0),
+      O => M1_28_71_57
+    );
+  x7_an_2_mux000117 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => U3_RMht1(2),
+      I1 => U3_RMht1(0),
+      I2 => U3_RMht1(3),
+      I3 => U3_RMht1(1),
+      O => x7_an_2_mux000117_2678
+    );
+  M1_27_11 : LUT4
+    generic map(
+      INIT => X"72F3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => M1_22_bdd9,
+      O => M1_27_bdd0
+    );
+  M1_23_21 : LUT4
+    generic map(
+      INIT => X"75EC"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M1_23_bdd6,
+      I3 => sig_tank1rom10s(2),
+      O => M1_23_bdd1
+    );
+  M1_26_25 : LUT4
+    generic map(
+      INIT => X"66F6"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M1_21_bdd5,
+      I3 => sig_tank1rom10s(2),
+      O => M1_26_25_38
+    );
+  M1_26_58 : LUT4
+    generic map(
+      INIT => X"9BD9"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => M1_22_bdd9,
+      O => M1_26_58_39
+    );
+  U3_Mmux_M1a_mux0000_9 : LUT3
+    generic map(
+      INIT => X"1B"
     )
     port map (
       I0 => rom1_addr(4),
-      I1 => N248,
-      I2 => M1_0_bdd2,
-      I3 => N82,
-      O => U3_Mmux_M1_mux0000_83_1113
+      I1 => M1a_14_bdd0,
+      I2 => N314,
+      O => U3_Mmux_M1a_mux0000_9_1647
     );
-  M1a_4_11 : LUT4
-    generic map(
-      INIT => X"9D5F"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(1),
-      O => M1a_4_bdd0
-    );
-  M1_9_1 : LUT4
-    generic map(
-      INIT => X"1795"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => M1_9_1_74
-    );
-  M1_3_1 : LUT4
-    generic map(
-      INIT => X"1790"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => M1_3_1_67
-    );
-  M1a_12_21 : LUT4
-    generic map(
-      INIT => X"0113"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => M1a_12_bdd1
-    );
-  U3_Mmux_M1a_mux0000_85_SW0 : LUT3
+  U3_Mmux_M1a_mux0000_73 : LUT3
     generic map(
       INIT => X"B1"
     )
     port map (
-      I0 => U3_xpix1(0),
-      I1 => M1a_3_1_125,
-      I2 => N42,
-      O => N254
+      I0 => rom1_addr(4),
+      I1 => M1a_14_bdd0,
+      I2 => N316,
+      O => U3_Mmux_M1a_mux0000_73_1636
     );
   U3_Mmux_M1a_mux0000_85 : LUT3
     generic map(
@@ -13958,48 +17219,8 @@ begin
     port map (
       I0 => rom1_addr(4),
       I1 => M1a_4_bdd0,
-      I2 => N254,
-      O => U3_Mmux_M1a_mux0000_85_1148
-    );
-  U3_Mmux_M2a_mux0000_71 : LUT3
-    generic map(
-      INIT => X"B1"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => M1a_4_bdd0,
-      I2 => N256,
-      O => U3_Mmux_M2a_mux0000_71_1197
-    );
-  U3_Mmux_M2a_mux0000_9 : LUT3
-    generic map(
-      INIT => X"1B"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => M1a_14_bdd0,
-      I2 => N258,
-      O => U3_Mmux_M2a_mux0000_9_1212
-    );
-  U3_Mmux_M2a_mux0000_73 : LUT3
-    generic map(
-      INIT => X"B1"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => M1a_14_bdd0,
-      I2 => N260,
-      O => U3_Mmux_M2a_mux0000_73_1199
-    );
-  U3_Mmux_M1_mux0000_9_SW0 : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => U3_xpix1(0),
-      I1 => N62,
-      I2 => N93,
-      O => N262
+      I2 => N318,
+      O => U3_Mmux_M1a_mux0000_85_1645
     );
   U3_Mmux_M1_mux0000_9 : LUT3
     generic map(
@@ -14008,8 +17229,69 @@ begin
     port map (
       I0 => rom1_addr(4),
       I1 => M1_14_bdd1,
-      I2 => N262,
-      O => U3_Mmux_M1_mux0000_9_1118
+      I2 => N320,
+      O => U3_Mmux_M1_mux0000_9_1617
+    );
+  U3_Mmux_M1_mux0000_85 : LUT3
+    generic map(
+      INIT => X"1B"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => N72,
+      I2 => N322,
+      O => U3_Mmux_M1_mux0000_85_1615
+    );
+  U3_rise2_and000011 : LUT4
+    generic map(
+      INIT => X"040C"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => who_present_state_FSM_FFd2_2611,
+      I2 => who_present_state_FSM_FFd1_2609,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RM2_and0000
+    );
+  U3_CM2_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => U3_Mhorz_1580,
+      I1 => who_present_state_FSM_FFd2_2611,
+      I2 => who_present_state_FSM_FFd1_2609,
+      O => U3_CM2_and0000
+    );
+  x7_an_2_mux000134_SW0 : LUT3
+    generic map(
+      INIT => X"E7"
+    )
+    port map (
+      I0 => U3_Madd_tank1ascii1s_add0000_cy_5_bdd2,
+      I1 => U3_RMht1(4),
+      I2 => U3_RMht1(5),
+      O => N324
+    );
+  x7_an_2_mux000134 : LUT4
+    generic map(
+      INIT => X"FF5D"
+    )
+    port map (
+      I0 => x7_clkdiv(19),
+      I1 => x7_an_2_mux000117_2678,
+      I2 => N324,
+      I3 => x7_clkdiv(18),
+      O => an_2_OBUF_2279
+    );
+  U3_green_2_311 : LUT2
+    generic map(
+      INIT => X"E"
+    )
+    port map (
+      I0 => who_present_state_FSM_FFd1_2609,
+      I1 => who_present_state_FSM_FFd2_2611,
+      O => U3_N37
     );
   U3_spriteon2_addsub0000_6_1 : LUT3
     generic map(
@@ -14026,8 +17308,8 @@ begin
       INIT => X"1E78"
     )
     port map (
-      I0 => U3_C2(8),
-      I1 => U3_Madd_spriteon2f_add0002_cy(7),
+      I0 => U3_Madd_spriteon2f_add0004_cy(7),
+      I1 => U3_C2(8),
       I2 => U3_C2(9),
       I3 => U3_Madd_spriteon2_addsub0000_cy_7_Q,
       O => U3_spriteon2_addsub0000(9)
@@ -14037,303 +17319,461 @@ begin
       INIT => X"1E78"
     )
     port map (
-      I0 => U3_C1(8),
-      I1 => U3_Madd_spriteon1_addsub0000_cy(7),
+      I0 => U3_Madd_spriteon1_addsub0000_cy(7),
+      I1 => U3_C1(8),
       I2 => U3_C1(9),
       I3 => U3_Madd_spriteon1_addsub0001_cy_7_Q,
       O => U3_spriteon1_addsub0001(9)
     );
-  selector_red_0_118_SW0 : LUT4
+  U3_RMht1_not000131 : LUT4
     generic map(
-      INIT => X"CC08"
+      INIT => X"C080"
     )
     port map (
-      I0 => selector_red_0_37_1818,
-      I1 => vidon,
-      I2 => U3_blue_and0001,
-      I3 => U3_blue_and0000,
-      O => N270
+      I0 => ld_5_OBUF_2339,
+      I1 => sig_tank2,
+      I2 => screenstate_present_state_FSM_FFd1_2478,
+      I3 => ld_6_OBUF_2340,
+      O => U3_RMht1_not0001_bdd1
     );
-  selector_red_0_118 : LUT4
+  x7_an_1_mux000110 : LUT4
     generic map(
-      INIT => X"FF08"
+      INIT => X"0090"
     )
     port map (
-      I0 => N270,
-      I1 => screenstate_present_state_FSM_FFd1_1729,
-      I2 => U3_B_and0000,
-      I3 => selector_red_0_115_1816,
-      O => red_0_OBUF_1684
+      I0 => U3_RMht1(3),
+      I1 => U3_RMht1(2),
+      I2 => U3_RMht1(1),
+      I3 => U3_RMht1(0),
+      O => x7_an_1_mux000110_2677
     );
-  U3_tank2_angle_calc_not00011 : LUT4
+  U3_spriteonB2_and000041 : LUT4
     generic map(
-      INIT => X"A080"
+      INIT => X"0100"
     )
     port map (
-      I0 => who_present_state_FSM_FFd2_2022,
-      I1 => ld_5_OBUF_1553,
-      I2 => screenstate_present_state_FSM_FFd1_1729,
-      I3 => ld_6_OBUF_1554,
-      O => U3_tank2_angle_calc_not0001
+      I0 => U2_hcs(9),
+      I1 => U3_spriteonB1_cmp_le00002,
+      I2 => N326,
+      I3 => U3_N191,
+      O => U3_spriteonB2
     );
-  U3_tank1_angle_calc_not00011 : LUT4
+  U3_spriteonB4_and000050 : LUT4
     generic map(
-      INIT => X"0A08"
+      INIT => X"B111"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => ld_5_OBUF_1553,
-      I2 => who_present_state_FSM_FFd2_2022,
-      I3 => ld_6_OBUF_1554,
-      O => U3_tank1_angle_calc_not0001
+      I0 => U2_hcs(9),
+      I1 => U3_spriteonB3_cmp_le00002,
+      I2 => U3_spriteonB4_cmp_le000018_2121,
+      I3 => U3_spriteonB4_cmp_le0000121_2120,
+      O => U3_spriteonB4_and000050_2116
     );
-  M1_23_11 : LUT3
+  M2_12_31 : LUT3
     generic map(
-      INIT => X"32"
+      INIT => X"60"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      O => M1_23_bdd0
-    );
-  M2_9_11 : LUT4
-    generic map(
-      INIT => X"FF08"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => M2_0_bdd13,
-      I3 => rom1_addr(2),
-      O => M2_9_bdd0
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      O => M2_12_bdd5
     );
   M2_7_11 : LUT4
     generic map(
-      INIT => X"D9DB"
+      INIT => X"6CEE"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
       I3 => M2_0_bdd6,
       O => M2_7_bdd0
     );
-  M1_25_21 : LUT4
+  M1a_29_32 : LUT4
     generic map(
-      INIT => X"D9DB"
+      INIT => X"02DF"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => M1_22_bdd9,
-      O => M1_25_bdd1
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => M1_29_bdd5,
+      I3 => M1_22_bdd12,
+      O => M1a_29_32_118
     );
-  M2_21_2 : LUT4
+  M1_31_62 : LUT4
     generic map(
-      INIT => X"C220"
+      INIT => X"CF4F"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
+      I0 => sig_tank1rom10s(1),
+      I1 => M1_27_bdd4,
+      I2 => rom1_addr(3),
+      I3 => sig_tank1rom10s(0),
+      O => M1_31_62_74
+    );
+  M1_23_22 : LUT4
+    generic map(
+      INIT => X"9DBF"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => M1_22_bdd7,
+      I3 => M1_22_bdd4,
+      O => M1_23_22_24
+    );
+  M2_1_101 : LUT4
+    generic map(
+      INIT => X"666E"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_0_bdd18,
       I3 => rom1_addr(3),
-      O => M2_21_2_154
+      O => M2_1_101_155
     );
-  M1_31_14 : LUT4
+  M1_29_69 : LUT4
     generic map(
-      INIT => X"084C"
+      INIT => X"9DBF"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M1_22_bdd9,
-      I3 => M1_21_bdd5,
-      O => M1_31_14_65
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => M1_29_bdd5,
+      I3 => M1_22_bdd12,
+      O => M1_29_69_63
     );
-  M2_1_38_SW0 : LUT3
+  M1_29_77 : LUT4
     generic map(
-      INIT => X"91"
+      INIT => X"3212"
     )
     port map (
-      I0 => M2_0_bdd13,
-      I1 => M2_0_bdd6,
-      I2 => rom1_addr(2),
-      O => N278
+      I0 => sig_tank1rom10s(1),
+      I1 => rom1_addr(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_21_bdd8,
+      O => M1_29_77_64
     );
-  M1_29_80 : LUT4
+  M2a_5_101 : LUT4
     generic map(
-      INIT => X"0B01"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => N280,
-      I2 => rom1_addr(3),
-      I3 => M1_29_56_56,
-      O => M1_29_80_58
-    );
-  M1a_24_21 : LUT4
-    generic map(
-      INIT => X"E040"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => M1_21_bdd5,
-      I2 => rom1_addr(2),
-      I3 => M1_22_bdd9,
-      O => M1a_24_bdd1
-    );
-  M1a_22_11 : LUT3
-    generic map(
-      INIT => X"C8"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M1_22_bdd9,
-      O => M1a_22_bdd0
-    );
-  M1_22_11 : LUT4
-    generic map(
-      INIT => X"FF08"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => M1_21_bdd5,
-      I3 => rom1_addr(2),
-      O => M1_22_bdd0
-    );
-  M2_6_11 : LUT4
-    generic map(
-      INIT => X"D9DB"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => M2_0_bdd6,
-      O => M2_6_bdd0
-    );
-  M1_24_11 : LUT4
-    generic map(
-      INIT => X"D9DB"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => M1_22_bdd9,
-      O => M1_24_bdd0
-    );
-  M2_0_14 : LUT4
-    generic map(
-      INIT => X"084C"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M2_0_bdd6,
-      I3 => M2_0_bdd13,
-      O => M2_0_14_134
-    );
-  M1a_24_13 : LUT4
-    generic map(
-      INIT => X"EAC8"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M1_22_bdd9,
-      I3 => M1_21_bdd5,
-      O => M1a_24_13_99
-    );
-  M1_30_38_SW0 : LUT3
-    generic map(
-      INIT => X"91"
-    )
-    port map (
-      I0 => M1_21_bdd5,
-      I1 => M1_22_bdd9,
-      I2 => rom1_addr(2),
-      O => N286
-    );
-  M2_2_80 : LUT4
-    generic map(
-      INIT => X"0B01"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => N288,
-      I2 => rom1_addr(3),
-      I3 => M2_2_56_161,
-      O => M2_2_80_162
-    );
-  M2a_7_13 : LUT4
-    generic map(
-      INIT => X"EAC8"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M2_0_bdd6,
-      I3 => M2_0_bdd13,
-      O => M2a_7_13_217
-    );
-  M1_23_14 : LUT4
-    generic map(
-      INIT => X"4602"
+      INIT => X"20A8"
     )
     port map (
       I0 => rom1_addr(2),
-      I1 => rom1_addr(0),
-      I2 => M1_22_bdd9,
-      I3 => M1_21_bdd5,
-      O => M1_23_14_25
+      I1 => sig_tank1rom10s(0),
+      I2 => M2_0_bdd6,
+      I3 => M2_0_bdd20,
+      O => M2a_5_101_253
+    );
+  M2_6_31 : LUT4
+    generic map(
+      INIT => X"A6B7"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => M2_0_bdd6,
+      O => M2_6_bdd1
+    );
+  M2_4_31 : LUT4
+    generic map(
+      INIT => X"09CF"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => M2_0_bdd6,
+      I3 => sig_tank1rom10s(0),
+      O => M2_4_bdd2
+    );
+  M2a_10_51 : LUT3
+    generic map(
+      INIT => X"72"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1a_12_bdd0,
+      I2 => M2a_10_28_215,
+      O => M2a_10_Q
+    );
+  M1a_30_37 : LUT4
+    generic map(
+      INIT => X"0257"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => M1_22_bdd7,
+      I3 => M1_22_bdd12,
+      O => M1a_30_37_121
+    );
+  M1_22_37_SW0 : LUT4
+    generic map(
+      INIT => X"1908"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M1_21_bdd8,
+      I3 => M1_22_bdd12,
+      O => N332
+    );
+  M1_30_2 : LUT3
+    generic map(
+      INIT => X"6E"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M1_22_bdd12,
+      O => M1_25_2
+    );
+  M1a_21_47 : LUT3
+    generic map(
+      INIT => X"72"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1a_12_bdd0,
+      I2 => M1a_21_25_98,
+      O => M1a_21_Q
+    );
+  M2a_7_81_SW0 : LUT4
+    generic map(
+      INIT => X"0702"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M2_12_bdd5,
+      I2 => rom1_addr(1),
+      I3 => M2a_6_bdd1,
+      O => N340
+    );
+  M2a_7_81 : LUT4
+    generic map(
+      INIT => X"5F4E"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M2a_7_53_261,
+      I2 => M1a_12_bdd0,
+      I3 => N340,
+      O => M2a_7_Q
+    );
+  M2_3_94 : LUT4
+    generic map(
+      INIT => X"A2F2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => M2_0_bdd20,
+      I2 => rom1_addr(2),
+      I3 => M2_0_bdd13,
+      O => M2_3_94_177
     );
   M2a_6_21 : LUT4
     generic map(
       INIT => X"E040"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => M2_0_bdd13,
+      I0 => sig_tank1rom10s(0),
+      I1 => M2_0_bdd6,
       I2 => rom1_addr(2),
-      I3 => M2_0_bdd6,
+      I3 => M2_0_bdd13,
       O => M2a_6_bdd1
     );
-  M2a_6_11 : LUT3
+  M2_2_111 : LUT4
     generic map(
-      INIT => X"C8"
+      INIT => X"C888"
     )
     port map (
-      I0 => rom1_addr(0),
+      I0 => rom1_addr(3),
       I1 => rom1_addr(2),
-      I2 => M2_0_bdd6,
-      O => M2a_6_bdd0
+      I2 => M2_0_bdd13,
+      I3 => sig_tank1rom10s(0),
+      O => M2_2_111_169
     );
-  M2_8_14 : LUT4
+  selector_red_2_20_SW0 : LUT4
     generic map(
-      INIT => X"4602"
+      INIT => X"AB01"
     )
     port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(0),
-      I2 => M2_0_bdd6,
-      I3 => M2_0_bdd13,
-      O => M2_8_14_186
+      I0 => U3_blue_and0002,
+      I1 => U3_N281,
+      I2 => U3_spriteonB3,
+      I3 => U3_tank2HP_0_Q,
+      O => N352
     );
-  M1a_26_127_SW0 : LUT4
+  selector_red_2_20 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U3_N29,
+      I1 => N352,
+      I2 => U2_vidon_and0000117_774,
+      I3 => U2_vidon_and000039_779,
+      O => selector_red_2_20_2500
+    );
+  M1a_26_131_SW0 : LUT4
     generic map(
       INIT => X"0D08"
     )
     port map (
       I0 => rom1_addr(1),
-      I1 => M1a_26_33_104,
+      I1 => M1a_26_33_111,
       I2 => rom1_addr(3),
-      I3 => M1a_26_53_105,
-      O => N296
+      I3 => M1a_26_55_112,
+      O => N354
+    );
+  M2_6_108_SW0 : LUT4
+    generic map(
+      INIT => X"BBDF"
+    )
+    port map (
+      I0 => rom1_addr(2),
+      I1 => M2_0_bdd6,
+      I2 => sig_tank1rom10s(0),
+      I3 => M2_0_bdd13,
+      O => N356
+    );
+  M2_6_108 : LUT4
+    generic map(
+      INIT => X"1FBF"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => N356,
+      I2 => rom1_addr(1),
+      I3 => M1_10_bdd7,
+      O => M2_6_108_201
+    );
+  x7_Mmux_digit_3 : LUT4
+    generic map(
+      INIT => X"7D28"
+    )
+    port map (
+      I0 => x7_clkdiv(18),
+      I1 => U3_RMht1(4),
+      I2 => U3_Madd_tank1ascii1s_add0000_cy_5_bdd2,
+      I3 => U3_RMht1(0),
+      O => x7_Mmux_digit_3_2653
+    );
+  x7_Mmux_digit_4 : LUT4
+    generic map(
+      INIT => X"7D28"
+    )
+    port map (
+      I0 => x7_clkdiv(18),
+      I1 => U3_RMht2(4),
+      I2 => U3_Msub_font4_sub0002_cy(3),
+      I3 => U3_RMht2(0),
+      O => x7_Mmux_digit_4_2655
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_9_Q : LUT4
+    generic map(
+      INIT => X"9A65"
+    )
+    port map (
+      I0 => U3_CM2(9),
+      I1 => U3_spriteonM2_addsub0000_8_bdd0,
+      I2 => U3_CM2(8),
+      I3 => U2_hcs(9),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(9)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_8_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_CM2(8),
+      I1 => U3_spriteonM2_addsub0000_8_bdd0,
+      I2 => U2_hcs(8),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(8)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_6_Q : LUT4
+    generic map(
+      INIT => X"69C3"
+    )
+    port map (
+      I0 => U3_CM2(4),
+      I1 => U3_CM2(6),
+      I2 => U2_hcs(6),
+      I3 => U3_CM2(5),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(6)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_5_Q : LUT3
+    generic map(
+      INIT => X"69"
+    )
+    port map (
+      I0 => U3_CM2(5),
+      I1 => U3_CM2(4),
+      I2 => U2_hcs(5),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(5)
+    );
+  U3_Mcompar_spriteonM2_cmp_gt0000_lut_4_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_CM2(4),
+      I1 => U2_hcs(4),
+      O => U3_Mcompar_spriteonM2_cmp_gt0000_lut(4)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_9_Q : LUT4
+    generic map(
+      INIT => X"9A65"
+    )
+    port map (
+      I0 => U3_CM1(9),
+      I1 => U3_spriteonM1_addsub0000_8_bdd0,
+      I2 => U3_CM1(8),
+      I3 => U2_hcs(9),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(9)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_8_Q : LUT3
+    generic map(
+      INIT => X"96"
+    )
+    port map (
+      I0 => U3_CM1(8),
+      I1 => U3_spriteonM1_addsub0000_8_bdd0,
+      I2 => U2_hcs(8),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(8)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_6_Q : LUT4
+    generic map(
+      INIT => X"69C3"
+    )
+    port map (
+      I0 => U3_CM1(4),
+      I1 => U3_CM1(6),
+      I2 => U2_hcs(6),
+      I3 => U3_CM1(5),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(6)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_5_Q : LUT3
+    generic map(
+      INIT => X"69"
+    )
+    port map (
+      I0 => U3_CM1(5),
+      I1 => U3_CM1(4),
+      I2 => U2_hcs(5),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(5)
+    );
+  U3_Mcompar_spriteonM1_cmp_gt0000_lut_4_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_CM1(4),
+      I1 => U2_hcs(4),
+      O => U3_Mcompar_spriteonM1_cmp_gt0000_lut(4)
     );
   U3_Mcompar_spriteon2_cmp_lt0000_lut_4_Q : LUT2
     generic map(
@@ -14362,84 +17802,135 @@ begin
       I1 => U2_hcs(4),
       O => U3_Mcompar_spriteon2f_cmp_le0000_lut(4)
     );
-  U3_Msub_xpix2_Madd_lut_4_Q : LUT2
+  U3_Madd_tank2rom1s_lut_6_Q : LUT4
+    generic map(
+      INIT => X"5A69"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(6),
+      I1 => U3_Msub_ypix1_Madd_lut(5),
+      I2 => U3_font4_2_Q,
+      I3 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => U3_Madd_tank2rom1s_lut(6)
+    );
+  U3_Madd_tank2rom1s_lut_5_SW0 : LUT3
+    generic map(
+      INIT => X"65"
+    )
+    port map (
+      I0 => U3_RMht2(1),
+      I1 => U3_font3_cmp_lt0001,
+      I2 => U3_font3_cmp_lt0002,
+      O => N358
+    );
+  U3_Madd_tank2rom1s_lut_5_Q : LUT4
+    generic map(
+      INIT => X"69C3"
+    )
+    port map (
+      I0 => U3_font3_cmp_lt0000,
+      I1 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I2 => U3_Msub_ypix1_Madd_lut(5),
+      I3 => N358,
+      O => U3_Madd_tank2rom1s_lut(5)
+    );
+  U3_Madd_tank1rom1s_lut_6_Q : LUT4
+    generic map(
+      INIT => X"5A69"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(6),
+      I1 => U3_Msub_ypix1_Madd_lut(5),
+      I2 => U3_font2_2_Q,
+      I3 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => U3_Madd_tank1rom1s_lut(6)
+    );
+  U3_Madd_tank1rom10s_lut_9_Q : LUT3
+    generic map(
+      INIT => X"56"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(9),
+      I1 => U3_tank1rom10s_sub0000(8),
+      I2 => U3_tank1rom10s_sub0001_10_bdd0,
+      O => U3_Madd_tank1rom10s_lut_9_Q_1148
+    );
+  U3_Madd_tank1rom10s_lut_8_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(8),
+      I1 => U3_tank1rom10s_sub0001_10_bdd0,
+      O => U3_Madd_tank1rom10s_lut_8_Q_1147
+    );
+  U3_Madd_tank1rom10s_lut_5_SW0 : LUT3
+    generic map(
+      INIT => X"91"
+    )
+    port map (
+      I0 => U3_RMht1(3),
+      I1 => U3_RMht1(4),
+      I2 => U3_RMht1(2),
+      O => N360
+    );
+  U3_Madd_tank1rom10s_lut_5_Q : LUT4
+    generic map(
+      INIT => X"6696"
+    )
+    port map (
+      I0 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I1 => U3_Msub_ypix1_Madd_lut(5),
+      I2 => U3_RMht1(5),
+      I3 => N360,
+      O => U3_Madd_tank1rom10s_lut_5_Q_1145
+    );
+  U3_Madd_tank2rom10s_lut_9_Q : LUT3
+    generic map(
+      INIT => X"56"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(9),
+      I1 => U3_tank1rom10s_sub0000(8),
+      I2 => U3_tank1rom10s_sub0001_10_bdd0,
+      O => U3_Madd_tank2rom10s_lut_9_Q_1175
+    );
+  U3_Madd_tank2rom10s_lut_8_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0000(8),
+      I1 => U3_tank1rom10s_sub0001_10_bdd0,
+      O => U3_Madd_tank2rom10s_lut_8_Q_1174
+    );
+  U3_Msub_rom_pix1_Madd_lut_4_Q : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U2_hcs(4),
+      I1 => U3_C1(4),
+      O => U3_Msub_rom_pix1_Madd_lut(4)
+    );
+  U3_Msub_rom_pix2_Madd_lut_4_Q : LUT2
     generic map(
       INIT => X"6"
     )
     port map (
       I0 => U2_hcs(4),
       I1 => U3_C2(4),
-      O => U3_Msub_xpix2_Madd_lut(4)
-    );
-  U3_Msub_xpix1_Madd_lut_4_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U2_hcs(4),
-      I1 => U3_C1(4),
-      O => U3_Msub_xpix1_Madd_lut(4)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_9_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => U2_hcs(9),
-      I1 => U3_Madd_spriteon1_addsub0000_cy(7),
-      I2 => U3_C1(9),
-      I3 => U3_C1(8),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(9)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_8_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_hcs(8),
-      I1 => U3_C1(8),
-      I2 => U3_Madd_spriteon1_addsub0000_cy(7),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(8)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_6_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => U2_hcs(6),
-      I1 => U3_C1(4),
-      I2 => U3_C1(6),
-      I3 => U3_C1(5),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(6)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_5_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => U2_hcs(5),
-      I1 => U3_C1(5),
-      I2 => U3_C1(4),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(5)
-    );
-  U3_Mcompar_spriteon1_cmp_ge0000_lut_4_Q : LUT2
-    generic map(
-      INIT => X"6"
-    )
-    port map (
-      I0 => U2_hcs(4),
-      I1 => U3_C1(4),
-      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(4)
+      O => U3_Msub_rom_pix2_Madd_lut(4)
     );
   U3_Mcompar_spriteon2_cmp_ge0000_lut_9_Q : LUT4
     generic map(
-      INIT => X"69A5"
+      INIT => X"69C3"
     )
     port map (
-      I0 => U2_hcs(9),
-      I1 => U3_Madd_spriteon2f_add0002_cy(7),
+      I0 => U3_C2(8),
+      I1 => U2_hcs(9),
       I2 => U3_C2(9),
-      I3 => U3_C2(8),
+      I3 => U3_Madd_spriteon2f_add0004_cy(7),
       O => U3_Mcompar_spriteon2_cmp_ge0000_lut(9)
     );
   U3_Mcompar_spriteon2_cmp_ge0000_lut_8_Q : LUT3
@@ -14449,16 +17940,16 @@ begin
     port map (
       I0 => U2_hcs(8),
       I1 => U3_C2(8),
-      I2 => U3_Madd_spriteon2f_add0002_cy(7),
+      I2 => U3_Madd_spriteon2f_add0004_cy(7),
       O => U3_Mcompar_spriteon2_cmp_ge0000_lut(8)
     );
   U3_Mcompar_spriteon2_cmp_ge0000_lut_6_Q : LUT4
     generic map(
-      INIT => X"69A5"
+      INIT => X"69C3"
     )
     port map (
-      I0 => U2_hcs(6),
-      I1 => U3_C2(4),
+      I0 => U3_C2(4),
+      I1 => U2_hcs(6),
       I2 => U3_C2(6),
       I3 => U3_C2(5),
       O => U3_Mcompar_spriteon2_cmp_ge0000_lut(6)
@@ -14482,42 +17973,66 @@ begin
       I1 => U3_C2(4),
       O => U3_Mcompar_spriteon2_cmp_ge0000_lut(4)
     );
-  U3_Mcompar_spriteonB5_cmp_ge0000_lut_1_Q : LUT2
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_9_Q : LUT4
     generic map(
-      INIT => X"6"
+      INIT => X"69C3"
     )
     port map (
-      I0 => U2_vcs(1),
-      I1 => screenstate_sig_hill5(1),
-      O => U3_Mcompar_spriteonB5_cmp_ge0000_lut(1)
+      I0 => U3_C1(8),
+      I1 => U2_hcs(9),
+      I2 => U3_C1(9),
+      I3 => U3_Madd_spriteon1_addsub0000_cy(7),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(9)
     );
-  U3_Mcompar_spriteonB4_cmp_ge0000_lut_0_Q : LUT2
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_8_Q : LUT3
     generic map(
-      INIT => X"6"
+      INIT => X"69"
     )
     port map (
-      I0 => U2_vcs(0),
-      I1 => screenstate_sig_hill4(0),
-      O => U3_Mcompar_spriteonB4_cmp_ge0000_lut(0)
+      I0 => U2_hcs(8),
+      I1 => U3_C1(8),
+      I2 => U3_Madd_spriteon1_addsub0000_cy(7),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(8)
     );
-  U3_Mcompar_spriteonB1_cmp_ge0000_lut_1_Q : LUT2
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_6_Q : LUT4
+    generic map(
+      INIT => X"69C3"
+    )
+    port map (
+      I0 => U3_C1(4),
+      I1 => U2_hcs(6),
+      I2 => U3_C1(6),
+      I3 => U3_C1(5),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(6)
+    );
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_5_Q : LUT3
+    generic map(
+      INIT => X"69"
+    )
+    port map (
+      I0 => U2_hcs(5),
+      I1 => U3_C1(5),
+      I2 => U3_C1(4),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(5)
+    );
+  U3_Mcompar_spriteon1_cmp_ge0000_lut_4_Q : LUT2
     generic map(
       INIT => X"6"
     )
     port map (
-      I0 => U2_vcs(1),
-      I1 => screenstate_sig_hill1(1),
-      O => U3_Mcompar_spriteonB1_cmp_ge0000_lut(1)
+      I0 => U2_hcs(4),
+      I1 => U3_C1(4),
+      O => U3_Mcompar_spriteon1_cmp_ge0000_lut(4)
     );
   U3_Mcompar_spriteon2f_cmp_gt0000_lut_9_Q : LUT4
     generic map(
-      INIT => X"69A5"
+      INIT => X"69C3"
     )
     port map (
-      I0 => U3_C2(9),
-      I1 => U3_Madd_spriteon2f_add0002_cy(7),
+      I0 => U3_C2(8),
+      I1 => U3_C2(9),
       I2 => U2_hcs(9),
-      I3 => U3_C2(8),
+      I3 => U3_Madd_spriteon2f_add0004_cy(7),
       O => U3_Mcompar_spriteon2f_cmp_gt0000_lut(9)
     );
   U3_Mcompar_spriteon2f_cmp_gt0000_lut_8_Q : LUT3
@@ -14526,17 +18041,17 @@ begin
     )
     port map (
       I0 => U3_C2(8),
-      I1 => U3_Madd_spriteon2f_add0002_cy(7),
+      I1 => U3_Madd_spriteon2f_add0004_cy(7),
       I2 => U2_hcs(8),
       O => U3_Mcompar_spriteon2f_cmp_gt0000_lut(8)
     );
   U3_Mcompar_spriteon2f_cmp_gt0000_lut_6_Q : LUT4
     generic map(
-      INIT => X"69A5"
+      INIT => X"69C3"
     )
     port map (
-      I0 => U3_C2(6),
-      I1 => U3_C2(4),
+      I0 => U3_C2(4),
+      I1 => U3_C2(6),
       I2 => U2_hcs(6),
       I3 => U3_C2(5),
       O => U3_Mcompar_spriteon2f_cmp_gt0000_lut(6)
@@ -14560,433 +18075,696 @@ begin
       I1 => U2_hcs(4),
       O => U3_Mcompar_spriteon2f_cmp_gt0000_lut(4)
     );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_10_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => title_ypix_addsub0000_8_Q,
-      I1 => title_Msub_ypix_lut_7_Q,
-      I2 => title_rom_addr2_addsub0000(11),
-      I3 => title_N7,
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(10)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_9_Q : LUT3
-    generic map(
-      INIT => X"96"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0000(10),
-      I1 => title_Msub_ypix_lut_7_Q,
-      I2 => title_N7,
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(9)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_7_Q : LUT4
-    generic map(
-      INIT => X"9666"
-    )
-    port map (
-      I0 => title_rom_addr2_addsub0000(8),
-      I1 => title_Msub_ypix_lut_5_Q,
-      I2 => title_Msub_ypix_lut_4_Q,
-      I3 => title_Msub_ypix_cy(3),
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(7)
-    );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_5_Q : LUT2
-    generic map(
-      INIT => X"9"
-    )
-    port map (
-      I0 => title_ypix_addsub0000_2_Q,
-      I1 => title_Msub_ypix_cy(3),
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(5)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_lut_11_Q : LUT4
-    generic map(
-      INIT => X"9666"
-    )
-    port map (
-      I0 => title_ypix_9_Q,
-      I1 => title_Msub_ypix_lut_5_Q,
-      I2 => title_Msub_ypix_cy(3),
-      I3 => title_Msub_ypix_lut_4_Q,
-      O => title_Madd_rom_addr2_addsub0000_Madd_lut(11)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_lut_10_Q : LUT3
-    generic map(
-      INIT => X"96"
-    )
-    port map (
-      I0 => title_Msub_ypix_lut_4_Q,
-      I1 => title_Msub_ypix_cy(3),
-      I2 => title_ypix_8_Q,
-      O => title_Madd_rom_addr2_addsub0000_Madd_lut(10)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_lut_9_Q : LUT3
-    generic map(
-      INIT => X"69"
-    )
-    port map (
-      I0 => title_Msub_ypix_lut_7_Q,
-      I1 => title_N7,
-      I2 => title_Msub_ypix_cy(3),
-      O => title_Madd_rom_addr2_addsub0000_Madd_lut(9)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_lut_7_Q : LUT4
-    generic map(
-      INIT => X"9666"
-    )
-    port map (
-      I0 => title_ypix_addsub0000_1_Q,
-      I1 => title_Msub_ypix_lut_5_Q,
-      I2 => title_Msub_ypix_lut_4_Q,
-      I3 => title_Msub_ypix_cy(3),
-      O => title_Madd_rom_addr2_addsub0000_Madd_lut(7)
-    );
-  title_Madd_rom_addr2_addsub0000_Madd_lut_6_Q : LUT3
-    generic map(
-      INIT => X"96"
-    )
-    port map (
-      I0 => title_ypix_addsub0000_0_Q,
-      I1 => title_Msub_ypix_lut_4_Q,
-      I2 => title_Msub_ypix_cy(3),
-      O => title_Madd_rom_addr2_addsub0000_Madd_lut(6)
-    );
-  sig_gameA1 : LUT4
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => bounce_delay3(0),
-      I1 => bounce_delay2(0),
-      I2 => bounce_delay1(0),
-      I3 => screenstate_present_state_FSM_FFd1_1729,
-      O => sig_gameA
-    );
   buttons_gameRight1 : LUT4
     generic map(
       INIT => X"8000"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
       I1 => bounce_delay3(4),
       I2 => bounce_delay2(4),
       I3 => bounce_delay1(4),
       O => sig_gameRight
     );
+  U3_rise_and000011 : LUT4
+    generic map(
+      INIT => X"0103"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => who_present_state_FSM_FFd1_2609,
+      I2 => who_present_state_FSM_FFd2_2611,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RM1_and0000
+    );
+  U3_CM2_9_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(9),
+      O => U3_CM2_9_and0001
+    );
+  U3_CM2_9_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(9),
+      O => U3_CM2_9_and0000
+    );
+  U3_CM2_8_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(8),
+      O => U3_CM2_8_and0001
+    );
+  U3_CM2_8_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(8),
+      O => U3_CM2_8_and0000
+    );
+  U3_CM2_7_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(7),
+      O => U3_CM2_7_and0001
+    );
+  U3_CM2_7_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(7),
+      O => U3_CM2_7_and0000
+    );
+  U3_CM2_6_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(6),
+      O => U3_CM2_6_and0001
+    );
+  U3_CM2_6_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(6),
+      O => U3_CM2_6_and0000
+    );
+  U3_CM2_5_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(5),
+      O => U3_CM2_5_and0001
+    );
+  U3_CM2_5_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(5),
+      O => U3_CM2_5_and0000
+    );
+  U3_CM2_4_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(4),
+      O => U3_CM2_4_and0001
+    );
+  U3_CM2_4_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(4),
+      O => U3_CM2_4_and0000
+    );
+  U3_CM2_3_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(3),
+      O => U3_CM2_3_and0001
+    );
+  U3_CM2_3_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(3),
+      O => U3_CM2_3_and0000
+    );
+  U3_CM2_2_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(2),
+      O => U3_CM2_2_and0001
+    );
+  U3_CM2_2_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(2),
+      O => U3_CM2_2_and0000
+    );
+  U3_CM2_1_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(1),
+      O => U3_CM2_1_and0001
+    );
+  U3_CM2_1_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM2_sub0000_1(1),
+      O => U3_CM2_1_and0000
+    );
+  U3_CM2_0_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_C2(0),
+      O => U3_CM2_0_and0001
+    );
+  U3_CM2_0_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_C2(0),
+      O => U3_CM2_0_and0000
+    );
+  U3_CM1_and00001 : LUT3
+    generic map(
+      INIT => X"02"
+    )
+    port map (
+      I0 => U3_Mhorz_1580,
+      I1 => who_present_state_FSM_FFd2_2611,
+      I2 => who_present_state_FSM_FFd1_2609,
+      O => U3_CM1_and0000
+    );
+  U3_CM1_9_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(9),
+      O => U3_CM1_9_and0001
+    );
+  U3_CM1_9_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(9),
+      O => U3_CM1_9_and0000
+    );
+  U3_CM1_8_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(8),
+      O => U3_CM1_8_and0001
+    );
+  U3_CM1_8_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(8),
+      O => U3_CM1_8_and0000
+    );
+  U3_CM1_7_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(7),
+      O => U3_CM1_7_and0001
+    );
+  U3_CM1_7_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(7),
+      O => U3_CM1_7_and0000
+    );
+  U3_CM1_6_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(6),
+      O => U3_CM1_6_and0001
+    );
+  U3_CM1_6_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(6),
+      O => U3_CM1_6_and0000
+    );
+  U3_CM1_5_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(5),
+      O => U3_CM1_5_and0001
+    );
+  U3_CM1_5_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(5),
+      O => U3_CM1_5_and0000
+    );
+  U3_CM1_4_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(4),
+      O => U3_CM1_4_and0001
+    );
+  U3_CM1_4_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(4),
+      O => U3_CM1_4_and0000
+    );
+  U3_CM1_3_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(3),
+      O => U3_CM1_3_and0001
+    );
+  U3_CM1_3_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(3),
+      O => U3_CM1_3_and0000
+    );
+  U3_CM1_2_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(2),
+      O => U3_CM1_2_and0001
+    );
+  U3_CM1_2_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(2),
+      O => U3_CM1_2_and0000
+    );
+  U3_CM1_1_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(1),
+      O => U3_CM1_1_and0001
+    );
+  U3_CM1_1_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(1),
+      O => U3_CM1_1_and0000
+    );
+  U3_CM1_0_and00011 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(0),
+      O => U3_CM1_0_and0001
+    );
+  U3_CM1_0_and00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => U3_CM1_add0000_0(0),
+      O => U3_CM1_0_and0000
+    );
+  U3_destroy2_mux00173_SW0 : LUT4
+    generic map(
+      INIT => X"FAF8"
+    )
+    port map (
+      I0 => U3_spriteonGrnd_and0000117_2127,
+      I1 => U2_vcs(9),
+      I2 => U3_spriteonB2,
+      I3 => U3_spriteonGrnd_and000020_2129,
+      O => N01
+    );
+  U3_destroy2_mux001766_SW0 : LUT4
+    generic map(
+      INIT => X"FDFF"
+    )
+    port map (
+      I0 => U3_spriteonGrnd,
+      I1 => U3_blue_and0002,
+      I2 => U3_spriteonM1,
+      I3 => U3_spriteonM2,
+      O => N362
+    );
+  U3_destroy2_mux001766 : LUT4
+    generic map(
+      INIT => X"32FA"
+    )
+    port map (
+      I0 => N362,
+      I1 => ld_1_OBUF_2335,
+      I2 => U3_N29,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_destroy2_mux001766_2046
+    );
   nes_state_next_cmp_eq00001 : LUT4
     generic map(
-      INIT => X"0020"
+      INIT => X"1000"
     )
     port map (
-      I0 => nes_counter_reg_cmp_eq0000125_1633,
-      I1 => nes_counter_reg(4),
-      I2 => nes_counter_reg_cmp_eq0000112_1632,
-      I3 => nes_counter_reg(2),
-      O => ja2_OBUF_1537
+      I0 => nes_counter_reg(4),
+      I1 => nes_counter_reg(2),
+      I2 => nes_counter_reg_cmp_eq0000112_2418,
+      I3 => nes_counter_reg_cmp_eq0000125_2419,
+      O => ja2_OBUF_2323
     );
-  U3_B_mux00129 : LUT4
+  U3_RMht1_not000110 : LUT4
     generic map(
-      INIT => X"FFAB"
+      INIT => X"2000"
     )
     port map (
-      I0 => U3_blue_and0000,
-      I1 => U3_tank1Angle10s,
-      I2 => U3_tank1Angle1s,
-      I3 => U3_blue_and0001,
-      O => U3_B_mux00129_683
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => who_present_state_FSM_FFd1_2609,
+      I2 => ld_6_OBUF_2340,
+      I3 => who_present_state_FSM_FFd2_2611,
+      O => U3_RMht1_not000110_1962
     );
-  U3_B_mux001249 : LUT4
-    generic map(
-      INIT => X"1333"
-    )
-    port map (
-      I0 => U3_spriteonB5_and000041_1397,
-      I1 => U3_spriteonB4,
-      I2 => U3_spriteonB5_and000063_1398,
-      I3 => U3_spriteonB5_cmp_ge0000,
-      O => U3_B_mux001249_680
-    );
-  title_green_cmp_lt0000242_SW0 : LUT4
-    generic map(
-      INIT => X"F7FF"
-    )
-    port map (
-      I0 => U2_vcs(1),
-      I1 => U2_vcs(2),
-      I2 => title_green_cmp_lt0000225_1972,
-      I3 => U2_vcs(3),
-      O => N306
-    );
-  title_green_cmp_lt0000242 : LUT4
-    generic map(
-      INIT => X"1011"
-    )
-    port map (
-      I0 => U2_vcs(8),
-      I1 => U2_vcs(9),
-      I2 => N306,
-      I3 => U2_vcs(0),
-      O => title_green_cmp_lt0000
-    );
-  U3_blue_0_111 : LUT3
-    generic map(
-      INIT => X"F1"
-    )
-    port map (
-      I0 => U3_tank1Angle10s,
-      I1 => U3_tank1Angle1s,
-      I2 => U3_B_675,
-      O => U3_N15
-    );
-  U3_spriteonB1_cmp_lt0000250_SW0 : LUT4
-    generic map(
-      INIT => X"F7FF"
-    )
-    port map (
-      I0 => U2_vcs(3),
-      I1 => U2_vcs(5),
-      I2 => U2_vidon_and000080_673,
-      I3 => U2_vcs(8),
-      O => N308
-    );
-  U3_spriteonB1_cmp_lt0000250 : LUT4
-    generic map(
-      INIT => X"3133"
-    )
-    port map (
-      I0 => U2_vcs(0),
-      I1 => U2_vcs(9),
-      I2 => N308,
-      I3 => U2_vcs(1),
-      O => U3_spriteonB1_cmp_lt0000
-    );
-  U3_spriteonGrnd_and000026_SW0 : LUT3
+  U3_spriteonGrnd_and0000103_SW0 : LUT3
     generic map(
       INIT => X"FE"
     )
     port map (
       I0 => U2_hcs(5),
       I1 => U2_hcs(6),
-      I2 => U3_spriteonGrnd_and00009,
-      O => N310
-    );
-  U3_spriteonGrnd_and000026 : LUT4
-    generic map(
-      INIT => X"FEEE"
-    )
-    port map (
-      I0 => U2_hcs(9),
-      I1 => U2_hcs(8),
       I2 => U2_hcs(7),
-      I3 => N310,
-      O => U3_spriteonGrnd_and000026_1403
+      O => N364
     );
-  U3_spriteonGrnd_and000093 : LUT4
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => U2_hcs(1),
-      I1 => U2_hcs(0),
-      I2 => U2_hcs(3),
-      I3 => U2_hcs(2),
-      O => U3_spriteonGrnd_and000093_1408
-    );
-  U3_spriteonGrnd_and0000124_SW0 : LUT4
-    generic map(
-      INIT => X"FFF2"
-    )
-    port map (
-      I0 => U2_hcs(4),
-      I1 => U3_spriteonGrnd_and000093_1408,
-      I2 => U2_hcs(6),
-      I3 => U2_hcs(7),
-      O => N312
-    );
-  U3_spriteonGrnd_and0000124 : LUT4
+  U3_spriteonGrnd_and0000103 : LUT4
     generic map(
       INIT => X"57FF"
     )
     port map (
       I0 => U2_hcs(8),
-      I1 => N312,
-      I2 => U2_hcs(5),
+      I1 => N364,
+      I2 => U2_hcs(4),
       I3 => U2_hcs(9),
-      O => U3_spriteonGrnd_and0000124_1402
+      O => U3_spriteonGrnd_and0000103_2126
     );
-  U3_tank1Angle1s_and000012_SW0 : LUT3
+  U3_spriteonB5_and000039_SW0 : LUT3
     generic map(
       INIT => X"FB"
     )
     port map (
-      I0 => U2_hcs(8),
-      I1 => U2_hcs(7),
-      I2 => U2_hcs(9),
-      O => N314
+      I0 => U2_hcs(5),
+      I1 => U3_spriteonB5_and000012_2123,
+      I2 => U2_hcs(4),
+      O => N366
     );
-  U3_tank1Angle1s_and000012 : LUT4
+  U3_spriteonB5_and000039 : LUT4
     generic map(
-      INIT => X"0302"
+      INIT => X"0103"
     )
     port map (
-      I0 => U2_hcs(2),
-      I1 => U2_hcs(6),
-      I2 => N314,
-      I3 => U2_hcs(3),
-      O => U3_tank1Angle1s_and000012_1418
+      I0 => U2_hcs(6),
+      I1 => U2_hcs(7),
+      I2 => U2_hcs(8),
+      I3 => N366,
+      O => U3_spriteonB5_and000039_2124
     );
-  U3_green_2_111 : LUT4
+  U3_spriteonB1_and0000131 : LUT4
+    generic map(
+      INIT => X"AAA8"
+    )
+    port map (
+      I0 => U3_spriteonB1_cmp_lt0000,
+      I1 => U2_vcs(8),
+      I2 => U2_vcs(9),
+      I3 => U3_spriteonB1_and0000115_2098,
+      O => U3_N89
+    );
+  M2_0_21 : LUT4
+    generic map(
+      INIT => X"FF6C"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => M2_0_bdd6,
+      O => M2_0_bdd4
+    );
+  M1_29_31 : LUT4
+    generic map(
+      INIT => X"69C3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => M1_22_bdd9,
+      I3 => sig_tank1rom10s(1),
+      O => M1_29_bdd5
+    );
+  M1_27_21 : LUT4
+    generic map(
+      INIT => X"0905"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(0),
+      I2 => M1_22_bdd9,
+      I3 => sig_tank1rom10s(1),
+      O => M1_27_bdd4
+    );
+  M1_31_75 : LUT4
     generic map(
       INIT => X"0A08"
     )
     port map (
-      I0 => U3_B_675,
-      I1 => U3_tank1Angle1s,
-      I2 => U3_spriteonB5,
-      I3 => U3_tank1Angle10s,
-      O => U3_N52
-    );
-  U3_spriteonB3_and000020 : LUT4
-    generic map(
-      INIT => X"0020"
-    )
-    port map (
-      I0 => U2_hcs(8),
-      I1 => U2_hcs(9),
-      I2 => U2_hcs(7),
-      I3 => N316,
-      O => U3_spriteonB3_and000020_1386
-    );
-  U3_spriteonB4_and000041 : LUT3
-    generic map(
-      INIT => X"01"
-    )
-    port map (
-      I0 => U2_hcs(9),
-      I1 => U3_spriteonB3_cmp_le0000112_1388,
-      I2 => U3_spriteonB3_cmp_le0000128_1389,
-      O => U3_spriteonB4_and000041_1394
-    );
-  M2_31_1 : LUT4
-    generic map(
-      INIT => X"666E"
-    )
-    port map (
-      I0 => rom1_addr(4),
+      I0 => M1_31_62_74,
       I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => M1_0_bdd2,
-      O => M1_0_Q
-    );
-  M1a_27_82_SW0 : LUT4
-    generic map(
-      INIT => X"9157"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M1_21_bdd5,
-      I2 => rom1_addr(0),
-      I3 => M1_22_bdd9,
-      O => N318
-    );
-  M1a_27_82 : LUT3
-    generic map(
-      INIT => X"2A"
-    )
-    port map (
-      I0 => M1a_27_80_109,
-      I1 => rom1_addr(1),
-      I2 => N318,
-      O => M1a_27_82_110
-    );
-  M1a_27_150 : LUT4
-    generic map(
-      INIT => X"AF8C"
-    )
-    port map (
-      I0 => M1a_27_130_107,
-      I1 => M1a_27_82_110,
       I2 => rom1_addr(4),
-      I3 => M1a_27_2_108,
-      O => M1a_27_Q
+      I3 => M1_31_25,
+      O => M1_31_Q
     );
-  M1_29_56 : LUT4
+  selector_blue_0_21_SW0 : LUT4
     generic map(
-      INIT => X"14BE"
+      INIT => X"AF23"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M1_22_bdd9,
-      I3 => M1_22_bdd12,
-      O => M1_29_56_56
+      I0 => U3_B_785,
+      I1 => U3_spriteonM2,
+      I2 => U3_N0,
+      I3 => U3_destroy2_2041,
+      O => N370
     );
-  M2_3_122 : LUT4
-    generic map(
-      INIT => X"AF8C"
-    )
-    port map (
-      I0 => M2_3_111,
-      I1 => M2_3_74_167,
-      I2 => rom1_addr(4),
-      I3 => M2_3_8_168,
-      O => M2_3_Q
-    );
-  M2a_4_82_SW0 : LUT4
-    generic map(
-      INIT => X"9157"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd13,
-      I2 => rom1_addr(0),
-      I3 => M2_0_bdd6,
-      O => N322
-    );
-  M2_2_56 : LUT4
-    generic map(
-      INIT => X"14BE"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M2_0_bdd6,
-      I3 => M2_0_bdd16,
-      O => M2_2_56_161
-    );
-  selector_green_0_71 : LUT3
+  selector_green_0_98 : LUT3
     generic map(
       INIT => X"08"
     )
     port map (
-      I0 => U2_vidon_and0000117_664,
-      I1 => U2_vidon_and000039_669,
-      I2 => screenstate_present_state_FSM_FFd1_1729,
-      O => selector_green_0_71_1808
+      I0 => U2_vidon_and000039_779,
+      I1 => U2_vidon_and0000117_774,
+      I2 => screenstate_present_state_FSM_FFd1_2478,
+      O => selector_green_0_98_2486
     );
-  M1_23_51 : LUT4
+  M1a_23_0 : LUT2
     generic map(
-      INIT => X"D7FF"
+      INIT => X"9"
     )
     port map (
-      I0 => rom1_addr(0),
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      O => M1a_23_0_102
+    );
+  M1a_23_4 : LUT4
+    generic map(
+      INIT => X"FF80"
+    )
+    port map (
+      I0 => rom1_addr(2),
       I1 => M1_21_bdd5,
-      I2 => M1_22_bdd9,
-      I3 => rom1_addr(2),
-      O => M1_23_bdd3
+      I2 => M1a_23_0_102,
+      I3 => rom1_addr(3),
+      O => M1a_23_4_104
     );
-  M2_0_82 : LUT4
+  M2_3_5 : LUT4
     generic map(
-      INIT => X"D7FF"
+      INIT => X"CC4C"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => M2_0_bdd13,
-      I2 => M2_0_bdd6,
+      I0 => sig_tank1rom10s(0),
+      I1 => rom1_addr(3),
+      I2 => M2_0_bdd13,
       I3 => rom1_addr(2),
-      O => M2_0_bdd3
+      O => M2_3_5_176
+    );
+  M2_2_31 : LUT4
+    generic map(
+      INIT => X"69C3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => M2_0_bdd6,
+      I3 => sig_tank1rom10s(1),
+      O => M2_2_bdd5
+    );
+  M2_0_81 : LUT4
+    generic map(
+      INIT => X"FE54"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => M2_0_bdd18,
+      I3 => M2_0_bdd4,
+      O => M2_0_bdd2
+    );
+  M2a_6_51 : LUT4
+    generic map(
+      INIT => X"CC08"
+    )
+    port map (
+      I0 => M2a_6_32,
+      I1 => rom1_addr(1),
+      I2 => rom1_addr(3),
+      I3 => M2a_4_36_246,
+      O => M2a_6_51_258
+    );
+  U3_green_2_32_SW0 : LUT4
+    generic map(
+      INIT => X"88F8"
+    )
+    port map (
+      I0 => U3_N0,
+      I1 => U3_B_785,
+      I2 => U3_spriteonM1,
+      I3 => U3_destroy1_2035,
+      O => N153
+    );
+  M1_22_210 : LUT4
+    generic map(
+      INIT => X"6CFF"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_21_bdd5,
+      O => M1_22_bdd4
     );
   U3_blue_and00001 : LUT4
     generic map(
@@ -14996,41 +18774,8 @@ begin
       I0 => U3_spriteon1_cmp_ge0000,
       I1 => U3_Mcompar_spriteon1_cmp_lt0000_cy(9),
       I2 => U3_M1a_mux0000,
-      I3 => U3_N57,
+      I3 => U3_N90,
       O => U3_blue_and0000
-    );
-  M1a_26_53 : LUT4
-    generic map(
-      INIT => X"B111"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => M1_22_bdd12,
-      I2 => rom1_addr(2),
-      I3 => M1_22_bdd9,
-      O => M1a_26_53_105
-    );
-  M2_1_210 : LUT4
-    generic map(
-      INIT => X"FF9F"
-    )
-    port map (
-      I0 => M2_0_bdd13,
-      I1 => M2_0_bdd6,
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => M2_1_bdd1
-    );
-  M1_24_51 : LUT4
-    generic map(
-      INIT => X"FF9F"
-    )
-    port map (
-      I0 => M1_21_bdd5,
-      I1 => M1_22_bdd9,
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => M1_24_bdd2
     );
   U3_B_and00001 : LUT4
     generic map(
@@ -15040,103 +18785,49 @@ begin
       I0 => U3_spriteon1_cmp_ge0000,
       I1 => U3_Mcompar_spriteon1_cmp_lt0000_cy(9),
       I2 => U3_M1_mux0000,
-      I3 => U3_N57,
+      I3 => U3_N90,
       O => U3_B_and0000
     );
-  selector_blue_0_8 : LUT4
+  U3_green_2_112 : LUT4
     generic map(
-      INIT => X"7FFF"
+      INIT => X"5554"
     )
     port map (
-      I0 => U3_spriteonB1_cmp_lt0000,
-      I1 => U3_spriteonB2_cmp_ge0000,
-      I2 => U3_spriteonB2_and000028,
-      I3 => U3_spriteonB2_and000040_1382,
-      O => selector_blue_0_8_1805
+      I0 => U3_blue_and0002,
+      I1 => U3_spriteonGrnd,
+      I2 => U3_spriteonB1,
+      I3 => U3_spriteonB2,
+      O => U3_green_2_112_2062
     );
-  M1a_27_130 : LUT4
+  selector_red_1_9_SW0 : LUT3
     generic map(
-      INIT => X"1352"
+      INIT => X"FE"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => M1a_27_130_107
+      I0 => U3_spriteonB2,
+      I1 => U3_spriteonB3,
+      I2 => U3_spriteonB4,
+      O => N372
     );
-  U3_tank1Angle10s_and000064_SW0 : LUT4
-    generic map(
-      INIT => X"F7EF"
-    )
-    port map (
-      I0 => U2_hcs(2),
-      I1 => U2_hcs(3),
-      I2 => U2_hcs(5),
-      I3 => U2_hcs(4),
-      O => N324
-    );
-  U3_tank1Angle10s_and000064 : LUT3
-    generic map(
-      INIT => X"08"
-    )
-    port map (
-      I0 => U3_tank1Angle10s_and000055_1413,
-      I1 => U3_tank1Angle10s_cmp_le00002,
-      I2 => N324,
-      O => U3_tank1Angle10s
-    );
-  U3_Mmux_M2a_mux0000_8 : LUT3
+  U3_Mmux_M1a_mux0000_92 : LUT3
     generic map(
       INIT => X"1B"
     )
     port map (
       I0 => rom1_addr(4),
       I1 => M1a_4_bdd0,
-      I2 => N326,
-      O => U3_Mmux_M2a_mux0000_8_1203
+      I2 => N376,
+      O => U3_Mmux_M1a_mux0000_92_1649
     );
-  U3_Mmux_M2a_mux0000_92_SW0_SW0 : LUT2
+  U3_Mmux_M1_mux0000_73 : LUT3
     generic map(
-      INIT => X"8"
+      INIT => X"1B"
     )
     port map (
-      I0 => M2_4_bdd0,
-      I1 => rom1_addr(3),
-      O => N328
-    );
-  title_Madd_rom_addr2_add0000_Madd_lut_7_Q : LUT4
-    generic map(
-      INIT => X"69A5"
-    )
-    port map (
-      I0 => U2_hcs(7),
-      I1 => title_N01,
-      I2 => title_rom_addr2_addsub0001(7),
-      I3 => U2_hcs(6),
-      O => title_Madd_rom_addr2_add0000_Madd_lut(7)
-    );
-  M2_3_74_SW0 : LUT4
-    generic map(
-      INIT => X"FA72"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M2_3_bdd9,
-      I3 => M2_0_bdd13,
-      O => N222
-    );
-  M1_28_69_SW0 : LUT4
-    generic map(
-      INIT => X"AF27"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => M1_23_bdd6,
-      I3 => M1_21_bdd5,
-      O => N224
+      I0 => rom1_addr(4),
+      I1 => M1_14_bdd1,
+      I2 => N378,
+      O => U3_Mmux_M1_mux0000_73_1606
     );
   U3_Mcompar_spriteon1_cmp_lt0000_lut_8_Q : LUT4
     generic map(
@@ -15149,226 +18840,531 @@ begin
       I3 => U3_Madd_spriteon1_addsub0001_cy_7_Q,
       O => U3_Mcompar_spriteon1_cmp_lt0000_lut(8)
     );
-  M2_7_113_SW0_SW0 : LUT4
+  U3_RMcnt_Q_mux0000_0_1 : LUT4
     generic map(
-      INIT => X"1860"
+      INIT => X"B313"
     )
     port map (
-      I0 => M2_0_bdd13,
-      I1 => M2_0_bdd6,
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(1),
-      O => N330
+      I0 => sig_tank2,
+      I1 => U3_RMcnt(0),
+      I2 => sig_gameA,
+      I3 => U3_RMht1(0),
+      O => U3_RMcnt_Q_mux0000(0)
     );
-  M1_24_113_SW0_SW0 : LUT4
+  U3_RMcnt2_Q_mux0000_0_1 : LUT4
     generic map(
-      INIT => X"1860"
+      INIT => X"B313"
     )
     port map (
-      I0 => M1_21_bdd5,
-      I1 => M1_22_bdd9,
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(1),
-      O => N332
+      I0 => sig_tank1,
+      I1 => U3_RMcnt2(0),
+      I2 => sig_gameA,
+      I3 => U3_RMht2(0),
+      O => U3_RMcnt2_Q_mux0000(0)
     );
-  M1_19_SW1 : LUT4
+  U3_RMcnt_Q_mux0000_3_1_SW0 : LUT4
     generic map(
-      INIT => X"D48C"
+      INIT => X"0180"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(1),
-      O => N80
+      I0 => U3_RMcnt(2),
+      I1 => U3_RMcnt(1),
+      I2 => U3_RMcnt(0),
+      I3 => U3_rise_2072,
+      O => N382
     );
-  M1a_1_22 : LUT4
+  U3_RMcnt_Q_mux0000_3_1 : LUT4
     generic map(
-      INIT => X"071E"
+      INIT => X"F606"
     )
     port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(0),
-      O => M1a_1_22_87
+      I0 => U3_RMcnt(3),
+      I1 => N382,
+      I2 => U3_RMcnt_and0000,
+      I3 => U3_RMht1(3),
+      O => U3_RMcnt_Q_mux0000(3)
     );
-  M1a_3_1 : LUT4
+  U3_RMcnt2_Q_mux0000_3_1_SW0 : LUT4
     generic map(
-      INIT => X"206F"
+      INIT => X"0180"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => M1a_3_1_125
+      I0 => U3_RMcnt2(2),
+      I1 => U3_RMcnt2(1),
+      I2 => U3_RMcnt2(0),
+      I3 => U3_rise2_2073,
+      O => N384
     );
-  M1a_4_SW0 : LUT4
+  U3_RMcnt2_Q_mux0000_3_1 : LUT4
     generic map(
-      INIT => X"EF90"
+      INIT => X"F606"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => N42
+      I0 => U3_RMcnt2(3),
+      I1 => N384,
+      I2 => U3_RMcnt2_and0000,
+      I3 => U3_RMht2(3),
+      O => U3_RMcnt2_Q_mux0000(3)
     );
-  U3_Mmux_M1a_mux0000_73 : LUT3
+  U3_Mhorz_not0001 : LUT4
+    generic map(
+      INIT => X"0415"
+    )
+    port map (
+      I0 => who_present_state_FSM_FFd1_2609,
+      I1 => who_present_state_FSM_FFd2_2611,
+      I2 => U3_N14,
+      I3 => U3_N13,
+      O => U3_Mhorz_not0001_1589
+    );
+  M2a_23_SW1 : LUT4
+    generic map(
+      INIT => X"96B1"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N390
+    );
+  M1_9_1 : LUT4
+    generic map(
+      INIT => X"A875"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => M1_9_1_86
+    );
+  M1_28_12_SW0 : LUT3
+    generic map(
+      INIT => X"7F"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      O => N396
+    );
+  M1_28_12 : LUT4
+    generic map(
+      INIT => X"FF26"
+    )
+    port map (
+      I0 => N396,
+      I1 => sig_tank1rom10s(3),
+      I2 => M1_21_bdd5,
+      I3 => rom1_addr(4),
+      O => M1_28_12_50
+    );
+  M2_3_203_SW0 : LUT4
+    generic map(
+      INIT => X"566E"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(3),
+      O => N222
+    );
+  M2_18_11 : LUT4
+    generic map(
+      INIT => X"7DFF"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => M2_18_bdd0
+    );
+  M2a_3_1 : LUT4
+    generic map(
+      INIT => X"5060"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(2),
+      O => M2a_3_1_238
+    );
+  M1_30_104_SW0 : LUT4
+    generic map(
+      INIT => X"8786"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => M1_22_bdd9,
+      O => N400
+    );
+  M1_30_104 : LUT4
+    generic map(
+      INIT => X"0702"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => N400,
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(3),
+      O => M1_30_104_68
+    );
+  U3_Madd_tank2rom10s_lut_6_Q : LUT4
+    generic map(
+      INIT => X"56AA"
+    )
+    port map (
+      I0 => U3_tank1rom10s_sub0001(6),
+      I1 => U3_RMht2(4),
+      I2 => U3_RMht2(3),
+      I3 => U3_RMht2(5),
+      O => U3_Madd_tank2rom10s_lut_6_Q_1173
+    );
+  M2_11_11 : LUT4
+    generic map(
+      INIT => X"37B6"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(2),
+      O => M2_11_bdd0
+    );
+  M2_3_24 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => M2_3_19_174,
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      O => M2_3_24_175
+    );
+  M1_22_11 : LUT4
+    generic map(
+      INIT => X"6C6E"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_21_bdd5,
+      O => M1_22_bdd0
+    );
+  U3_Mhorz_or00001 : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => screenstate_present_state_FSM_FFd1_2478,
+      I2 => who_present_state_FSM_FFd1_2609,
+      O => U3_Mhorz_or0000
+    );
+  M1_23_30 : LUT4
+    generic map(
+      INIT => X"6070"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => M1_22_bdd12,
+      O => M1_23_30_25
+    );
+  M2_10_81 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => M2_10_bdd14,
+      O => M2_10_8
+    );
+  U3_Mmux_M2_mux0000_71 : LUT3
     generic map(
       INIT => X"B1"
     )
     port map (
       I0 => rom1_addr(4),
-      I1 => M1a_14_bdd0,
-      I2 => N336,
-      O => U3_Mmux_M1a_mux0000_73_1137
+      I1 => M1_4_bdd0,
+      I2 => N406,
+      O => U3_Mmux_M2_mux0000_71_1664
+    );
+  U3_Mmux_M2_mux0000_8 : LUT3
+    generic map(
+      INIT => X"1B"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1_4_bdd0,
+      I2 => N408,
+      O => U3_Mmux_M2_mux0000_8_1670
+    );
+  U3_Mmux_M2_mux0000_9 : LUT3
+    generic map(
+      INIT => X"1B"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1_14_bdd1,
+      I2 => N410,
+      O => U3_Mmux_M2_mux0000_9_1677
+    );
+  U3_Mmux_M2_mux0000_73 : LUT3
+    generic map(
+      INIT => X"1B"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1_14_bdd1,
+      I2 => N412,
+      O => U3_Mmux_M2_mux0000_73_1666
+    );
+  U3_spriteonB1_and000052 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U2_hcs(9),
+      I1 => N420,
+      I2 => U3_N89,
+      I3 => U2_hcs(8),
+      O => U3_spriteonB1
     );
   U3_Mcompar_spriteon1_cmp_lt0000_lut_6_Q : LUT4
     generic map(
-      INIT => X"6669"
+      INIT => X"5A69"
     )
     port map (
       I0 => U3_C1(6),
-      I1 => U2_hcs(6),
-      I2 => U3_C1(4),
+      I1 => U3_C1(4),
+      I2 => U2_hcs(6),
       I3 => U3_C1(5),
       O => U3_Mcompar_spriteon1_cmp_lt0000_lut(6)
     );
-  M1_21_50_SW0_SW0 : LUT3
+  x7_an_1_mux000148_SW0_SW0 : LUT4
     generic map(
-      INIT => X"42"
+      INIT => X"DFBF"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => M1_21_bdd5,
-      I2 => rom1_addr(0),
-      O => N338
+      I0 => U3_Msub_font4_sub0002_cy(3),
+      I1 => U3_RMht2(5),
+      I2 => x7_an_1_mux000110_2677,
+      I3 => U3_RMht2(4),
+      O => N422
     );
-  M2_10_50_SW0_SW0 : LUT3
+  x7_an_1_mux000148_SW0 : LUT4
     generic map(
-      INIT => X"42"
+      INIT => X"0018"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => M2_0_bdd13,
-      I2 => rom1_addr(0),
-      O => N340
+      I0 => U3_Madd_tank1ascii1s_add0000_cy_5_bdd2,
+      I1 => U3_RMht1(4),
+      I2 => U3_RMht1(5),
+      I3 => N422,
+      O => N286
     );
-  M1a_3_2 : LUT4
+  M1a_27_152_SW0_SW0 : LUT4
     generic map(
-      INIT => X"0180"
+      INIT => X"6071"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(3),
-      O => M1a_3_2_126
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M1a_27_52_114,
+      I3 => M1_22_bdd4,
+      O => N424
     );
-  M1_9_2 : LUT4
+  M2a_4_9 : LUT4
     generic map(
-      INIT => X"80C2"
+      INIT => X"1000"
     )
     port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => M1_9_2_75
-    );
-  M1_3_2 : LUT4
-    generic map(
-      INIT => X"AAE8"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => M1_3_2_68
-    );
-  M2_10_51 : LUT3
-    generic map(
-      INIT => X"5E"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      O => M1_10_bdd5
-    );
-  M2a_19_SW0 : LUT4
-    generic map(
-      INIT => X"FFE8"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N73
-    );
-  M1a_21_25_SW0 : LUT3
-    generic map(
-      INIT => X"57"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(0),
-      I2 => M1_21_bdd5,
-      O => N264
-    );
-  M2a_10_25_SW0 : LUT3
-    generic map(
-      INIT => X"57"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(0),
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
       I2 => M2_0_bdd13,
-      O => N266
+      I3 => sig_tank1rom10s(3),
+      O => M2a_4_9_251
+    );
+  M1a_22_11 : LUT4
+    generic map(
+      INIT => X"28F0"
+    )
+    port map (
+      I0 => M1_22_bdd9,
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => M1a_22_bdd0
+    );
+  M1_28_21 : LUT3
+    generic map(
+      INIT => X"56"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      O => M1_28_bdd1
+    );
+  M1_22_27 : LUT4
+    generic map(
+      INIT => X"99D9"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => M1_22_bdd9,
+      O => M1_22_27_17
+    );
+  M1a_26_55 : LUT4
+    generic map(
+      INIT => X"40EA"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => M1_22_bdd9,
+      I2 => sig_tank1rom10s(2),
+      I3 => M1_22_bdd12,
+      O => M1a_26_55_112
+    );
+  selector_blue_0_53_SW0 : LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+    port map (
+      I0 => N370,
+      I1 => U3_blue_and0003,
+      I2 => U3_spriteonB4,
+      I3 => U3_spriteonB5,
+      O => N434
+    );
+  selector_blue_0_53 : LUT4
+    generic map(
+      INIT => X"0D08"
+    )
+    port map (
+      I0 => U3_spriteonB3,
+      I1 => who_present_state_FSM_FFd1_2609,
+      I2 => U3_spriteonB2,
+      I3 => N434,
+      O => selector_blue_0_53_2481
+    );
+  U3_green_1_116_SW0 : LUT4
+    generic map(
+      INIT => X"88F8"
+    )
+    port map (
+      I0 => U3_tank1Angle1s_and000010_2225,
+      I1 => U3_tank1Angle1s_and000018_2226,
+      I2 => U2_hcs(6),
+      I3 => N61,
+      O => N436
+    );
+  U3_green_1_116 : LUT4
+    generic map(
+      INIT => X"FF13"
+    )
+    port map (
+      I0 => U3_N82,
+      I1 => U3_tank1Angle10s,
+      I2 => N436,
+      I3 => U3_B_785,
+      O => U3_green_1_116_2060
+    );
+  M1a_24_21 : LUT4
+    generic map(
+      INIT => X"E040"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => M1_22_bdd9,
+      I2 => rom1_addr(2),
+      I3 => M1_21_bdd5,
+      O => M1a_24_bdd1
+    );
+  U3_Mmux_M1_mux0000_83 : LUT4
+    generic map(
+      INIT => X"10DC"
+    )
+    port map (
+      I0 => N438,
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(0),
+      I3 => N236,
+      O => U3_Mmux_M1_mux0000_83_1613
+    );
+  selector_green_0_58_SW0 : LUT4
+    generic map(
+      INIT => X"AB01"
+    )
+    port map (
+      I0 => U3_spriteonB3,
+      I1 => U3_spriteonB4,
+      I2 => N440,
+      I3 => who_present_state_FSM_FFd1_2609,
+      O => N294
+    );
+  M2a_24_69_SW0 : LUT4
+    generic map(
+      INIT => X"96B3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => N444
+    );
+  M2a_24_69 : LUT3
+    generic map(
+      INIT => X"1B"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1a_4_bdd0,
+      I2 => N444,
+      O => M2a_24_Q
     );
   U3_Mcompar_spriteon2_cmp_lt0000_lut_6_Q : LUT4
     generic map(
-      INIT => X"6669"
+      INIT => X"5A69"
     )
     port map (
       I0 => U2_hcs(6),
-      I1 => U3_C2(6),
-      I2 => U3_C2(4),
+      I1 => U3_C2(4),
+      I2 => U3_C2(6),
       I3 => U3_C2(5),
       O => U3_Mcompar_spriteon2_cmp_lt0000_lut(6)
     );
   U3_Mcompar_spriteon2f_cmp_le0000_lut_6_Q : LUT4
     generic map(
-      INIT => X"6669"
+      INIT => X"5A69"
     )
     port map (
       I0 => U3_C2(6),
-      I1 => U2_hcs(6),
-      I2 => U3_C2(4),
+      I1 => U3_C2(4),
+      I2 => U2_hcs(6),
       I3 => U3_C2(5),
       O => U3_Mcompar_spriteon2f_cmp_le0000_lut(6)
-    );
-  buttons_gameUp1 : LUT4
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => bounce_delay3(5),
-      I2 => bounce_delay2(5),
-      I3 => bounce_delay1(5),
-      O => sig_gameUp
     );
   buttons_gameLeft1 : LUT4
     generic map(
       INIT => X"8000"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
       I1 => bounce_delay3(7),
       I2 => bounce_delay2(7),
       I3 => bounce_delay1(7),
@@ -15379,11 +19375,22 @@ begin
       INIT => X"8000"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
+      I0 => screenstate_present_state_FSM_FFd1_2478,
       I1 => bounce_delay3(6),
       I2 => bounce_delay2(6),
       I3 => bounce_delay1(6),
       O => sig_gameDown
+    );
+  buttons_gameB1 : LUT4
+    generic map(
+      INIT => X"8000"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => bounce_delay3(1),
+      I2 => bounce_delay2(1),
+      I3 => bounce_delay1(1),
+      O => sig_gameB
     );
   U3_spriteon2_addsub0000_5_1 : LUT2
     generic map(
@@ -15400,85 +19407,64 @@ begin
     )
     port map (
       I0 => U3_C2(8),
-      I1 => U3_Madd_spriteon2f_add0002_cy(7),
+      I1 => U3_Madd_spriteon2f_add0004_cy(7),
       I2 => U3_Madd_spriteon2_addsub0000_cy_7_Q,
       O => U3_spriteon2_addsub0000(8)
     );
-  U3_red_0_21 : LUT4
+  M1_22_42 : LUT4
     generic map(
-      INIT => X"2000"
+      INIT => X"FF93"
     )
     port map (
-      I0 => U2_vidon_and000039_669,
-      I1 => U3_B_and0000,
-      I2 => U2_vidon_and0000117_664,
-      I3 => U3_blue_and0000,
-      O => U3_N111
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_22_bdd9,
+      O => M1_22_bdd7
     );
-  selector_red_2_SW1 : LUT4
+  M2_4_61 : LUT4
     generic map(
-      INIT => X"8A02"
+      INIT => X"28A0"
     )
     port map (
-      I0 => U2_vidon_and000039_669,
-      I1 => title_spriteon,
-      I2 => title_green_cmp_lt0000,
-      I3 => sig_MTitle(7),
-      O => N342
+      I0 => M2_0_bdd6,
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(1),
+      O => M2_4_bdd10
     );
-  selector_red_2_Q : LUT4
+  M2_10_82 : LUT4
     generic map(
-      INIT => X"D888"
+      INIT => X"28A0"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => sig_gameRed(1),
-      I2 => U2_vidon_and0000117_664,
-      I3 => N342,
-      O => red_2_OBUF_1686
+      I0 => M2_0_bdd13,
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(1),
+      O => M2_10_bdd14
     );
-  selector_red_1_SW1 : LUT4
+  selector_blue_1_46_SW1 : LUT4
     generic map(
-      INIT => X"E040"
+      INIT => X"FF01"
     )
     port map (
-      I0 => title_spriteon,
-      I1 => title_green_cmp_lt0000,
-      I2 => U2_vidon_and000039_669,
-      I3 => sig_MTitle(6),
-      O => N344
+      I0 => N268,
+      I1 => U3_spriteonB1,
+      I2 => U3_spriteonB2,
+      I3 => U3_blue_and0002,
+      O => N448
     );
-  selector_red_1_Q : LUT4
+  selector_blue_1_46 : LUT4
     generic map(
-      INIT => X"D888"
+      INIT => X"0155"
     )
     port map (
-      I0 => screenstate_present_state_FSM_FFd1_1729,
-      I1 => sig_gameRed(1),
-      I2 => U2_vidon_and0000117_664,
-      I3 => N344,
-      O => red_1_OBUF_1685
-    );
-  M1_25_35_SW1 : LUT3
-    generic map(
-      INIT => X"E7"
-    )
-    port map (
-      I0 => M1_22_bdd9,
-      I1 => M1_21_bdd5,
-      I2 => rom1_addr(2),
-      O => N346
-    );
-  M1_25_35 : LUT4
-    generic map(
-      INIT => X"11B1"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => N346,
-      I2 => M1_21_bdd5,
-      I3 => rom1_addr(2),
-      O => M1_25_35_36
+      I0 => N448,
+      I1 => U2_vcs(9),
+      I2 => U3_spriteonGrnd_and000020_2129,
+      I3 => U3_spriteonGrnd_and0000117_2127,
+      O => selector_blue_1_46_2483
     );
   U3_Mcompar_spriteon1_cmp_lt0000_lut_5_Q : LUT3
     generic map(
@@ -15490,68 +19476,16 @@ begin
       I2 => U3_C1(4),
       O => U3_Mcompar_spriteon1_cmp_lt0000_lut(5)
     );
-  U3_red_2_28_SW1 : LUT3
+  selector_green_1_21_SW0 : LUT4
     generic map(
-      INIT => X"31"
+      INIT => X"FDFF"
     )
     port map (
-      I0 => U3_red_2_11_1361,
-      I1 => U3_blue_and0000,
-      I2 => U3_blue_and0001,
-      O => N348
-    );
-  U3_red_2_28 : LUT4
-    generic map(
-      INIT => X"0020"
-    )
-    port map (
-      I0 => U2_vidon_and000039_669,
-      I1 => U3_B_and0000,
-      I2 => U2_vidon_and0000117_664,
-      I3 => N348,
-      O => sig_gameRed(1)
-    );
-  M1a_25_36 : LUT4
-    generic map(
-      INIT => X"44E4"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => N274,
-      I2 => M1_10_bdd5,
-      I3 => rom1_addr(3),
-      O => M1a_25_Q
-    );
-  M1_29_80_SW0 : LUT3
-    generic map(
-      INIT => X"BF"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => M1_21_bdd5,
-      I2 => rom1_addr(2),
-      O => N280
-    );
-  M2_2_80_SW0 : LUT3
-    generic map(
-      INIT => X"BF"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => M2_0_bdd13,
-      I2 => rom1_addr(2),
-      O => N288
-    );
-  M2a_6_36 : LUT4
-    generic map(
-      INIT => X"44E4"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => N294,
-      I2 => M1_10_bdd5,
-      I3 => rom1_addr(3),
-      O => M2a_6_Q
+      I0 => U2_vidon_and000039_779,
+      I1 => U3_N29,
+      I2 => U3_blue_and0002,
+      I3 => U2_vidon_and0000117_774,
+      O => N296
     );
   U3_Mcompar_spriteon2_cmp_lt0000_lut_8_Q : LUT4
     generic map(
@@ -15560,7 +19494,7 @@ begin
     port map (
       I0 => U2_hcs(8),
       I1 => U3_C2(8),
-      I2 => U3_Madd_spriteon2f_add0002_cy(7),
+      I2 => U3_Madd_spriteon2f_add0004_cy(7),
       I3 => U3_Madd_spriteon2_addsub0000_cy_7_Q,
       O => U3_Mcompar_spriteon2_cmp_lt0000_lut(8)
     );
@@ -15580,7 +19514,7 @@ begin
     )
     port map (
       I0 => U3_C2(8),
-      I1 => U3_Madd_spriteon2f_add0002_cy(7),
+      I1 => U3_Madd_spriteon2f_add0004_cy(7),
       I2 => U3_Madd_spriteon2_addsub0000_cy_7_Q,
       I3 => U2_hcs(8),
       O => U3_Mcompar_spriteon2f_cmp_le0000_lut(8)
@@ -15595,2399 +19529,783 @@ begin
       I2 => U2_hcs(5),
       O => U3_Mcompar_spriteon2f_cmp_le0000_lut(5)
     );
-  M2_15_SW0 : LUT4
+  U3_RMcnt_5_and00011 : LUT4
     generic map(
-      INIT => X"E475"
+      INIT => X"8000"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(3),
-      O => N62
-    );
-  M2a_13_11 : LUT4
-    generic map(
-      INIT => X"8115"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => M1a_14_bdd0
-    );
-  M2_14_SW0 : LUT4
-    generic map(
-      INIT => X"EC75"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(3),
-      O => N93
-    );
-  M2_21_1 : LUT4
-    generic map(
-      INIT => X"35A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => M2_21_1_153
-    );
-  M2_3_1111 : LUT4
-    generic map(
-      INIT => X"1395"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => M2_3_111
-    );
-  M1a_11_1 : LUT4
-    generic map(
-      INIT => X"159C"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => M1a_11_1_78
-    );
-  M1a_14_SW2 : LUT4
-    generic map(
-      INIT => X"EA72"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N204
-    );
-  U3_red_0_111 : LUT4
-    generic map(
-      INIT => X"FF08"
-    )
-    port map (
-      I0 => U3_tank1Angle10s_and000055_1413,
-      I1 => U3_tank1Angle10s_cmp_le00002,
-      I2 => N324,
-      I3 => U3_tank1Angle1s,
-      O => U3_N12
-    );
-  screenstate_sig_hill4_mux0001_4_1 : MUXF5
-    port map (
-      I0 => N352,
-      I1 => N353,
-      S => screenstate_sig_hill4_mux0001_4_bdd2,
-      O => screenstate_sig_hill4_mux0001(4)
-    );
-  screenstate_sig_hill4_mux0001_4_1_F : LUT4
-    generic map(
-      INIT => X"2AA9"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(3),
-      I1 => screenstate_sig_hill4(2),
-      I2 => screenstate_sig_hill4(1),
-      I3 => screenstate_sig_hill4(0),
-      O => N352
-    );
-  screenstate_sig_hill4_mux0001_4_1_G : LUT4
-    generic map(
-      INIT => X"AAA9"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(3),
-      I1 => screenstate_sig_hill4(2),
-      I2 => screenstate_sig_hill4(1),
-      I3 => screenstate_sig_hill4(0),
-      O => N353
-    );
-  M2_5_1 : MUXF5
-    port map (
-      I0 => N354,
-      I1 => N355,
-      S => rom1_addr(0),
-      O => M2_5_bdd0
-    );
-  M2_5_1_F : LUT3
-    generic map(
-      INIT => X"F1"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd13,
-      I2 => rom1_addr(1),
-      O => N354
-    );
-  M2_5_1_G : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2_4_bdd4,
-      I2 => rom1_addr(2),
-      O => N355
-    );
-  M1_26_1 : MUXF5
-    port map (
-      I0 => N356,
-      I1 => N357,
-      S => rom1_addr(0),
-      O => M1_26_bdd0
-    );
-  M1_26_1_F : LUT3
-    generic map(
-      INIT => X"F1"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M1_21_bdd5,
-      I2 => rom1_addr(1),
-      O => N356
-    );
-  M1_26_1_G : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M1_24_bdd4,
-      I2 => rom1_addr(2),
-      O => N357
-    );
-  selector_blue_1_22 : MUXF5
-    port map (
-      I0 => N358,
-      I1 => N359,
-      S => screenstate_present_state_FSM_FFd1_1729,
-      O => blue_1_OBUF_1498
-    );
-  selector_blue_1_22_F : LUT3
-    generic map(
-      INIT => X"A2"
-    )
-    port map (
-      I0 => vidon,
-      I1 => title_spriteon,
-      I2 => sig_MTitle(1),
-      O => N358
-    );
-  selector_blue_1_22_G : LUT4
-    generic map(
-      INIT => X"AAA8"
-    )
-    port map (
-      I0 => U3_N53,
-      I1 => U3_N8,
-      I2 => U3_spriteonB5,
-      I3 => U3_N15,
-      O => N359
-    );
-  selector_blue_0_50 : MUXF5
-    port map (
-      I0 => N360,
-      I1 => N361,
-      S => screenstate_present_state_FSM_FFd1_1729,
-      O => blue_0_OBUF_1497
-    );
-  selector_blue_0_50_F : LUT3
-    generic map(
-      INIT => X"80"
-    )
-    port map (
-      I0 => vidon,
-      I1 => sig_MTitle(0),
-      I2 => title_spriteon,
-      O => N360
-    );
-  selector_blue_0_50_G : LUT4
-    generic map(
-      INIT => X"C888"
-    )
-    port map (
-      I0 => U3_spriteonB1,
-      I1 => U3_N53,
-      I2 => selector_blue_0_7_1804,
-      I3 => selector_blue_0_8_1805,
-      O => N361
-    );
-  M2_9_34 : MUXF5
-    port map (
-      I0 => N362,
-      I1 => N363,
-      S => rom1_addr(0),
-      O => M2_9_34_190
-    );
-  M2_9_34_F : LUT4
-    generic map(
-      INIT => X"0702"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2_0_bdd9,
-      I2 => rom1_addr(3),
-      I3 => M2_10_bdd14,
-      O => N362
-    );
-  M2_9_34_G : LUT3
-    generic map(
-      INIT => X"01"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => M2_0_bdd16,
-      O => N363
-    );
-  M1_22_34 : MUXF5
-    port map (
-      I0 => N364,
-      I1 => N365,
-      S => rom1_addr(0),
-      O => M1_22_34_18
-    );
-  M1_22_34_F : LUT4
-    generic map(
-      INIT => X"0702"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M1_22_bdd7,
-      I2 => rom1_addr(3),
-      I3 => M1_21_bdd8,
-      O => N364
-    );
-  M1_22_34_G : LUT3
-    generic map(
-      INIT => X"01"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => M1_22_bdd12,
-      O => N365
-    );
-  M2a_8_61 : MUXF5
-    port map (
-      I0 => N366,
-      I1 => N367,
-      S => rom1_addr(4),
-      O => M2a_8_Q
-    );
-  M2a_8_61_F : LUT3
-    generic map(
-      INIT => X"2A"
-    )
-    port map (
-      I0 => M2a_8_11_220,
-      I1 => rom1_addr(3),
-      I2 => M2_8_bdd1,
-      O => N366
-    );
-  M2a_8_61_G : LUT4
-    generic map(
-      INIT => X"44E4"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => M1_23_bdd0,
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N367
-    );
-  M1_27_116 : MUXF5
-    port map (
-      I0 => N368,
-      I1 => N369,
-      S => rom1_addr(2),
-      O => M1_27_116_44
-    );
-  M1_27_116_F : LUT4
-    generic map(
-      INIT => X"6000"
-    )
-    port map (
-      I0 => M1_22_bdd9,
-      I1 => M1_21_bdd5,
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N368
-    );
-  M1_27_116_G : LUT4
-    generic map(
-      INIT => X"8A02"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => M1_22_bdd9,
-      I3 => M1_21_bdd5,
-      O => N369
-    );
-  M2_4_106 : MUXF5
-    port map (
-      I0 => N370,
-      I1 => N371,
-      S => rom1_addr(2),
-      O => M2_4_106_172
-    );
-  M2_4_106_F : LUT4
-    generic map(
-      INIT => X"6000"
-    )
-    port map (
-      I0 => M2_0_bdd6,
-      I1 => M2_0_bdd13,
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N370
-    );
-  M2_4_106_G : LUT4
-    generic map(
-      INIT => X"8A02"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => M2_0_bdd6,
-      I3 => M2_0_bdd13,
-      O => N371
-    );
-  M1a_9_30 : MUXF5
-    port map (
-      I0 => N372,
-      I1 => N373,
-      S => rom1_addr(3),
-      O => M1a_9_Q
-    );
-  M1a_9_30_F : LUT4
-    generic map(
-      INIT => X"6CC8"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N372
-    );
-  M1a_9_30_G : LUT3
-    generic map(
-      INIT => X"1B"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(4),
-      I2 => M1_10_bdd7,
-      O => N373
-    );
-  M1a_23_59 : MUXF5
-    port map (
-      I0 => N374,
-      I1 => N375,
-      S => rom1_addr(4),
-      O => M1a_23_Q
-    );
-  M1a_23_59_F : LUT3
-    generic map(
-      INIT => X"2A"
-    )
-    port map (
-      I0 => M1a_23_9_97,
-      I1 => rom1_addr(3),
-      I2 => M1_23_bdd1,
-      O => N374
-    );
-  M1a_23_59_G : LUT4
-    generic map(
-      INIT => X"2232"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N375
-    );
-  U3_spriteonB5_and000041 : MUXF5
-    port map (
-      I0 => N376,
-      I1 => N377,
-      S => U2_hcs(4),
-      O => U3_spriteonB5_and000041_1397
-    );
-  U3_spriteonB5_and000041_F : LUT3
-    generic map(
-      INIT => X"46"
-    )
-    port map (
-      I0 => U2_hcs(6),
-      I1 => U2_hcs(5),
-      I2 => N240,
-      O => N376
-    );
-  U3_spriteonB5_and000041_G : LUT4
-    generic map(
-      INIT => X"0F08"
-    )
-    port map (
-      I0 => U2_hcs(2),
-      I1 => U2_hcs(3),
-      I2 => U2_hcs(6),
-      I3 => U2_hcs(5),
-      O => N377
-    );
-  M2a_5_63 : MUXF5
-    port map (
-      I0 => N378,
-      I1 => N379,
-      S => rom1_addr(1),
-      O => M2a_5_63_212
-    );
-  M2a_5_63_F : LUT4
-    generic map(
-      INIT => X"B111"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => M2_0_bdd16,
-      I2 => rom1_addr(2),
-      I3 => M2_0_bdd6,
-      O => N378
-    );
-  M2a_5_63_G : LUT4
-    generic map(
-      INIT => X"AAE8"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd6,
-      I2 => M2_0_bdd13,
-      I3 => rom1_addr(0),
-      O => N379
-    );
-  M1_31_81 : MUXF5
-    port map (
-      I0 => N380,
-      I1 => N381,
-      S => rom1_addr(3),
-      O => M1_31_Q
-    );
-  M1_31_81_F : LUT4
-    generic map(
-      INIT => X"0B01"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M1_23_bdd3,
-      I2 => rom1_addr(4),
-      I3 => M1_31_14_65,
-      O => N380
-    );
-  M1_31_81_G : LUT4
-    generic map(
-      INIT => X"0C04"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M1_27_bdd4,
-      I2 => rom1_addr(4),
-      I3 => M1_29_65,
-      O => N381
-    );
-  M2_0_87 : MUXF5
-    port map (
-      I0 => N382,
-      I1 => N383,
-      S => rom1_addr(3),
-      O => M2_0_Q
-    );
-  M2_0_87_F : LUT4
-    generic map(
-      INIT => X"0B01"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2_0_bdd3,
-      I2 => rom1_addr(4),
-      I3 => M2_0_14_134,
-      O => N382
-    );
-  M2_0_87_G : LUT4
-    generic map(
-      INIT => X"0103"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2_0_bdd1,
-      I2 => rom1_addr(4),
-      I3 => rom1_addr(0),
-      O => N383
-    );
-  M1_23_79 : MUXF5
-    port map (
-      I0 => N384,
-      I1 => N385,
-      S => rom1_addr(4),
-      O => M1_23_Q
-    );
-  M1_23_79_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => M1_23_37_26,
-      I1 => rom1_addr(3),
-      I2 => M1_23_bdd1,
-      O => N384
-    );
-  M1_23_79_G : LUT4
-    generic map(
-      INIT => X"3475"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N385
-    );
-  M2_8_79 : MUXF5
-    port map (
-      I0 => N386,
-      I1 => N387,
-      S => rom1_addr(4),
-      O => M2_8_Q
-    );
-  M2_8_79_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => M2_8_37_187,
-      I1 => rom1_addr(3),
-      I2 => M2_8_bdd1,
-      O => N386
-    );
-  M2_8_79_G : LUT4
-    generic map(
-      INIT => X"3475"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N387
-    );
-  M1_29_126 : MUXF5
-    port map (
-      I0 => N388,
-      I1 => N389,
-      S => rom1_addr(4),
-      O => M1_29_Q
-    );
-  M1_29_126_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => M1_29_80_58,
-      I1 => rom1_addr(3),
-      I2 => M1_29_23,
-      O => N388
-    );
-  M1_29_126_G : LUT4
-    generic map(
-      INIT => X"545E"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => M1_0_bdd2,
-      O => N389
-    );
-  M2_2_126 : MUXF5
-    port map (
-      I0 => N390,
-      I1 => N391,
-      S => rom1_addr(4),
-      O => M2_2_Q
-    );
-  M2_2_126_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => M2_2_80_162,
-      I1 => rom1_addr(3),
-      I2 => M2_2_23,
-      O => N390
-    );
-  M2_2_126_G : LUT4
-    generic map(
-      INIT => X"545E"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => M1_0_bdd2,
-      O => N391
-    );
-  M1a_25_36_SW0 : MUXF5
-    port map (
-      I0 => N392,
-      I1 => N393,
-      S => rom1_addr(3),
-      O => N274
-    );
-  M1a_25_36_SW0_F : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M1a_24_bdd1,
-      I2 => M1a_22_bdd0,
-      O => N392
-    );
-  M1a_25_36_SW0_G : LUT4
-    generic map(
-      INIT => X"D9DB"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => M1_22_bdd9,
-      O => N393
-    );
-  M2a_6_36_SW0 : MUXF5
-    port map (
-      I0 => N394,
-      I1 => N395,
-      S => rom1_addr(3),
-      O => N294
-    );
-  M2a_6_36_SW0_F : LUT3
-    generic map(
-      INIT => X"E4"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2a_6_bdd1,
-      I2 => M2a_6_bdd0,
-      O => N394
-    );
-  M2a_6_36_SW0_G : LUT4
-    generic map(
-      INIT => X"D9DB"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => M2_0_bdd6,
-      O => N395
-    );
-  U3_spriteonB3_and000020_SW0 : MUXF5
-    port map (
-      I0 => N396,
-      I1 => N397,
-      S => U2_hcs(6),
-      O => N316
-    );
-  U3_spriteonB3_and000020_SW0_F : LUT3
-    generic map(
-      INIT => X"7F"
-    )
-    port map (
-      I0 => U2_hcs(4),
-      I1 => U2_hcs(5),
-      I2 => U2_hcs(3),
-      O => N396
-    );
-  U3_spriteonB3_and000020_SW0_G : LUT4
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank2,
+      I3 => U3_RMht1(5),
+      O => U3_RMcnt_5_and0001
+    );
+  U3_RMcnt_5_and00001 : LUT4
     generic map(
       INIT => X"2000"
     )
     port map (
-      I0 => U2_hcs(5),
-      I1 => U3_spriteonB3_cmp_le0000128_1389,
-      I2 => U2_hcs(8),
-      I3 => U2_hcs(7),
-      O => N397
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht1(5),
+      I2 => sig_tank2,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt_5_and0000
     );
-  M2_25_Q : MUXF5
-    port map (
-      I0 => N398,
-      I1 => N399,
-      S => rom1_addr(3),
-      O => M1_6_Q
-    );
-  M2_25_F : LUT4
+  U3_RMcnt_4_and00011 : LUT4
     generic map(
-      INIT => X"8028"
+      INIT => X"8000"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N398
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank2,
+      I3 => U3_RMht1(4),
+      O => U3_RMcnt_4_and0001
     );
-  M2_25_G : LUT4
+  U3_RMcnt_4_and00001 : LUT4
     generic map(
-      INIT => X"427B"
+      INIT => X"2000"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N399
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht1(4),
+      I2 => sig_tank2,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt_4_and0000
     );
-  M2_24_Q : MUXF5
-    port map (
-      I0 => N400,
-      I1 => N401,
-      S => rom1_addr(3),
-      O => M1_4_Q
-    );
-  M2_24_F : LUT4
+  U3_RMcnt_3_and00011 : LUT4
     generic map(
-      INIT => X"8028"
+      INIT => X"8000"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N400
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank2,
+      I3 => U3_RMht1(3),
+      O => U3_RMcnt_3_and0001
     );
-  M2_24_G : LUT4
+  U3_RMcnt_3_and00001 : LUT4
     generic map(
-      INIT => X"4A73"
+      INIT => X"2000"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N401
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht1(3),
+      I2 => sig_tank2,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt_3_and0000
     );
-  M2_23_Q : MUXF5
-    port map (
-      I0 => N402,
-      I1 => N403,
-      S => rom1_addr(2),
-      O => M1_8_Q
-    );
-  M2_23_F : LUT4
+  U3_RMcnt_2_and00011 : LUT4
     generic map(
-      INIT => X"2A6A"
+      INIT => X"8000"
     )
     port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N402
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank2,
+      I3 => U3_RMht1(2),
+      O => U3_RMcnt_2_and0001
     );
-  M2_23_G : LUT4
+  U3_RMcnt_2_and00001 : LUT4
     generic map(
-      INIT => X"57D4"
+      INIT => X"2000"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N403
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht1(2),
+      I2 => sig_tank2,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt_2_and0000
     );
-  M2_4_134_SW0 : MUXF5
-    port map (
-      I0 => N404,
-      I1 => N405,
-      S => rom1_addr(0),
-      O => N228
-    );
-  M2_4_134_SW0_F : LUT4
+  U3_RMcnt_1_and00011 : LUT4
     generic map(
-      INIT => X"0E08"
+      INIT => X"8000"
     )
     port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd6,
-      I2 => rom1_addr(1),
-      I3 => M2_0_bdd13,
-      O => N404
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank2,
+      I3 => U3_RMht1(1),
+      O => U3_RMcnt_1_and0001
     );
-  M2_4_134_SW0_G : LUT3
+  U3_RMcnt_1_and00001 : LUT4
     generic map(
-      INIT => X"08"
+      INIT => X"2000"
     )
     port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd6,
-      I2 => rom1_addr(1),
-      O => N405
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht1(1),
+      I2 => sig_tank2,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt_1_and0000
     );
-  M2_1_65 : MUXF5
-    port map (
-      I0 => N406,
-      I1 => N407,
-      S => rom1_addr(1),
-      O => M2_1_65_150
-    );
-  M2_1_65_F : LUT4
+  U3_RMcnt_0_and00011 : LUT4
     generic map(
-      INIT => X"0600"
+      INIT => X"8000"
     )
     port map (
-      I0 => M2_0_bdd13,
-      I1 => M2_0_bdd6,
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N406
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank2,
+      I3 => U3_RMht1(0),
+      O => U3_RMcnt_0_and0001
     );
-  M2_1_65_G : LUT4
+  U3_RMcnt_0_and00001 : LUT4
     generic map(
-      INIT => X"10DC"
+      INIT => X"2000"
     )
     port map (
-      I0 => M2_0_bdd6,
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => N278,
-      O => N407
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht1(0),
+      I2 => sig_tank2,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt_0_and0000
     );
-  M1_30_65 : MUXF5
-    port map (
-      I0 => N408,
-      I1 => N409,
-      S => rom1_addr(1),
-      O => M1_30_65_62
-    );
-  M1_30_65_F : LUT4
+  U3_RMcnt2_5_and00011 : LUT4
     generic map(
-      INIT => X"0600"
+      INIT => X"8000"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank1,
+      I3 => U3_RMht2(5),
+      O => U3_RMcnt2_5_and0001
+    );
+  U3_RMcnt2_5_and00001 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht2(5),
+      I2 => sig_tank1,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt2_5_and0000
+    );
+  U3_RMcnt2_4_and00011 : LUT4
+    generic map(
+      INIT => X"8000"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank1,
+      I3 => U3_RMht2(4),
+      O => U3_RMcnt2_4_and0001
+    );
+  U3_RMcnt2_4_and00001 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht2(4),
+      I2 => sig_tank1,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt2_4_and0000
+    );
+  U3_RMcnt2_3_and00011 : LUT4
+    generic map(
+      INIT => X"8000"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank1,
+      I3 => U3_RMht2(3),
+      O => U3_RMcnt2_3_and0001
+    );
+  U3_RMcnt2_3_and00001 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht2(3),
+      I2 => sig_tank1,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt2_3_and0000
+    );
+  U3_RMcnt2_2_and00011 : LUT4
+    generic map(
+      INIT => X"8000"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank1,
+      I3 => U3_RMht2(2),
+      O => U3_RMcnt2_2_and0001
+    );
+  U3_RMcnt2_2_and00001 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht2(2),
+      I2 => sig_tank1,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt2_2_and0000
+    );
+  U3_RMcnt2_1_and00011 : LUT4
+    generic map(
+      INIT => X"8000"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank1,
+      I3 => U3_RMht2(1),
+      O => U3_RMcnt2_1_and0001
+    );
+  U3_RMcnt2_1_and00001 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht2(1),
+      I2 => sig_tank1,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt2_1_and0000
+    );
+  U3_RMcnt2_0_and00011 : LUT4
+    generic map(
+      INIT => X"8000"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_0_OBUF_2334,
+      I2 => sig_tank1,
+      I3 => U3_RMht2(0),
+      O => U3_RMcnt2_0_and0001
+    );
+  U3_RMcnt2_0_and00001 : LUT4
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => ld_0_OBUF_2334,
+      I1 => U3_RMht2(0),
+      I2 => sig_tank1,
+      I3 => screenstate_present_state_FSM_FFd1_2478,
+      O => U3_RMcnt2_0_and0000
+    );
+  U3_RMht1_not00011190_F_SW0 : LUT4
+    generic map(
+      INIT => X"E222"
+    )
+    port map (
+      I0 => ld_5_OBUF_2339,
+      I1 => ld_6_OBUF_2340,
+      I2 => U3_RMht1(4),
+      I3 => N202,
+      O => N450
+    );
+  M1_24_105_SW0_SW0 : LUT4
+    generic map(
+      INIT => X"6108"
     )
     port map (
       I0 => M1_21_bdd5,
       I1 => M1_22_bdd9,
-      I2 => rom1_addr(0),
+      I2 => sig_tank1rom10s(1),
       I3 => rom1_addr(2),
-      O => N408
+      O => N452
     );
-  M1_30_65_G : LUT4
+  U3_font4_3_62_SW1 : LUT4
     generic map(
-      INIT => X"10DC"
+      INIT => X"818F"
     )
     port map (
-      I0 => M1_22_bdd9,
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => N286,
-      O => N409
+      I0 => U3_RMht2(1),
+      I1 => U3_RMht2(2),
+      I2 => U3_font3_cmp_lt0001,
+      I3 => N53,
+      O => N456
     );
-  M1a_22_40 : MUXF5
-    port map (
-      I0 => N410,
-      I1 => N411,
-      S => rom1_addr(4),
-      O => M1a_22_Q
-    );
-  M1a_22_40_F : LUT3
+  M2a_6_103_SW0 : LUT4
     generic map(
-      INIT => X"2A"
-    )
-    port map (
-      I0 => N292,
-      I1 => rom1_addr(3),
-      I2 => M1_22_bdd0,
-      O => N410
-    );
-  M1a_22_40_G : LUT4
-    generic map(
-      INIT => X"1352"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N411
-    );
-  M1a_26_127 : MUXF5
-    port map (
-      I0 => N412,
-      I1 => N413,
-      S => rom1_addr(4),
-      O => M1a_26_Q
-    );
-  M1a_26_127_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => N296,
-      I1 => rom1_addr(3),
-      I2 => M1_26_bdd0,
-      O => N412
-    );
-  M1a_26_127_G : LUT4
-    generic map(
-      INIT => X"1352"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N413
-    );
-  M2a_9_40 : MUXF5
-    port map (
-      I0 => N414,
-      I1 => N415,
-      S => rom1_addr(4),
-      O => M2a_9_Q
-    );
-  M2a_9_40_F : LUT3
-    generic map(
-      INIT => X"2A"
-    )
-    port map (
-      I0 => N298,
-      I1 => rom1_addr(3),
-      I2 => M2_9_bdd0,
-      O => N414
-    );
-  M2a_9_40_G : LUT4
-    generic map(
-      INIT => X"1352"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N415
-    );
-  M1a_19_32 : MUXF5
-    port map (
-      I0 => N416,
-      I1 => N417,
-      S => rom1_addr(1),
-      O => M1a_19_Q
-    );
-  M1a_19_32_F : LUT4
-    generic map(
-      INIT => X"5F40"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(2),
-      O => N416
-    );
-  M1a_19_32_G : LUT4
-    generic map(
-      INIT => X"147C"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N417
-    );
-  M2_7_113 : MUXF5
-    port map (
-      I0 => N418,
-      I1 => N419,
-      S => rom1_addr(4),
-      O => M2_7_Q
-    );
-  M2_7_113_F : LUT4
-    generic map(
-      INIT => X"10DC"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => N330,
-      I3 => M2_7_bdd0,
-      O => N418
-    );
-  M2_7_113_G : LUT4
-    generic map(
-      INIT => X"17A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N419
-    );
-  M1_24_113 : MUXF5
-    port map (
-      I0 => N420,
-      I1 => N421,
-      S => rom1_addr(4),
-      O => M1_24_Q
-    );
-  M1_24_113_F : LUT4
-    generic map(
-      INIT => X"10DC"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => N332,
-      I3 => M1_24_bdd0,
-      O => N420
-    );
-  M1_24_113_G : LUT4
-    generic map(
-      INIT => X"17A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N421
-    );
-  M1_27_227 : MUXF5
-    port map (
-      I0 => N422,
-      I1 => N423,
-      S => rom1_addr(4),
-      O => M1_27_Q
-    );
-  M1_27_227_F : LUT3
-    generic map(
-      INIT => X"2A"
-    )
-    port map (
-      I0 => M1_27_127_45,
-      I1 => rom1_addr(3),
-      I2 => M1_27_bdd0,
-      O => N422
-    );
-  M1_27_227_G : LUT4
-    generic map(
-      INIT => X"31A1"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => N423
-    );
-  M1_25_146 : MUXF5
-    port map (
-      I0 => N424,
-      I1 => N425,
-      S => rom1_addr(4),
-      O => M1_25_Q
-    );
-  M1_25_146_F : LUT3
-    generic map(
-      INIT => X"2A"
-    )
-    port map (
-      I0 => M1_25_80_37,
-      I1 => rom1_addr(3),
-      I2 => M1_25_bdd1,
-      O => N424
-    );
-  M1_25_146_G : LUT4
-    generic map(
-      INIT => X"37A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N425
-    );
-  M2_6_160 : MUXF5
-    port map (
-      I0 => N426,
-      I1 => N427,
-      S => rom1_addr(4),
-      O => M2_6_Q
-    );
-  M2_6_160_F : LUT3
-    generic map(
-      INIT => X"2A"
-    )
-    port map (
-      I0 => M2_6_93_181,
-      I1 => rom1_addr(3),
-      I2 => M2_6_bdd0,
-      O => N426
-    );
-  M2_6_160_G : LUT4
-    generic map(
-      INIT => X"37A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N427
-    );
-  M2_9_68 : MUXF5
-    port map (
-      I0 => N428,
-      I1 => N429,
-      S => rom1_addr(4),
-      O => M2_9_Q
-    );
-  M2_9_68_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => M2_9_34_190,
-      I1 => rom1_addr(3),
-      I2 => M2_9_bdd0,
-      O => N428
-    );
-  M2_9_68_G : LUT4
-    generic map(
-      INIT => X"35A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N429
-    );
-  M1_22_68 : MUXF5
-    port map (
-      I0 => N430,
-      I1 => N431,
-      S => rom1_addr(4),
-      O => M1_22_Q
-    );
-  M1_22_68_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => M1_22_34_18,
-      I1 => rom1_addr(3),
-      I2 => M1_22_bdd0,
-      O => N430
-    );
-  M1_22_68_G : LUT4
-    generic map(
-      INIT => X"35A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N431
-    );
-  M2_5_179 : MUXF5
-    port map (
-      I0 => N432,
-      I1 => N433,
-      S => rom1_addr(4),
-      O => M2_5_Q
-    );
-  M2_5_179_F : LUT4
-    generic map(
-      INIT => X"40EA"
+      INIT => X"0D08"
     )
     port map (
       I0 => rom1_addr(3),
-      I1 => M2_5_58_177,
-      I2 => M2_5_25_176,
-      I3 => M2_5_bdd0,
-      O => N432
+      I1 => M2_6_bdd1,
+      I2 => rom1_addr(1),
+      I3 => M2a_6_bdd1,
+      O => N458
     );
-  M2_5_179_G : LUT4
-    generic map(
-      INIT => X"31A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N433
-    );
-  M1_26_179 : MUXF5
-    port map (
-      I0 => N434,
-      I1 => N435,
-      S => rom1_addr(4),
-      O => M1_26_Q
-    );
-  M1_26_179_F : LUT4
-    generic map(
-      INIT => X"40EA"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => M1_26_58_41,
-      I2 => M1_26_25_40,
-      I3 => M1_26_bdd0,
-      O => N434
-    );
-  M1_26_179_G : LUT4
-    generic map(
-      INIT => X"31A1"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N435
-    );
-  M1_11_Q : MUXF5
-    port map (
-      I0 => N436,
-      I1 => N437,
-      S => rom1_addr(1),
-      O => M1_11_Q_5
-    );
-  M1_11_F : LUT4
-    generic map(
-      INIT => X"2E02"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(3),
-      O => N436
-    );
-  M1_11_G : LUT4
-    generic map(
-      INIT => X"6050"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N437
-    );
-  M2_11_Q : MUXF5
-    port map (
-      I0 => N438,
-      I1 => N439,
-      S => rom1_addr(2),
-      O => M1_20_Q
-    );
-  M2_11_F : LUT4
-    generic map(
-      INIT => X"3382"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N438
-    );
-  M2_11_G : LUT4
-    generic map(
-      INIT => X"42DD"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(4),
-      O => N439
-    );
-  M2_4_214 : MUXF5
-    port map (
-      I0 => N440,
-      I1 => N441,
-      S => rom1_addr(4),
-      O => M2_4_Q
-    );
-  M2_4_214_F : LUT4
+  M2a_6_103 : LUT4
     generic map(
       INIT => X"5F4E"
     )
     port map (
-      I0 => rom1_addr(3),
-      I1 => N228,
-      I2 => M2_4_bdd0,
-      I3 => M2_4_106_172,
-      O => N440
-    );
-  M2_4_214_G : LUT4
-    generic map(
-      INIT => X"31A1"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => N441
-    );
-  M2a_13_Q : MUXF5
-    port map (
-      I0 => N442,
-      I1 => N443,
-      S => rom1_addr(1),
-      O => M2a_13_Q_194
-    );
-  M2a_13_F : LUT4
-    generic map(
-      INIT => X"5C4E"
-    )
-    port map (
       I0 => rom1_addr(4),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(0),
-      O => N442
+      I1 => M2a_6_51_258,
+      I2 => N414,
+      I3 => N458,
+      O => M2a_6_Q
     );
-  M2a_13_G : LUT4
+  U3_Mmux_M2a_mux0000_72 : LUT4
     generic map(
-      INIT => X"1D76"
+      INIT => X"44E4"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(3),
-      O => N443
-    );
-  M2_26_Q : MUXF5
-    port map (
-      I0 => N444,
-      I1 => N445,
-      S => rom1_addr(0),
-      O => M2_26_Q_156
-    );
-  M2_26_F : LUT4
-    generic map(
-      INIT => X"7E44"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
+      I0 => U3_rom_pix2(0),
+      I1 => M2a_22_Q,
       I2 => rom1_addr(4),
-      I3 => rom1_addr(2),
-      O => N444
+      I3 => N390,
+      O => U3_Mmux_M2a_mux0000_72_1695
     );
-  M2_26_G : LUT4
+  U3_RMht1_not00011190_F : LUT4
     generic map(
-      INIT => X"4A28"
+      INIT => X"2000"
+    )
+    port map (
+      I0 => who_present_state_FSM_FFd2_2611,
+      I1 => who_present_state_FSM_FFd1_2609,
+      I2 => screenstate_present_state_FSM_FFd1_2478,
+      I3 => N450,
+      O => N206
+    );
+  M2_22_1 : LUT4
+    generic map(
+      INIT => X"A875"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => M2_22_1_163
+    );
+  M1a_3_2 : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      O => M1a_3_2_124
+    );
+  M2_21_11 : LUT4
+    generic map(
+      INIT => X"24FE"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => M2_21_bdd0
+    );
+  M2a_10_1 : LUT4
+    generic map(
+      INIT => X"F363"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => M1a_12_bdd0
+    );
+  M1a_3_1 : LUT4
+    generic map(
+      INIT => X"658C"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => M1a_3_1_123
+    );
+  M1_9_3 : LUT4
+    generic map(
+      INIT => X"0862"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => M1_9_2
+    );
+  M1_3_2 : LUT4
+    generic map(
+      INIT => X"13B3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(1),
+      O => M1_3_2_77
+    );
+  M2a_30_19 : LUT4
+    generic map(
+      INIT => X"CC4C"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => M2a_30_19_236
+    );
+  M2_4_133 : LUT4
+    generic map(
+      INIT => X"7F91"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => M2_4_133_181
+    );
+  M1_3_21 : LUT3
+    generic map(
+      INIT => X"E7"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      O => M1_3_bdd3
+    );
+  M1_25_21 : LUT4
+    generic map(
+      INIT => X"F2F3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => M1_22_bdd9,
+      O => M1_25_bdd1
+    );
+  U3_Mmux_M2a_mux0000_8 : LUT3
+    generic map(
+      INIT => X"1B"
     )
     port map (
       I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
+      I1 => M1a_4_bdd0,
+      I2 => N464,
+      O => U3_Mmux_M2a_mux0000_8_1700
+    );
+  M2_10_51 : LUT2
+    generic map(
+      INIT => X"2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(0),
+      O => M1_10_bdd8
+    );
+  M2_8_15_SW0 : LUT4
+    generic map(
+      INIT => X"9091"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
       I2 => rom1_addr(3),
-      I3 => rom1_addr(2),
-      O => N445
-    );
-  M1_10_Q : MUXF5
-    port map (
-      I0 => N446,
-      I1 => N447,
-      S => rom1_addr(2),
-      O => M1_10_Q_2
-    );
-  M1_10_F : LUT4
-    generic map(
-      INIT => X"AD28"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(4),
-      O => N446
-    );
-  M1_10_G : LUT4
-    generic map(
-      INIT => X"6048"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N447
-    );
-  M1a_21_47 : MUXF5
-    port map (
-      I0 => N448,
-      I1 => N449,
-      S => rom1_addr(4),
-      O => M1a_21_Q
-    );
-  M1a_21_47_F : LUT3
-    generic map(
-      INIT => X"46"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => N264,
-      O => N448
-    );
-  M1a_21_47_G : LUT4
-    generic map(
-      INIT => X"1594"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N449
-    );
-  M1a_24_63 : MUXF5
-    port map (
-      I0 => N450,
-      I1 => N451,
-      S => rom1_addr(4),
-      O => M1a_24_Q
-    );
-  M1a_24_63_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => M1a_24_38_100,
-      I1 => M1_24_bdd0,
-      I2 => rom1_addr(3),
-      O => N450
-    );
-  M1a_24_63_G : LUT4
-    generic map(
-      INIT => X"1594"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N451
-    );
-  M2a_7_63 : MUXF5
-    port map (
-      I0 => N452,
-      I1 => N453,
-      S => rom1_addr(4),
-      O => M2a_7_Q
-    );
-  M2a_7_63_F : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => M2a_7_38_218,
-      I1 => M2_7_bdd0,
-      I2 => rom1_addr(3),
-      O => N452
-    );
-  M2a_7_63_G : LUT4
-    generic map(
-      INIT => X"1594"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N453
-    );
-  M2a_10_47 : MUXF5
-    port map (
-      I0 => N454,
-      I1 => N455,
-      S => rom1_addr(4),
-      O => M2a_10_Q
-    );
-  M2a_10_47_F : LUT3
-    generic map(
-      INIT => X"46"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => N266,
-      O => N454
-    );
-  M2a_10_47_G : LUT4
-    generic map(
-      INIT => X"1594"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => N455
-    );
-  M2_19_Q : MUXF5
-    port map (
-      I0 => N456,
-      I1 => N457,
-      S => rom1_addr(1),
-      O => M2_19_Q_147
-    );
-  M2_19_F : LUT4
-    generic map(
-      INIT => X"2B02"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(3),
-      O => N456
-    );
-  M2_19_G : LUT4
-    generic map(
-      INIT => X"2029"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N457
-    );
-  M2_30_74 : MUXF5
-    port map (
-      I0 => N458,
-      I1 => N459,
-      S => rom1_addr(1),
-      O => M2_30_Q
-    );
-  M2_30_74_F : LUT4
-    generic map(
-      INIT => X"2818"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(4),
-      I3 => rom1_addr(0),
-      O => N458
-    );
-  M2_30_74_G : LUT4
-    generic map(
-      INIT => X"726A"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N459
-    );
-  M2a_20_Q : MUXF5
-    port map (
-      I0 => N460,
-      I1 => N461,
-      S => rom1_addr(2),
-      O => M2a_20_Q_197
-    );
-  M2a_20_F : LUT4
-    generic map(
-      INIT => X"CE24"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(1),
-      O => N460
-    );
-  M2a_20_G : LUT4
-    generic map(
-      INIT => X"1777"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N461
-    );
-  M1_19_Q : MUXF5
-    port map (
-      I0 => N462,
-      I1 => N463,
-      S => rom1_addr(2),
-      O => M1_19_Q_11
-    );
-  M1_19_F : LUT4
-    generic map(
-      INIT => X"F724"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(4),
-      O => N462
-    );
-  M1_19_G : LUT4
-    generic map(
-      INIT => X"4280"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => N463
-    );
-  M2_16_Q : MUXF5
-    port map (
-      I0 => N464,
-      I1 => N465,
-      S => rom1_addr(1),
-      O => M2_16_Q_146
-    );
-  M2_16_F : LUT4
-    generic map(
-      INIT => X"20B0"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(2),
-      O => N464
-    );
-  M2_16_G : LUT4
-    generic map(
-      INIT => X"1B81"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(4),
-      O => N465
-    );
-  M2a_12_Q : MUXF5
-    port map (
-      I0 => N466,
-      I1 => N467,
-      S => rom1_addr(1),
-      O => M2a_12_Q_193
-    );
-  M2a_12_F : LUT4
-    generic map(
-      INIT => X"5F40"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(2),
+      I3 => M2_0_bdd20,
       O => N466
     );
-  M2a_12_G : LUT4
+  M2a_6_11 : LUT4
     generic map(
-      INIT => X"147C"
+      INIT => X"28F0"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N467
+      I0 => M2_0_bdd6,
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => M2a_6_32
     );
-  M1_15_Q : MUXF5
-    port map (
-      I0 => N468,
-      I1 => N469,
-      S => rom1_addr(3),
-      O => M1_15_Q_9
-    );
-  M1_15_F : LUT4
+  U3_Mmux_M1_mux0000_83_SW1 : LUT4
     generic map(
-      INIT => X"8A02"
+      INIT => X"6EFD"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(4),
-      O => N468
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(3),
+      O => N438
     );
-  M1_15_G : LUT4
+  M2_10_31 : LUT3
     generic map(
-      INIT => X"1781"
+      INIT => X"6F"
     )
     port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(4),
-      O => N469
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      O => M1_0_bdd2
     );
-  M1a_10_42 : MUXF5
-    port map (
-      I0 => N470,
-      I1 => N471,
-      S => rom1_addr(2),
-      O => M1a_10_Q
-    );
-  M1a_10_42_F : LUT4
+  M1_21_47_SW0_SW0 : LUT4
     generic map(
-      INIT => X"7218"
+      INIT => X"BD9F"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(1),
-      O => N470
+      I0 => sig_tank1rom10s(0),
+      I1 => M1_21_bdd5,
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(1),
+      O => N392
     );
-  M1a_10_42_G : LUT4
+  M2_1_24 : LUT4
     generic map(
-      INIT => X"171F"
+      INIT => X"F9FF"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(0),
-      O => N471
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_0_bdd20,
+      I3 => sig_tank1rom10s(0),
+      O => M2_1_bdd1
     );
-  U3_Mmux_M2a_mux0000_71_SW0 : MUXF5
-    port map (
-      I0 => N472,
-      I1 => N473,
-      S => rom1_addr(3),
-      O => N256
-    );
-  U3_Mmux_M2a_mux0000_71_SW0_F : LUT4
+  buttons_gameA1 : LUT4
     generic map(
-      INIT => X"29BB"
+      INIT => X"8000"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(1),
-      O => N472
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => bounce_delay3(0),
+      I2 => bounce_delay2(0),
+      I3 => bounce_delay1(0),
+      O => sig_gameA
     );
-  U3_Mmux_M2a_mux0000_71_SW0_G : LUT4
+  U3_RMcnt_and00001 : LUT3
     generic map(
-      INIT => X"040C"
+      INIT => X"08"
     )
     port map (
-      I0 => U3_xpix2(0),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N473
+      I0 => sig_gameA,
+      I1 => who_present_state_FSM_FFd2_2611,
+      I2 => who_present_state_FSM_FFd1_2609,
+      O => U3_RMcnt_and0000
     );
-  U3_Mmux_M2a_mux0000_92_SW0 : MUXF5
-    port map (
-      I0 => N474,
-      I1 => N475,
-      S => rom1_addr(4),
-      O => N230
-    );
-  U3_Mmux_M2a_mux0000_92_SW0_F : LUT4
+  U3_RMcnt2_and00001 : LUT3
     generic map(
-      INIT => X"FF2A"
+      INIT => X"02"
     )
     port map (
-      I0 => M2a_4_80_210,
-      I1 => rom1_addr(1),
-      I2 => N322,
-      I3 => N328,
-      O => N474
+      I0 => sig_gameA,
+      I1 => who_present_state_FSM_FFd2_2611,
+      I2 => who_present_state_FSM_FFd1_2609,
+      O => U3_RMcnt2_and0000
     );
-  U3_Mmux_M2a_mux0000_92_SW0_G : LUT4
+  U3_tank1_angle_4_1 : LUT4
     generic map(
-      INIT => X"1352"
+      INIT => X"6AAA"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N475
+      I0 => U3_RMht1(4),
+      I1 => U3_RMht1(1),
+      I2 => U3_RMht1(2),
+      I3 => U3_RMht1(3),
+      O => sig_tank1_angle_calc_4_Q
     );
-  M1a_2_Q : MUXF5
-    port map (
-      I0 => N476,
-      I1 => N477,
-      S => rom1_addr(3),
-      O => M1a_2_Q_122
-    );
-  M1a_2_F : LUT4
+  M2_3_41 : LUT4
     generic map(
-      INIT => X"2AA8"
+      INIT => X"6CFF"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N476
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => M2_0_bdd13,
+      O => M2_3_bdd7
     );
-  M1a_2_G : LUT4
+  M2_0_51 : LUT4
     generic map(
-      INIT => X"0121"
+      INIT => X"FF93"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(4),
-      I3 => rom1_addr(0),
-      O => N477
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => M2_0_bdd6,
+      O => M2_0_bdd9
     );
-  M1a_20_Q : MUXF5
-    port map (
-      I0 => N478,
-      I1 => N479,
-      S => rom1_addr(1),
-      O => M1a_20_Q_88
-    );
-  M1a_20_F : LUT4
+  M2_0_102 : LUT4
     generic map(
-      INIT => X"6640"
+      INIT => X"FF93"
     )
     port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N478
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => M2_0_bdd20,
+      O => M2_0_bdd18
     );
-  M1a_20_G : LUT4
+  M1_21_52 : LUT4
     generic map(
-      INIT => X"10DC"
+      INIT => X"28A0"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(4),
-      I3 => rom1_addr(2),
-      O => N479
+      I0 => M1_21_bdd5,
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(1),
+      O => M1_21_bdd8
     );
-  M2a_30_Q : MUXF5
-    port map (
-      I0 => N480,
-      I1 => N481,
-      S => rom1_addr(3),
-      O => M2a_30_Q_205
-    );
-  M2a_30_F : LUT4
+  selector_blue_1_46_SW0 : LUT4
     generic map(
-      INIT => X"2AA8"
+      INIT => X"FE54"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N480
+      I0 => U3_spriteonB3,
+      I1 => U3_spriteonB4,
+      I2 => U3_green_1_138_2061,
+      I3 => who_present_state_FSM_FFd1_2609,
+      O => N268
     );
-  M2a_30_G : LUT4
+  selector_green_0_58_SW0_SW0 : LUT4
     generic map(
-      INIT => X"0103"
+      INIT => X"0405"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N481
+      I0 => U3_spriteonB5,
+      I1 => U3_destroy1_2035,
+      I2 => N370,
+      I3 => U3_spriteonM1,
+      O => N440
     );
-  M1_28_116 : MUXF5
-    port map (
-      I0 => N482,
-      I1 => N483,
-      S => rom1_addr(4),
-      O => M1_28_Q
-    );
-  M1_28_116_F : LUT4
+  M2_10_11 : LUT4
     generic map(
-      INIT => X"FFA8"
+      INIT => X"19FA"
     )
     port map (
-      I0 => rom1_addr(3),
-      I1 => M1_22_bdd4,
-      I2 => M1_28_0,
-      I3 => M1_28_69_52,
-      O => N482
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(1),
+      O => M2_10_bdd0
     );
-  M1_28_116_G : LUT4
+  U3_Madd_tank2rom1s_lut_7_Q : LUT4
     generic map(
-      INIT => X"1395"
+      INIT => X"C66C"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N483
+      I0 => U3_font3_cmp_lt0000,
+      I1 => U3_tank1rom10s_sub0001(7),
+      I2 => N456,
+      I3 => U3_RMht2(3),
+      O => U3_Madd_tank2rom1s_lut(7)
     );
-  M1_5_Q : MUXF5
-    port map (
-      I0 => N484,
-      I1 => N485,
-      S => rom1_addr(0),
-      O => M1_5_Q_70
-    );
-  M1_5_F : LUT4
+  M1_3_1 : LUT4
     generic map(
-      INIT => X"7E44"
+      INIT => X"9581"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(4),
-      I3 => rom1_addr(2),
-      O => N484
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => M1_3_1_76
     );
-  M1_5_G : LUT4
+  M2a_11_37 : LUT4
     generic map(
-      INIT => X"4A28"
+      INIT => X"3B06"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(2),
-      O => N485
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => M2a_11_37_218
     );
-  M2a_22_Q : MUXF5
-    port map (
-      I0 => N486,
-      I1 => N487,
-      S => rom1_addr(1),
-      O => M2a_22_Q_198
-    );
-  M2a_22_F : LUT4
+  M1a_14_11 : LUT4
     generic map(
-      INIT => X"50EA"
+      INIT => X"9818"
     )
     port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(4),
-      O => N486
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => M1a_14_bdd0
     );
-  M2a_22_G : LUT4
+  M2a_6_96_SW0 : LUT4
     generic map(
-      INIT => X"1E30"
+      INIT => X"CF4F"
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N487
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(2),
+      O => N414
     );
-  U3_Mmux_M2a_mux0000_73_SW0 : MUXF5
-    port map (
-      I0 => N488,
-      I1 => N489,
-      S => rom1_addr(2),
-      O => N260
-    );
-  U3_Mmux_M2a_mux0000_73_SW0_F : LUT4
+  M2_12_21 : LUT2
     generic map(
-      INIT => X"45C5"
+      INIT => X"E"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(3),
-      I3 => U3_xpix2(0),
-      O => N488
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      O => M1_10_bdd7
     );
-  U3_Mmux_M2a_mux0000_73_SW0_G : LUT3
+  M1_10_1 : LUT4
     generic map(
-      INIT => X"13"
+      INIT => X"B0D1"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      O => N489
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => M1_10_1_3
     );
-  M1a_18_30 : MUXF5
-    port map (
-      I0 => N490,
-      I1 => N491,
-      S => rom1_addr(2),
-      O => M1a_18_Q
-    );
-  M1a_18_30_F : LUT4
+  U3_C2_5_1 : FDE
     generic map(
-      INIT => X"D462"
+      INIT => '1'
     )
     port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N490
-    );
-  M1a_18_30_G : LUT4
-    generic map(
-      INIT => X"1777"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => N491
-    );
-  U3_Mmux_M2a_mux0000_9_SW0 : MUXF5
-    port map (
-      I0 => N492,
-      I1 => N493,
-      S => rom1_addr(2),
-      O => N258
-    );
-  U3_Mmux_M2a_mux0000_9_SW0_F : LUT4
-    generic map(
-      INIT => X"37E4"
-    )
-    port map (
-      I0 => U3_xpix2(0),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N492
-    );
-  U3_Mmux_M2a_mux0000_9_SW0_G : LUT3
-    generic map(
-      INIT => X"EA"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(1),
-      O => N493
-    );
-  M2_29_1 : MUXF5
-    port map (
-      I0 => N494,
-      I1 => N495,
-      S => rom1_addr(1),
-      O => M1_2_Q
-    );
-  M2_29_1_F : LUT4
-    generic map(
-      INIT => X"60E2"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(0),
-      O => N494
-    );
-  M2_29_1_G : LUT4
-    generic map(
-      INIT => X"7E44"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N495
-    );
-  U3_Mmux_M1a_mux0000_83_SW0 : MUXF5
-    port map (
-      I0 => N496,
-      I1 => N497,
-      S => rom1_addr(0),
-      O => N210
-    );
-  U3_Mmux_M1a_mux0000_83_SW0_F : LUT4
-    generic map(
-      INIT => X"DF31"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(2),
-      I2 => U3_xpix1(0),
-      I3 => rom1_addr(3),
-      O => N496
-    );
-  U3_Mmux_M1a_mux0000_83_SW0_G : LUT4
-    generic map(
-      INIT => X"EEF6"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(1),
-      I2 => U3_xpix1(0),
-      I3 => rom1_addr(2),
-      O => N497
-    );
-  U3_Mmux_M2a_mux0000_82_SW0 : MUXF5
-    port map (
-      I0 => N498,
-      I1 => N499,
-      S => rom1_addr(0),
-      O => N212
-    );
-  U3_Mmux_M2a_mux0000_82_SW0_F : LUT4
-    generic map(
-      INIT => X"F1B5"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(3),
-      I3 => U3_xpix2(0),
-      O => N498
-    );
-  U3_Mmux_M2a_mux0000_82_SW0_G : LUT4
-    generic map(
-      INIT => X"E6EF"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(2),
-      I3 => U3_xpix2(0),
-      O => N499
-    );
-  M1a_5_36 : MUXF5
-    port map (
-      I0 => N500,
-      I1 => N501,
-      S => rom1_addr(2),
-      O => M1a_5_Q
-    );
-  M1a_5_36_F : LUT4
-    generic map(
-      INIT => X"9AD8"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(4),
-      I3 => rom1_addr(0),
-      O => N500
-    );
-  M1a_5_36_G : LUT4
-    generic map(
-      INIT => X"0600"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(4),
-      I3 => rom1_addr(0),
-      O => N501
-    );
-  M1_1_69 : MUXF5
-    port map (
-      I0 => N502,
-      I1 => N503,
-      S => rom1_addr(1),
-      O => M1_1_Q
-    );
-  M1_1_69_F : LUT4
-    generic map(
-      INIT => X"2818"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(4),
-      I3 => rom1_addr(0),
-      O => N502
-    );
-  M1_1_69_G : LUT4
-    generic map(
-      INIT => X"726A"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(2),
-      O => N503
-    );
-  M1_21_50 : MUXF5
-    port map (
-      I0 => N504,
-      I1 => N505,
-      S => rom1_addr(4),
-      O => M1_21_Q
-    );
-  M1_21_50_F : LUT4
-    generic map(
-      INIT => X"D888"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(1),
-      I2 => N338,
-      I3 => rom1_addr(2),
-      O => N504
-    );
-  M1_21_50_G : LUT4
-    generic map(
-      INIT => X"17A1"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => N505
-    );
-  M2_10_50 : MUXF5
-    port map (
-      I0 => N506,
-      I1 => N507,
-      S => rom1_addr(4),
-      O => M2_10_Q
-    );
-  M2_10_50_F : LUT4
-    generic map(
-      INIT => X"D888"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(1),
-      I2 => N340,
-      I3 => rom1_addr(2),
-      O => N506
-    );
-  M2_10_50_G : LUT4
-    generic map(
-      INIT => X"17A1"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => N507
-    );
-  M2a_29_32 : MUXF5
-    port map (
-      I0 => N508,
-      I1 => N509,
-      S => rom1_addr(2),
-      O => M2a_29_Q
-    );
-  M2a_29_32_F : LUT4
-    generic map(
-      INIT => X"19A8"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(1),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(3),
-      O => N508
-    );
-  M2a_29_32_G : LUT4
-    generic map(
-      INIT => X"040C"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(4),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(0),
-      O => N509
-    );
-  M1a_16_Q : MUXF5
-    port map (
-      I0 => N510,
-      I1 => N511,
-      S => rom1_addr(1),
-      O => M1a_16_Q_83
-    );
-  M1a_16_F : LUT4
-    generic map(
-      INIT => X"5C4E"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(0),
-      O => N510
-    );
-  M1a_16_G : LUT4
-    generic map(
-      INIT => X"157E"
-    )
-    port map (
-      I0 => rom1_addr(4),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(0),
-      O => N511
+      C => U3_q(19),
+      CE => U3_C2_not0001,
+      D => U3_Result_5_4,
+      Q => U3_C2_5_1_820
     );
   mclk_BUFGP : BUFGP
     port map (
       I => mclk,
-      O => mclk_BUFGP_1557
+      O => mclk_BUFGP_2343
     );
   U1_q_0_BUFG : BUFG
     port map (
       I => U1_q_01,
       O => U1_q(0)
     );
-  U3_q_17_BUFG : BUFG
+  U3_q_20_BUFG : BUFG
     port map (
-      I => U3_q_171,
-      O => U3_q(17)
+      I => U3_q_201,
+      O => U3_q(20)
+    );
+  U3_q_19_BUFG : BUFG
+    port map (
+      I => U3_q_191,
+      O => U3_q(19)
     );
   U1_q_17_BUFG : BUFG
     port map (
       I => U1_q_171,
       O => U1_q(17)
+    );
+  U3_q_18_BUFG : BUFG
+    port map (
+      I => U3_q_181,
+      O => U3_q(18)
     );
   U1_Mcount_q_lut_0_INV_0 : INV
     port map (
@@ -18004,70 +20322,10 @@ begin
       I => U2_vcs(0),
       O => U2_Mcount_vcs_lut(0)
     );
-  U3_Msub_ypix1_sub0000_lut_9_INV_0 : INV
-    port map (
-      I => U3_ypix1_addsub0000(9),
-      O => U3_Msub_ypix1_sub0000_lut_9_Q
-    );
-  U3_Msub_ypix1_sub0000_lut_7_INV_0 : INV
-    port map (
-      I => U3_ypix1_addsub0000(7),
-      O => U3_Msub_ypix1_sub0000_lut_7_Q
-    );
-  U3_Mcount_q_lut_0_INV_0 : INV
-    port map (
-      I => U3_Q_0_1295,
-      O => U3_Mcount_q_lut(0)
-    );
-  U3_Msub_ypix1_addsub0000_lut_9_INV_0 : INV
-    port map (
-      I => U2_vcs(9),
-      O => U3_Msub_ypix1_addsub0000_lut(9)
-    );
-  U3_Msub_ypix1_addsub0000_lut_8_INV_0 : INV
-    port map (
-      I => U2_vcs(8),
-      O => U3_Msub_ypix1_addsub0000_lut(8)
-    );
-  U3_Msub_ypix1_addsub0000_lut_7_INV_0 : INV
-    port map (
-      I => U2_vcs(7),
-      O => U3_Msub_ypix1_addsub0000_lut(7)
-    );
-  U3_Msub_ypix1_addsub0000_lut_6_INV_0 : INV
-    port map (
-      I => U2_vcs(6),
-      O => U3_Msub_ypix1_addsub0000_lut(6)
-    );
-  U3_Msub_ypix1_addsub0000_lut_5_INV_0 : INV
-    port map (
-      I => U2_vcs(5),
-      O => U3_Msub_ypix1_addsub0000_lut(5)
-    );
   x7_Mcount_clkdiv_lut_0_INV_0 : INV
     port map (
       I => x7_clkdiv(0),
       O => x7_Mcount_clkdiv_lut(0)
-    );
-  title_Msub_ypix_addsub0000_lut_8_INV_0 : INV
-    port map (
-      I => U2_vcs(8),
-      O => title_Msub_ypix_addsub0000_lut(8)
-    );
-  title_Msub_ypix_addsub0000_lut_7_INV_0 : INV
-    port map (
-      I => U2_vcs(7),
-      O => title_Msub_ypix_addsub0000_lut(7)
-    );
-  title_Msub_ypix_addsub0000_lut_6_INV_0 : INV
-    port map (
-      I => U2_vcs(6),
-      O => title_Msub_ypix_addsub0000_lut(6)
-    );
-  title_Msub_ypix_addsub0000_lut_5_INV_0 : INV
-    port map (
-      I => U2_vcs(5),
-      O => title_Msub_ypix_addsub0000_lut(5)
     );
   nes_Mcount_counter_reg_lut_0_INV_0 : INV
     port map (
@@ -18079,70 +20337,3097 @@ begin
       I => nes_scalar_reg(0),
       O => nes_Madd_scalar_next_addsub0000_lut(0)
     );
+  U3_CM1_Madd_add0000_lut_0_INV_0 : INV
+    port map (
+      I => U3_CM1(0),
+      O => U3_CM1_Madd_add0000_lut(0)
+    );
+  U3_CM2_Msub_sub0000_lut_1_INV_0 : INV
+    port map (
+      I => U3_CM2(1),
+      O => U3_CM2_Msub_sub0000_lut(1)
+    );
+  U3_CM2_Msub_sub0000_lut_2_INV_0 : INV
+    port map (
+      I => U3_CM2(2),
+      O => U3_CM2_Msub_sub0000_lut(2)
+    );
+  U3_CM2_Msub_sub0000_lut_3_INV_0 : INV
+    port map (
+      I => U3_CM2(3),
+      O => U3_CM2_Msub_sub0000_lut(3)
+    );
+  U3_CM2_Msub_sub0000_lut_4_INV_0 : INV
+    port map (
+      I => U3_CM2(4),
+      O => U3_CM2_Msub_sub0000_lut(4)
+    );
+  U3_CM2_Msub_sub0000_lut_5_INV_0 : INV
+    port map (
+      I => U3_CM2(5),
+      O => U3_CM2_Msub_sub0000_lut(5)
+    );
+  U3_CM2_Msub_sub0000_lut_6_INV_0 : INV
+    port map (
+      I => U3_CM2(6),
+      O => U3_CM2_Msub_sub0000_lut(6)
+    );
+  U3_CM2_Msub_sub0000_lut_7_INV_0 : INV
+    port map (
+      I => U3_CM2(7),
+      O => U3_CM2_Msub_sub0000_lut(7)
+    );
+  U3_CM2_Msub_sub0000_lut_8_INV_0 : INV
+    port map (
+      I => U3_CM2(8),
+      O => U3_CM2_Msub_sub0000_lut(8)
+    );
+  U3_CM2_Msub_sub0000_lut_9_INV_0 : INV
+    port map (
+      I => U3_CM2(9),
+      O => U3_CM2_Msub_sub0000_lut(9)
+    );
+  U3_Madd_spriteonM2_addsub0001_lut_2_INV_0 : INV
+    port map (
+      I => U3_CM2(2),
+      O => U3_Madd_spriteonM2_addsub0001_lut_2_Q
+    );
+  U3_Madd_spriteonM2_addsub0001_lut_0_INV_0 : INV
+    port map (
+      I => U3_CM2(0),
+      O => U3_Madd_spriteonM2_addsub0001_lut_0_Q
+    );
+  U3_Madd_spriteonM1_addsub0001_lut_2_INV_0 : INV
+    port map (
+      I => U3_CM1(2),
+      O => U3_Madd_spriteonM1_addsub0001_lut_2_Q
+    );
+  U3_Madd_spriteonM1_addsub0001_lut_0_INV_0 : INV
+    port map (
+      I => U3_CM1(0),
+      O => U3_Madd_spriteonM1_addsub0001_lut_0_Q
+    );
+  U3_Madd_spriteonM2_addsub0003_lut_2_INV_0 : INV
+    port map (
+      I => U3_spriteonM2_addsub0002(2),
+      O => U3_Madd_spriteonM2_addsub0003_lut_2_Q
+    );
+  U3_Madd_spriteonM2_addsub0003_lut_0_INV_0 : INV
+    port map (
+      I => U3_spriteonM2_addsub0002(0),
+      O => U3_Madd_spriteonM2_addsub0003_lut_0_Q
+    );
+  U3_Madd_spriteonM1_addsub0003_lut_2_INV_0 : INV
+    port map (
+      I => U3_spriteonM1_addsub0002(2),
+      O => U3_Madd_spriteonM1_addsub0003_lut_2_Q
+    );
+  U3_Madd_spriteonM1_addsub0003_lut_0_INV_0 : INV
+    port map (
+      I => U3_spriteonM1_addsub0002(0),
+      O => U3_Madd_spriteonM1_addsub0003_lut_0_Q
+    );
+  U3_Madd_spriteonM2_addsub0002_lut_4_INV_0 : INV
+    port map (
+      I => U3_RM2(4),
+      O => U3_Madd_spriteonM2_addsub0002_lut(4)
+    );
+  U3_Madd_spriteonM2_addsub0002_lut_3_INV_0 : INV
+    port map (
+      I => U3_RM2(3),
+      O => U3_Madd_spriteonM2_addsub0002_lut(3)
+    );
+  U3_Madd_spriteonM2_addsub0002_lut_2_INV_0 : INV
+    port map (
+      I => U3_RM2(2),
+      O => U3_Madd_spriteonM2_addsub0002_lut(2)
+    );
+  U3_Madd_spriteonM2_addsub0002_lut_1_INV_0 : INV
+    port map (
+      I => U3_RM2(1),
+      O => U3_Madd_spriteonM2_addsub0002_lut(1)
+    );
+  U3_Madd_spriteonM2_addsub0002_lut_0_INV_0 : INV
+    port map (
+      I => U3_RM2(0),
+      O => U3_Madd_spriteonM2_addsub0002_lut(0)
+    );
+  U3_Madd_spriteonM1_addsub0002_lut_4_INV_0 : INV
+    port map (
+      I => U3_RM1(4),
+      O => U3_Madd_spriteonM1_addsub0002_lut(4)
+    );
+  U3_Madd_spriteonM1_addsub0002_lut_3_INV_0 : INV
+    port map (
+      I => U3_RM1(3),
+      O => U3_Madd_spriteonM1_addsub0002_lut(3)
+    );
+  U3_Madd_spriteonM1_addsub0002_lut_2_INV_0 : INV
+    port map (
+      I => U3_RM1(2),
+      O => U3_Madd_spriteonM1_addsub0002_lut(2)
+    );
+  U3_Madd_spriteonM1_addsub0002_lut_1_INV_0 : INV
+    port map (
+      I => U3_RM1(1),
+      O => U3_Madd_spriteonM1_addsub0002_lut(1)
+    );
+  U3_Madd_spriteonM1_addsub0002_lut_0_INV_0 : INV
+    port map (
+      I => U3_RM1(0),
+      O => U3_Madd_spriteonM1_addsub0002_lut(0)
+    );
+  U3_Mcount_q_lut_0_INV_0 : INV
+    port map (
+      I => U3_Q_0_1811,
+      O => U3_Mcount_q_lut(0)
+    );
+  U3_Msub_CM2_sub0000_lut_9_INV_0 : INV
+    port map (
+      I => U3_C2(9),
+      O => U3_Msub_CM2_sub0000_lut(9)
+    );
+  U3_Msub_CM2_sub0000_lut_8_INV_0 : INV
+    port map (
+      I => U3_C2(8),
+      O => U3_Msub_CM2_sub0000_lut(8)
+    );
+  U3_Msub_CM2_sub0000_lut_7_INV_0 : INV
+    port map (
+      I => U3_C2(7),
+      O => U3_Msub_CM2_sub0000_lut(7)
+    );
+  U3_Msub_CM2_sub0000_lut_6_INV_0 : INV
+    port map (
+      I => U3_C2(6),
+      O => U3_Msub_CM2_sub0000_lut(6)
+    );
+  U3_Msub_CM2_sub0000_lut_5_INV_0 : INV
+    port map (
+      I => U3_C2(5),
+      O => U3_Msub_CM2_sub0000_lut(5)
+    );
+  U3_Msub_CM2_sub0000_lut_4_INV_0 : INV
+    port map (
+      I => U3_C2(4),
+      O => U3_Msub_CM2_sub0000_lut(4)
+    );
+  U3_Msub_CM2_sub0000_lut_3_INV_0 : INV
+    port map (
+      I => U3_C2(3),
+      O => U3_Msub_CM2_sub0000_lut(3)
+    );
+  U3_Msub_CM2_sub0000_lut_2_INV_0 : INV
+    port map (
+      I => U3_C2(2),
+      O => U3_Msub_CM2_sub0000_lut(2)
+    );
+  U3_Madd_CM1_add0000_lut_3_INV_0 : INV
+    port map (
+      I => U3_C1(3),
+      O => U3_Madd_CM1_add0000_lut_3_Q
+    );
+  U3_Madd_CM1_add0000_lut_1_INV_0 : INV
+    port map (
+      I => U3_C1(1),
+      O => U3_Madd_CM1_add0000_lut_1_Q
+    );
+  U3_Madd_CM1_add0000_lut_0_INV_0 : INV
+    port map (
+      I => U3_C1(0),
+      O => U3_Madd_CM1_add0000_lut_0_Q
+    );
+  U3_Msub_tank1rom10s_sub0000_lut_9_INV_0 : INV
+    port map (
+      I => U2_vcs(9),
+      O => U3_Msub_tank1rom10s_sub0000_lut(9)
+    );
+  U3_Msub_tank1rom10s_sub0000_lut_8_INV_0 : INV
+    port map (
+      I => U2_vcs(8),
+      O => U3_Msub_tank1rom10s_sub0000_lut(8)
+    );
+  U3_Msub_tank1rom10s_sub0000_lut_7_INV_0 : INV
+    port map (
+      I => U2_vcs(7),
+      O => U3_Msub_tank1rom10s_sub0000_lut(7)
+    );
+  U3_Msub_tank1rom10s_sub0000_lut_6_INV_0 : INV
+    port map (
+      I => U2_vcs(6),
+      O => U3_Msub_tank1rom10s_sub0000_lut(6)
+    );
+  U3_Msub_tank1rom10s_sub0000_lut_5_INV_0 : INV
+    port map (
+      I => U2_vcs(5),
+      O => U3_Msub_tank1rom10s_sub0000_lut(5)
+    );
   nes_left_reg_not00011_INV_0 : INV
     port map (
-      I => ja1_IBUF_1535,
+      I => ja1_IBUF_2321,
       O => nes_left_reg_not0001
     );
   U2_clr_inv1_INV_0 : INV
     port map (
-      I => btn_3_IBUF_1524,
+      I => btn_3_IBUF_2310,
       O => U2_clr_inv
     );
-  title_Msub_xpix_xor_2_11_INV_0 : INV
+  U3_Result_0_21_INV_0 : INV
     port map (
-      I => U2_hcs(2),
-      O => sig_romTitle_addr14(2)
+      I => U3_RMht2(0),
+      O => U3_Result_0_2
     );
-  screenstate_sig_hill5_mux0001_6_1_INV_0 : INV
+  U3_Result_0_11_INV_0 : INV
     port map (
-      I => screenstate_sig_hill5(1),
-      O => screenstate_sig_hill5_mux0001(6)
+      I => U3_RMht1(0),
+      O => U3_Result_0_1
     );
-  screenstate_sig_hill4_mux0001_7_1_INV_0 : INV
+  U3_tank1rom10s_sub0001_4_1_INV_0 : INV
     port map (
-      I => screenstate_sig_hill4(0),
-      O => screenstate_sig_hill4_mux0001(7)
+      I => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => U3_tank1rom10s_sub0001(4)
     );
-  screenstate_sig_hill2_mux0001_5_1_INV_0 : INV
-    port map (
-      I => screenstate_sig_hill2(2),
-      O => screenstate_sig_hill2_mux0001(5)
-    );
-  screenstate_sig_hill1_mux0001_6_1_INV_0 : INV
-    port map (
-      I => screenstate_sig_hill1(1),
-      O => screenstate_sig_hill1_mux0001(6)
-    );
-  U3_Madd_spriteon2f_add0002_xor_4_11_INV_0 : INV
+  U3_Madd_spriteon2f_add0004_xor_4_11_INV_0 : INV
     port map (
       I => U3_C2(4),
-      O => U3_spriteon2f_add0002(4)
+      O => U3_spriteon2f_add0004(4)
     );
-  title_Msub_ypix_xor_3_11_INV_0 : INV
+  U3_Madd_spriteonM1_addsub0000_xor_4_11_INV_0 : INV
     port map (
-      I => title_Msub_ypix_cy(3),
-      O => title_ypix_3_Q
+      I => U3_CM1(4),
+      O => U3_spriteonM1_addsub0000(4)
     );
-  M1_31_45_INV_0 : INV
+  U3_Madd_spriteonM2_addsub0000_xor_4_11_INV_0 : INV
     port map (
-      I => rom1_addr(0),
-      O => M1_29_65
+      I => U3_CM2(4),
+      O => U3_spriteonM2_addsub0000(4)
     );
-  screenstate_Mcount_sig_hill3_lut_0_1_INV_0 : INV
+  U3_Madd_spriteonM2_addsub0000_xor_4_111_INV_0 : INV
     port map (
-      I => screenstate_sig_hill3(0),
-      O => screenstate_Mcount_sig_hill3_lut_0_1
+      I => U3_CM2(4),
+      O => U3_Madd_spriteonM2_addsub0000_xor_4_11
     );
-  U3_Msub_ypix1_addsub0000_lut_9_1_INV_0 : INV
+  U3_Madd_spriteonM1_addsub0000_xor_4_111_INV_0 : INV
     port map (
-      I => U2_vcs(9),
-      O => U3_Msub_ypix1_addsub0000_lut_9_1
+      I => U3_CM1(4),
+      O => U3_Madd_spriteonM1_addsub0000_xor_4_11
     );
-  title_Madd_rom_addr2_addsub0001_Madd_lut_6_INV_0 : INV
+  U3_Madd_CM1_add0000_lut_4_1_INV_0 : INV
     port map (
-      I => title_Msub_ypix_lut_4_Q,
-      O => title_Madd_rom_addr2_addsub0001_Madd_lut(6)
+      I => U3_C1(4),
+      O => U3_Madd_CM1_add0000_lut_4_1
+    );
+  M2_4_218 : MUXF5
+    port map (
+      I0 => N486,
+      I1 => N487,
+      S => rom1_addr(1),
+      O => M2_4_Q
+    );
+  M2_4_218_F : LUT4
+    generic map(
+      INIT => X"40EA"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M2_4_46_183,
+      I2 => M2_4_36_182,
+      I3 => M1_0_bdd2,
+      O => N486
+    );
+  M2_4_218_G : LUT4
+    generic map(
+      INIT => X"40EA"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M2_4_122_180,
+      I2 => M2_4_133_181,
+      I3 => M2_4_bdd0,
+      O => N487
+    );
+  U3_font2_2_1 : MUXF5
+    port map (
+      I0 => N488,
+      I1 => N489,
+      S => U3_RMht1(5),
+      O => U3_font2_2_Q
+    );
+  U3_font2_2_1_F : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => U3_RMht1(2),
+      I1 => U3_RMht1(1),
+      O => N488
+    );
+  U3_font2_2_1_G : LUT4
+    generic map(
+      INIT => X"2962"
+    )
+    port map (
+      I0 => U3_RMht1(2),
+      I1 => U3_RMht1(4),
+      I2 => U3_RMht1(3),
+      I3 => U3_RMht1(1),
+      O => N489
+    );
+  selector_blue_1_88 : MUXF5
+    port map (
+      I0 => N490,
+      I1 => N491,
+      S => screenstate_present_state_FSM_FFd1_2478,
+      O => blue_1_OBUF_2284
+    );
+  selector_blue_1_88_F : LUT3
+    generic map(
+      INIT => X"A2"
+    )
+    port map (
+      I0 => vidon,
+      I1 => title_spriteon,
+      I2 => sig_MTitle(1),
+      O => N490
+    );
+  selector_blue_1_88_G : LUT4
+    generic map(
+      INIT => X"0A08"
+    )
+    port map (
+      I0 => vidon,
+      I1 => selector_blue_1_17_2482,
+      I2 => U3_N29,
+      I3 => selector_blue_1_46_2483,
+      O => N491
+    );
+  selector_blue_0_120 : MUXF5
+    port map (
+      I0 => N492,
+      I1 => N493,
+      S => screenstate_present_state_FSM_FFd1_2478,
+      O => blue_0_OBUF_2283
+    );
+  selector_blue_0_120_F : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => vidon,
+      I1 => sig_MTitle(0),
+      I2 => title_spriteon,
+      O => N492
+    );
+  selector_blue_0_120_G : LUT3
+    generic map(
+      INIT => X"C8"
+    )
+    port map (
+      I0 => U3_spriteonB1,
+      I1 => U3_N87,
+      I2 => selector_blue_0_53_2481,
+      O => N493
+    );
+  M2_2_70 : MUXF5
+    port map (
+      I0 => N494,
+      I1 => N495,
+      S => rom1_addr(3),
+      O => M2_2_70_170
+    );
+  M2_2_70_F : LUT4
+    generic map(
+      INIT => X"0246"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_2_bdd5,
+      I3 => M2_0_bdd18,
+      O => N494
+    );
+  M2_2_70_G : LUT4
+    generic map(
+      INIT => X"6664"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_0_bdd20,
+      I3 => rom1_addr(2),
+      O => N495
+    );
+  U3_Result_5_2215 : MUXF5
+    port map (
+      I0 => N496,
+      I1 => N497,
+      S => U3_RMht2(0),
+      O => U3_Result_5_2
+    );
+  U3_Result_5_2215_F : LUT4
+    generic map(
+      INIT => X"AEA2"
+    )
+    port map (
+      I0 => U3_RMht2(5),
+      I1 => sig_gameDown,
+      I2 => U3_RMht2(1),
+      I3 => U3_Result_5_236_2013,
+      O => N496
+    );
+  U3_Result_5_2215_G : LUT3
+    generic map(
+      INIT => X"C9"
+    )
+    port map (
+      I0 => sig_gameDown,
+      I1 => U3_RMht2(5),
+      I2 => N212,
+      O => N497
+    );
+  U3_Result_5_1215 : MUXF5
+    port map (
+      I0 => N498,
+      I1 => N499,
+      S => U3_RMht1(0),
+      O => U3_Result_5_1
+    );
+  U3_Result_5_1215_F : LUT4
+    generic map(
+      INIT => X"AEA2"
+    )
+    port map (
+      I0 => U3_RMht1(5),
+      I1 => sig_gameDown,
+      I2 => U3_RMht1(1),
+      I3 => U3_Result_5_136_2011,
+      O => N498
+    );
+  U3_Result_5_1215_G : LUT3
+    generic map(
+      INIT => X"C9"
+    )
+    port map (
+      I0 => sig_gameDown,
+      I1 => U3_RMht1(5),
+      I2 => N214,
+      O => N499
+    );
+  M1a_23_58 : MUXF5
+    port map (
+      I0 => N500,
+      I1 => N501,
+      S => rom1_addr(4),
+      O => M1a_23_Q
+    );
+  M1a_23_58_F : LUT4
+    generic map(
+      INIT => X"C888"
+    )
+    port map (
+      I0 => M1a_23_4_104,
+      I1 => M1a_23_15_103,
+      I2 => rom1_addr(1),
+      I3 => M1a_22_bdd0,
+      O => N500
+    );
+  M1a_23_58_G : LUT4
+    generic map(
+      INIT => X"44E4"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M1_23_bdd0,
+      I2 => rom1_addr(1),
+      I3 => rom1_addr(2),
+      O => N501
+    );
+  M2_2_147 : MUXF5
+    port map (
+      I0 => N502,
+      I1 => N503,
+      S => rom1_addr(4),
+      O => M2_2_Q
+    );
+  M2_2_147_F : LUT3
+    generic map(
+      INIT => X"EA"
+    )
+    port map (
+      I0 => M2_2_70_170,
+      I1 => M1a_23_0_102,
+      I2 => M2_2_111_169,
+      O => N502
+    );
+  M2_2_147_G : LUT4
+    generic map(
+      INIT => X"AAA8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N503
+    );
+  M2_23_Q : MUXF5
+    port map (
+      I0 => N504,
+      I1 => N505,
+      S => sig_tank1rom10s(1),
+      O => M2_23_Q_165
+    );
+  M2_23_F : LUT4
+    generic map(
+      INIT => X"5953"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N504
+    );
+  M2_23_G : LUT4
+    generic map(
+      INIT => X"C3C5"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => N505
+    );
+  M1a_19_30 : MUXF5
+    port map (
+      I0 => N506,
+      I1 => N507,
+      S => sig_tank1rom10s(2),
+      O => M1a_19_Q
+    );
+  M1a_19_30_F : LUT4
+    generic map(
+      INIT => X"90B3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => rom1_addr(4),
+      O => N506
+    );
+  M1a_19_30_G : LUT4
+    generic map(
+      INIT => X"5171"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => N507
+    );
+  M2_4_122 : MUXF5
+    port map (
+      I0 => N508,
+      I1 => N509,
+      S => sig_tank1rom10s(0),
+      O => M2_4_122_180
+    );
+  M2_4_122_F : LUT4
+    generic map(
+      INIT => X"92FF"
+    )
+    port map (
+      I0 => M2_0_bdd13,
+      I1 => sig_tank1rom10s(2),
+      I2 => M2_0_bdd6,
+      I3 => sig_tank1rom10s(3),
+      O => N508
+    );
+  M2_4_122_G : LUT4
+    generic map(
+      INIT => X"8E77"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => M2_0_bdd6,
+      I3 => sig_tank1rom10s(3),
+      O => N509
+    );
+  M2_30_71 : MUXF5
+    port map (
+      I0 => N510,
+      I1 => N511,
+      S => sig_tank1rom10s(3),
+      O => M2_30_Q
+    );
+  M2_30_71_F : LUT4
+    generic map(
+      INIT => X"933E"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N510
+    );
+  M2_30_71_G : LUT4
+    generic map(
+      INIT => X"1A08"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_10_bdd8,
+      O => N511
+    );
+  M2_9_69 : MUXF5
+    port map (
+      I0 => N512,
+      I1 => N513,
+      S => sig_tank1rom10s(0),
+      O => M2_9_69_213
+    );
+  M2_9_69_F : LUT4
+    generic map(
+      INIT => X"5010"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => M2_0_bdd13,
+      I2 => sig_tank1rom10s(1),
+      I3 => rom1_addr(2),
+      O => N512
+    );
+  M2_9_69_G : LUT4
+    generic map(
+      INIT => X"040C"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => M2_0_bdd6,
+      O => N513
+    );
+  M2a_9_67_SW0 : MUXF5
+    port map (
+      I0 => N514,
+      I1 => N515,
+      S => sig_tank1rom10s(1),
+      O => N338
+    );
+  M2a_9_67_SW0_F : LUT4
+    generic map(
+      INIT => X"FF8B"
+    )
+    port map (
+      I0 => M2_10_bdd14,
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N514
+    );
+  M2a_9_67_SW0_G : LUT3
+    generic map(
+      INIT => X"D5"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      O => N515
+    );
+  M2a_10_28 : MUXF5
+    port map (
+      I0 => N516,
+      I1 => N517,
+      S => sig_tank1rom10s(1),
+      O => M2a_10_28_215
+    );
+  M2a_10_28_F : LUT4
+    generic map(
+      INIT => X"9111"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(3),
+      I2 => rom1_addr(2),
+      I3 => M2_0_bdd13,
+      O => N516
+    );
+  M2a_10_28_G : LUT3
+    generic map(
+      INIT => X"C2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      O => N517
+    );
+  M1a_21_25 : MUXF5
+    port map (
+      I0 => N518,
+      I1 => N519,
+      S => sig_tank1rom10s(1),
+      O => M1a_21_25_98
+    );
+  M1a_21_25_F : LUT4
+    generic map(
+      INIT => X"9111"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(3),
+      I2 => rom1_addr(2),
+      I3 => M1_21_bdd5,
+      O => N518
+    );
+  M1a_21_25_G : LUT3
+    generic map(
+      INIT => X"C2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      O => N519
+    );
+  M2_3_218 : MUXF5
+    port map (
+      I0 => N520,
+      I1 => N521,
+      S => rom1_addr(1),
+      O => M2_3_Q
+    );
+  M2_3_218_F : LUT4
+    generic map(
+      INIT => X"5F4E"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M2_3_24_175,
+      I2 => N222,
+      I3 => M2_3_5_176,
+      O => N520
+    );
+  M2_3_218_G : LUT4
+    generic map(
+      INIT => X"5F4E"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => rom1_addr(3),
+      I2 => N222,
+      I3 => M2_3_94_177,
+      O => N521
+    );
+  M2_0_27 : MUXF5
+    port map (
+      I0 => N522,
+      I1 => N523,
+      S => rom1_addr(3),
+      O => M2_0_27_131
+    );
+  M2_0_27_F : LUT4
+    generic map(
+      INIT => X"082A"
+    )
+    port map (
+      I0 => rom1_addr(2),
+      I1 => sig_tank1rom10s(0),
+      I2 => M2_0_bdd13,
+      I3 => M2_0_bdd6,
+      O => N522
+    );
+  M2_0_27_G : LUT4
+    generic map(
+      INIT => X"0090"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => M2_0_bdd6,
+      O => N523
+    );
+  U3_spriteonB2_and000041_SW0 : MUXF5
+    port map (
+      I0 => N524,
+      I1 => N525,
+      S => U2_vcs(8),
+      O => N326
+    );
+  U3_spriteonB2_and000041_SW0_F : LUT4
+    generic map(
+      INIT => X"FDFF"
+    )
+    port map (
+      I0 => U2_vcs(9),
+      I1 => U2_vcs(7),
+      I2 => U2_vcs(6),
+      I3 => U3_spriteonB1_cmp_lt0000212_2104,
+      O => N524
+    );
+  U3_spriteonB2_and000041_SW0_G : LUT3
+    generic map(
+      INIT => X"F1"
+    )
+    port map (
+      I0 => U2_vcs(7),
+      I1 => U3_spriteonB2_and00005_2108,
+      I2 => U2_vcs(9),
+      O => N525
+    );
+  x7_Mmux_digit_2_f5_1 : MUXF5
+    port map (
+      I0 => N526,
+      I1 => N527,
+      S => x7_clkdiv(19),
+      O => x7_digit(2)
+    );
+  x7_Mmux_digit_2_f5_1_F : LUT3
+    generic map(
+      INIT => X"06"
+    )
+    port map (
+      I0 => U3_RMht2(2),
+      I1 => U3_RMht2(1),
+      I2 => x7_clkdiv(18),
+      O => N526
+    );
+  x7_Mmux_digit_2_f5_1_G : LUT3
+    generic map(
+      INIT => X"06"
+    )
+    port map (
+      I0 => U3_RMht1(2),
+      I1 => U3_RMht1(1),
+      I2 => x7_clkdiv(18),
+      O => N527
+    );
+  x7_Mmux_digit_2_f5_2 : MUXF5
+    port map (
+      I0 => N528,
+      I1 => N529,
+      S => x7_clkdiv(19),
+      O => x7_digit(3)
+    );
+  x7_Mmux_digit_2_f5_2_F : LUT4
+    generic map(
+      INIT => X"1450"
+    )
+    port map (
+      I0 => x7_clkdiv(18),
+      I1 => U3_RMht2(1),
+      I2 => U3_RMht2(3),
+      I3 => U3_RMht2(2),
+      O => N528
+    );
+  x7_Mmux_digit_2_f5_2_G : LUT4
+    generic map(
+      INIT => X"1450"
+    )
+    port map (
+      I0 => x7_clkdiv(18),
+      I1 => U3_RMht1(1),
+      I2 => U3_RMht1(3),
+      I3 => U3_RMht1(2),
+      O => N529
+    );
+  M2_1_63 : MUXF5
+    port map (
+      I0 => N530,
+      I1 => N531,
+      S => sig_tank1rom10s(0),
+      O => M2_1_63_156
+    );
+  M2_1_63_F : LUT4
+    generic map(
+      INIT => X"28A8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => M2_0_bdd6,
+      I2 => M2_0_bdd13,
+      I3 => sig_tank1rom10s(2),
+      O => N530
+    );
+  M2_1_63_G : LUT4
+    generic map(
+      INIT => X"0C09"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(3),
+      I2 => M2_0_bdd6,
+      I3 => sig_tank1rom10s(1),
+      O => N531
+    );
+  M2a_7_53 : MUXF5
+    port map (
+      I0 => N532,
+      I1 => N533,
+      S => sig_tank1rom10s(0),
+      O => M2a_7_53_261
+    );
+  M2a_7_53_F : LUT4
+    generic map(
+      INIT => X"C888"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => M2_0_bdd13,
+      O => N532
+    );
+  M2a_7_53_G : LUT4
+    generic map(
+      INIT => X"0B01"
+    )
+    port map (
+      I0 => M2_0_bdd6,
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N533
+    );
+  M2a_26_31 : MUXF5
+    port map (
+      I0 => N534,
+      I1 => N535,
+      S => sig_tank1rom10s(3),
+      O => M2a_26_Q
+    );
+  M2a_26_31_F : LUT4
+    generic map(
+      INIT => X"813D"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N534
+    );
+  M2a_26_31_G : LUT4
+    generic map(
+      INIT => X"0424"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => N535
+    );
+  M2_8_53 : MUXF5
+    port map (
+      I0 => N536,
+      I1 => N537,
+      S => sig_tank1rom10s(3),
+      O => M2_8_53_210
+    );
+  M2_8_53_F : LUT4
+    generic map(
+      INIT => X"6466"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => M2_0_bdd20,
+      O => N536
+    );
+  M2_8_53_G : LUT4
+    generic map(
+      INIT => X"0246"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_0_bdd9,
+      I3 => M2_3_bdd7,
+      O => N537
+    );
+  M2a_8_94_SW0 : MUXF5
+    port map (
+      I0 => N538,
+      I1 => N539,
+      S => sig_tank1rom10s(1),
+      O => N276
+    );
+  M2a_8_94_SW0_F : LUT4
+    generic map(
+      INIT => X"EBAB"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => M2_0_bdd13,
+      O => N538
+    );
+  M2a_8_94_SW0_G : LUT4
+    generic map(
+      INIT => X"AF8F"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => M2_0_bdd13,
+      O => N539
+    );
+  M1a_24_63 : MUXF5
+    port map (
+      I0 => N540,
+      I1 => N541,
+      S => rom1_addr(4),
+      O => M1a_24_Q
+    );
+  M1a_24_63_F : LUT3
+    generic map(
+      INIT => X"EA"
+    )
+    port map (
+      I0 => M1a_24_38_106,
+      I1 => M1_24_bdd0,
+      I2 => rom1_addr(3),
+      O => N540
+    );
+  M1a_24_63_G : LUT4
+    generic map(
+      INIT => X"4255"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => rom1_addr(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => N541
+    );
+  M1_23_80 : MUXF5
+    port map (
+      I0 => N542,
+      I1 => N543,
+      S => rom1_addr(4),
+      O => M1_23_Q
+    );
+  M1_23_80_F : LUT4
+    generic map(
+      INIT => X"F888"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M1_23_bdd1,
+      I2 => M1_23_22_24,
+      I3 => M1_23_30_25,
+      O => N542
+    );
+  M1_23_80_G : LUT4
+    generic map(
+      INIT => X"8F98"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => rom1_addr(3),
+      I3 => sig_tank1rom10s(2),
+      O => N543
+    );
+  M1a_25_36_SW0 : MUXF5
+    port map (
+      I0 => N544,
+      I1 => N545,
+      S => rom1_addr(3),
+      O => N272
+    );
+  M1a_25_36_SW0_F : LUT4
+    generic map(
+      INIT => X"F690"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => M1a_24_bdd1,
+      I3 => M1a_22_bdd0,
+      O => N544
+    );
+  M1a_25_36_SW0_G : LUT4
+    generic map(
+      INIT => X"F2F3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => M1_22_bdd9,
+      O => N545
+    );
+  M1_8_Q : MUXF5
+    port map (
+      I0 => N546,
+      I1 => N547,
+      S => sig_tank1rom10s(2),
+      O => M1_8_Q_84
+    );
+  M1_8_F : LUT4
+    generic map(
+      INIT => X"4955"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => rom1_addr(4),
+      O => N546
+    );
+  M1_8_G : LUT4
+    generic map(
+      INIT => X"F313"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => N547
+    );
+  M1_26_1 : MUXF5
+    port map (
+      I0 => N548,
+      I1 => N549,
+      S => sig_tank1rom10s(0),
+      O => M1_26_bdd0
+    );
+  M1_26_1_F : LUT3
+    generic map(
+      INIT => X"F1"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => M1_22_bdd9,
+      I2 => sig_tank1rom10s(2),
+      O => N548
+    );
+  M1_26_1_G : LUT3
+    generic map(
+      INIT => X"5D"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => M1_21_bdd5,
+      O => N549
+    );
+  M1_30_51 : MUXF5
+    port map (
+      I0 => N550,
+      I1 => N551,
+      S => sig_tank1rom10s(0),
+      O => M1_30_51_69
+    );
+  M1_30_51_F : LUT4
+    generic map(
+      INIT => X"7AFF"
+    )
+    port map (
+      I0 => M1_22_bdd9,
+      I1 => rom1_addr(2),
+      I2 => M1_21_bdd5,
+      I3 => sig_tank1rom10s(1),
+      O => N550
+    );
+  M1_30_51_G : LUT3
+    generic map(
+      INIT => X"F2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => M1_22_bdd9,
+      I2 => sig_tank1rom10s(1),
+      O => N551
+    );
+  M1_27_119 : MUXF5
+    port map (
+      I0 => N552,
+      I1 => N553,
+      S => sig_tank1rom10s(1),
+      O => M1_27_119_42
+    );
+  M1_27_119_F : LUT3
+    generic map(
+      INIT => X"08"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => M1_22_bdd9,
+      O => N552
+    );
+  M1_27_119_G : LUT4
+    generic map(
+      INIT => X"0086"
+    )
+    port map (
+      I0 => M1_21_bdd5,
+      I1 => M1_22_bdd9,
+      I2 => rom1_addr(2),
+      I3 => sig_tank1rom10s(0),
+      O => N553
+    );
+  M2a_5_151 : MUXF5
+    port map (
+      I0 => N554,
+      I1 => N555,
+      S => rom1_addr(4),
+      O => M2a_5_Q
+    );
+  M2a_5_151_F : LUT4
+    generic map(
+      INIT => X"FF48"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => N330,
+      I2 => sig_tank1rom10s(1),
+      I3 => M2a_5_125_254,
+      O => N554
+    );
+  M2a_5_151_G : LUT4
+    generic map(
+      INIT => X"5D04"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => N555
+    );
+  M1a_22_40 : MUXF5
+    port map (
+      I0 => N556,
+      I1 => N557,
+      S => rom1_addr(4),
+      O => M1a_22_Q
+    );
+  M1a_22_40_F : LUT3
+    generic map(
+      INIT => X"4C"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => N350,
+      I2 => M1_22_bdd0,
+      O => N556
+    );
+  M1a_22_40_G : LUT4
+    generic map(
+      INIT => X"5D04"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => N557
+    );
+  M1a_26_131 : MUXF5
+    port map (
+      I0 => N558,
+      I1 => N559,
+      S => rom1_addr(4),
+      O => M1a_26_Q
+    );
+  M1a_26_131_F : LUT3
+    generic map(
+      INIT => X"EA"
+    )
+    port map (
+      I0 => N354,
+      I1 => rom1_addr(3),
+      I2 => M1_26_bdd0,
+      O => N558
+    );
+  M1a_26_131_G : LUT4
+    generic map(
+      INIT => X"5D04"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => N559
+    );
+  M2_11_Q : MUXF5
+    port map (
+      I0 => N560,
+      I1 => N561,
+      S => sig_tank1rom10s(3),
+      O => M2_11_Q_147
+    );
+  M2_11_F : LUT4
+    generic map(
+      INIT => X"9483"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N560
+    );
+  M2_11_G : LUT4
+    generic map(
+      INIT => X"F360"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N561
+    );
+  U3_spriteonB1_and000052_SW0 : MUXF5
+    port map (
+      I0 => N562,
+      I1 => N563,
+      S => U2_hcs(7),
+      O => N420
+    );
+  U3_spriteonB1_and000052_SW0_F : LUT4
+    generic map(
+      INIT => X"1F3F"
+    )
+    port map (
+      I0 => U2_hcs(4),
+      I1 => U2_hcs(5),
+      I2 => U2_hcs(6),
+      I3 => U3_spriteonB1_and00004_2100,
+      O => N562
+    );
+  U3_spriteonB1_and000052_SW0_G : LUT3
+    generic map(
+      INIT => X"FE"
+    )
+    port map (
+      I0 => N57,
+      I1 => U2_hcs(5),
+      I2 => U2_hcs(6),
+      O => N563
+    );
+  M2a_16_63 : MUXF5
+    port map (
+      I0 => N564,
+      I1 => N565,
+      S => sig_tank1rom10s(1),
+      O => M2a_16_Q
+    );
+  M2a_16_63_F : LUT4
+    generic map(
+      INIT => X"D1D9"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N564
+    );
+  M2a_16_63_G : LUT4
+    generic map(
+      INIT => X"24D7"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N565
+    );
+  M2a_13_49 : MUXF5
+    port map (
+      I0 => N566,
+      I1 => N567,
+      S => sig_tank1rom10s(1),
+      O => M2a_13_Q
+    );
+  M2a_13_49_F : LUT4
+    generic map(
+      INIT => X"DD91"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N566
+    );
+  M2a_13_49_G : LUT4
+    generic map(
+      INIT => X"24D7"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N567
+    );
+  M1_29_126 : MUXF5
+    port map (
+      I0 => N568,
+      I1 => N569,
+      S => rom1_addr(4),
+      O => M1_29_Q
+    );
+  M1_29_126_F : LUT4
+    generic map(
+      INIT => X"F888"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M1_29_26,
+      I2 => M1_29_69_63,
+      I3 => M1_29_77_64,
+      O => N568
+    );
+  M1_29_126_G : LUT4
+    generic map(
+      INIT => X"9554"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N569
+    );
+  M2a_20_41 : MUXF5
+    port map (
+      I0 => N570,
+      I1 => N571,
+      S => sig_tank1rom10s(2),
+      O => M2a_20_Q
+    );
+  M2a_20_41_F : LUT4
+    generic map(
+      INIT => X"CBAC"
+    )
+    port map (
+      I0 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(1),
+      O => N570
+    );
+  M2a_20_41_G : LUT4
+    generic map(
+      INIT => X"23BA"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => N67,
+      I3 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => N571
+    );
+  U3_Mmux_M2_mux0000_9_SW0 : MUXF5
+    port map (
+      I0 => N572,
+      I1 => N573,
+      S => sig_tank1rom10s(0),
+      O => N410
+    );
+  U3_Mmux_M2_mux0000_9_SW0_F : LUT4
+    generic map(
+      INIT => X"3F1C"
+    )
+    port map (
+      I0 => U3_rom_pix2(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(2),
+      O => N572
+    );
+  U3_Mmux_M2_mux0000_9_SW0_G : LUT4
+    generic map(
+      INIT => X"6F6C"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => U3_rom_pix2(0),
+      O => N573
+    );
+  U3_Mmux_M2_mux0000_73_SW0 : MUXF5
+    port map (
+      I0 => N574,
+      I1 => N575,
+      S => sig_tank1rom10s(1),
+      O => N412
+    );
+  U3_Mmux_M2_mux0000_73_SW0_F : LUT2
+    generic map(
+      INIT => X"E"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      O => N574
+    );
+  U3_Mmux_M2_mux0000_73_SW0_G : LUT4
+    generic map(
+      INIT => X"3839"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => U3_rom_pix2(0),
+      O => N575
+    );
+  M1a_24_38 : MUXF5
+    port map (
+      I0 => N576,
+      I1 => N577,
+      S => sig_tank1rom10s(1),
+      O => M1a_24_38_106
+    );
+  M1a_24_38_F : LUT3
+    generic map(
+      INIT => X"80"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => M1_22_bdd9,
+      I2 => sig_tank1rom10s(2),
+      O => N576
+    );
+  M1a_24_38_G : LUT4
+    generic map(
+      INIT => X"20A8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => M1_21_bdd5,
+      I3 => sig_tank1rom10s(0),
+      O => N577
+    );
+  M1a_10_42 : MUXF5
+    port map (
+      I0 => N578,
+      I1 => N579,
+      S => sig_tank1rom10s(0),
+      O => M1a_10_Q
+    );
+  M1a_10_42_F : LUT4
+    generic map(
+      INIT => X"4E14"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => N578
+    );
+  M1a_10_42_G : LUT4
+    generic map(
+      INIT => X"7E13"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => N579
+    );
+  M2_8_142 : MUXF5
+    port map (
+      I0 => N580,
+      I1 => N581,
+      S => rom1_addr(4),
+      O => M2_8_Q
+    );
+  M2_8_142_F : LUT3
+    generic map(
+      INIT => X"EA"
+    )
+    port map (
+      I0 => M2_8_53_210,
+      I1 => rom1_addr(2),
+      I2 => N466,
+      O => N580
+    );
+  M2_8_142_G : LUT4
+    generic map(
+      INIT => X"F889"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => N581
+    );
+  M2a_15_51 : MUXF5
+    port map (
+      I0 => N582,
+      I1 => N583,
+      S => sig_tank1rom10s(1),
+      O => M2a_15_Q
+    );
+  M2a_15_51_F : LUT4
+    generic map(
+      INIT => X"EC75"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(3),
+      O => N582
+    );
+  M2a_15_51_G : LUT4
+    generic map(
+      INIT => X"24D5"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N583
+    );
+  M2_28_Q : MUXF5
+    port map (
+      I0 => N584,
+      I1 => N585,
+      S => sig_tank1rom10s(3),
+      O => M2_28_Q_166
+    );
+  M2_28_F : LUT4
+    generic map(
+      INIT => X"475F"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(0),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(1),
+      O => N584
+    );
+  M2_28_G : LUT4
+    generic map(
+      INIT => X"8680"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => N585
+    );
+  U3_Mmux_M1_mux0000_73_SW0 : MUXF5
+    port map (
+      I0 => N586,
+      I1 => N587,
+      S => sig_tank1rom10s(3),
+      O => N378
+    );
+  U3_Mmux_M1_mux0000_73_SW0_F : LUT4
+    generic map(
+      INIT => X"FF26"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => U3_rom_pix1(0),
+      I3 => sig_tank1rom10s(2),
+      O => N586
+    );
+  U3_Mmux_M1_mux0000_73_SW0_G : LUT4
+    generic map(
+      INIT => X"33D2"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N587
+    );
+  U3_Mmux_M2_mux0000_8_SW0 : MUXF5
+    port map (
+      I0 => N588,
+      I1 => N589,
+      S => sig_tank1rom10s(0),
+      O => N408
+    );
+  U3_Mmux_M2_mux0000_8_SW0_F : LUT4
+    generic map(
+      INIT => X"7E7C"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => U3_rom_pix2(0),
+      O => N588
+    );
+  U3_Mmux_M2_mux0000_8_SW0_G : LUT4
+    generic map(
+      INIT => X"6C6D"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => U3_rom_pix2(0),
+      O => N589
+    );
+  U3_Mmux_M1a_mux0000_73_SW0 : MUXF5
+    port map (
+      I0 => N590,
+      I1 => N591,
+      S => sig_tank1rom10s(3),
+      O => N316
+    );
+  U3_Mmux_M1a_mux0000_73_SW0_F : LUT4
+    generic map(
+      INIT => X"8292"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => U3_rom_pix1(0),
+      O => N590
+    );
+  U3_Mmux_M1a_mux0000_73_SW0_G : LUT4
+    generic map(
+      INIT => X"33D2"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N591
+    );
+  U3_Mmux_M2_mux0000_71_SW0 : MUXF5
+    port map (
+      I0 => N592,
+      I1 => N593,
+      S => sig_tank1rom10s(0),
+      O => N406
+    );
+  U3_Mmux_M2_mux0000_71_SW0_F : LUT4
+    generic map(
+      INIT => X"83E1"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => U3_rom_pix2(0),
+      O => N592
+    );
+  U3_Mmux_M2_mux0000_71_SW0_G : LUT4
+    generic map(
+      INIT => X"D60C"
+    )
+    port map (
+      I0 => U3_rom_pix2(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => N593
+    );
+  M1a_1_Q : MUXF5
+    port map (
+      I0 => N594,
+      I1 => N595,
+      S => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => M1a_1_Q_95
+    );
+  M1a_1_F : LUT4
+    generic map(
+      INIT => X"8000"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => N594
+    );
+  M1a_1_G : LUT4
+    generic map(
+      INIT => X"AA2B"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => N595
+    );
+  M2a_22_f5 : MUXF5
+    port map (
+      I0 => N596,
+      I1 => N597,
+      S => sig_tank1rom10s(0),
+      O => M2a_22_Q
+    );
+  M2a_22_f5_F : LUT4
+    generic map(
+      INIT => X"781D"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => N596
+    );
+  M2a_22_f5_G : LUT4
+    generic map(
+      INIT => X"48C2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => rom1_addr(4),
+      O => N597
+    );
+  M1_5_Q : MUXF5
+    port map (
+      I0 => N598,
+      I1 => N599,
+      S => sig_tank1rom10s(2),
+      O => M1_5_Q_83
+    );
+  M1_5_F : LUT4
+    generic map(
+      INIT => X"A920"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => rom1_addr(4),
+      O => N598
+    );
+  M1_5_G : LUT4
+    generic map(
+      INIT => X"AA9C"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => rom1_addr(4),
+      O => N599
+    );
+  M1_18_Q : MUXF5
+    port map (
+      I0 => N600,
+      I1 => N601,
+      S => sig_tank1rom10s(1),
+      O => M1_18_Q_9
+    );
+  M1_18_F : LUT4
+    generic map(
+      INIT => X"1450"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(3),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(0),
+      O => N600
+    );
+  M1_18_G : LUT4
+    generic map(
+      INIT => X"C2A4"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => N601
+    );
+  M2a_28_36 : MUXF5
+    port map (
+      I0 => N602,
+      I1 => N603,
+      S => sig_tank1rom10s(2),
+      O => M2a_28_Q
+    );
+  M2a_28_36_F : LUT4
+    generic map(
+      INIT => X"C140"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(1),
+      O => N602
+    );
+  M2a_28_36_G : LUT4
+    generic map(
+      INIT => X"6860"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => N603
+    );
+  M2_9_31 : MUXF5
+    port map (
+      I0 => N604,
+      I1 => N605,
+      S => sig_tank1rom10s(2),
+      O => M2_9_31_212
+    );
+  M2_9_31_F : LUT4
+    generic map(
+      INIT => X"C040"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => M2_0_bdd13,
+      O => N604
+    );
+  M2_9_31_G : LUT4
+    generic map(
+      INIT => X"0103"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => M2_0_bdd20,
+      O => N605
+    );
+  M2a_8_29 : MUXF5
+    port map (
+      I0 => N606,
+      I1 => N607,
+      S => sig_tank1rom10s(2),
+      O => M2a_8_29_263
+    );
+  M2a_8_29_F : LUT4
+    generic map(
+      INIT => X"99D9"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => M2_0_bdd20,
+      I3 => sig_tank1rom10s(3),
+      O => N606
+    );
+  M2a_8_29_G : LUT4
+    generic map(
+      INIT => X"FC8F"
+    )
+    port map (
+      I0 => M2_0_bdd6,
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => N607
+    );
+  M2a_9_33 : MUXF5
+    port map (
+      I0 => N608,
+      I1 => N609,
+      S => sig_tank1rom10s(3),
+      O => M2a_9_33_267
+    );
+  M2a_9_33_F : LUT4
+    generic map(
+      INIT => X"F54F"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => M2_0_bdd13,
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => N608
+    );
+  M2a_9_33_G : LUT4
+    generic map(
+      INIT => X"FC8F"
+    )
+    port map (
+      I0 => M2_0_bdd6,
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => N609
+    );
+  M1a_9_32 : MUXF5
+    port map (
+      I0 => N610,
+      I1 => N611,
+      S => sig_tank1rom10s(2),
+      O => M1a_9_Q
+    );
+  M1a_9_32_F : LUT4
+    generic map(
+      INIT => X"B501"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(1),
+      O => N610
+    );
+  M1a_9_32_G : LUT4
+    generic map(
+      INIT => X"44CD"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => rom1_addr(4),
+      O => N611
+    );
+  M1a_18_Q : MUXF5
+    port map (
+      I0 => N612,
+      I1 => N613,
+      S => sig_tank1rom10s(3),
+      O => M1a_18_Q_93
+    );
+  M1a_18_F : LUT4
+    generic map(
+      INIT => X"9535"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => N612
+    );
+  M1a_18_G : LUT4
+    generic map(
+      INIT => X"35EC"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => N613
+    );
+  M1a_20_Q : MUXF5
+    port map (
+      I0 => N614,
+      I1 => N615,
+      S => sig_tank1rom10s(2),
+      O => M1a_20_Q_96
+    );
+  M1a_20_F : LUT4
+    generic map(
+      INIT => X"D362"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(0),
+      O => N614
+    );
+  M1a_20_G : LUT4
+    generic map(
+      INIT => X"4401"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => rom1_addr(4),
+      O => N615
+    );
+  U3_Mmux_M1_mux0000_9_SW0 : MUXF5
+    port map (
+      I0 => N616,
+      I1 => N617,
+      S => sig_tank1rom10s(2),
+      O => N320
+    );
+  U3_Mmux_M1_mux0000_9_SW0_F : LUT4
+    generic map(
+      INIT => X"9A8A"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(1),
+      I3 => U3_rom_pix1(0),
+      O => N616
+    );
+  U3_Mmux_M1_mux0000_9_SW0_G : LUT2
+    generic map(
+      INIT => X"7"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      O => N617
+    );
+  M2a_21_32 : MUXF5
+    port map (
+      I0 => N618,
+      I1 => N619,
+      S => sig_tank1rom10s(0),
+      O => M2a_21_Q
+    );
+  M2a_21_32_F : LUT4
+    generic map(
+      INIT => X"4E14"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => N618
+    );
+  M2a_21_32_G : LUT4
+    generic map(
+      INIT => X"7E13"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => N619
+    );
+  M2_13_52 : MUXF5
+    port map (
+      I0 => N620,
+      I1 => N621,
+      S => sig_tank1rom10s(1),
+      O => M2_13_Q
+    );
+  M2_13_52_F : LUT4
+    generic map(
+      INIT => X"1450"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(3),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(0),
+      O => N620
+    );
+  M2_13_52_G : LUT4
+    generic map(
+      INIT => X"C2A4"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => N621
+    );
+  M2_12_68 : MUXF5
+    port map (
+      I0 => N622,
+      I1 => N623,
+      S => sig_tank1rom10s(0),
+      O => M2_12_Q
+    );
+  M2_12_68_F : LUT4
+    generic map(
+      INIT => X"B622"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(1),
+      O => N622
+    );
+  M2_12_68_G : LUT4
+    generic map(
+      INIT => X"C828"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(2),
+      O => N623
+    );
+  U3_Mmux_M1a_mux0000_83_SW0 : MUXF5
+    port map (
+      I0 => N624,
+      I1 => N625,
+      S => sig_tank1rom10s(2),
+      O => N246
+    );
+  U3_Mmux_M1a_mux0000_83_SW0_F : LUT4
+    generic map(
+      INIT => X"63F9"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => U3_rom_pix1(0),
+      I3 => sig_tank1rom10s(0),
+      O => N624
+    );
+  U3_Mmux_M1a_mux0000_83_SW0_G : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(1),
+      O => N625
+    );
+  M2a_14_Q : MUXF5
+    port map (
+      I0 => N626,
+      I1 => N627,
+      S => sig_tank1rom10s(3),
+      O => M2a_14_Q_221
+    );
+  M2a_14_F : LUT4
+    generic map(
+      INIT => X"971D"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N626
+    );
+  M2a_14_G : LUT4
+    generic map(
+      INIT => X"35EC"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => N627
+    );
+  M1_26_181 : MUXF5
+    port map (
+      I0 => N628,
+      I1 => N629,
+      S => rom1_addr(4),
+      O => M1_26_Q
+    );
+  M1_26_181_F : LUT4
+    generic map(
+      INIT => X"40EA"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M1_26_58_39,
+      I2 => M1_26_25_38,
+      I3 => M1_26_bdd0,
+      O => N628
+    );
+  M1_26_181_G : LUT4
+    generic map(
+      INIT => X"83A2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => rom1_addr(3),
+      O => N629
+    );
+  M1_25_152 : MUXF5
+    port map (
+      I0 => N630,
+      I1 => N631,
+      S => rom1_addr(4),
+      O => M1_25_Q
+    );
+  M1_25_152_F : LUT4
+    generic map(
+      INIT => X"40EA"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M1_25_2,
+      I2 => M1_25_54,
+      I3 => M1_25_bdd1,
+      O => N630
+    );
+  M1_25_152_G : LUT4
+    generic map(
+      INIT => X"CA4E"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N631
+    );
+  M1_27_229 : MUXF5
+    port map (
+      I0 => N632,
+      I1 => N633,
+      S => rom1_addr(4),
+      O => M1_27_Q
+    );
+  M1_27_229_F : LUT4
+    generic map(
+      INIT => X"5F4E"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M1_27_45,
+      I2 => M1_27_bdd0,
+      I3 => M1_27_119_42,
+      O => N632
+    );
+  M1_27_229_G : LUT4
+    generic map(
+      INIT => X"86A2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => rom1_addr(3),
+      O => N633
+    );
+  M1a_27_152 : MUXF5
+    port map (
+      I0 => N634,
+      I1 => N635,
+      S => rom1_addr(4),
+      O => M1a_27_Q
+    );
+  M1a_27_152_F : LUT4
+    generic map(
+      INIT => X"F888"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => N424,
+      I2 => M1_27_bdd0,
+      I3 => rom1_addr(3),
+      O => N634
+    );
+  M1a_27_152_G : LUT4
+    generic map(
+      INIT => X"0457"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(1),
+      O => N635
+    );
+  M1a_2_Q : MUXF5
+    port map (
+      I0 => N636,
+      I1 => N637,
+      S => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => M1a_2_Q_120
+    );
+  M1a_2_F : LUT4
+    generic map(
+      INIT => X"8100"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(0),
+      O => N636
+    );
+  M1a_2_G : LUT4
+    generic map(
+      INIT => X"44CD"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => N637
+    );
+  M1_19_32 : MUXF5
+    port map (
+      I0 => N638,
+      I1 => N639,
+      S => sig_tank1rom10s(3),
+      O => M1_19_Q
+    );
+  M1_19_32_F : LUT4
+    generic map(
+      INIT => X"848A"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => N638
+    );
+  M1_19_32_G : LUT4
+    generic map(
+      INIT => X"B590"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => rom1_addr(4),
+      O => N639
+    );
+  M1_11_Q : MUXF5
+    port map (
+      I0 => N640,
+      I1 => N641,
+      S => sig_tank1rom10s(1),
+      O => M1_11_Q_7
+    );
+  M1_11_F : LUT3
+    generic map(
+      INIT => X"01"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      O => N640
+    );
+  M1_11_G : LUT4
+    generic map(
+      INIT => X"DA14"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => rom1_addr(4),
+      O => N641
+    );
+  U3_Mmux_M1a_mux0000_85_SW0 : MUXF5
+    port map (
+      I0 => N642,
+      I1 => N643,
+      S => sig_tank1rom10s(2),
+      O => N318
+    );
+  U3_Mmux_M1a_mux0000_85_SW0_F : LUT4
+    generic map(
+      INIT => X"3D0B"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => N642
+    );
+  U3_Mmux_M1a_mux0000_85_SW0_G : LUT3
+    generic map(
+      INIT => X"A7"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(3),
+      O => N643
+    );
+  U3_Mmux_M1a_mux0000_9_SW0 : MUXF5
+    port map (
+      I0 => N644,
+      I1 => N645,
+      S => sig_tank1rom10s(2),
+      O => N314
+    );
+  U3_Mmux_M1a_mux0000_9_SW0_F : LUT4
+    generic map(
+      INIT => X"55B5"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => U3_rom_pix1(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => N644
+    );
+  U3_Mmux_M1a_mux0000_9_SW0_G : LUT3
+    generic map(
+      INIT => X"A7"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(3),
+      O => N645
+    );
+  U3_Mmux_M1_mux0000_83_SW0 : MUXF5
+    port map (
+      I0 => N646,
+      I1 => N647,
+      S => sig_tank1rom10s(3),
+      O => N236
+    );
+  U3_Mmux_M1_mux0000_83_SW0_F : LUT4
+    generic map(
+      INIT => X"7724"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => U3_rom_pix1(0),
+      I3 => sig_tank1rom10s(2),
+      O => N646
+    );
+  U3_Mmux_M1_mux0000_83_SW0_G : LUT4
+    generic map(
+      INIT => X"6273"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => U3_rom_pix1(0),
+      O => N647
+    );
+  M1_21_47 : MUXF5
+    port map (
+      I0 => N648,
+      I1 => N649,
+      S => rom1_addr(4),
+      O => M1_21_Q
+    );
+  M1_21_47_F : LUT4
+    generic map(
+      INIT => X"141E"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => N392,
+      O => N648
+    );
+  M1_21_47_G : LUT4
+    generic map(
+      INIT => X"E065"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N649
+    );
+  U3_Mmux_M1a_mux0000_92_SW0 : MUXF5
+    port map (
+      I0 => N650,
+      I1 => N651,
+      S => sig_tank1rom10s(3),
+      O => N376
+    );
+  U3_Mmux_M1a_mux0000_92_SW0_F : LUT4
+    generic map(
+      INIT => X"66DF"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => U3_rom_pix1(0),
+      I3 => sig_tank1rom10s(0),
+      O => N650
+    );
+  U3_Mmux_M1a_mux0000_92_SW0_G : LUT4
+    generic map(
+      INIT => X"E9E8"
+    )
+    port map (
+      I0 => U3_rom_pix1(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N651
+    );
+  M1_1_69 : MUXF5
+    port map (
+      I0 => N652,
+      I1 => N653,
+      S => sig_tank1rom10s(0),
+      O => M1_1_Q
+    );
+  M1_1_69_F : LUT4
+    generic map(
+      INIT => X"C856"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => N652
+    );
+  M1_1_69_G : LUT4
+    generic map(
+      INIT => X"2113"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(3),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(1),
+      O => N653
+    );
+  M1_22_70 : MUXF5
+    port map (
+      I0 => N654,
+      I1 => N655,
+      S => rom1_addr(4),
+      O => M1_22_Q
+    );
+  M1_22_70_F : LUT4
+    generic map(
+      INIT => X"AE04"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => M1_22_27_17,
+      I2 => N332,
+      I3 => M1_22_bdd0,
+      O => N654
+    );
+  M1_22_70_G : LUT4
+    generic map(
+      INIT => X"C84E"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N655
+    );
+  M1_24_105 : MUXF5
+    port map (
+      I0 => N656,
+      I1 => N657,
+      S => rom1_addr(4),
+      O => M1_24_Q
+    );
+  M1_24_105_F : LUT4
+    generic map(
+      INIT => X"40EA"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => N452,
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_24_bdd0,
+      O => N656
+    );
+  M1_24_105_G : LUT4
+    generic map(
+      INIT => X"CA46"
+    )
+    port map (
+      I0 => rom1_addr(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => N657
+    );
+  M2_29_2 : MUXF5
+    port map (
+      I0 => N658,
+      I1 => N659,
+      S => sig_tank1rom10s(3),
+      O => M2_29_Q
+    );
+  M2_29_2_F : LUT4
+    generic map(
+      INIT => X"95F6"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N658
+    );
+  M2_29_2_G : LUT4
+    generic map(
+      INIT => X"80A8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(0),
+      O => N659
+    );
+  U3_Mmux_M2_mux0000_82_SW0 : MUXF5
+    port map (
+      I0 => N660,
+      I1 => N661,
+      S => sig_tank1rom10s(0),
+      O => N250
+    );
+  U3_Mmux_M2_mux0000_82_SW0_F : LUT4
+    generic map(
+      INIT => X"32EA"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => U3_rom_pix2(0),
+      I3 => sig_tank1rom10s(3),
+      O => N660
+    );
+  U3_Mmux_M2_mux0000_82_SW0_G : LUT4
+    generic map(
+      INIT => X"7645"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => U3_rom_pix2(0),
+      I3 => sig_tank1rom10s(3),
+      O => N661
+    );
+  U3_Mmux_M1_mux0000_85_SW0 : MUXF5
+    port map (
+      I0 => N662,
+      I1 => N663,
+      S => rom1_addr(4),
+      O => N322
+    );
+  U3_Mmux_M1_mux0000_85_SW0_F : LUT4
+    generic map(
+      INIT => X"7797"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(3),
+      O => N662
+    );
+  U3_Mmux_M1_mux0000_85_SW0_G : LUT4
+    generic map(
+      INIT => X"7724"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => U3_rom_pix1(0),
+      I3 => sig_tank1rom10s(2),
+      O => N663
+    );
+  M2a_12_38 : MUXF5
+    port map (
+      I0 => N664,
+      I1 => N665,
+      S => sig_tank1rom10s(2),
+      O => M2a_12_Q
+    );
+  M2a_12_38_F : LUT4
+    generic map(
+      INIT => X"90B3"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(0),
+      I3 => rom1_addr(4),
+      O => N664
+    );
+  M2a_12_38_G : LUT4
+    generic map(
+      INIT => X"5171"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
+      O => N665
+    );
+  M1a_22_40_SW0 : MUXF5
+    port map (
+      I0 => N666,
+      I1 => N667,
+      S => sig_tank1rom10s(0),
+      O => N350
+    );
+  M1a_22_40_SW0_F : LUT4
+    generic map(
+      INIT => X"AF8F"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => M1_21_bdd5,
+      O => N666
+    );
+  M1a_22_40_SW0_G : LUT4
+    generic map(
+      INIT => X"D393"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => M1_22_bdd9,
+      O => N667
+    );
+  M2a_29_59 : MUXF5
+    port map (
+      I0 => N668,
+      I1 => N669,
+      S => sig_tank1rom10s(2),
+      O => M2a_29_59_232
+    );
+  M2a_29_59_F : LUT4
+    generic map(
+      INIT => X"FFF2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(3),
+      I3 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => N668
+    );
+  M2a_29_59_G : LUT4
+    generic map(
+      INIT => X"36BE"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I2 => N67,
+      I3 => sig_tank1rom10s(1),
+      O => N669
+    );
+  M1_20_Q : MUXF5
+    port map (
+      I0 => N670,
+      I1 => N671,
+      S => sig_tank1rom10s(3),
+      O => M1_20_Q_12
+    );
+  M1_20_F : LUT4
+    generic map(
+      INIT => X"9483"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N670
+    );
+  M1_20_G : LUT4
+    generic map(
+      INIT => X"F360"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => rom1_addr(4),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N671
+    );
+  M1_2_1 : MUXF5
+    port map (
+      I0 => N672,
+      I1 => N673,
+      S => sig_tank1rom10s(3),
+      O => M1_2_Q
+    );
+  M1_2_1_F : LUT4
+    generic map(
+      INIT => X"95F6"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => sig_tank1rom10s(2),
+      O => N672
+    );
+  M1_2_1_G : LUT4
+    generic map(
+      INIT => X"80A8"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(0),
+      O => N673
+    );
+  M1a_11_f5 : MUXF5
+    port map (
+      I0 => N674,
+      I1 => N675,
+      S => sig_tank1rom10s(2),
+      O => M1a_11_Q
+    );
+  M1a_11_f5_F : LUT4
+    generic map(
+      INIT => X"CBAC"
+    )
+    port map (
+      I0 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(1),
+      O => N674
+    );
+  M1a_11_f5_G : LUT4
+    generic map(
+      INIT => X"23BA"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => N67,
+      I3 => U3_Msub_tank1rom10s_sub0001_cy(4),
+      O => N675
+    );
+  U3_destroy2_mux0017191 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => U3_N29,
+      I1 => U3_spriteonB1,
+      I2 => U3_spriteonB5,
+      I3 => U3_N33,
+      O => U3_destroy2_mux0017191_2044
+    );
+  U3_destroy2_mux001719_f5 : MUXF5
+    port map (
+      I0 => U3_destroy2_mux0017191_2044,
+      I1 => N0,
+      S => U3_spriteonM1,
+      O => U3_destroy2_mux001719
+    );
+  U3_RMcnt_Q_mux0000_2_11 : LUT4
+    generic map(
+      INIT => X"B4D2"
+    )
+    port map (
+      I0 => U3_rise_2072,
+      I1 => U3_RMcnt(0),
+      I2 => U3_RMcnt(2),
+      I3 => U3_RMcnt(1),
+      O => U3_RMcnt_Q_mux0000_2_1
+    );
+  U3_RMcnt_Q_mux0000_2_1_f5 : MUXF5
+    port map (
+      I0 => U3_RMcnt_Q_mux0000_2_1,
+      I1 => U3_RMht1(2),
+      S => U3_RMcnt_and0000,
+      O => U3_RMcnt_Q_mux0000(2)
+    );
+  U3_RMcnt2_Q_mux0000_2_11 : LUT4
+    generic map(
+      INIT => X"B4D2"
+    )
+    port map (
+      I0 => U3_rise2_2073,
+      I1 => U3_RMcnt2(0),
+      I2 => U3_RMcnt2(2),
+      I3 => U3_RMcnt2(1),
+      O => U3_RMcnt2_Q_mux0000_2_1
+    );
+  U3_RMcnt2_Q_mux0000_2_1_f5 : MUXF5
+    port map (
+      I0 => U3_RMcnt2_Q_mux0000_2_1,
+      I1 => U3_RMht2(2),
+      S => U3_RMcnt2_and0000,
+      O => U3_RMcnt2_Q_mux0000(2)
+    );
+  U3_font1_0_11 : LUT4
+    generic map(
+      INIT => X"55D9"
+    )
+    port map (
+      I0 => U3_RMht1(3),
+      I1 => U3_RMht1(4),
+      I2 => U3_RMht1(1),
+      I3 => U3_RMht1(2),
+      O => U3_font1_0_1
+    );
+  U3_font1_0_1_f5 : MUXF5
+    port map (
+      I0 => N1,
+      I1 => U3_font1_0_1,
+      S => U3_RMht1(5),
+      O => U3_font1(0)
+    );
+  U3_font2_0_11 : LUT4
+    generic map(
+      INIT => X"2AAA"
+    )
+    port map (
+      I0 => U3_RMht1(0),
+      I1 => U3_RMht1(2),
+      I2 => U3_RMht1(3),
+      I3 => U3_RMht1(4),
+      O => U3_font2_0_1
+    );
+  U3_font2_0_1_f5 : MUXF5
+    port map (
+      I0 => U3_RMht1(0),
+      I1 => U3_font2_0_1,
+      S => U3_RMht1(5),
+      O => U3_font2_0_Q
     );
   U2_vidon_and0000181 : LUT4
     generic map(
@@ -18153,11 +23438,11 @@ begin
       I1 => U2_vcs(6),
       I2 => U2_vcs(5),
       I3 => U2_vcs(8),
-      O => U2_vidon_and0000181_666
+      O => U2_vidon_and0000181_776
     );
   U2_vidon_and000018_f5 : MUXF5
     port map (
-      I0 => U2_vidon_and0000181_666,
+      I0 => U2_vidon_and0000181_776,
       I1 => N1,
       S => U2_vcs(9),
       O => U2_vidon_and000018
@@ -18171,12 +23456,12 @@ begin
       I1 => U2_vcs(2),
       I2 => U2_vcs(0),
       I3 => U2_vcs(3),
-      O => U2_vidon_and0000261_668
+      O => U2_vidon_and0000261_778
     );
   U2_vidon_and000026_f5 : MUXF5
     port map (
       I0 => N0,
-      I1 => U2_vidon_and0000261_668,
+      I1 => U2_vidon_and0000261_778,
       S => U2_vcs(4),
       O => U2_vidon_and000026
     );
@@ -18189,12 +23474,12 @@ begin
       I1 => U2_vcs(0),
       I2 => U2_vcs(3),
       I3 => U2_vcs(1),
-      O => U2_vidon_and0000651_672
+      O => U2_vidon_and0000651_782
     );
   U2_vidon_and000065_f5 : MUXF5
     port map (
       I0 => N1,
-      I1 => U2_vidon_and0000651_672,
+      I1 => U2_vidon_and0000651_782,
       S => U2_vcs(8),
       O => U2_vidon_and000065
     );
@@ -18204,551 +23489,869 @@ begin
     )
     port map (
       I0 => U2_hcs(2),
-      I1 => U2_hcs(0),
-      I2 => U2_hcs(1),
+      I1 => U2_hcs(1),
+      I2 => U2_hcs(0),
       I3 => U2_hcs(3),
-      O => title_spriteon_and0000871_2004
+      O => title_spriteon_and0000871_2602
     );
   title_spriteon_and000087_f5 : MUXF5
     port map (
       I0 => N1,
-      I1 => title_spriteon_and0000871_2004,
+      I1 => title_spriteon_and0000871_2602,
       S => U2_hcs(4),
       O => title_spriteon_and000087
     );
-  U3_blue_and00011171 : LUT4
+  U3_spriteonB1_cmp_le000011 : LUT4
     generic map(
-      INIT => X"1F3F"
+      INIT => X"01FF"
+    )
+    port map (
+      I0 => U2_hcs(6),
+      I1 => N57,
+      I2 => U2_hcs(5),
+      I3 => U2_hcs(7),
+      O => U3_spriteonB1_cmp_le00001
+    );
+  U3_spriteonB1_cmp_le00001_f5 : MUXF5
+    port map (
+      I0 => N1,
+      I1 => U3_spriteonB1_cmp_le00001,
+      S => U2_hcs(8),
+      O => U3_spriteonB1_cmp_le00002
+    );
+  U3_spriteonB4_and000091 : LUT4
+    generic map(
+      INIT => X"C080"
     )
     port map (
       I0 => U2_vcs(0),
-      I1 => U2_vcs(2),
-      I2 => U2_vcs(3),
+      I1 => U2_vcs(3),
+      I2 => U2_vcs(2),
       I3 => U2_vcs(1),
-      O => U3_blue_and00011171_1353
+      O => U3_spriteonB4_and000091_2118
     );
-  U3_blue_and0001117_f5 : MUXF5
+  U3_spriteonB4_and00009_f5 : MUXF5
     port map (
-      I0 => N1,
-      I1 => U3_blue_and00011171_1353,
+      I0 => N0,
+      I1 => U3_spriteonB4_and000091_2118,
       S => U2_vcs(4),
-      O => U3_blue_and0001117
+      O => U3_spriteonB4_and00009
     );
-  U3_blue_and00011371 : LUT4
+  U3_spriteonB4_and0000191 : LUT4
     generic map(
-      INIT => X"8000"
+      INIT => X"AAA8"
+    )
+    port map (
+      I0 => U2_vcs(8),
+      I1 => U2_vcs(5),
+      I2 => U2_vcs(6),
+      I3 => U2_vcs(7),
+      O => U3_spriteonB4_and0000191_2115
+    );
+  U3_spriteonB4_and000019_f5 : MUXF5
+    port map (
+      I0 => U3_spriteonB4_and0000191_2115,
+      I1 => U2_vcs(8),
+      S => U3_spriteonB4_and00009,
+      O => U3_spriteonB4_and000019
+    );
+  U3_spriteonB1_cmp_lt00002351 : LUT4
+    generic map(
+      INIT => X"01FF"
+    )
+    port map (
+      I0 => U2_vcs(8),
+      I1 => U2_vcs(6),
+      I2 => U2_vcs(7),
+      I3 => U2_vcs(9),
+      O => U3_spriteonB1_cmp_lt0000235
+    );
+  U3_spriteonB1_cmp_lt0000235_f5 : MUXF5
+    port map (
+      I0 => U3_spriteonB1_cmp_lt00002351_2106,
+      I1 => U3_spriteonB1_cmp_lt0000235,
+      S => U3_spriteonB1_cmp_lt0000212_2104,
+      O => U3_spriteonB1_cmp_lt0000
+    );
+  U3_tank1Angle10s_and00001281 : LUT4
+    generic map(
+      INIT => X"57FF"
     )
     port map (
       I0 => U2_vcs(3),
       I1 => U2_vcs(2),
       I2 => U2_vcs(1),
       I3 => U2_vcs(4),
-      O => U3_blue_and00011371_1355
+      O => U3_tank1Angle10s_and00001281_2222
     );
-  U3_blue_and0001137_f5 : MUXF5
+  U3_tank1Angle10s_and0000128_f5 : MUXF5
     port map (
-      I0 => U3_blue_and00011371_1355,
-      I1 => N0,
+      I0 => N1,
+      I1 => U3_tank1Angle10s_and00001281_2222,
       S => U2_vcs(5),
-      O => U3_blue_and0001137
-    );
-  U3_spriteonB2_and0000281 : LUT2
-    generic map(
-      INIT => X"7"
-    )
-    port map (
-      I0 => U2_hcs(4),
-      I1 => U2_hcs(3),
-      O => U3_spriteonB2_and0000281_1380
-    );
-  U3_spriteonB2_and0000282 : LUT4
-    generic map(
-      INIT => X"FEEE"
-    )
-    port map (
-      I0 => U2_hcs(3),
-      I1 => U2_hcs(4),
-      I2 => U2_hcs(1),
-      I3 => U2_hcs(2),
-      O => U3_spriteonB2_and0000282_1381
-    );
-  U3_spriteonB2_and000028_f5 : MUXF5
-    port map (
-      I0 => U3_spriteonB2_and0000282_1381,
-      I1 => U3_spriteonB2_and0000281_1380,
-      S => U2_hcs(5),
-      O => U3_spriteonB2_and000028
-    );
-  U3_spriteonGrnd_and000091 : LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-    port map (
-      I0 => U2_hcs(3),
-      I1 => U2_hcs(2),
-      I2 => U2_hcs(1),
-      I3 => U2_hcs(0),
-      O => U3_spriteonGrnd_and000091_1407
-    );
-  U3_spriteonGrnd_and00009_f5 : MUXF5
-    port map (
-      I0 => N0,
-      I1 => U3_spriteonGrnd_and000091_1407,
-      S => U2_hcs(4),
-      O => U3_spriteonGrnd_and00009
+      O => U3_tank1Angle10s_and0000128
     );
   M1a_8_11 : LUT4
     generic map(
-      INIT => X"3655"
+      INIT => X"0060"
     )
     port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(1),
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => rom1_addr(4),
+      I3 => sig_tank1rom10s(2),
       O => M1a_8_1
+    );
+  M1a_8_12 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => M1_3_bdd3,
+      O => M1a_8_11_128
     );
   M1a_8_1_f5 : MUXF5
     port map (
-      I0 => N0,
+      I0 => M1a_8_11_128,
       I1 => M1a_8_1,
-      S => rom1_addr(4),
+      S => rom1_addr(3),
       O => M1a_8_Q
     );
-  M1a_29_321 : LUT4
+  M1_4_SW11 : LUT4
     generic map(
-      INIT => X"13B3"
+      INIT => X"7F2A"
     )
     port map (
-      I0 => rom1_addr(1),
-      I1 => M1_22_bdd12,
-      I2 => rom1_addr(0),
-      I3 => M1_22_bdd9,
-      O => M1a_29_321_119
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(1),
+      I3 => M1_4_bdd0,
+      O => M1_4_SW1
     );
-  M1a_29_322 : LUT4
-    generic map(
-      INIT => X"80F7"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(1),
-      I2 => M1_22_bdd9,
-      I3 => M1_22_bdd12,
-      O => M1a_29_322_120
-    );
-  M1a_29_32_f5 : MUXF5
-    port map (
-      I0 => M1a_29_322_120,
-      I1 => M1a_29_321_119,
-      S => rom1_addr(2),
-      O => M1a_29_32
-    );
-  M1a_28_311 : LUT4
-    generic map(
-      INIT => X"FF08"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M1_22_bdd9,
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(1),
-      O => M1a_28_311_114
-    );
-  M1a_28_31_f5 : MUXF5
-    port map (
-      I0 => M1a_28_311_114,
-      I1 => N0,
-      S => rom1_addr(3),
-      O => M1a_28_31
-    );
-  M2_13_1 : LUT4
-    generic map(
-      INIT => X"178C"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(3),
-      O => M2_13_Q
-    );
-  M2_13_f5 : MUXF5
-    port map (
-      I0 => M2_13_1_144,
-      I1 => M2_13_Q,
-      S => rom1_addr(4),
-      O => M1_18_Q
-    );
-  M2a_3_311 : LUT4
-    generic map(
-      INIT => X"FF08"
-    )
-    port map (
-      I0 => rom1_addr(2),
-      I1 => M2_0_bdd6,
-      I2 => rom1_addr(0),
-      I3 => rom1_addr(1),
-      O => M2a_3_311_209
-    );
-  M2a_3_31_f5 : MUXF5
-    port map (
-      I0 => M2a_3_311_209,
-      I1 => N0,
-      S => rom1_addr(3),
-      O => M2a_3_31
-    );
-  M2_1_1211 : LUT4
+  M1_4_SW12 : LUT4
     generic map(
       INIT => X"44E4"
     )
     port map (
-      I0 => rom1_addr(3),
-      I1 => M2_1_65_150,
-      I2 => M1_30_98,
-      I3 => M2_0_bdd1,
-      O => M2_1_121
+      I0 => rom1_addr(4),
+      I1 => M1_4_bdd0,
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(1),
+      O => M1_4_SW11_81
     );
-  M2_1_121_f5 : MUXF5
+  M1_4_SW1_f5 : MUXF5
     port map (
-      I0 => M2_1_121,
-      I1 => N0,
-      S => rom1_addr(4),
-      O => M2_1_Q
+      I0 => M1_4_SW11_81,
+      I1 => M1_4_SW1,
+      S => sig_tank1rom10s(2),
+      O => N76
     );
-  M1_29_231 : LUT4
-    generic map(
-      INIT => X"AA82"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M1_22_bdd9,
-      I2 => M1_21_bdd5,
-      I3 => rom1_addr(0),
-      O => M1_29_231_55
-    );
-  M1_29_23_f5 : MUXF5
-    port map (
-      I0 => M1_29_231_55,
-      I1 => N1,
-      S => rom1_addr(2),
-      O => M1_29_23
-    );
-  M2a_2_321 : LUT4
-    generic map(
-      INIT => X"13B3"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2_0_bdd16,
-      I2 => rom1_addr(0),
-      I3 => M2_0_bdd6,
-      O => M2a_2_321_203
-    );
-  M2a_2_322 : LUT4
-    generic map(
-      INIT => X"80F7"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(1),
-      I2 => M2_0_bdd6,
-      I3 => M2_0_bdd16,
-      O => M2a_2_322_204
-    );
-  M2a_2_32_f5 : MUXF5
-    port map (
-      I0 => M2a_2_322_204,
-      I1 => M2a_2_321_203,
-      S => rom1_addr(2),
-      O => M2a_2_32
-    );
-  M1_30_1171 : LUT4
-    generic map(
-      INIT => X"E444"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => M1_30_65_62,
-      I2 => M1_27_bdd4,
-      I3 => M1_30_98,
-      O => M1_30_117
-    );
-  M1_30_117_f5 : MUXF5
-    port map (
-      I0 => M1_30_117,
-      I1 => N0,
-      S => rom1_addr(4),
-      O => M1_30_Q
-    );
-  M2_2_231 : LUT4
-    generic map(
-      INIT => X"AA82"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => M2_0_bdd6,
-      I2 => M2_0_bdd13,
-      I3 => rom1_addr(0),
-      O => M2_2_231_160
-    );
-  M2_2_23_f5 : MUXF5
-    port map (
-      I0 => M2_2_231_160,
-      I1 => N1,
-      S => rom1_addr(2),
-      O => M2_2_23
-    );
-  M1a_22_371 : LUT4
-    generic map(
-      INIT => X"1352"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(3),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(2),
-      O => M1a_22_371_92
-    );
-  M1a_22_37_f5 : MUXF5
-    port map (
-      I0 => N1,
-      I1 => M1a_22_371_92,
-      S => rom1_addr(4),
-      O => M1a_22_37
-    );
-  selector_green_1_111 : LUT4
-    generic map(
-      INIT => X"CC08"
-    )
-    port map (
-      I0 => U3_N15,
-      I1 => U3_N13,
-      I2 => U3_spriteonB5,
-      I3 => U3_N8,
-      O => selector_green_1_111_1811
-    );
-  selector_green_1_11_f5 : MUXF5
-    port map (
-      I0 => selector_green_1_111_1811,
-      I1 => U3_N13,
-      S => U3_spriteonGrnd,
-      O => selector_green_1_11
-    );
-  U3_tank1Angle10s_cmp_le0000130_SW01 : LUT4
-    generic map(
-      INIT => X"A080"
-    )
-    port map (
-      I0 => U2_vcs(3),
-      I1 => U2_vcs(1),
-      I2 => U2_vcs(4),
-      I3 => U2_vcs(2),
-      O => U3_tank1Angle10s_cmp_le0000130_SW0
-    );
-  U3_tank1Angle10s_cmp_le0000130_SW0_f5 : MUXF5
-    port map (
-      I0 => N0,
-      I1 => U3_tank1Angle10s_cmp_le0000130_SW0,
-      S => U2_vcs(5),
-      O => N236
-    );
-  U3_spriteonB4_and000029_SW01 : LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-    port map (
-      I0 => U2_hcs(6),
-      I1 => U2_hcs(5),
-      I2 => U2_hcs(8),
-      I3 => U2_hcs(7),
-      O => U3_spriteonB4_and000029_SW0
-    );
-  U3_spriteonB4_and000029_SW0_f5 : MUXF5
-    port map (
-      I0 => N1,
-      I1 => U3_spriteonB4_and000029_SW0,
-      S => U2_hcs(9),
-      O => N238
-    );
-  U3_Mmux_M1_mux0000_83_SW01 : LUT4
-    generic map(
-      INIT => X"E876"
-    )
-    port map (
-      I0 => rom1_addr(1),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => rom1_addr(3),
-      O => U3_Mmux_M1_mux0000_83_SW0
-    );
-  U3_Mmux_M1_mux0000_83_SW0_f5 : MUXF5
-    port map (
-      I0 => U3_Mmux_M1_mux0000_83_SW0,
-      I1 => N80,
-      S => U3_xpix1(0),
-      O => N248
-    );
-  M1a_22_40_SW01 : LUT2
-    generic map(
-      INIT => X"E"
-    )
-    port map (
-      I0 => M1a_22_bdd0,
-      I1 => rom1_addr(3),
-      O => M1a_22_40_SW0
-    );
-  M1a_22_40_SW02 : LUT4
-    generic map(
-      INIT => X"EAAA"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => M1_21_bdd5,
-      O => M1a_22_40_SW01_94
-    );
-  M1a_22_40_SW0_f5 : MUXF5
-    port map (
-      I0 => M1a_22_40_SW01_94,
-      I1 => M1a_22_40_SW0,
-      S => rom1_addr(1),
-      O => N292
-    );
-  M2a_9_40_SW01 : LUT2
-    generic map(
-      INIT => X"E"
-    )
-    port map (
-      I0 => M2a_6_bdd0,
-      I1 => rom1_addr(3),
-      O => M2a_9_40_SW0
-    );
-  M2a_9_40_SW02 : LUT4
-    generic map(
-      INIT => X"EAAA"
-    )
-    port map (
-      I0 => rom1_addr(3),
-      I1 => rom1_addr(0),
-      I2 => rom1_addr(2),
-      I3 => M2_0_bdd13,
-      O => M2a_9_40_SW01_223
-    );
-  M2a_9_40_SW0_f5 : MUXF5
-    port map (
-      I0 => M2a_9_40_SW01_223,
-      I1 => M2a_9_40_SW0,
-      S => rom1_addr(1),
-      O => N298
-    );
-  M1a_28_651 : LUT4
+  M2a_4_762 : LUT4
     generic map(
       INIT => X"1450"
     )
     port map (
       I0 => rom1_addr(3),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(0),
-      O => M1a_28_651_116
+      I1 => M2_0_bdd13,
+      I2 => rom1_addr(2),
+      I3 => M2_0_bdd6,
+      O => M2a_4_762_250
     );
-  M1a_28_65_f5 : MUXF5
+  M2a_4_76_f5 : MUXF5
     port map (
-      I0 => N1,
-      I1 => M1a_28_651_116,
-      S => rom1_addr(4),
-      O => M1a_28_65
+      I0 => M2a_4_762_250,
+      I1 => M2a_4_761,
+      S => sig_tank1rom10s(0),
+      O => M2a_4_76
     );
-  U3_Mmux_M1a_mux0000_73_SW01 : LUT4
+  M1_28_1291 : LUT4
     generic map(
-      INIT => X"240F"
+      INIT => X"91FF"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(3),
-      I3 => rom1_addr(1),
-      O => U3_Mmux_M1a_mux0000_73_SW0
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => rom1_addr(4),
+      O => M1_28_1291_52
     );
-  U3_Mmux_M1a_mux0000_73_SW0_f5 : MUXF5
+  M1_28_1292 : LUT2
+    generic map(
+      INIT => X"7"
+    )
     port map (
-      I0 => U3_Mmux_M1a_mux0000_73_SW01_1139,
-      I1 => U3_Mmux_M1a_mux0000_73_SW0,
-      S => U3_xpix1(0),
-      O => N336
+      I0 => M1_28_bdd1,
+      I1 => rom1_addr(4),
+      O => M1_28_1292_53
+    );
+  M1_28_129_f5 : MUXF5
+    port map (
+      I0 => M1_28_1292_53,
+      I1 => M1_28_1291_52,
+      S => rom1_addr(3),
+      O => M1_28_129
+    );
+  M2_5_1601 : LUT4
+    generic map(
+      INIT => X"09FF"
+    )
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => sig_tank1rom10s(1),
+      I2 => rom1_addr(1),
+      I3 => rom1_addr(4),
+      O => M2_5_1601_192
+    );
+  M2_5_1602 : LUT4
+    generic map(
+      INIT => X"DF57"
+    )
+    port map (
+      I0 => rom1_addr(4),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => rom1_addr(1),
+      O => M2_5_1602_193
+    );
+  M2_5_160_f5 : MUXF5
+    port map (
+      I0 => M2_5_1602_193,
+      I1 => M2_5_1601_192,
+      S => sig_tank1rom10s(0),
+      O => M2_5_160
+    );
+  U3_red_0_3281 : LUT4
+    generic map(
+      INIT => X"FF02"
+    )
+    port map (
+      I0 => U3_blue_and0002,
+      I1 => U3_tank2HP_0_Q,
+      I2 => U3_N29,
+      I3 => U3_green_2_17,
+      O => U3_red_0_328
+    );
+  U3_red_0_328_f5 : MUXF5
+    port map (
+      I0 => N0,
+      I1 => U3_red_0_328,
+      S => vidon,
+      O => U3_N25
+    );
+  selector_red_1_111 : LUT3
+    generic map(
+      INIT => X"C8"
+    )
+    port map (
+      I0 => U3_spriteonB1,
+      I1 => U3_N87,
+      I2 => N372,
+      O => selector_red_1_111_2497
+    );
+  selector_red_1_112 : LUT4
+    generic map(
+      INIT => X"AAA8"
+    )
+    port map (
+      I0 => U3_N87,
+      I1 => U3_N50,
+      I2 => U3_spriteonB1,
+      I3 => N372,
+      O => selector_red_1_112_2498
+    );
+  selector_red_1_11_f5 : MUXF5
+    port map (
+      I0 => selector_red_1_112_2498,
+      I1 => selector_red_1_111_2497,
+      S => U3_spriteonB5,
+      O => selector_red_1_11
+    );
+  U3_RMcnt_Q_mux0000_5_SW01 : LUT4
+    generic map(
+      INIT => X"EAA8"
+    )
+    port map (
+      I0 => U3_rise_2072,
+      I1 => U3_RMcnt(3),
+      I2 => U3_RMcnt(4),
+      I3 => N168,
+      O => U3_RMcnt_Q_mux0000_5_SW0
+    );
+  U3_RMcnt_Q_mux0000_5_SW02 : LUT4
+    generic map(
+      INIT => X"017F"
+    )
+    port map (
+      I0 => U3_RMcnt(3),
+      I1 => N168,
+      I2 => U3_RMcnt(4),
+      I3 => U3_rise_2072,
+      O => U3_RMcnt_Q_mux0000_5_SW01_1951
+    );
+  U3_RMcnt_Q_mux0000_5_SW0_f5 : MUXF5
+    port map (
+      I0 => U3_RMcnt_Q_mux0000_5_SW01_1951,
+      I1 => U3_RMcnt_Q_mux0000_5_SW0,
+      S => U3_RMcnt(5),
+      O => N49
+    );
+  U3_RMcnt2_Q_mux0000_5_SW01 : LUT4
+    generic map(
+      INIT => X"EAA8"
+    )
+    port map (
+      I0 => U3_rise2_2073,
+      I1 => U3_RMcnt2(3),
+      I2 => U3_RMcnt2(4),
+      I3 => N170,
+      O => U3_RMcnt2_Q_mux0000_5_SW0
+    );
+  U3_RMcnt2_Q_mux0000_5_SW02 : LUT4
+    generic map(
+      INIT => X"017F"
+    )
+    port map (
+      I0 => U3_RMcnt2(3),
+      I1 => N170,
+      I2 => U3_RMcnt2(4),
+      I3 => U3_rise2_2073,
+      O => U3_RMcnt2_Q_mux0000_5_SW01_1919
+    );
+  U3_RMcnt2_Q_mux0000_5_SW0_f5 : MUXF5
+    port map (
+      I0 => U3_RMcnt2_Q_mux0000_5_SW01_1919,
+      I1 => U3_RMcnt2_Q_mux0000_5_SW0,
+      S => U3_RMcnt2(5),
+      O => N51
+    );
+  U3_RMcnt_Q_mux0000_4_11 : LUT4
+    generic map(
+      INIT => X"B4D2"
+    )
+    port map (
+      I0 => U3_rise_2072,
+      I1 => N168,
+      I2 => U3_RMcnt(4),
+      I3 => U3_RMcnt(3),
+      O => U3_RMcnt_Q_mux0000_4_1
+    );
+  U3_RMcnt_Q_mux0000_4_1_f5 : MUXF5
+    port map (
+      I0 => U3_RMcnt_Q_mux0000_4_1,
+      I1 => U3_RMht1(4),
+      S => U3_RMcnt_and0000,
+      O => U3_RMcnt_Q_mux0000(4)
+    );
+  U3_RMcnt2_Q_mux0000_4_11 : LUT4
+    generic map(
+      INIT => X"B4D2"
+    )
+    port map (
+      I0 => U3_rise2_2073,
+      I1 => N170,
+      I2 => U3_RMcnt2(4),
+      I3 => U3_RMcnt2(3),
+      O => U3_RMcnt2_Q_mux0000_4_1
+    );
+  U3_RMcnt2_Q_mux0000_4_1_f5 : MUXF5
+    port map (
+      I0 => U3_RMcnt2_Q_mux0000_4_1,
+      I1 => U3_RMht2(4),
+      S => U3_RMcnt2_and0000,
+      O => U3_RMcnt2_Q_mux0000(4)
+    );
+  U3_font4_2_1 : LUT4
+    generic map(
+      INIT => X"22A8"
+    )
+    port map (
+      I0 => U3_font3_cmp_lt0000,
+      I1 => U3_RMht2(1),
+      I2 => U3_font3_cmp_lt0002,
+      I3 => U3_font3_cmp_lt0001,
+      O => U3_font4_2_1_2056
+    );
+  U3_font4_2_2 : LUT4
+    generic map(
+      INIT => X"8090"
+    )
+    port map (
+      I0 => U3_RMht2(1),
+      I1 => U3_font3_cmp_lt0001,
+      I2 => U3_font3_cmp_lt0000,
+      I3 => U3_font3_cmp_lt0002,
+      O => U3_font4_2_2_2057
+    );
+  U3_font4_2_f5 : MUXF5
+    port map (
+      I0 => U3_font4_2_2_2057,
+      I1 => U3_font4_2_1_2056,
+      S => U3_RMht2(2),
+      O => U3_font4_2_Q
+    );
+  U3_Mmux_M2a_mux0000_82_SW01 : LUT4
+    generic map(
+      INIT => X"B6BF"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(3),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => U3_Mmux_M2a_mux0000_82_SW0
+    );
+  U3_Mmux_M2a_mux0000_82_SW0_f5 : MUXF5
+    port map (
+      I0 => U3_Mmux_M2a_mux0000_82_SW0,
+      I1 => M1a_12_bdd0,
+      S => U3_rom_pix2(0),
+      O => N248
+    );
+  M2a_8_941 : LUT4
+    generic map(
+      INIT => X"1312"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(3),
+      O => M2a_8_94
+    );
+  M2a_8_942 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => M2a_8_29_263,
+      I1 => N276,
+      O => M2a_8_941_265
+    );
+  M2a_8_94_f5 : MUXF5
+    port map (
+      I0 => M2a_8_941_265,
+      I1 => M2a_8_94,
+      S => rom1_addr(4),
+      O => M2a_8_Q
+    );
+  M2_10_231 : LUT4
+    generic map(
+      INIT => X"1000"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => M2_0_bdd13,
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(0),
+      O => M2_10_231_141
+    );
+  M2_10_232 : LUT2
+    generic map(
+      INIT => X"6"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      O => M2_10_232_142
+    );
+  M2_10_23_f5 : MUXF5
+    port map (
+      I0 => M2_10_232_142,
+      I1 => M2_10_231_141,
+      S => sig_tank1rom10s(3),
+      O => M2_10_23
+    );
+  M1_29_261 : LUT2
+    generic map(
+      INIT => X"7"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      O => M1_29_261_61
+    );
+  M1_29_262 : LUT4
+    generic map(
+      INIT => X"FF84"
+    )
+    port map (
+      I0 => M1_21_bdd5,
+      I1 => sig_tank1rom10s(0),
+      I2 => M1_22_bdd9,
+      I3 => sig_tank1rom10s(1),
+      O => M1_29_262_62
+    );
+  M1_29_26_f5 : MUXF5
+    port map (
+      I0 => M1_29_262_62,
+      I1 => M1_29_261_61,
+      S => sig_tank1rom10s(2),
+      O => M1_29_26
+    );
+  M2_5_311 : LUT3
+    generic map(
+      INIT => X"5D"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_0_bdd13,
+      O => M2_5_31
+    );
+  M2_5_312 : LUT4
+    generic map(
+      INIT => X"0257"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_0_bdd13,
+      I3 => M2_0_bdd6,
+      O => M2_5_311_195
+    );
+  M2_5_31_f5 : MUXF5
+    port map (
+      I0 => M2_5_311_195,
+      I1 => M2_5_31,
+      S => sig_tank1rom10s(2),
+      O => M2_5_bdd2
+    );
+  M1_28_331 : LUT4
+    generic map(
+      INIT => X"ADFD"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => M1_23_bdd6,
+      I2 => sig_tank1rom10s(1),
+      I3 => M1_21_bdd5,
+      O => M1_28_331_55
+    );
+  M1_28_332 : LUT3
+    generic map(
+      INIT => X"E5"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => M1_23_bdd6,
+      I2 => sig_tank1rom10s(0),
+      O => M1_28_332_56
+    );
+  M1_28_33_f5 : MUXF5
+    port map (
+      I0 => M1_28_332_56,
+      I1 => M1_28_331_55,
+      S => sig_tank1rom10s(2),
+      O => M1_28_33
+    );
+  M2a_9_671 : LUT4
+    generic map(
+      INIT => X"5D04"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => sig_tank1rom10s(3),
+      O => M2a_9_67
+    );
+  M2a_9_672 : LUT2
+    generic map(
+      INIT => X"8"
+    )
+    port map (
+      I0 => N338,
+      I1 => M2a_9_33_267,
+      O => M2a_9_671_269
+    );
+  M2a_9_67_f5 : MUXF5
+    port map (
+      I0 => M2a_9_671_269,
+      I1 => M2a_9_67,
+      S => rom1_addr(4),
+      O => M2a_9_Q
+    );
+  M1_25_541 : LUT2
+    generic map(
+      INIT => X"D"
+    )
+    port map (
+      I0 => M1_22_bdd4,
+      I1 => sig_tank1rom10s(0),
+      O => M1_25_541_34
+    );
+  M1_25_542 : LUT4
+    generic map(
+      INIT => X"42FF"
+    )
+    port map (
+      I0 => rom1_addr(2),
+      I1 => M1_22_bdd9,
+      I2 => M1_21_bdd5,
+      I3 => sig_tank1rom10s(0),
+      O => M1_25_542_35
+    );
+  M1_25_54_f5 : MUXF5
+    port map (
+      I0 => M1_25_542_35,
+      I1 => M1_25_541_34,
+      S => sig_tank1rom10s(1),
+      O => M1_25_54
+    );
+  M1_31_251 : LUT3
+    generic map(
+      INIT => X"02"
+    )
+    port map (
+      I0 => rom1_addr(2),
+      I1 => sig_tank1rom10s(0),
+      I2 => M1_22_bdd9,
+      O => M1_31_251_72
+    );
+  M1_31_252 : LUT4
+    generic map(
+      INIT => X"11B1"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => M1_22_bdd12,
+      I2 => rom1_addr(2),
+      I3 => M1_21_bdd5,
+      O => M1_31_252_73
+    );
+  M1_31_25_f5 : MUXF5
+    port map (
+      I0 => M1_31_252_73,
+      I1 => M1_31_251_72,
+      S => sig_tank1rom10s(1),
+      O => M1_31_25
+    );
+  selector_red_0_34_SW01 : LUT4
+    generic map(
+      INIT => X"FF01"
+    )
+    port map (
+      I0 => U3_N50,
+      I1 => U3_spriteonB4,
+      I2 => U3_spriteonB5,
+      I3 => U3_spriteonB3,
+      O => selector_red_0_34_SW0
+    );
+  selector_red_0_34_SW02 : LUT4
+    generic map(
+      INIT => X"0001"
+    )
+    port map (
+      I0 => U3_spriteonB3,
+      I1 => U3_N50,
+      I2 => U3_spriteonB4,
+      I3 => U3_spriteonB5,
+      O => selector_red_0_34_SW01_2494
+    );
+  selector_red_0_34_SW0_f5 : MUXF5
+    port map (
+      I0 => selector_red_0_34_SW01_2494,
+      I1 => selector_red_0_34_SW0,
+      S => who_present_state_FSM_FFd1_2609,
+      O => N298
+    );
+  M2_5_451 : LUT3
+    generic map(
+      INIT => X"6F"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_5_bdd2,
+      O => M2_5_451_197
+    );
+  M2_5_452 : LUT4
+    generic map(
+      INIT => X"66F6"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => sig_tank1rom10s(1),
+      I2 => M2_0_bdd13,
+      I3 => sig_tank1rom10s(2),
+      O => M2_5_452_198
+    );
+  M2_5_45_f5 : MUXF5
+    port map (
+      I0 => M2_5_452_198,
+      I1 => M2_5_451_197,
+      S => rom1_addr(3),
+      O => M2_5_45
+    );
+  M1_27_451 : LUT4
+    generic map(
+      INIT => X"A880"
+    )
+    port map (
+      I0 => sig_tank1rom10s(0),
+      I1 => rom1_addr(2),
+      I2 => M1_21_bdd5,
+      I3 => M1_22_bdd9,
+      O => M1_27_451_45
+    );
+  M1_27_452 : LUT4
+    generic map(
+      INIT => X"0A08"
+    )
+    port map (
+      I0 => rom1_addr(2),
+      I1 => M1_21_bdd5,
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_22_bdd9,
+      O => M1_27_452_46
+    );
+  M1_27_45_f5 : MUXF5
+    port map (
+      I0 => M1_27_452_46,
+      I1 => M1_27_451_45,
+      S => sig_tank1rom10s(1),
+      O => M1_27_45
     );
   U3_Mmux_M2a_mux0000_8_SW01 : LUT4
     generic map(
-      INIT => X"DF90"
+      INIT => X"978D"
     )
     port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(3),
+      I3 => sig_tank1rom10s(0),
       O => U3_Mmux_M2a_mux0000_8_SW0
-    );
-  U3_Mmux_M2a_mux0000_8_SW02 : LUT4
-    generic map(
-      INIT => X"EF90"
-    )
-    port map (
-      I0 => rom1_addr(0),
-      I1 => rom1_addr(2),
-      I2 => rom1_addr(1),
-      I3 => rom1_addr(3),
-      O => U3_Mmux_M2a_mux0000_8_SW01_1210
     );
   U3_Mmux_M2a_mux0000_8_SW0_f5 : MUXF5
     port map (
-      I0 => U3_Mmux_M2a_mux0000_8_SW01_1210,
+      I0 => N444,
       I1 => U3_Mmux_M2a_mux0000_8_SW0,
-      S => U3_xpix2(0),
-      O => N326
+      S => U3_rom_pix2(0),
+      O => N464
     );
-  screenstate_Mcount_sig_hill3_eqn_018 : LUT4_D
+  M2_5_1031 : LUT4
     generic map(
-      INIT => X"FDFF"
+      INIT => X"9BD9"
     )
     port map (
-      I0 => screenstate_sig_hill3(1),
-      I1 => screenstate_sig_hill3(6),
-      I2 => screenstate_sig_hill3(7),
-      I3 => screenstate_sig_hill3(0),
-      LO => N512,
-      O => screenstate_Mcount_sig_hill3_eqn_018_1707
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(0),
+      I2 => sig_tank1rom10s(2),
+      I3 => M2_0_bdd6,
+      O => M2_5_1031_189
     );
-  screenstate_Mcount_sig_hill3_eqn_0121 : LUT4_D
+  M2_5_1032 : LUT3
     generic map(
-      INIT => X"7FFF"
+      INIT => X"A7"
     )
     port map (
-      I0 => screenstate_sig_hill3(5),
-      I1 => screenstate_sig_hill3(4),
-      I2 => screenstate_sig_hill3(3),
-      I3 => screenstate_sig_hill3(2),
-      LO => N513,
-      O => screenstate_Mcount_sig_hill3_eqn_0121_1706
+      I0 => sig_tank1rom10s(1),
+      I1 => sig_tank1rom10s(2),
+      I2 => sig_tank1rom10s(0),
+      O => M2_5_1032_190
     );
-  U3_tank2_angle_calc_and00003 : LUT2_L
+  M2_5_103_f5 : MUXF5
+    port map (
+      I0 => M2_5_1032_190,
+      I1 => M2_5_1031_189,
+      S => sig_tank1rom10s(3),
+      O => M2_5_103
+    );
+  M2a_5_64_SW01 : LUT4
     generic map(
-      INIT => X"1"
+      INIT => X"FFE8"
     )
     port map (
-      I0 => U3_tank2_angle_calc(4),
-      I1 => U3_tank2_angle_calc(3),
-      LO => U3_tank2_angle_calc_and00003_1444
+      I0 => rom1_addr(2),
+      I1 => M2_0_bdd13,
+      I2 => M2_0_bdd6,
+      I3 => rom1_addr(3),
+      O => M2a_5_64_SW0
     );
-  U3_tank1_angle_calc_and00003 : LUT2_L
+  M2a_5_64_SW0_f5 : MUXF5
+    port map (
+      I0 => sig_tank1rom10s(2),
+      I1 => M2a_5_64_SW0,
+      S => sig_tank1rom10s(0),
+      O => N330
+    );
+  U3_font4_4_1 : LUT4
     generic map(
-      INIT => X"1"
+      INIT => X"6AAA"
     )
     port map (
-      I0 => U3_tank1_angle_calc(4),
-      I1 => U3_tank1_angle_calc(3),
-      LO => U3_tank1_angle_calc_and00003_1430
+      I0 => U3_RMht2(4),
+      I1 => U3_RMht2(3),
+      I2 => U3_RMht2(2),
+      I3 => U3_RMht2(1),
+      O => U3_font4_4_Q
+    );
+  U3_font4_4_f5 : MUXF5
+    port map (
+      I0 => U3_font4_4_Q,
+      I1 => N0,
+      S => U3_RMht2(5),
+      O => U3_Madd_tank2ascii1s_add0000_cy(4)
+    );
+  M1a_28_63_SW01 : LUT4
+    generic map(
+      INIT => X"D888"
+    )
+    port map (
+      I0 => sig_tank1rom10s(1),
+      I1 => M1_22_bdd9,
+      I2 => sig_tank1rom10s(0),
+      I3 => M1_21_bdd5,
+      O => M1a_28_63_SW0
+    );
+  M1a_28_63_SW0_f5 : MUXF5
+    port map (
+      I0 => M1a_28_63_SW0,
+      I1 => N0,
+      S => sig_tank1rom10s(2),
+      O => N256
+    );
+  M1a_25_361 : LUT4
+    generic map(
+      INIT => X"22A2"
+    )
+    port map (
+      I0 => sig_tank1rom10s(3),
+      I1 => sig_tank1rom10s(1),
+      I2 => sig_tank1rom10s(0),
+      I3 => sig_tank1rom10s(2),
+      O => M1a_25_36
+    );
+  M1a_25_36_f5 : MUXF5
+    port map (
+      I0 => N272,
+      I1 => M1a_25_36,
+      S => rom1_addr(4),
+      O => M1a_25_Q
+    );
+  U3_rise_and0000_SW0 : LUT4_L
+    generic map(
+      INIT => X"FEFF"
+    )
+    port map (
+      I0 => U3_RMcnt(3),
+      I1 => U3_RMcnt(5),
+      I2 => U3_RMcnt(4),
+      I3 => U3_RM1_and0000,
+      LO => N14
+    );
+  U3_rise2_and0000_SW0 : LUT4_L
+    generic map(
+      INIT => X"FEFF"
+    )
+    port map (
+      I0 => U3_RMcnt2(3),
+      I1 => U3_RMcnt2(5),
+      I2 => U3_RMcnt2(4),
+      I3 => U3_RM2_and0000,
+      LO => N16
     );
   nes_a_reg_cmp_eq00001 : LUT4_D
     generic map(
@@ -18758,31 +24361,9 @@ begin
       I0 => nes_counter_reg(0),
       I1 => nes_counter_reg(8),
       I2 => nes_counter_reg(9),
-      I3 => N4,
-      LO => N514,
+      I3 => N18,
+      LO => N676,
       O => nes_N0
-    );
-  screenstate_Madd_sig_hill1_addsub0000_xor_7_111 : LUT2_D
-    generic map(
-      INIT => X"E"
-    )
-    port map (
-      I0 => screenstate_sig_hill1(1),
-      I1 => screenstate_sig_hill1(2),
-      LO => N515,
-      O => screenstate_N3
-    );
-  screenstate_Madd_sig_hill1_addsub0000_xor_6_111 : LUT4_D
-    generic map(
-      INIT => X"7FFF"
-    )
-    port map (
-      I0 => screenstate_sig_hill1(4),
-      I1 => screenstate_sig_hill1(3),
-      I2 => screenstate_sig_hill1(5),
-      I3 => screenstate_N3,
-      LO => N516,
-      O => screenstate_N13
     );
   U2_hcs_cmp_eq000010 : LUT4_D
     generic map(
@@ -18793,8 +24374,19 @@ begin
       I1 => U2_hcs(4),
       I2 => U2_hcs(3),
       I3 => U2_hcs(2),
-      LO => N517,
-      O => U2_hcs_cmp_eq000010_649
+      LO => N677,
+      O => U2_hcs_cmp_eq000010_759
+    );
+  U3_Result_3_1_SW0 : LUT4_L
+    generic map(
+      INIT => X"0180"
+    )
+    port map (
+      I0 => U3_RMht1(2),
+      I1 => U3_RMht1(1),
+      I2 => U3_RMht1(0),
+      I3 => sig_gameDown,
+      LO => N24
     );
   nes_counter_reg_cmp_eq0000112 : LUT4_D
     generic map(
@@ -18805,28 +24397,72 @@ begin
       I1 => nes_counter_reg(7),
       I2 => nes_counter_reg(1),
       I3 => nes_counter_reg(3),
-      LO => N518,
-      O => nes_counter_reg_cmp_eq0000112_1632
+      LO => N678,
+      O => nes_counter_reg_cmp_eq0000112_2418
+    );
+  U3_RMcnt_and000112 : LUT4_L
+    generic map(
+      INIT => X"7FFF"
+    )
+    port map (
+      I0 => U3_RMcnt(5),
+      I1 => U3_RMcnt(4),
+      I2 => U3_RMcnt(3),
+      I3 => U3_RMcnt(2),
+      LO => U3_RMcnt_and000112_1954
+    );
+  U3_RMcnt2_and000112 : LUT4_L
+    generic map(
+      INIT => X"7FFF"
+    )
+    port map (
+      I0 => U3_RMcnt2(5),
+      I1 => U3_RMcnt2(4),
+      I2 => U3_RMcnt2(3),
+      I3 => U3_RMcnt2(2),
+      LO => U3_RMcnt2_and000112_1922
+    );
+  U3_Mhorz_cmp_ne000132 : LUT4_D
+    generic map(
+      INIT => X"6FF6"
+    )
+    port map (
+      I0 => U3_RMht2(5),
+      I1 => U3_RMcnt2(5),
+      I2 => U3_RMht2(4),
+      I3 => U3_RMcnt2(4),
+      LO => N679,
+      O => U3_Mhorz_cmp_ne000132_1587
+    );
+  U3_Mhorz_cmp_ne0001115 : LUT3_L
+    generic map(
+      INIT => X"FE"
+    )
+    port map (
+      I0 => U3_Mhorz_cmp_ne000132_1587,
+      I1 => U3_Mhorz_cmp_ne000165_1588,
+      I2 => U3_Mhorz_cmp_ne0001113_1586,
+      LO => U3_Mhorz_cmp_ne0001
     );
   U3_C2_not00011 : LUT2_L
     generic map(
       INIT => X"8"
     )
     port map (
-      I0 => U3_C2(3),
-      I1 => U3_C2(5),
-      LO => U3_C2_not00011_714
+      I0 => U3_C2_5_1_820,
+      I1 => U3_C2(1),
+      LO => U3_C2_not00011_826
     );
   U3_C2_not000123 : LUT4_L
     generic map(
-      INIT => X"FAEA"
+      INIT => X"FAF8"
     )
     port map (
-      I0 => U3_C2(9),
+      I0 => U3_C2_not000113_827,
       I1 => U3_C2(6),
-      I2 => U3_C2_not000113_715,
-      I3 => U3_C2_not00016_718,
-      LO => U3_C2_not000123_716
+      I2 => U3_C2(9),
+      I3 => U3_C2_not00016_830,
+      LO => U3_C2_not000123_828
     );
   U3_C2_not000150 : LUT4_L
     generic map(
@@ -18837,74 +24473,40 @@ begin
       I1 => U3_C2(8),
       I2 => U3_C2(6),
       I3 => U3_C2(5),
-      LO => U3_C2_not000150_717
+      LO => U3_C2_not000150_829
+    );
+  U3_Mhorz_cmp_ne000032 : LUT4_D
+    generic map(
+      INIT => X"6FF6"
+    )
+    port map (
+      I0 => U3_RMht1(5),
+      I1 => U3_RMcnt(5),
+      I2 => U3_RMht1(4),
+      I3 => U3_RMcnt(4),
+      LO => N680,
+      O => U3_Mhorz_cmp_ne000032_1583
+    );
+  U3_Mhorz_cmp_ne0000115 : LUT3_L
+    generic map(
+      INIT => X"FE"
+    )
+    port map (
+      I0 => U3_Mhorz_cmp_ne000032_1583,
+      I1 => U3_Mhorz_cmp_ne000065_1584,
+      I2 => U3_Mhorz_cmp_ne0000113_1582,
+      LO => U3_Mhorz_cmp_ne0000
     );
   U3_C1_not00014 : LUT4_L
     generic map(
       INIT => X"FFFE"
     )
     port map (
-      I0 => U3_C1(3),
-      I1 => U3_C1(2),
-      I2 => U3_C1(5),
-      I3 => U3_C1(4),
-      LO => U3_C1_not00014_698
-    );
-  U3_C1_not000147 : LUT2_L
-    generic map(
-      INIT => X"1"
-    )
-    port map (
-      I0 => U3_C1(3),
-      I1 => U3_C1(4),
-      LO => U3_C1_not000147_699
-    );
-  U3_C1_not000183 : LUT4_L
-    generic map(
-      INIT => X"3F1F"
-    )
-    port map (
-      I0 => U3_C1(5),
-      I1 => U3_C1(6),
-      I2 => U3_C1(7),
-      I3 => U3_C1_not000152_701,
-      LO => U3_C1_not000183_702
-    );
-  screenstate_sig_hill4_mux0001_0_41 : LUT4_D
-    generic map(
-      INIT => X"0001"
-    )
-    port map (
-      I0 => screenstate_sig_hill4(3),
-      I1 => screenstate_sig_hill4(2),
-      I2 => screenstate_sig_hill4(1),
-      I3 => screenstate_sig_hill4(0),
-      LO => N519,
-      O => screenstate_sig_hill4_mux0001_0_bdd2
-    );
-  U3_Madd_tank2_angle_calc_addsub0000_cy_3_11 : LUT4_D
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(2),
-      I1 => U3_tank2_angle_calc(3),
-      I2 => U3_tank2_angle_calc(0),
-      I3 => U3_tank2_angle_calc(1),
-      LO => N520,
-      O => U3_Madd_tank2_angle_calc_addsub0000_cy_3_Q
-    );
-  U3_Madd_tank1_angle_calc_addsub0000_cy_3_11 : LUT4_D
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(2),
-      I1 => U3_tank1_angle_calc(3),
-      I2 => U3_tank1_angle_calc(0),
-      I3 => U3_tank1_angle_calc(1),
-      LO => N521,
-      O => U3_Madd_tank1_angle_calc_addsub0000_cy_3_Q
+      I0 => U3_C1(2),
+      I1 => U3_C1(3),
+      I2 => U3_C1(4),
+      I3 => U3_C1(5),
+      LO => U3_C1_not00014_810
     );
   U2_hcs_cmp_eq000014 : LUT3_D
     generic map(
@@ -18914,43 +24516,8 @@ begin
       I0 => U2_hcs(6),
       I1 => U2_hcs(5),
       I2 => U2_hcs(7),
-      LO => N522,
-      O => U3_spriteonGrnd_and0000109
-    );
-  U3_tank2_angle_calc_cmp_eq0001 : LUT4_D
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_tank2_angle_calc(3),
-      I1 => U3_tank2_angle_calc(1),
-      I2 => U3_N50,
-      I3 => N169,
-      LO => N523,
-      O => U3_tank2_angle_calc_cmp_eq0001_1445
-    );
-  U3_tank1_angle_calc_cmp_eq0001 : LUT4_D
-    generic map(
-      INIT => X"8000"
-    )
-    port map (
-      I0 => U3_tank1_angle_calc(3),
-      I1 => U3_tank1_angle_calc(1),
-      I2 => U3_N49,
-      I3 => N171,
-      LO => N524,
-      O => U3_tank1_angle_calc_cmp_eq0001_1431
-    );
-  screenstate_sig_hill4_mux0001_1_181 : LUT4_L
-    generic map(
-      INIT => X"F780"
-    )
-    port map (
-      I0 => screenstate_sig_hill4_mux0001_1_115_1778,
-      I1 => screenstate_sig_hill4_mux0001_1_128_1779,
-      I2 => N180,
-      I3 => N179,
-      LO => screenstate_sig_hill4_mux0001_1_181_1780
+      LO => N681,
+      O => U2_N3
     );
   U2_vcs_cmp_eq0000 : LUT4_D
     generic map(
@@ -18959,32 +24526,86 @@ begin
     port map (
       I0 => U2_vcs(0),
       I1 => U2_vcs(1),
-      I2 => N186,
+      I2 => N182,
       I3 => U2_N2,
-      LO => N525,
-      O => U2_vcs_cmp_eq0000_661
+      LO => N682,
+      O => U2_vcs_cmp_eq0000_771
+    );
+  U3_C1_not000183 : LUT4_L
+    generic map(
+      INIT => X"1FBF"
+    )
+    port map (
+      I0 => U3_C1_not000147_811,
+      I1 => N184,
+      I2 => U3_C1(7),
+      I3 => N185,
+      LO => U3_C1_not000183_813
+    );
+  U3_RMht2_not000124 : LUT4_L
+    generic map(
+      INIT => X"2000"
+    )
+    port map (
+      I0 => screenstate_present_state_FSM_FFd1_2478,
+      I1 => ld_6_OBUF_2340,
+      I2 => ld_5_OBUF_2339,
+      I3 => U3_font3_cmp_lt0000,
+      LO => U3_RMht2_not000124_1972
     );
   nes_scalar_next_cmp_eq000030 : LUT4_D
     generic map(
-      INIT => X"0020"
+      INIT => X"2000"
     )
     port map (
-      I0 => nes_scalar_reg(4),
-      I1 => nes_scalar_reg(5),
-      I2 => nes_scalar_next_cmp_eq000021_1664,
-      I3 => N198,
-      LO => N526,
+      I0 => nes_scalar_reg(9),
+      I1 => nes_scalar_reg(8),
+      I2 => nes_scalar_next_cmp_eq000010_2450,
+      I3 => nes_scalar_next_cmp_eq000021_2451,
+      LO => N683,
       O => nes_scalar_next_cmp_eq0000
     );
-  M2_13_2_INV_0 : INV
+  U3_RMht2_not000137_SW0_SW0 : LUT3_L
+    generic map(
+      INIT => X"80"
+    )
     port map (
-      I => M1_14_bdd1,
-      O => M2_13_1_144
+      I0 => U3_RMht2(0),
+      I1 => U3_RMht2(2),
+      I2 => U3_RMht2(1),
+      LO => N200
     );
-  U3_Mmux_M1a_mux0000_73_SW02_INV_0 : INV
+  U3_RMht1_not00011165_SW0 : LUT4_L
+    generic map(
+      INIT => X"8000"
+    )
     port map (
-      I => N204,
-      O => U3_Mmux_M1a_mux0000_73_SW01_1139
+      I0 => U3_RMht1(0),
+      I1 => U3_RMht1(2),
+      I2 => U3_RMht1(3),
+      I3 => U3_RMht1(1),
+      LO => N202
+    );
+  U3_destroy1_mux001562 : LUT4_L
+    generic map(
+      INIT => X"0A08"
+    )
+    port map (
+      I0 => U3_spriteonM1,
+      I1 => U3_destroy1_mux001541_2039,
+      I2 => U3_N29,
+      I3 => N300,
+      LO => U3_destroy1_mux001562_2040
+    );
+  U3_spriteonB1_cmp_lt00002352_INV_0 : INV
+    port map (
+      I => U2_vcs(9),
+      O => U3_spriteonB1_cmp_lt00002351_2106
+    );
+  M2a_4_761_INV_0 : INV
+    port map (
+      I => rom1_addr(3),
+      O => M2a_4_761
     );
 
 end STRUCTURE;

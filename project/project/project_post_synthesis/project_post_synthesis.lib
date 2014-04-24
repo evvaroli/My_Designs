@@ -1,25 +1,25 @@
-timestamp=1398291631280
+timestamp=1398361648840
 
 [nes_driver_top]
 A/structure=*21|./../synthesis/nes_driver_top.vhd|52|
 
 [vga_bsprite2a_top]
-A/structure=A/STRUCTURE 21|./../synthesis/vga_bsprite2a_top.vhd|71|1*2067163
+A/structure=A/STRUCTURE 21|./../synthesis/vga_bsprite2a_top.vhd|71|1*3724614
 I=0*600698
-I/structure=I/STRUCTURE 0*1386091
+I/structure=I/STRUCTURE 0*2194985
 M=11|0|vb4|1398286510194|./../synthesis/vga_bsprite2a_top.vhd|0*599564*0xff103de253669b10c3d68e8ef99cd00b4528d7a4|0*600593*0x5eebbfaf24833dd780412b1f91e05209
-M/structure=M/STRUCTURE 21|0|vb4|1398291631272|./../synthesis/vga_bsprite2a_top.vhd|0*985885*0x74d86eaaee899ea5b0327ec25e1c32bb905078f2|0*1385973*0x856b180bf611ec746a6bfcb1befebd18
+M/structure=M/STRUCTURE 21|0|vb4|1398361648833|./../synthesis/vga_bsprite2a_top.vhd|0*1790614*0xb70253c9b16ea3745587894d018e0e8195a3b2f8|0*2194867*0x856b180bf611ec746a6bfcb1befebd18
 R=./../synthesis/vga_bsprite2a_top.vhd|41
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/structure=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [~A]
-ModifyID=24
+ModifyID=30
 Version=73
 
 [~MFT]
-0=42|0project_post_synthesis.mgf|1386091|983370
-1=6|1project_post_synthesis.mgf|2067163|2067163
+0=54|0project_post_synthesis.mgf|2194985|1788099
+1=10|1project_post_synthesis.mgf|3724614|3724614
 
 [~U]
 nes_driver_top=11|0*0|

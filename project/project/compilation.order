@@ -1,5 +1,4 @@
 .\src\tank_sprite2.vhd
-.\src\whosTurn.vhd
 .\src\x7segb.vhd
 .\src\vga_640x480.vhd
 .\src\titleScreen.vhd
@@ -8,14 +7,14 @@
 .\src\tank_sprite.vhd
 .\src\screenSelector.vhd
 .\src\clkdiv.vhd
-.\src\ClockDivider.vhd
 .\src\buttonMux.vhd
-.\src\nes_driver_top.vhd
 .\src\title_prom.vhd
 .\src\debounce.vhd
-.\src\titleImage.vhd
 .\src\fonts.vhd
 .\src\vga_bsprite2a.vhd
 .\src\vga_bsprite2a_top.vhd
+.\src\pulser.vhd
+.\src\whoseTurn.vhd
+.\src\titleImage.vhd
 .\synthesis\vga_bsprite2a_top.vhd
 .\IMPLEMENT\TIME_SIM.VHD

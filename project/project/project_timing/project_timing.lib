@@ -1,25 +1,25 @@
-timestamp=1398291632584
+timestamp=1398361650099
 
 [nes_driver_top]
 A/structure=*21|./../IMPLEMENT/TIME_SIM.VHD|52|
 
 [vga_bsprite2a_top]
-A/structure=A/Structure 21|./../IMPLEMENT/TIME_SIM.VHD|71|1*8994891
+A/structure=A/Structure 21|./../IMPLEMENT/TIME_SIM.VHD|71|1*18267979
 I=0*1430702
-I/structure=I/Structure 0*4688965
+I/structure=I/Structure 0*8177637
 M=11|0|vb4|1398286511857|./../IMPLEMENT/TIME_SIM.VHD|0*1429579*0x7aad3f2c5f078d96c1ea1b6a1d68b2aa6e29b1f8|0*1430606*0x5eebbfaf24833dd780412b1f91e05209
-M/structure=M/Structure 21|0|vb4|1398291632570|./../IMPLEMENT/TIME_SIM.VHD|0*3008611*0x0ea1b0376489851f246528f7d3dc77c6d9e12702|0*4688856*0x856b180bf611ec746a6bfcb1befebd18
+M/structure=M/Structure 21|0|vb4|1398361650084|./../IMPLEMENT/TIME_SIM.VHD|0*6434562*0xabf125c5bd635397ab37a210b754f9d3b044d968|0*8177528*0x856b180bf611ec746a6bfcb1befebd18
 R=./../IMPLEMENT/TIME_SIM.VHD|41
 Version=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 Version/structure=9.3.2745.4995  (Windows)|00000003789cd3f5370600015b00b0
 
 [~A]
-ModifyID=17
+ModifyID=23
 Version=73
 
 [~MFT]
-0=33|0project_timing.mgf|4688965|3006101
-1=6|1project_timing.mgf|8994891|8994891
+0=45|0project_timing.mgf|8177637|6432052
+1=10|1project_timing.mgf|18267979|18267979
 
 [~U]
 nes_driver_top=11|0*0|

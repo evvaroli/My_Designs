@@ -1,6 +1,6 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: c:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD" 
-BEGINPROGRESS c:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD
+MESSAGE "File: C:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD" 
+BEGINPROGRESS C:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD
 MESSAGE "Compile Entity "vga_bsprite2a_top"" 
 MESSAGE "Compile Architecture "Structure" of Entity "vga_bsprite2a_top"" 
 MESSAGE "Start Netlist compilation mode." 
@@ -86,5 +86,5 @@ UPDATEPROGRESS 80
 UPDATEPROGRESS 81
 UPDATEPROGRESS 82
 UPDATEPROGRESS 83
-ENDPROGRESS c:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD
+ENDPROGRESS C:\My_Designs\project\project\IMPLEMENT\TIME_SIM.VHD
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  1.0 [s]" 

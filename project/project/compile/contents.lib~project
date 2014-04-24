@@ -1,4 +1,4 @@
-1875
+2353
 ~E 1 "./../src/buttonMux.vhd" 5 buttonMux
 ~A 1 "./../src/buttonMux.vhd" 29 buttonMux
 ~E 1 "./../src/clkdiv.vhd" 6 clkdiv
@@ -13,10 +13,12 @@
 ~A 1 "./../src/nes_driver.vhd" 24 nes_driver
 ~E 1 "./../src/nes_driver_top.vhd" 4 nes_driver_top
 ~A 1 "./../src/nes_driver_top.vhd" 20 nes_driver_top
+~E 1 "./../src/pulser.vhd" 5 pulser
+~A 1 "./../src/pulser.vhd" 15 pulser
 ~E 1 "./../src/screenSelector.vhd" 4 screenSelector
 ~A 1 "./../src/screenSelector.vhd" 20 screenSelector
 ~E 1 "./../src/screenState.vhd" 6 screenState
-~A 1 "./../src/screenState.vhd" 30 screenState
+~A 1 "./../src/screenState.vhd" 31 screenState
 ~E 1 "./../src/tank_sprite.vhd" 6 tank_sprite
 ~A 1 "./../src/tank_sprite.vhd" 14 tank_sprite
 ~E 1 "./../src/tank_sprite2.vhd" 6 tank_sprite2
@@ -31,12 +33,14 @@
 ~A 1 "./../src/titleScreen.vhd" 16 titleScreen
 ~E 1 "./../src/vga_640x480.vhd" 4 vga_640x480
 ~A 1 "./../src/vga_640x480.vhd" 13 vga_640x480
-~E 1 "./../src/vga_bsprite2a.vhd" 4 vga_bsprite2a
-~A 1 "./../src/vga_bsprite2a.vhd" 46 vga_bsprite2a
+~E 1 "./../src/vga_bsprite2a.vhd" 6 vga_bsprite2a
+~A 1 "./../src/vga_bsprite2a.vhd" 42 vga_bsprite2a
 ~E 1 "./../src/vga_bsprite2a_top.vhd" 5 vga_bsprite2a_top
 ~A 1 "./../src/vga_bsprite2a_top.vhd" 35 vga_bsprite2a_top
 ~E 0 "" 0 vga_stripes
 ~A 0 "" 0 vga_stripes
+~E 1 "./../src/whoseTurn.vhd" 4 whoseTurn
+~A 1 "./../src/whoseTurn.vhd" 16 whoseTurn
 ~E 1 "./../src/whosTurn.vhd" 4 whosTurn
 ~A 1 "./../src/whosTurn.vhd" 17 whosTurn
 ~E 1 "./../src/x7segb.vhd" 6 x7segb

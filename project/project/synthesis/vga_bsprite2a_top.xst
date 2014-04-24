@@ -1,5 +1,5 @@
 set -tmpdir .
-set -xsthdpdir "c:\My_Designs\project\project\synthesis\xst"
+set -xsthdpdir "C:\My_Designs\project\project\synthesis\xst"
 run
 -ifn vga_bsprite2a_top.prj
 -ifmt mixed

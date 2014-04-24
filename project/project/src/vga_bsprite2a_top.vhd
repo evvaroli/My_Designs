@@ -41,11 +41,9 @@ signal sig_gameA, sig_gameB, sig_gameStart, sig_gameSel, sig_gameUp, sig_gameDow
 signal sig_screenSel : std_logic;
 signal sig_gameRed, sig_gameGreen, sig_titleRed, sig_titleGreen : std_logic_vector(2 downto 0);
 signal sig_gameBlue, sig_titleBlue : std_logic_vector(1 downto 0);	 
-signal sig_hill1, sig_hill2, sig_hill3, sig_hill4, sig_hill5 : std_logic_vector(7 downto 0);
+signal sig_hill1, sig_hill2, sig_hill3, sig_hill4, sig_hill5 : std_logic_vector(6 downto 0);
 signal hc, vc: std_logic_vector(9 downto 0);
 signal M1, M1a, sig_init_M : std_logic_vector(0 to 31);
-signal sig_tank110sM, sig_tank11sM : std_logic_vector(0 to 7);
-signal sig_tank1rom10s, sig_tank1rom1s : std_logic_vector(11 downto 0);
 signal angle1, angle2: std_logic_vector(1 downto 0);
 signal M2, M2a: std_logic_vector(31 downto 0);
 signal btns: std_logic_vector(3 downto 0);	 
@@ -54,11 +52,16 @@ signal sig_tank1Angle, sig_tank2Angle : std_logic_vector(1 downto 0);
 signal sig_tank1_angle_calc, sig_tank2_angle_calc : std_logic_vector(7 downto 0);
 signal rom1_addr16, rom2_addr16, rom3_addr16, rom4_addr16: std_logic_vector(4 downto 0); 
 signal rom1_addr, rom2_addr : std_logic_vector(5 downto 0);
-signal sig_init_addr : std_logic_vector(3 downto 0);
-signal sig_current_state, sig_nesBtns : std_logic_vector(7 downto 0);  
+signal sig_title_addr : std_logic_vector(14 downto 0);
+signal sig_current_state, sig_nesBtns : std_logic_vector(7 downto 0);
+signal sig_hillCounter : std_logic_vector(24 downto 0);
+signal fireMissile, switch_turn, destroyGet, destroySet: std_logic;
 signal sig_romTitle_addr14 : std_logic_vector(14 downto 0);	
-signal sig_MTitle : std_logic_vector(7 downto 0);
-
+signal sig_MTitle : std_logic_vector(7 downto 0);  
+signal sig_tank110sM, sig_tank11sM : std_logic_vector(0 to 7);
+signal sig_tank1rom10s, sig_tank1rom1s : std_logic_vector(11 downto 0);
+signal sig_tank210sM, sig_tank21sM : std_logic_vector(0 to 7);
+signal sig_tank2rom10s, sig_tank2rom1s : std_logic_vector(11 downto 0);
 begin
 
 	clr <= btn(3);
@@ -93,6 +96,7 @@ begin
 	hill4 => sig_hill4,
 	hill5 => sig_hill5,
 	aBTN => sig_gameA,
+	bBTN => sig_gameB,
 	upBTN => sig_gameUp,
 	downBTN => sig_gameDown,
 	rightBTN => sig_gameRight,
@@ -101,25 +105,40 @@ begin
 	tank2Angle => sig_tank2Angle,
 	tank1_angle => sig_tank1_angle_calc,
 	tank2_angle => sig_tank2_angle_calc,
+	hillCounter => sig_hillCounter,
+	next_player => switch_turn,
 	hc => hc,
 	vc => vc,
 	M1 => M1,
 	M1a => M1a,
 	M2 => M2,
-	M2a => M2a,
-	sw => sw,
-	clk => mclk,
-	clr => clr,
-	btn => btns,	  
+	M2a => M2a,	
 	tank110sM => sig_tank110sM,
 	tank11sM => sig_tank11sM,
 	tank1rom10s => sig_tank1rom10s,
 	tank1rom1s => sig_tank1rom1s,
+	tank210sM => sig_tank210sM,
+	tank21sM => sig_tank21sM,
+	tank2rom10s => sig_tank2rom10s,
+	tank2rom1s => sig_tank2rom1s,
+	sw => sw,
+	clk => mclk,
+	clr => clr,
+	btn => btns,
 	rom1_addr => rom1_addr,
 	rom2_addr => rom2_addr,
+	fireMissile => fireMissile,
 	red => sig_gameRed,
 	green => sig_gameGreen,
 	blue => sig_gameBlue
+	);
+	
+	UPulse: entity work.pulser
+	port map (
+	clk => mclk,
+	clr => clr,
+	destroyIn => destroySet,
+	destroyOut => destroyGet
 	);
 	
 	U4: entity work.tank_sprite
@@ -151,12 +170,14 @@ begin
 	M => M2a
 	);	   	
 	
-	who : entity work.whosTurn
+	who : entity work.whoseTurn
 	port map(
 		clr => clr,	 
 		clk => clk25,
 		a => sig_gameA,	
 		start => sig_gameStart,
+		next_player => switch_turn,
+		--fireMissile => fireMissile,
 		tank1 => sig_tank1,
 		tank2 => sig_tank2
 	);			
@@ -232,6 +253,7 @@ begin
 		clk => mclk,
 		screenSel => sig_screenSel,
 		current_state => sig_current_state,
+		hillCounter => sig_hillCounter,
 		hill1 => sig_hill1,
 		hill2 => sig_hill2,
 		hill3 => sig_hill3,
@@ -243,20 +265,20 @@ begin
 	port map(
 		vidon => vidon,
 		hc => hc,
-		vc => vc,
+		vc => vc,  
 		MTitle => sig_MTitle,
-		romTitle_addr14 => sig_romTitle_addr14,
+		romTitle_addr14 => sig_title_addr,
 		red => sig_titleRed,
 		green => sig_titleGreen,
 		blue => sig_titleBlue
-	);	 			
+	);			 
 	
 	t : entity work.titleImage
 	port map(
 		clka => clk25,
 		addra => sig_romTitle_addr14,
 		douta => sig_MTitle
-	);
+	);	   
 	
 	bounce : entity work.debounce
 	port map(
@@ -272,7 +294,8 @@ begin
 		outp(6)	=> sig_down,
 		outp(7)	=> sig_left
 		
-	);
+	);	
+	
 	
 	tank1font10s : entity work.fonts
 	port map(
@@ -286,6 +309,20 @@ begin
 		addr => sig_tank1rom1s,
 		clk => clk25,
 		dout => sig_tank11sM
+	);
+	
+	tank2font10s : entity work.fonts
+	port map(
+		addr => sig_tank2rom10s,
+		clk => clk25,
+		dout => sig_tank210sM
+	);
+	
+	tank2font1s : entity work.fonts
+	port map(
+		addr => sig_tank2rom1s,
+		clk => clk25,
+		dout => sig_tank21sM
 	);
 	
 	
